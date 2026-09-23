@@ -84,10 +84,10 @@ button, input { font-family: inherit; }
 /* 1 hero */
 #accueil { height: 270vh; }
 #accueil .words { position: absolute; left: var(--gut); right: var(--gut); top: calc(var(--u) * 7.4 + 3vh); }
-#accueil .words h1 { font-size: calc(var(--u) * 7.8); }
+#accueil .words h1 { font-size: calc(var(--u) * 7.8); line-height: 1.12; }
 #accueil .words h1 span { display: block; white-space: nowrap; transform: translateY(calc(var(--w) * var(--k) * -1vh)); }
 #accueil .words h1 span:nth-child(2) { text-align: right; }
-#accueil .card { --wb: calc(var(--u) * 7.4 + 6vh + var(--u) * 7.8 * 0.92 * 2); left: calc((1 - var(--g)) * 26vw); top: calc((1 - var(--g)) * var(--wb)); width: calc(100vw - (1 - var(--g)) * 52vw); height: calc(100vh - (1 - var(--g)) * (var(--wb) + 3vh)); }
+#accueil .card { --wb: calc(var(--u) * 7.4 + 6vh + var(--u) * 7.8 * 1.12 * 2); left: calc((1 - var(--g)) * 26vw); top: calc((1 - var(--g)) * var(--wb)); width: calc(100vw - (1 - var(--g)) * 52vw); height: calc(100vh - (1 - var(--g)) * (var(--wb) + 3vh)); }
 #accueil .card img { transform: translateY(calc((1 - var(--g)) * -3vh)) scale(calc(1.25 - var(--g) * 0.25)); }
 #accueil .card .veil { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(10,24,30,0.86) 0%, rgba(10,24,30,0.35) 45%, rgba(10,24,30,0.15) 100%); opacity: var(--g); }
 #accueil .over { position: absolute; left: var(--gut); right: var(--gut); bottom: 7vh; display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; opacity: var(--t); transform: translateY(calc((1 - var(--t)) * 30px)); pointer-events: none; }
@@ -228,7 +228,7 @@ button, input { font-family: inherit; }
   .m { padding: 60px 20px 0; }
   .m section { padding-top: 64px; display: flex; flex-direction: column; gap: 18px; }
   .m .big { font-size: clamp(40px, 12vw, 68px); }
-  #m-accueil h1.big { font-size: min(48px, calc((100vw - 40px) * 0.09)); }
+  #m-accueil h1.big { font-size: min(48px, calc((100vw - 40px) * 0.09)); line-height: 1.12; }
   #m-accueil h1.big span { display: block; white-space: nowrap; }
   .m .mimg { position: relative; overflow: hidden; background: var(--bg3); max-width: 100%; }
   .m .mimg img { position: absolute; left: 0; top: -8%; width: 100%; height: 116%; object-fit: cover; }
