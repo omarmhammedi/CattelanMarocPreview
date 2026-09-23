@@ -1,5 +1,23 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Cattelan Italia Casablanca</title>
 <style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0E2028;color:#fff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}
 main{display:flex;flex-direction:column;align-items:center;gap:28px;padding:24px;text-align:center}img{width:180px}p{margin:0;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:rgba(255,255,255,.7)}
-.r{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}a{display:inline-flex;align-items:center;height:50px;padding:0 26px;border:1px solid #fff;color:#fff;text-decoration:none;font-size:12px;letter-spacing:.2em;text-transform:uppercase}a:hover{background:#fff;color:#0E2028}</style></head>
-<body><main><img src="version-a/img/logo-blanc.png" alt="Cattelan Italia"><p>Proposition de site · Casablanca</p><div class="r"><a href="version-a/">Version A</a><a href="version-b/">Version B</a></div></main></body></html>
+.r{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}a{display:inline-flex;align-items:center;height:50px;padding:0 26px;border:1px solid #fff;color:#fff;text-decoration:none;font-size:12px;letter-spacing:.2em;text-transform:uppercase}a:hover{background:#fff;color:#0E2028}
+.preview-note{box-sizing:border-box;width:min(520px,calc(100% - 32px));max-height:calc(100dvh - 32px);padding:clamp(24px,6vw,40px);border:1px solid rgba(255,255,255,.22);border-radius:12px;background:#132a34;color:#fff;box-shadow:0 24px 80px rgba(0,0,0,.35)}
+.preview-note::backdrop{background:rgba(4,12,17,.78);backdrop-filter:blur(6px)}
+.preview-note h1{margin:0 0 20px;font-size:clamp(23px,5vw,29px);line-height:1.2;font-weight:500}
+.preview-note p{margin:0 0 16px;font-size:16px;line-height:1.65;letter-spacing:normal;text-transform:none;color:rgba(255,255,255,.85)}
+.preview-note strong{color:#fff;font-weight:600}
+.preview-note form{margin:26px 0 0}
+.preview-note button{min-height:48px;width:100%;padding:12px 20px;border:1px solid #fff;border-radius:4px;background:#fff;color:#0e2028;font:inherit;font-size:14px;cursor:pointer}
+.preview-note button:hover{background:#e9eeee}
+.preview-note button:focus-visible{outline:2px solid #fff;outline-offset:5px}
+</style></head>
+<body><main><img src="version-a/img/logo-blanc.png" alt="Cattelan Italia"><p>Proposition de site · Casablanca</p><div class="r"><a href="version-a/">Version A</a><a href="version-b/">Version B</a></div></main>
+<dialog class="preview-note" id="preview-note" aria-labelledby="preview-title" aria-describedby="preview-description preview-purpose">
+<h1 id="preview-title">Une maquette pour valider le design</h1>
+<p id="preview-description">Les textes et les images sont provisoires et servent uniquement à illustrer la maquette.</p>
+<p id="preview-purpose">À cette étape, nous souhaitons valider avec vous <strong>le design, la mise en page et l’ambiance visuelle</strong> des deux versions. Le contenu sera travaillé après cette validation.</p>
+<form method="dialog"><button type="submit" autofocus>Découvrir les deux versions</button></form>
+</dialog>
+<script>document.getElementById('preview-note').showModal();</script>
+</body></html>
