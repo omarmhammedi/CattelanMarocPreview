@@ -14,7 +14,7 @@ npm run setup
 npm run dev
 ```
 
-Ouvrir `http://localhost:4321/_emdash/admin/`, suivre l'initialisation native et importer les contenus de démarrage. Le compte d'administration prévu pour le vrai site est l’adresse d’administration convenue hors du dépôt ; créer sa passkey au moment de la mise en service. Aucun secret ou compte préconfiguré n'est livré dans Git.
+Ouvrir `http://localhost:4321/_emdash/admin/` et suivre l'initialisation native. EmDash applique le seed fourni à une base vide ; ne pas le réimporter sur un site déjà initialisé. Le compte d'administration prévu pour le vrai site est l’adresse d’administration convenue hors du dépôt ; créer sa passkey au moment de la mise en service. Aucun secret ou compte préconfiguré n'est livré dans Git.
 
 Le dossier `.devcontainer/` permet d'ouvrir cette branche dans GitHub Codespaces. La base D1 et les deux espaces R2 sont simulés localement par workerd. Aucun compte Cloudflare n'est nécessaire pour ces essais. Le port contenant l'administration doit rester privé.
 
@@ -43,6 +43,7 @@ Le test `tests/cms-sync.mjs` utilise une vraie inscription et connexion EmDash a
 - [Développement et Codespaces](docs/development.md)
 - [Champs et synchronisation des contenus](docs/content-map.md)
 - [Catalogue, contacts privés et CRM](docs/catalogue.md)
+- [Résultats de compilation et périmètre de validation](docs/test-results-build.md)
 
 ## Mise en service ultérieure
 

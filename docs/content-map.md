@@ -2,6 +2,8 @@
 
 Version initiale : EmDash **0.41.0**, français uniquement. `seed/seed.json` initialise un site vide avec les textes préparés dans la proposition éditoriale du 26 septembre 2026. Le rendu public interroge EmDash ; le fichier de seed n’est pas une source de secours du site.
 
+La configuration Astro déclare explicitement `defaultLocale: 'fr'` et `locales: ['fr']`, en accord avec le seed. EmDash utilise cette configuration pour les menus, les taxonomies et les nouveaux contenus. Les URL restent sans préfixe de langue, y compris l’administration ; aucune seconde langue n’est activée. Voir la [configuration native des langues](https://docs.emdashcms.com/guides/internationalization/).
+
 ## Collections et chemins
 
 | Collection | Entrées initiales | Chemins publics | Contenu |
@@ -40,6 +42,7 @@ Les familles sont `tables`, `chaises-tabourets`, `canapes-fauteuils`, `buffets-b
 | `site_content.logo_light`, `logo_dark` | En-tête et pied de page | Afficher le nom du site | Vérifier les deux apparences et la navigation mobile |
 | `site_content.address`, `hours`, `map_url` | Informations pratiques | Ne pas afficher d’adresse, horaires ou itinéraire inventés | Champs initialement vides |
 | `site_content.public_email` | Contact public | Masquer | L’adresse d’administration n’est pas publiée automatiquement |
+| `site_content.discover_label` | Boutons des familles de mobilier | Libellé obligatoire, initialement « Découvrir » | Modifier ce bouton sans changer « Lire l’article » dans le Journal |
 | `site_content.active_catalogue` | Tous les formulaires catalogue | Message d’indisponibilité | Publier un changement de catalogue et vérifier les deux formulaires |
 | `catalogues.private_file_key` | Route serveur de téléchargement | Refuser le téléchargement, message explicite | Vérifier accès sans jeton, jeton expiré et téléchargement après enregistrement |
 | `catalogues.is_placeholder` | Mention du document de test | Booléen obligatoire à vérifier lors du remplacement | Initialement vrai ; la couverture n’est pas une couverture officielle validée |
@@ -84,7 +87,7 @@ Sources techniques : [format du seed](https://docs.emdashcms.com/themes/seed-fil
 
 ## Import fiable des images en développement
 
-Le seed a été appliqué à une base SQLite jetable avec le moteur EmDash 0.41 : 86 migrations du cœur, 6 collections, 29 entrées et 17 liens de relation. Le modèle consolidé contient 83 champs après suppression du doublon de rubrique. Les téléchargements d’images distantes peuvent cependant échouer silencieusement lors de l’initialisation si la résolution réseau est indisponible. La validation du schéma ne constitue donc pas une validation des médias.
+Le seed a été appliqué à une base SQLite jetable avec le moteur EmDash 0.41 : 86 migrations du cœur, 6 collections, 29 entrées et 17 liens de relation. Le modèle consolidé contient 84 champs : le doublon de rubrique a été retiré et le bouton des collections possède désormais son propre libellé. Les téléchargements d’images distantes peuvent cependant échouer silencieusement lors de l’initialisation si la résolution réseau est indisponible. La validation du schéma ne constitue donc pas une validation des médias.
 
 `scripts/import-local-media.mjs` répare les références initiales à partir de `public/images`. Il utilise exclusivement les API natives authentifiées de téléversement, d’édition et de publication, puis compare l’empreinte de chaque image lue dans R2 à celle du fichier local. Il demande un fichier de session issu d’une connexion réelle à l’administration ; il ne crée pas d’utilisateur ou de session et n’écrit pas directement dans la base.
 
@@ -113,3 +116,14 @@ EMDASH_AUTH_FILE=.wrangler/cms-sync-session.json node scripts/migrations/0001-na
 Le script vérifie d’abord le type du champ, l’absence de brouillon en attente, la présence des cinq articles initiaux et l’existence d’un terme natif identique à chaque ancien libellé. Il s’arrête si le site s’écarte de cet état initial. Il enregistre une copie du champ et des valeurs dans `.wrangler/migrations`, puis appelle uniquement `DELETE /_emdash/api/schema/collections/posts/fields/category`. Il ne modifie ni les termes ni leurs affectations. Après suppression, il vérifie les identifiants et libellés des termes avant/après. Une seconde exécution indique que la migration est déjà appliquée.
 
 La suppression passe par le registre EmDash, qui traite le schéma et ses caches. Régénérer ensuite les types EmDash et exécuter la vérification du projet. La sauvegarde de migration contient les informations nécessaires à une restauration éventuelle du champ par l’API de schéma ; ne pas réappliquer un seed complet pour annuler cette seule évolution.
+
+
+## Migration 0002 : bouton des collections
+
+`site_content.discover_label` est un champ texte obligatoire dont la valeur initiale est « Découvrir ». Il est distinct de `read_article_label`, utilisé par les cartes du Journal. Les nouvelles installations reçoivent directement les deux champs.
+
+```sh
+EMDASH_AUTH_FILE=.wrangler/cms-sync-session.json node scripts/migrations/0002-collection-discover-label.mjs --apply
+```
+
+Le script crée le champ par l’API de schéma uniquement s’il est absent. Il lit ensuite la configuration globale actuelle, conserve les autres valeurs et un éventuel libellé personnalisé, puis initialise le bouton manquant avec contrôle `_rev`. Une configuration déjà publiée est publiée à nouveau. Le script refuse de publier des brouillons antérieurs à la migration et vérifie ensuite que les autres champs n’ont pas changé. Le cliché de migration contient uniquement le champ concerné, sans les coordonnées du site. Une deuxième exécution conserve le libellé existant.

@@ -41,12 +41,12 @@ L’action « Supprimer » retire atomiquement la demande et son événement CRM
 
 Pour une nouvelle édition :
 
-1. Charger le PDF dans « Ajouter un PDF privé ».
-2. Copier la clé retournée dans `catalogues.private_file_key`.
-3. Modifier le titre, l’édition, la couverture et `is_placeholder`, puis publier la fiche Catalogue.
+1. Dans « Mettre à jour un catalogue PDF », choisir le catalogue concerné et le nouveau PDF.
+2. Vérifier le choix « Document de démonstration », puis cliquer sur « Associer au brouillon ».
+3. Ouvrir « Vérifier et publier le catalogue » : contrôler l’édition, le titre et la couverture, puis publier la fiche Catalogue dans EmDash.
 4. Tester une demande et son téléchargement avant de communiquer le lien public.
 
-Le chargement n’écrase pas le fichier utilisé par l’édition publiée. La médiathèque publique sert uniquement aux couvertures et aux images. Les anciennes clés R2 ne sont pas supprimées automatiquement pour préserver les liens encore valables ; leur purge pourra suivre la politique de conservation retenue.
+L’interface associe le PDF au brouillon automatiquement, sans copier de valeur technique. Elle conserve les autres champs et utilise la révision courante d’EmDash pour détecter les modifications concurrentes. Elle ne publie jamais automatiquement. Le chargement n’écrase pas le fichier utilisé par l’édition publiée. La médiathèque publique sert uniquement aux couvertures et aux images. Les anciens fichiers R2 ne sont pas supprimés automatiquement pour préserver les liens encore valables ; leur purge pourra suivre la politique de conservation retenue.
 
 ## Initialiser le PDF provisoire
 

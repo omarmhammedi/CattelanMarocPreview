@@ -3,7 +3,7 @@ import Home from '../components/Home.astro';
 import SeoHead from '../components/SeoHead.astro';
 import {getHome,getFamilies,getPosts,getSite,getCatalogue} from '../lib/content';
 const [home,families,posts,site,catalogue]=await Promise.all([getHome(),getFamilies(),getPosts(),getSite(),getCatalogue()]);
-if(!home || !catalogue) {Astro.response.status=503;throw new Error('Initialisez les contenus Cattelan dans EmDash avant de publier le site.');}
+if(!home) {Astro.response.status=503;throw new Error('Initialisez les contenus Cattelan dans EmDash avant de publier le site.');}
 ---
 <!doctype html>
 <html lang="fr" data-mode="dark"><head><meta charset="utf-8"/><SeoHead title={home.seoTitle} description={home.description} site={site} entry={home.entry} image={home.heroImage}/></head><body><Home home={home as any} families={families as any} posts={posts as any} site={site as any} catalogue={catalogue as any}/></body></html>

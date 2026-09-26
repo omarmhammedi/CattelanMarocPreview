@@ -48,6 +48,10 @@ for (const post of seed.content.posts) {
   assert(post.data.content.length > 5, `${post.slug}: missing complete article`);
   assert(post.data.content.some((block) => block.style === 'h2'), `${post.slug}: missing article sections`);
 }
+const discover = seed.collections.find((item) => item.slug === 'site_content').fields.find((field) => field.slug === 'discover_label');
+assert(discover?.required && discover.type === 'string', 'Collection action needs its own required CMS string');
+assert.equal(seed.content.site_content[0].data.discover_label, 'Découvrir');
+assert.notEqual(seed.content.site_content[0].data.discover_label, seed.content.site_content[0].data.read_article_label);
 const catalogue = seed.content.catalogues[0].data;
 assert.equal(catalogue.is_placeholder, true);
 assert.equal(catalogue.private_file_key, 'catalogues/cattelan-demonstration.pdf');

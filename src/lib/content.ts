@@ -57,6 +57,6 @@ export async function getSite(){
     address:d.address,hours:d.hours,mapUrl:d.map_url,mapNote:d.map_note,publicEmail:d.public_email,
     footerText:d.footer_text,footerNote:d.footer_text,previewNotice:d.preview_notice,modelNotice:d.model_notice,
     placeholderNotice:d.placeholder_notice,settings,
-    labels:{collections:d.collections_label,showroom:d.showroom_label,journal:d.journal_label,catalogue:d.catalogue_label,contact:d.contact_label,allArticles:d.journal_label,discover:d.read_article_label,visit:d.showroom_label,appointment:d.contact_label,download:d.catalogue_label,scroll:d.scroll_label || 'Défiler'},
+    labels:{collections:d.collections_label,showroom:d.showroom_label,journal:d.journal_label,catalogue:d.catalogue_label,contact:d.contact_label,allArticles:d.journal_label,discover:d.discover_label,visit:d.showroom_label,appointment:d.contact_label,download:d.catalogue_label,scroll:d.scroll_label || 'Défiler'},
     form:{name:d.form_name_label,email:d.form_email_label,submit:d.catalogue_label,consent:d.form_opt_in_label,note:d.form_hint,privacy:d.form_privacy,pending:d.form_pending,error:d.form_error,successTitle:d.form_success_title,successText:d.form_success_text,unavailable:d.form_unavailable},entry:e};
 }

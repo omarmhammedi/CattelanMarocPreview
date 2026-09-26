@@ -660,6 +660,13 @@
           "type": "string"
         },
         {
+          "slug": "discover_label",
+          "label": "Bouton découvrir une collection",
+          "type": "string",
+          "required": true,
+          "defaultValue": "Découvrir"
+        },
+        {
           "slug": "model_notice",
           "label": "Précision sur la sélection de modèles",
           "type": "text"
@@ -2935,7 +2942,8 @@
           "form_success_text": "Merci pour votre intérêt. Vous pouvez maintenant télécharger le catalogue et poursuivre votre découverte à votre rythme.",
           "form_unavailable": "Le catalogue est momentanément indisponible. Contactez notre équipe sur WhatsApp pour poursuivre votre demande.",
           "placeholder_notice": "Document de démonstration utilisé pour tester le téléchargement. Le catalogue définitif sera ajouté ultérieurement.",
-          "active_catalogue": "$ref:catalogue-demonstration"
+          "active_catalogue": "$ref:catalogue-demonstration",
+          "discover_label": "Découvrir"
         }
       }
     ]

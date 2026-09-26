@@ -9,6 +9,9 @@ type Contact = {
   crmStatus: string; crmAttempts: number;
 };
 type ContactPage = { items: Contact[]; cursor?: string; hasMore: boolean };
+type CatalogueItem = { id: string; status: string; data: Record<string, unknown> };
+type CatalogueRevision = { item: CatalogueItem; _rev: string };
+type CataloguePage = { items: CatalogueItem[]; cursor?: string; hasMore?: boolean };
 const stateLabel: Record<string, string> = {
   pending: "En attente", processing: "Traitement en cours",
   waiting_configuration: "CRM à connecter", delivered: "Transmis au CRM",
@@ -22,7 +25,16 @@ function ContactsPage() {
   const [busy, setBusy] = React.useState(false);
   const [error, setError] = React.useState("");
   const [message, setMessage] = React.useState("");
-  const [pdfKey, setPdfKey] = React.useState("");
+  const [catalogues, setCatalogues] = React.useState<CatalogueItem[]>([]);
+  const [catalogueId, setCatalogueId] = React.useState("");
+  const [catalogueLoading, setCatalogueLoading] = React.useState(true);
+  const [catalogueReady, setCatalogueReady] = React.useState(false);
+  const [pdfFile, setPdfFile] = React.useState<File | null>(null);
+  const [pdfBusy, setPdfBusy] = React.useState(false);
+  const [pdfError, setPdfError] = React.useState("");
+  const [placeholder, setPlaceholder] = React.useState(false);
+  const [pdfSaved, setPdfSaved] = React.useState<{ id: string; title: string } | null>(null);
+  const pdfInput = React.useRef<HTMLInputElement>(null);
 
   const load = React.useCallback(async (next?: string) => {
     setBusy(true); setError("");
@@ -34,6 +46,40 @@ function ContactsPage() {
     finally { setBusy(false); }
   }, []);
   React.useEffect(() => { void load(); }, [load]);
+
+  React.useEffect(() => {
+    let active = true;
+    async function loadCatalogues() {
+      try {
+        const result = await parseApiResponse<CataloguePage>(await apiFetch("/_emdash/api/content/catalogues?limit=100"), "Impossible de charger les catalogues.");
+        if (!active) return;
+        setCatalogues(result.items);
+        setCatalogueId(result.items.find((item) => item.status === "published")?.id ?? result.items[0]?.id ?? "");
+        if (!result.items.length) setCatalogueLoading(false);
+      } catch {
+        if (active) { setPdfError("Les catalogues n’ont pas pu être chargés. Actualisez la page pour réessayer."); setCatalogueLoading(false); }
+      }
+    }
+    void loadCatalogues();
+    return () => { active = false; };
+  }, []);
+
+  React.useEffect(() => {
+    if (!catalogueId) return;
+    let active = true;
+    setCatalogueLoading(true); setCatalogueReady(false); setPdfError(""); setPdfSaved(null); setPdfFile(null);
+    if (pdfInput.current) pdfInput.current.value = "";
+    async function loadEdition() {
+      try {
+        const current = await parseApiResponse<CatalogueRevision>(await apiFetch(`/_emdash/api/content/catalogues/${encodeURIComponent(catalogueId)}`), "Impossible de charger cette édition.");
+        if (active) { setPlaceholder(current.item.data.is_placeholder === true || current.item.data.is_placeholder === 1); setCatalogueReady(true); }
+      } catch {
+        if (active) setPdfError("Cette édition n’a pas pu être chargée. Sélectionnez à nouveau le catalogue pour réessayer.");
+      } finally { if (active) setCatalogueLoading(false); }
+    }
+    void loadEdition();
+    return () => { active = false; };
+  }, [catalogueId]);
 
   async function exportCsv() {
     setBusy(true); setError("");
@@ -56,17 +102,29 @@ function ContactsPage() {
     } catch (cause) { setError(cause instanceof Error ? cause.message : "Une erreur est survenue."); }
     finally { setBusy(false); }
   }
-  async function uploadPdf(event: React.ChangeEvent<HTMLInputElement>) {
-    const file = event.target.files?.[0];
-    if (!file) return;
-    if (file.size > 8 * 1024 * 1024) { setError("Le PDF doit peser au maximum 8 Mio."); return; }
-    setBusy(true); setError(""); setPdfKey("");
+  async function associatePdf(event: React.SubmitEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!pdfFile || !catalogueId || !catalogueReady || pdfBusy) return;
+    if (pdfFile.size > 8 * 1024 * 1024) { setPdfError("Le PDF doit peser au maximum 8 Mio."); return; }
+    setPdfBusy(true); setPdfError(""); setPdfSaved(null);
+    let uploaded = false;
     try {
-      const result = await parseApiResponse<{ ok: boolean; private_file_key?: string; message: string }>(await apiFetch(`${BASE}/pdf/upload`, { method: "POST", headers: { "content-type": "application/pdf" }, body: file }), "Impossible de stocker le PDF");
-      if (!result.ok) throw new Error(result.message);
-      setPdfKey(result.private_file_key ?? ""); setMessage(result.message);
-    } catch (cause) { setError(cause instanceof Error ? cause.message : "Une erreur est survenue."); }
-    finally { setBusy(false); event.target.value = ""; }
+      const result = await parseApiResponse<{ ok: boolean; private_file_key?: string }>(await apiFetch(`${BASE}/pdf/upload`, { method: "POST", headers: { "content-type": "application/pdf" }, body: pdfFile }), "Impossible de charger le PDF.");
+      if (!result.ok || !result.private_file_key) { setPdfError("Le fichier n’a pas été accepté. Choisissez un PDF valide de 8 Mio maximum."); return; }
+      uploaded = true;
+      // Read immediately before saving: preserve all editorial fields and reject conflicting writes.
+      const path = `/_emdash/api/content/catalogues/${encodeURIComponent(catalogueId)}`;
+      const current = await parseApiResponse<CatalogueRevision>(await apiFetch(path), "Impossible de charger le catalogue.");
+      await parseApiResponse(await apiFetch(path, {
+        method: "PUT", headers: { "content-type": "application/json" },
+        body: JSON.stringify({ _rev: current._rev, data: { ...current.item.data, private_file_key: result.private_file_key, is_placeholder: placeholder } }),
+      }), "Impossible d’enregistrer le brouillon.");
+      setPdfSaved({ id: catalogueId, title: typeof current.item.data.title === "string" ? current.item.data.title : "ce catalogue" });
+      setPdfFile(null);
+      if (pdfInput.current) pdfInput.current.value = "";
+    } catch {
+      setPdfError(uploaded ? "Le PDF a été chargé, mais le brouillon n’a pas pu être mis à jour. Actualisez le catalogue puis réessayez." : "Le PDF n’a pas pu être chargé. Veuillez réessayer.");
+    } finally { setPdfBusy(false); }
   }
 
   async function deleteContact(contact: Contact) {
@@ -107,10 +165,23 @@ function ContactsPage() {
     {!contacts.length && !busy && <p style={{ padding: 16 }}>Aucune demande enregistrée pour le moment.</p>}
     {hasMore && <button style={{ ...buttonStyle, marginTop: 16 }} type="button" disabled={busy} onClick={() => void load(cursor)}>Afficher la suite</button>}
     <section style={{ marginTop: 40, borderTop: "1px solid #777", paddingTop: 24 }}>
-      <h2 style={{ fontSize: 21, fontWeight: 600, marginBottom: 10 }}>Ajouter un PDF privé</h2>
-      <p style={{ marginBottom: 14 }}>Chargez le document, puis copiez sa clé dans le champ « Clé du PDF privé » de la fiche Catalogue. La nouvelle édition sera utilisée après publication de cette fiche. La couverture se gère dans la médiathèque habituelle.</p>
-      <input aria-label="Ajouter le catalogue PDF privé, 8 Mio maximum" type="file" accept="application/pdf,.pdf" disabled={busy} onChange={(event) => void uploadPdf(event)} />
-      {pdfKey && <p style={{ marginTop: 14 }}>Clé à copier : <code style={{ userSelect: "all" }}>{pdfKey}</code></p>}
+      <h2 style={{ fontSize: 21, fontWeight: 600, marginBottom: 10 }}>Mettre à jour un catalogue PDF</h2>
+      <p style={{ marginBottom: 14 }}>Choisissez le catalogue et son nouveau document. Le PDF sera associé au brouillon ; vous pourrez vérifier cette édition avant de la publier.</p>
+      <form onSubmit={(event) => void associatePdf(event)} aria-busy={pdfBusy} style={{ display: "grid", gap: 16, maxWidth: 600 }}>
+        <label style={{ display: "grid", gap: 8 }}>Catalogue
+          <select name="catalogue" value={catalogueId} disabled={pdfBusy || !catalogues.length} onChange={(event) => setCatalogueId(event.target.value)} style={{ padding: 10, border: "1px solid currentColor", borderRadius: 6 }}>
+            {!catalogues.length && <option value="">{catalogueLoading ? "Chargement…" : "Aucun catalogue disponible"}</option>}
+            {catalogues.map((item) => <option key={item.id} value={item.id}>{typeof item.data.title === "string" ? item.data.title : "Catalogue"}{typeof item.data.edition === "string" ? ` — ${item.data.edition}` : ""}</option>)}
+          </select>
+        </label>
+        <label style={{ display: "grid", gap: 8 }}>Nouveau PDF (8 Mio maximum)
+          <input ref={pdfInput} name="pdf" type="file" accept="application/pdf,.pdf" disabled={pdfBusy || catalogueLoading || !catalogueReady} onChange={(event) => { setPdfFile(event.target.files?.[0] ?? null); setPdfSaved(null); setPdfError(""); }} />
+        </label>
+        <label style={{ display: "flex", gap: 8, alignItems: "center" }}><input type="checkbox" name="is_placeholder" checked={placeholder} disabled={pdfBusy || catalogueLoading || !catalogueReady} onChange={(event) => setPlaceholder(event.target.checked)} /> Document de démonstration</label>
+        <button type="submit" style={{ ...buttonStyle, justifySelf: "start" }} disabled={pdfBusy || catalogueLoading || !catalogueReady || !pdfFile}>{pdfBusy ? "Enregistrement…" : "Associer au brouillon"}</button>
+      </form>
+      {pdfError && <p role="alert" style={{ marginTop: 14, color: "#dc2626" }}>{pdfError}</p>}
+      {pdfSaved && <div role="status" style={{ marginTop: 14 }}><p>PDF associé au brouillon « {pdfSaved.title} ». Publiez le catalogue pour le mettre en ligne.</p><a href={`/_emdash/admin/content/catalogues/${encodeURIComponent(pdfSaved.id)}`} style={{ textDecoration: "underline", display: "inline-block", marginTop: 8 }}>Vérifier et publier le catalogue</a></div>}
     </section>
   </section>;
 }

@@ -377,3 +377,5 @@ html:not(.motion-ready) .rv { transform: none; }
 .hd .native-nav-group > .native-nav-children { position: absolute; top: 100%; left: -16px; }
 .ft .native-nav-children { margin-top: 8px; font-size: 14px; }
 @media (max-width: 820px) { .hd .native-nav-group { display: none; } .mobile-navigation .native-nav-children { margin-top: 12px; } }
+
+.hd .logo .loc-long { font-size: 8px; letter-spacing: .22em; margin-right: -.22em; white-space: nowrap; }

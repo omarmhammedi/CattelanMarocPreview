@@ -44,11 +44,13 @@ Charger une fois le PDF de démonstration dans le R2 local, depuis la racine du 
 npx wrangler r2 object put cattelan-maroc-catalogues-preview/catalogues/cattelan-demonstration.pdf --file src/plugins/catalogue/assets/cattelan-demonstration.pdf --content-type application/pdf --local
 ```
 
-Le fichier est explicitement fictif. Pour le remplacer, utiliser l'écran **Contacts catalogue** de l'administration (`/_emdash/admin/plugins/catalogue-leads/contacts`) : téléverser le PDF privé, copier sa clé dans le champ `private_file_key` de l'entrée Catalogue, puis publier cette entrée. La limite prévue est de 8 Mio. Ne pas déposer le PDF dans `public/` ni dans le stockage public des images.
+Le fichier est explicitement fictif. Pour le remplacer, ouvrir **Contacts catalogue** dans l'administration (`/_emdash/admin/plugins/catalogue-leads/contacts`), choisir le catalogue et son nouveau PDF, puis cliquer sur **Associer au brouillon**. Vérifier le choix **Document de démonstration**, puis ouvrir **Vérifier et publier le catalogue** pour contrôler l'édition et la publier dans EmDash. Le titre, la couverture et les autres champs sont conservés ; aucune publication n'est automatique. La limite prévue est de 8 Mio. Ne pas déposer le PDF dans `public/` ni dans le stockage public des images.
 
 Le visiteur renseigne son nom et son email. Le formulaire enregistre la demande avant de proposer le téléchargement. Le consentement aux communications est distinct et facultatif. Le connecteur CRM restera simulé jusqu'à la définition de l'API finale ; ne pas utiliser de vrais contacts pour les essais. Aucun email de catalogue n'est promis tant qu'aucun service d'envoi n'est configuré.
 
 ## Modifier et vérifier le contenu
+
+La configuration Astro déclare explicitement le français comme seule locale. Initialiser la base neuve depuis l’assistant natif de l’application démarrée avec cette configuration. Ne pas amorcer ce projet avec la commande `emdash seed` seule : dans EmDash 0.41.0, ce chemin peut exécuter les migrations avant de connaître la locale Astro et créer les taxonomies natives en anglais.
 
 Le fichier `seed/seed.json` sert à initialiser une base vide. Modifier ce fichier après le premier démarrage ne met pas à jour une base existante. Les modifications éditoriales passent ensuite par EmDash ; les évolutions de schéma doivent être migrées explicitement et conservées avec le code.
 
@@ -71,6 +73,8 @@ Après connexion du compte, créer un environnement de préproduction avec ses p
 
 Configurer aussi l’URL du site dans EmDash et `EMDASH_SITE_URL` avec l’origine Workers de préproduction : ne pas conserver l’URL localhost lors du transfert. Vérifier les canoniques, les aperçus signés et les passkeys sur cette origine. `SITE_INDEXABLE` reste à `false` jusqu’à la validation de la mise en ligne.
 
+Après compilation, vérifier `dist/server/wrangler.json` : l’adaptateur ajoute aussi les liaisons `SESSION` (KV), `IMAGES` et `ASSETS`. Le dry-run d’assemblage a réussi ; les ressources distantes et les limites du compte devront être validées lors du premier déploiement.
+
 Le transfert doit couvrir séparément le contenu EmDash, les médias, les PDF privés et les contacts du plugin. Un export de site EmDash ne constitue pas à lui seul une sauvegarde des contacts, des comptes et des secrets. Conserver les clés hors de Git et vérifier une restauration avant de basculer vers la production.
 
 ## Références vérifiées
@@ -84,3 +88,7 @@ Le transfert doit couvrir séparément le contenu EmDash, les médias, les PDF p
 - [Ports et visibilité Codespaces](https://docs.github.com/en/codespaces/developing-in-a-codespace/forwarding-ports-in-your-codespace)
 
 Les coordonnées commerciales (téléphone, lien WhatsApp, adresse et horaires) sont à renseigner dans **Configuration du site**. Elles restent hors des données de démarrage publiées dans Git.
+
+## Tests de navigateur sur une base locale dédiée
+
+Playwright est installé avec les dépendances. Installer Chromium avec `npx playwright install --with-deps chromium`, puis démarrer le serveur et lancer `npm run test:cms -- --setup` uniquement sur une base locale neuve de test. Ce script inscrit un compte fictif avec une passkey virtuelle ; il refuse de contourner un compte administrateur existant. `npm run test:catalogue-http` réutilise ensuite sa session pour tester D1 et R2. Les contacts et modifications temporaires sont nettoyés.

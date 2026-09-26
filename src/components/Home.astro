@@ -77,7 +77,7 @@ const brandLines = [brandWords.slice(0, brandBreak).join(' '), brandWords.slice(
 </svg>
 <a class="skip-link" href="#main-content">Aller au contenu</a>
 <header class="hd" id="hd">
-  <a class="logo" href="/" aria-label={`${site.name}, accueil`}>{site.logoDark && <img class="lg-w" src={site.logoDark.src} alt={site.logoDark.alt} width="180" height="57"/>}{site.logoLight && <img class="lg-r" src={site.logoLight.src} alt={site.logoLight.alt} width="180" height="57"/>}<span class="loc">{site.location}</span></a>
+  <a class="logo" href="/" aria-label={`${site.name}, accueil`}>{site.logoDark && <img class="lg-w" src={site.logoDark.src} alt={site.logoDark.alt} width="180" height="57"/>}{site.logoLight && <img class="lg-r" src={site.logoLight.src} alt={site.logoLight.alt} width="180" height="57"/>}<span class:list={["loc", {"loc-long": (site.location || '').length > 8}]}>{site.location}</span></a>
   <nav aria-label="Navigation principale">
     <span class="status" id="status"><i aria-hidden="true"></i><span id="clock">Casablanca</span></span>
     {site.navigation.map(item => <Fragment>{item.url === '/catalogue/' && <span class="mode" role="group" aria-label="Apparence"><button type="button" data-mode="dark" aria-pressed="true">Sombre</button><button type="button" data-mode="light" aria-pressed="false">Clair</button></span>}<NativeNav items={[item]} variant="header" /></Fragment>)}

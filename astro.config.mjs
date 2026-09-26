@@ -7,6 +7,7 @@ import { cataloguePlugin } from './src/plugins/catalogue/index.ts';
 
 export default defineConfig({
   output: 'server',
+  i18n: { defaultLocale: 'fr', locales: ['fr'] },
   adapter: cloudflare({ inspectorPort: false }),
   // EmDash API endpoints use extensionless paths; do not redirect POST requests.
   trailingSlash: 'ignore',
