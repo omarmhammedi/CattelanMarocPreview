@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cattelan-maroc-preview",
+  "main": "./src/worker.ts",
+  "compatibility_date": "2026-09-26",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [{ "binding": "DB", "database_name": "cattelan-maroc-preview" }],
+  "r2_buckets": [
+    { "binding": "MEDIA", "bucket_name": "cattelan-maroc-media-preview" },
+    { "binding": "CATALOGUES", "bucket_name": "cattelan-maroc-catalogues-preview" }
+  ],
+  "vars": {
+    "SITE_INDEXABLE": "false",
+    "EMDASH_PREVIEW_PATH_PATTERN": "/preview/{collection}/{id}/"
+  },
+  "triggers": { "crons": ["* * * * *"] }
+}

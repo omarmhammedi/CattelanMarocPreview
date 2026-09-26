@@ -1,0 +1,22 @@
+---
+interface MenuItem {
+  url?: string;
+  label: string;
+  target?: string;
+  children?: MenuItem[];
+}
+interface Props { items: MenuItem[]; path?: string; nested?: boolean; }
+const { items, path = '', nested = false } = Astro.props;
+const isCurrent = (url?: string) => !!url && url.startsWith('/') && (url === '/' ? path === '/' : path.startsWith(url));
+---
+<ul class:list={['page-menu-list', { 'page-menu-nested': nested }]}>
+  {items.map((item) => <li class:list={{ 'page-menu-parent': !!item.children?.length }}>
+    {item.children?.length ? <details>
+      <summary>{item.label}<span aria-hidden="true">⌄</span></summary>
+      <div class="page-menu-submenu">
+        {item.url && <a href={item.url} target={item.target || undefined} rel={item.target === '_blank' ? 'noopener noreferrer' : undefined} aria-current={isCurrent(item.url) ? 'page' : undefined}>{item.label}</a>}
+        <Astro.self items={item.children} path={path} nested={true} />
+      </div>
+    </details> : item.url ? <a href={item.url} target={item.target || undefined} rel={item.target === '_blank' ? 'noopener noreferrer' : undefined} aria-current={isCurrent(item.url) ? 'page' : undefined}>{item.label}</a> : <span class="page-menu-label">{item.label}</span>}
+  </li>)}
+</ul>

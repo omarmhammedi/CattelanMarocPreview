@@ -1,0 +1,53 @@
+---
+import {getSite, getCatalogue} from '../lib/content';
+interface Props {id:string;catalogueId?:string;labels?:Record<string,string>;compact?:boolean;}
+const {id,compact=false}=Astro.props;
+const [site,catalogue]=await Promise.all([getSite(),getCatalogue()]);
+const labels=Astro.props.labels || site.form;
+const catalogueId=Astro.props.catalogueId || catalogue?.id;
+---
+{catalogueId ? <form method="post" action="/_emdash/api/plugins/catalogue-leads/request" class:list={['catalogue-form', {compact}]} data-catalogue-form data-catalogue-id={catalogueId} data-error={site.form.error} data-pending={site.form.pending} data-success-title={site.form.successTitle} data-success-text={site.form.successText} data-download-label={catalogue?.downloadLabel}>
+  <noscript><p>Activez JavaScript pour télécharger le catalogue, ou contactez le showroom sur WhatsApp.</p><style>.catalogue-form button[type=submit]{display:none}</style></noscript>
+  <div class="catalogue-fields"><div><label for={`${id}-name`}>{labels.name}</label><input id={`${id}-name`} name="name" autocomplete="name" required minlength="2" maxlength="120" /></div><div><label for={`${id}-email`}>{labels.email}</label><input id={`${id}-email`} name="email" type="email" autocomplete="email" required maxlength="254" /></div></div>
+  <div class="form-trap" aria-hidden="true"><label for={`${id}-website`}>Site web</label><input id={`${id}-website`} name="website" tabindex="-1" autocomplete="off" /></div>
+  <label class="form-consent"><input type="checkbox" name="communicationsConsent" value="yes" /><span>{labels.consent}</span></label>
+  <p class="form-note">{labels.note}</p>
+  <p class="form-privacy">{site.form.privacy} <a href="/confidentialite/">Confidentialité</a></p>
+  <button class="btn solid" type="submit">{labels.submit} <span aria-hidden="true">↗</span></button>
+  <div class="form-message" role="status" aria-live="polite" tabindex="-1"></div>
+</form> : <p role="status">{site.form.unavailable}</p>}
+<script>
+  document.querySelectorAll<HTMLFormElement>('[data-catalogue-form]').forEach(form=>{
+    let requestId=crypto.randomUUID();
+    let fingerprint='';
+    form.addEventListener('submit',async event=>{
+      event.preventDefault();
+      if(!form.reportValidity())return;
+      const button=form.querySelector<HTMLButtonElement>('button[type=submit]')!;
+      if(button.disabled)return;
+      const message=form.querySelector<HTMLElement>('.form-message')!;
+      const data=new FormData(form);
+      const payload={name:String(data.get('name')||'').trim(),email:String(data.get('email')||'').trim(),communicationsConsent:data.get('communicationsConsent')==='yes',website:String(data.get('website')||''),catalogueId:form.dataset.catalogueId,sourcePath:location.pathname};
+      const nextFingerprint=JSON.stringify(payload);
+      if(fingerprint&&fingerprint!==nextFingerprint)requestId=crypto.randomUUID();
+      fingerprint=nextFingerprint;
+      button.disabled=true;form.setAttribute('aria-busy','true');message.textContent=form.dataset.pending||'';
+      try{
+        const response=await fetch('/_emdash/api/plugins/catalogue-leads/request',{method:'POST',headers:{'Content-Type':'application/json','X-EmDash-Request':'1'},body:JSON.stringify({...payload,requestId})});
+        const envelope=await response.json() as {success?:boolean;data?:{ok?:boolean;downloadUrl?:string;message?:string}};
+        const result=envelope.data;
+        if(!response.ok||!envelope.success)throw new Error('request_failed');
+        if(!result?.ok||!result.downloadUrl){message.textContent=result?.message || form.dataset.error || '';return;}
+        message.replaceChildren();
+        const title=document.createElement('strong');title.textContent=form.dataset.successTitle||'';
+        const text=document.createElement('p');text.textContent=form.dataset.successText||'';
+        const link=document.createElement('a');link.className='btn';link.href=result.downloadUrl;link.textContent=form.dataset.downloadLabel||'';link.setAttribute('download','');
+        message.appendChild(title);message.appendChild(text);message.appendChild(link);message.focus();
+      }catch{message.textContent=form.dataset.error||'';}
+      finally{button.disabled=false;form.removeAttribute('aria-busy');}
+    });
+  });
+</script>
+<style>
+.catalogue-form{width:100%;margin-top:24px}.catalogue-fields{display:grid;grid-template-columns:1fr 1fr;gap:20px}.catalogue-fields label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:8px}.catalogue-fields input{border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;color:var(--ink);font:inherit;min-width:0;width:100%;padding:12px 0}.catalogue-fields input:focus{outline:1px solid var(--ink);outline-offset:5px}.form-consent{display:flex;align-items:flex-start;gap:10px;font-size:12px;line-height:1.6;margin:22px 0 10px}.form-consent input{width:16px;height:16px;margin-top:2px;flex:none}.form-note,.form-privacy{font-size:11px;line-height:1.7;color:var(--muted);margin:8px 0}.form-privacy a{text-decoration:underline}.catalogue-form button{margin-top:20px}.catalogue-form button:disabled{opacity:.5;cursor:wait}.form-message{margin-top:20px;font-size:13px;line-height:1.7}.form-message p{margin:8px 0}.form-trap{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}@media(max-width:520px){.catalogue-fields{grid-template-columns:1fr;gap:18px}}
+</style>
