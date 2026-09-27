@@ -93,4 +93,35 @@ Les coordonnées commerciales (téléphone, lien WhatsApp, adresse et horaires) 
 
 ## Tests de navigateur sur une base locale dédiée
 
-Playwright est installé avec les dépendances. Installer Chromium avec `npx playwright install --with-deps chromium`, puis démarrer le serveur et lancer `npm run test:cms -- --setup` uniquement sur une base locale neuve de test. Ce script inscrit un compte fictif avec une passkey virtuelle ; il refuse de contourner un compte administrateur existant. `npm run test:catalogue-http` réutilise ensuite sa session pour tester D1 et R2. Les contacts et modifications temporaires sont nettoyés.
+Les tests inscrivent un compte fictif avec une passkey virtuelle et modifient des contenus avant de les restaurer. Ils exigent une **copie jetable**, ses propres secrets et données, une origine locale explicite et un marqueur d’isolation. Le port 4321 est refusé. Ne jamais copier `.dev.vars` ou `.wrangler/` depuis la prévisualisation existante et ne jamais utiliser `emdash seed` pour ces tests.
+
+Installer le navigateur une fois avec `npx playwright install --with-deps chromium`. Depuis le dépôt, préparer la copie de travail avec les fichiers suivis et les nouveaux fichiers non ignorés :
+
+```sh
+cattelan_test_root=$(mktemp -d /tmp/cattelan-cms-integration-XXXXXX)
+git ls-files --cached --others --exclude-standard -z | tar --exclude='.dev.vars' --exclude='.wrangler' --null -T - -cf - | tar -xf - -C "$cattelan_test_root"
+cp -a node_modules "$cattelan_test_root/node_modules"
+cd "$cattelan_test_root"
+CODESPACES=false npm run setup
+node --input-type=module <<'JS'
+import { appendFile, mkdir, realpath, writeFile } from 'node:fs/promises';
+await appendFile('.dev.vars', 'EMDASH_SITE_URL=http://localhost:4331\n');
+await mkdir('.wrangler', { recursive: true });
+await writeFile('.wrangler/integration-test-environment.json', JSON.stringify({
+  disposable: true,
+  projectRoot: await realpath('.'),
+  origin: 'http://localhost:4331',
+}) + '\n', { mode: 0o600 });
+JS
+npx wrangler r2 object put cattelan-maroc-catalogues-preview/catalogues/cattelan-demonstration.pdf --file src/plugins/catalogue/assets/cattelan-demonstration.pdf --content-type application/pdf --local
+CODESPACES=false npm run dev -- --port 4331 --ignore-lock
+```
+
+La copie possède aussi ses propres dépendances et caches Vite : ne pas remplacer cette copie par un lien symbolique vers les dépendances du serveur actif. Garder le port de test privé. Dans un autre terminal, se placer dans le même dossier temporaire, puis lancer les vérifications **successivement** :
+
+```sh
+CMS_TEST_URL=http://localhost:4331 npm run test:cms -- --setup
+CMS_TEST_URL=http://localhost:4331 npm run test:catalogue-http
+```
+
+Le premier test utilise l’initialisation native, la connexion passkey, les brouillons, les aperçus signés, la publication et l’effacement des champs. Le second réutilise sa session native pour tester les contacts D1, les PDF privés R2, la publication d’une édition, les consentements facultatifs et le formulaire Chromium. Les fichiers de session/passkey restent dans le `.wrangler/` jetable ; seuls les rapports Markdown relus peuvent être repris dans le dépôt. Arrêter ce serveur après les tests. Éviter les compilations et vérifications Astro simultanées avec ces navigateurs dans un petit Codespace.

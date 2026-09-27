@@ -27,7 +27,7 @@ if (!family) return new Response('Collection introuvable', { status: 404 });
   </section>}
   {family.relatedPost && <section class="related-reading page-gutter" data-page-reveal>
     <p class="kick">À lire dans le Journal</p>
-    <a href={`/journal/${family.relatedPost.slug}/`}><h2>{family.relatedPost.title}</h2><span class="text-link">Lire l’article <span aria-hidden="true">↗</span></span></a>
+    <a href={`/journal/${family.relatedPost.slug}/`}><h2>{family.relatedPost.title}</h2><span class="text-link">{site.labels.readArticle} <span aria-hidden="true">↗</span></span></a>
   </section>}
   <section class="page-cta page-gutter" data-page-reveal>
     <p class="kick">Votre sélection commence ici</p><h2>{site.labels.catalogue}</h2>

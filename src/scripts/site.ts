@@ -48,7 +48,7 @@ function initializeSite() {
       const time = new Intl.DateTimeFormat('fr-FR', {
         timeZone: 'Africa/Casablanca', hour: '2-digit', minute: '2-digit', hour12: false,
       }).format(new Date());
-      clock.textContent = `Casablanca ${time}`;
+      clock.textContent = `${clock.dataset.city || ''} ${time}`.trim();
     } catch { /* Keep the server-rendered city label. */ }
   };
   updateClock();

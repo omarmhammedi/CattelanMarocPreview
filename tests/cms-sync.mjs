@@ -1,8 +1,8 @@
 /**
  * Actual EmDash/Cloudflare local integration check.
  *
- * Start `npm run dev`, then run:
- *   node tests/cms-sync.mjs --setup
+ * Start a disposable checkout on its own local port, then run:
+ *   CMS_TEST_URL=http://localhost:4331 node tests/cms-sync.mjs --setup
  *
  * `--setup` permits the native initial setup wizard on a fresh LOCAL database.
  * No development auth bypass, direct database writes, API tokens, or email.
@@ -19,6 +19,7 @@ import assert from 'node:assert/strict';
 import { mkdir, readFile, writeFile, chmod } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 import { resolve } from 'node:path';
+import { integrationEnvironment } from './integration-environment.mjs';
 
 const require = createRequire(import.meta.url);
 let playwright;
@@ -29,13 +30,22 @@ try {
   playwright = require(resolve(runtime, 'playwright'));
 }
 
-const base = new URL(process.env.CMS_TEST_URL || 'http://localhost:4321');
-assert(['localhost', '127.0.0.1', '[::1]'].includes(base.hostname), 'CMS tests are restricted to a local development server.');
+const base = await integrationEnvironment();
 const credentialFile = resolve('.wrangler/cms-sync-webauthn.json');
 const reportFile = resolve('docs/test-results-cms.md');
 const report = [];
 const record = (message) => { report.push(message); console.log(`PASS ${message}`); };
 const headings = (html) => [...html.matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/giu)].map((match) => match[1].replace(/<[^>]*>/gu, ''));
+// EmDash enriches seeded image metadata on the first REST save. Compare the
+// editorial choice and alt text, without treating that hydration or the
+// addition of an empty optional field as data loss.
+function editorialData(value) {
+  if (Array.isArray(value)) return value.map(editorialData);
+  if (!value || typeof value !== 'object') return value;
+  return Object.fromEntries(Object.entries(value).filter(([, child]) => child !== null && child !== undefined && child !== '' && !(Array.isArray(child) && child.length === 0)).map(([key, child]) => [key,
+    key === 'meta' && value.provider === 'local' && value.id ? { storageKey: child?.storageKey } : editorialData(child),
+  ]));
+}
 const browser = await playwright.chromium.launch({
   headless: true,
   ...(process.env.PLAYWRIGHT_EXECUTABLE_PATH ? { executablePath: process.env.PLAYWRIGHT_EXECUTABLE_PATH } : {}),
@@ -76,7 +86,7 @@ async function publicHtml(path) {
   const html = await response.text();
   // Signed preview URLs are credentials: never put their query in logs/reports.
   assert.equal(response.status, 200, `Public route ${url.pathname} returned ${response.status}`);
-  assert(headings(html).length > 0, `Public route ${url.pathname} did not return a rendered page heading (possible streamed rendering error).`);
+  assert(headings(html).length > 0 || /class="model-card"/u.test(html), `Public route ${url.pathname} did not return rendered content (possible streamed rendering error).`);
   return { html, headers: response.headers };
 }
 
@@ -200,7 +210,7 @@ async function checkEntry(collection, id, route, field = 'title') {
       const publicRestored = await publicHtml(route);
       assert(!publicRestored.html.includes(marker), 'Original content was not restored.');
       const final = await api(path);
-      assert.deepEqual(final.item.data, original.item.data, 'Original CMS data differs after restoration.');
+      assert.deepEqual(editorialData(final.item.data), editorialData(original.item.data), 'Original CMS data differs after restoration.');
       record(`${collection}/${id} : contenu initial restauré puis republié.`);
     }
   }
@@ -219,6 +229,227 @@ async function checkPrivacy() {
   record('API d’administration refusée aux visiteurs anonymes (401/403).');
 }
 
+async function inspect(html, selector, attribute) {
+  return page.evaluate(({ html, selector, attribute }) => {
+    const document = new DOMParser().parseFromString(html, 'text/html');
+    return [...document.querySelectorAll(selector)].map((element) => attribute ? element.getAttribute(attribute) : element.textContent);
+  }, { html, selector, attribute });
+}
+
+async function includesAt(html, selector, marker, attribute) {
+  const values = await inspect(html, selector, attribute);
+  assert(values.some((value) => value?.includes(marker)), `Expected editable content in ${selector}${attribute ? ` (${attribute})` : ''}.`);
+}
+
+async function imageAt(html, selector, expectedSource) {
+  const sources = await inspect(html, selector, 'src');
+  assert.equal(sources.length, 1, `Expected exactly one editable image at ${selector}.`);
+  assert.equal(sources[0], expectedSource, `The image at ${selector} must use the replacement media stored in R2.`);
+}
+
+const paragraph = (text) => [{ _type: 'block', _key: 'integration-block', style: 'normal', markDefs: [], children: [{ _type: 'span', _key: 'integration-span', text, marks: [] }] }];
+
+async function checkFields({ collection, entry, route, label, mutate, verify, clear, verifyCleared, additionalRoutes = [], afterPublish }) {
+  const path = `/_emdash/api/content/${collection}/${entry.id}`;
+  const original = await api(path);
+  assert.equal(original.item.status, 'published');
+  assert(!original.item.draftRevisionId || original.item.draftRevisionId === original.item.liveRevisionId, 'Pending editorial edits must not be replaced.');
+  const marker = `CMS-FIELD-${Date.now()}-${collection}`;
+  let changed = false;
+  async function publish() {
+    const latest = await api(path);
+    await api(`${path}/publish`, 'POST', { _rev: latest._rev });
+  }
+  async function save(data) {
+    const latest = await api(path);
+    await api(path, 'PUT', { data, _rev: latest._rev });
+    changed = true;
+  }
+  try {
+    await save(mutate(structuredClone(original.item.data), marker));
+    for (const publicRoute of [route, ...additionalRoutes]) assert(!(await publicHtml(publicRoute)).html.includes(marker), 'Draft field leaked to the public site.');
+    const preview = await api(`${path}/preview-url`, 'POST', {});
+    await verify((await publicHtml(preview.url)).html, marker, route);
+    await publish();
+    for (const publicRoute of [route, ...additionalRoutes]) await verify((await publicHtml(publicRoute)).html, marker, publicRoute);
+    if (afterPublish) await afterPublish(marker);
+    record(`${label} : brouillon isolé, aperçu signé fidèle et publication immédiate.`);
+    if (clear) {
+      await save(clear(structuredClone(original.item.data)));
+      assert((await publicHtml(route)).html.includes(marker), 'Clearing a draft changed the published page.');
+      const emptyPreview = await api(`${path}/preview-url`, 'POST', {});
+      const previewHtml = (await publicHtml(emptyPreview.url)).html;
+      assert(!previewHtml.includes(marker));
+      await verifyCleared(previewHtml, route);
+      await publish();
+      for (const publicRoute of [route, ...additionalRoutes]) {
+        const html = (await publicHtml(publicRoute)).html;
+        assert(!html.includes(marker));
+        await verifyCleared(html, publicRoute);
+      }
+      record(`${label} : champs vidés respectés après publication, sans valeur de secours éditoriale.`);
+    }
+  } finally {
+    if (changed) {
+      await save(original.item.data);
+      await publish();
+      assert.deepEqual(editorialData((await api(path)).item.data), editorialData(original.item.data), 'CMS field fixture was not restored.');
+      record(`${label} : contenu initial restauré.`);
+    }
+  }
+}
+
+async function checkEditableFields(pages, home, post) {
+  const homeData = (await api(`/_emdash/api/content/pages/${home.id}`)).item.data;
+  const imageFixture = homeData.brand_detail_image;
+  assert(imageFixture?.id && imageFixture?.meta?.storageKey, 'The isolated seed must contain imported media for image replacement checks.');
+  const imageSource = `/_emdash/api/media/file/${encodeURIComponent(imageFixture.meta.storageKey)}`;
+  const fixedRoutes = { collections: '/collections/', showroom: '/showroom-casablanca/', catalogue: '/catalogue/', journal: '/journal/' };
+  for (const [key, route] of Object.entries(fixedRoutes)) {
+    const entry = pages.items.find((item) => item.data.route_key === key);
+    assert(entry, `Missing fixed page ${key}`);
+    await checkFields({
+      collection: 'pages', entry, route, label: `Page ${key} : sections, images, bouton et corps enrichi`,
+      mutate: (data, marker) => ({ ...data, hero_image: { ...imageFixture, alt: `${marker}-hero` }, content: paragraph(`${marker}-body`), sections: [
+        { section_key: 'integration-section', heading: `${marker}-heading`, display_heading: `${marker}-display`, text: `${marker}-text`, cta_label: `${marker}-button`, cta_href: '/collections/?cms-integration=section', image: { ...imageFixture, alt: `${marker}-section-image` } },
+        ...(key === 'showroom' ? [
+          { section_key: 'faq_named', heading: `${marker}-question`, text: `${marker}-answer` },
+          { section_key: 'faq_untitled', heading: '', display_heading: '', text: `${marker}-plain-answer`, cta_label: `${marker}-faq-button`, cta_href: '/collections/?cms-integration=faq', image: { ...imageFixture, alt: `${marker}-faq-image` } },
+          { section_key: 'faq_empty', heading: '', display_heading: '', text: '', cta_label: '', cta_href: '' },
+        ] : []),
+      ] }),
+      verify: async (html, marker) => {
+        await includesAt(html, 'main', `${marker}-body`);
+        await includesAt(html, 'main', `${marker}-display`);
+        await includesAt(html, 'main', `${marker}-text`);
+        await includesAt(html, 'main a[href="/collections/?cms-integration=section"]', `${marker}-button`);
+        await includesAt(html, 'main img', `${marker}-hero`, 'alt');
+        await includesAt(html, '[data-section-key="integration-section"] img', `${marker}-section-image`, 'alt');
+        await imageAt(html, `main img[alt="${marker}-hero"]`, imageSource);
+        await imageAt(html, '[data-section-key="integration-section"] img', imageSource);
+        if (key === 'showroom') {
+          assert.equal((await inspect(html, '.page-faq summary')).length, 1, 'Only a named FAQ may create an accordion.');
+          await includesAt(html, '.page-faq summary', `${marker}-question`);
+          await includesAt(html, '.page-faq [data-section-key="faq_untitled"]', `${marker}-plain-answer`);
+          await includesAt(html, '.page-faq a[href="/collections/?cms-integration=faq"]', `${marker}-faq-button`);
+          await imageAt(html, '.page-faq [data-section-key="faq_untitled"] img', imageSource);
+          assert.equal((await inspect(html, '.page-faq details [data-section-key="faq_untitled"]')).length, 0, 'An untitled FAQ must retain its content outside an unnamed accordion.');
+          assert.equal((await inspect(html, '[data-section-key="faq_empty"]')).length, 0, 'An empty FAQ must not render.');
+        }
+      },
+      clear: (data) => ({ ...data, hero_image: null, content: [], sections: [] }),
+      verifyCleared: async (html) => {
+        assert.equal((await inspect(html, 'main a[href="/collections/?cms-integration=section"]')).length, 0);
+        assert.equal((await inspect(html, '.page-hero-figure img, .showroom-editorial figure img')).length, 0);
+        if (key === 'showroom') assert.equal((await inspect(html, '.page-faq')).length, 0, 'A cleared FAQ must not leave an empty section.');
+      },
+    });
+  }
+
+  await checkFields({
+    collection: 'pages', entry: home, route: '/', label: 'Accueil ordinateur/mobile : CTA des sections et sections ajoutées',
+    mutate: (data, marker) => ({ ...data, content: paragraph(`${marker}-body`), sections: [
+      ...data.sections.map((section) => ({ ...section, cta_label: `${marker}-${section.section_key}`, cta_href: `/collections/?cms-integration=${section.section_key}`, image: { ...imageFixture, alt: `${marker}-${section.section_key}-image` } })),
+      { section_key: 'integration-extra', heading: `${marker}-extra`, text: `${marker}-text`, cta_label: `${marker}-button`, cta_href: '/collections/?cms-integration=extra' },
+    ] }),
+    verify: async (html, marker) => {
+      const sections = [
+        ['brand', 'italie', '.p1 img', '.m-brand-image img'],
+        ['collections', 'collections', '.intro .section-image', '.m-section-image img'],
+        ['showroom', 'showroom', '.ph.img img', '.m-showroom-image img'],
+        ['catalogue', 'catalogue', '.book .pic', '.m-section-image img'],
+        ['journal', 'journal', '.journal-section-image', '.m-section-image img'],
+      ];
+      for (const [key, id, desktopImage, mobileImage] of sections) {
+        for (const [section, imageSelector] of [[`.desk #${id}`, desktopImage], [`.mob #m-${id}`, mobileImage]]) {
+          await includesAt(html, `${section} a[href="/collections/?cms-integration=${key}"]`, `${marker}-${key}`);
+          await imageAt(html, `${section} ${imageSelector}`, imageSource);
+          // The desktop catalogue book is decorative (aria-hidden, empty alt).
+          if (!(key === 'catalogue' && section.startsWith('.desk'))) await includesAt(html, `${section} ${imageSelector}`, `${marker}-${key}-image`, 'alt');
+        }
+      }
+      await includesAt(html, 'main', `${marker}-body`);
+      await includesAt(html, 'main', `${marker}-extra`);
+      await includesAt(html, 'main a[href="/collections/?cms-integration=extra"]', `${marker}-button`);
+    },
+    clear: (data) => ({ ...data, content: [], sections: [] }),
+    verifyCleared: async (html) => {
+      assert.equal((await inspect(html, 'main a[href*="cms-integration="]')).length, 0);
+      for (const id of ['italie', 'collections', 'showroom', 'catalogue', 'journal']) {
+        assert.equal((await inspect(html, `.desk #${id}, .mob #m-${id}`)).length, 0, `Cleared ${id} section must disappear from desktop and mobile markup.`);
+      }
+      assert.equal((await inspect(html, 'main .home-editorial')).length, 0);
+    },
+  });
+
+  const postRoute = `/journal/${post.slug}/`;
+  await checkFields({
+    collection: 'posts', entry: post, route: postRoute, label: 'Article : appel à l’action éditorial',
+    mutate: (data, marker) => ({ ...data, cta_text: `${marker}-text`, cta_label: `${marker}-button`, cta_href: '/catalogue/?cms-integration=article' }),
+    verify: async (html, marker) => {
+      await includesAt(html, '.page-cta', `${marker}-text`);
+      await includesAt(html, '.page-cta a[href="/catalogue/?cms-integration=article"]', `${marker}-button`);
+    },
+    clear: (data) => ({ ...data, cta_text: '', cta_label: '', cta_href: '' }),
+    verifyCleared: async (html) => assert.equal((await inspect(html, 'article .page-cta')).length, 0, 'Cleared article CTA must not gain a fallback button.'),
+  });
+
+  const models = await api('/_emdash/api/content/models');
+  const model = models.items.find((item) => item.slug === 'skorpio');
+  assert(model);
+  await checkFields({
+    collection: 'models', entry: model, route: '/collections/tables/', label: 'Modèle lié : image, légende et précision de disponibilité',
+    mutate: (data, marker) => ({ ...data, image: { ...imageFixture, alt: `${marker}-image` }, image_caption: `${marker}-caption`, availability_note: `${marker}-availability` }),
+    verify: async (html, marker) => {
+      await includesAt(html, '.model-card img', `${marker}-image`, 'alt');
+      await imageAt(html, `.model-card img[alt="${marker}-image"]`, imageSource);
+      await includesAt(html, '.model-card figcaption', `${marker}-caption`);
+      await includesAt(html, '.model-card', `${marker}-availability`);
+    },
+    clear: (data) => ({ ...data, image: null, image_caption: '', availability_note: '' }),
+    verifyCleared: async (html) => assert.equal((await inspect(html, '.model-card:first-child figure')).length, 0),
+  });
+
+  const globals = await api('/_emdash/api/content/site_content');
+  const global = globals.items.find((item) => item.slug === 'global');
+  assert(global);
+  await checkFields({
+    collection: 'site_content', entry: global, route: '/', additionalRoutes: ['/showroom-casablanca/', '/journal/'], label: 'Configuration : e-mail public et libellé Lire l’article',
+    mutate: (data, marker) => ({ ...data, public_email: `${marker.toLowerCase()}@example.invalid`, read_article_label: `${marker}-read` }),
+    verify: async (html, marker, route) => {
+      await includesAt(html, 'footer a[href^="mailto:"]', marker.toLowerCase());
+      if (route === '/showroom-casablanca/') await includesAt(html, '.showroom-contact a[href^="mailto:"]', marker.toLowerCase());
+      if (route === '/' || route === '/journal/') await includesAt(html, 'main', `${marker}-read`);
+    },
+    clear: (data) => ({ ...data, public_email: '', read_article_label: '' }),
+    verifyCleared: async (html) => assert.equal((await inspect(html, 'a[href^="mailto:"]')).length, 0),
+  });
+  await checkFields({
+    collection: 'site_content', entry: global, route: '/', additionalRoutes: ['/catalogue/'], label: 'Formulaire catalogue : erreurs éditables du nom et de l’e-mail',
+    mutate: (data, marker) => ({ ...data, form_name_error: `${marker}-name`, form_email_error: `${marker}-email` }),
+    verify: async (html, marker) => {
+      await includesAt(html, '[data-catalogue-form]', `${marker}-name`, 'data-name-error');
+      await includesAt(html, '[data-catalogue-form]', `${marker}-email`, 'data-email-error');
+    },
+    afterPublish: async (marker) => {
+      const visitor = await browser.newContext();
+      const formPage = await visitor.newPage();
+      try {
+        await formPage.goto(new URL('/catalogue/', base).href, { waitUntil: 'networkidle' });
+        const form = formPage.locator('[data-catalogue-form]');
+        await form.evaluate((element) => element.requestSubmit());
+        await form.locator('[name="name"][aria-invalid="true"]').waitFor();
+        assert((await form.textContent()).includes(`${marker}-name`));
+        await form.locator('[name="name"]').fill('Test catalogue local');
+        await form.locator('[name="email"]').fill('invalid');
+        await form.evaluate((element) => element.requestSubmit());
+        await form.locator('[name="email"][aria-invalid="true"]').waitFor();
+        assert((await form.textContent()).includes(`${marker}-email`));
+      } finally { await visitor.close(); }
+    },
+  });
+}
+
 let failed;
 try {
   await setupAndLogin();
@@ -231,6 +462,7 @@ try {
     assert(post, 'Seeded published article missing.');
     await checkEntry('pages', home.id, '/');
     await checkEntry('posts', post.id, `/journal/${post.slug}/`);
+    await checkEditableFields(pages, home, post);
   }
   await checkPrivacy();
 } catch (error) {
@@ -246,7 +478,9 @@ try {
     'Protocole : initialisation/connexion natives avec une passkey WebAuthn virtuelle Chromium, appels API authentifiés, puis requêtes HTTP anonymes indépendantes. Aucun contournement de l’authentification et aucun envoi d’email.', '',
     ...report.map((item) => `- ${item}`), '',
     ...(failed ? [`Échec : ${failed.message}`, ''] : []),
-    'Les données éditoriales modifiées pour le test sont restaurées. Les révisions du test restent dans l’historique local. Le compte fictif et sa passkey restent uniquement dans l’environnement de développement.', '',
+    failed
+      ? 'Les restaurations réussies sont indiquées ci-dessus. Cette exécution a échoué : la restauration complète ne peut pas être affirmée. Le compte fictif, sa passkey et les révisions restent uniquement dans l’environnement jetable.'
+      : 'Les données éditoriales modifiées pour le test sont restaurées. Les révisions du test restent dans l’historique local. Le compte fictif et sa passkey restent uniquement dans l’environnement jetable.', '',
     'Limite : ces vérifications locales ne remplacent pas une recette sur les ressources Cloudflare de préproduction après connexion du compte.', '',
   ];
   await writeFile(reportFile, lines.join('\n'));

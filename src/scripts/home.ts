@@ -22,6 +22,7 @@ function initializeHome() {
   const brand = home.querySelector<HTMLElement>('#italie');
   const collections = home.querySelector<HTMLElement>('#collections');
   const track = collections?.querySelector<HTMLElement>('.track');
+  const invitation = home.querySelector<HTMLElement>('#showroom .say h2');
   const scenes = [...home.querySelectorAll<HTMLElement>('[data-scene]')];
   const mobileImages = [...home.querySelectorAll<HTMLImageElement>('.m .mimg img')];
   const frames: Record<string, (element: HTMLElement, progress: number, entering: number) => void> = {
@@ -67,6 +68,12 @@ function initializeHome() {
   };
   function measure() {
     if (!desktop() || motion.matches) return;
+    if (invitation) {
+      invitation.style.removeProperty('--invitation-scale');
+      const available = window.innerHeight * .92 - (header?.offsetHeight || 64) - 24;
+      const scale = Math.min(1, available / Math.max(1, invitation.offsetHeight));
+      invitation.style.setProperty('--invitation-scale', scale.toFixed(4));
+    }
     if (hero && heroWords) {
       const textBottom = heroWords.offsetTop + heroWords.offsetHeight + window.innerHeight * .04;
       hero.style.setProperty('--hero-bottom', `${textBottom}px`);
@@ -77,11 +84,12 @@ function initializeHome() {
       collections.style.height = `${Math.max(window.innerHeight * 4.2, travel + window.innerHeight * 1.5)}px`;
     }
   }
-  function render(y: number) {
+  function render(y: number, mobileDrift = false) {
     const viewport = window.innerHeight;
     header?.classList.toggle('solid', !desktop() || !brand || y > brand.offsetTop - viewport * .2);
     if (motion.matches) return;
     if (!desktop()) {
+      if (!mobileDrift) return;
       mobileImages.forEach(image => {
         const rect = image.parentElement?.getBoundingClientRect();
         if (!rect || rect.bottom < 0 || rect.top > viewport) return;
@@ -92,6 +100,10 @@ function initializeHome() {
     }
     const offset = y - window.scrollY;
     for (const element of scenes) {
+      if (element.classList.contains('without-visual')) {
+        setInert(element, 'a, button, input', false);
+        continue;
+      }
       const rect = element.getBoundingClientRect();
       const top = rect.top - offset;
       const length = rect.height - viewport;
@@ -123,6 +135,8 @@ function initializeHome() {
   window.addEventListener('scroll', () => {
     target = window.scrollY;
     if (motion.matches) { current = target; render(current); return; }
+    // Version B applies the gentle mobile image drift directly to scroll position.
+    if (!desktop()) { current = target; render(current, true); return; }
     if (animation === undefined) animation = requestAnimationFrame(tick);
   }, passive);
   window.addEventListener('resize', refresh, options);
@@ -145,16 +159,24 @@ function initializeHome() {
 
   // Keep the original scene offsets for any CMS-authored in-page navigation.
   const stops: Record<string, number> = { accueil: 0, italie: .1, collections: .02, showroom: .62, plan: 0, catalogue: .62, journal: 0 };
-  document.addEventListener('click', event => {
-    const anchor = event.target instanceof Element ? event.target.closest<HTMLElement>('[data-go]') : null;
-    const id = anchor?.dataset.go;
-    if (!id) return;
+  const navigateScene = (id: string, smooth: boolean) => {
+    if (!(id in stops)) return false;
     const element = document.getElementById(desktop() ? id : `m-${id}`) || document.getElementById(id);
-    if (!element) return;
-    event.preventDefault();
+    if (!element) return false;
     let y = element.getBoundingClientRect().top + window.scrollY;
-    if (desktop() && !motion.matches && element.dataset.scene) y += (element.offsetHeight - window.innerHeight) * (stops[id] || 0);
-    window.scrollTo({ top: y - (desktop() ? 0 : 60), behavior: motion.matches ? 'auto' : 'smooth' });
+    if (desktop() && !motion.matches && element.dataset.scene) y += (element.offsetHeight - window.innerHeight) * stops[id];
+    window.scrollTo({ top: y - (desktop() ? 0 : (header?.offsetHeight || 60)), behavior: smooth && !motion.matches ? 'smooth' : 'instant' });
+    return true;
+  };
+  document.addEventListener('click', event => {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const anchor = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>('a[href]') : null;
+    if (!anchor || anchor.target === '_blank' || anchor.hasAttribute('download')) return;
+    const url = new URL(anchor.href, window.location.href);
+    const hash = url.origin === window.location.origin && url.pathname === window.location.pathname ? url.hash.slice(1).replace(/^m-/, '') : '';
+    const id = anchor.dataset.go || hash;
+    if (!id) return;
+    if (navigateScene(id, true)) event.preventDefault();
   }, options);
 
   const observer = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
@@ -168,6 +190,7 @@ function initializeHome() {
   setMotionPreference();
   measure();
   render(current);
+  if (window.location.hash) navigateScene(window.location.hash.slice(1).replace(/^m-/, ''), false);
   document.fonts.ready.then(() => { if (!controller.signal.aborted) refresh(); });
   disposeHome = () => {
     controller.abort();

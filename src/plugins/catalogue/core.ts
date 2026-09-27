@@ -73,10 +73,10 @@ export function validateInput(value: unknown): RequestInput {
   if (data.website !== undefined && data.website !== "") {
     throw new InputError("INVALID_INPUT", "Le formulaire n’a pas pu être envoyé.");
   }
-  const text = (key: string, max: number) => {
+  const text = (key: string, max: number, code = "INVALID_INPUT", message = "Veuillez vérifier les informations saisies.") => {
     const raw = data[key];
     if (typeof raw !== "string" || raw.length > max || /[\u0000-\u001f\u007f]/u.test(raw)) {
-      throw new InputError("INVALID_INPUT", "Veuillez vérifier les informations saisies.");
+      throw new InputError(code, message);
     }
     return raw.trim();
   };
@@ -88,9 +88,9 @@ export function validateInput(value: unknown): RequestInput {
   if (!/^[a-zA-Z0-9_-]{1,150}$/u.test(catalogueId)) {
     throw new InputError("INVALID_CATALOGUE", "Le catalogue n’est pas disponible.");
   }
-  const name = text("name", 120).replace(/\s+/gu, " ");
+  const name = text("name", 120, "INVALID_NAME", "Indiquez votre nom.").replace(/\s+/gu, " ");
   if (name.length < 2) throw new InputError("INVALID_NAME", "Indiquez votre nom.");
-  const email = text("email", 254).toLowerCase();
+  const email = text("email", 254, "INVALID_EMAIL", "Indiquez une adresse e-mail valide.").toLowerCase();
   if (!/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/u.test(email)) {
     throw new InputError("INVALID_EMAIL", "Indiquez une adresse e-mail valide.");
   }

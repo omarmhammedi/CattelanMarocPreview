@@ -36,7 +36,9 @@ node scripts/seed-validate.mjs
 npm run build
 ```
 
-Le test `tests/cms-sync.mjs` utilise une vraie inscription et connexion EmDash avec une passkey virtuelle sur **une base locale de test uniquement**. Ses identifiants restent dans `.wrangler/`, exclu de Git. Voir les instructions du fichier.
+Le test `tests/cms-sync.mjs` utilise une vraie inscription et connexion EmDash avec une passkey virtuelle sur **une copie jetable dédiée uniquement**. Les tests CMS et catalogue HTTP exigent un `CMS_TEST_URL` explicite, un port différent de 4321 et un marqueur local d’isolation. Ses identifiants restent dans le `.wrangler/` de cette copie, exclu de Git. Voir [le protocole de test isolé](docs/development.md#tests-de-navigateur-sur-une-base-locale-dédiée).
+
+`node tests/public-browser.mjs` vérifie le site existant en lecture seule : pages publiques, thèmes, navigation, animations et erreurs du formulaire. Toute tentative de requête autre que GET/HEAD y est bloquée. Les captures et le rapport sont placés dans `test-results/public-browser/`.
 
 ## Guides
 
@@ -44,6 +46,7 @@ Le test `tests/cms-sync.mjs` utilise une vraie inscription et connexion EmDash a
 - [Champs et synchronisation des contenus](docs/content-map.md)
 - [Catalogue, contacts privés et CRM](docs/catalogue.md)
 - [Résultats de compilation et périmètre de validation](docs/test-results-build.md)
+- [Finalisation de la migration et comparaison avec la version B](docs/migration-completion.md)
 
 ## Mise en service ultérieure
 

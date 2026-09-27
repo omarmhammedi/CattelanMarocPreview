@@ -3,6 +3,7 @@ import '../styles/site.css';
 import '../styles/pages.css';
 import SeoHead from '../components/SeoHead.astro';
 import PageMenu from '../components/PageMenu.astro';
+import Brand from '../components/Brand.astro';
 
 interface Props {
   title: string;
@@ -27,18 +28,14 @@ const navigation = site.navigation || [];
   <body class="inner-page">
     <a class="skip-link" href="#main-content">Aller au contenu</a>
     <header class="page-header">
-      <a class="page-brand" href="/" aria-label="Cattelan Italia Maroc — Accueil">
-        {site.logoDark && <img class="lg-w" src={site.logoDark.src} alt="Cattelan Italia" width="150" height="38" />}
-        {site.logoLight && <img class="lg-r" src={site.logoLight.src} alt="Cattelan Italia" width="150" height="38" />}
-        <span class="loc">Maroc</span>
-      </a>
+      <Brand site={site} />
       <nav class="page-desktop-nav" aria-label="Navigation principale">
         <PageMenu items={navigation} path={path} />
       </nav>
       <div class="page-header-tools">
         <div class="mode" role="group" aria-label="Apparence du site">
-          <button type="button" data-page-mode="light" aria-pressed="false">Clair</button>
           <button type="button" data-page-mode="dark" aria-pressed="true">Sombre</button>
+          <button type="button" data-page-mode="light" aria-pressed="false">Clair</button>
         </div>
         <details class="page-mobile-menu">
           <summary aria-label="Ouvrir le menu"><span></span><span></span></summary>
@@ -51,11 +48,8 @@ const navigation = site.navigation || [];
     <main id="main-content"><slot /></main>
     <footer class="page-footer">
       <div class="page-footer-intro">
-        <a class="page-brand" href="/" aria-label="Cattelan Italia Maroc — Accueil">
-          {site.logoDark && <img class="lg-w" src={site.logoDark.src} alt="Cattelan Italia" width="150" height="38" />}
-          {site.logoLight && <img class="lg-r" src={site.logoLight.src} alt="Cattelan Italia" width="150" height="38" />}
-          <span class="loc">Maroc</span>
-        </a>
+        <Brand site={site} />
+        {site.tagline && <p class="page-tagline">{site.tagline}</p>}
         <p>{site.footerText}</p>
       </div>
       <nav aria-label="Navigation de pied de page">
@@ -64,9 +58,11 @@ const navigation = site.navigation || [];
       <div class="page-footer-contact">
         <p>{site.city}</p>
         {site.whatsappUrl && <a href={site.whatsappUrl} target="_blank" rel="noopener noreferrer">{site.labels.contact} <span aria-hidden="true">↗</span></a>}
-        {site.phone && <span>{site.phone}</span>}
+        {site.phone && <a href={`tel:${site.phone.replace(/[^+\d]/g, '')}`}>{site.phone}</a>}
+        {site.publicEmail && <a class="public-email" href={`mailto:${site.publicEmail}`}>{site.publicEmail}</a>}
       </div>
-      <div class="page-footer-bottom"><span>© {new Date().getFullYear()} Cattelan Italia Maroc</span><a href="/confidentialite/">Confidentialité</a></div>
+      {site.previewNotice && <p class="page-preview-notice page-note">{site.previewNotice}</p>}
+      <div class="page-footer-bottom"><span>© {new Date().getFullYear()} {site.name}</span><a href="/confidentialite/">Confidentialité</a></div>
     </footer>
     <script>
       function updateTheme(mode: string) {
@@ -85,6 +81,20 @@ const navigation = site.navigation || [];
           try { localStorage.setItem('ci-mode', mode); } catch {}
         });
       });
+      const mobileMenu = document.querySelector<HTMLDetailsElement>('.page-mobile-menu');
+      mobileMenu?.addEventListener('toggle', () => {
+        mobileMenu.querySelector('summary')?.setAttribute('aria-label', mobileMenu.open ? 'Fermer le menu' : 'Ouvrir le menu');
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && mobileMenu?.open) {
+          mobileMenu.open = false;
+          mobileMenu.querySelector('summary')?.focus();
+        }
+      });
+      document.addEventListener('click', (event) => {
+        if (mobileMenu?.open && event.target instanceof Node && !mobileMenu.contains(event.target)) mobileMenu.open = false;
+      });
+      mobileMenu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => { mobileMenu.open = false; }));
       const reveals = document.querySelectorAll<HTMLElement>('[data-page-reveal]');
       if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {

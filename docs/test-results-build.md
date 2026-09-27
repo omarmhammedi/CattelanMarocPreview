@@ -1,5 +1,22 @@
 # Validation technique finale
 
+## Actualisation du 27 septembre 2026
+
+Après les corrections de fidélité à la version B et de connexion des champs EmDash :
+
+| Vérification | Résultat |
+| --- | --- |
+| `npm run check` | 44 fichiers ; 0 erreur, 0 avertissement, 0 remarque |
+| `npm test` | 17 tests réussis, aucun échec |
+| `node scripts/seed-validate.mjs` | 6 collections, 29 entrées ; références résolues, cinq articles complets et PDF privé de démonstration |
+| `npm run build` | Build serveur Cloudflare réussi ; avertissement de taille de certains bundles supérieur à 500 Ko toujours présent |
+| `git diff --check` | Aucun défaut d’espacement |
+| `node tests/public-browser.mjs` | 17 routes dans les deux thèmes, ordinateur/mobile ; dimensions compactes, branding, navigation, animations, formulaire et 19 URL d’images vérifiés en lecture seule |
+
+Les vérifications Astro et la compilation ont été exécutées successivement, serveurs de développement arrêtés, après saturation mémoire lors d’essais parallèles. La prévisualisation existante a été redémarrée avec `npm run dev -- --background`, sans réinitialisation de ses données. Aucun déploiement ni connexion Cloudflare n’a été effectué. Voir [le rapport de finalisation](migration-completion.md), [les tests CMS isolés](test-results-cms.md) et [le parcours catalogue/PDF isolé](test-results-catalogue.md).
+
+## Résultats historiques du 26 septembre
+
 Date : 26 septembre 2026. Node 24, EmDash 0.41.0, Astro 7.3.5, adaptateur Cloudflare 14.3.3, Wrangler 4.125.0.
 
 | Vérification | Résultat |

@@ -1,5 +1,7 @@
 # Recette visuelle et administration
 
+> Compte rendu historique du 26 septembre. La comparaison mesurée et les captures réalisées après l’audit du 27 septembre sont disponibles dans [le rapport de finalisation](migration-completion.md) et [la galerie version B / migration](screenshots/migration-2026-09-27/README.md). Les affirmations ci-dessous décrivent la recette antérieure ; elles ne constituent pas une preuve de parité visuelle.
+
 Date : 26 septembre 2026.
 
 Environnement : application Astro/EmDash 0.41.0 exécutée localement avec Cloudflare workerd, D1 et R2 locaux. Chromium 153 piloté par Playwright ; connexion administrative native avec la session du compte de test. Aucun accès à Cloudflare de production.

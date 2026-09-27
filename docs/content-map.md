@@ -39,7 +39,7 @@ Les familles sont `tables`, `chaises-tabourets`, `canapes-fauteuils`, `buffets-b
 | `posts.title`, `excerpt`, `image`, taxonomie `category` | Listes et cartes Journal | Titre/extrait obligatoires, image facultative | Les modifications se propagent à l’accueil, à la liste et à l’article |
 | `posts.content` | Article | Contenu obligatoire | Les cinq articles possèdent leurs sections et paragraphes complets |
 | `posts.cta_*` | Fin d’article | Masquer le bouton incomplet | Vérifier destination locale et invitation |
-| `site_content.logo_light`, `logo_dark` | En-tête et pied de page | Afficher le nom du site | Vérifier les deux apparences et la navigation mobile |
+| `site_content.logo_light`, `logo_dark` | En-tête et pied de page | Utiliser le logo natif s’il existe, puis le nom du site | Vérifier les deux apparences et la navigation mobile |
 | `site_content.address`, `hours`, `map_url` | Informations pratiques | Ne pas afficher d’adresse, horaires ou itinéraire inventés | Champs initialement vides |
 | `site_content.public_email` | Contact public | Masquer | L’adresse d’administration n’est pas publiée automatiquement |
 | `site_content.discover_label` | Boutons des familles de mobilier | Libellé obligatoire, initialement « Découvrir » | Modifier ce bouton sans changer « Lire l’article » dans le Journal |
@@ -76,6 +76,27 @@ npx emdash seed seed/seed.json --validate
 ```
 
 Le seed n’est exécuté qu’à l’initialisation d’une base vide ou dans un import explicitement choisi. Ne pas appliquer automatiquement `--on-conflict update` au démarrage ou au déploiement : cela remplacerait les modifications faites dans l’administration. Une évolution d’un site existant passe par une migration ciblée et versionnée des champs, puis la régénération des types. Les contacts privés et les fichiers du module catalogue nécessitent une sauvegarde distincte du seed éditorial.
+
+## Contrat de rendu complété le 27 septembre 2026
+
+Ces règles concernent le contenu publié et les aperçus natifs signés. Elles ne nécessitent ni réimport du seed ni modification des contenus existants.
+
+| Champs | Comportement public |
+| --- | --- |
+| `pages.sections` | Les quatre pages intérieures affichent chaque section, son texte, son image et son bouton. Les questions `faq_*` du showroom restent des accordéons et conservent leurs images et boutons ; une réponse sans titre apparaît comme bloc ordinaire, une entrée vide est omise. La section « Poursuivons votre découverte » du catalogue est rendue après le parcours de demande. |
+| `sections.display_heading`, `heading` | Le titre court est prioritaire pour la composition visible ; à défaut, le titre éditorial est utilisé. Vider les deux masque le titre. |
+| `sections.cta_label`, `cta_href` | Un bouton apparaît uniquement si les deux valeurs sont renseignées. Effacer l’une des valeurs retire le bouton, sans destination ou texte de remplacement. |
+| Accueil : `sections.image` | L’image de la section est utilisée. Pour `brand` et `showroom`, elle est prioritaire sur `brand_image` ou `showroom_image`, conservés comme champs de repli explicites. Pour `catalogue`, elle peut remplacer la couverture dans la composition de l’accueil ; elle ne change pas le PDF ni la fiche catalogue. |
+| Accueil : repères de sections | `brand`, `collections`, `showroom`, `catalogue`, `journal` déterminent les scènes dans leur ordre visuel fixe. Supprimer un repère retire sa scène. Les autres sections sont affichées après les scènes ; elles ne sont pas ignorées. |
+| `pages.content`, `hero_image` | Le corps enrichi non vide et l’image principale sont rendus sur chaque page fixe. Sur l’accueil, le corps supplémentaire suit les scènes. Sur le catalogue, l’image éditoriale est distincte de la couverture du PDF. |
+| `site_content.public_email` | L’adresse renseignée apparaît comme lien email dans les pieds de page et les informations du showroom. Un champ vide ne produit aucun lien. L’email du compte administrateur n’est jamais utilisé comme remplacement. |
+| `site_content.read_article_label` | Le libellé contrôle les liens de lecture des cartes du Journal et des articles associés ; `discover_label` reste réservé aux familles de mobilier. |
+| `site_content.form_name_error`, `form_email_error` | Les erreurs des champs du formulaire utilisent ces textes, y compris lorsque le serveur renvoie une erreur de validation de nom ou d’email. Le consentement aux communications reste séparé et facultatif. |
+| `posts.cta_text`, `cta_label`, `cta_href` | Le texte d’invitation peut apparaître seul. Le bouton exige libellé et destination. Une invitation effacée ne fait pas réapparaître de bouton catalogue implicite. |
+| `models.image_caption`, `availability_note` | La légende accompagne l’image du modèle si elle existe ; la précision de disponibilité apparaît sur la carte. Le texte global `model_notice` reste une précision commune à la sélection. |
+| Nom, ville, logos et pied de page | Accueil et pages intérieures utilisent le titre/tagline natifs et la configuration globale. Chaque logo de thème explicite est prioritaire ; le logo natif EmDash sert de repli. En l’absence de logo utilisable, le nom du site reste lisible. |
+
+Les champs `route_key` et `sort_order` pilotent les routes et l’ordre, pas un texte affiché. `site_content.title` nomme la fiche dans l’administration ; le nom public vient du titre natif EmDash. `private_file_key` reste strictement serveur. Les champs dédiés `brand_*` et `showroom_*` de la collection partagée `pages` concernent l’accueil uniquement. Les métadonnées SEO, relations, taxonomies et crédits utilisent toujours les API natives.
 
 ## Éléments à valider avant mise en ligne
 
