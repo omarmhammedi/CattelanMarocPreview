@@ -28,6 +28,8 @@ Le script utilise le générateur de clés d'EmDash installé dans le projet et 
 
 Dans Codespaces, il renseigne aussi `EMDASH_SITE_URL` avec l'URL HTTPS du port 4321. Si le projet est copié dans un autre Codespace, adapter cette URL dans `.dev.vars` avant l'inscription des passkeys. Les clés et données ne doivent pas être réinitialisées pour changer cette adresse.
 
+Le formulaire catalogue vérifie cette origine publique canonique. Le proxy Codespaces peut réécrire l'en-tête `Origin` en `http://localhost:4321` : cette variante est acceptée uniquement en développement, pour une requête reçue sur `localhost:4321`, lorsque l'origine HTTPS du `Referer` correspond exactement à l'adresse `.app.github.dev` configurée. Les autres origines restent refusées ; l'authentification et les protections CSRF natives d'EmDash restent actives. Après une modification du code du plugin natif, arrêter puis relancer `npm run dev` pour renouveler son instance en mémoire ; un simple rechargement Vite peut conserver l'ancien gestionnaire.
+
 ## Créer le premier administrateur
 
 Dans l'assistant EmDash, choisir **Cattelan Italia Maroc** comme titre du site, puis créer le compte avec l’adresse d’administration convenue hors du dépôt et enregistrer une passkey avec le navigateur. Cette étape appartient au titulaire du compte ; aucun mot de passe ou compte partagé n'est fourni par le dépôt.

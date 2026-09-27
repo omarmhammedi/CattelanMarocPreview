@@ -43,6 +43,28 @@ export class InputError extends Error {
   }
 }
 
+/** Use the operator-configured public origin when a proxy terminates HTTPS. */
+export function validateRequestOrigin(origin: string | null, requestUrl: string, siteUrl?: string,
+  proxy: { development?: boolean; referer?: string | null } = {}): void {
+  const request = new URL(requestUrl);
+  const expected = new URL(siteUrl || requestUrl);
+  if (expected.protocol !== "http:" && expected.protocol !== "https:") {
+    throw new Error("The catalogue public URL must use HTTP or HTTPS.");
+  }
+  if (!origin || origin === expected.origin) return;
+  // Codespaces rewrites Origin to HTTP localhost but preserves the browser's
+  // Referer. Accept that exact dev-only translation, never a production alias.
+  if (proxy.development && siteUrl && expected.protocol === "https:"
+    && expected.hostname.endsWith(".app.github.dev")
+    && request.hostname === "localhost" && request.port === "4321"
+    && origin === "http://localhost:4321") {
+    try {
+      if (new URL(proxy.referer || "").origin === expected.origin) return;
+    } catch { /* A missing or malformed Referer cannot establish the public origin. */ }
+  }
+  throw new InputError("ORIGIN_REJECTED", "Veuillez utiliser le formulaire depuis ce site.");
+}
+
 export function validateInput(value: unknown): RequestInput {
   if (!value || typeof value !== "object" || Array.isArray(value)) {
     throw new InputError("INVALID_INPUT", "Veuillez compléter le formulaire.");

@@ -2,12 +2,69 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {
   DOWNLOAD_LIFETIME_MS, LEASE_MS, InputError, csvCell, dispatchLead,
-  mockCrm, persistRequest, signDownload, validateInput, verifyDownload,
+  mockCrm, persistRequest, signDownload, validateInput, validateRequestOrigin, verifyDownload,
   type AtomicStore, type Catalogue, type Lead,
 } from "../src/plugins/catalogue/core.ts";
 
 const catalogue: Catalogue = { id: "edition-test", title: "Catalogue de démonstration", key: "catalogues/cattelan-demonstration.pdf", placeholder: true };
 const rawInput = () => ({ requestId: crypto.randomUUID(), catalogueId: "edition-test", name: "  Salma   Test ", email: "SALMA@example.test", communicationsConsent: false, website: "", sourcePath: "/catalogue/" });
+
+test("accepts the configured HTTPS origin behind the Codespaces HTTP proxy", () => {
+  const publicOrigin = "https://preview-example-4321.app.github.dev";
+  assert.doesNotThrow(() => validateRequestOrigin(publicOrigin,
+    "http://preview-example-4321.app.github.dev/_emdash/api/plugins/catalogue-leads/request", publicOrigin));
+  assert.doesNotThrow(() => validateRequestOrigin(publicOrigin,
+    "http://localhost:4321/_emdash/api/plugins/catalogue-leads/request", publicOrigin + "/"));
+});
+
+test("configured public origin rejects foreign hosts, protocol downgrades and internal origins", () => {
+  const publicOrigin = "https://preview-example-4321.app.github.dev";
+  for (const origin of ["https://untrusted.example", "https://another-4321.app.github.dev",
+    "http://preview-example-4321.app.github.dev", "http://localhost:4321", "null", "not an origin"]) {
+    assert.throws(() => validateRequestOrigin(origin, "http://localhost:4321/request", publicOrigin),
+      { code: "ORIGIN_REJECTED" });
+  }
+});
+
+test("without a configured public URL the origin must still match the direct request", () => {
+  const localUrl = "http://localhost:4321/request";
+  assert.doesNotThrow(() => validateRequestOrigin("http://localhost:4321", localUrl));
+  assert.doesNotThrow(() => validateRequestOrigin(null, localUrl));
+  assert.throws(() => validateRequestOrigin("https://untrusted.example", localUrl), { code: "ORIGIN_REJECTED" });
+});
+
+test("invalid configured public URLs fail closed instead of falling back to the request", () => {
+  for (const siteUrl of ["not a URL", "data:text/plain,preview", "ftp://example.test"]) {
+    assert.throws(() => validateRequestOrigin("http://localhost:4321", "http://localhost:4321/request", siteUrl));
+  }
+});
+
+test("accepts the exact Codespaces dev rewrite only with a canonical browser Referer", () => {
+  const publicOrigin = "https://preview-example-4321.app.github.dev";
+  assert.doesNotThrow(() => validateRequestOrigin("http://localhost:4321",
+    "https://localhost:4321/_emdash/api/plugins/catalogue-leads/request", publicOrigin,
+    { development: true, referer: publicOrigin + "/catalogue/" }));
+});
+
+test("Codespaces rewrite cannot admit production, unrelated referrers, other hosts or other ports", () => {
+  const publicOrigin = "https://preview-example-4321.app.github.dev";
+  const valid = { origin: "http://localhost:4321", requestUrl: "https://localhost:4321/request",
+    siteUrl: publicOrigin, development: true, referer: publicOrigin + "/catalogue/" };
+  for (const change of [
+    { development: false }, { referer: undefined }, { referer: "not a URL" },
+    { referer: "https://untrusted.example/" }, { referer: "http://localhost:4321/" },
+    { referer: "https://another-4321.app.github.dev/" },
+    { siteUrl: undefined }, { siteUrl: "https://cattelanitalia.ma", referer: "https://cattelanitalia.ma/catalogue/" },
+    { requestUrl: "https://untrusted.example:4321/request" },
+    { requestUrl: "https://localhost:9999/request" }, { origin: "http://localhost:9999" },
+    { origin: "http://127.0.0.1:4321" }, { origin: "https://untrusted.example" },
+  ]) {
+    const value = { ...valid, ...change };
+    assert.throws(() => validateRequestOrigin(value.origin, value.requestUrl, value.siteUrl,
+      { development: value.development, referer: value.referer }), { code: "ORIGIN_REJECTED" });
+  }
+});
+
 class MemoryStore implements AtomicStore<Lead> {
   values = new Map<string, { value: Lead; revision: string }>();
   sequence = 0;

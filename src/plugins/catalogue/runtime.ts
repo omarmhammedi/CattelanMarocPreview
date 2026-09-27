@@ -3,7 +3,7 @@ import { definePlugin, definePluginRoute, getEmDashEntry, pluginResponse } from 
 import type { PluginContext, StorageCollection } from "emdash";
 import {
   InputError, dispatchLead, leadsToCsv, mockCrm, persistRequest,
-  signDownload, validateInput, verifyDownload,
+  signDownload, validateInput, validateRequestOrigin, verifyDownload,
   type Catalogue, type Lead,
 } from "./core.ts";
 
@@ -111,13 +111,14 @@ export function createPlugin() {
       request: definePluginRoute({
         public: true,
         methods: ["POST"],
-        request: { body: "json", maxBytes: 4096, headers: ["origin"] },
+        request: { body: "json", maxBytes: 4096, headers: ["origin", "referer"] },
         handler: async (ctx) => {
           try {
-            const origin = ctx.request.headers.get("origin");
-            if (origin && origin !== new URL(ctx.request.url).origin) {
-              throw new InputError("ORIGIN_REJECTED", "Veuillez utiliser le formulaire depuis ce site.");
-            }
+            const siteUrl = (env as unknown as { EMDASH_SITE_URL?: string }).EMDASH_SITE_URL;
+            validateRequestOrigin(ctx.request.headers.get("origin"), ctx.request.url, siteUrl, {
+              development: import.meta.env.DEV,
+              referer: ctx.request.headers.get("referer"),
+            });
             const input = validateInput(ctx.input);
             const { bucket, secret } = bindings();
             // A retry of a saved request does not consume the abuse allowance.
