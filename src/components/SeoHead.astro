@@ -2,6 +2,7 @@
 import {EmDashHead} from 'emdash/ui';
 import {createPublicPageContext} from 'emdash/page';
 import {env} from 'cloudflare:workers';
+import PreviewViewport from './PreviewViewport.astro';
 interface Props {title:string;description?:string;site:any;image?:any;entry?:any;collection?:string;article?:boolean;}
 const {title,description,site,image,entry,article=false}=Astro.props;
 const isoDate=(value:unknown)=>{
@@ -18,7 +19,7 @@ const page=createPublicPageContext({Astro,kind:entry?'content':'custom',pageType
 ---
 <title>{title}</title>
 <EmDashHead page={page}/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<PreviewViewport />
 <meta name="color-scheme" content="dark light"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>

@@ -12,6 +12,17 @@ Le nouveau site est une application Astro + EmDash 0.41 exécutée dans le runti
 
 Le conteneur rétablit la visibilité privée à la reconnexion. Si GitHub refuse cette commande, le terminal invite à la vérifier dans **Ports**. Une prévisualisation publique destinée au client se fera sur un environnement Cloudflare séparé, après configuration de l'administration.
 
+### Inspecter la version ordinateur depuis un téléphone
+
+Sur la prévisualisation de développement, ajouter `?view=desktop` à l’URL publique force un viewport de 1280 pixels, ajusté à l’écran par le navigateur. Cette option active les compositions et animations ordinateur existantes ; le zoom reste disponible. La préférence est conservée dans l’onglet pendant la navigation entre pages. Ouvrir `?view=auto` pour retrouver le comportement responsive normal.
+
+- [Vue ordinateur](https://bookish-space-umbrella-jjxxvgxjwwvrfqvrp-4321.app.github.dev/?view=desktop)
+- [Affichage automatique](https://bookish-space-umbrella-jjxxvgxjwwvrfqvrp-4321.app.github.dev/?view=auto)
+
+L’option ne modifie ni le CMS ni son administration et n’est pas activée dans le build de production. Sans stockage navigateur, le choix explicite dans l’URL fonctionne encore ; sans JavaScript, seule cette URL explicite force la largeur. Un téléphone tenu verticalement conserve un viewport haut : le mettre à l’horizontale rapproche davantage la composition de celle d’un écran d’ordinateur.
+
+Vérification : émulation mobile WebKit et Chromium, avec largeur normale de 390 px, vue ordinateur de 1280 px, animations, navigation entre pages, réinitialisation, retour arrière, restauration de page en cache, stockage indisponible, JavaScript désactivé et orientation horizontale. Ces contrôles ne remplacent pas un essai sur l’iPhone physique et son navigateur intégré.
+
 ## Démarrer sur un ordinateur
 
 Avec Node 24 et le dépôt cloné :
