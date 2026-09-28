@@ -48,6 +48,8 @@ Les familles sont `tables`, `chaises-tabourets`, `canapes-fauteuils`, `buffets-b
 | `catalogues.is_placeholder` | Mention du document de test | Booléen obligatoire à vérifier lors du remplacement | Initialement vrai ; la couverture n’est pas une couverture officielle validée |
 | `seo_title`, `meta_description` | Métadonnées publiques | Utiliser titre/extrait éditoriaux | Vérifier canonical, partage et absence de doubles URLs |
 
+Le panneau SEO natif EmDash est prioritaire sur ces anciens champs éditoriaux. Son titre pilote désormais aussi la balise HTML `<title>`, sans modifier le H1 visible. La description, l'image, le canonical et `noIndex` suivent le comportement natif d'`EmDashHead`. Effacer une valeur du panneau rétablit les champs éditoriaux de repli. Dans EmDash 0.41, ce panneau est enregistré immédiatement : ses modifications ne suivent pas le cycle de brouillon du corps de page.
+
 La rubrique du Journal a une seule source : la taxonomie native `category`. Le rendu lit `entry.data.terms.category[].label` ; aucun champ texte `posts.category` ne la duplique. Les crédits éditoriaux proviennent également des bylines natifs, initialement « Cattelan Italia Maroc », sans auteur personnel inventé.
 
 Les sections de pages sont des repeaters éditables : `section_key`, `heading`, `display_heading`, `text`, `cta_label`, `cta_href`, `image`. Les textes enrichis utilisent le type natif `portableText`. Aucun HTML arbitraire issu du seed n’est injecté.
@@ -95,6 +97,8 @@ Ces règles concernent le contenu publié et les aperçus natifs signés. Elles 
 | `posts.cta_text`, `cta_label`, `cta_href` | Le texte d’invitation peut apparaître seul. Le bouton exige libellé et destination. Une invitation effacée ne fait pas réapparaître de bouton catalogue implicite. |
 | `models.image_caption`, `availability_note` | La légende accompagne l’image du modèle si elle existe ; la précision de disponibilité apparaît sur la carte. Le texte global `model_notice` reste une précision commune à la sélection. |
 | Nom, ville, logos et pied de page | Accueil et pages intérieures utilisent le titre/tagline natifs et la configuration globale. Chaque logo de thème explicite est prioritaire ; le logo natif EmDash sert de repli. En l’absence de logo utilisable, le nom du site reste lisible. |
+
+Sur une page de famille, une précision de disponibilité identique au texte global est affichée une seule fois après la sélection. Une précision propre à un modèle reste sur sa carte ; si le texte global est vide, chaque précision de modèle reste visible. Aucun champ CMS n'est effacé par ce regroupement.
 
 Les champs `route_key` et `sort_order` pilotent les routes et l’ordre, pas un texte affiché. `site_content.title` nomme la fiche dans l’administration ; le nom public vient du titre natif EmDash. `private_file_key` reste strictement serveur. Les champs dédiés `brand_*` et `showroom_*` de la collection partagée `pages` concernent l’accueil uniquement. Les métadonnées SEO, relations, taxonomies et crédits utilisent toujours les API natives.
 

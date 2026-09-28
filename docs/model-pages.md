@@ -1,5 +1,7 @@
 # Fiches modèles
 
+L'amélioration éditoriale et les titres SEO des six familles et onze fiches sont préparés dans une [migration 0004 distincte](collection-editorial.md), à exécuter après l'import des détails décrit ici. La [stratégie de contenu](seo-content-strategy.md) précise le rôle de chaque type de page.
+
 Les cartes « Quelques pièces à découvrir » ouvrent `/modeles/{slug}/` dans le même onglet. Le périmètre reste celui des onze modèles déjà sélectionnés dans les six familles. L'import de l'intégralité du catalogue international n'est pas réalisé.
 
 Les URL initiales viennent de `seed/sources.json` et du champ EmDash `models.official_url`. `content/model-details.json` consigne les caractéristiques et médias des fiches françaises officielles, relevés le 28 septembre 2026. Ce fichier est une source d'import versionnée, jamais une source de secours utilisée par le frontend.

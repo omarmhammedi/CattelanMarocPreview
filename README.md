@@ -45,6 +45,7 @@ Le test `tests/cms-sync.mjs` utilise une vraie inscription et connexion EmDash a
 - [Développement et Codespaces](docs/development.md)
 - [Champs et synchronisation des contenus](docs/content-map.md)
 - [Fiches modèles et import des sources officielles](docs/model-pages.md)
+- [Stratégie de contenu et SEO](docs/seo-content-strategy.md)
 - [Catalogue, contacts privés et CRM](docs/catalogue.md)
 - [Résultats de compilation et périmètre de validation](docs/test-results-build.md)
 - [Finalisation de la migration et comparaison avec la version B](docs/migration-completion.md)

@@ -61,7 +61,7 @@ export function cliAuthentication(store, origin, projectRoot, now = Date.now()) 
   return { headers: { Authorization: `Bearer ${credential.accessToken}` }, expiresAt };
 }
 
-async function authentication(origin) {
+export async function authentication(origin) {
   assert(!process.env.EMDASH_USE_CLI_AUTH || ['0', '1'].includes(process.env.EMDASH_USE_CLI_AUTH), 'EMDASH_USE_CLI_AUTH must be 0 or 1.');
   const useCli = process.env.EMDASH_USE_CLI_AUTH === '1';
   assert(!(useCli && process.env.EMDASH_AUTH_FILE), 'Choose one authentication source: EMDASH_USE_CLI_AUTH=1 or EMDASH_AUTH_FILE.');
@@ -195,7 +195,7 @@ export function mediaLeaves(value, path = []) {
   return Object.entries(value).flatMap(([key, child]) => mediaLeaves(child, [...path, key]));
 }
 
-function normalizeData(value, fields) {
+export function normalizeData(value, fields) {
   const data = structuredClone(value);
   for (const field of fields) {
     if (field.type === 'reference' && field.validation?.relation) delete data[field.slug];

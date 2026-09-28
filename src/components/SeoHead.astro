@@ -1,11 +1,15 @@
 ---
 import {EmDashHead} from 'emdash/ui';
+import {getContentSeo} from 'emdash';
 import {createPublicPageContext} from 'emdash/page';
 import {env} from 'cloudflare:workers';
 import PreviewViewport from './PreviewViewport.astro';
 import { editorPreviewContentPolicy } from '../lib/editor-preview';
 interface Props {title:string;description?:string;site:any;image?:any;entry?:any;collection?:string;article?:boolean;}
 const {title,description,site,image,entry,article=false}=Astro.props;
+// EmDashHead applies the native SEO panel to metadata, but <title> belongs to
+// the template. Keep both surfaces aligned without changing the visible H1.
+const resolvedTitle=(entry && getContentSeo(entry)?.title) || title;
 const isoDate=(value:unknown)=>{
   if(!(value instanceof Date)&&typeof value!=='string')return undefined;
   const date=new Date(value);return Number.isNaN(date.getTime())?undefined:date.toISOString();
@@ -28,9 +32,9 @@ if (import.meta.env.DEV && ['GET', 'HEAD'].includes(Astro.request.method)) {
 }
 Astro.response.headers.set('Cache-Control','no-store');
 if(!indexable || isPreview) Astro.response.headers.set('X-Robots-Tag','noindex, nofollow');
-const page=createPublicPageContext({Astro,kind:entry?'content':'custom',pageType:article?'article':'website',title,pageTitle:title,description,image:typeof image==='string'?image:image?.src,canonical:new URL(Astro.url.pathname,origin).href,siteName:site.name,siteUrl:origin,seo:{robots:!indexable||isPreview?'noindex, nofollow':'index, follow'},content:entry&&collection?{collection,id:String(entry.data.id || entry.id),slug:entry.data.slug || entry.id}:undefined,articleMeta:article?{publishedTime:isoDate(entry?.data.publishedAt || entry?.data.published_at),modifiedTime:isoDate(entry?.data.updatedAt || entry?.data.updated_at),author:entry?.data.byline?.displayName}:undefined});
+const page=createPublicPageContext({Astro,kind:entry?'content':'custom',pageType:article?'article':'website',title:resolvedTitle,pageTitle:resolvedTitle,description,image:typeof image==='string'?image:image?.src,canonical:new URL(Astro.url.pathname,origin).href,siteName:site.name,siteUrl:origin,seo:{robots:!indexable||isPreview?'noindex, nofollow':'index, follow'},content:entry&&collection?{collection,id:String(entry.data.id || entry.id),slug:entry.data.slug || entry.id}:undefined,articleMeta:article?{publishedTime:isoDate(entry?.data.publishedAt || entry?.data.published_at),modifiedTime:isoDate(entry?.data.updatedAt || entry?.data.updated_at),author:entry?.data.byline?.displayName}:undefined});
 ---
-<title>{title}</title>
+<title>{resolvedTitle}</title>
 <EmDashHead page={page}/>
 <PreviewViewport />
 <meta name="color-scheme" content="dark light"/>

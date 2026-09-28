@@ -21,7 +21,7 @@ if (!family) return new Response('Collection introuvable', { status: 404 });
   {family.models?.length > 0 && <section class="page-gutter models-section">
     <div class="section-heading"><p class="kick">La sélection</p><h2>Quelques pièces à découvrir</h2></div>
     <div class="model-grid">
-      {family.models.map((model: any) => <ModelCard model={model}/>)}
+      {family.models.map((model: any) => <ModelCard model={model} sharedNotice={site.modelNotice}/>)}
     </div>
     {site.modelNotice && <p class="page-note">{site.modelNotice}</p>}
   </section>}
