@@ -1,6 +1,6 @@
 # Fiches modèles
 
-L'amélioration éditoriale et les titres SEO des six familles et onze fiches sont préparés dans une [migration 0004 distincte](collection-editorial.md), à exécuter après l'import des détails décrit ici. La [stratégie de contenu](seo-content-strategy.md) précise le rôle de chaque type de page.
+L'amélioration éditoriale et les titres SEO des six familles et onze fiches passent par une [migration 0004 distincte](collection-editorial.md), exécutée après l'import des détails décrit ici. Les deux migrations ont été publiées dans l'aperçu privé le 28 septembre 2026 ; voir le [rapport de publication](test-results-publication.md). La [stratégie de contenu](seo-content-strategy.md) précise le rôle de chaque type de page.
 
 Les cartes « Quelques pièces à découvrir » ouvrent `/modeles/{slug}/` dans le même onglet. Le périmètre reste celui des onze modèles déjà sélectionnés dans les six familles. L'import de l'intégralité du catalogue international n'est pas réalisé.
 
@@ -10,7 +10,7 @@ Les URL initiales viennent de `seed/sources.json` et du champ EmDash `models.off
 
 Chaque fiche peut afficher une photo principale, une présentation française originale, l'année, la galerie du modèle exact, les dimensions métriques, les plans, les finitions regroupées par élément et matière, et le PDF technique officiel. Les photos d'autres modèles proposées par le site officiel ne sont pas importées. Les plans restent une liste indépendante : leur correspondance avec une dimension particulière n'est pas déduite de leur position.
 
-Les textes existants des cartes restent conservés. Les caractéristiques supplémentaires sont des reformulations courtes ; le contenu commercial intégral de la marque n'est pas reproduit. Aucun prix, stock marocain, délai, disponibilité en magasin ou designer non identifié n'est ajouté. Les modèles Outdoor restent réservés aux espaces extérieurs couverts, protégés des intempéries.
+La migration 0003 conserve les textes existants des cartes. La migration 0004 remplace ensuite uniquement les descriptions et corps provisoires connus par des textes spécifiques, sans écraser les modifications personnalisées. Le contenu commercial intégral de la marque n'est pas reproduit. Aucun prix, stock marocain, délai, disponibilité en magasin ou designer non identifié n'est ajouté. Les modèles Outdoor restent réservés aux espaces extérieurs couverts, protégés des intempéries.
 
 Les configurateurs interactifs, vidéos et contenus sociaux restent sur le site officiel. Les différentes matières et dimensions ne signifient pas que toutes leurs combinaisons sont proposées ; le PDF technique et le showroom permettent de confirmer une configuration.
 
@@ -34,7 +34,7 @@ Les références des familles sont paginées dans leur ordre natif. Les nouvelle
 
 ## Migration ciblée d'une base existante
 
-Ne pas réappliquer le seed. La migration `scripts/migrations/0003-model-detail-pages.mjs` exige une véritable connexion administrateur et utilise uniquement les API natives. Elle n'inscrit pas de compte, ne crée pas de session et n'écrit pas directement dans D1.
+Ne pas réappliquer le seed. La migration `scripts/migrations/0003-model-detail-pages.mjs` exige une authentification administrateur native et utilise uniquement les API natives. Elle n'inscrit pas de compte, ne crée pas de session et n'écrit pas directement dans D1.
 
 Le parcours natif recommandé évite de copier un cookie :
 
@@ -53,6 +53,10 @@ EMDASH_AUTH_FILE=.wrangler/admin-session.json node scripts/migrations/0003-model
 ```
 
 Le premier appel est une simulation. Le fichier de session doit rester privé et ignoré par Git ; ne pas copier de cookie dans une conversation ou un commit. `EMDASH_BASE_URL` désigne par défaut `http://localhost:4321` ; seuls les serveurs locaux sont acceptés. Les copies de test utilisent leur propre origine, session, secrets et stockage.
+
+Pour cette prévisualisation locale, le propriétaire a aussi explicitement autorisé un accès technique de développement. Le mécanisme natif `/_emdash/api/auth/dev-bypass`, disponible uniquement en mode développement, crée ou réutilise le compte distinct `dev@emdash.local` et ouvre sa session. Il ne modifie ni le compte personnel, ni ses passkeys, ni le contenu existant. Cet accès ajoute un administrateur technique s'il n'existe pas déjà ; ce n'est pas une connexion au compte personnel.
+
+Cette voie est utilisée sur l'origine locale uniquement, après sauvegarde cohérente et relevé de conservation des données. Sa session reste dans un fichier privé sous `.wrangler/migrations/` et peut être fournie à l'importeur par `EMDASH_AUTH_FILE`. À la fin, un appel natif `POST /_emdash/api/auth/logout` avec cette seule session la détruit ; le fichier local est ensuite supprimé. Le compte technique reste identifié dans l'historique des révisions. **Ne jamais appeler `/_emdash/api/setup/dev-bypass` sur la base existante** : cette autre route applique le seed et modifie les paramètres d'installation.
 
 La migration ajoute dix champs facultatifs, rend la collection routable et remplit uniquement les champs encore vides. Les textes existants, images choisies, listes déjà renseignées et statuts de publication sont conservés. Les brouillons en attente ou changements de révision concurrents arrêtent l'opération. Le repère `source_verified_at` empêche une nouvelle exécution de rétablir des champs volontairement effacés après l'import.
 

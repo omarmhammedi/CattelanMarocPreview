@@ -40,6 +40,8 @@ Le test `tests/cms-sync.mjs` utilise une vraie inscription et connexion EmDash a
 
 `node tests/public-browser.mjs` vérifie le site existant en lecture seule : pages publiques, thèmes, navigation, animations et erreurs du formulaire. Toute tentative de requête autre que GET/HEAD y est bloquée. Les captures et le rapport sont placés dans `test-results/public-browser/`.
 
+Après les migrations 0003 et 0004, `node tests/published-content-browser.mjs` vérifie aussi les textes et métadonnées publiés des six familles et onze modèles, les liens, les médias et les PDF techniques, puis leurs compositions dans Chromium et WebKit. Ce contrôle est anonyme et en lecture seule ; il compare les octets aux empreintes du cache officiel local de la migration. Voir le [rapport de publication dans l'aperçu privé](docs/test-results-publication.md).
+
 ## Guides
 
 - [Développement et Codespaces](docs/development.md)

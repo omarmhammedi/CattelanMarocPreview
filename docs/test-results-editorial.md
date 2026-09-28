@@ -6,7 +6,7 @@ Six familles et onze modèles : textes spécifiques, onze liens contextuels vers
 
 La stratégie complète et ses limites sont dans [Stratégie de contenu et SEO](seo-content-strategy.md). Les règles de la migration sont dans [Contenus des familles et des modèles](collection-editorial.md).
 
-## Vérifications terminées
+## Vérifications sur la copie jetable
 
 - Migration native 0004 sur `/tmp/cattelan-models-integration-NXr8ZO`, port 4331, avec sa propre base, ses médias, ses secrets et sa session déjà inscrite. Aucune nouvelle inscription ni écriture de test sur la base principale.
 - Simulation : dix-sept entrées à modifier. Application : dix-sept entrées enregistrées et publiées, champs non concernés, médias, statuts et relations ordonnées conservés. Après restauration des valeurs du test, seconde application : zéro modification.
@@ -23,7 +23,9 @@ La première exécution navigateur a subi une fermeture du serveur de développe
 
 ## État de la base principale
 
-L'import 0003 des données détaillées et la révision 0004 restent en attente d'une authentification EmDash personnelle valide. L'ancien code de connexion a expiré ; aucun identifiant n'a été créé pour contourner cette étape. Les captures et validations ci-dessus concernent uniquement la copie jetable.
+L'import 0003 et la révision 0004 sont désormais publiés dans la base principale de l'aperçu privé, le 28 septembre 2026. L'utilisateur a explicitement autorisé l'accès technique local natif d'EmDash : un compte de développement distinct a été créé, sans modifier son administrateur personnel ni ses passkeys. Une sauvegarde cohérente précède l'opération ; le contrôle de conservation est réussi. Les simulations après publication proposent zéro modification. La session technique a ensuite été fermée et son fichier de cookie supprimé.
+
+Le [rapport de publication](test-results-publication.md) distingue les vérifications sur les pages réellement servies par l'aperçu principal des tests de brouillon/publication effectués sur la copie jetable. Les captures citées dans la section précédente restent celles de cette copie, conservées comme preuve historique.
 
 Les cinq articles et toutes les pages sont conservés. Leurs liens contextuels ainsi que les informations pratiques, images du showroom et PDF définitif restent des éléments de la stratégie à compléter. Aucune recherche de volumes de mots-clés, mesure de classement ou mesure Search Console n'a été réalisée. Le site privé reste non indexable ; aucun déploiement, domaine, CRM ou compte externe n'a été connecté.
 

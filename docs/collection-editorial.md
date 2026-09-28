@@ -17,7 +17,9 @@ EMDASH_USE_CLI_AUTH=1 node scripts/migrations/0004-collection-editorial.mjs
 EMDASH_USE_CLI_AUTH=1 node scripts/migrations/0004-collection-editorial.mjs --apply
 ```
 
-L'authentification doit provenir d'une connexion EmDash réelle pour ce projet. Comme la 0003, le script accepte également `EMDASH_AUTH_FILE` avec une session existante. Ne pas utiliser les deux modes ensemble. Le mode par défaut est une simulation en lecture seule ; aucun code d'authentification n'est approuvé automatiquement.
+L'authentification doit provenir d'une connexion EmDash native pour ce projet. Comme la 0003, le script accepte également `EMDASH_AUTH_FILE` avec une session existante. Ne pas utiliser les deux modes ensemble. Le mode par défaut est une simulation en lecture seule ; aucun code d'authentification n'est approuvé automatiquement.
+
+L'accès technique local explicitement autorisé par le propriétaire utilise le [parcours natif de développement décrit pour la 0003](model-pages.md#migration-ciblée-dune-base-existante). Il ouvre une session du compte distinct `dev@emdash.local`, créé si nécessaire, en conservant l'administrateur personnel et ses passkeys. Seule la route `auth/dev-bypass` intervient, jamais `setup/dev-bypass` ni un seed. Sauvegarde et relevé de conservation précèdent l'opération ; le cookie reste privé et la session est fermée par la route native de déconnexion après publication et vérification. Les tests qui modifient le contenu ou l'authentification restent réservés à la copie jetable ; les vérifications publiques en lecture seule peuvent porter sur l'aperçu principal.
 
 Les dix-sept entrées doivent correspondre exactement à leur état initial connu ou à leur état final attendu. Une modification personnalisée, une valeur effacée, un état partiellement modifié ou un brouillon en attente arrête la préparation avant toute écriture. Le script contrôle les révisions, le schéma et toutes les pages des relations natives avant l'import, puis chaque entrée avant son enregistrement. Il sauvegarde les entrées concernées dans `.wrangler/migrations/`, révise par l'API native et republie uniquement les entrées déjà publiées.
 

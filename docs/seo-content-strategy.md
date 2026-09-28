@@ -41,11 +41,13 @@ Conserver la référence et la source officielle derrière chaque caractéristiq
 
 Le parcours principal va de l'accueil aux familles, puis aux modèles et au contact. Le catalogue reste accessible pour une consultation d'ensemble. Un visiteur du Journal doit pouvoir rejoindre directement la famille ou le modèle qui illustre le conseil, sans revenir à la navigation générale.
 
-Les textes préparés pour les six familles contiennent onze liens contextuels vers les modèles. Les fiches possèdent un retour vers leur famille et les familles un article associé lorsqu'il existe. Les liens contextuels dans les cinq articles du Journal restent à compléter et à vérifier ; leur simple mention d'un modèle ne constitue pas encore un lien. Préserver des ancres explicites et des liens HTML utilisables, comme le recommande le [guide SEO de Google](https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=fr).
+Les textes publiés pour les six familles contiennent onze liens contextuels vers les modèles. Les fiches possèdent un retour vers leur famille et les familles un article associé lorsqu'il existe. Les liens contextuels dans les cinq articles du Journal restent à compléter et à vérifier ; leur simple mention d'un modèle ne constitue pas encore un lien. Préserver des ancres explicites et des liens HTML utilisables, comme le recommande le [guide SEO de Google](https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=fr).
 
 ## État et prochaines validations
 
 La réécriture de cette étape concerne **dix-sept entrées : six familles et onze modèles**. Elle ne couvre pas tout le catalogue international. Les fichiers de contenu sont des sources de migration ciblée ; ils ne prouvent pas à eux seuls que les nouvelles versions sont publiées dans EmDash. La publication doit être vérifiée sur les pages rendues, en conservant les modifications et brouillons de l'éditeur.
+
+Cette publication dans l'aperçu principal a été effectuée le 28 septembre 2026. Le [rapport de publication](test-results-publication.md) consigne la vérification des textes et métadonnées effectivement servis, des médias et de la conservation des données existantes.
 
 Les informations locales à confirmer restent l'adresse, les horaires, les coordonnées commerciales et les photographies réelles du showroom. Le PDF définitif doit remplacer le document de démonstration avant de présenter le catalogue comme prêt pour le public. Ces faits apportent davantage à une recherche locale qu'une liste de villes sans modalités concrètes. Ne pas créer de pages de villes sans établissement, service ou contenu spécifique vérifiable.
 

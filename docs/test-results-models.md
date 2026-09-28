@@ -1,6 +1,6 @@
 # Fiches modèles — vérification du 28 septembre 2026
 
-Date exprimée à Toronto. Environnement : copie jetable `/tmp/cattelan-models-integration-NXr8ZO`, origine locale `http://localhost:4331`, dépendances, secrets, D1, R2 et passkey de test propres à cette copie. Aucune inscription ni manipulation de passkey n'a été réalisée sur la base principale.
+Date exprimée à Toronto. Environnement de ces tests : copie jetable `/tmp/cattelan-models-integration-NXr8ZO`, origine locale `http://localhost:4331`, dépendances, secrets, D1, R2 et passkey de test propres à cette copie. Les tests d'inscription et de passkey sont restés isolés. La publication ultérieure dans l'aperçu principal, avec son accès technique local explicitement autorisé, est décrite dans le [rapport de publication](test-results-publication.md).
 
 ## Résultats
 
@@ -25,4 +25,4 @@ La [galerie de captures](screenshots/models-2026-09-28/README.md) provient de l'
 
 Le premier passage combinant tous les navigateurs a été interrompu lorsque le serveur de développement ne répondait plus. Après relance, les contrôles de publication et WebKit ont été exécutés séparément et réussis. Le contrôle d'un échantillon chargé à la demande défile désormais jusqu'à l'image avant d'attendre son décodage ; les délais réseau et navigateur sont bornés. Les captures Chromium validées sont conservées.
 
-Ces résultats ne constituent pas un essai sur iPhone physique ni sur Workers en production. Les configurateurs et vidéos du site international ne sont pas reproduits. Les documents techniques publics restent distincts du catalogue privé remis après formulaire. L'import dans la base principale exige sa propre connexion administrateur ; les identifiants de test ne peuvent pas l'autoriser.
+Ces résultats ne constituent pas un essai sur iPhone physique ni sur Workers en production. Les configurateurs et vidéos du site international ne sont pas reproduits. Les documents techniques publics restent distincts du catalogue privé remis après formulaire. L'import dans la base principale a utilisé sa propre session native de développement, ensuite fermée ; aucun identifiant de la copie jetable n'a été réutilisé.
