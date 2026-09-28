@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
 import { WebSocketServer } from 'ws';
-import { CodexRpc, GRACE_MS, IdleCountdown, checkAndStop, collectSnapshot } from './task-autostop.mjs';
+import { CodexRpc, GRACE_MS, IdleCountdown, checkAndStop, collectSnapshot, decodeRpcError } from './task-autostop.mjs';
 
 const counters = ['core.turns.active', 'core.mailbox.pending', 'app.requests.queued', 'app.server_requests.pending'];
 const idle = (fingerprint = 'completed-task') => ({ busy: false, completed: true, fingerprint });
@@ -106,7 +106,7 @@ test('running, queued, and goal work blocks shutdown, including a subagent', asy
   }
 });
 
-test('an empty server and failed or interrupted work never arm the timer', async () => {
+test('an empty server has no completion proof; terminal failed or interrupted attempts can become idle', async () => {
   const empty = await collectSnapshot(fakeRpc({ rows: {} }));
   assert.equal(empty.completed, false);
   assert.equal(new IdleCountdown().observe(empty, GRACE_MS).phase, 'waiting');
@@ -114,8 +114,10 @@ test('an empty server and failed or interrupted work never arm the timer', async
     const snapshot = await collectSnapshot(fakeRpc({ rows: {
       root: done(), child: done({ turn: { id: 'unfinished', status, completedAt: 100 } }),
     } }));
-    assert.equal(snapshot.busy, true);
-    assert.equal(new IdleCountdown().observe(snapshot, GRACE_MS).due, false);
+    assert.equal(snapshot.busy, false);
+    const countdown = new IdleCountdown();
+    assert.equal(countdown.observe(snapshot, 0).due, false);
+    assert.equal(countdown.observe(snapshot, GRACE_MS).due, true);
   }
 });
 
@@ -181,8 +183,8 @@ test('a new server PID cannot inherit the previous server countdown', async () =
   assert.equal(countdown.observe(restarted, GRACE_MS).remainingMs, GRACE_MS);
 });
 
-test('a fresh server without mailbox telemetry still stops after verified completion and the full grace', async () => {
-  const rpc = fakeRpc({ gauges: { 'core.mailbox.pending': null } });
+test('a fresh server with sparse telemetry still stops after verified completion and the full grace', async () => {
+  const rpc = fakeRpc({ gauges: Object.fromEntries(counters.map(name => [name, null])) });
   const snapshot = await collectSnapshot(rpc);
   assert.equal(snapshot.busy, false);
   assert.equal(snapshot.completed, true);
@@ -210,9 +212,8 @@ test('malformed, unsupported, missing, and changing state fails closed', async t
     'unknown turn state': fakeRpc({ rows: { root: done({ turn: { id: 'x', status: 'unknown' } }) } }),
     'missing completion timestamp': fakeRpc({ rows: { root: done({ turn: { id: 'x', status: 'completed' } }) } }),
     'unknown goal status': fakeRpc({ rows: { root: done({ goal: { status: 'unknown' } }) } }),
-    'missing activity gauge': fakeRpc({ gauges: { 'core.turns.active': null } }),
-    'missing queued request gauge': fakeRpc({ gauges: { 'app.requests.queued': null } }),
-    'missing pending server request gauge': fakeRpc({ gauges: { 'app.server_requests.pending': null } }),
+    'missing gauges array': fakeRpc({ intercept: method => method === 'server/diagnostics' ? { process: { id: 123 } } : undefined }),
+    'invalid gauges array': fakeRpc({ intercept: method => method === 'server/diagnostics' ? { process: { id: 123 }, gauges: [null] } : undefined }),
     'negative activity gauge': fakeRpc({ gauges: { 'core.turns.active': -1 } }),
     'invalid activity gauge': fakeRpc({ gauges: { 'core.turns.active': '0' } }),
     'negative mailbox gauge': fakeRpc({ gauges: { 'core.mailbox.pending': -1 } }),
@@ -235,6 +236,29 @@ test('malformed, unsupported, missing, and changing state fails closed', async t
     } }),
   };
   for (const [label, rpc] of Object.entries(cases)) await t.test(label, () => assert.rejects(collectSnapshot(rpc)));
+});
+
+test('a healthy blank chat does not become a persisted task or restart an existing deadline', async () => {
+  const known = new Set();
+  const first = await collectSnapshot(fakeRpc(), known);
+  const rpc = fakeRpc({ rows: { root: done(), blank: done({ turn: null }) }, intercept: (method, params) => {
+    if (method === 'thread/turns/list' && params.threadId === 'blank') {
+      throw decodeRpcError({ code: -32600, message: 'thread is not materialized yet; unavailable before first user message' });
+    }
+  } });
+  const after = await collectSnapshot(rpc, known);
+  assert.deepEqual([...known], ['root']);
+  assert.equal(after.fingerprint, first.fingerprint);
+  assert.equal(after.busy, false);
+});
+
+test('only the precise native unmaterialized-thread error is recognized', () => {
+  assert.equal(decodeRpcError({ code: -32600, message: 'not materialized yet; unavailable before first user message' }).code, 'THREAD_UNMATERIALIZED');
+  for (const error of [
+    { code: -32601, message: 'not materialized yet; unavailable before first user message' },
+    { code: -32600, message: 'unsupported method' },
+    { code: -32600, message: 'not materialized yet' },
+  ]) assert.equal(decodeRpcError(error).code, undefined);
 });
 
 test('stop is called only after the deadline and a second successful fresh check', async () => {
