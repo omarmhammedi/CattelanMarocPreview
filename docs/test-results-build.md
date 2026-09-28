@@ -1,18 +1,19 @@
 # Validation technique finale
 
-## Actualisation du 27 septembre 2026
+## Actualisation des 27–28 septembre 2026
 
 Après les corrections de fidélité à la version B et de connexion des champs EmDash :
 
 | Vérification | Résultat |
 | --- | --- |
-| `npm run check` | 45 fichiers après ajout du viewport de prévisualisation ; 0 erreur, 0 avertissement, 0 remarque |
+| `npm run check` | 46 fichiers après ajout du viewport de prévisualisation et du bouton de thème partagé ; 0 erreur, 0 avertissement, 0 remarque |
 | `npm test` | 17 tests réussis, aucun échec |
 | `node scripts/seed-validate.mjs` | 6 collections, 29 entrées ; références résolues, cinq articles complets et PDF privé de démonstration |
 | `npm run build` | Build serveur Cloudflare réussi ; avertissement de taille de certains bundles supérieur à 500 Ko toujours présent |
 | `git diff --check` | Aucun défaut d’espacement |
 | `node tests/public-browser.mjs` | 17 routes dans les deux thèmes, ordinateur/mobile ; dimensions compactes, branding, navigation, animations, formulaire et 19 URL d’images vérifiés en lecture seule |
 | Viewport de prévisualisation | WebKit et Chromium en émulation mobile : largeur 390/1280 px, navigation, animations, réinitialisation, retour/cache, stockage bloqué, sans JavaScript et paysage |
+| Bouton de thème, 28 septembre | WebKit et Chromium à 1440, 390 et 320 px : icône à droite dans les deux en-têtes, thèmes, clavier, cible tactile, navigation et conservation du choix ; aucun débordement ni exception JavaScript |
 
 Les vérifications Astro et la compilation ont été exécutées successivement, serveurs de développement arrêtés, après saturation mémoire lors d’essais parallèles. La prévisualisation existante a été redémarrée avec `npm run dev -- --background`, sans réinitialisation de ses données. Aucun déploiement ni connexion Cloudflare n’a été effectué. Voir [le rapport de finalisation](migration-completion.md), [les tests CMS isolés](test-results-cms.md) et [le parcours catalogue/PDF isolé](test-results-catalogue.md).
 

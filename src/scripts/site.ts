@@ -1,25 +1,10 @@
-/** Shared appearance and navigation behavior for all public templates. */
+/** Homepage navigation and showroom clock behavior. */
 let disposeSite: (() => void) | undefined;
 
 function initializeSite() {
   disposeSite?.();
   const controller = new AbortController();
   const options = { signal: controller.signal };
-  const buttons = [...document.querySelectorAll<HTMLButtonElement>('.mode button[data-mode]')];
-  function setMode(mode: string) {
-    const value = mode === 'light' ? 'light' : 'dark';
-    document.documentElement.dataset.mode = value;
-    // EmDash image/preview helpers also recognise these conventional classes.
-    document.documentElement.classList.toggle('light', value === 'light');
-    document.documentElement.classList.toggle('dark', value === 'dark');
-    buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.mode === value)));
-    try { localStorage.setItem('ci-mode', value); } catch { /* Privacy mode can disable storage. */ }
-  }
-  let saved = 'dark';
-  try { saved = localStorage.getItem('ci-mode') || 'dark'; } catch { /* Keep the selected default. */ }
-  setMode(saved);
-  buttons.forEach(button => button.addEventListener('click', () => setMode(button.dataset.mode || 'dark'), options));
-
   const toggle = document.querySelector<HTMLButtonElement>('.mobile-menu-toggle');
   const menuId = toggle?.getAttribute('aria-controls');
   const menu = menuId ? document.getElementById(menuId) : null;

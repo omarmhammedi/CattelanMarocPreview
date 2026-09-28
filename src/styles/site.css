@@ -30,9 +30,6 @@ body, .hd, section, footer { transition: background-color .5s ease, color .5s ea
 .hd .logo { display: flex; flex-direction: column; align-items: center; gap: 5px; }
 .loc { display: block; font-size: max(9px, calc(var(--u) * 0.72)); font-weight: 400; letter-spacing: 0.62em; margin-right: -0.62em; text-transform: uppercase; color: var(--ink); line-height: 1; }
 .ft .brand .loc { align-self: flex-start; width: 180px; text-align: center; }
-.mode { display: inline-flex; border: 1px solid var(--hair); }
-.mode button { height: 30px; padding: 0 11px; border: 0; background: transparent; color: var(--muted); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; cursor: pointer; }
-.mode button[aria-pressed="true"] { background: var(--ink); color: var(--on-ink); }
 html, body { background: var(--bg); }
 body { margin: 0; color: var(--ink); font-family: var(--f); -webkit-font-smoothing: antialiased; }
 * { box-sizing: border-box; }
@@ -56,10 +53,10 @@ button, input { font-family: inherit; }
 .deco { color: var(--ink); }
 
 /* ---------- header */
-.hd { position: fixed; left: 0; right: 0; top: 0; z-index: 20; height: max(64px, calc(var(--u) * 6.2)); padding: 0 var(--gut); display: flex; align-items: center; justify-content: space-between; gap: 24px; transition: background .4s ease; }
+.hd { position: fixed; left: 0; right: 0; top: 0; z-index: 20; height: max(64px, calc(var(--u) * 6.2)); padding: 0 var(--gut); padding-right: max(8px, env(safe-area-inset-right, 0px)); display: flex; align-items: center; justify-content: space-between; gap: 24px; transition: background .4s ease; }
 .hd.solid { background: var(--hdbg); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
 .hd .logo img { width: max(110px, calc(var(--u) * 9)); height: auto; }
-.hd nav { display: flex; align-items: center; gap: max(18px, calc(var(--u) * 2.3)); font-size: max(11px, calc(var(--u) * 0.8)); letter-spacing: 0.16em; text-transform: uppercase; }
+.hd nav { display: flex; align-items: center; margin-left: auto; gap: max(18px, calc(var(--u) * 2.3)); font-size: max(11px, calc(var(--u) * 0.8)); letter-spacing: 0.16em; text-transform: uppercase; }
 .hd nav a:not(.btn) { position: relative; padding: 6px 0; }
 .hd nav a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 1px; background: var(--ink); transition: right .35s ease; }
 .hd nav a:not(.btn):hover::after { right: 0; }
@@ -305,7 +302,7 @@ svg.map .m-zone { fill: rgba(var(--ink-rgb),0.05); stroke: rgba(var(--ink-rgb),0
   #catalogue .txt { font-size: 14px; line-height: 1.5; }
 }
 @media (max-width: 820px) {
-  .hd { gap: 10px; padding-left: 20px; padding-right: 20px; }
+  .hd { gap: 10px; padding-left: 20px; }
   .hd nav { margin-left: auto; gap: 0; }
   .mobile-menu-toggle { display: block; border: 0; border-bottom: 1px solid var(--hair); background: transparent; color: var(--ink); padding: 8px 0; font: inherit; font-size: 11px; cursor: pointer; }
   .mobile-navigation { display: flex; position: fixed; top: calc(60px + env(safe-area-inset-top, 0px)); left: 0; right: 0; z-index: 19; padding: 24px 20px 28px; background: var(--hdbg); border-bottom: 1px solid var(--hair); flex-direction: column; gap: 20px; }
@@ -320,9 +317,8 @@ svg.map .m-zone { fill: rgba(var(--ink-rgb),0.05); stroke: rgba(var(--ink-rgb),0
   .home-prose .big { font-size: clamp(40px, 12vw, 68px); }
 }
 @media (max-width: 360px) {
-  .hd { gap: 8px; padding-left: 16px; padding-right: 16px; }
+  .hd { gap: 8px; padding-left: 16px; }
   .hd .logo img { width: 88px; }
-  .mode button { padding: 0 6px; font-size: 8px; }
 }
 
 /* Without scripts or with reduced motion, every scene remains readable in normal flow. */

@@ -49,6 +49,8 @@ La taille de l’invitation showroom s’adapte lorsqu’un texte plus long que 
 
 Les contenus définitifs, coordonnées du showroom, droits des visuels, catalogue final et mentions légales/confidentialité restent à valider avant lancement public. Cloudflare, domaine et CRM restent hors du périmètre réalisé. Les aperçus statiques et GitHub Pages sont conservés ; `main` et le statut brouillon de la PR ne sont pas modifiés.
 
+Ajustement demandé le 28 septembre : les commandes textuelles Clair/Sombre sont remplacées par une seule icône soleil/lune de 18 px, au bord droit des deux en-têtes. La cible tactile reste de 44 px et le libellé accessible indique l’action. Le choix du thème reste conservé entre les pages. Vérifié sur WebKit et Chromium à 1440, 390 et 320 px, avec les deux thèmes et au clavier. Cette différence avec les captures du 27 septembre est intentionnelle.
+
 ## Accès
 
 - [Prévisualisation du site](https://bookish-space-umbrella-jjxxvgxjwwvrfqvrp-4321.app.github.dev/)

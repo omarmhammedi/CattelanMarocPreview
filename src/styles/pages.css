@@ -3,7 +3,7 @@
 .skip-link { position: fixed; top: -100px; left: 20px; padding: 14px 20px; background: var(--ink); color: var(--on-ink); z-index: 100; }
 .skip-link:focus { top: 12px; }
 .page-gutter { padding-inline: var(--gut); }
-.page-header { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 24px; height: max(64px, calc(var(--u) * 6.2)); padding: 0 var(--gut); background: var(--hdbg); backdrop-filter: blur(8px); border-bottom: 1px solid var(--hair); }
+.page-header { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 24px; height: max(64px, calc(var(--u) * 6.2)); padding: 0 var(--gut); padding-right: max(8px, env(safe-area-inset-right, 0px)); background: var(--hdbg); backdrop-filter: blur(8px); border-bottom: 1px solid var(--hair); }
 .page-brand { display: flex; flex: none; flex-direction: column; align-items: center; gap: 5px; width: max(110px, calc(var(--u) * 9)); }
 .page-brand img { max-width: 100%; height: auto; }
 .page-brand .loc { font-size: max(9px, calc(var(--u) * .72)); letter-spacing: .62em; }
@@ -186,7 +186,6 @@
   .page-desktop-nav { gap: 18px; }
   .page-desktop-nav > .page-menu-list { gap: 18px; }
   .page-header-cta { max-width: 130px; }
-  .page-header .mode button { padding-inline: 9px; font-size: 10px; }
   .showroom-information { gap: 5vw; }
   .showroom-contact { padding: 25px; }
 }
@@ -285,7 +284,6 @@
   .page-header { gap: 12px; }
   .page-header-tools { gap: 10px; }
   .page-header .page-brand { width: 96px; }
-  .page-header .mode button { padding-inline: 6px; font-size: 9px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .inner-page *, .inner-page *::before, .inner-page *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }

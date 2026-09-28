@@ -2,6 +2,7 @@
 import '../styles/site.css';
 import { PortableText } from 'emdash/ui';
 import CatalogueForm from './CatalogueForm.astro';
+import ThemeToggle from './ThemeToggle.astro';
 import NativeNav, { type NavigationItem } from './NativeNav.astro';
 
 type Editable = { edit?: Record<string, Record<string, string>> };
@@ -37,7 +38,6 @@ const { home, families, posts, site, catalogue } = Astro.props;
 const labels = site.labels;
 const homeEdit = home.entry?.edit;
 const siteEdit = site.entry?.edit;
-const catalogueInNavigation = site.navigation.some(item => item.url === '/catalogue/');
 const featuredPost = posts[0];
 const otherPosts = posts.slice(1, 5);
 const hasContact = site.address || site.hours || site.phone || site.publicEmail;
@@ -111,10 +111,10 @@ const brandLines = explicitBrandLines.length > 1 ? explicitBrandLines : [brandWo
   <a class="logo" href="/#accueil" data-go="accueil" aria-label={`${site.name}, accueil`}>{site.logoDark ? <img class="lg-w" src={site.logoDark.src} alt={site.logoDark.alt} width="180" height="57"/> : <span class="brand-name lg-w">{site.name}</span>}{site.logoLight ? <img class="lg-r" src={site.logoLight.src} alt={site.logoLight.alt} width="180" height="57"/> : <span class="brand-name lg-r">{site.name}</span>}<span class:list={["loc", {"loc-long": (site.location || '').length > 8}]}>{site.location}</span></a>
   <nav aria-label="Navigation principale">
     <span class="status" id="status"><i aria-hidden="true"></i><span id="clock" data-city={site.location}>{site.location}</span></span>
-    {site.navigation.map(item => <Fragment>{item.url === '/catalogue/' && <span class="mode" role="group" aria-label="Apparence"><button type="button" data-mode="dark" aria-pressed="true">Sombre</button><button type="button" data-mode="light" aria-pressed="false">Clair</button></span>}<NativeNav items={[item]} variant="header" /></Fragment>)}
-    {!catalogueInNavigation && <span class="mode" role="group" aria-label="Apparence"><button type="button" data-mode="dark" aria-pressed="true">Sombre</button><button type="button" data-mode="light" aria-pressed="false">Clair</button></span>}
+    <NativeNav items={site.navigation} variant="header" />
   </nav>
   <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation">Menu</button>
+  <ThemeToggle />
 </header>
 <nav id="mobile-navigation" class="mobile-navigation" aria-label="Navigation mobile" hidden>
   <NativeNav items={site.navigation} variant="mobile" />

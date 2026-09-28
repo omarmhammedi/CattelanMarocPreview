@@ -4,6 +4,7 @@ import '../styles/pages.css';
 import SeoHead from '../components/SeoHead.astro';
 import PageMenu from '../components/PageMenu.astro';
 import Brand from '../components/Brand.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
 
 interface Props {
   title: string;
@@ -33,16 +34,13 @@ const navigation = site.navigation || [];
         <PageMenu items={navigation} path={path} />
       </nav>
       <div class="page-header-tools">
-        <div class="mode" role="group" aria-label="Apparence du site">
-          <button type="button" data-page-mode="dark" aria-pressed="true">Sombre</button>
-          <button type="button" data-page-mode="light" aria-pressed="false">Clair</button>
-        </div>
         <details class="page-mobile-menu">
           <summary aria-label="Ouvrir le menu"><span></span><span></span></summary>
           <nav aria-label="Navigation mobile">
             <PageMenu items={navigation} path={path} />
           </nav>
         </details>
+        <ThemeToggle />
       </div>
     </header>
     <main id="main-content"><slot /></main>
@@ -65,22 +63,6 @@ const navigation = site.navigation || [];
       <div class="page-footer-bottom"><span>© {new Date().getFullYear()} {site.name}</span><a href="/confidentialite/">Confidentialité</a></div>
     </footer>
     <script>
-      function updateTheme(mode: string) {
-        document.documentElement.dataset.mode = mode;
-        document.documentElement.classList.remove('light', 'dark');
-        document.documentElement.classList.add(mode);
-        document.querySelectorAll<HTMLButtonElement>('[data-page-mode]').forEach((button) => {
-          button.setAttribute('aria-pressed', String(button.dataset.pageMode === mode));
-        });
-      }
-      updateTheme(document.documentElement.dataset.mode || 'dark');
-      document.querySelectorAll<HTMLButtonElement>('[data-page-mode]').forEach((button) => {
-        button.addEventListener('click', () => {
-          const mode = button.dataset.pageMode || 'dark';
-          updateTheme(mode);
-          try { localStorage.setItem('ci-mode', mode); } catch {}
-        });
-      });
       const mobileMenu = document.querySelector<HTMLDetailsElement>('.page-mobile-menu');
       mobileMenu?.addEventListener('toggle', () => {
         mobileMenu.querySelector('summary')?.setAttribute('aria-label', mobileMenu.open ? 'Fermer le menu' : 'Ouvrir le menu');

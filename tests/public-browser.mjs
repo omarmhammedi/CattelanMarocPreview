@@ -113,7 +113,7 @@ try {
 
       await open(page, '/');
       const otherMode = mode === 'dark' ? 'light' : 'dark';
-      await page.locator(`.mode button[data-mode="${otherMode}"]`).click();
+      await page.locator('[data-theme-toggle]').click();
       assert.equal(await page.locator('html').getAttribute('data-mode'), otherMode);
       await page.goto(new URL('/journal/', base).href, { waitUntil: 'domcontentloaded' });
       assert.equal(await page.locator('html').getAttribute('data-mode'), otherMode);
@@ -147,10 +147,10 @@ try {
   const page = await context.newPage();
   page.on('pageerror', error => errors.push(error.message));
   await open(page, '/');
-  await page.locator('.mode button[data-mode="light"]').click();
+  await page.locator('[data-theme-toggle]').click();
   await open(page, '/catalogue/');
   assert.equal(await page.locator('html').getAttribute('data-mode'), 'light', 'Theme persists from home to inner page');
-  await page.locator('[data-page-mode="dark"], [data-mode="dark"]').click();
+  await page.locator('[data-theme-toggle]').click();
   await open(page, '/');
   assert.equal(await page.locator('html').getAttribute('data-mode'), 'dark', 'Theme persists from inner page to home');
   const seek = async (selector, progress) => {
