@@ -3,7 +3,7 @@ import {EmDashHead} from 'emdash/ui';
 import {createPublicPageContext} from 'emdash/page';
 import {env} from 'cloudflare:workers';
 import PreviewViewport from './PreviewViewport.astro';
-import { editorPreviewFramePolicy } from '../lib/editor-preview';
+import { editorPreviewContentPolicy } from '../lib/editor-preview';
 interface Props {title:string;description?:string;site:any;image?:any;entry?:any;collection?:string;article?:boolean;}
 const {title,description,site,image,entry,article=false}=Astro.props;
 const isoDate=(value:unknown)=>{
@@ -15,15 +15,15 @@ const indexable=(env as Record<string,unknown>).SITE_INDEXABLE==='true';
 const origin=site.settings?.url || Astro.url.origin;
 const isPreview=Astro.url.searchParams.has('_preview') || Astro.url.pathname.startsWith('/preview/');
 if (import.meta.env.DEV && ['GET', 'HEAD'].includes(Astro.request.method)) {
-  const framePolicy = editorPreviewFramePolicy({
+  const previewPolicy = editorPreviewContentPolicy({
     development: true,
     editorOrigin: import.meta.env.CATTELAN_EDITOR_ORIGIN,
     cmsPreview: isPreview,
   });
   // This component is used only by the public frontend. EmDash keeps its own
   // admin/auth/API headers; signed CMS previews keep their existing policy too.
-  if (framePolicy && !Astro.response.headers.has('Content-Security-Policy')) {
-    Astro.response.headers.set('Content-Security-Policy', framePolicy);
+  if (previewPolicy && !Astro.response.headers.has('Content-Security-Policy')) {
+    Astro.response.headers.set('Content-Security-Policy', previewPolicy);
   }
 }
 Astro.response.headers.set('Cache-Control','no-store');

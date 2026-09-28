@@ -1,5 +1,5 @@
-/** Frame allowance for the public site in this Codespace's VS Code editor. */
-export function editorPreviewFramePolicy({
+/** Embeddable public development preview; admin/API/production keep EmDash policy. */
+export function editorPreviewContentPolicy({
   development,
   editorOrigin,
   cmsPreview,
@@ -10,9 +10,9 @@ export function editorPreviewFramePolicy({
 }): string | undefined {
   if (!development || cmsPreview || !editorOrigin
     || !/^https:\/\/[a-z0-9]+(?:-[a-z0-9]+)*\.github\.dev$/.test(editorOrigin)) return;
-  // The editor is the top-level ancestor; Simple Browser adds a VS Code webview
-  // between the editor and the page. Both must be permitted by frame-ancestors.
-  // Codespaces overrides VS Code's default CDN endpoint with vscode-webview.net.
-  // Its hosted domain is listed in https://api.github.com/meta (domains.codespaces).
-  return `frame-ancestors 'self' ${editorOrigin} https://*.vscode-cdn.net https://*.vscode-webview.net`;
+  // Hosted editors can introduce additional or opaque sandboxed ancestors.
+  // Public pages in this private development environment intentionally permit
+  // embedding by any ancestor. An explicit CSP also stops EmDash from adding
+  // X-Frame-Options. Never apply this to admin/API/auth or signed CMS previews.
+  return "object-src 'none'";
 }

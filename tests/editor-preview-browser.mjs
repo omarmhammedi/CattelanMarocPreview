@@ -15,8 +15,9 @@ const frameStyle = '<style>body{margin:0}iframe{border:0;width:100%;height:100vh
 const cases = [
   { name: 'cdn-webview-allowed', parent: editor, webview: cdnWebview, path: '/', allowed: true },
   { name: 'hosted-webview-allowed', parent: editor, webview: hostedWebview, path: '/', allowed: true },
-  { name: 'wrong-webview-blocked', parent: editor, webview: 'https://unrelated-webview.example.test', path: '/', allowed: false },
-  { name: 'wrong-editor-blocked', parent: 'https://unrelated-codespace.github.dev', webview: hostedWebview, path: '/', allowed: false },
+  { name: 'unknown-webview-allowed', parent: editor, webview: 'https://unrelated-webview.example.test', path: '/', allowed: true },
+  { name: 'other-editor-allowed', parent: 'https://unrelated-codespace.github.dev', webview: hostedWebview, path: '/', allowed: true },
+  { name: 'opaque-ancestor-allowed', parent: editor, webview: hostedWebview, path: '/', allowed: true, opaque: true },
   { name: 'admin-protected', parent: editor, webview: hostedWebview, path: '/_emdash/admin/login', allowed: false },
   { name: 'cms-preview-protected', parent: editor, webview: hostedWebview, path: '/?_preview=invalid', allowed: false },
 ];
@@ -24,13 +25,13 @@ const cases = [
 const browser = await chromium.launch({ args: ['--no-sandbox', '--disable-dev-shm-usage'] });
 const passes = [];
 try {
-  for (const { name, parent, webview, path, allowed } of cases) {
+  for (const { name, parent, webview, path, allowed, opaque = false } of cases) {
     const context = await browser.newContext({
       viewport: { width: 1280, height: 850 },
       serviceWorkers: 'block',
     });
     const writes = [];
-    const documentStatuses = [];
+    const documentResponses = [];
     try {
       await context.routeWebSocket('**/*', socket => socket.close());
       await context.route('**/*', async route => {
@@ -41,7 +42,8 @@ try {
           return route.abort();
         }
         if (url.origin === parent) {
-          return route.fulfill({ contentType: 'text/html', body: `${frameStyle}<iframe src="${webview}/"></iframe>` });
+          const sandbox = opaque ? ' sandbox="allow-scripts"' : '';
+          return route.fulfill({ contentType: 'text/html', body: `${frameStyle}<iframe${sandbox} src="${webview}/"></iframe>` });
         }
         if (url.origin === webview) {
           return route.fulfill({ contentType: 'text/html', body: `${frameStyle}<iframe name="website" sandbox="allow-scripts allow-forms allow-same-origin allow-downloads" src="${site}${path}"></iframe>` });
@@ -53,7 +55,14 @@ try {
             url: `http://localhost:4321${url.pathname}${url.search}`,
             maxRedirects: 0,
           });
-          if (request.resourceType() === 'document') documentStatuses.push(response.status());
+          if (request.resourceType() === 'document') {
+            const headers = response.headers();
+            documentResponses.push({
+              status: response.status(),
+              policy: headers['content-security-policy'],
+              xFrameOptions: headers['x-frame-options'],
+            });
+          }
           return route.fulfill({ response });
         }
         return route.abort();
@@ -63,8 +72,17 @@ try {
       const website = page.frameLocator('iframe').frameLocator('iframe');
       if (allowed) {
         await page.goto(parent, { waitUntil: 'domcontentloaded' });
-        await website.locator('h1').first().waitFor({ timeout: 30_000 });
-        assert.deepEqual(documentStatuses, [200], `${name}: expected the real public page`);
+        // Framing acceptance is independent of scripts/styles in an opaque frame.
+        await website.locator('h1').first().waitFor({ state: 'attached', timeout: 30_000 });
+        assert.deepEqual(documentResponses, [{
+          status: 200,
+          policy: "object-src 'none'",
+          xFrameOptions: undefined,
+        }], `${name}: expected the public GET framing policy`);
+        if (opaque) {
+          assert.equal(await website.locator('html').evaluate(() => globalThis.origin), 'null',
+            `${name}: the ancestor sandbox must give the page an opaque origin`);
+        }
       } else {
         await Promise.all([
           page.waitForEvent('console', {
