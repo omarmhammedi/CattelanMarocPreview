@@ -18,7 +18,7 @@ Le surveillant `.devcontainer/task-autostop.mjs` demande l’arrêt du Codespace
 
 Le décompte commence seulement après une fin de tâche observée avec un suivi opérationnel. Une nouvelle tâche annule le décompte ; ses 15 minutes commencent après sa fin. Une erreur, une connexion de suivi perdue ou un état inconnu annule l’arrêt prévu : le surveillant ne déduit jamais qu’une tâche est terminée d’une simple déconnexion.
 
-Le processus s’exécute silencieusement en arrière-plan. Les commandes `postStartCommand` et `postAttachCommand` le démarrent sans créer de doublon. Sur le Codespace existant, un appel géré dans `~/.ssh/rc` assure aussi son démarrage aux reconnexions SSH ; aucune reconstruction du conteneur n’est nécessaire pour cette installation locale.
+Le processus s’exécute silencieusement en arrière-plan. Les commandes `postStartCommand` et `postAttachCommand` le démarrent sans créer de doublon. Sur le Codespace existant, un appel géré dans `~/.ssh/rc` assure aussi son démarrage aux reconnexions SSH ; aucune reconstruction du conteneur n’est nécessaire pour cette installation locale. Cet appel passe par `bash -lc` : le profil de connexion Codespaces doit restaurer l’identité et les identifiants GitHub avant le lancement du surveillant. Un lancement direct depuis `~/.ssh/rc` intervient trop tôt.
 
 Depuis la racine du dépôt :
 
