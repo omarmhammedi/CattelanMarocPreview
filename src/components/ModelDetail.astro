@@ -1,0 +1,165 @@
+---
+import '../styles/models.css';
+import {PortableText} from 'emdash/ui';
+
+interface Picture {
+  src: string;
+  alt?: string;
+  width?: number;
+  height?: number;
+  caption?: string;
+}
+interface Dimension {
+  label?: string;
+  value?: string;
+  seats?: number;
+  largeSeats?: number;
+}
+interface Drawing {
+  label?: string;
+  row?: number | string;
+  column?: number | string;
+  image: Picture;
+}
+interface Finish {
+  group?: string;
+  materialGroup?: string;
+  material?: string;
+  name?: string;
+  code?: string;
+  image?: Picture | null;
+}
+interface Props {
+  model: {
+    title: string;
+    slug?: string;
+    description?: string;
+    body?: any[];
+    year?: string | number;
+    image?: Picture | null;
+    imageCaption?: string;
+    gallery?: Picture[];
+    dimensions?: Dimension[];
+    drawings?: Drawing[];
+    finishes?: Finish[];
+    technicalSheet?: {src: string; filename?: string} | null;
+    technicalSheetLabel?: string;
+    source_url?: string;
+    officialUrl?: string;
+    availabilityNote?: string;
+    entry?: any;
+    href?: string;
+  };
+  site: any;
+  families?: {title: string; href: string}[];
+}
+
+const {model, site, families = []} = Astro.props;
+const family = families.find(item => item.title && item.href);
+const collectionLabel = site.labels?.collections || 'Collections';
+const contactLabel = site.labels?.contact || 'Contacter le showroom';
+const catalogueLabel = site.labels?.catalogue || 'Découvrir le catalogue';
+const sourceUrl = model.source_url || model.officialUrl;
+const modelNotice = String(site.modelNotice || '').trim();
+const gallery = (model.gallery || []).filter(picture => picture?.src);
+const dimensions = (model.dimensions || []).filter(item => item.value || item.seats || item.largeSeats);
+const drawings = (model.drawings || []).filter(item => item.image?.src).sort((a, b) =>
+  (Number(a.row) || 0) - (Number(b.row) || 0) || (Number(a.column) || 0) - (Number(b.column) || 0));
+const finishGroups = new Map<string, Finish[]>();
+for (const finish of model.finishes || []) {
+  if (!finish.name && !finish.code && !finish.image?.src) continue;
+  const group = [...new Set([finish.group, finish.materialGroup, finish.material].filter(Boolean))].join(' · ');
+  finishGroups.set(group, [...(finishGroups.get(group) || []), finish]);
+}
+---
+<article class="model-detail">
+  <section class="page-intro page-gutter model-detail-hero">
+    <nav class="model-breadcrumb" aria-label="Fil d’Ariane">
+      <ol>
+        <li><a href="/collections/">{collectionLabel}</a></li>
+        {family && <li><a href={family.href}>{family.title}</a></li>}
+        <li aria-current="page">{model.title}</li>
+      </ol>
+    </nav>
+    <div class:list={['model-hero-grid', {'model-hero-with-image': !!model.image?.src}]}>
+      <div class="model-hero-copy">
+        <p class="kick">{site.name}</p>
+        <h1 {...model.entry?.edit?.title}>{model.title}</h1>
+        {model.description && <p class="page-lead" {...model.entry?.edit?.description}>{model.description}</p>}
+        {model.year && <dl class="model-year"><div><dt>Année</dt><dd>{model.year}</dd></div></dl>}
+        {model.availabilityNote && <p class="page-note model-availability">{model.availabilityNote}</p>}
+        <a class="text-link model-contact-link" href="/showroom-casablanca/">{contactLabel}<span aria-hidden="true">↗</span></a>
+      </div>
+      {model.image?.src && <figure class="model-hero-figure">
+        <div class="page-image model-hero-image"><img src={model.image.src} alt={model.image.alt || model.title} width={model.image.width} height={model.image.height} fetchpriority="high" /></div>
+        {(model.imageCaption || model.image.caption) && <figcaption class="page-note">{model.imageCaption || model.image.caption}</figcaption>}
+      </figure>}
+    </div>
+  </section>
+
+  {model.body && model.body.length > 0 && <section class="page-gutter model-story" aria-labelledby="model-story-heading" data-page-reveal>
+    <h2 class="kick" id="model-story-heading">Le modèle</h2>
+    <div class="page-prose"><PortableText value={model.body} /></div>
+  </section>}
+
+  {gallery.length > 0 && <section class="page-gutter model-gallery" aria-labelledby="model-gallery-heading">
+    <div class="section-heading" data-page-reveal><p class="kick">En images</p><h2 id="model-gallery-heading">Sous tous les angles.</h2></div>
+    {gallery.length > 1 && <nav class="model-gallery-thumbnails" aria-label={`Les vues de ${model.title}`}>
+      {gallery.map((picture, index) => <a href={`#model-view-${index + 1}`} aria-label={`${model.title} — voir la vue ${index + 1}`}>
+        <img src={picture.src} alt="" width={picture.width} height={picture.height} loading="lazy" />
+        <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+      </a>)}
+    </nav>}
+    <div class="model-gallery-grid">
+      {gallery.map((picture, index) => <figure id={`model-view-${index + 1}`} class="model-gallery-view" tabindex="-1" data-page-reveal>
+        <div class="page-image"><img src={picture.src} alt={picture.alt || `${model.title} — vue ${index + 1}`} width={picture.width} height={picture.height} loading="lazy" /></div>
+        {picture.caption && <figcaption class="page-note">{picture.caption}</figcaption>}
+      </figure>)}
+    </div>
+  </section>}
+
+  {(dimensions.length > 0 || drawings.length > 0 || model.technicalSheet?.src) && <section class="page-gutter model-technical" aria-labelledby="model-technical-heading">
+    <div class="section-heading" data-page-reveal><p class="kick">Dans le détail</p><h2 id="model-technical-heading">{dimensions.length > 0 || drawings.length > 0 ? 'Dimensions & proportions.' : 'La fiche technique.'}</h2></div>
+    {dimensions.length > 0 && <dl class="model-dimensions">
+      {dimensions.map(dimension => <div class="model-dimension" data-page-reveal>
+        <dt>{dimension.label || 'Dimensions'}</dt>
+        {dimension.value && <dd class="model-dimension-value">{dimension.value}</dd>}
+        {(!!dimension.seats || !!dimension.largeSeats) && <dd class="model-seating">
+          {!!dimension.seats && <span>{dimension.seats} {dimension.seats === 1 ? 'place' : 'places'} · chaises standard</span>}
+          {!!dimension.largeSeats && <span>{dimension.largeSeats} {dimension.largeSeats === 1 ? 'place' : 'places'} · grandes chaises</span>}
+        </dd>}
+      </div>)}
+    </dl>}
+    {drawings.length > 0 && <div class="model-drawings">
+      <h3>Plans & détails</h3>
+      <div class="model-drawings-grid">{drawings.map(drawing => <figure data-page-reveal>
+        <div class="model-dimension-drawing"><img src={drawing.image.src} alt={drawing.image.alt || `${model.title} — ${drawing.label || 'dessin technique'}`} width={drawing.image.width} height={drawing.image.height} loading="lazy" /></div>
+        {drawing.label && <figcaption class="page-note">{drawing.label}</figcaption>}
+      </figure>)}</div>
+    </div>}
+    {model.technicalSheet?.src && <a class="text-link model-technical-download" href={model.technicalSheet.src} download={model.technicalSheet.filename || true}>{model.technicalSheetLabel || 'Télécharger la fiche technique'} <span class="model-file-format">PDF</span><span aria-hidden="true">↓</span></a>}
+  </section>}
+
+  {finishGroups.size > 0 && <section class="page-gutter model-finishes" aria-labelledby="model-finishes-heading">
+    <div class="section-heading" data-page-reveal><p class="kick">Matières & couleurs</p><h2 id="model-finishes-heading">Les finitions.</h2></div>
+    {[...finishGroups].map(([group, finishes]) => <details class="model-finish-group" data-page-reveal>
+      <summary><h3>{group || 'Finitions'}</h3><span class="model-finish-count">{finishes.length} {finishes.length === 1 ? 'finition' : 'finitions'}</span><span class="model-finish-toggle" aria-hidden="true">+</span></summary>
+      <ul class="model-finish-list" role="list">
+        {finishes.map(finish => <li class="model-finish">
+          {finish.image?.src && <div class="model-finish-image"><img src={finish.image.src} alt={finish.image.alt || [finish.name, finish.code].filter(Boolean).join(' — ')} width={finish.image.width} height={finish.image.height} loading="lazy" /></div>}
+          {finish.name && <p>{finish.name}</p>}
+          {finish.code && <span class="model-finish-code">{finish.code}</span>}
+        </li>)}
+      </ul>
+    </details>)}
+  </section>}
+
+  {sourceUrl && <aside class="page-gutter model-source"><a class="text-link" href={sourceUrl} target="_blank" rel="noopener noreferrer">Voir la fiche Cattelan Italia<span aria-hidden="true">↗</span></a></aside>}
+
+  <section class="page-cta page-gutter model-project" data-page-reveal>
+    <p class="kick">Votre projet</p>
+    <h2>Parlons de votre intérieur.</h2>
+    <div class="row"><a class="btn" href="/showroom-casablanca/">{contactLabel}</a><a class="text-link" href="/catalogue/">{catalogueLabel}<span aria-hidden="true">↗</span></a></div>
+    {modelNotice && modelNotice !== model.availabilityNote?.trim() && <p class="page-note model-site-notice">{modelNotice}</p>}
+  </section>
+</article>

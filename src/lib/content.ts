@@ -1,4 +1,4 @@
-import { getEmDashCollection, getEmDashEntry, getSiteSettings, getMenu, type ContentEntry } from 'emdash';
+import { getEmDashCollection, getEmDashEntry, getEmDashReferences, getSiteSettings, getMenu, type ContentEntry } from 'emdash';
 
 // This module is the only presentation adapter. Seed JSON is never imported at runtime.
 type Data = Record<string, any>;
@@ -14,7 +14,20 @@ export function picture(value: any): Picture | null {
 export async function readEntry(collection: string, slug: string, references: Record<string, any> = {}): Promise<Entry | null> {
   const {entry, error} = await getEmDashEntry(collection, slug, {references});
   if (error) throw new Error(`Le CMS n’a pas pu lire ${collection}/${slug}`, {cause:error});
-  return entry ? Object.assign(entry, {_collection:collection}) as Entry : null;
+  if (!entry) return null;
+  // Continue ordered relationships rather than silently losing selections past
+  // the first page. Native queries retain published/signed-preview visibility.
+  for (const [field, page] of Object.entries(entry.references || {})) {
+    let cursor = page.nextCursor;
+    while (cursor) {
+      const next = await getEmDashReferences(collection, entry.id, field, {limit:100, cursor});
+      if (next.error) throw next.error;
+      page.entries.push(...next.entries);
+      cursor = next.nextCursor;
+    }
+    delete page.nextCursor;
+  }
+  return Object.assign(entry, {_collection:collection}) as Entry;
 }
 const read=readEntry;
 async function list(collection: string, orderBy: Record<string, 'asc'|'desc'>) {
@@ -67,9 +80,28 @@ export async function getHome() {const e=await read('pages','home');return e?hom
 export function postModel(e:Entry) {const d=e.data;const p=base(e);return {...p,href:`/journal/${p.slug}/`,excerpt:String(d.excerpt || ''),imageCaption:d.image_caption,category:(d.terms?.category || []).map((term:Data)=>String(term.label || '')).filter(Boolean).join(' · '),publishedAt:d.publishedAt || d.published_at,readingTime:d.reading_time,author:d.byline?.displayName || '',sources:d.sources || [],cta:{text:d.cta_text,label:String(d.cta_label || '').trim(),href:String(d.cta_href || '').trim()}};}
 export async function getPosts(){return (await list('posts',{published_at:'desc'})).map(postModel);}
 export async function getPost(slug:string){const e=await read('posts',slug);return e?postModel(e):null;}
-export function familyModel(e:Entry) {const d=e.data;const p=base(e);return {...p,href:`/collections/${p.slug}/`,shortTitle:String(d.short_title || d.title || ''),cardText:String(d.card_text || ''),summary:String(d.card_text || ''),imageCaption:d.image_caption,models:(e.references?.models?.entries || []).map(x=>({id:x.data.id,name:x.data.title,title:x.data.title,description:x.data.description,image:picture(x.data.image),imageCaption:x.data.image_caption,availabilityNote:x.data.availability_note,officialUrl:x.data.official_url})),relatedPost:e.references?.related_post?.entries[0]?postModel(e.references.related_post.entries[0] as Entry):null};}
+export function modelModel(entry:Entry) {
+  const d=entry.data;
+  const p=base(Object.assign(entry,{_collection:'models'}));
+  return {...p,href:`/modeles/${p.slug}/`,description:String(d.description || ''),
+    imageCaption:String(d.image_caption || ''),availabilityNote:String(d.availability_note || ''),
+    year:d.release_year || null,officialUrl:String(d.source_url || d.official_url || ''),
+    gallery:(d.gallery || []).flatMap((item:Data)=>{const image=picture(item.image);return image?[{...image,caption:String(item.caption || '')}]:[];}),
+    dimensions:(d.dimensions || []).map((item:Data)=>({label:String(item.label || ''),value:String(item.value || ''),seats:item.seats,largeSeats:item.large_seats})),
+    drawings:(d.drawings || []).flatMap((item:Data)=>{const image=picture(item.image);return image?[{label:String(item.label || ''),row:item.row,column:item.column,image}]:[];}),
+    finishes:(d.finishes || []).map((item:Data)=>({group:String(item.group || ''),materialGroup:String(item.material_group || ''),material:String(item.material || ''),name:String(item.name || ''),code:String(item.code || ''),image:picture(item.image)})),
+    technicalSheet:d.technical_sheet ? {...picture(d.technical_sheet),filename:d.technical_sheet.filename} : null,technicalSheetLabel:String(d.technical_sheet_label || ''),
+  };
+}
+export async function getModel(slug:string){const e=await read('models',slug);return e?modelModel(e):null;}
+export function familyModel(e:Entry) {const d=e.data;const p=base(e);return {...p,href:`/collections/${p.slug}/`,shortTitle:String(d.short_title || d.title || ''),cardText:String(d.card_text || ''),summary:String(d.card_text || ''),imageCaption:d.image_caption,models:(e.references?.models?.entries || []).map(x=>modelModel(x as Entry)),relatedPost:e.references?.related_post?.entries[0]?postModel(e.references.related_post.entries[0] as Entry):null};}
 export async function getFamilies(){return (await list('families',{sort_order:'asc'})).map(familyModel);}
 export async function getFamily(slug:string){const e=await read('families',slug,{models:{limit:20},related_post:true});return e?familyModel(e):null;}
+export async function getModelFamilies(slug:string){
+  const families=await getFamilies();
+  const selections=await Promise.all(families.map(family=>read('families',family.slug,{models:{limit:100}})));
+  return families.filter((_,i)=>selections[i]?.references?.models?.entries.some(model=>model.data.slug===slug));
+}
 export function catalogueModel(e:Entry){const d=e.data;return {...base(e),edition:String(d.edition || ''),description:String(d.description || ''),cover:picture(d.cover),isPlaceholder:!!d.is_placeholder,downloadLabel:String(d.download_label || '')};}
 export async function getCatalogue(){const global=await read('site_content','global',{active_catalogue:true});const ref=global?.references?.active_catalogue?.entries[0];if(!ref)return null;const e=await read('catalogues',String(ref.data.id || ref.id));return e?catalogueModel(e):null;}
 export async function getSite(){

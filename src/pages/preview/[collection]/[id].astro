@@ -1,8 +1,7 @@
 ---
 import { getRequestContext } from 'emdash';
 import Home from '../../../components/Home.astro';
-import PageLayout from '../../../layouts/PageLayout.astro';
-import ModelCard from '../../../components/ModelCard.astro';
+import ModelPage from '../../modeles/[slug].astro';
 import SeoHead from '../../../components/SeoHead.astro';
 import FamilyPage from '../../collections/[slug].astro';
 import PostPage from '../../journal/[slug].astro';
@@ -10,7 +9,7 @@ import CollectionsPage from '../../collections/index.astro';
 import JournalPage from '../../journal/index.astro';
 import ShowroomPage from '../../showroom-casablanca.astro';
 import CataloguePage from '../../catalogue.astro';
-import {readEntry,homeModel,pageModel,familyModel,postModel,getFamilies,getPosts,getSite,getCatalogue,getHome,getPage,catalogueModel,picture} from '../../../lib/content';
+import {readEntry,homeModel,pageModel,familyModel,postModel,modelModel,getFamilies,getPosts,getSite,getCatalogue,getHome,getPage,catalogueModel} from '../../../lib/content';
 const {collection,id}=Astro.params;
 const preview=getRequestContext()?.preview;
 Astro.response.headers.set('Cache-Control','private, no-store');
@@ -26,7 +25,7 @@ const normalized=collection==='families'?familyModel(entry):collection==='posts'
 const isHome=routeKey==='home'||collection==='site_content';
 const home=isHome?(routeKey==='home'?homeModel(entry):await getHome()):null;
 const cataloguePage=collection==='catalogues'?await getPage('catalogue'):null;
-const model=collection==='models'?{title:entry.data.title,description:entry.data.description,image:picture(entry.data.image),officialUrl:entry.data.official_url,imageCaption:entry.data.image_caption,availabilityNote:entry.data.availability_note}:null;
+const model=collection==='models'?modelModel(entry):null;
 const [families,posts,catalogue]=isHome?await Promise.all([getFamilies(),getPosts(),getCatalogue()]):[[],[],null];
 ---
-{isHome&&home ? <html lang="fr" data-mode="dark"><head><meta charset="utf-8"/><SeoHead title={home.seoTitle} description={home.description} site={site} entry={entry}/></head><body><Home home={home as any} families={families as any} posts={posts as any} site={site as any} catalogue={catalogue as any}/></body></html> : collection==='catalogues'&&cataloguePage ? <CataloguePage preloaded={cataloguePage} catalogueOverride={catalogueModel(entry)} previewOnly/> : model ? <PageLayout title={String(model.title)} site={site} entry={entry}><section class="page-intro page-gutter"><p class="kick">Prévisualisation de la fiche modèle</p><div class="model-grid"><ModelCard model={model}/></div></section></PageLayout> : Template ? <Template preloaded={normalized}/> : <p>Ce contenu est administrable depuis ses pages associées.</p>}
+{isHome&&home ? <html lang="fr" data-mode="dark"><head><meta charset="utf-8"/><SeoHead title={home.seoTitle} description={home.description} site={site} entry={entry}/></head><body><Home home={home as any} families={families as any} posts={posts as any} site={site as any} catalogue={catalogue as any}/></body></html> : collection==='catalogues'&&cataloguePage ? <CataloguePage preloaded={cataloguePage} catalogueOverride={catalogueModel(entry)} previewOnly/> : model ? <ModelPage preloaded={model}/> : Template ? <Template preloaded={normalized}/> : <p>Ce contenu est administrable depuis ses pages associées.</p>}

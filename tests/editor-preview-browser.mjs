@@ -18,6 +18,7 @@ const cases = [
   { name: 'unknown-webview-allowed', parent: editor, webview: 'https://unrelated-webview.example.test', path: '/', allowed: true },
   { name: 'other-editor-allowed', parent: 'https://unrelated-codespace.github.dev', webview: hostedWebview, path: '/', allowed: true },
   { name: 'opaque-ancestor-allowed', parent: editor, webview: hostedWebview, path: '/', allowed: true, opaque: true },
+  { name: 'model-navigation-allowed', parent: editor, webview: hostedWebview, path: '/collections/tables/', allowed: true },
   { name: 'admin-protected', parent: editor, webview: hostedWebview, path: '/_emdash/admin/login', allowed: false },
   { name: 'cms-preview-protected', parent: editor, webview: hostedWebview, path: '/?_preview=invalid', allowed: false },
 ];
@@ -79,6 +80,14 @@ try {
           policy: "object-src 'none'",
           xFrameOptions: undefined,
         }], `${name}: expected the public GET framing policy`);
+        if (name === 'model-navigation-allowed') {
+          await website.locator('.model-card a[href="/modeles/skorpio/"]').click();
+          await website.locator('.model-detail h1').waitFor({state:'visible'});
+          assert.equal(await website.locator('.model-detail h1').textContent(), 'Skorpio');
+          assert.equal(context.pages().length, 1, 'Model discovery must remain inside the same preview tab.');
+          assert.equal(documentResponses.at(-1)?.status, 200);
+          assert.equal(documentResponses.at(-1)?.policy, "object-src 'none'");
+        }
         if (opaque) {
           assert.equal(await website.locator('html').evaluate(() => globalThis.origin), 'null',
             `${name}: the ancestor sandbox must give the page an opaque origin`);

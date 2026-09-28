@@ -10,7 +10,7 @@ La configuration Astro déclare explicitement `defaultLocale: 'fr'` et `locales:
 | --- | ---: | --- | --- |
 | `pages` | 5 | `/`, `/collections/`, `/showroom-casablanca/`, `/catalogue/`, `/journal/` | Titre, introduction, images et sections éditoriales |
 | `families` | 6 | `/collections/{slug}/` | Présentation courte, texte enrichi, sélection de modèles, article associé |
-| `models` | 11 | Cartes intégrées aux familles | Nom, description, source officielle, image facultative du modèle exact |
+| `models` | 11 | `/modeles/{slug}/` et cartes des familles | Fiche du modèle exact, galerie, dimensions, plans, finitions et PDF technique public |
 | `posts` | 5 | `/journal/{slug}/` | Articles complets en Portable Text, extrait, image, rubrique, sources, CTA |
 | `catalogues` | 1 | Formulaire et téléchargement | Édition, couverture, mention de démonstration, référence du PDF privé |
 | `site_content` | 1 | Partagé sur tout le site | Logos, contacts, coordonnées, boutons, pied de page, textes du formulaire et catalogue actif |
@@ -35,7 +35,7 @@ Les familles sont `tables`, `chaises-tabourets`, `canapes-fauteuils`, `buffets-b
 | `families.content` | Page de famille | Masquer le corps vide | L’éditeur Portable Text pilote les paragraphes |
 | `families.models` | Cartes de modèles | Masquer la sélection | Respecter l’ordre de la relation enregistré par l’éditeur |
 | `families.related_post` | Article associé | Masquer le lien | Un article en brouillon ne fuit pas sur le site public |
-| `models.image` | Photographie du modèle exact | Carte sans photographie | Ne pas affecter une photo d’ambiance à un modèle non identifié |
+| `models.image` | Photographie du modèle exact, carte et tête de fiche | Carte/fiche sans photographie | Ne pas affecter une photo d’ambiance à un modèle non identifié |
 | `posts.title`, `excerpt`, `image`, taxonomie `category` | Listes et cartes Journal | Titre/extrait obligatoires, image facultative | Les modifications se propagent à l’accueil, à la liste et à l’article |
 | `posts.content` | Article | Contenu obligatoire | Les cinq articles possèdent leurs sections et paragraphes complets |
 | `posts.cta_*` | Fin d’article | Masquer le bouton incomplet | Vérifier destination locale et invitation |
@@ -102,7 +102,7 @@ Les champs `route_key` et `sort_order` pilotent les routes et l’ordre, pas un 
 
 Le magasin présenté se situe uniquement à Casablanca. Rabat, Marrakech et Tanger apparaissent comme villes de projets. Le site ne promet aucun stock, exposition, délai ou service non confirmé. Les modèles Outdoor présentés sont explicitement limités aux espaces extérieurs couverts.
 
-Les coordonnées exactes, les horaires, les visuels du magasin, les photos des modèles, le PDF définitif et les mentions juridiques sont à confirmer. Les sources officielles de la proposition sont consignées dans `seed/sources.json`. La prévisualisation est prévue pour la validation du design et du fonctionnement avec des contenus provisoires.
+Les coordonnées exactes, les horaires, les visuels du magasin, les droits d'utilisation des photos des modèles, le PDF définitif et les mentions juridiques sont à confirmer. Les sources officielles de la proposition sont consignées dans `seed/sources.json`. L'enrichissement des onze modèles est documenté dans [Fiches modèles](model-pages.md), avec le contrat de chaque nouveau champ et sa migration ciblée. La prévisualisation est prévue pour la validation du design et du fonctionnement avec des contenus provisoires.
 
 Sources techniques : [format du seed](https://docs.emdashcms.com/themes/seed-files/), [types de champs](https://docs.emdashcms.com/reference/field-types/), [relations](https://docs.emdashcms.com/guides/relations/), [évolution du schéma](https://docs.emdashcms.com/deployment/schema-evolution/).
 

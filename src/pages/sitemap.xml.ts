@@ -9,7 +9,7 @@ export const GET:APIRoute=async({url})=>{
  const origin=settings.url || url.origin;
  const paths:string[]=[];
  if(indexable){
-  for(const collection of ['pages','families','posts']){
+  for(const collection of ['pages','families','posts','models']){
    let cursor:string|undefined;
    do{
     const {entries,error,nextCursor}=await getEmDashCollection(collection,{limit:100,cursor});
@@ -19,7 +19,7 @@ export const GET:APIRoute=async({url})=>{
      const seo=getContentSeo(entry);
      if(seo?.noIndex)continue;
      const slug=String(d.slug || entry.id);
-     const path=collection==='pages'?(slug==='home'?'/':`/${slug}/`):`/${collection==='posts'?'journal':'collections'}/${slug}/`;
+     const path=collection==='pages'?(slug==='home'?'/':`/${slug}/`):`/${collection==='posts'?'journal':collection==='models'?'modeles':'collections'}/${slug}/`;
      paths.push(`<url><loc>${escape(new URL(path,origin).href)}</loc></url>`);
     }
     cursor=nextCursor;

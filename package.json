@@ -14,13 +14,14 @@
     "build": "astro build",
     "preview": "astro preview --host 0.0.0.0",
     "check": "astro check",
-    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "test": "node --experimental-strip-types --test tests/*.test.ts tests/*.test.mjs",
     "test:autostop": "node --test .devcontainer/task-autostop*.test.mjs",
     "deploy": "astro build && wrangler deploy",
     "setup": "node scripts/setup-dev.mjs",
     "seed:validate": "node scripts/seed-validate.mjs",
     "test:cms": "node tests/cms-sync.mjs",
-    "test:catalogue-http": "node tests/catalogue-http.mjs"
+    "test:catalogue-http": "node tests/catalogue-http.mjs",
+    "test:models": "node tests/models-browser.mjs"
   },
   "dependencies": {
     "@astrojs/cloudflare": "14.3.3",

@@ -20,7 +20,7 @@ Le dossier `.devcontainer/` permet d'ouvrir cette branche dans GitHub Codespaces
 
 ## Contenus
 
-- Cinq pages fixes, six familles, onze exemples de modèles et cinq articles complets.
+- Cinq pages fixes, six familles, onze fiches de modèles et cinq articles complets.
 - Contenus, médias, navigation et métadonnées lus dans EmDash à chaque requête.
 - Brouillons, publication et prévisualisations signées natifs ; aucun JSON de remplacement côté site.
 - PDF privé de démonstration, formulaire nom/email, préférence facultative pour les communications.
@@ -44,6 +44,7 @@ Le test `tests/cms-sync.mjs` utilise une vraie inscription et connexion EmDash a
 
 - [Développement et Codespaces](docs/development.md)
 - [Champs et synchronisation des contenus](docs/content-map.md)
+- [Fiches modèles et import des sources officielles](docs/model-pages.md)
 - [Catalogue, contacts privés et CRM](docs/catalogue.md)
 - [Résultats de compilation et périmètre de validation](docs/test-results-build.md)
 - [Finalisation de la migration et comparaison avec la version B](docs/migration-completion.md)

@@ -321,7 +321,7 @@
         "preview",
         "seo"
       ],
-      "routable": false,
+      "routable": true,
       "commentsEnabled": false,
       "titleField": "title",
       "fields": [
@@ -364,9 +364,170 @@
           "slug": "availability_note",
           "label": "Mention sur disponibilité et exposition",
           "type": "text"
+        },
+        {
+          "slug": "release_year",
+          "label": "Année de création",
+          "type": "integer",
+          "required": false
+        },
+        {
+          "slug": "content",
+          "label": "Présentation et détails techniques",
+          "type": "portableText",
+          "required": false
+        },
+        {
+          "slug": "gallery",
+          "label": "Galerie du modèle",
+          "type": "repeater",
+          "required": false,
+          "validation": {
+            "subFields": [
+              {
+                "slug": "image",
+                "label": "Photographie",
+                "type": "image"
+              },
+              {
+                "slug": "caption",
+                "label": "Légende",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "dimensions",
+          "label": "Dimensions et configurations",
+          "type": "repeater",
+          "required": false,
+          "validation": {
+            "subFields": [
+              {
+                "slug": "label",
+                "label": "Configuration",
+                "type": "string"
+              },
+              {
+                "slug": "value",
+                "label": "Dimensions",
+                "type": "string"
+              },
+              {
+                "slug": "seats",
+                "label": "Places",
+                "type": "integer"
+              },
+              {
+                "slug": "large_seats",
+                "label": "Places avec de grandes chaises",
+                "type": "integer"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "drawings",
+          "label": "Dessins techniques",
+          "type": "repeater",
+          "required": false,
+          "validation": {
+            "subFields": [
+              {
+                "slug": "label",
+                "label": "Légende",
+                "type": "string"
+              },
+              {
+                "slug": "row",
+                "label": "Rangée",
+                "type": "integer"
+              },
+              {
+                "slug": "column",
+                "label": "Colonne",
+                "type": "integer"
+              },
+              {
+                "slug": "image",
+                "label": "Dessin",
+                "type": "image"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "finishes",
+          "label": "Matériaux et finitions",
+          "type": "repeater",
+          "required": false,
+          "validation": {
+            "subFields": [
+              {
+                "slug": "group",
+                "label": "Élément",
+                "type": "string"
+              },
+              {
+                "slug": "material_group",
+                "label": "Famille de matériaux",
+                "type": "string"
+              },
+              {
+                "slug": "material",
+                "label": "Matériau",
+                "type": "string"
+              },
+              {
+                "slug": "name",
+                "label": "Finition",
+                "type": "string"
+              },
+              {
+                "slug": "code",
+                "label": "Référence",
+                "type": "string"
+              },
+              {
+                "slug": "image",
+                "label": "Échantillon",
+                "type": "image"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "technical_sheet",
+          "label": "Fiche technique publique",
+          "type": "file",
+          "required": false,
+          "validation": {
+            "allowedMimeTypes": [
+              "application/pdf"
+            ]
+          }
+        },
+        {
+          "slug": "technical_sheet_label",
+          "label": "Libellé de la fiche technique",
+          "type": "string",
+          "required": false
+        },
+        {
+          "slug": "source_url",
+          "label": "Source officielle française",
+          "type": "url",
+          "required": false
+        },
+        {
+          "slug": "source_verified_at",
+          "label": "Source vérifiée le",
+          "type": "datetime",
+          "required": false
         }
       ],
-      "urlPattern": "/collections/"
+      "urlPattern": "/modeles/{slug}/"
     },
     {
       "slug": "posts",

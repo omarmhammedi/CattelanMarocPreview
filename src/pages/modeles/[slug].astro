@@ -1,0 +1,12 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import ModelDetail from '../../components/ModelDetail.astro';
+import { getModel, getModelFamilies, getSite } from '../../lib/content';
+
+const [model,site]=await Promise.all([Astro.props.preloaded || getModel(Astro.params.slug || ''),getSite()]);
+if(!model)return new Response('Modèle introuvable',{status:404});
+const families=await getModelFamilies(model.slug);
+---
+<PageLayout title={model.seoTitle || model.title} description={model.description} site={site} image={model.image} entry={model.entry}>
+  <ModelDetail model={model} site={site} families={families}/>
+</PageLayout>
