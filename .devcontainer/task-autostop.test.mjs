@@ -143,6 +143,37 @@ test('a rapid new completed task between polls resets the entire countdown', asy
   assert.equal(countdown.observe(next, GRACE_MS - 1).remainingMs, GRACE_MS);
 });
 
+test('a settings refresh nine minutes after completion preserves the shutdown deadline', async () => {
+  const first = await collectSnapshot(fakeRpc());
+  const settingsRefresh = await collectSnapshot(fakeRpc({ rows: {
+    root: done({ updatedAt: 100 + 9 * 60 }),
+  } }));
+  assert.equal(settingsRefresh.fingerprint, first.fingerprint);
+  const countdown = new IdleCountdown();
+  assert.equal(countdown.observe(first, 0).resetReason, 'completed-work-observed');
+  const afterRefresh = countdown.observe(settingsRefresh, 9 * 60 * 1000);
+  assert.equal(afterRefresh.remainingMs, 6 * 60 * 1000);
+  assert.equal(afterRefresh.resetReason, null);
+  assert.equal(countdown.observe(settingsRefresh, GRACE_MS).due, true);
+});
+
+test('inactive goal metadata changes preserve the shutdown deadline', async () => {
+  for (const status of ['paused', 'blocked', 'usageLimited', 'budgetLimited', 'complete']) {
+    const first = await collectSnapshot(fakeRpc({ rows: {
+      root: done({ goal: { id: 'goal-1', status, updatedAt: 100 } }),
+    } }));
+    const metadataRefresh = await collectSnapshot(fakeRpc({ rows: {
+      root: done({ goal: { id: 'goal-1', status, updatedAt: 101 } }),
+    } }));
+    assert.equal(metadataRefresh.fingerprint, first.fingerprint, status);
+    const countdown = new IdleCountdown();
+    countdown.observe(first, 0);
+    const afterRefresh = countdown.observe(metadataRefresh, GRACE_MS);
+    assert.equal(afterRefresh.due, true, status);
+    assert.equal(afterRefresh.resetReason, null, status);
+  }
+});
+
 test('a new server PID cannot inherit the previous server countdown', async () => {
   const countdown = new IdleCountdown();
   countdown.observe(await collectSnapshot(fakeRpc({ pid: 100 })), 0);
@@ -199,6 +230,22 @@ test('a new active or completed task at the final recheck prevents stop', async 
     assert.equal(stops, 0);
     assert.equal(countdown.observe(idle('later-completed'), GRACE_MS + 1).remainingMs, GRACE_MS);
   }
+});
+
+test('a metadata-only refresh at the final recheck still permits shutdown', async () => {
+  const first = await collectSnapshot(fakeRpc({ rows: {
+    root: done({ goal: { id: 'goal-1', status: 'complete', updatedAt: 100 } }),
+  } }));
+  const fresh = await collectSnapshot(fakeRpc({ rows: {
+    root: done({ updatedAt: 101, goal: { id: 'goal-1', status: 'complete', updatedAt: 101 } }),
+  } }));
+  const countdown = new IdleCountdown();
+  countdown.observe(first, 0);
+  let stops = 0;
+  const result = await checkAndStop({ countdown, snapshot: first, now: () => GRACE_MS,
+    readFresh: async () => fresh, stop: async () => { stops++; } });
+  assert.equal(result.stopped, true);
+  assert.equal(stops, 1);
 });
 
 test('final-check failure never stops and requires a new full grace', async () => {

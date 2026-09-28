@@ -24,14 +24,17 @@ export class IdleCountdown {
   observe(snapshot, now) {
     if (!snapshot || snapshot.busy || !snapshot.completed) {
       this.reset();
-      return { phase: 'waiting', remainingMs: null, due: false };
+      return { phase: 'waiting', remainingMs: null, due: false, resetReason: null };
     }
+    let resetReason = null;
     if (this.fingerprint !== snapshot.fingerprint || this.since === null || now < this.since) {
+      resetReason = this.since === null ? 'completed-work-observed'
+        : now < this.since ? 'clock-reset' : 'completed-work-changed';
       this.fingerprint = snapshot.fingerprint;
       this.since = now;
     }
     const remainingMs = Math.max(0, this.graceMs - (now - this.since));
-    return { phase: 'countdown', remainingMs, due: remainingMs === 0 };
+    return { phase: 'countdown', remainingMs, due: remainingMs === 0, resetReason };
   }
 }
 
@@ -122,7 +125,9 @@ export async function collectSnapshot(rpc, known = new Set()) {
     busy ||= thread.status.type === 'active' || !!queue.data.length || !!queue.nextCursor
       || goal.goal?.status === 'active' || (!!last && !finished)
       || (thread.status.type === 'notLoaded' && !finished);
-    rows.push([threadId, thread.updatedAt, last?.id, last?.status, last?.completedAt, goal.goal?.status, goal.goal?.updatedAt]);
+    // Settings refreshes also update thread/goal timestamps without new work.
+    // Only lifecycle identity changes may restart the completed-task countdown.
+    rows.push([threadId, last?.id, last?.status, last?.completedAt, goal.goal?.id, goal.goal?.status]);
   }
   const after = await loadedThreads(rpc);
   if ([...after].some(id => !loaded.has(id)) || [...loaded].some(id => !after.has(id))) throw new Error('Threads changed during inspection');
@@ -204,6 +209,9 @@ async function run() {
         });
         status = { ...status, phase: result.phase, stopAt: result.remainingMs === null ? null : new Date(Date.now() + result.remainingMs).toISOString(),
           observedThreads: snapshot.threadCount, taskActive: snapshot.busy };
+        if (result.resetReason) {
+          await log(`countdown-started reason=${result.resetReason} stopAt=${status.stopAt}`);
+        }
         if (result.stopped) {
           await writeStatus(status);
           rpc.close();
