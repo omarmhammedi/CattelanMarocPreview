@@ -135,6 +135,10 @@ export async function collectSnapshot(rpc, known = new Set()) {
   const gauges = new Map(diagnostics?.gauges?.map(gauge => [gauge.name, gauge.value]));
   if (!Number.isInteger(diagnostics?.process?.id)) throw new Error('Missing server identity');
   for (const name of activityGauges) {
+    // Codex registers mailbox telemetry only when the first agent mailbox is
+    // used. A fresh server can omit this gauge entirely. Other activity gauges
+    // remain required, and every observed thread's queue is checked above.
+    if (name === 'core.mailbox.pending' && !gauges.has(name)) continue;
     const value = gauges.get(name);
     if (!Number.isFinite(value) || value < 0) throw new Error('Missing activity counter');
     busy ||= value > 0;

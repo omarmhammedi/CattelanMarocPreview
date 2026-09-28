@@ -20,6 +20,8 @@ Le décompte commence seulement après une fin de tâche observée avec un suivi
 
 Un rafraîchissement des réglages de conversation ne constitue pas une nouvelle tâche et ne repousse pas l’échéance. Le suivi compare l’identité et l’état du dernier tour, sa date de fin et l’objectif, sans utiliser les dates générales de modification de la conversation. Chaque départ ou remise à zéro du décompte est journalisé avec sa raison et son échéance, sans contenu des messages.
 
+Au démarrage du serveur Codex, le compteur de messages entre agents peut être absent jusqu’à la première utilisation d’un sous-agent. Cette absence seule ne bloque pas le décompte ; une valeur présente doit rester valide et nulle. Les trois autres compteurs d’activité restent obligatoires, ainsi que les vérifications des tâches et des files d’attente de chaque conversation.
+
 Le processus s’exécute silencieusement en arrière-plan. Les commandes `postStartCommand` et `postAttachCommand` le démarrent sans créer de doublon. Sur le Codespace existant, un appel géré dans `~/.ssh/rc` assure aussi son démarrage aux reconnexions SSH ; aucune reconstruction du conteneur n’est nécessaire pour cette installation locale. Cet appel passe par `bash -lc` : le profil de connexion Codespaces doit restaurer l’identité et les identifiants GitHub avant le lancement du surveillant. Un lancement direct depuis `~/.ssh/rc` intervient trop tôt.
 
 Depuis la racine du dépôt :

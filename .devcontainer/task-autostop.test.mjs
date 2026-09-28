@@ -181,6 +181,28 @@ test('a new server PID cannot inherit the previous server countdown', async () =
   assert.equal(countdown.observe(restarted, GRACE_MS).remainingMs, GRACE_MS);
 });
 
+test('a fresh server without mailbox telemetry still stops after verified completion and the full grace', async () => {
+  const rpc = fakeRpc({ gauges: { 'core.mailbox.pending': null } });
+  const snapshot = await collectSnapshot(rpc);
+  assert.equal(snapshot.busy, false);
+  assert.equal(snapshot.completed, true);
+  const countdown = new IdleCountdown();
+  let time = 0, stops = 0, freshReads = 0;
+  const options = {
+    countdown, snapshot, now: () => time,
+    readFresh: async () => { freshReads++; return collectSnapshot(rpc); },
+    stop: async () => { stops++; },
+  };
+  assert.equal((await checkAndStop(options)).remainingMs, GRACE_MS);
+  time = GRACE_MS - 1;
+  assert.equal((await checkAndStop(options)).stopped, false);
+  assert.equal(stops, 0);
+  time = GRACE_MS;
+  assert.equal((await checkAndStop(options)).stopped, true);
+  assert.equal(freshReads, 1);
+  assert.equal(stops, 1);
+});
+
 test('malformed, unsupported, missing, and changing state fails closed', async t => {
   const cases = {
     'system error': fakeRpc({ rows: { root: done({ state: 'systemError' }) } }),
@@ -189,8 +211,20 @@ test('malformed, unsupported, missing, and changing state fails closed', async t
     'missing completion timestamp': fakeRpc({ rows: { root: done({ turn: { id: 'x', status: 'completed' } }) } }),
     'unknown goal status': fakeRpc({ rows: { root: done({ goal: { status: 'unknown' } }) } }),
     'missing activity gauge': fakeRpc({ gauges: { 'core.turns.active': null } }),
+    'missing queued request gauge': fakeRpc({ gauges: { 'app.requests.queued': null } }),
+    'missing pending server request gauge': fakeRpc({ gauges: { 'app.server_requests.pending': null } }),
     'negative activity gauge': fakeRpc({ gauges: { 'core.turns.active': -1 } }),
     'invalid activity gauge': fakeRpc({ gauges: { 'core.turns.active': '0' } }),
+    'negative mailbox gauge': fakeRpc({ gauges: { 'core.mailbox.pending': -1 } }),
+    'string mailbox gauge': fakeRpc({ gauges: { 'core.mailbox.pending': '0' } }),
+    'non-finite mailbox gauge': fakeRpc({ gauges: { 'core.mailbox.pending': Infinity } }),
+    'invalid mailbox gauge': fakeRpc({ gauges: { 'core.mailbox.pending': NaN } }),
+    'present null mailbox gauge': fakeRpc({ intercept: method => {
+      if (method === 'server/diagnostics') return {
+        process: { id: 123 },
+        gauges: counters.map(name => ({ name, value: name === 'core.mailbox.pending' ? null : 0 })),
+      };
+    } }),
     'missing server PID': fakeRpc({ pid: null }),
     'protocol failure': fakeRpc({ intercept: method => { if (method === 'thread/read') throw new Error('RPC failed'); } }),
     'thread disappears during inspection': fakeRpc({ intercept: (method, params, calls) => {
