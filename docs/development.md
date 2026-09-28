@@ -12,6 +12,38 @@ Le nouveau site est une application Astro + EmDash 0.41 exécutée dans le runti
 
 Le conteneur rétablit la visibilité privée à la reconnexion. Si GitHub refuse cette commande, le terminal invite à la vérifier dans **Ports**. Une prévisualisation publique destinée au client se fera sur un environnement Cloudflare séparé, après configuration de l'administration.
 
+### Arrêt automatique après les tâches Codex
+
+Le surveillant `.devcontainer/task-autostop.mjs` demande l’arrêt du Codespace **15 minutes après la fin vérifiée de toutes les tâches Codex**, sous-agents compris. Il attend aussi l’absence de message en attente et d’objectif actif. Fermer ChatGPT ou la connexion SSH ne déclenche pas ce délai.
+
+Le décompte commence seulement après une fin de tâche observée avec un suivi opérationnel. Une nouvelle tâche annule le décompte ; ses 15 minutes commencent après sa fin. Une erreur, une connexion de suivi perdue ou un état inconnu annule l’arrêt prévu : le surveillant ne déduit jamais qu’une tâche est terminée d’une simple déconnexion.
+
+Le processus s’exécute silencieusement en arrière-plan. Les commandes `postStartCommand` et `postAttachCommand` le démarrent sans créer de doublon. Sur le Codespace existant, un appel géré dans `~/.ssh/rc` assure aussi son démarrage aux reconnexions SSH ; aucune reconstruction du conteneur n’est nécessaire pour cette installation locale.
+
+Depuis la racine du dépôt :
+
+```sh
+# Voir le suivi et le décompte éventuel
+node .devcontainer/task-autostop.mjs status
+
+# Suspendre l’arrêt automatique, par exemple avant une longue édition EmDash
+node .devcontainer/task-autostop.mjs disable
+
+# Réactiver le suivi des fins de tâches
+node .devcontainer/task-autostop.mjs enable
+
+# Démarrer le surveillant si nécessaire
+node .devcontainer/task-autostop.mjs start
+```
+
+Le suivi concerne Codex : une édition du CMS dans Safari ou un travail lancé séparément dans un terminal ne repousse pas le décompte. Désactiver temporairement le surveillant pour ces activités. Le délai d’inactivité natif de GitHub, actuellement de **30 minutes**, reste un mécanisme distinct ; désactiver ce surveillant ne désactive pas celui de GitHub.
+
+L’action demandée est **Stop codespace**, jamais **Delete**. Les fichiers enregistrés, la base EmDash, les médias, les PDF et les secrets restent sur disque. Le site et son administration deviennent indisponibles jusqu’au redémarrage du Codespace et du serveur de développement. Les formulaires non enregistrés dans le navigateur ne sont pas sauvegardés par cet arrêt.
+
+Ce dispositif ne garantit pas un plafond de facturation : les budgets et alertes se règlent dans GitHub, et le stockage reste comptabilisé à l’arrêt. `npm run test:autostop` vérifie le suivi avec des réponses Codex factices, une horloge simulée et une fausse commande d’arrêt GitHub ; ces tests n’arrêtent pas cette machine et ne modifient pas le CMS.
+
+Références : [états et événements du serveur Codex](https://learn.chatgpt.com/docs/app-server), [arrêter et redémarrer un Codespace](https://docs.github.com/en/codespaces/developing-in-a-codespace/stopping-and-starting-a-codespace), [délai d’inactivité GitHub](https://docs.github.com/en/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces).
+
 ### Inspecter la version ordinateur depuis un téléphone
 
 Sur la prévisualisation de développement, ajouter `?view=desktop` à l’URL publique force un viewport de 1280 pixels, ajusté à l’écran par le navigateur. Cette option active les compositions et animations ordinateur existantes ; le zoom reste disponible. La préférence est conservée dans l’onglet pendant la navigation entre pages. Ouvrir `?view=auto` pour retrouver le comportement responsive normal.

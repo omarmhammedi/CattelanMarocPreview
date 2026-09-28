@@ -15,6 +15,7 @@
     "preview": "astro preview --host 0.0.0.0",
     "check": "astro check",
     "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "test:autostop": "node --test .devcontainer/task-autostop.test.mjs",
     "deploy": "astro build && wrangler deploy",
     "setup": "node scripts/setup-dev.mjs",
     "seed:validate": "node scripts/seed-validate.mjs",
@@ -37,6 +38,7 @@
     "@types/react-dom": "19.3.0",
     "playwright": "1.62.1",
     "typescript": "6.0.3",
-    "wrangler": "4.125.0"
+    "wrangler": "4.125.0",
+    "ws": "8.21.0"
   }
 }

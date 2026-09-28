@@ -14,7 +14,11 @@
     }
   },
   "postCreateCommand": "npm ci && node scripts/setup-dev.mjs",
-  "postAttachCommand": "node .devcontainer/private-port.mjs",
+  "postStartCommand": "node .devcontainer/task-autostop.mjs start",
+  "postAttachCommand": {
+    "privatePort": "node .devcontainer/private-port.mjs",
+    "taskAutostop": "node .devcontainer/task-autostop.mjs start"
+  },
   "customizations": {
     "vscode": {
       "extensions": ["astro-build.astro-vscode"],
