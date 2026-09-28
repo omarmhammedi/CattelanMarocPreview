@@ -4,9 +4,9 @@ import { editorPreviewFramePolicy } from '../src/lib/editor-preview.ts';
 
 const editorOrigin = 'https://example-codespace-123.github.dev';
 
-test('development preview permits its editor and the nested VS Code webview', () => {
+test('development preview permits its editor and default or Codespaces-hosted webviews', () => {
   assert.equal(editorPreviewFramePolicy({ development: true, editorOrigin, cmsPreview: false }),
-    `frame-ancestors 'self' ${editorOrigin} https://*.vscode-cdn.net`);
+    `frame-ancestors 'self' ${editorOrigin} https://*.vscode-cdn.net https://*.vscode-webview.net`);
 });
 
 test('production and signed CMS previews never receive the editor frame allowance', () => {

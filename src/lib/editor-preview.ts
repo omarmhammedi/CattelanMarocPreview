@@ -12,5 +12,7 @@ export function editorPreviewFramePolicy({
     || !/^https:\/\/[a-z0-9]+(?:-[a-z0-9]+)*\.github\.dev$/.test(editorOrigin)) return;
   // The editor is the top-level ancestor; Simple Browser adds a VS Code webview
   // between the editor and the page. Both must be permitted by frame-ancestors.
-  return `frame-ancestors 'self' ${editorOrigin} https://*.vscode-cdn.net`;
+  // Codespaces overrides VS Code's default CDN endpoint with vscode-webview.net.
+  // Its hosted domain is listed in https://api.github.com/meta (domains.codespaces).
+  return `frame-ancestors 'self' ${editorOrigin} https://*.vscode-cdn.net https://*.vscode-webview.net`;
 }
