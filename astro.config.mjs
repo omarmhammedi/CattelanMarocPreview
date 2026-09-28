@@ -12,6 +12,13 @@ export default defineConfig({
   // EmDash API endpoints use extensionless paths; do not redirect POST requests.
   trailingSlash: 'ignore',
   vite: {
+    define: {
+      'import.meta.env.CATTELAN_EDITOR_ORIGIN': JSON.stringify(
+        /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(process.env.CODESPACE_NAME || '')
+          ? `https://${process.env.CODESPACE_NAME}.github.dev`
+          : '',
+      ),
+    },
     server: {
       allowedHosts: process.env.CODESPACE_NAME
         ? [`${process.env.CODESPACE_NAME}-4321.${process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN || 'app.github.dev'}`]

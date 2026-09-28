@@ -12,6 +12,12 @@ Le nouveau site est une application Astro + EmDash 0.41 exécutée dans le runti
 
 Le conteneur rétablit la visibilité privée à la reconnexion. Si GitHub refuse cette commande, le terminal invite à la vérifier dans **Ports**. Une prévisualisation publique destinée au client se fera sur un environnement Cloudflare séparé, après configuration de l'administration.
 
+### Afficher le site dans l’éditeur
+
+Dans **Ports**, faire un clic droit sur **4321 → Preview in Editor**. Le site public autorise son intégration dans le Simple Browser de ce Codespace uniquement en développement : la politique `frame-ancestors` accepte l’origine exacte de son éditeur et les webviews VS Code sous `*.vscode-cdn.net`. Le port reste privé. Les pages d’administration, les API, les aperçus CMS signés et la version compilée gardent leurs protections d’intégration ; ouvrir l’administration dans un onglet normal du navigateur. Si GitHub demande une connexion avant d’afficher le port privé, l’effectuer dans le navigateur.
+
+Si le panneau indique **github.com refused to connect**, ouvrir d’abord l’URL du port dans un onglet normal du même navigateur/profil, terminer la connexion GitHub, puis recharger le Simple Browser. La page de connexion GitHub interdit elle-même son intégration. Dans Brave, si les cookies tiers restent bloqués, le réglage du lion **Advanced controls → cookies → Allow all cookies** peut être appliqué au seul onglet du Codespace ; recharger ensuite l’éditeur. Le code du site ne peut pas lever les restrictions de connexion de GitHub ou du navigateur. L’onglet normal reste utilisable si l’intégration échoue. Voir [les cookies des ports privés](https://docs.github.com/en/codespaces/reference/security-in-github-codespaces#port-forwarding) et [les réglages Brave par site](https://support.brave.app/hc/en-us/articles/360022806212-How-do-I-use-Shields-while-browsing).
+
 ### Arrêt automatique après les tâches Codex
 
 Le surveillant `.devcontainer/task-autostop.mjs` demande l’arrêt du Codespace **15 minutes après la fin vérifiée de toutes les tâches Codex**, sous-agents compris. Il attend aussi l’absence de message en attente et d’objectif actif. Fermer ChatGPT ou la connexion SSH ne déclenche pas ce délai.
