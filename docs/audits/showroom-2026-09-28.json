@@ -1,0 +1,348 @@
+{
+  "browser": {
+    "verifiedAt": "2026-09-29T01:09:58.247Z",
+    "base": "http://localhost:4321",
+    "records": [
+      {
+        "engine": "chromium",
+        "width": 1440,
+        "height": 900,
+        "mode": "dark",
+        "passed": true
+      },
+      {
+        "engine": "chromium",
+        "width": 1440,
+        "height": 900,
+        "mode": "light",
+        "passed": true
+      },
+      {
+        "engine": "chromium",
+        "width": 1280,
+        "height": 720,
+        "mode": "dark",
+        "passed": true
+      },
+      {
+        "engine": "chromium",
+        "width": 1280,
+        "height": 720,
+        "mode": "light",
+        "passed": true
+      },
+      {
+        "engine": "chromium",
+        "width": 1024,
+        "height": 768,
+        "mode": "dark",
+        "passed": true
+      },
+      {
+        "engine": "chromium",
+        "width": 1024,
+        "height": 768,
+        "mode": "light",
+        "passed": true
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "height": 844,
+        "mode": "dark",
+        "passed": true
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "height": 844,
+        "mode": "light",
+        "passed": true
+      },
+      {
+        "engine": "chromium",
+        "width": 320,
+        "height": 740,
+        "mode": "dark",
+        "passed": true
+      },
+      {
+        "engine": "chromium",
+        "width": 320,
+        "height": 740,
+        "mode": "light",
+        "passed": true
+      },
+      {
+        "engine": "chromium",
+        "width": 320,
+        "javaScript": false,
+        "passed": true
+      },
+      {
+        "engine": "chromium",
+        "width": 1024,
+        "javaScript": false,
+        "passed": true
+      },
+      {
+        "engine": "chromium",
+        "width": 1280,
+        "javaScript": false,
+        "passed": true
+      },
+      {
+        "engine": "webkit",
+        "width": 1440,
+        "height": 900,
+        "mode": "dark",
+        "passed": true
+      },
+      {
+        "engine": "webkit",
+        "width": 1440,
+        "height": 900,
+        "mode": "light",
+        "passed": true
+      },
+      {
+        "engine": "webkit",
+        "width": 1280,
+        "height": 720,
+        "mode": "dark",
+        "passed": true
+      },
+      {
+        "engine": "webkit",
+        "width": 1280,
+        "height": 720,
+        "mode": "light",
+        "passed": true
+      },
+      {
+        "engine": "webkit",
+        "width": 1024,
+        "height": 768,
+        "mode": "dark",
+        "passed": true
+      },
+      {
+        "engine": "webkit",
+        "width": 1024,
+        "height": 768,
+        "mode": "light",
+        "passed": true
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "height": 844,
+        "mode": "dark",
+        "passed": true
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "height": 844,
+        "mode": "light",
+        "passed": true
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "height": 740,
+        "mode": "dark",
+        "passed": true
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "height": 740,
+        "mode": "light",
+        "passed": true
+      }
+    ],
+    "mapResponses": [
+      {
+        "engine": "chromium",
+        "width": 1440,
+        "mode": "dark",
+        "status": 200
+      },
+      {
+        "engine": "chromium",
+        "width": 1440,
+        "mode": "light",
+        "status": 200
+      },
+      {
+        "engine": "chromium",
+        "width": 1280,
+        "mode": "dark",
+        "status": 200
+      },
+      {
+        "engine": "chromium",
+        "width": 1280,
+        "mode": "light",
+        "status": 200
+      },
+      {
+        "engine": "chromium",
+        "width": 1024,
+        "mode": "dark",
+        "status": 200
+      },
+      {
+        "engine": "chromium",
+        "width": 1024,
+        "mode": "light",
+        "status": 200
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "mode": "dark",
+        "status": 200
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "mode": "light",
+        "status": 200
+      },
+      {
+        "engine": "chromium",
+        "width": 320,
+        "mode": "dark",
+        "status": 200
+      },
+      {
+        "engine": "chromium",
+        "width": 320,
+        "mode": "light",
+        "status": 200
+      },
+      {
+        "engine": "webkit",
+        "width": 1440,
+        "mode": "dark",
+        "status": 200
+      },
+      {
+        "engine": "webkit",
+        "width": 1440,
+        "mode": "light",
+        "status": 200
+      },
+      {
+        "engine": "webkit",
+        "width": 1280,
+        "mode": "dark",
+        "status": 200
+      },
+      {
+        "engine": "webkit",
+        "width": 1280,
+        "mode": "light",
+        "status": 200
+      },
+      {
+        "engine": "webkit",
+        "width": 1024,
+        "mode": "dark",
+        "status": 200
+      },
+      {
+        "engine": "webkit",
+        "width": 1024,
+        "mode": "light",
+        "status": 200
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "mode": "dark",
+        "status": 200
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "mode": "light",
+        "status": 200
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "mode": "dark",
+        "status": 200
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "mode": "light",
+        "status": 200
+      }
+    ],
+    "googleViewportReads": 40,
+    "blockedExternalWrites": 0
+  },
+  "cms": {
+    "completedAt": "2026-09-29T00:59:01.896Z",
+    "disposableOrigin": "http://localhost:4331",
+    "results": [
+      "Migration dry run preserves the native schema, data and revisions.",
+      "Native migration applies the approved location and anchor while preserving other fields, media and SEO.",
+      "A second native migration run makes no changes to content or revisions.",
+      "Published homepage and showroom expose the real contact details and directions; the illustrated homepage remains intact.",
+      "Draft hours/map stay private; valid global preview displays both with private, no-store and noindex, while invalid tokens reveal neither.",
+      "Publishing global hours and map changes the next anonymous response without rebuilding.",
+      "Clearing the map is respected in signed preview and after publication, without a fallback embed; directions remain available.",
+      "Temporary publication tests restore the approved content and leave no pending global draft."
+    ]
+  },
+  "illustration": {
+    "verifiedAt": "2026-09-29T01:03:06.943Z",
+    "comparisonCommit": "22d8d07da270d02372d63293ad1230698997a7fa",
+    "sameIllustrationMarkup": true,
+    "sameHomepageStylesAndAnimation": true,
+    "illustrationSha256": "c5e8cca928e15f1720b13ad5986f00e9ca6066a94eef8fe6604131e5871fb859"
+  },
+  "publicRegression": {
+    "base": "http://localhost:4321",
+    "results": [
+      "17 public routes inspected at 1440×900, dark",
+      "Catalogue section and optional consent; invalid submissions blocked at 1440/dark",
+      "17 public routes inspected at 1440×900, light",
+      "Catalogue section and optional consent; invalid submissions blocked at 1440/light",
+      "17 public routes inspected at 390×844, dark",
+      "Catalogue section and optional consent; invalid submissions blocked at 390/dark",
+      "Mobile menu opens, closes with Escape, and follows CMS navigation (dark)",
+      "17 public routes inspected at 390×844, light",
+      "Catalogue section and optional consent; invalid submissions blocked at 390/light",
+      "Mobile menu opens, closes with Escape, and follows CMS navigation (light)",
+      "Compact viewport 1024×768: homepage and main inner templates fit",
+      "Compact viewport 320×740: homepage and main inner templates fit",
+      "Desktop hero, brand reveal, six-family rail, showroom transition, catalogue animation and cross-page themes",
+      "Reduced-motion homepage stays readable in normal document flow",
+      "30 distinct public image URLs respond with image content"
+    ],
+    "failures": [],
+    "errors": [],
+    "blockedWrites": [],
+    "mediaCount": 30
+  },
+  "applicationChecks": {
+    "unitTests": 48,
+    "unitFailures": 0,
+    "astroFiles": 70,
+    "astroErrors": 0,
+    "astroWarnings": 0,
+    "seedValid": true,
+    "productionBuild": "passed",
+    "buildWarnings": [
+      "Chunks above 500 kB"
+    ],
+    "completedAt": "2026-09-29T01:13:04.439Z"
+  }
+}

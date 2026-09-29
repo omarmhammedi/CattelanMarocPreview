@@ -760,6 +760,24 @@
           "type": "url"
         },
         {
+          "slug": "map_embed_url",
+          "label": "Carte Google Maps interactive — URL seulement",
+          "type": "url",
+          "required": false,
+          "options": {
+            "helpText": "Collez uniquement l’URL https://www.google.com/maps/embed?pb=… du code Google Maps, sans balise iframe. La carte est chargée sur demande ; vider ce champ masque le bouton."
+          }
+        },
+        {
+          "slug": "map_note",
+          "label": "Précision sur le plan illustré",
+          "type": "text",
+          "required": false,
+          "options": {
+            "helpText": "Cette note distingue le plan illustratif du véritable itinéraire Google Maps."
+          }
+        },
+        {
           "slug": "logo_light",
           "label": "Logo sur fond clair",
           "type": "image",

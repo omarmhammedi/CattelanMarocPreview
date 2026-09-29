@@ -30,7 +30,7 @@ if (import.meta.env.DEV && ['GET', 'HEAD'].includes(Astro.request.method)) {
     Astro.response.headers.set('Content-Security-Policy', previewPolicy);
   }
 }
-Astro.response.headers.set('Cache-Control','no-store');
+Astro.response.headers.set('Cache-Control',isPreview?'private, no-store':'no-store');
 if(!indexable || isPreview) Astro.response.headers.set('X-Robots-Tag','noindex, nofollow');
 const page=createPublicPageContext({Astro,kind:entry?'content':'custom',pageType:article?'article':'website',title:resolvedTitle,pageTitle:resolvedTitle,description,image:typeof image==='string'?image:image?.src,canonical:new URL(Astro.url.pathname,origin).href,siteName:site.name,siteUrl:origin,seo:{robots:!indexable||isPreview?'noindex, nofollow':'index, follow'},content:entry&&collection?{collection,id:String(entry.data.id || entry.id),slug:entry.data.slug || entry.id}:undefined,articleMeta:article?{publishedTime:isoDate(entry?.data.publishedAt || entry?.data.published_at),modifiedTime:isoDate(entry?.data.updatedAt || entry?.data.updated_at),author:entry?.data.byline?.displayName}:undefined});
 ---

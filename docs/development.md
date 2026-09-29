@@ -156,6 +156,25 @@ npm run preview
 
 Astro 7 peut lancer le serveur en arrière-plan lorsqu'il détecte un agent de développement. `npx astro dev status`, `npx astro dev logs --follow` et `npx astro dev stop` permettent de le gérer. Pour garder le processus au premier plan dans une automatisation, utiliser `npm run dev -- --ignore-lock` seulement après avoir vérifié qu'aucun autre serveur de ce projet ne tourne.
 
+## Coordonnées et carte du showroom
+
+Dans **Configuration du site**, les champs `address`, `hours` et `contact_phone` pilotent les coordonnées publiques. Le propriétaire a fourni l’adresse du magasin, son téléphone et ses horaires locaux de Casablanca ; le contrat approuvé est conservé dans `content/showroom-location.json`. L’email public et WhatsApp restent séparés et vides tant qu’ils ne sont pas confirmés. Les données de contact ne sont pas ajoutées au seed générique.
+
+`map_url` est le lien d’itinéraire. `map_embed_url` est une URL facultative à copier depuis l’attribut `src` du code Google Maps, sous la forme `https://www.google.com/maps/embed?pb=…` : ne pas coller toute la balise iframe. La carte est chargée seulement lorsque le visiteur active « Afficher la carte interactive » sur la page showroom ; sa fermeture retire l’iframe. Effacer ce champ masque le bouton. Sans JavaScript, l’itinéraire reste utilisable. Le plan illustré de l’accueil conserve son apparence et son animation ; `map_note` décrit uniquement cette illustration.
+
+Pour prévisualiser le champ de carte avant publication, ouvrir l’aperçu signé de la configuration globale : la section « Carte du showroom » apparaît après l’accueil et utilise le brouillon. Elle conserve seulement l’itinéraire si l’URL d’intégration est vide, et disparaît si les deux liens sont vides. Les aperçus signés restent privés et non indexables.
+
+Sur une base existante, la migration ciblée 0005 remplace un réimport du seed. Avec une session native valide enregistrée dans un fichier privé, examiner d’abord son plan :
+
+```sh
+EMDASH_AUTH_FILE=.wrangler/admin-session.json node scripts/migrations/0005-showroom-location.mjs
+EMDASH_AUTH_FILE=.wrangler/admin-session.json node scripts/migrations/0005-showroom-location.mjs --apply
+```
+
+Le chemin de session ci-dessus est un exemple ; la migration ne crée pas de compte ni de session. Elle utilise les API natives locales, sauvegarde les données affectées sous `.wrangler/migrations/`, vérifie les révisions et refuse les brouillons en attente ou les valeurs personnalisées. Elle renseigne uniquement les coordonnées approuvées, ajoute les champs facultatifs absents et dirige le bouton de contact du showroom vers ses informations pratiques. Ne jamais réinitialiser la base, les médias ou l’authentification pour appliquer cette évolution.
+
+Après publication, `node tests/showroom-browser.mjs` effectue un contrôle anonyme en lecture seule sur l’aperçu : coordonnées, itinéraire, conservation du plan illustré, thèmes clair/sombre, absence d’appel Google Maps avant activation, clavier et affichage sans JavaScript. `PUBLIC_TEST_URL` permet de choisir une autre origine locale ; les captures et le rapport vont par défaut dans `test-results/showroom-browser/`. Les vérifications qui changent le CMS sont distinctes et réservées à la copie jetable ci-dessous. Voir [le rapport de validation](test-results-showroom.md).
+
 ## Préparer Cloudflare ensuite
 
 Après connexion du compte, créer un environnement de préproduction avec ses propres ressources D1, R2 et secrets, puis tester l'application sur son URL Workers. Le domaine `cattelanitalia.ma` sera raccordé plus tard. Ne pas lancer `npm run deploy` avant d'avoir choisi le compte et les noms de ressources.
@@ -176,7 +195,7 @@ Le transfert doit couvrir séparément le contenu EmDash, les médias, les PDF p
 - [Transfert d'un site](https://docs.emdashcms.com/guides/site-transfer/)
 - [Ports et visibilité Codespaces](https://docs.github.com/en/codespaces/developing-in-a-codespace/forwarding-ports-in-your-codespace)
 
-Les coordonnées commerciales (téléphone, lien WhatsApp, adresse et horaires) sont à renseigner dans **Configuration du site**. Elles restent hors des données de démarrage publiées dans Git.
+Les coordonnées commerciales restent éditables dans **Configuration du site**. Le contrat versionné de la migration 0005 contient uniquement les informations publiques approuvées ; les secrets, sessions et sauvegardes privées restent hors de Git. Ne pas déduire un lien WhatsApp du seul numéro de téléphone.
 
 ## Tests de navigateur sur une base locale dédiée
 
@@ -209,6 +228,7 @@ La copie possède aussi ses propres dépendances et caches Vite : ne pas remplac
 ```sh
 CMS_TEST_URL=http://localhost:4331 npm run test:cms -- --setup
 CMS_TEST_URL=http://localhost:4331 npm run test:catalogue-http
+CMS_TEST_URL=http://localhost:4331 node tests/showroom-location-cms.mjs
 ```
 
-Le premier test utilise l’initialisation native, la connexion passkey, les brouillons, les aperçus signés, la publication et l’effacement des champs. Le second réutilise sa session native pour tester les contacts D1, les PDF privés R2, la publication d’une édition, les consentements facultatifs et le formulaire Chromium. Les fichiers de session/passkey restent dans le `.wrangler/` jetable ; seuls les rapports Markdown relus peuvent être repris dans le dépôt. Arrêter ce serveur après les tests. Éviter les compilations et vérifications Astro simultanées avec ces navigateurs dans un petit Codespace.
+Le premier test utilise l’initialisation native, la connexion passkey, les brouillons, les aperçus signés, la publication et l’effacement des champs. Le second réutilise sa session native pour tester les contacts D1, les PDF privés R2, la publication d’une édition, les consentements facultatifs et le formulaire Chromium. `showroom-location-cms.mjs` vérifie la migration 0005 et le cycle brouillon, aperçu signé, publication et effacement de ses champs, sur cette même base isolée uniquement. Ne pas le lancer contre le port 4321 ni contre la base existante. Les fichiers de session/passkey restent dans le `.wrangler/` jetable ; seuls les rapports Markdown relus peuvent être repris dans le dépôt. Arrêter ce serveur après les tests. Éviter les compilations et vérifications Astro simultanées avec ces navigateurs dans un petit Codespace.

@@ -128,7 +128,7 @@
 .showroom-editorial .page-text-block { margin-bottom: 55px; }
 .showroom-editorial .page-full-figure { margin-bottom: 55px; }
 .showroom-editorial .page-full-figure > .page-image { aspect-ratio: 1.2; }
-.showroom-contact { padding: 34px; border: 1px solid var(--hair); align-self: start; position: sticky; top: 30px; }
+.showroom-contact { padding: 34px; border: 1px solid var(--hair); align-self: start; position: sticky; top: 30px; scroll-margin-top: max(90px, calc(var(--u) * 8)); }
 .showroom-contact h2 { margin: 24px 0 38px; font-size: clamp(32px, 3.4vw, 48px); font-weight: 200; letter-spacing: -.03em; }
 .showroom-contact dl { margin: 0 0 30px; }
 .showroom-contact dl > div { border-top: 1px solid var(--hair); padding-block: 18px; }
@@ -136,6 +136,17 @@
 .public-email { overflow-wrap: anywhere; text-transform: none !important; letter-spacing: normal !important; }
 .showroom-contact dd { margin: 0; font-size: 16px; line-height: 1.8; white-space: pre-line; }
 .showroom-contact > .btn { width: 100%; gap: 15px; margin-bottom: 20px; }
+.showroom-map { margin-top: 24px; }
+.showroom-map [hidden] { display: none !important; }
+.showroom-map .showroom-directions { width: 100%; height: auto; min-height: 46px; padding: 14px; gap: 15px; white-space: normal; text-align: center; line-height: 1.6; }
+.showroom-map-toggle { display: flex; justify-content: space-between; width: 100%; margin-top: 12px; min-height: 48px; padding: 12px 0; border: 0; border-bottom: 1px solid var(--hair); color: var(--ink); background: transparent; text-align: left; cursor: pointer; }
+.showroom-map-toggle [data-showroom-map-label] { font-size: 11px; font-weight: 500; letter-spacing: .13em; }
+.showroom-map-toggle [data-showroom-map-symbol] { flex: none; }
+.showroom-map-toggle:focus-visible { outline: 2px solid var(--ink); outline-offset: 5px; }
+.showroom-map-provider { margin: 22px 0 12px; color: var(--faint); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; }
+.showroom-map-frame { width: 100%; min-width: 200px; height: clamp(260px, 32vw, 420px); border: 1px solid var(--hair); background: var(--bg2); }
+.showroom-map-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+.showroom-map + .text-link { margin-top: 20px; }
 .page-faq { display: grid; grid-template-columns: 1fr 1.5fr; gap: 10vw; padding-block: 80px 110px; border-top: 1px solid var(--hair); }
 .page-faq details { border-top: 1px solid var(--hair); }
 .page-faq details:last-child { border-bottom: 1px solid var(--hair); }
@@ -242,7 +253,7 @@
   .showroom-information { grid-template-columns: 1fr; gap: 10px; padding-bottom: 55px; }
   .showroom-contact { position: static; padding: 30px; }
   .showroom-contact h2 { font-size: 38px; }
-  .showroom-contact .btn { width: auto; margin-right: 20px; }
+  .showroom-contact > .btn { width: auto; margin-right: 20px; }
   .page-faq { gap: 20px; grid-template-columns: 1fr; padding-block: 55px; }
   .page-faq .section-heading { margin-bottom: 15px; }
   .page-faq summary { font-size: 18px; }
@@ -284,6 +295,7 @@
   .page-header { gap: 12px; }
   .page-header-tools { gap: 10px; }
   .page-header .page-brand { width: 96px; }
+  .showroom-contact { padding-inline: 16px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .inner-page *, .inner-page *::before, .inner-page *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }

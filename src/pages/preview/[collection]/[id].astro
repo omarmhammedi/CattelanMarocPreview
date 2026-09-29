@@ -3,6 +3,7 @@ import { getRequestContext } from 'emdash';
 import Home from '../../../components/Home.astro';
 import ModelPage from '../../modeles/[slug].astro';
 import SeoHead from '../../../components/SeoHead.astro';
+import ShowroomMap from '../../../components/ShowroomMap.astro';
 import FamilyPage from '../../collections/[slug].astro';
 import PostPage from '../../journal/[slug].astro';
 import CollectionsPage from '../../collections/index.astro';
@@ -10,6 +11,8 @@ import JournalPage from '../../journal/index.astro';
 import ShowroomPage from '../../showroom-casablanca.astro';
 import CataloguePage from '../../catalogue.astro';
 import {readEntry,homeModel,pageModel,familyModel,postModel,modelModel,getFamilies,getPosts,getSite,getCatalogue,getHome,getPage,catalogueModel} from '../../../lib/content';
+import { normalizeGoogleMapsEmbedUrl } from '../../../lib/maps';
+import '../../../styles/pages.css';
 const {collection,id}=Astro.params;
 const preview=getRequestContext()?.preview;
 Astro.response.headers.set('Cache-Control','private, no-store');
@@ -27,5 +30,21 @@ const home=isHome?(routeKey==='home'?homeModel(entry):await getHome()):null;
 const cataloguePage=collection==='catalogues'?await getPage('catalogue'):null;
 const model=collection==='models'?modelModel(entry):null;
 const [families,posts,catalogue]=isHome?await Promise.all([getFamilies(),getPosts(),getCatalogue()]):[[],[],null];
+const showGlobalMap=collection==='site_content' && (site.mapUrl || normalizeGoogleMapsEmbedUrl(site.mapEmbedUrl));
 ---
-{isHome&&home ? <html lang="fr" data-mode="dark"><head><meta charset="utf-8"/><SeoHead title={home.seoTitle} description={home.description} site={site} entry={entry}/></head><body><Home home={home as any} families={families as any} posts={posts as any} site={site as any} catalogue={catalogue as any}/></body></html> : collection==='catalogues'&&cataloguePage ? <CataloguePage preloaded={cataloguePage} catalogueOverride={catalogueModel(entry)} previewOnly/> : model ? <ModelPage preloaded={model}/> : Template ? <Template preloaded={normalized}/> : <p>Ce contenu est administrable depuis ses pages associées.</p>}
+{isHome&&home ? <html lang="fr" data-mode="dark">
+  <head><meta charset="utf-8"/><SeoHead title={home.seoTitle} description={home.description} site={site} entry={entry}/></head>
+  <body>
+    <Home home={home as any} families={families as any} posts={posts as any} site={site as any} catalogue={catalogue as any}/>
+    {showGlobalMap && <section class="showroom-contact global-map-preview" aria-labelledby="global-map-preview-heading">
+      <p class="kick">Prévisualisation des informations du showroom</p>
+      <h2 id="global-map-preview-heading">Carte du showroom</h2>
+      <ShowroomMap embedUrl={site.mapEmbedUrl} mapUrl={site.mapUrl} name={site.name} address={site.address} />
+    </section>}
+  </body>
+</html> : collection==='catalogues'&&cataloguePage ? <CataloguePage preloaded={cataloguePage} catalogueOverride={catalogueModel(entry)} previewOnly/> : model ? <ModelPage preloaded={model}/> : Template ? <Template preloaded={normalized}/> : <p>Ce contenu est administrable depuis ses pages associées.</p>}
+
+<style>
+  .global-map-preview { position: static; width: calc(100% - 2 * var(--gut)); max-width: 620px; margin: 64px auto; }
+  .global-map-preview > .kick { line-height: 1.7; }
+</style>

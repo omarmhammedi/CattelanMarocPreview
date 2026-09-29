@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "sources": {
+    "store_information": "https://i.imgur.com/6swwYhA.png",
+    "provided_by": "Project owner; approved for integration in the private preview",
+    "hours_timezone": "Africa/Casablanca"
+  },
+  "global": {
+    "before": {
+      "address": null,
+      "hours": null,
+      "contact_phone": null,
+      "map_url": null,
+      "map_note": null,
+      "map_embed_url": null
+    },
+    "after": {
+      "address": "8–10 Avenue Mohamed Sijilmassi, Casablanca 20250, Maroc",
+      "hours": "Lundi : 12 h–19 h 30\nMardi–samedi : 9 h–19 h 30\nDimanche : fermé\n(heure de Casablanca)",
+      "contact_phone": "+212 7 71 10 54 90",
+      "map_url": "https://www.google.com/maps/dir/?api=1&destination=Cattelan%20Italia%2C%208-10%20Avenue%20Mohamed%20Sijilmassi%2C%20Casablanca%2020250%2C%20Maroc&destination_place_id=ChIJnXzIEVjTpw0RXul0XQgeEHw",
+      "map_note": "Plan illustratif de Casablanca. Ouvrez l’itinéraire pour rejoindre le showroom.",
+      "map_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5270.840575588588!2d-7.6452543873414465!3d33.592700673222254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d35811c87c9d%3A0x7c101e085d74e95e!2sCattelan%20Italia!5e1!3m2!1sen!2sca!4v1790641981144!5m2!1sen!2sca"
+    }
+  },
+  "showroom": {
+    "section_key": "visit",
+    "cta_label": "Contacter le showroom",
+    "before_href": "/showroom-casablanca/",
+    "after_href": "#showroom-contact"
+  }
+}

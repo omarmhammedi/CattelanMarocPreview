@@ -1,5 +1,6 @@
 ---
 import EditorialSection from '../components/EditorialSection.astro';
+import ShowroomMap from '../components/ShowroomMap.astro';
 import PageLayout from '../layouts/PageLayout.astro';
 import { PortableText } from 'emdash/ui';
 import { getPage, getSite } from '../lib/content';
@@ -25,7 +26,7 @@ const questions = page.sections?.filter((section: any) => section.key?.startsWit
       {page.body?.length > 0 && <div class="page-prose"><PortableText value={page.body} /></div>}
       {sections.map((section: any) => <EditorialSection section={section} />)}
     </div>
-    <aside class="showroom-contact" data-page-reveal>
+    <aside class="showroom-contact" id="showroom-contact" data-page-reveal>
       <p class="kick">Informations pratiques</p><h2>{site.city}</h2>
       <dl>
         {site.address && <div><dt>Adresse</dt><dd>{site.address}</dd></div>}
@@ -33,8 +34,7 @@ const questions = page.sections?.filter((section: any) => section.key?.startsWit
         {site.phone && <div><dt>Téléphone</dt><dd><a href={`tel:${site.phone.replace(/[^+\d]/g, '')}`}>{site.phone}</a></dd></div>}
         {site.publicEmail && <div><dt>Email</dt><dd><a class="public-email" href={`mailto:${site.publicEmail}`}>{site.publicEmail}</a></dd></div>}
       </dl>
-      {site.mapNote && <p class="page-note">{site.mapNote}</p>}
-      {site.mapUrl && <a class="btn" href={site.mapUrl} target="_blank" rel="noopener noreferrer">Préparer l’itinéraire <span aria-hidden="true">↗</span></a>}
+      <ShowroomMap embedUrl={site.mapEmbedUrl} mapUrl={site.mapUrl} name={site.name} address={site.address} />
       {site.whatsappUrl && <a class="text-link" href={site.whatsappUrl} target="_blank" rel="noopener noreferrer">{site.labels.contact}<span aria-hidden="true">↗</span></a>}
     </aside>
   </section>

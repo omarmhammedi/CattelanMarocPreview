@@ -25,6 +25,7 @@ Une fois le site initialisé, l'aperçu se relance au démarrage du Codespace ou
 - Cinq pages fixes, six familles, onze fiches de modèles et cinq articles complets.
 - Contenus, médias, navigation et métadonnées lus dans EmDash à chaque requête.
 - Brouillons, publication et prévisualisations signées natifs ; aucun JSON de remplacement côté site.
+- Adresse, téléphone et horaires du showroom fournis par le propriétaire ; plan illustré de l’accueil conservé, itinéraire Google Maps et carte interactive chargée à la demande sur la page showroom.
 - PDF privé de démonstration, formulaire nom/email, préférence facultative pour les communications.
 - Contacts et événement CRM atomiques en stockage privé, reprise et dédoublonnage ; aucun CRM externe activé.
 - Les textes, visuels et PDF restent provisoires. Les exemples de meubles ne constituent pas une liste de stock ou de pièces exposées.
@@ -44,6 +45,8 @@ Le test `tests/cms-sync.mjs` utilise une vraie inscription et connexion EmDash a
 
 Après les migrations 0003 et 0004, `node tests/published-content-browser.mjs` vérifie aussi les textes et métadonnées publiés des six familles et onze modèles, les liens, les médias et les PDF techniques, puis leurs compositions dans Chromium et WebKit. Ce contrôle est anonyme et en lecture seule ; il compare les octets aux empreintes du cache officiel local de la migration. Voir le [rapport de publication dans l'aperçu privé](docs/test-results-publication.md).
 
+`node tests/showroom-browser.mjs` vérifie en lecture seule les coordonnées, le plan illustré, les thèmes et la carte Google Maps à la demande, avec captures dans `test-results/showroom-browser/`. Le cycle brouillon, aperçu signé, publication et effacement des champs de carte relève de `tests/showroom-location-cms.mjs`, **uniquement dans l’environnement jetable** décrit dans le guide de développement. Voir [les résultats et les captures](docs/test-results-showroom.md).
+
 ## Guides
 
 - [Développement et Codespaces](docs/development.md)
@@ -51,6 +54,7 @@ Après les migrations 0003 et 0004, `node tests/published-content-browser.mjs` v
 - [Fiches modèles et import des sources officielles](docs/model-pages.md)
 - [Stratégie de contenu et SEO](docs/seo-content-strategy.md)
 - [Audit des 28 pages et plan de finalisation SEO](docs/seo-audit-2026-09-28.md)
+- [Coordonnées du showroom, carte et preuves de validation](docs/test-results-showroom.md)
 - [Carte des pages et intentions de recherche](docs/seo-page-map.md)
 - [Catalogue, contacts privés et CRM](docs/catalogue.md)
 - [Résultats de compilation et périmètre de validation](docs/test-results-build.md)
@@ -60,4 +64,4 @@ Après les migrations 0003 et 0004, `node tests/published-content-browser.mjs` v
 
 Connecter Cloudflare, créer les ressources de préproduction puis de production, importer les données et médias, configurer les secrets, inscrire l'administrateur et tester le parcours complet sur Workers. Le domaine `cattelanitalia.ma` sera raccordé à cette étape. `SITE_INDEXABLE=false` et les réponses sans cache protègent actuellement la prévisualisation contre une indexation involontaire et les contenus périmés.
 
-Avant une collecte réelle : finaliser le catalogue, les informations légales et la confidentialité, confirmer les coordonnées du showroom et les droits sur les visuels. La page de confidentialité actuelle décrit uniquement les essais de développement.
+Avant une collecte réelle : finaliser le catalogue, les informations légales et la confidentialité, confirmer les services proposés et les droits sur les visuels. L’adresse, le téléphone et les horaires ont été fournis ; aucun email public ni usage de WhatsApp n’a été confirmé. Les photographies réelles du magasin restent à fournir. La page de confidentialité actuelle décrit uniquement les essais de développement.

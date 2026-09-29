@@ -110,7 +110,7 @@ export async function getSite(){
   const d=e.data;
   return {name:String(settings.title || ''),tagline:String(settings.tagline || ''),city:d.city,location:d.city,
     logoLight:picture(d.logo_light || settings.logo),logoDark:picture(d.logo_dark || settings.logo),phone:d.contact_phone,whatsappUrl:d.whatsapp_url,whatsappHref:d.whatsapp_url,navigation:menu?.items || [],
-    address:d.address,hours:d.hours,mapUrl:d.map_url,mapNote:d.map_note,publicEmail:d.public_email,
+    address:d.address,hours:d.hours,mapUrl:d.map_url,mapEmbedUrl:d.map_embed_url,mapNote:d.map_note,publicEmail:d.public_email,
     footerText:d.footer_text,footerNote:d.footer_text,previewNotice:d.preview_notice,modelNotice:d.model_notice,
     placeholderNotice:d.placeholder_notice,settings,
     labels:{collections:d.collections_label,showroom:d.showroom_label,journal:d.journal_label,catalogue:d.catalogue_label,contact:d.contact_label,allArticles:d.journal_label,readArticle:d.read_article_label,discover:d.discover_label,visit:d.showroom_label,appointment:d.contact_label,download:d.catalogue_label,scroll:d.scroll_label || 'Défiler'},

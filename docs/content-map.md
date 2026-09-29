@@ -40,7 +40,9 @@ Les familles sont `tables`, `chaises-tabourets`, `canapes-fauteuils`, `buffets-b
 | `posts.content` | Article | Contenu obligatoire | Les cinq articles possèdent leurs sections et paragraphes complets |
 | `posts.cta_*` | Fin d’article | Masquer le bouton incomplet | Vérifier destination locale et invitation |
 | `site_content.logo_light`, `logo_dark` | En-tête et pied de page | Utiliser le logo natif s’il existe, puis le nom du site | Vérifier les deux apparences et la navigation mobile |
-| `site_content.address`, `hours`, `map_url` | Informations pratiques | Ne pas afficher d’adresse, horaires ou itinéraire inventés | Champs initialement vides |
+| `site_content.address`, `hours`, `contact_phone`, `map_url` | Informations pratiques de l’accueil, du showroom et du pied de page ; lien d’itinéraire | Masquer chaque donnée absente ; téléphone en lien `tel:` | Seed vide ; coordonnées approuvées fournies par la migration 0005 |
+| `site_content.map_embed_url` | Carte interactive de la page showroom, ouverte sur demande | Masquer le bouton de carte si vide ou URL refusée ; conserver l’itinéraire s’il existe | URL seule `https://www.google.com/maps/embed?pb=…`, jamais le code `<iframe>` |
+| `site_content.map_note` | Légende du plan illustré de l’accueil, desktop et mobile | Conserver la mention minimale « Plan illustratif de Casablanca. » | Ne décrit pas la carte Google Maps réelle de la page showroom |
 | `site_content.public_email` | Contact public | Masquer | L’adresse d’administration n’est pas publiée automatiquement |
 | `site_content.discover_label` | Boutons des familles de mobilier | Libellé obligatoire, initialement « Découvrir » | Modifier ce bouton sans changer « Lire l’article » dans le Journal |
 | `site_content.active_catalogue` | Tous les formulaires catalogue | Message d’indisponibilité | Publier un changement de catalogue et vérifier les deux formulaires |
@@ -106,7 +108,7 @@ Les champs `route_key` et `sort_order` pilotent les routes et l’ordre, pas un 
 
 Le magasin présenté se situe uniquement à Casablanca. Rabat, Marrakech et Tanger apparaissent comme villes de projets. Le site ne promet aucun stock, exposition, délai ou service non confirmé. Les modèles Outdoor présentés sont explicitement limités aux espaces extérieurs couverts.
 
-Les coordonnées exactes, les horaires, les visuels du magasin, les droits d'utilisation des photos des modèles, le PDF définitif et les mentions juridiques sont à confirmer. Les sources officielles de la proposition sont consignées dans `seed/sources.json`. L'enrichissement des onze modèles est documenté dans [Fiches modèles](model-pages.md), avec le contrat de chaque nouveau champ et sa migration ciblée. La prévisualisation est prévue pour la validation du design et du fonctionnement avec des contenus provisoires.
+Le propriétaire a fourni et approuvé l’adresse, le téléphone et les horaires consignés dans `content/showroom-location.json` ; les horaires sont ceux de Casablanca (`Africa/Casablanca`). L’email public, l’usage de WhatsApp, les services et zones de livraison, les visuels du magasin, les droits d'utilisation des photos des modèles, le PDF définitif et les mentions juridiques restent à confirmer. Les sources officielles de la proposition sont consignées dans `seed/sources.json`. L'enrichissement des onze modèles est documenté dans [Fiches modèles](model-pages.md), avec le contrat de chaque nouveau champ et sa migration ciblée. La prévisualisation est prévue pour la validation du design et du fonctionnement avec des contenus provisoires.
 
 Sources techniques : [format du seed](https://docs.emdashcms.com/themes/seed-files/), [types de champs](https://docs.emdashcms.com/reference/field-types/), [relations](https://docs.emdashcms.com/guides/relations/), [évolution du schéma](https://docs.emdashcms.com/deployment/schema-evolution/).
 
@@ -152,3 +154,29 @@ EMDASH_AUTH_FILE=.wrangler/cms-sync-session.json node scripts/migrations/0002-co
 ```
 
 Le script crée le champ par l’API de schéma uniquement s’il est absent. Il lit ensuite la configuration globale actuelle, conserve les autres valeurs et un éventuel libellé personnalisé, puis initialise le bouton manquant avec contrôle `_rev`. Une configuration déjà publiée est publiée à nouveau. Le script refuse de publier des brouillons antérieurs à la migration et vérifie ensuite que les autres champs n’ont pas changé. Le cliché de migration contient uniquement le champ concerné, sans les coordonnées du site. Une deuxième exécution conserve le libellé existant.
+
+## Migration 0005 : coordonnées du showroom et carte à la demande
+
+Le contrat [content/showroom-location.json](../content/showroom-location.json) contient les informations publiques fournies et approuvées par le propriétaire à partir de [sa capture du magasin](https://i.imgur.com/6swwYhA.png) et de son iframe Google Maps :
+
+| Information | Valeur fournie |
+| --- | --- |
+| Adresse | 8–10 Avenue Mohamed Sijilmassi, Casablanca 20250, Maroc |
+| Téléphone | +212 7 71 10 54 90 (`tel:+212771105490`) |
+| Lundi | 12 h–19 h 30 |
+| Mardi–samedi | 9 h–19 h 30 |
+| Dimanche | Fermé |
+
+Les heures sont locales à Casablanca. Cette source ne confirme ni email commercial ni WhatsApp ; aucun de ces champs n’est rempli par déduction. Les coordonnées sont volontairement absentes du seed générique ; le JSON est un contrat de migration versionné, jamais une source de secours du rendu.
+
+`scripts/migrations/0005-showroom-location.mjs` ajoute les champs facultatifs `map_embed_url` et `map_note` si nécessaire, puis renseigne les coordonnées et les deux liens Google dans l’entrée globale. Il corrige uniquement la destination initiale du bouton « Contacter le showroom » de la section `visit`, vers `#showroom-contact`. Il conserve les autres textes, références, médias et paramètres. La migration exige une session native valide, produit un aperçu sans écriture par défaut, sauvegarde les valeurs avant application et vérifie les révisions. Elle refuse un brouillon en attente ou un état éditorial qui diffère de l’état vide attendu et du résultat déjà appliqué ; elle ne remplit donc pas de nouveau un champ effacé après l’import.
+
+Le plan SVG de l’accueil reste une illustration, avec ses rues, son marqueur animé et ses thèmes existants. `map_note` le précise ; `map_url` ouvre l’itinéraire vers le lieu Google identifié. Les coordonnées de cadrage présentes dans le code d’intégration ne servent pas à déplacer le marqueur illustré comme s’il était géolocalisé.
+
+Sur la page showroom, `map_embed_url` accepte uniquement l’URL HTTPS de `www.google.com/maps/embed` avec un seul paramètre `pb`. Une balise iframe, un autre domaine, des identifiants, un fragment ou des paramètres supplémentaires sont refusés au rendu. Le bouton « Afficher la carte interactive » insère l’iframe après activation ; aucun appel à Google Maps n’est effectué avant cette action. La fermeture retire l’iframe. Sans JavaScript, le lien d’itinéraire reste disponible et le bouton interactif est masqué. Les requêtes Google Fonts déjà utilisées par le site sont indépendantes de ce comportement.
+
+Le cadre et les commandes suivent les couleurs du site ; la carte Google conserve son propre affichage et ses mentions d’attribution. Le champ `map_note` est réservé au plan illustré de l’accueil, pas à cette carte réelle. Effacer `map_embed_url` supprime le bouton de carte, sans supprimer le lien `map_url`. Effacer les deux retire les deux actions.
+
+L’aperçu signé de `site_content/global` conserve l’accueil complet et ajoute ensuite une section « Carte du showroom » avec les valeurs du brouillon. Elle permet de contrôler ce champ qui apparaît normalement sur une autre page. Aucun iframe n’est ajouté à l’accueil public. Si seul l’itinéraire reste renseigné, cette section d’aperçu affiche seulement son lien ; si les deux champs sont vides, elle disparaît.
+
+Les tests `tests/showroom-location-cms.mjs` couvrent ce cycle éditorial sur une base jetable, tandis que `tests/showroom-browser.mjs` contrôle anonymement le rendu publié en lecture seule. Voir [les résultats d’exécution et les captures](test-results-showroom.md).
