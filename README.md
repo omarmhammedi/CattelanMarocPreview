@@ -50,6 +50,8 @@ Après les migrations 0003 et 0004, `node tests/published-content-browser.mjs` v
 - [Champs et synchronisation des contenus](docs/content-map.md)
 - [Fiches modèles et import des sources officielles](docs/model-pages.md)
 - [Stratégie de contenu et SEO](docs/seo-content-strategy.md)
+- [Audit des 28 pages et plan de finalisation SEO](docs/seo-audit-2026-09-28.md)
+- [Carte des pages et intentions de recherche](docs/seo-page-map.md)
 - [Catalogue, contacts privés et CRM](docs/catalogue.md)
 - [Résultats de compilation et périmètre de validation](docs/test-results-build.md)
 - [Finalisation de la migration et comparaison avec la version B](docs/migration-completion.md)

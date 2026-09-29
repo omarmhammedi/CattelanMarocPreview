@@ -1,5 +1,7 @@
 # Stratégie de contenu et SEO
 
+L'[audit du contenu publié du 28 septembre 2026](seo-audit-2026-09-28.md) complète cette stratégie : [carte des 28 pages et intentions](seo-page-map.md), constats techniques et plan de finalisation priorisé. Il conserve les six familles et onze modèles documentés, et distingue les corrections réalisables des faits commerciaux encore à confirmer.
+
 Le site doit aider à choisir une référence Cattelan Italia et à préparer un échange avec le showroom de Casablanca. Chaque page a une fonction distincte dans ce parcours. Les intentions ci-dessous sont des hypothèses éditoriales tirées du contenu et de l'offre présentée ; elles ne constituent pas une étude de volumes de recherche ni une promesse de classement.
 
 Google propose notamment ce critère : « Le titre résume-t-il clairement le contenu de la page ? » Il privilégie l'utilité et la fiabilité et ne recommande aucun nombre de mots à atteindre. Le contenu doit donc apporter une réponse, sans allongement destiné au référencement. [Conseils officiels sur les contenus utiles](https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=fr).

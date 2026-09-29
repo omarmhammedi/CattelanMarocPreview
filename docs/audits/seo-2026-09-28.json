@@ -1,0 +1,3144 @@
+{
+  "capturedAt": "2026-09-29T00:18:05.920Z",
+  "displayTimezone": "America/Toronto",
+  "method": "Anonymous GET only; SSR DOM parsed with scripts disabled and all browser network blocked. Expected routes from seed plus discovered public navigation. No CMS reads requiring authentication, no form submission, no asset downloads.",
+  "sourceCommit": "03d09fe",
+  "expectedRoutes": [
+    "/",
+    "/collections/",
+    "/showroom-casablanca/",
+    "/catalogue/",
+    "/journal/",
+    "/collections/tables/",
+    "/collections/chaises-tabourets/",
+    "/collections/canapes-fauteuils/",
+    "/collections/buffets-bibliotheques/",
+    "/collections/luminaires/",
+    "/collections/mobilier-exterieur/",
+    "/modeles/skorpio/",
+    "/modeles/napoleon-keramik/",
+    "/modeles/rhonda/",
+    "/modeles/greta/",
+    "/modeles/ruby/",
+    "/modeles/ruby-lounge/",
+    "/modeles/chelsea/",
+    "/modeles/airport/",
+    "/modeles/bloom/",
+    "/modeles/napoleon-keramik-outdoor/",
+    "/modeles/greta-outdoor/",
+    "/journal/choisir-forme-proportions-table-salle-a-manger/",
+    "/journal/associer-table-chaises-salle-a-manger/",
+    "/journal/ceramique-verre-bois-choisir-finition-meuble/",
+    "/journal/composer-salon-canape-fauteuil/",
+    "/journal/choisir-buffet-bibliotheque-salon/",
+    "/confidentialite/"
+  ],
+  "summary": {
+    "pages": 28,
+    "anchors": 778,
+    "internalLinkIssues": [],
+    "failures": [],
+    "duplicates": {
+      "titles": [],
+      "descriptions": [],
+      "h1": []
+    },
+    "unreachable": []
+  },
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "clickDepth": 0,
+      "title": "Cattelan Italia Maroc | Mobilier italien à Casablanca",
+      "description": [
+        "Découvrez le mobilier Cattelan Italia au Maroc. Explorez les collections, recevez le catalogue et préparez votre visite au showroom de Casablanca."
+      ],
+      "canonical": [
+        "http://localhost:4321/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Vivre italien, à Casablanca",
+        "Vivre italien, à Casablanca"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3J7SAP7G4EGCR7M1CHTGG2E.jpg"
+      ],
+      "htmlBytes": 126669,
+      "domNodes": 573,
+      "images": {
+        "count": 35,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 2,
+        "missingDimensions": 31
+      },
+      "mainLinks": [
+        {
+          "text": "Recevoir le catalogue",
+          "href": "/catalogue/"
+        },
+        {
+          "text": "Showroom",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Explorer les collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "TablesDécouvrir →Skorpio en verre, Napoleon en céramique : deux façons de dessiner le centre de la salle à manger.",
+          "href": "/collections/tables/"
+        },
+        {
+          "text": "Chaises et tabouretsDécouvrir →Dossier plissé de Rhonda, lignes séparées de Greta : comparez deux chaises à accoudoirs et leurs revêtements.",
+          "href": "/collections/chaises-tabourets/"
+        },
+        {
+          "text": "Canapés et fauteuilsDécouvrir →Ruby et Ruby Lounge associent frêne apparent, dossiers arrondis et assises rembourrées dans deux formats de salon.",
+          "href": "/collections/canapes-fauteuils/"
+        },
+        {
+          "text": "Buffets et bibliothèquesDécouvrir →Chelsea ferme le rangement derrière ses façades ; Airport compose étagères et modules sur un système ouvert.",
+          "href": "/collections/buffets-bibliotheques/"
+        },
+        {
+          "text": "LuminairesDécouvrir →Bloom décline ses branches métalliques et son verre transparent en suspension et en lampadaire.",
+          "href": "/collections/luminaires/"
+        },
+        {
+          "text": "Mobilier extérieurDécouvrir →Napoleon Keramik Outdoor et Greta Outdoor, pour un espace repas extérieur couvert et protégé des intempéries.",
+          "href": "/collections/mobilier-exterieur/"
+        },
+        {
+          "text": "Le catalogueRecevoir le catalogueRecevoir le cataloguePDF",
+          "href": "/catalogue/"
+        },
+        {
+          "text": "Découvrir le showroom",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Découvrir le showroom",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Recevoir le catalogue →",
+          "href": "/catalogue/"
+        },
+        {
+          "text": "Confidentialité",
+          "href": "/confidentialite/"
+        },
+        {
+          "text": "Lire le Journal",
+          "href": "/journal/"
+        },
+        {
+          "text": "Conseils d’aménagementBuffet ou bibliothèque : quel rangement choisir pour le salon ?Lire l’article →",
+          "href": "/journal/choisir-buffet-bibliotheque-salon/"
+        },
+        {
+          "text": "Conseils d’aménagementComposer un salon avec un canapé et un fauteuilLire l’article →",
+          "href": "/journal/composer-salon-canape-fauteuil/"
+        },
+        {
+          "text": "Matières et finitionsCéramique, verre ou bois : comment choisir la finition d’un meuble ?Lire l’article →",
+          "href": "/journal/ceramique-verre-bois-choisir-finition-meuble/"
+        },
+        {
+          "text": "Associations et matièresComment associer une table et des chaises sans tout assortir ?Lire l’article →",
+          "href": "/journal/associer-table-chaises-salle-a-manger/"
+        },
+        {
+          "text": "Conseils d’aménagementComment choisir la forme et les proportions de sa table de salle à manger ?Lire l’article →",
+          "href": "/journal/choisir-forme-proportions-table-salle-a-manger/"
+        },
+        {
+          "text": "Recevoir le catalogue",
+          "href": "/catalogue/"
+        },
+        {
+          "text": "Showroom",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Explorer les collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "TablesSkorpio en verre, Napoleon en céramique : deux façons de dessiner le centre de la salle à manger.",
+          "href": "/collections/tables/"
+        },
+        {
+          "text": "Chaises et tabouretsDossier plissé de Rhonda, lignes séparées de Greta : comparez deux chaises à accoudoirs et leurs revêtements.",
+          "href": "/collections/chaises-tabourets/"
+        },
+        {
+          "text": "Canapés et fauteuilsRuby et Ruby Lounge associent frêne apparent, dossiers arrondis et assises rembourrées dans deux formats de salon.",
+          "href": "/collections/canapes-fauteuils/"
+        },
+        {
+          "text": "Buffets et bibliothèquesChelsea ferme le rangement derrière ses façades ; Airport compose étagères et modules sur un système ouvert.",
+          "href": "/collections/buffets-bibliotheques/"
+        },
+        {
+          "text": "LuminairesBloom décline ses branches métalliques et son verre transparent en suspension et en lampadaire.",
+          "href": "/collections/luminaires/"
+        },
+        {
+          "text": "Mobilier extérieurNapoleon Keramik Outdoor et Greta Outdoor, pour un espace repas extérieur couvert et protégé des intempéries.",
+          "href": "/collections/mobilier-exterieur/"
+        },
+        {
+          "text": "Découvrir le showroom",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Recevoir le catalogue →",
+          "href": "/catalogue/"
+        },
+        {
+          "text": "Confidentialité",
+          "href": "/confidentialite/"
+        },
+        {
+          "text": "Conseils d’aménagementBuffet ou bibliothèque : quel rangement choisir pour le salon ?Lire l’article →",
+          "href": "/journal/choisir-buffet-bibliotheque-salon/"
+        },
+        {
+          "text": "Conseils d’aménagementComposer un salon avec un canapé et un fauteuilLire l’article →",
+          "href": "/journal/composer-salon-canape-fauteuil/"
+        },
+        {
+          "text": "Matières et finitionsCéramique, verre ou bois : comment choisir la finition d’un meuble ?Lire l’article →",
+          "href": "/journal/ceramique-verre-bois-choisir-finition-meuble/"
+        },
+        {
+          "text": "Associations et matièresComment associer une table et des chaises sans tout assortir ?Lire l’article →",
+          "href": "/journal/associer-table-chaises-salle-a-manger/"
+        },
+        {
+          "text": "Conseils d’aménagementComment choisir la forme et les proportions de sa table de salle à manger ?Lire l’article →",
+          "href": "/journal/choisir-forme-proportions-table-salle-a-manger/"
+        },
+        {
+          "text": "Lire le Journal",
+          "href": "/journal/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/collections/",
+      "status": 200,
+      "clickDepth": 1,
+      "title": "Collections de mobilier | Cattelan Italia Maroc",
+      "description": [
+        "Tables, assises, canapés, rangements, luminaires et mobilier extérieur : explorez les collections Cattelan Italia et contactez le showroom de Casablanca."
+      ],
+      "canonical": [
+        "http://localhost:4321/collections/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Les collections Cattelan Italia"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3J7SB4DSQYG23XSK9WR1EQR.jpg"
+      ],
+      "htmlBytes": 101924,
+      "domNodes": 210,
+      "images": {
+        "count": 11,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 0,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "01↗TablesSkorpio en verre, Napoleon en céramique : deux façons de dessiner le centre de la salle à manger.",
+          "href": "/collections/tables/"
+        },
+        {
+          "text": "02↗Chaises et tabouretsDossier plissé de Rhonda, lignes séparées de Greta : comparez deux chaises à accoudoirs et leurs revêtements.",
+          "href": "/collections/chaises-tabourets/"
+        },
+        {
+          "text": "03↗Canapés et fauteuilsRuby et Ruby Lounge associent frêne apparent, dossiers arrondis et assises rembourrées dans deux formats de salon.",
+          "href": "/collections/canapes-fauteuils/"
+        },
+        {
+          "text": "04↗Buffets et bibliothèquesChelsea ferme le rangement derrière ses façades ; Airport compose étagères et modules sur un système ouvert.",
+          "href": "/collections/buffets-bibliotheques/"
+        },
+        {
+          "text": "05↗LuminairesBloom décline ses branches métalliques et son verre transparent en suspension et en lampadaire.",
+          "href": "/collections/luminaires/"
+        },
+        {
+          "text": "06↗Mobilier extérieurNapoleon Keramik Outdoor et Greta Outdoor, pour un espace repas extérieur couvert et protégé des intempéries.",
+          "href": "/collections/mobilier-exterieur/"
+        },
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Échanger avec notre équipe↗",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Recevoir le catalogue↗",
+          "href": "/catalogue/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/showroom-casablanca/",
+      "status": 200,
+      "clickDepth": 1,
+      "title": "Showroom à Casablanca | Cattelan Italia Maroc",
+      "description": [
+        "Préparez votre visite au showroom Cattelan Italia de Casablanca. Contactez l’équipe pour connaître les modèles exposés et discuter de votre sélection."
+      ],
+      "canonical": [
+        "http://localhost:4321/showroom-casablanca/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Le showroom Cattelan Italia à Casablanca"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3J7SB7P7ZH64YMR3BEBFT1E.jpg"
+      ],
+      "htmlBytes": 100590,
+      "domNodes": 198,
+      "images": {
+        "count": 5,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 0,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Recevoir le catalogue↗",
+          "href": "/catalogue/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/catalogue/",
+      "status": 200,
+      "clickDepth": 1,
+      "title": "Catalogue Cattelan Italia | Recevoir le PDF",
+      "description": [
+        "Recevez le catalogue Cattelan Italia après votre demande. Explorez les collections et poursuivez votre projet avec le showroom de Casablanca."
+      ],
+      "canonical": [
+        "http://localhost:4321/catalogue/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Recevez le catalogue Cattelan Italia"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3J7SB4DSQYG23XSK9WR1EQR.jpg"
+      ],
+      "htmlBytes": 101866,
+      "domNodes": 193,
+      "images": {
+        "count": 6,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 0,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "Confidentialité",
+          "href": "/confidentialite/"
+        },
+        {
+          "text": "Échanger avec le showroom↗",
+          "href": "/showroom-casablanca/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/journal/",
+      "status": 200,
+      "clickDepth": 1,
+      "title": "Journal mobilier et design | Cattelan Italia Maroc",
+      "description": [
+        "Matières, proportions et associations : découvrez nos conseils pour choisir votre mobilier et préparer votre projet avec Cattelan Italia au Maroc."
+      ],
+      "canonical": [
+        "http://localhost:4321/journal/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Le Journal Cattelan Italia Maroc"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [],
+      "htmlBytes": 101282,
+      "domNodes": 202,
+      "images": {
+        "count": 9,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 0,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "Conseils d’aménagementBuffet ou bibliothèque : quel rangement choisir pour le salon ?Le bon rangement dépend autant de ce que vous souhaitez montrer que de ce que vous préférez garder à l’abri des regards. Voici comment orienter votre choix.Lire l’article ↗",
+          "href": "/journal/choisir-buffet-bibliotheque-salon/"
+        },
+        {
+          "text": "Conseils d’aménagementComposer un salon avec un canapé et un fauteuilUn canapé et un fauteuil peuvent partager les mêmes lignes ou jouer sur leurs différences. Le point de départ reste votre façon de vivre le salon.Lire l’article ↗",
+          "href": "/journal/composer-salon-canape-fauteuil/"
+        },
+        {
+          "text": "Matières et finitionsCéramique, verre ou bois : comment choisir la finition d’un meuble ?Une même forme change de présence selon sa finition. Pour choisir, observez ce que la matière apporte à la pièce et vérifiez les caractéristiques de la version qui vous intéresse.Lire l’article ↗",
+          "href": "/journal/ceramique-verre-bois-choisir-finition-meuble/"
+        },
+        {
+          "text": "Associations et matièresComment associer une table et des chaises sans tout assortir ?Une salle à manger cohérente peut réunir des formes et des matières différentes. L’essentiel est de choisir les liens qui donneront une unité à l’ensemble.Lire l’article ↗",
+          "href": "/journal/associer-table-chaises-salle-a-manger/"
+        },
+        {
+          "text": "Conseils d’aménagementComment choisir la forme et les proportions de sa table de salle à manger ?La bonne table se choisit autant pour sa silhouette que pour la place qu’elle laisse autour d’elle. Quelques repères pour comparer les formes et se projeter.Lire l’article ↗",
+          "href": "/journal/choisir-forme-proportions-table-salle-a-manger/"
+        },
+        {
+          "text": "Recevoir le catalogue↗",
+          "href": "/catalogue/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/collections/tables/",
+      "status": 200,
+      "clickDepth": 1,
+      "title": "Tables de salle à manger | Cattelan Italia Maroc",
+      "description": [
+        "Comparez Skorpio en verre et Napoleon Keramik en céramique : formes, dimensions, piètements et nombre de places selon les chaises."
+      ],
+      "canonical": [
+        "http://localhost:4321/collections/tables/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Les tables Cattelan Italia"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3J7S9CMS91DTYNP40308G9W.jpg"
+      ],
+      "htmlBytes": 101568,
+      "domNodes": 195,
+      "images": {
+        "count": 7,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 0,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "← Collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "Skorpio",
+          "href": "/modeles/skorpio/"
+        },
+        {
+          "text": "Napoleon Keramik",
+          "href": "/modeles/napoleon-keramik/"
+        },
+        {
+          "text": "Découvrir le modèle↗",
+          "href": "/modeles/skorpio/"
+        },
+        {
+          "text": "Découvrir le modèle↗",
+          "href": "/modeles/napoleon-keramik/"
+        },
+        {
+          "text": "Comment choisir la forme et les proportions de sa table de salle à manger ?Lire l’article ↗",
+          "href": "/journal/choisir-forme-proportions-table-salle-a-manger/"
+        },
+        {
+          "text": "Recevoir le catalogue",
+          "href": "/catalogue/"
+        },
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/collections/chaises-tabourets/",
+      "status": 200,
+      "clickDepth": 1,
+      "title": "Chaises et tabourets | Cattelan Italia Maroc",
+      "description": [
+        "Comparez les chaises Rhonda et Greta : dossier, accoudoirs, dimensions et revêtements fixes. Distinguez ces modèles de leurs déclinaisons tabourets."
+      ],
+      "canonical": [
+        "http://localhost:4321/collections/chaises-tabourets/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Les chaises et tabourets Cattelan Italia"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3J7S9JDDQG2TDMKSWC22XTM.jpg"
+      ],
+      "htmlBytes": 101642,
+      "domNodes": 195,
+      "images": {
+        "count": 7,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 0,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "← Collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "Rhonda",
+          "href": "/modeles/rhonda/"
+        },
+        {
+          "text": "Greta",
+          "href": "/modeles/greta/"
+        },
+        {
+          "text": "Découvrir le modèle↗",
+          "href": "/modeles/rhonda/"
+        },
+        {
+          "text": "Découvrir le modèle↗",
+          "href": "/modeles/greta/"
+        },
+        {
+          "text": "Comment associer une table et des chaises sans tout assortir ?Lire l’article ↗",
+          "href": "/journal/associer-table-chaises-salle-a-manger/"
+        },
+        {
+          "text": "Recevoir le catalogue",
+          "href": "/catalogue/"
+        },
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/collections/canapes-fauteuils/",
+      "status": 200,
+      "clickDepth": 1,
+      "title": "Canapés et fauteuils | Cattelan Italia Maroc",
+      "description": [
+        "Ruby et Ruby Lounge : comparez les formats canapé et fauteuil, le frêne teinté et les revêtements non déhoussables de chaque référence."
+      ],
+      "canonical": [
+        "http://localhost:4321/collections/canapes-fauteuils/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Les canapés et fauteuils Cattelan Italia"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3J7S9P2A54NAY79TVTYVV55.jpg"
+      ],
+      "htmlBytes": 101454,
+      "domNodes": 195,
+      "images": {
+        "count": 7,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 0,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "← Collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "Ruby",
+          "href": "/modeles/ruby/"
+        },
+        {
+          "text": "Ruby Lounge",
+          "href": "/modeles/ruby-lounge/"
+        },
+        {
+          "text": "Découvrir le modèle↗",
+          "href": "/modeles/ruby/"
+        },
+        {
+          "text": "Découvrir le modèle↗",
+          "href": "/modeles/ruby-lounge/"
+        },
+        {
+          "text": "Composer un salon avec un canapé et un fauteuilLire l’article ↗",
+          "href": "/journal/composer-salon-canape-fauteuil/"
+        },
+        {
+          "text": "Recevoir le catalogue",
+          "href": "/catalogue/"
+        },
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/collections/buffets-bibliotheques/",
+      "status": 200,
+      "clickDepth": 1,
+      "title": "Buffets et bibliothèques | Cattelan Italia Maroc",
+      "description": [
+        "Chelsea ou Airport : comparez un buffet fermé et une bibliothèque modulaire, leurs dimensions, matériaux et possibilités de composition."
+      ],
+      "canonical": [
+        "http://localhost:4321/collections/buffets-bibliotheques/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Les buffets et bibliothèques Cattelan Italia"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3J7S9S8EG1VDEC4EHNKVNQJ.jpg"
+      ],
+      "htmlBytes": 101689,
+      "domNodes": 195,
+      "images": {
+        "count": 7,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 0,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "← Collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "Chelsea",
+          "href": "/modeles/chelsea/"
+        },
+        {
+          "text": "Airport",
+          "href": "/modeles/airport/"
+        },
+        {
+          "text": "Découvrir le modèle↗",
+          "href": "/modeles/chelsea/"
+        },
+        {
+          "text": "Découvrir le modèle↗",
+          "href": "/modeles/airport/"
+        },
+        {
+          "text": "Buffet ou bibliothèque : quel rangement choisir pour le salon ?Lire l’article ↗",
+          "href": "/journal/choisir-buffet-bibliotheque-salon/"
+        },
+        {
+          "text": "Recevoir le catalogue",
+          "href": "/catalogue/"
+        },
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/collections/luminaires/",
+      "status": 200,
+      "clickDepth": 1,
+      "title": "Luminaires design | Cattelan Italia Maroc",
+      "description": [
+        "Bloom en suspension ou sur pied : comparez formats, métal et verre borosilicate, ampoules fournies et options de variation lumineuse."
+      ],
+      "canonical": [
+        "http://localhost:4321/collections/luminaires/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Les luminaires Cattelan Italia"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3J7S9Z81F97N7A6VK92AEG5.jpg"
+      ],
+      "htmlBytes": 100690,
+      "domNodes": 186,
+      "images": {
+        "count": 6,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 0,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "← Collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "Bloom",
+          "href": "/modeles/bloom/"
+        },
+        {
+          "text": "Découvrir le modèle↗",
+          "href": "/modeles/bloom/"
+        },
+        {
+          "text": "Céramique, verre ou bois : comment choisir la finition d’un meuble ?Lire l’article ↗",
+          "href": "/journal/ceramique-verre-bois-choisir-finition-meuble/"
+        },
+        {
+          "text": "Recevoir le catalogue",
+          "href": "/catalogue/"
+        },
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/collections/mobilier-exterieur/",
+      "status": 200,
+      "clickDepth": 1,
+      "title": "Mobilier extérieur | Cattelan Italia Maroc",
+      "description": [
+        "Napoleon Keramik Outdoor et Greta Outdoor : dimensions, céramique et inox 304, pour un extérieur couvert et protégé des intempéries."
+      ],
+      "canonical": [
+        "http://localhost:4321/collections/mobilier-exterieur/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Le mobilier extérieur Cattelan Italia"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3J7SAJB3BPS4R4K18BM7BA8.jpg"
+      ],
+      "htmlBytes": 101333,
+      "domNodes": 189,
+      "images": {
+        "count": 7,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 0,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "← Collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "Napoleon Keramik Outdoor",
+          "href": "/modeles/napoleon-keramik-outdoor/"
+        },
+        {
+          "text": "Greta Outdoor",
+          "href": "/modeles/greta-outdoor/"
+        },
+        {
+          "text": "Découvrir le modèle↗",
+          "href": "/modeles/napoleon-keramik-outdoor/"
+        },
+        {
+          "text": "Découvrir le modèle↗",
+          "href": "/modeles/greta-outdoor/"
+        },
+        {
+          "text": "Recevoir le catalogue",
+          "href": "/catalogue/"
+        },
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/modeles/skorpio/",
+      "status": 200,
+      "clickDepth": 2,
+      "title": "Skorpio : table en verre | Cattelan Italia Maroc",
+      "description": [
+        "Table Skorpio en verre : base en acier, plateaux de 12 ou 15 mm selon le format, finitions, dimensions et fiche technique Cattelan Italia."
+      ],
+      "canonical": [
+        "http://localhost:4321/modeles/skorpio/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Skorpio"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3N0JPAGCPXYVQWF7N8W8MFA.jpg"
+      ],
+      "htmlBytes": 124028,
+      "domNodes": 560,
+      "images": {
+        "count": 78,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 20,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "Collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "Les tables Cattelan Italia",
+          "href": "/collections/tables/"
+        },
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "01",
+          "href": "#model-view-1"
+        },
+        {
+          "text": "02",
+          "href": "#model-view-2"
+        },
+        {
+          "text": "03",
+          "href": "#model-view-3"
+        },
+        {
+          "text": "04",
+          "href": "#model-view-4"
+        },
+        {
+          "text": "05",
+          "href": "#model-view-5"
+        },
+        {
+          "text": "06",
+          "href": "#model-view-6"
+        },
+        {
+          "text": "07",
+          "href": "#model-view-7"
+        },
+        {
+          "text": "08",
+          "href": "#model-view-8"
+        },
+        {
+          "text": "09",
+          "href": "#model-view-9"
+        },
+        {
+          "text": "10",
+          "href": "#model-view-10"
+        },
+        {
+          "text": "11",
+          "href": "#model-view-11"
+        },
+        {
+          "text": "12",
+          "href": "#model-view-12"
+        },
+        {
+          "text": "13",
+          "href": "#model-view-13"
+        },
+        {
+          "text": "14",
+          "href": "#model-view-14"
+        },
+        {
+          "text": "15",
+          "href": "#model-view-15"
+        },
+        {
+          "text": "16",
+          "href": "#model-view-16"
+        },
+        {
+          "text": "17",
+          "href": "#model-view-17"
+        },
+        {
+          "text": "18",
+          "href": "#model-view-18"
+        },
+        {
+          "text": "19",
+          "href": "#model-view-19"
+        },
+        {
+          "text": "20",
+          "href": "#model-view-20"
+        },
+        {
+          "text": "Télécharger la fiche technique PDF↓",
+          "href": "/_emdash/api/media/file/01M3N0PHJDAXJN67XP1NKNW321.pdf"
+        },
+        {
+          "text": "Voir la fiche Cattelan Italia↗",
+          "href": "https://www.cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8"
+        },
+        {
+          "text": "Contacter le showroom",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Recevoir le catalogue↗",
+          "href": "/catalogue/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/modeles/napoleon-keramik/",
+      "status": 200,
+      "clickDepth": 2,
+      "title": "Napoleon Keramik : table en céramique | Cattelan Italia Maroc",
+      "description": [
+        "Napoleon Keramik : plateau et base arrondie en céramique Marmi. Comparez les cinq décors, les formats et les plans de cette table Cattelan Italia."
+      ],
+      "canonical": [
+        "http://localhost:4321/modeles/napoleon-keramik/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Napoleon Keramik"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3N0PHTXKHYX7YQYHJ8C9TYB.jpg"
+      ],
+      "htmlBytes": 118396,
+      "domNodes": 453,
+      "images": {
+        "count": 58,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 18,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "Collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "Les tables Cattelan Italia",
+          "href": "/collections/tables/"
+        },
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "01",
+          "href": "#model-view-1"
+        },
+        {
+          "text": "02",
+          "href": "#model-view-2"
+        },
+        {
+          "text": "03",
+          "href": "#model-view-3"
+        },
+        {
+          "text": "04",
+          "href": "#model-view-4"
+        },
+        {
+          "text": "05",
+          "href": "#model-view-5"
+        },
+        {
+          "text": "06",
+          "href": "#model-view-6"
+        },
+        {
+          "text": "07",
+          "href": "#model-view-7"
+        },
+        {
+          "text": "08",
+          "href": "#model-view-8"
+        },
+        {
+          "text": "09",
+          "href": "#model-view-9"
+        },
+        {
+          "text": "10",
+          "href": "#model-view-10"
+        },
+        {
+          "text": "11",
+          "href": "#model-view-11"
+        },
+        {
+          "text": "12",
+          "href": "#model-view-12"
+        },
+        {
+          "text": "13",
+          "href": "#model-view-13"
+        },
+        {
+          "text": "14",
+          "href": "#model-view-14"
+        },
+        {
+          "text": "15",
+          "href": "#model-view-15"
+        },
+        {
+          "text": "16",
+          "href": "#model-view-16"
+        },
+        {
+          "text": "17",
+          "href": "#model-view-17"
+        },
+        {
+          "text": "18",
+          "href": "#model-view-18"
+        },
+        {
+          "text": "Télécharger la fiche technique PDF↓",
+          "href": "/_emdash/api/media/file/01M3N0Q1H3Q9RHNDVR1GZKG89J.pdf"
+        },
+        {
+          "text": "Voir la fiche Cattelan Italia↗",
+          "href": "https://www.cattelanitalia.com/fr/products/DD24EC9D-FA00-4C0D-A989-9ADD6E56BFD0"
+        },
+        {
+          "text": "Contacter le showroom",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Recevoir le catalogue↗",
+          "href": "/catalogue/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/modeles/rhonda/",
+      "status": 200,
+      "clickDepth": 2,
+      "title": "Rhonda : chaise à accoudoirs | Cattelan Italia Maroc",
+      "description": [
+        "Rhonda : dossier arrondi plissé, pieds en acier et revêtements non déhoussables. Dimensions, finitions et différences avec les autres versions."
+      ],
+      "canonical": [
+        "http://localhost:4321/modeles/rhonda/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Rhonda"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3N0Q1SG0WE0Z46XQ7KGDTRP.jpg"
+      ],
+      "htmlBytes": 138014,
+      "domNodes": 899,
+      "images": {
+        "count": 144,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 10,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "Collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "Les chaises et tabourets Cattelan Italia",
+          "href": "/collections/chaises-tabourets/"
+        },
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "01",
+          "href": "#model-view-1"
+        },
+        {
+          "text": "02",
+          "href": "#model-view-2"
+        },
+        {
+          "text": "03",
+          "href": "#model-view-3"
+        },
+        {
+          "text": "04",
+          "href": "#model-view-4"
+        },
+        {
+          "text": "05",
+          "href": "#model-view-5"
+        },
+        {
+          "text": "06",
+          "href": "#model-view-6"
+        },
+        {
+          "text": "07",
+          "href": "#model-view-7"
+        },
+        {
+          "text": "08",
+          "href": "#model-view-8"
+        },
+        {
+          "text": "09",
+          "href": "#model-view-9"
+        },
+        {
+          "text": "10",
+          "href": "#model-view-10"
+        },
+        {
+          "text": "Télécharger la fiche technique PDF↓",
+          "href": "/_emdash/api/media/file/01M3N0R46KXBRBX727SVWB1FE8.pdf"
+        },
+        {
+          "text": "Voir la fiche Cattelan Italia↗",
+          "href": "https://www.cattelanitalia.com/fr/products/41ED48AE-E379-4863-8E3C-28EE1D985390"
+        },
+        {
+          "text": "Contacter le showroom",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Recevoir le catalogue↗",
+          "href": "/catalogue/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/modeles/greta/",
+      "status": 200,
+      "clickDepth": 2,
+      "title": "Greta : chaise rembourrée | Cattelan Italia Maroc",
+      "description": [
+        "Chaise Greta : assise et dossier séparés, appui arrière dédoublé et acier laqué. Consultez les dimensions, revêtements fixes et plans."
+      ],
+      "canonical": [
+        "http://localhost:4321/modeles/greta/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Greta"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3N0R4HG3FRCACJNQJ5J1EEA.jpg"
+      ],
+      "htmlBytes": 198964,
+      "domNodes": 2180,
+      "images": {
+        "count": 383,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 8,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "Collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "Les chaises et tabourets Cattelan Italia",
+          "href": "/collections/chaises-tabourets/"
+        },
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "01",
+          "href": "#model-view-1"
+        },
+        {
+          "text": "02",
+          "href": "#model-view-2"
+        },
+        {
+          "text": "03",
+          "href": "#model-view-3"
+        },
+        {
+          "text": "04",
+          "href": "#model-view-4"
+        },
+        {
+          "text": "05",
+          "href": "#model-view-5"
+        },
+        {
+          "text": "06",
+          "href": "#model-view-6"
+        },
+        {
+          "text": "07",
+          "href": "#model-view-7"
+        },
+        {
+          "text": "08",
+          "href": "#model-view-8"
+        },
+        {
+          "text": "Télécharger la fiche technique PDF↓",
+          "href": "/_emdash/api/media/file/01M3N0TMRNE4BKJXSS00NAW9VM.pdf"
+        },
+        {
+          "text": "Voir la fiche Cattelan Italia↗",
+          "href": "https://www.cattelanitalia.com/fr/products/A73FA6B3-0BA9-4F13-ADB6-FBAFC6E39BBF"
+        },
+        {
+          "text": "Contacter le showroom",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Recevoir le catalogue↗",
+          "href": "/catalogue/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/modeles/ruby/",
+      "status": 200,
+      "clickDepth": 2,
+      "title": "Ruby : canapé et fauteuil en frêne | Cattelan Italia Maroc",
+      "description": [
+        "Ruby S200 et AC80 : canapé de 200 cm et fauteuil de 81 cm, cadre en frêne teinté, tissu ou cuir. Comparez dimensions, finitions et fiche technique."
+      ],
+      "canonical": [
+        "http://localhost:4321/modeles/ruby/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Ruby"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3N0TNB1QCCSM77BP29PD2HA.jpg"
+      ],
+      "htmlBytes": 177661,
+      "domNodes": 1758,
+      "images": {
+        "count": 301,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 5,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "Collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "Les canapés et fauteuils Cattelan Italia",
+          "href": "/collections/canapes-fauteuils/"
+        },
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "01",
+          "href": "#model-view-1"
+        },
+        {
+          "text": "02",
+          "href": "#model-view-2"
+        },
+        {
+          "text": "03",
+          "href": "#model-view-3"
+        },
+        {
+          "text": "04",
+          "href": "#model-view-4"
+        },
+        {
+          "text": "05",
+          "href": "#model-view-5"
+        },
+        {
+          "text": "Télécharger la fiche technique PDF↓",
+          "href": "/_emdash/api/media/file/01M3N0TT078330VBD3GF0KGJ1N.pdf"
+        },
+        {
+          "text": "Voir la fiche Cattelan Italia↗",
+          "href": "https://www.cattelanitalia.com/fr/products/75C6DB4B-1A99-400D-AEE7-9D5797651F05"
+        },
+        {
+          "text": "Contacter le showroom",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Recevoir le catalogue↗",
+          "href": "/catalogue/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/modeles/ruby-lounge/",
+      "status": 200,
+      "clickDepth": 2,
+      "title": "Ruby Lounge : fauteuil en frêne | Cattelan Italia Maroc",
+      "description": [
+        "Ruby Lounge : fauteuil de 81 × 92 × 76 cm en frêne teinté, tissu, micro nubuck ou cuir mince. Consultez les finitions et la fiche technique."
+      ],
+      "canonical": [
+        "http://localhost:4321/modeles/ruby-lounge/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Ruby Lounge"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3N0TTEFXS72R4K2MKE5ZAZV.jpg"
+      ],
+      "htmlBytes": 196477,
+      "domNodes": 2105,
+      "images": {
+        "count": 374,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 14,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "Collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "Les canapés et fauteuils Cattelan Italia",
+          "href": "/collections/canapes-fauteuils/"
+        },
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "01",
+          "href": "#model-view-1"
+        },
+        {
+          "text": "02",
+          "href": "#model-view-2"
+        },
+        {
+          "text": "03",
+          "href": "#model-view-3"
+        },
+        {
+          "text": "04",
+          "href": "#model-view-4"
+        },
+        {
+          "text": "05",
+          "href": "#model-view-5"
+        },
+        {
+          "text": "06",
+          "href": "#model-view-6"
+        },
+        {
+          "text": "07",
+          "href": "#model-view-7"
+        },
+        {
+          "text": "08",
+          "href": "#model-view-8"
+        },
+        {
+          "text": "09",
+          "href": "#model-view-9"
+        },
+        {
+          "text": "10",
+          "href": "#model-view-10"
+        },
+        {
+          "text": "11",
+          "href": "#model-view-11"
+        },
+        {
+          "text": "12",
+          "href": "#model-view-12"
+        },
+        {
+          "text": "13",
+          "href": "#model-view-13"
+        },
+        {
+          "text": "14",
+          "href": "#model-view-14"
+        },
+        {
+          "text": "Télécharger la fiche technique PDF↓",
+          "href": "/_emdash/api/media/file/01M3N14R26E9VV3804PK5FJWK4.pdf"
+        },
+        {
+          "text": "Voir la fiche Cattelan Italia↗",
+          "href": "https://www.cattelanitalia.com/fr/products/3BFE3570-1D83-4026-A81F-F0913AEE75BD"
+        },
+        {
+          "text": "Contacter le showroom",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Recevoir le catalogue↗",
+          "href": "/catalogue/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/modeles/chelsea/",
+      "status": 200,
+      "clickDepth": 2,
+      "title": "Chelsea : buffet laqué | Cattelan Italia Maroc",
+      "description": [
+        "Buffet Chelsea : bois laqué, tablettes en verre et dessus miroir bronze ou céramique. Comparez huit formats, dont les versions sur piètement."
+      ],
+      "canonical": [
+        "http://localhost:4321/modeles/chelsea/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Chelsea"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3N14RGBAM7ZCQTRBQ1XKXZX.jpg"
+      ],
+      "htmlBytes": 115629,
+      "domNodes": 421,
+      "images": {
+        "count": 53,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 16,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "Collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "Les buffets et bibliothèques Cattelan Italia",
+          "href": "/collections/buffets-bibliotheques/"
+        },
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "01",
+          "href": "#model-view-1"
+        },
+        {
+          "text": "02",
+          "href": "#model-view-2"
+        },
+        {
+          "text": "03",
+          "href": "#model-view-3"
+        },
+        {
+          "text": "04",
+          "href": "#model-view-4"
+        },
+        {
+          "text": "05",
+          "href": "#model-view-5"
+        },
+        {
+          "text": "06",
+          "href": "#model-view-6"
+        },
+        {
+          "text": "07",
+          "href": "#model-view-7"
+        },
+        {
+          "text": "08",
+          "href": "#model-view-8"
+        },
+        {
+          "text": "09",
+          "href": "#model-view-9"
+        },
+        {
+          "text": "10",
+          "href": "#model-view-10"
+        },
+        {
+          "text": "11",
+          "href": "#model-view-11"
+        },
+        {
+          "text": "12",
+          "href": "#model-view-12"
+        },
+        {
+          "text": "13",
+          "href": "#model-view-13"
+        },
+        {
+          "text": "14",
+          "href": "#model-view-14"
+        },
+        {
+          "text": "15",
+          "href": "#model-view-15"
+        },
+        {
+          "text": "16",
+          "href": "#model-view-16"
+        },
+        {
+          "text": "Télécharger la fiche technique PDF↓",
+          "href": "/_emdash/api/media/file/01M3N155SBYWKD1C2FDYCNM41D.pdf"
+        },
+        {
+          "text": "Voir la fiche Cattelan Italia↗",
+          "href": "https://www.cattelanitalia.com/fr/products/B7E158FA-BF2D-484D-9F9A-0C3D14138E8E"
+        },
+        {
+          "text": "Contacter le showroom",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Recevoir le catalogue↗",
+          "href": "/catalogue/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/modeles/airport/",
+      "status": 200,
+      "clickDepth": 2,
+      "title": "Airport : bibliothèque modulaire | Cattelan Italia Maroc",
+      "description": [
+        "Airport : bibliothèque fixée au mur ou au plafond, étagères, caissons Box et module Desk. Dimensions des composants et finitions acier et bois."
+      ],
+      "canonical": [
+        "http://localhost:4321/modeles/airport/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Airport"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3N1566KMDJQXX0NB7PCJV4W.jpg"
+      ],
+      "htmlBytes": 118276,
+      "domNodes": 462,
+      "images": {
+        "count": 64,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 19,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "Collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "Les buffets et bibliothèques Cattelan Italia",
+          "href": "/collections/buffets-bibliotheques/"
+        },
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "01",
+          "href": "#model-view-1"
+        },
+        {
+          "text": "02",
+          "href": "#model-view-2"
+        },
+        {
+          "text": "03",
+          "href": "#model-view-3"
+        },
+        {
+          "text": "04",
+          "href": "#model-view-4"
+        },
+        {
+          "text": "05",
+          "href": "#model-view-5"
+        },
+        {
+          "text": "06",
+          "href": "#model-view-6"
+        },
+        {
+          "text": "07",
+          "href": "#model-view-7"
+        },
+        {
+          "text": "08",
+          "href": "#model-view-8"
+        },
+        {
+          "text": "09",
+          "href": "#model-view-9"
+        },
+        {
+          "text": "10",
+          "href": "#model-view-10"
+        },
+        {
+          "text": "11",
+          "href": "#model-view-11"
+        },
+        {
+          "text": "12",
+          "href": "#model-view-12"
+        },
+        {
+          "text": "13",
+          "href": "#model-view-13"
+        },
+        {
+          "text": "14",
+          "href": "#model-view-14"
+        },
+        {
+          "text": "15",
+          "href": "#model-view-15"
+        },
+        {
+          "text": "16",
+          "href": "#model-view-16"
+        },
+        {
+          "text": "17",
+          "href": "#model-view-17"
+        },
+        {
+          "text": "18",
+          "href": "#model-view-18"
+        },
+        {
+          "text": "19",
+          "href": "#model-view-19"
+        },
+        {
+          "text": "Télécharger la fiche technique PDF↓",
+          "href": "/_emdash/api/media/file/01M3N15MMRZ5N89E7FTG86RX5Z.pdf"
+        },
+        {
+          "text": "Voir la fiche Cattelan Italia↗",
+          "href": "https://www.cattelanitalia.com/fr/products/0BD758C3-F539-4263-BA05-CEB859A760A4"
+        },
+        {
+          "text": "Contacter le showroom",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Recevoir le catalogue↗",
+          "href": "/catalogue/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/modeles/bloom/",
+      "status": 200,
+      "clickDepth": 2,
+      "title": "Bloom : suspension et lampadaire | Cattelan Italia Maroc",
+      "description": [
+        "Bloom : luminaire en métal et verre borosilicate, en suspension ou sur pied. Formats, plans et options de variation lumineuse selon la version."
+      ],
+      "canonical": [
+        "http://localhost:4321/modeles/bloom/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Bloom"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3N15MYH80ZZVPYR565CZ237.jpg"
+      ],
+      "htmlBytes": 109993,
+      "domNodes": 334,
+      "images": {
+        "count": 35,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 11,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "Collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "Les luminaires Cattelan Italia",
+          "href": "/collections/luminaires/"
+        },
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "01",
+          "href": "#model-view-1"
+        },
+        {
+          "text": "02",
+          "href": "#model-view-2"
+        },
+        {
+          "text": "03",
+          "href": "#model-view-3"
+        },
+        {
+          "text": "04",
+          "href": "#model-view-4"
+        },
+        {
+          "text": "05",
+          "href": "#model-view-5"
+        },
+        {
+          "text": "06",
+          "href": "#model-view-6"
+        },
+        {
+          "text": "07",
+          "href": "#model-view-7"
+        },
+        {
+          "text": "08",
+          "href": "#model-view-8"
+        },
+        {
+          "text": "09",
+          "href": "#model-view-9"
+        },
+        {
+          "text": "10",
+          "href": "#model-view-10"
+        },
+        {
+          "text": "11",
+          "href": "#model-view-11"
+        },
+        {
+          "text": "Télécharger la fiche technique PDF↓",
+          "href": "/_emdash/api/media/file/01M3N15TVGRQ2Q50MYDC6PS2A0.pdf"
+        },
+        {
+          "text": "Voir la fiche Cattelan Italia↗",
+          "href": "https://www.cattelanitalia.com/fr/products/D19C292D-87C6-429C-845C-AB448E928B3A"
+        },
+        {
+          "text": "Contacter le showroom",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Recevoir le catalogue↗",
+          "href": "/catalogue/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/modeles/napoleon-keramik-outdoor/",
+      "status": 200,
+      "clickDepth": 2,
+      "title": "Napoleon Keramik Outdoor | Cattelan Italia Maroc",
+      "description": [
+        "Table Napoleon Keramik Outdoor en céramique Marmi : formats, plans et finitions. Usage réservé aux extérieurs couverts, protégés des intempéries."
+      ],
+      "canonical": [
+        "http://localhost:4321/modeles/napoleon-keramik-outdoor/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Napoleon Keramik Outdoor"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3N15V3MRE396BA1W6SW1F3V.jpg"
+      ],
+      "htmlBytes": 110948,
+      "domNodes": 345,
+      "images": {
+        "count": 32,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 5,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "Collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "Le mobilier extérieur Cattelan Italia",
+          "href": "/collections/mobilier-exterieur/"
+        },
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "01",
+          "href": "#model-view-1"
+        },
+        {
+          "text": "02",
+          "href": "#model-view-2"
+        },
+        {
+          "text": "03",
+          "href": "#model-view-3"
+        },
+        {
+          "text": "04",
+          "href": "#model-view-4"
+        },
+        {
+          "text": "05",
+          "href": "#model-view-5"
+        },
+        {
+          "text": "Télécharger la fiche technique PDF↓",
+          "href": "/_emdash/api/media/file/01M3N160C3EK8X5G0P8SZKX526.pdf"
+        },
+        {
+          "text": "Voir la fiche Cattelan Italia↗",
+          "href": "https://www.cattelanitalia.com/fr/products/0C0E3429-09CC-4873-917D-A92A63F45D60"
+        },
+        {
+          "text": "Contacter le showroom",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Recevoir le catalogue↗",
+          "href": "/catalogue/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/modeles/greta-outdoor/",
+      "status": 200,
+      "clickDepth": 2,
+      "title": "Greta Outdoor : chaise en inox 304 | Cattelan Italia Maroc",
+      "description": [
+        "Greta Outdoor : chaise en inox 304 et tissu non déhoussable. Dimensions et finitions pour un extérieur couvert, protégé des intempéries."
+      ],
+      "canonical": [
+        "http://localhost:4321/modeles/greta-outdoor/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Greta Outdoor"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3N160M6EJN6HHX9XV1PB39S.jpg"
+      ],
+      "htmlBytes": 110105,
+      "domNodes": 368,
+      "images": {
+        "count": 37,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 3,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "Collections",
+          "href": "/collections/"
+        },
+        {
+          "text": "Le mobilier extérieur Cattelan Italia",
+          "href": "/collections/mobilier-exterieur/"
+        },
+        {
+          "text": "Contacter le showroom↗",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "01",
+          "href": "#model-view-1"
+        },
+        {
+          "text": "02",
+          "href": "#model-view-2"
+        },
+        {
+          "text": "03",
+          "href": "#model-view-3"
+        },
+        {
+          "text": "Télécharger la fiche technique PDF↓",
+          "href": "/_emdash/api/media/file/01M3N169EGSDQ5CSKW40DZ9Z8M.pdf"
+        },
+        {
+          "text": "Voir la fiche Cattelan Italia↗",
+          "href": "https://www.cattelanitalia.com/fr/products/92839EB8-BAD8-4D0F-B0C6-C02BF107C361"
+        },
+        {
+          "text": "Contacter le showroom",
+          "href": "/showroom-casablanca/"
+        },
+        {
+          "text": "Recevoir le catalogue↗",
+          "href": "/catalogue/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/journal/choisir-forme-proportions-table-salle-a-manger/",
+      "status": 200,
+      "clickDepth": 1,
+      "title": "Choisir sa table de salle à manger | Cattelan Italia Maroc",
+      "description": [
+        "Table ronde ou rectangulaire : apprenez à comparer les formes, les proportions et les piètements pour composer une salle à manger adaptée à votre intérieur."
+      ],
+      "canonical": [
+        "http://localhost:4321/journal/choisir-forme-proportions-table-salle-a-manger/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Comment choisir la forme et les proportions de sa table de salle à manger ?"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Choisir sa table de salle à manger | Cattelan Italia Maroc",
+          "description": "Table ronde ou rectangulaire : apprenez à comparer les formes, les proportions et les piètements pour composer une salle à manger adaptée à votre intérieur.",
+          "image": "/_emdash/api/media/file/01M3J7S7V20J6066NN2V02NJ2D.jpg",
+          "url": "http://localhost:4321/journal/choisir-forme-proportions-table-salle-a-manger/",
+          "datePublished": "2026-09-27T20:09:27.713Z",
+          "dateModified": "2026-09-27T20:09:27.768Z",
+          "author": {
+            "@type": "Person",
+            "name": "Cattelan Italia Maroc"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Cattelan Italia Maroc"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http://localhost:4321/journal/choisir-forme-proportions-table-salle-a-manger/"
+          }
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3J7S7V20J6066NN2V02NJ2D.jpg"
+      ],
+      "htmlBytes": 103509,
+      "domNodes": 186,
+      "images": {
+        "count": 5,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 0,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "← Journal",
+          "href": "/journal/"
+        },
+        {
+          "text": "Cattelan Italia — Skorpio, présentation et fiche technique ↗",
+          "href": "https://cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8"
+        },
+        {
+          "text": "Recevoir le catalogue↗",
+          "href": "/catalogue/"
+        },
+        {
+          "text": "Journal↗",
+          "href": "/journal/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/journal/associer-table-chaises-salle-a-manger/",
+      "status": 200,
+      "clickDepth": 1,
+      "title": "Associer table et chaises | Cattelan Italia Maroc",
+      "description": [
+        "Formes, couleurs, matières et proportions : découvrez comment associer une table et des chaises pour créer une salle à manger cohérente et personnelle."
+      ],
+      "canonical": [
+        "http://localhost:4321/journal/associer-table-chaises-salle-a-manger/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Comment associer une table et des chaises sans tout assortir ?"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Associer table et chaises | Cattelan Italia Maroc",
+          "description": "Formes, couleurs, matières et proportions : découvrez comment associer une table et des chaises pour créer une salle à manger cohérente et personnelle.",
+          "image": "/_emdash/api/media/file/01M3J7S8CJN0T60HD07KBYAYGY.jpg",
+          "url": "http://localhost:4321/journal/associer-table-chaises-salle-a-manger/",
+          "datePublished": "2026-09-27T20:09:28.235Z",
+          "dateModified": "2026-09-27T20:09:28.286Z",
+          "author": {
+            "@type": "Person",
+            "name": "Cattelan Italia Maroc"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Cattelan Italia Maroc"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http://localhost:4321/journal/associer-table-chaises-salle-a-manger/"
+          }
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3J7S8CJN0T60HD07KBYAYGY.jpg"
+      ],
+      "htmlBytes": 103322,
+      "domNodes": 186,
+      "images": {
+        "count": 5,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 0,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "← Journal",
+          "href": "/journal/"
+        },
+        {
+          "text": "Cattelan Italia — Rhonda, présentation et fiche technique ↗",
+          "href": "https://cattelanitalia.com/fr/products/41ED48AE-E379-4863-8E3C-28EE1D985390"
+        },
+        {
+          "text": "Recevoir le catalogue↗",
+          "href": "/catalogue/"
+        },
+        {
+          "text": "Journal↗",
+          "href": "/journal/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/journal/ceramique-verre-bois-choisir-finition-meuble/",
+      "status": 200,
+      "clickDepth": 1,
+      "title": "Céramique, verre ou bois | Cattelan Italia Maroc",
+      "description": [
+        "Comparez le dessin, la teinte et les effets de matière pour choisir une finition de meuble en accord avec votre intérieur et votre usage."
+      ],
+      "canonical": [
+        "http://localhost:4321/journal/ceramique-verre-bois-choisir-finition-meuble/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Céramique, verre ou bois : comment choisir la finition d’un meuble ?"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Céramique, verre ou bois | Cattelan Italia Maroc",
+          "description": "Comparez le dessin, la teinte et les effets de matière pour choisir une finition de meuble en accord avec votre intérieur et votre usage.",
+          "image": "/_emdash/api/media/file/01M3J7S8HXHVQ6KVR4ZXGX4JER.jpg",
+          "url": "http://localhost:4321/journal/ceramique-verre-bois-choisir-finition-meuble/",
+          "datePublished": "2026-09-27T20:09:28.394Z",
+          "dateModified": "2026-09-27T20:09:28.450Z",
+          "author": {
+            "@type": "Person",
+            "name": "Cattelan Italia Maroc"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Cattelan Italia Maroc"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http://localhost:4321/journal/ceramique-verre-bois-choisir-finition-meuble/"
+          }
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3J7S8HXHVQ6KVR4ZXGX4JER.jpg"
+      ],
+      "htmlBytes": 103175,
+      "domNodes": 188,
+      "images": {
+        "count": 5,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 0,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "← Journal",
+          "href": "/journal/"
+        },
+        {
+          "text": "Cattelan Italia — Skorpio ↗",
+          "href": "https://cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8"
+        },
+        {
+          "text": "Cattelan Italia — Catalogues et brochures de finitions ↗",
+          "href": "https://cattelanitalia.com/fr/catalogues"
+        },
+        {
+          "text": "Recevoir le catalogue↗",
+          "href": "/catalogue/"
+        },
+        {
+          "text": "Journal↗",
+          "href": "/journal/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/journal/composer-salon-canape-fauteuil/",
+      "status": 200,
+      "clickDepth": 1,
+      "title": "Associer canapé et fauteuil | Cattelan Italia Maroc",
+      "description": [
+        "Disposition, proportions et matières : quelques repères pour associer un canapé et un fauteuil et composer un salon adapté à votre quotidien."
+      ],
+      "canonical": [
+        "http://localhost:4321/journal/composer-salon-canape-fauteuil/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Composer un salon avec un canapé et un fauteuil"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Associer canapé et fauteuil | Cattelan Italia Maroc",
+          "description": "Disposition, proportions et matières : quelques repères pour associer un canapé et un fauteuil et composer un salon adapté à votre quotidien.",
+          "image": "/_emdash/api/media/file/01M3J7S8QFQZPA168CRY7REBND.jpg",
+          "url": "http://localhost:4321/journal/composer-salon-canape-fauteuil/",
+          "datePublished": "2026-09-27T20:09:28.573Z",
+          "dateModified": "2026-09-27T20:09:28.634Z",
+          "author": {
+            "@type": "Person",
+            "name": "Cattelan Italia Maroc"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Cattelan Italia Maroc"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http://localhost:4321/journal/composer-salon-canape-fauteuil/"
+          }
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3J7S8QFQZPA168CRY7REBND.jpg"
+      ],
+      "htmlBytes": 103198,
+      "domNodes": 187,
+      "images": {
+        "count": 5,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 0,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "← Journal",
+          "href": "/journal/"
+        },
+        {
+          "text": "Cattelan Italia — Ruby, présentation officielle et fiche technique ↗",
+          "href": "https://cattelanitalia.com/en/products/75C6DB4B-1A99-400D-AEE7-9D5797651F05?c=5"
+        },
+        {
+          "text": "Explorer les canapés et fauteuils↗",
+          "href": "/collections/canapes-fauteuils/"
+        },
+        {
+          "text": "Journal↗",
+          "href": "/journal/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/journal/choisir-buffet-bibliotheque-salon/",
+      "status": 200,
+      "clickDepth": 1,
+      "title": "Buffet ou bibliothèque pour le salon ? | Cattelan Italia Maroc",
+      "description": [
+        "Rangement fermé ou étagères ouvertes : choisissez un buffet ou une bibliothèque selon vos objets, vos habitudes et la place disponible dans le salon."
+      ],
+      "canonical": [
+        "http://localhost:4321/journal/choisir-buffet-bibliotheque-salon/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Buffet ou bibliothèque : quel rangement choisir pour le salon ?"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "Buffet ou bibliothèque pour le salon ? | Cattelan Italia Maroc",
+          "description": "Rangement fermé ou étagères ouvertes : choisissez un buffet ou une bibliothèque selon vos objets, vos habitudes et la place disponible dans le salon.",
+          "image": "/_emdash/api/media/file/01M3J7S92P6YZP9ZXGQEM8VSQF.jpg",
+          "url": "http://localhost:4321/journal/choisir-buffet-bibliotheque-salon/",
+          "datePublished": "2026-09-27T20:09:28.933Z",
+          "dateModified": "2026-09-27T20:09:28.979Z",
+          "author": {
+            "@type": "Person",
+            "name": "Cattelan Italia Maroc"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Cattelan Italia Maroc"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http://localhost:4321/journal/choisir-buffet-bibliotheque-salon/"
+          }
+        }
+      ],
+      "ogImage": [
+        "/_emdash/api/media/file/01M3J7S92P6YZP9ZXGQEM8VSQF.jpg"
+      ],
+      "htmlBytes": 103692,
+      "domNodes": 190,
+      "images": {
+        "count": 5,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 0,
+        "missingDimensions": 0
+      },
+      "mainLinks": [
+        {
+          "text": "← Journal",
+          "href": "/journal/"
+        },
+        {
+          "text": "Cattelan Italia — Chelsea, présentation officielle et fiche technique ↗",
+          "href": "https://cattelanitalia.com/fr/products/B7E158FA-BF2D-484D-9F9A-0C3D14138E8E"
+        },
+        {
+          "text": "Cattelan Italia — Airport, présentation officielle et fiche technique ↗",
+          "href": "https://www.cattelanitalia.com/fr/products/0BD758C3-F539-4263-BA05-CEB859A760A4"
+        },
+        {
+          "text": "Découvrir les buffets et bibliothèques↗",
+          "href": "/collections/buffets-bibliotheques/"
+        },
+        {
+          "text": "Journal↗",
+          "href": "/journal/"
+        }
+      ],
+      "contactLinks": []
+    },
+    {
+      "path": "/confidentialite/",
+      "status": 200,
+      "clickDepth": 1,
+      "title": "Confidentialité de la prévisualisation",
+      "description": [],
+      "canonical": [
+        "http://localhost:4321/confidentialite/"
+      ],
+      "robots": [
+        "noindex, nofollow"
+      ],
+      "headers": {
+        "robots": "noindex, nofollow",
+        "cacheControl": "no-store"
+      },
+      "lang": "fr",
+      "h1": [
+        "Confidentialité"
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Cattelan Italia Maroc",
+          "url": "http://localhost:4321"
+        }
+      ],
+      "ogImage": [],
+      "htmlBytes": 96723,
+      "domNodes": 144,
+      "images": {
+        "count": 4,
+        "srcset": 0,
+        "missingAlt": 0,
+        "emptyAlt": 0,
+        "missingDimensions": 0
+      },
+      "mainLinks": [],
+      "contactLinks": []
+    }
+  ],
+  "variants": [
+    {
+      "path": "/home/",
+      "status": 301,
+      "location": "/",
+      "robots": null,
+      "canonical": null
+    },
+    {
+      "path": "/home",
+      "status": 301,
+      "location": "/",
+      "robots": null,
+      "canonical": null
+    },
+    {
+      "path": "/collections",
+      "status": 200,
+      "location": null,
+      "robots": "noindex, nofollow",
+      "canonical": "http://localhost:4321/collections"
+    },
+    {
+      "path": "/modeles/skorpio",
+      "status": 200,
+      "location": null,
+      "robots": "noindex, nofollow",
+      "canonical": "http://localhost:4321/modeles/skorpio"
+    },
+    {
+      "path": "/collections/?view=desktop",
+      "status": 200,
+      "location": null,
+      "robots": "noindex, nofollow",
+      "canonical": "http://localhost:4321/collections/"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "location": null,
+      "robots": null,
+      "canonical": null,
+      "body": "User-agent: *\nDisallow: /\n"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "location": null,
+      "robots": "noindex",
+      "canonical": null,
+      "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\"></urlset>"
+    },
+    {
+      "path": "/seo-audit-page-that-does-not-exist/",
+      "status": 404,
+      "location": null,
+      "robots": "noindex, nofollow",
+      "canonical": "http://localhost:4321/seo-audit-page-that-does-not-exist/"
+    }
+  ],
+  "mobile": {
+    "conditions": "Chromium, 390x844 CSS pixels, DPR 3, light theme, fresh browser context per page, localhost Astro development server. No CPU/network throttling or scrolling. Resources captured 1.5 seconds after load and fonts. Development JS is not representative of production; these observations are not field Core Web Vitals or a Lighthouse score.",
+    "capturedAt": "2026-09-29T00:19:43.757Z",
+    "results": [
+      {
+        "path": "/",
+        "status": 200,
+        "width": 390,
+        "scrollWidth": 390,
+        "theme": "light",
+        "visibleH1": [
+          "Vivre italien, à Casablanca"
+        ],
+        "errors": [],
+        "writes": [],
+        "imageRequests": 7,
+        "imageEncodedBytes": 1272044
+      },
+      {
+        "path": "/showroom-casablanca/",
+        "status": 200,
+        "width": 390,
+        "scrollWidth": 390,
+        "theme": "light",
+        "visibleH1": [
+          "Le showroom Cattelan Italia à Casablanca"
+        ],
+        "errors": [],
+        "writes": [],
+        "imageRequests": 3,
+        "imageEncodedBytes": 172099
+      },
+      {
+        "path": "/modeles/greta/",
+        "status": 200,
+        "width": 390,
+        "scrollWidth": 390,
+        "theme": "light",
+        "visibleH1": [
+          "Greta"
+        ],
+        "errors": [],
+        "writes": [],
+        "imageRequests": 10,
+        "imageEncodedBytes": 2558937
+      },
+      {
+        "path": "/journal/associer-table-chaises-salle-a-manger/",
+        "status": 200,
+        "width": 390,
+        "scrollWidth": 390,
+        "theme": "light",
+        "visibleH1": [
+          "Comment associer une table et des chaises sans tout assortir ?"
+        ],
+        "errors": [],
+        "writes": [],
+        "imageRequests": 3,
+        "imageEncodedBytes": 449765
+      }
+    ]
+  },
+  "destinationChecks": {
+    "capturedAt": "2026-09-29T00:21:06.118Z",
+    "method": "Anonymous HEAD requests, concurrency 2. Public PDF response headers only; private catalogue not requested. External non-200 HEAD results rechecked with GET because the official website handles HEAD differently.",
+    "results": [
+      {
+        "url": "http://localhost:4321/_emdash/api/media/file/01M3N0PHJDAXJN67XP1NKNW321.pdf",
+        "status": 200,
+        "finalUrl": "http://localhost:4321/_emdash/api/media/file/01M3N0PHJDAXJN67XP1NKNW321.pdf",
+        "type": "application/pdf"
+      },
+      {
+        "url": "https://www.cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8",
+        "status": 404,
+        "finalUrl": "https://www.cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8",
+        "type": "application/json; charset=UTF-8",
+        "get": {
+          "status": 200,
+          "finalUrl": "https://www.cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8",
+          "type": "text/html; charset=UTF-8",
+          "title": "skorpio | tables | Cattelan Italia",
+          "h1": "SKORPIO"
+        }
+      },
+      {
+        "url": "http://localhost:4321/_emdash/api/media/file/01M3N0Q1H3Q9RHNDVR1GZKG89J.pdf",
+        "status": 200,
+        "finalUrl": "http://localhost:4321/_emdash/api/media/file/01M3N0Q1H3Q9RHNDVR1GZKG89J.pdf",
+        "type": "application/pdf"
+      },
+      {
+        "url": "https://www.cattelanitalia.com/fr/products/DD24EC9D-FA00-4C0D-A989-9ADD6E56BFD0",
+        "status": 404,
+        "finalUrl": "https://www.cattelanitalia.com/fr/products/DD24EC9D-FA00-4C0D-A989-9ADD6E56BFD0",
+        "type": "application/json; charset=UTF-8",
+        "get": {
+          "status": 200,
+          "finalUrl": "https://www.cattelanitalia.com/fr/products/DD24EC9D-FA00-4C0D-A989-9ADD6E56BFD0",
+          "type": "text/html; charset=UTF-8",
+          "title": "napoleon keramik | tables | Cattelan Italia",
+          "h1": "NAPOLEON Keramik"
+        }
+      },
+      {
+        "url": "http://localhost:4321/_emdash/api/media/file/01M3N0R46KXBRBX727SVWB1FE8.pdf",
+        "status": 200,
+        "finalUrl": "http://localhost:4321/_emdash/api/media/file/01M3N0R46KXBRBX727SVWB1FE8.pdf",
+        "type": "application/pdf"
+      },
+      {
+        "url": "https://www.cattelanitalia.com/fr/products/41ED48AE-E379-4863-8E3C-28EE1D985390",
+        "status": 404,
+        "finalUrl": "https://www.cattelanitalia.com/fr/products/41ED48AE-E379-4863-8E3C-28EE1D985390",
+        "type": "application/json; charset=UTF-8",
+        "get": {
+          "status": 200,
+          "finalUrl": "https://www.cattelanitalia.com/fr/products/41ED48AE-E379-4863-8E3C-28EE1D985390",
+          "type": "text/html; charset=UTF-8",
+          "title": "rhonda | tables basses | Cattelan Italia",
+          "h1": "RHONDA"
+        }
+      },
+      {
+        "url": "http://localhost:4321/_emdash/api/media/file/01M3N0TMRNE4BKJXSS00NAW9VM.pdf",
+        "status": 200,
+        "finalUrl": "http://localhost:4321/_emdash/api/media/file/01M3N0TMRNE4BKJXSS00NAW9VM.pdf",
+        "type": "application/pdf"
+      },
+      {
+        "url": "https://www.cattelanitalia.com/fr/products/A73FA6B3-0BA9-4F13-ADB6-FBAFC6E39BBF",
+        "status": 404,
+        "finalUrl": "https://www.cattelanitalia.com/fr/products/A73FA6B3-0BA9-4F13-ADB6-FBAFC6E39BBF",
+        "type": "application/json; charset=UTF-8",
+        "get": {
+          "status": 200,
+          "finalUrl": "https://www.cattelanitalia.com/fr/products/A73FA6B3-0BA9-4F13-ADB6-FBAFC6E39BBF",
+          "type": "text/html; charset=UTF-8",
+          "title": "greta | assises | Cattelan Italia",
+          "h1": "GRETA"
+        }
+      },
+      {
+        "url": "http://localhost:4321/_emdash/api/media/file/01M3N0TT078330VBD3GF0KGJ1N.pdf",
+        "status": 200,
+        "finalUrl": "http://localhost:4321/_emdash/api/media/file/01M3N0TT078330VBD3GF0KGJ1N.pdf",
+        "type": "application/pdf"
+      },
+      {
+        "url": "https://www.cattelanitalia.com/fr/products/75C6DB4B-1A99-400D-AEE7-9D5797651F05",
+        "status": 404,
+        "finalUrl": "https://www.cattelanitalia.com/fr/products/75C6DB4B-1A99-400D-AEE7-9D5797651F05",
+        "type": "application/json; charset=UTF-8",
+        "get": {
+          "status": 200,
+          "finalUrl": "https://www.cattelanitalia.com/fr/products/75C6DB4B-1A99-400D-AEE7-9D5797651F05",
+          "type": "text/html; charset=UTF-8",
+          "title": "ruby | canapés - fouteuils | Cattelan Italia",
+          "h1": "RUBY"
+        }
+      },
+      {
+        "url": "http://localhost:4321/_emdash/api/media/file/01M3N14R26E9VV3804PK5FJWK4.pdf",
+        "status": 200,
+        "finalUrl": "http://localhost:4321/_emdash/api/media/file/01M3N14R26E9VV3804PK5FJWK4.pdf",
+        "type": "application/pdf"
+      },
+      {
+        "url": "https://www.cattelanitalia.com/fr/products/3BFE3570-1D83-4026-A81F-F0913AEE75BD",
+        "status": 404,
+        "finalUrl": "https://www.cattelanitalia.com/fr/products/3BFE3570-1D83-4026-A81F-F0913AEE75BD",
+        "type": "application/json; charset=UTF-8",
+        "get": {
+          "status": 200,
+          "finalUrl": "https://www.cattelanitalia.com/fr/products/3BFE3570-1D83-4026-A81F-F0913AEE75BD",
+          "type": "text/html; charset=UTF-8",
+          "title": "ruby lounge | assises | Cattelan Italia",
+          "h1": "RUBY Lounge"
+        }
+      },
+      {
+        "url": "http://localhost:4321/_emdash/api/media/file/01M3N155SBYWKD1C2FDYCNM41D.pdf",
+        "status": 200,
+        "finalUrl": "http://localhost:4321/_emdash/api/media/file/01M3N155SBYWKD1C2FDYCNM41D.pdf",
+        "type": "application/pdf"
+      },
+      {
+        "url": "https://www.cattelanitalia.com/fr/products/B7E158FA-BF2D-484D-9F9A-0C3D14138E8E",
+        "status": 404,
+        "finalUrl": "https://www.cattelanitalia.com/fr/products/B7E158FA-BF2D-484D-9F9A-0C3D14138E8E",
+        "type": "application/json; charset=UTF-8",
+        "get": {
+          "status": 200,
+          "finalUrl": "https://www.cattelanitalia.com/fr/products/B7E158FA-BF2D-484D-9F9A-0C3D14138E8E",
+          "type": "text/html; charset=UTF-8",
+          "title": "chelsea | assises chaise longue | Cattelan Italia",
+          "h1": "CHELSEA"
+        }
+      },
+      {
+        "url": "http://localhost:4321/_emdash/api/media/file/01M3N15MMRZ5N89E7FTG86RX5Z.pdf",
+        "status": 200,
+        "finalUrl": "http://localhost:4321/_emdash/api/media/file/01M3N15MMRZ5N89E7FTG86RX5Z.pdf",
+        "type": "application/pdf"
+      },
+      {
+        "url": "https://www.cattelanitalia.com/fr/products/0BD758C3-F539-4263-BA05-CEB859A760A4",
+        "status": 404,
+        "finalUrl": "https://www.cattelanitalia.com/fr/products/0BD758C3-F539-4263-BA05-CEB859A760A4",
+        "type": "application/json; charset=UTF-8",
+        "get": {
+          "status": 200,
+          "finalUrl": "https://www.cattelanitalia.com/fr/products/0BD758C3-F539-4263-BA05-CEB859A760A4",
+          "type": "text/html; charset=UTF-8",
+          "title": "airport | tables basses | Cattelan Italia",
+          "h1": "AIRPORT"
+        }
+      },
+      {
+        "url": "http://localhost:4321/_emdash/api/media/file/01M3N15TVGRQ2Q50MYDC6PS2A0.pdf",
+        "status": 200,
+        "finalUrl": "http://localhost:4321/_emdash/api/media/file/01M3N15TVGRQ2Q50MYDC6PS2A0.pdf",
+        "type": "application/pdf"
+      },
+      {
+        "url": "https://www.cattelanitalia.com/fr/products/D19C292D-87C6-429C-845C-AB448E928B3A",
+        "status": 404,
+        "finalUrl": "https://www.cattelanitalia.com/fr/products/D19C292D-87C6-429C-845C-AB448E928B3A",
+        "type": "application/json; charset=UTF-8",
+        "get": {
+          "status": 200,
+          "finalUrl": "https://www.cattelanitalia.com/fr/products/D19C292D-87C6-429C-845C-AB448E928B3A",
+          "type": "text/html; charset=UTF-8",
+          "title": "bloom | miroirs | Cattelan Italia",
+          "h1": "BLOOM"
+        }
+      },
+      {
+        "url": "http://localhost:4321/_emdash/api/media/file/01M3N160C3EK8X5G0P8SZKX526.pdf",
+        "status": 200,
+        "finalUrl": "http://localhost:4321/_emdash/api/media/file/01M3N160C3EK8X5G0P8SZKX526.pdf",
+        "type": "application/pdf"
+      },
+      {
+        "url": "https://www.cattelanitalia.com/fr/products/0C0E3429-09CC-4873-917D-A92A63F45D60",
+        "status": 404,
+        "finalUrl": "https://www.cattelanitalia.com/fr/products/0C0E3429-09CC-4873-917D-A92A63F45D60",
+        "type": "application/json; charset=UTF-8",
+        "get": {
+          "status": 200,
+          "finalUrl": "https://www.cattelanitalia.com/fr/products/0C0E3429-09CC-4873-917D-A92A63F45D60",
+          "type": "text/html; charset=UTF-8",
+          "title": "napoleon keramik outdoor | assises chaises lounge | Cattelan Italia",
+          "h1": "NAPOLEON Keramik Outdoor"
+        }
+      },
+      {
+        "url": "http://localhost:4321/_emdash/api/media/file/01M3N169EGSDQ5CSKW40DZ9Z8M.pdf",
+        "status": 200,
+        "finalUrl": "http://localhost:4321/_emdash/api/media/file/01M3N169EGSDQ5CSKW40DZ9Z8M.pdf",
+        "type": "application/pdf"
+      },
+      {
+        "url": "https://www.cattelanitalia.com/fr/products/92839EB8-BAD8-4D0F-B0C6-C02BF107C361",
+        "status": 404,
+        "finalUrl": "https://www.cattelanitalia.com/fr/products/92839EB8-BAD8-4D0F-B0C6-C02BF107C361",
+        "type": "application/json; charset=UTF-8",
+        "get": {
+          "status": 200,
+          "finalUrl": "https://www.cattelanitalia.com/fr/products/92839EB8-BAD8-4D0F-B0C6-C02BF107C361",
+          "type": "text/html; charset=UTF-8",
+          "title": "greta outdoor | consoles | Cattelan Italia",
+          "h1": "GRETA Outdoor"
+        }
+      },
+      {
+        "url": "https://cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8",
+        "status": 404,
+        "finalUrl": "https://cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8",
+        "type": "application/json; charset=UTF-8",
+        "get": {
+          "status": 200,
+          "finalUrl": "https://cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8",
+          "type": "text/html; charset=UTF-8",
+          "title": "skorpio | tables | Cattelan Italia",
+          "h1": "SKORPIO"
+        }
+      },
+      {
+        "url": "https://cattelanitalia.com/fr/products/41ED48AE-E379-4863-8E3C-28EE1D985390",
+        "status": 404,
+        "finalUrl": "https://cattelanitalia.com/fr/products/41ED48AE-E379-4863-8E3C-28EE1D985390",
+        "type": "application/json; charset=UTF-8",
+        "get": {
+          "status": 200,
+          "finalUrl": "https://cattelanitalia.com/fr/products/41ED48AE-E379-4863-8E3C-28EE1D985390",
+          "type": "text/html; charset=UTF-8",
+          "title": "rhonda | tables basses | Cattelan Italia",
+          "h1": "RHONDA"
+        }
+      },
+      {
+        "url": "https://cattelanitalia.com/fr/catalogues",
+        "status": 404,
+        "finalUrl": "https://cattelanitalia.com/fr/catalogues",
+        "type": "application/json; charset=UTF-8",
+        "get": {
+          "status": 503,
+          "finalUrl": "https://cattelanitalia.com/fr/catalogues",
+          "type": "text/plain"
+        },
+        "rechecks": [
+          {
+            "url": "https://cattelanitalia.com/fr/catalogues",
+            "status": 200,
+            "title": "CATALOGUES | Cattelan Italia"
+          },
+          {
+            "url": "https://www.cattelanitalia.com/fr/catalogues",
+            "status": 200,
+            "title": "CATALOGUES | Cattelan Italia"
+          }
+        ]
+      },
+      {
+        "url": "https://cattelanitalia.com/en/products/75C6DB4B-1A99-400D-AEE7-9D5797651F05?c=5",
+        "status": 404,
+        "finalUrl": "https://cattelanitalia.com/en/products/75C6DB4B-1A99-400D-AEE7-9D5797651F05?c=5",
+        "type": "application/json; charset=UTF-8",
+        "get": {
+          "status": 200,
+          "finalUrl": "https://cattelanitalia.com/en/products/75C6DB4B-1A99-400D-AEE7-9D5797651F05?c=5",
+          "type": "text/html; charset=UTF-8",
+          "title": "ruby | seating chairs | Cattelan Italia",
+          "h1": "RUBY"
+        }
+      },
+      {
+        "url": "https://cattelanitalia.com/fr/products/B7E158FA-BF2D-484D-9F9A-0C3D14138E8E",
+        "status": 404,
+        "finalUrl": "https://cattelanitalia.com/fr/products/B7E158FA-BF2D-484D-9F9A-0C3D14138E8E",
+        "type": "application/json; charset=UTF-8",
+        "get": {
+          "status": 200,
+          "finalUrl": "https://cattelanitalia.com/fr/products/B7E158FA-BF2D-484D-9F9A-0C3D14138E8E",
+          "type": "text/html; charset=UTF-8",
+          "title": "chelsea | assises chaise longue | Cattelan Italia",
+          "h1": "CHELSEA"
+        }
+      }
+    ]
+  }
+}
