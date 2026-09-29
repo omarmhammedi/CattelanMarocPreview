@@ -860,5 +860,17 @@
     "docs/screenshots/map-controls-2026-09-29/mobile-close-streets-light.jpg"
   ],
   "cmsWrites": 0,
-  "physicalIphone": false
+  "physicalIphone": false,
+  "astroCheck": {
+    "files": 84,
+    "errors": 0,
+    "warnings": 0,
+    "hints": 0
+  },
+  "productionBuild": {
+    "passed": true,
+    "existingWarnings": [
+      "Some chunks are larger than 500 kB after minification"
+    ]
+  }
 }

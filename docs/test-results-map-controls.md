@@ -26,6 +26,8 @@ Ce changement concerne le frontend. Aucune publication, migration de schéma, co
 
 Sur mobile, le cadrage large conserve les noms de quartiers ; un premier zoom avant révèle les noms de rues qui tiennent à l’écran. Les noms voisins restent lisibles au rapprochement testé. Le nombre et le choix des libellés varient selon le cadrage et l’espace libre. Le test distingue donc la vue d’ensemble de la vue rapprochée.
 
+La vérification Astro passe sur 84 fichiers, avec zéro erreur, avertissement ou indication. Le build de production réussit ; seul l’avertissement de taille de bundle déjà présent (plus de 500 Ko) subsiste.
+
 Les 69 tests unitaires réussissent, dont neuf contrôles de sélection des noms, collision, densité, géométrie et positions alternatives. Les [preuves compactes](audits/map-controls-2026-09-29.json) conservent chaque cas et les valeurs de zoom. Les sorties détaillées sont dans `test-results/map-interaction/`, exclu de Git.
 
 | Capture | Thème sombre | Thème clair |
