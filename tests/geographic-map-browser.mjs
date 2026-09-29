@@ -81,9 +81,9 @@ for (const [engine, launcher] of Object.entries({ chromium, webkit })) {
       assert.equal(await viewport.evaluate(element => getComputedStyle(element).touchAction), 'pan-y pinch-zoom');
       await map.locator('[data-map-reset]').click();
       assert.equal(await svg.getAttribute('viewBox'), initial);
-      // A normal wheel remains a page-scroll gesture, never map zoom.
+      // Outside the map, the wheel remains a page-scroll gesture.
       const beforeWheel = await page.evaluate(() => scrollY);
-      await page.mouse.move(bounds.x + bounds.width * .7, bounds.y + bounds.height * .5);
+      await page.mouse.move(150, 30);
       await page.mouse.wheel(0, 180); await page.waitForTimeout(250);
       assert(await page.evaluate(() => scrollY) > beforeWheel);
       assert.equal(await map.getAttribute('data-zoom'), '1');

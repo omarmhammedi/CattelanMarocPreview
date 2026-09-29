@@ -41,7 +41,7 @@ const bounds = projectedBounds(data.bounds);
     <button type="button" data-map-reset aria-label="Recentrer la carte" title="Recentrer"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="6"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/></svg></button>
     <button type="button" data-map-pan aria-label="Déplacer la carte" aria-pressed="false" title="Déplacer la carte"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M2 12h20m-13-7 3-3 3 3M9 19l3 3 3-3M5 9l-3 3 3 3m14-6 3 3-3 3"/></svg></button>
   </div>
-  <p id={`${id}-instructions`} class="map-instructions">Utilisez + et − pour zoomer. Activez le déplacement pour faire glisser la carte, ou utilisez les flèches au clavier. Échap termine le déplacement.</p>
+  <p id={`${id}-instructions`} class="map-instructions">Au trackpad, déplacez deux doigts pour parcourir la carte et pincez pour zoomer. Utilisez aussi + et − pour zoomer. Activez le déplacement pour faire glisser la carte, ou utilisez les flèches au clavier. Échap termine le déplacement.</p>
   <p class="geographic-map-attribution"><a href={data.source.attributionUrl} target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a><span aria-hidden="true"> · </span><a href="/cartographie/casablanca.json" download="casablanca.json">Données ODbL</a></p>
 </div>
 <script>

@@ -2,6 +2,8 @@
 
 Défaut reproduit le 28 septembre ; correctif finalisé le **29 septembre 2026, heure de Toronto**, sur `feat/emdash-migration`.
 
+Ce rapport décrit la correction des boutons. Le [correctif trackpad suivant](test-results-map-trackpad.md) ajoute ensuite le déplacement à deux doigts et le pincement ; ses gestes remplacent le comportement de molette décrit ci-dessous.
+
 ## Défaut reproduit
 
 Le propriétaire a précisé que les boutons `+` et `−` ne permettaient pas d’explorer la carte. À 2000×1248, après seulement 70 px de défilement dans la section, le centre du bouton `+` se trouvait derrière le header fixe. À 1440×900, le clic atteignait même le lien catalogue du header. Le bouton `−` était désactivé au cadrage initial et les noms de rues n’apparaissaient qu’après trois pressions sur `+`.

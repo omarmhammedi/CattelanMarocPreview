@@ -1,0 +1,838 @@
+{
+  "verifiedAt": "2026-09-29T13:56:00.537Z",
+  "timezone": "America/Toronto",
+  "branch": "feat/emdash-migration",
+  "unitTests": 69,
+  "astroCheck": {
+    "files": 84,
+    "errors": 0,
+    "warnings": 0,
+    "hints": 0
+  },
+  "physicalTrackpadVerified": false,
+  "primaryCmsMutations": false,
+  "runs": [
+    {
+      "verifiedAt": "2026-09-29T13:55:00.899Z",
+      "engine": "chromium",
+      "theme": "dark",
+      "base": "http://localhost:4321/",
+      "passed": true,
+      "failure": null,
+      "results": [
+        {
+          "case": "real-trackpad-two-axis-pan",
+          "before": [
+            512.9988000000021,
+            345.92037513276114,
+            589.824,
+            368.63999999999993
+          ],
+          "after": [
+            539.213200000002,
+            385.2419751327611,
+            589.824,
+            368.63999999999993
+          ],
+          "scroll": {
+            "x": 0,
+            "y": 10510
+          }
+        },
+        {
+          "case": "ctrl-wheel-zoom-in-at-pointer",
+          "zoomBefore": 2.44140625,
+          "zoomAfter": 6.004890408098022,
+          "anchor": {
+            "x": 936,
+            "y": 445
+          }
+        },
+        {
+          "case": "ctrl-wheel-zoom-out-at-pointer",
+          "zoomBefore": 6.004890408098022,
+          "zoomAfter": 2.44140625
+        },
+        {
+          "case": "safari-cumulative-pinch",
+          "zoomBefore": 2.44140625,
+          "zoomAfter": 4.0283203125,
+          "synthetic": true,
+          "duplicateWheelSuppressed": true
+        },
+        {
+          "case": "pinch-zoom-limits",
+          "maximum": 16,
+          "minimum": 0.8275862068965542,
+          "bounds": [
+            -119.99999999999746,
+            -79.26884136686358,
+            1739.999999999995,
+            1152.5033175362785
+          ],
+          "widest": [
+            -119.9999999999975,
+            -26.105691533903837,
+            1739.999999999995,
+            1087.4999999999968
+          ],
+          "safariReversalAtLimits": true
+        },
+        {
+          "case": "buttons-and-reset-after-gestures",
+          "reset": [
+            0,
+            0,
+            1440,
+            900
+          ]
+        },
+        {
+          "case": "real-wheel-scroll-chaining-at-boundary",
+          "scrollBefore": 10510,
+          "scrollAfter": 10690
+        },
+        {
+          "case": "wheel-outside-map-scrolls-page",
+          "scrollAfter": 180
+        },
+        {
+          "case": "mobile-browser-pinch-remains-native",
+          "synthetic": true,
+          "touchAction": "pan-y pinch-zoom"
+        },
+        {
+          "case": "mobile-safari-gesture-remains-native",
+          "synthetic": true
+        }
+      ],
+      "errors": [],
+      "attemptedWrites": [],
+      "physicalTrackpadVerified": false
+    },
+    {
+      "verifiedAt": "2026-09-29T13:55:20.578Z",
+      "engine": "webkit",
+      "theme": "dark",
+      "base": "http://localhost:4321/",
+      "passed": true,
+      "failure": null,
+      "results": [
+        {
+          "case": "real-trackpad-two-axis-pan",
+          "before": [
+            512.9988000000021,
+            345.92037513276114,
+            589.824,
+            368.63999999999993
+          ],
+          "after": [
+            539.213200000002,
+            385.2419751327611,
+            589.824,
+            368.63999999999993
+          ],
+          "scroll": {
+            "x": 0,
+            "y": 10510
+          }
+        },
+        {
+          "case": "ctrl-wheel-zoom-in-at-pointer",
+          "zoomBefore": 2.44140625,
+          "zoomAfter": 6.004890408098022,
+          "anchor": {
+            "x": 936,
+            "y": 445
+          }
+        },
+        {
+          "case": "ctrl-wheel-zoom-out-at-pointer",
+          "zoomBefore": 6.004890408098022,
+          "zoomAfter": 2.44140625
+        },
+        {
+          "case": "safari-cumulative-pinch",
+          "zoomBefore": 2.44140625,
+          "zoomAfter": 4.0283203125,
+          "synthetic": true,
+          "duplicateWheelSuppressed": true
+        },
+        {
+          "case": "pinch-zoom-limits",
+          "maximum": 16,
+          "minimum": 0.8275862068965542,
+          "bounds": [
+            -119.99999999999746,
+            -79.26884136686358,
+            1739.999999999995,
+            1152.5033175362785
+          ],
+          "widest": [
+            -119.9999999999975,
+            -26.105691533903837,
+            1739.999999999995,
+            1087.4999999999968
+          ],
+          "safariReversalAtLimits": true
+        },
+        {
+          "case": "buttons-and-reset-after-gestures",
+          "reset": [
+            0,
+            0,
+            1440,
+            900
+          ]
+        },
+        {
+          "case": "real-wheel-scroll-chaining-at-boundary",
+          "scrollBefore": 10510,
+          "scrollAfter": 10541
+        },
+        {
+          "case": "wheel-outside-map-scrolls-page",
+          "scrollAfter": 14
+        },
+        {
+          "case": "mobile-browser-pinch-remains-native",
+          "synthetic": true,
+          "touchAction": "pan-y pinch-zoom"
+        },
+        {
+          "case": "mobile-safari-gesture-remains-native",
+          "synthetic": true
+        }
+      ],
+      "errors": [],
+      "attemptedWrites": [],
+      "physicalTrackpadVerified": false
+    },
+    {
+      "verifiedAt": "2026-09-29T13:55:27.005Z",
+      "engine": "chromium",
+      "theme": "light",
+      "base": "http://localhost:4321/",
+      "passed": true,
+      "failure": null,
+      "results": [
+        {
+          "case": "real-trackpad-two-axis-pan",
+          "before": [
+            512.9988000000021,
+            345.92037513276114,
+            589.824,
+            368.63999999999993
+          ],
+          "after": [
+            539.213200000002,
+            385.2419751327611,
+            589.824,
+            368.63999999999993
+          ],
+          "scroll": {
+            "x": 0,
+            "y": 10510
+          }
+        },
+        {
+          "case": "ctrl-wheel-zoom-in-at-pointer",
+          "zoomBefore": 2.44140625,
+          "zoomAfter": 6.004890408098022,
+          "anchor": {
+            "x": 936,
+            "y": 445
+          }
+        },
+        {
+          "case": "ctrl-wheel-zoom-out-at-pointer",
+          "zoomBefore": 6.004890408098022,
+          "zoomAfter": 2.44140625
+        },
+        {
+          "case": "safari-cumulative-pinch",
+          "zoomBefore": 2.44140625,
+          "zoomAfter": 4.0283203125,
+          "synthetic": true,
+          "duplicateWheelSuppressed": true
+        },
+        {
+          "case": "pinch-zoom-limits",
+          "maximum": 16,
+          "minimum": 0.8275862068965542,
+          "bounds": [
+            -119.99999999999746,
+            -79.26884136686358,
+            1739.999999999995,
+            1152.5033175362785
+          ],
+          "widest": [
+            -119.9999999999975,
+            -26.105691533903837,
+            1739.999999999995,
+            1087.4999999999968
+          ],
+          "safariReversalAtLimits": true
+        },
+        {
+          "case": "buttons-and-reset-after-gestures",
+          "reset": [
+            0,
+            0,
+            1440,
+            900
+          ]
+        },
+        {
+          "case": "real-wheel-scroll-chaining-at-boundary",
+          "scrollBefore": 10510,
+          "scrollAfter": 10690
+        },
+        {
+          "case": "wheel-outside-map-scrolls-page",
+          "scrollAfter": 180
+        },
+        {
+          "case": "mobile-browser-pinch-remains-native",
+          "synthetic": true,
+          "touchAction": "pan-y pinch-zoom"
+        },
+        {
+          "case": "mobile-safari-gesture-remains-native",
+          "synthetic": true
+        }
+      ],
+      "errors": [],
+      "attemptedWrites": [],
+      "physicalTrackpadVerified": false
+    },
+    {
+      "verifiedAt": "2026-09-29T13:55:36.207Z",
+      "engine": "webkit",
+      "theme": "light",
+      "base": "http://localhost:4321/",
+      "passed": true,
+      "failure": null,
+      "results": [
+        {
+          "case": "real-trackpad-two-axis-pan",
+          "before": [
+            512.9988000000021,
+            345.92037513276114,
+            589.824,
+            368.63999999999993
+          ],
+          "after": [
+            539.213200000002,
+            385.2419751327611,
+            589.824,
+            368.63999999999993
+          ],
+          "scroll": {
+            "x": 0,
+            "y": 10510
+          }
+        },
+        {
+          "case": "ctrl-wheel-zoom-in-at-pointer",
+          "zoomBefore": 2.44140625,
+          "zoomAfter": 6.004890408098022,
+          "anchor": {
+            "x": 936,
+            "y": 445
+          }
+        },
+        {
+          "case": "ctrl-wheel-zoom-out-at-pointer",
+          "zoomBefore": 6.004890408098022,
+          "zoomAfter": 2.44140625
+        },
+        {
+          "case": "safari-cumulative-pinch",
+          "zoomBefore": 2.44140625,
+          "zoomAfter": 4.0283203125,
+          "synthetic": true,
+          "duplicateWheelSuppressed": true
+        },
+        {
+          "case": "pinch-zoom-limits",
+          "maximum": 16,
+          "minimum": 0.8275862068965542,
+          "bounds": [
+            -119.99999999999746,
+            -79.26884136686358,
+            1739.999999999995,
+            1152.5033175362785
+          ],
+          "widest": [
+            -119.9999999999975,
+            -26.105691533903837,
+            1739.999999999995,
+            1087.4999999999968
+          ],
+          "safariReversalAtLimits": true
+        },
+        {
+          "case": "buttons-and-reset-after-gestures",
+          "reset": [
+            0,
+            0,
+            1440,
+            900
+          ]
+        },
+        {
+          "case": "real-wheel-scroll-chaining-at-boundary",
+          "scrollBefore": 10510,
+          "scrollAfter": 10546
+        },
+        {
+          "case": "wheel-outside-map-scrolls-page",
+          "scrollAfter": 55
+        },
+        {
+          "case": "mobile-browser-pinch-remains-native",
+          "synthetic": true,
+          "touchAction": "pan-y pinch-zoom"
+        },
+        {
+          "case": "mobile-safari-gesture-remains-native",
+          "synthetic": true
+        }
+      ],
+      "errors": [],
+      "attemptedWrites": [],
+      "physicalTrackpadVerified": false
+    }
+  ],
+  "regressionRuns": [
+    {
+      "verifiedAt": "2026-09-29T13:53:07.969Z",
+      "engine": "chromium",
+      "theme": "dark",
+      "base": "http://localhost:4321/",
+      "passed": true,
+      "failure": null,
+      "results": [
+        {
+          "case": "desktop-initial-buttons",
+          "viewport": "2000x1248",
+          "initial": "-1.1538461538461888 0 1442.3076923076924 900",
+          "zoomedOut": "-119.9999999999975 -79.26884136686357 1739.999999999995 1085.7599999999968",
+          "zoomedIn": "54.00000000000193 29.307158633136055 1391.9999999999961 868.6079999999976",
+          "initialStreetNames": [
+            "Boulevard de la Corniche",
+            "Boulevard Sidi Mohammed Ben Abdellah",
+            "Boulevard Abdelkrim El Khattabi",
+            "Avenue des Forces Armées Royales",
+            "Boulevard Ghandi",
+            "Trémie de Dakar",
+            "Avenue Pasteur",
+            "Avenue Ouled Ziane",
+            "Boulevard Abdelhadi Boutaleb",
+            "Boulevard Mohammed VI",
+            "Avenue Tan Tan",
+            "Boulevard de Bourgogne",
+            "Boulevard Kennedy",
+            "Boulevard Bir Anzarane",
+            "Boulevard de l'Océan Pacifique",
+            "Boulevard de Paris",
+            "Avenue Hassan II",
+            "Boulevard Rahal El Meskini",
+            "Boulevard Abdelmoumen",
+            "Boulevard Ibnou Sina",
+            "Avenue 2 Mars",
+            "Boulevard Sidi Abderrahmane",
+            "Boulevard Anoual",
+            "Boulevard El Fida",
+            "Avenue de Nice",
+            "Rue de Goulmima",
+            "Rue Al Fourate",
+            "Rue de l'Atlas",
+            "Avenue Idriss 1",
+            "Boulevard de Biarritz"
+          ]
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "2000x1248",
+          "offset": 70,
+          "plus": {
+            "x": 1889,
+            "y": 159,
+            "top": 137,
+            "bottom": 181,
+            "headerBottom": 124
+          },
+          "minus": {
+            "x": 1889,
+            "y": 203,
+            "top": 181,
+            "bottom": 225,
+            "headerBottom": 124
+          }
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "2000x1248",
+          "offset": 140,
+          "plus": {
+            "x": 1889,
+            "y": 159,
+            "top": 137,
+            "bottom": 181,
+            "headerBottom": 124
+          },
+          "minus": {
+            "x": 1889,
+            "y": 203,
+            "top": 181,
+            "bottom": 225,
+            "headerBottom": 124
+          }
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "2000x1248",
+          "offset": 220,
+          "plus": {
+            "x": 1889,
+            "y": 159,
+            "top": 137,
+            "bottom": 181,
+            "headerBottom": 124
+          },
+          "minus": {
+            "x": 1889,
+            "y": 203,
+            "top": 181,
+            "bottom": 225,
+            "headerBottom": 124
+          }
+        },
+        {
+          "case": "close-street-names",
+          "zoom": "7.450580596923828",
+          "visibleNames": [
+            "Avenue du Docteur Mohamed Sijelmassi",
+            "Boulevard d'Anfa",
+            "Rond-point Racine",
+            "Rond-point des Sports",
+            "Boulevard Abdellatif Ben Kaddour",
+            "Rue Aïn Harrouda",
+            "Avenue Ahmed Charci",
+            "Rue Al Kaissi",
+            "Rue Assanaani",
+            "Impasse Rif",
+            "Rue Bab Al Ifrane",
+            "Rue Ain El Aouda",
+            "Rue Ahmed Amine",
+            "Rue Imam El Alloussi",
+            "Rue de la Rive",
+            "Boulevard Ain Taoujtate",
+            "Rue Abou Al Abass",
+            "Rue Mozart",
+            "Rue Molière",
+            "Rue Ait Ishaq",
+            "Rue Ahmed El Mokri",
+            "Rue Michel Ange",
+            "Rue Omar Al Kindy زنقة عمر الكندي",
+            "Rue Bab Chellah",
+            "Rue d'Asilah",
+            "Rue Ain Yefren",
+            "Rue Lahcen el Basri",
+            "Rue Halima Saadia"
+          ]
+        },
+        {
+          "case": "zoom-limits",
+          "maximum": 16,
+          "minimum": 0.8289124668435037,
+          "widest": [
+            -119.9999999999975,
+            -12.63962486723733,
+            1739.999999999995,
+            1085.7599999999968
+          ],
+          "coverage": [
+            -119.99999999999746,
+            -79.26884136686358,
+            1739.999999999995,
+            1152.5033175362785
+          ]
+        },
+        {
+          "case": "wheel-scroll-outside-map",
+          "zoomUnchanged": "1"
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "1440x900",
+          "offset": 140,
+          "plus": {
+            "x": 1353.640625,
+            "y": 124.265625,
+            "top": 102.265625,
+            "bottom": 146.265625,
+            "headerBottom": 89.265625
+          },
+          "minus": {
+            "x": 1353.640625,
+            "y": 168.265625,
+            "top": 146.265625,
+            "bottom": 190.265625,
+            "headerBottom": 89.265625
+          }
+        },
+        {
+          "case": "mobile-partial-scroll-tap",
+          "viewport": "390x844",
+          "offset": 70,
+          "visibleNames": [
+            "Rue Démocrite"
+          ],
+          "closeVisibleNames": [
+            "Rue Bab Al Ifrane"
+          ]
+        },
+        {
+          "case": "sandboxed-iframe-partial-scroll",
+          "offset": 140,
+          "plus": {
+            "x": 1323.0625,
+            "y": 122.28125,
+            "top": 100.28125,
+            "bottom": 144.28125,
+            "headerBottom": 87.28125
+          },
+          "minus": {
+            "x": 1323.0625,
+            "y": 166.28125,
+            "top": 144.28125,
+            "bottom": 188.28125,
+            "headerBottom": 87.28125
+          }
+        }
+      ],
+      "errors": [],
+      "attemptedWrites": []
+    },
+    {
+      "verifiedAt": "2026-09-29T13:53:30.290Z",
+      "engine": "webkit",
+      "theme": "light",
+      "base": "http://localhost:4321/",
+      "passed": true,
+      "failure": null,
+      "results": [
+        {
+          "case": "desktop-initial-buttons",
+          "viewport": "2000x1248",
+          "initial": "-1.1538461538461888 0 1442.3076923076924 900",
+          "zoomedOut": "-119.9999999999975 -79.26884136686357 1739.999999999995 1085.7599999999968",
+          "zoomedIn": "54.00000000000193 29.307158633136055 1391.9999999999961 868.6079999999976",
+          "initialStreetNames": [
+            "Boulevard de la Corniche",
+            "Boulevard Sidi Mohammed Ben Abdellah",
+            "Boulevard Abdelkrim El Khattabi",
+            "Avenue des Forces Armées Royales",
+            "Boulevard Ghandi",
+            "Trémie de Dakar",
+            "Avenue Pasteur",
+            "Avenue Ouled Ziane",
+            "Boulevard Abdelhadi Boutaleb",
+            "Boulevard Mohammed VI",
+            "Avenue Tan Tan",
+            "Boulevard de Bourgogne",
+            "Boulevard Kennedy",
+            "Boulevard Bir Anzarane",
+            "Boulevard de l'Océan Pacifique",
+            "Boulevard de Paris",
+            "Avenue Hassan II",
+            "Boulevard Rahal El Meskini",
+            "Boulevard Abdelmoumen",
+            "Boulevard Ibnou Sina",
+            "Avenue 2 Mars",
+            "Boulevard Sidi Abderrahmane",
+            "Boulevard Anoual",
+            "Boulevard El Fida",
+            "Avenue de Nice",
+            "Rue de Goulmima",
+            "Rue Al Fourate",
+            "Rue de l'Atlas",
+            "Avenue Idriss 1",
+            "Boulevard de Biarritz"
+          ]
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "2000x1248",
+          "offset": 70,
+          "plus": {
+            "x": 1889,
+            "y": 159,
+            "top": 137,
+            "bottom": 181,
+            "headerBottom": 124
+          },
+          "minus": {
+            "x": 1889,
+            "y": 203,
+            "top": 181,
+            "bottom": 225,
+            "headerBottom": 124
+          }
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "2000x1248",
+          "offset": 140,
+          "plus": {
+            "x": 1889,
+            "y": 159,
+            "top": 137,
+            "bottom": 181,
+            "headerBottom": 124
+          },
+          "minus": {
+            "x": 1889,
+            "y": 203,
+            "top": 181,
+            "bottom": 225,
+            "headerBottom": 124
+          }
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "2000x1248",
+          "offset": 220,
+          "plus": {
+            "x": 1889,
+            "y": 159,
+            "top": 137,
+            "bottom": 181,
+            "headerBottom": 124
+          },
+          "minus": {
+            "x": 1889,
+            "y": 203,
+            "top": 181,
+            "bottom": 225,
+            "headerBottom": 124
+          }
+        },
+        {
+          "case": "close-street-names",
+          "zoom": "7.450580596923828",
+          "visibleNames": [
+            "Avenue du Docteur Mohamed Sijelmassi",
+            "Boulevard d'Anfa",
+            "Rond-point Racine",
+            "Rond-point des Sports",
+            "Boulevard Abdellatif Ben Kaddour",
+            "Rue Aïn Harrouda",
+            "Avenue Ahmed Charci",
+            "Rue Al Kaissi",
+            "Rue Assanaani",
+            "Impasse Rif",
+            "Rue Bab Al Ifrane",
+            "Rue Ain El Aouda",
+            "Rue Ahmed Amine",
+            "Rue Imam El Alloussi",
+            "Rue de la Rive",
+            "Boulevard Ain Taoujtate",
+            "Rue Abou Al Abass",
+            "Rue Mozart",
+            "Rue Molière",
+            "Rue Ait Ishaq",
+            "Rue Ahmed El Mokri",
+            "Rue Michel Ange",
+            "Rue Omar Al Kindy زنقة عمر الكندي",
+            "Rue Bab Chellah",
+            "Rue d'Asilah",
+            "Rue Ain Yefren",
+            "Rue Lahcen el Basri",
+            "Rue Halima Saadia"
+          ]
+        },
+        {
+          "case": "zoom-limits",
+          "maximum": 16,
+          "minimum": 0.8289124668435037,
+          "widest": [
+            -119.9999999999975,
+            -12.63962486723733,
+            1739.999999999995,
+            1085.7599999999968
+          ],
+          "coverage": [
+            -119.99999999999746,
+            -79.26884136686358,
+            1739.999999999995,
+            1152.5033175362785
+          ]
+        },
+        {
+          "case": "wheel-scroll-outside-map",
+          "zoomUnchanged": "1"
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "1440x900",
+          "offset": 140,
+          "plus": {
+            "x": 1353.640625,
+            "y": 124.265625,
+            "top": 102.265625,
+            "bottom": 146.265625,
+            "headerBottom": 89.265625
+          },
+          "minus": {
+            "x": 1353.640625,
+            "y": 168.265625,
+            "top": 146.265625,
+            "bottom": 190.265625,
+            "headerBottom": 89.265625
+          }
+        },
+        {
+          "case": "mobile-partial-scroll-tap",
+          "viewport": "390x844",
+          "offset": 70,
+          "visibleNames": [
+            "Rue Démocrite"
+          ],
+          "closeVisibleNames": [
+            "Rue Bab Al Ifrane"
+          ]
+        },
+        {
+          "case": "sandboxed-iframe-partial-scroll",
+          "offset": 140,
+          "plus": {
+            "x": 1323.0625,
+            "y": 122.28125,
+            "top": 100.28125,
+            "bottom": 144.28125,
+            "headerBottom": 87.28125
+          },
+          "minus": {
+            "x": 1323.0625,
+            "y": 166.28125,
+            "top": 144.28125,
+            "bottom": 188.28125,
+            "headerBottom": 87.28125
+          }
+        }
+      ],
+      "errors": [],
+      "attemptedWrites": []
+    }
+  ],
+  "productionBuild": {
+    "passed": true,
+    "existingWarnings": [
+      "Some chunks are larger than 500 kB after minification"
+    ]
+  }
+}

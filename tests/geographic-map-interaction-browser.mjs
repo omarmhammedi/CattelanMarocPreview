@@ -186,12 +186,12 @@ try {
     await scrollMap(page, desktopMap, 140);
     const beforeWheel = await page.evaluate(() => scrollY);
     const zoomBeforeWheel = await page.locator(desktopMap).getAttribute('data-zoom');
-    const bounds = await page.locator(`${desktopMap} [data-map-viewport]`).boundingBox();
-    await page.mouse.move(bounds.x + bounds.width * .65, Math.max(200, bounds.y + bounds.height * .5));
+    // Outside the map (over the fixed header), the page still scrolls normally.
+    await page.mouse.move(700, 30);
     await page.mouse.wheel(0, 180);
     await page.waitForFunction(before => scrollY > before, beforeWheel, { timeout: 4000 });
     assert.equal(await page.locator(desktopMap).getAttribute('data-zoom'), zoomBeforeWheel, 'Normal wheel scroll does not zoom the map');
-    results.push({ case: 'normal-wheel-scroll', zoomUnchanged: zoomBeforeWheel });
+    results.push({ case: 'wheel-scroll-outside-map', zoomUnchanged: zoomBeforeWheel });
 
     await page.setViewportSize({ width: 1440, height: 900 });
     await scrollMap(page, desktopMap, 140);

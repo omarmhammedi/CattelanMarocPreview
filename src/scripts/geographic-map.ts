@@ -1,7 +1,8 @@
-/** Enhance the local SVG map without intercepting normal page scrolling. */
+/** Local map controls, trackpad navigation and opt-in pointer dragging. */
 import { selectStreetLabels, type StreetLabelCandidate } from '../lib/map-labels';
 type MapRectangle = { x: number; y: number; width: number; height: number };
 type MapDrag = { pointerId: number; x: number; y: number; centerX: number; centerY: number };
+type MapGesture = Event & { scale?: number; clientX?: number; clientY?: number };
 const initialZoom = 1;
 const maximumZoom = 16;
 const zoomStep = 1.25;
@@ -46,6 +47,11 @@ function initializeGeographicMaps() {
     let panning = false;
     let drag: MapDrag | undefined;
     let scrollFrame: number | undefined;
+    let gestureScale: number | undefined;
+    let gestureEndedAt = -Infinity;
+    let pointer: { x: number; y: number } | undefined;
+    let touching = false;
+    const trackpadAvailable = matchMedia('(any-hover: hover) and (any-pointer: fine)');
     let lastLabels = '';
     const measureContext = document.createElement('canvas').getContext('2d');
     const widths = new Map<string, number>();
@@ -174,6 +180,83 @@ function initializeGeographicMaps() {
       renderCamera();
     };
 
+    const zoomAt = (factor: number, x: number, y: number) => {
+      if (!ready || !Number.isFinite(factor) || factor <= 0) return;
+      finishDrag();
+      const rect = viewport.getBoundingClientRect();
+      const offsetX = (clamp((x - rect.left) / rect.width, 0, 1) - .5) * view.width;
+      const offsetY = (clamp((y - rect.top) / rect.height, 0, 1) - .5) * view.height;
+      const nextZoom = clamp(zoom * factor, minimumZoom, maximumZoom);
+      // Keep the geographic point under the cursor still as the scale changes.
+      centerX += offsetX * (1 - zoom / nextZoom);
+      centerY += offsetY * (1 - zoom / nextZoom);
+      zoom = nextZoom;
+      renderCamera();
+    };
+
+    viewport.addEventListener('wheel', event => {
+      if (!ready || !trackpadAvailable.matches || touching || !event.cancelable || event.altKey || event.metaKey) return;
+      const unitX = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? viewport.clientWidth : 1;
+      const unitY = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? viewport.clientHeight : 1;
+      const dx = event.deltaX * unitX, dy = event.deltaY * unitY;
+      if (!Number.isFinite(dx) || !Number.isFinite(dy)) return;
+      if (event.ctrlKey) {
+        event.preventDefault();
+        // Some Safari versions also dispatch wheel during native gestures.
+        if (gestureScale === undefined && performance.now() - gestureEndedAt > 200) {
+          zoomAt(Math.exp(-clamp(dy, -200, 200) * .01), event.clientX, event.clientY);
+        }
+        return;
+      }
+      if (gestureScale !== undefined) { event.preventDefault(); return; }
+      const nextX = clamp(centerX + dx * view.width / viewport.clientWidth,
+        bounds.x + view.width / 2, bounds.x + bounds.width - view.width / 2);
+      const nextY = clamp(centerY + dy * view.height / viewport.clientHeight,
+        bounds.y + view.height / 2, bounds.y + bounds.height - view.height / 2);
+      // At the edge of the local geography, let scrolling continue on the page.
+      if (Math.abs(nextX - centerX) < 1e-8 && Math.abs(nextY - centerY) < 1e-8) return;
+      event.preventDefault();
+      finishDrag();
+      centerX = nextX; centerY = nextY;
+      renderCamera();
+    }, { ...options, passive: false });
+
+    const gesturePoint = (event: MapGesture) => {
+      const rect = viewport.getBoundingClientRect();
+      const x = event.clientX, y = event.clientY;
+      if (x !== undefined && y !== undefined && x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) return { x, y };
+      return pointer ?? { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
+    };
+    // Desktop Safari exposes trackpad pinch through its native GestureEvents.
+    // Touchscreen gestures keep the browser's accessible page zoom.
+    viewport.addEventListener('gesturestart', (event: MapGesture) => {
+      if (!ready || !trackpadAvailable.matches || touching || !event.cancelable) return;
+      event.preventDefault();
+      finishDrag();
+      gestureScale = event.scale && Number.isFinite(event.scale) && event.scale > 0 ? event.scale : 1;
+    }, { ...options, passive: false });
+    viewport.addEventListener('gesturechange', (event: MapGesture) => {
+      if (gestureScale === undefined) return;
+      event.preventDefault();
+      if (!event.scale || !Number.isFinite(event.scale) || event.scale <= 0) return;
+      const point = gesturePoint(event);
+      zoomAt(event.scale / gestureScale, point.x, point.y);
+      gestureScale = event.scale;
+    }, { ...options, passive: false });
+    const endGesture = () => {
+      if (gestureScale !== undefined) gestureEndedAt = performance.now();
+      gestureScale = undefined;
+    };
+    window.addEventListener('gestureend', event => {
+      if (gestureScale === undefined) return;
+      event.preventDefault();
+      endGesture();
+    }, { ...options, passive: false });
+    viewport.addEventListener('touchstart', () => { touching = true; endGesture(); }, { ...options, passive: true });
+    const endTouch = (event: TouchEvent) => { touching = event.touches.length > 0; };
+    window.addEventListener('touchend', endTouch, { ...options, passive: true });
+    window.addEventListener('touchcancel', endTouch, { ...options, passive: true });
+
     const recenter = () => {
       finishDrag();
       zoom = initialZoom;
@@ -227,6 +310,7 @@ function initializeGeographicMaps() {
     }, options);
 
     viewport.addEventListener('pointermove', event => {
+      if (event.pointerType !== 'touch') pointer = { x: event.clientX, y: event.clientY };
       if (!drag || event.pointerId !== drag.pointerId) return;
       centerX = drag.centerX - (event.clientX - drag.x) * view.width / viewport.clientWidth;
       centerY = drag.centerY - (event.clientY - drag.y) * view.height / viewport.clientHeight;
@@ -240,7 +324,7 @@ function initializeGeographicMaps() {
     viewport.addEventListener('pointerup', endPointer, options);
     viewport.addEventListener('pointercancel', endPointer, options);
     viewport.addEventListener('lostpointercapture', endPointer, options);
-    window.addEventListener('blur', finishDrag, options);
+    window.addEventListener('blur', () => { finishDrag(); endGesture(); touching = false; }, options);
 
     const resized = () => { finishDrag(); render(); };
     const observer = typeof ResizeObserver === 'undefined' ? undefined : new ResizeObserver(resized);

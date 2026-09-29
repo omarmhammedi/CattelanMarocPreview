@@ -52,6 +52,8 @@ Le cycle brouillon, aperçu signé, publication et effacement des champs relève
 
 `node tests/geographic-map-interaction-browser.mjs` contrôle aussi les clics sur `+` et `−` après défilement partiel de la carte, les limites du zoom, les noms de rues, les taps mobiles et l’affichage dans une iframe. Il accepte `PUBLIC_TEST_ENGINE=chromium` ou `webkit` et `PUBLIC_TEST_THEME=dark` ou `light`. Voir [le correctif des commandes et ses captures](docs/test-results-map-controls.md).
 
+`node tests/geographic-map-trackpad-browser.mjs` vérifie le déplacement à deux doigts, le zoom autour du pointeur, les événements de pincement Safari, les limites géographiques et le défilement de page hors de la carte. Il accepte les mêmes paramètres de moteur et de thème. Les pincements sont simulés : voir [les preuves et limites du correctif trackpad](docs/test-results-map-trackpad.md).
+
 ## Guides
 
 - [Développement et Codespaces](docs/development.md)
