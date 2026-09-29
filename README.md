@@ -61,6 +61,7 @@ Le cycle brouillon, aperçu signé, publication et effacement des champs relève
 
 ## Guides
 
+- [Réaudit éditorial des 28 pages : textes à conserver, réécrire ou supprimer](docs/editorial-audit-2026-09-29.md)
 - [Développement et Codespaces](docs/development.md)
 - [Champs et synchronisation des contenus](docs/content-map.md)
 - [Fiches modèles et import des sources officielles](docs/model-pages.md)

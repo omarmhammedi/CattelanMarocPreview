@@ -1,5 +1,7 @@
 # Stratégie de contenu et SEO
 
+Le [réaudit éditorial du 29 septembre 2026](editorial-audit-2026-09-29.md) révise l’orientation de rédaction ci-dessous : les invitations systématiques à préparer un projet ou une visite rendent plusieurs pages artificielles. Il recommande de supprimer ces étapes imposées, de présenter les meubles directement et de conserver les conseils là où ils répondent à une question précise. Ses propositions ne sont pas encore publiées.
+
 L'[audit du contenu publié du 28 septembre 2026](seo-audit-2026-09-28.md) complète cette stratégie : [carte des 28 pages et intentions](seo-page-map.md), constats techniques et plan de finalisation priorisé. Il conserve les six familles et onze modèles documentés, et distingue les corrections réalisables des faits commerciaux encore à confirmer.
 
 Le site doit aider à choisir une référence Cattelan Italia et à préparer un échange avec le showroom de Casablanca. Chaque page a une fonction distincte dans ce parcours. Les intentions ci-dessous sont des hypothèses éditoriales tirées du contenu et de l'offre présentée ; elles ne constituent pas une étude de volumes de recherche ni une promesse de classement.
