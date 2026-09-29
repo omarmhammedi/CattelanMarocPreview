@@ -60,9 +60,6 @@ button, input { font-family: inherit; }
 .hd nav a:not(.btn) { position: relative; padding: 6px 0; }
 .hd nav a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 1px; background: var(--ink); transition: right .35s ease; }
 .hd nav a:not(.btn):hover::after { right: 0; }
-.status { display: flex; align-items: center; gap: 8px; color: var(--muted); font-variant-numeric: tabular-nums; }
-.status i { width: 6px; height: 6px; border-radius: 50%; background: var(--faint); }
-.status.open i { background: var(--ink); box-shadow: 0 0 0 4px rgba(var(--ink-rgb),0.12); }
 .hd .btn { height: 40px; padding: 0 16px; }
 
 /* ---------- scenes (desktop) */
@@ -212,7 +209,7 @@ button, input { font-family: inherit; }
   .desk { display: none !important; }
   .mob { display: block; }
   .hd { height: 60px; background: var(--hdbg); padding-top: env(safe-area-inset-top, 0px); height: calc(60px + env(safe-area-inset-top, 0px)); }
-  .hd nav a:not(.btn), .status, .hd nav a.btn { display: none; }
+  .hd nav a:not(.btn), .hd nav a.btn { display: none; }
   .m { padding: 60px 20px 0; }
   .m section { padding-top: 64px; display: flex; flex-direction: column; gap: 18px; }
   .m .big { font-size: clamp(40px, 12vw, 68px); }
@@ -289,7 +286,6 @@ svg.map .m-zone { fill: rgba(var(--ink-rgb),0.05); stroke: rgba(var(--ink-rgb),0
 .m-section-image { height: 260px; }
 
 @media (max-width: 1200px) and (min-width: 821px) {
-  .hd .status { display: none; }
   .hd nav { gap: 16px; }
   .hd .btn { max-width: 170px; white-space: normal; text-align: center; line-height: 1.4; }
   #showroom .info .row .btn { padding: 0 12px; font-size: 10px; letter-spacing: .12em; }

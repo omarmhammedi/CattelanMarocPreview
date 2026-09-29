@@ -108,7 +108,7 @@ export async function getSite(){
   const [e,settings,menu]=await Promise.all([read('site_content','global'),getSiteSettings(),getMenu('primary')]);
   if(!e) throw new Error('La configuration globale du site manque dans EmDash.');
   const d=e.data;
-  return {name:String(settings.title || ''),tagline:String(settings.tagline || ''),city:d.city,location:d.city,
+  return {name:String(settings.title || ''),tagline:String(settings.tagline || ''),city:d.city,location:String(d.brand_location || ''),
     logoLight:picture(d.logo_light || settings.logo),logoDark:picture(d.logo_dark || settings.logo),phone:d.contact_phone,whatsappUrl:d.whatsapp_url,whatsappHref:d.whatsapp_url,navigation:menu?.items || [],
     address:d.address,hours:d.hours,mapUrl:d.map_url,mapEmbedUrl:d.map_embed_url,mapNote:d.map_note,publicEmail:d.public_email,
     showroomLatitude:d.showroom_latitude,showroomLongitude:d.showroom_longitude,

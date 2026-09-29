@@ -1,4 +1,4 @@
-/** Homepage navigation and showroom clock behavior. */
+/** Homepage navigation behavior. */
 let disposeSite: (() => void) | undefined;
 
 function initializeSite() {
@@ -25,24 +25,7 @@ function initializeSite() {
   }, options);
   window.addEventListener('resize', () => { if (window.innerWidth > 820) setMenu(false); }, options);
 
-  // Show the local time only; opening hours are never inferred from placeholders.
-  const clock = document.getElementById('clock');
-  const updateClock = () => {
-    if (!clock || document.hidden) return;
-    try {
-      const time = new Intl.DateTimeFormat('fr-FR', {
-        timeZone: 'Africa/Casablanca', hour: '2-digit', minute: '2-digit', hour12: false,
-      }).format(new Date());
-      clock.textContent = `${clock.dataset.city || ''} ${time}`.trim();
-    } catch { /* Keep the server-rendered city label. */ }
-  };
-  updateClock();
-  const clockTimer = clock ? window.setInterval(updateClock, 30_000) : undefined;
-  document.addEventListener('visibilitychange', updateClock, options);
-  disposeSite = () => {
-    controller.abort();
-    if (clockTimer !== undefined) clearInterval(clockTimer);
-  };
+  disposeSite = () => controller.abort();
 }
 
 initializeSite();

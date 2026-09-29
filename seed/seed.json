@@ -730,6 +730,15 @@
           "type": "string"
         },
         {
+          "slug": "brand_location",
+          "label": "Libellé sous le logo",
+          "type": "string",
+          "required": false,
+          "options": {
+            "helpText": "Libellé géographique de la marque, distinct de la ville du showroom. Vider ce champ masque la ligne sous le logo."
+          }
+        },
+        {
           "slug": "contact_phone",
           "label": "Téléphone public",
           "type": "string"
@@ -3103,6 +3112,7 @@
         "data": {
           "title": "Configuration du site",
           "city": "Casablanca, Maroc",
+          "brand_location": "Maroc",
           "contact_phone": "",
           "whatsapp_url": null,
           "public_email": "",
