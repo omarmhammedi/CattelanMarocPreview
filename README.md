@@ -78,10 +78,16 @@ Le cycle brouillon, aperçu signé, publication et effacement des champs relève
 - [Carte des pages et intentions de recherche](docs/seo-page-map.md)
 - [Catalogue, contacts privés et CRM](docs/catalogue.md)
 - [Résultats de compilation et périmètre de validation](docs/test-results-build.md)
+- [Déploiement Cloudflare et ressources dédiées](docs/deployment-cloudflare.md)
+- [Vérifications de la préproduction Cloudflare](docs/test-results-cloudflare.md)
 - [Finalisation de la migration et comparaison avec la version B](docs/migration-completion.md)
 
-## Mise en service ultérieure
+## Préproduction Cloudflare et mise en service
 
-Connecter Cloudflare, créer les ressources de préproduction puis de production, importer les données et médias, configurer les secrets, inscrire l'administrateur et tester le parcours complet sur Workers. Le domaine `cattelanitalia.ma` sera raccordé à cette étape. `SITE_INDEXABLE=false` et les réponses sans cache protègent actuellement la prévisualisation contre une indexation involontaire et les contenus périmés.
+La préproduction est déployée sur [cattelan-maroc-preview.omar-8b8.workers.dev](https://cattelan-maroc-preview.omar-8b8.workers.dev/) ; [l’administration EmDash](https://cattelan-maroc-preview.omar-8b8.workers.dev/_emdash/admin/) utilise cette même origine. Elle dispose de sa propre base D1, de deux buckets R2 privés et d’un namespace KV. Le transfert conserve les données du CMS existant ; les ressources des autres sites du compte ne sont pas utilisées. Le [rapport de vérification](docs/test-results-cloudflare.md) précise les contrôles effectués et leurs limites.
+
+`npm run deploy` sélectionne l’environnement `cattelan`, compile puis vérifie les identifiants exacts des ressources avant l’envoi. Le site Cloudflare continue à fonctionner lorsque le Codespace est arrêté. Les données locales et distantes sont des copies indépendantes : une modification dans un CMS ne se réplique pas automatiquement dans l’autre. Enregistrer une nouvelle passkey pour l’administration Cloudflare ; celles du Codespace restent liées à leur ancienne origine.
+
+Le domaine `cattelanitalia.ma` n’est pas raccordé. `SITE_INDEXABLE=false` et les réponses sans cache protègent actuellement la préproduction contre une indexation involontaire et les contenus périmés. Aucun fournisseur d’e-mails transactionnels ni CRM externe n’est configuré.
 
 Avant une collecte réelle : finaliser le catalogue, les informations légales et la confidentialité, confirmer les services proposés et les droits sur les visuels. L’adresse, le téléphone et les horaires ont été fournis ; aucun email public ni usage de WhatsApp n’a été confirmé. Le propriétaire a fourni la photographie de l’entrée actuellement affichée ; les droits des visuels pour la mise en ligne définitive restent à confirmer. La page de confidentialité actuelle décrit uniquement les essais de développement.

@@ -1,0 +1,1461 @@
+{
+  "capturedAt": "2026-09-29T21:11:43.487Z",
+  "timezone": "America/Toronto",
+  "deployment": {
+    "origin": "https://cattelan-maroc-preview.omar-8b8.workers.dev",
+    "version": "8bf5538b-a76b-4ab8-b498-6e249f4738b8",
+    "noindex": true
+  },
+  "public": {
+    "origin": "https://cattelan-maroc-preview.omar-8b8.workers.dev",
+    "startedAt": "2026-09-29T20:52:06.785Z",
+    "readOnly": true,
+    "checks": [
+      {
+        "name": "28 routes, metadata, canonicals, noindex, no-store and internal links",
+        "count": 28
+      },
+      {
+        "name": "robots.txt, sitemap and real 404"
+      },
+      {
+        "name": "Owner photo bytes identical on remote site",
+        "bytes": 2145163,
+        "sha256": "27fb665fc83d84f5c70157172a5f4d1dcd3e6153a1bbc717fb1ca4fc6933fe11"
+      }
+    ],
+    "failure": "",
+    "seoCapturedAt": "2026-09-29T20:45:44.498Z",
+    "seoReused": true,
+    "limits": [
+      "The existing preview privacy page has no meta-description; the 27 editorial pages do. This check does not rewrite page content."
+    ],
+    "pages": [
+      {
+        "path": "/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/collections/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/collections/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/showroom-casablanca/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/showroom-casablanca/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/catalogue/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/catalogue/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/journal/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/journal/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/collections/tables/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/collections/tables/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/collections/chaises-tabourets/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/collections/chaises-tabourets/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/collections/canapes-fauteuils/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/collections/canapes-fauteuils/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/collections/buffets-bibliotheques/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/collections/buffets-bibliotheques/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/collections/luminaires/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/collections/luminaires/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/collections/mobilier-exterieur/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/collections/mobilier-exterieur/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/modeles/skorpio/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/modeles/skorpio/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/modeles/napoleon-keramik/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/modeles/napoleon-keramik/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/modeles/rhonda/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/modeles/rhonda/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/modeles/greta/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/modeles/greta/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/modeles/ruby/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/modeles/ruby/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/modeles/ruby-lounge/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/modeles/ruby-lounge/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/modeles/chelsea/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/modeles/chelsea/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/modeles/airport/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/modeles/airport/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/modeles/bloom/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/modeles/bloom/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/modeles/napoleon-keramik-outdoor/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/modeles/napoleon-keramik-outdoor/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/modeles/greta-outdoor/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/modeles/greta-outdoor/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/journal/choisir-forme-proportions-table-salle-a-manger/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/journal/choisir-forme-proportions-table-salle-a-manger/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/journal/associer-table-chaises-salle-a-manger/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/journal/associer-table-chaises-salle-a-manger/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/journal/ceramique-verre-bois-choisir-finition-meuble/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/journal/ceramique-verre-bois-choisir-finition-meuble/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/journal/composer-salon-canape-fauteuil/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/journal/composer-salon-canape-fauteuil/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/journal/choisir-buffet-bibliotheque-salon/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/journal/choisir-buffet-bibliotheque-salon/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      },
+      {
+        "path": "/confidentialite/",
+        "status": 200,
+        "canonical": [
+          "https://cattelan-maroc-preview.omar-8b8.workers.dev/confidentialite/"
+        ],
+        "headers": {
+          "robots": "noindex, nofollow",
+          "cacheControl": "no-store"
+        }
+      }
+    ],
+    "passed": true,
+    "finishedAt": "2026-09-29T20:52:09.540Z"
+  },
+  "browser": {
+    "passed": true,
+    "totalChecks": 65,
+    "routeViewportVisits": 224,
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "themes": [
+      "dark",
+      "light"
+    ],
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "runs": [
+      {
+        "engine": "chromium",
+        "theme": "dark",
+        "startedAt": "2026-09-29T20:56:51.107Z",
+        "finishedAt": "2026-09-29T20:59:28.271Z",
+        "passed": true,
+        "checks": 38,
+        "layouts": 56,
+        "routes": 28,
+        "internalLinks": 199,
+        "animationPositions": [
+          {
+            "selector": "#accueil",
+            "progress": 0.8,
+            "engine": "chromium",
+            "theme": "dark"
+          },
+          {
+            "selector": "#italie",
+            "progress": 0.3,
+            "engine": "chromium",
+            "theme": "dark"
+          },
+          {
+            "selector": "#collections",
+            "progress": 1,
+            "engine": "chromium",
+            "theme": "dark"
+          },
+          {
+            "selector": "#showroom",
+            "progress": 0.7,
+            "engine": "chromium",
+            "theme": "dark"
+          },
+          {
+            "selector": "#catalogue",
+            "progress": 0.6,
+            "engine": "chromium",
+            "theme": "dark"
+          }
+        ],
+        "errors": 0,
+        "attemptedWrites": 0,
+        "privateRequests": 0
+      },
+      {
+        "engine": "chromium",
+        "theme": "light",
+        "startedAt": "2026-09-29T20:59:38.973Z",
+        "finishedAt": "2026-09-29T21:01:21.443Z",
+        "passed": true,
+        "checks": 9,
+        "layouts": 56,
+        "routes": 0,
+        "internalLinks": 0,
+        "animationPositions": [
+          {
+            "selector": "#accueil",
+            "progress": 0.8,
+            "engine": "chromium",
+            "theme": "light"
+          },
+          {
+            "selector": "#italie",
+            "progress": 0.3,
+            "engine": "chromium",
+            "theme": "light"
+          },
+          {
+            "selector": "#collections",
+            "progress": 1,
+            "engine": "chromium",
+            "theme": "light"
+          },
+          {
+            "selector": "#showroom",
+            "progress": 0.7,
+            "engine": "chromium",
+            "theme": "light"
+          },
+          {
+            "selector": "#catalogue",
+            "progress": 0.6,
+            "engine": "chromium",
+            "theme": "light"
+          }
+        ],
+        "errors": 0,
+        "attemptedWrites": 0,
+        "privateRequests": 0
+      },
+      {
+        "engine": "webkit",
+        "theme": "dark",
+        "startedAt": "2026-09-29T21:02:54.925Z",
+        "finishedAt": "2026-09-29T21:05:22.097Z",
+        "passed": true,
+        "checks": 9,
+        "layouts": 56,
+        "routes": 0,
+        "internalLinks": 0,
+        "animationPositions": [
+          {
+            "selector": "#accueil",
+            "progress": 0.8,
+            "engine": "webkit",
+            "theme": "dark"
+          },
+          {
+            "selector": "#italie",
+            "progress": 0.3,
+            "engine": "webkit",
+            "theme": "dark"
+          },
+          {
+            "selector": "#collections",
+            "progress": 1,
+            "engine": "webkit",
+            "theme": "dark"
+          },
+          {
+            "selector": "#showroom",
+            "progress": 0.7,
+            "engine": "webkit",
+            "theme": "dark"
+          },
+          {
+            "selector": "#catalogue",
+            "progress": 0.6,
+            "engine": "webkit",
+            "theme": "dark"
+          }
+        ],
+        "errors": 0,
+        "attemptedWrites": 0,
+        "privateRequests": 0
+      },
+      {
+        "engine": "webkit",
+        "theme": "light",
+        "startedAt": "2026-09-29T21:05:35.172Z",
+        "finishedAt": "2026-09-29T21:07:48.789Z",
+        "passed": true,
+        "checks": 9,
+        "layouts": 56,
+        "routes": 0,
+        "internalLinks": 0,
+        "animationPositions": [
+          {
+            "selector": "#accueil",
+            "progress": 0.8,
+            "engine": "webkit",
+            "theme": "light"
+          },
+          {
+            "selector": "#italie",
+            "progress": 0.3,
+            "engine": "webkit",
+            "theme": "light"
+          },
+          {
+            "selector": "#collections",
+            "progress": 1,
+            "engine": "webkit",
+            "theme": "light"
+          },
+          {
+            "selector": "#showroom",
+            "progress": 0.7,
+            "engine": "webkit",
+            "theme": "light"
+          },
+          {
+            "selector": "#catalogue",
+            "progress": 0.6,
+            "engine": "webkit",
+            "theme": "light"
+          }
+        ],
+        "errors": 0,
+        "attemptedWrites": 0,
+        "privateRequests": 0
+      }
+    ]
+  },
+  "headerDiagnosis": {
+    "startedAt": "2026-09-29T21:01:27.882Z",
+    "finishedAt": "2026-09-29T21:01:42.439Z",
+    "caseCount": 12,
+    "allDesktopCasesInsideHeader": true,
+    "finalCaptureToleranceCssPx": 1,
+    "mobileHomeOverflowCssPx": 0.359375,
+    "mobileHomeMatchesLocal": true,
+    "productCssChanged": false,
+    "observation": "Some first-run screenshots showed a clipped logo. Fresh remote and local pages had identical, correct header bounds before and after scroll. Final screenshots use fresh pages, decoded images and fonts, two animation frames and a settling pause; header geometry is checked before and after capture."
+  },
+  "screenshots": [
+    {
+      "name": "home-showroom",
+      "path": "docs/screenshots/cloudflare-2026-09-29/home-showroom-1440-dark.jpg",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "filename": "home-showroom-1440-dark.jpg",
+      "before": {
+        "scrollY": 9162,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 89.265625,
+          "top": 0,
+          "bottom": 89.265625
+        },
+        "brand": {
+          "x": 63.359375,
+          "y": 9.421875,
+          "width": 129.59375,
+          "height": 70.40625,
+          "top": 9.421875,
+          "bottom": 79.828125
+        },
+        "image": {
+          "x": 63.359375,
+          "y": 9.421875,
+          "width": 129.59375,
+          "height": 55.03125,
+          "top": 9.421875,
+          "bottom": 64.453125
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "after": {
+        "scrollY": 9162,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 89.265625,
+          "top": 0,
+          "bottom": 89.265625
+        },
+        "brand": {
+          "x": 63.359375,
+          "y": 9.421875,
+          "width": 129.59375,
+          "height": 70.40625,
+          "top": 9.421875,
+          "bottom": 79.828125
+        },
+        "image": {
+          "x": 63.359375,
+          "y": 9.421875,
+          "width": 129.59375,
+          "height": 55.03125,
+          "top": 9.421875,
+          "bottom": 64.453125
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "route": "/",
+      "bytes": 144425,
+      "sha256": "5d200ae39a7d4f7a3b30b1d7573d7c6a038360f41bc224d527e2de0e849b84cf"
+    },
+    {
+      "name": "showroom",
+      "path": "docs/screenshots/cloudflare-2026-09-29/showroom-1440-dark.jpg",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "filename": "showroom-1440-dark.jpg",
+      "before": {
+        "scrollY": 484,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 89.265625,
+          "top": 0,
+          "bottom": 89.265625
+        },
+        "brand": {
+          "x": 63.359375,
+          "y": 8.921875,
+          "width": 129.59375,
+          "height": 70.40625,
+          "top": 8.921875,
+          "bottom": 79.328125
+        },
+        "image": {
+          "x": 63.359375,
+          "y": 8.921875,
+          "width": 129.59375,
+          "height": 55.03125,
+          "top": 8.921875,
+          "bottom": 63.953125
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "after": {
+        "scrollY": 484,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 89.265625,
+          "top": 0,
+          "bottom": 89.265625
+        },
+        "brand": {
+          "x": 63.359375,
+          "y": 8.921875,
+          "width": 129.59375,
+          "height": 70.40625,
+          "top": 8.921875,
+          "bottom": 79.328125
+        },
+        "image": {
+          "x": 63.359375,
+          "y": 8.921875,
+          "width": 129.59375,
+          "height": 55.03125,
+          "top": 8.921875,
+          "bottom": 63.953125
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "route": "/showroom-casablanca/",
+      "bytes": 145319,
+      "sha256": "cdd0eac0aaef9f0e8ffb3cd740e577e737357a9a4fc6fd780ed39f02de600bdc"
+    },
+    {
+      "name": "catalogue",
+      "path": "docs/screenshots/cloudflare-2026-09-29/catalogue-1440-dark.jpg",
+      "theme": "dark",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "filename": "catalogue-1440-dark.jpg",
+      "before": {
+        "scrollY": 0,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 89.265625,
+          "top": 0,
+          "bottom": 89.265625
+        },
+        "brand": {
+          "x": 63.359375,
+          "y": 8.921875,
+          "width": 129.59375,
+          "height": 70.40625,
+          "top": 8.921875,
+          "bottom": 79.328125
+        },
+        "image": {
+          "x": 63.359375,
+          "y": 8.921875,
+          "width": 129.59375,
+          "height": 55.03125,
+          "top": 8.921875,
+          "bottom": 63.953125
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "after": {
+        "scrollY": 0,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 89.265625,
+          "top": 0,
+          "bottom": 89.265625
+        },
+        "brand": {
+          "x": 63.359375,
+          "y": 8.921875,
+          "width": 129.59375,
+          "height": 70.40625,
+          "top": 8.921875,
+          "bottom": 79.328125
+        },
+        "image": {
+          "x": 63.359375,
+          "y": 8.921875,
+          "width": 129.59375,
+          "height": 55.03125,
+          "top": 8.921875,
+          "bottom": 63.953125
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "route": "/catalogue/",
+      "bytes": 119919,
+      "sha256": "9084829c06d8f076733590921633f68cc56bd3f71f288a93780e843bfe654c0e"
+    },
+    {
+      "name": "home-showroom",
+      "path": "docs/screenshots/cloudflare-2026-09-29/home-showroom-390-dark.jpg",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "filename": "home-showroom-390-dark.jpg",
+      "before": {
+        "scrollY": 2246,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 60,
+          "top": 0,
+          "bottom": 60
+        },
+        "brand": {
+          "x": 20,
+          "y": -0.359375,
+          "width": 110,
+          "height": 60.71875,
+          "top": -0.359375,
+          "bottom": 60.359375
+        },
+        "image": {
+          "x": 20,
+          "y": -0.359375,
+          "width": 110,
+          "height": 46.71875,
+          "top": -0.359375,
+          "bottom": 46.359375
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "after": {
+        "scrollY": 2246,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 60,
+          "top": 0,
+          "bottom": 60
+        },
+        "brand": {
+          "x": 20,
+          "y": -0.359375,
+          "width": 110,
+          "height": 60.71875,
+          "top": -0.359375,
+          "bottom": 60.359375
+        },
+        "image": {
+          "x": 20,
+          "y": -0.359375,
+          "width": 110,
+          "height": 46.71875,
+          "top": -0.359375,
+          "bottom": 46.359375
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "route": "/",
+      "bytes": 63687,
+      "sha256": "7d0064f0a82178b0d3774c464870ba5f63ecf57e376deccb24969b7e29e522dd"
+    },
+    {
+      "name": "showroom",
+      "path": "docs/screenshots/cloudflare-2026-09-29/showroom-390-dark.jpg",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "filename": "showroom-390-dark.jpg",
+      "before": {
+        "scrollY": 380,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 60,
+          "top": 0,
+          "bottom": 60
+        },
+        "brand": {
+          "x": 20,
+          "y": 2.5,
+          "width": 110,
+          "height": 54,
+          "top": 2.5,
+          "bottom": 56.5
+        },
+        "image": {
+          "x": 27.921875,
+          "y": 2.5,
+          "width": 94.15625,
+          "height": 40,
+          "top": 2.5,
+          "bottom": 42.5
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "after": {
+        "scrollY": 380,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 60,
+          "top": 0,
+          "bottom": 60
+        },
+        "brand": {
+          "x": 20,
+          "y": 2.5,
+          "width": 110,
+          "height": 54,
+          "top": 2.5,
+          "bottom": 56.5
+        },
+        "image": {
+          "x": 27.921875,
+          "y": 2.5,
+          "width": 94.15625,
+          "height": 40,
+          "top": 2.5,
+          "bottom": 42.5
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "route": "/showroom-casablanca/",
+      "bytes": 50928,
+      "sha256": "4dbb91e665a4085595c81ea0b1fb0871aafe138c97f3b38ef0ba214c787b3b22"
+    },
+    {
+      "name": "catalogue",
+      "path": "docs/screenshots/cloudflare-2026-09-29/catalogue-390-dark.jpg",
+      "theme": "dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "filename": "catalogue-390-dark.jpg",
+      "before": {
+        "scrollY": 0,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 60,
+          "top": 0,
+          "bottom": 60
+        },
+        "brand": {
+          "x": 20,
+          "y": 2.5,
+          "width": 110,
+          "height": 54,
+          "top": 2.5,
+          "bottom": 56.5
+        },
+        "image": {
+          "x": 27.921875,
+          "y": 2.5,
+          "width": 94.15625,
+          "height": 40,
+          "top": 2.5,
+          "bottom": 42.5
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "after": {
+        "scrollY": 0,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 60,
+          "top": 0,
+          "bottom": 60
+        },
+        "brand": {
+          "x": 20,
+          "y": 2.5,
+          "width": 110,
+          "height": 54,
+          "top": 2.5,
+          "bottom": 56.5
+        },
+        "image": {
+          "x": 27.921875,
+          "y": 2.5,
+          "width": 94.15625,
+          "height": 40,
+          "top": 2.5,
+          "bottom": 42.5
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "route": "/catalogue/",
+      "bytes": 41066,
+      "sha256": "56567abeb0fde949d96a0aeea8e5e8eaeae0a783059332fb31ebcc09e65a63b3"
+    },
+    {
+      "name": "home-showroom",
+      "path": "docs/screenshots/cloudflare-2026-09-29/home-showroom-1440-light.jpg",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "filename": "home-showroom-1440-light.jpg",
+      "before": {
+        "scrollY": 9162,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 89.265625,
+          "top": 0,
+          "bottom": 89.265625
+        },
+        "brand": {
+          "x": 63.359375,
+          "y": 9.421875,
+          "width": 129.59375,
+          "height": 70.40625,
+          "top": 9.421875,
+          "bottom": 79.828125
+        },
+        "image": {
+          "x": 63.359375,
+          "y": 9.421875,
+          "width": 129.59375,
+          "height": 55.03125,
+          "top": 9.421875,
+          "bottom": 64.453125
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "after": {
+        "scrollY": 9162,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 89.265625,
+          "top": 0,
+          "bottom": 89.265625
+        },
+        "brand": {
+          "x": 63.359375,
+          "y": 9.421875,
+          "width": 129.59375,
+          "height": 70.40625,
+          "top": 9.421875,
+          "bottom": 79.828125
+        },
+        "image": {
+          "x": 63.359375,
+          "y": 9.421875,
+          "width": 129.59375,
+          "height": 55.03125,
+          "top": 9.421875,
+          "bottom": 64.453125
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "route": "/",
+      "bytes": 144433,
+      "sha256": "bb42cd8d2634ff1aa758c8ede9c705ce544aab149d9d4ffe4c94885f9e0e709a"
+    },
+    {
+      "name": "showroom",
+      "path": "docs/screenshots/cloudflare-2026-09-29/showroom-1440-light.jpg",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "filename": "showroom-1440-light.jpg",
+      "before": {
+        "scrollY": 484,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 89.265625,
+          "top": 0,
+          "bottom": 89.265625
+        },
+        "brand": {
+          "x": 63.359375,
+          "y": 8.921875,
+          "width": 129.59375,
+          "height": 70.40625,
+          "top": 8.921875,
+          "bottom": 79.328125
+        },
+        "image": {
+          "x": 63.359375,
+          "y": 8.921875,
+          "width": 129.59375,
+          "height": 55.03125,
+          "top": 8.921875,
+          "bottom": 63.953125
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "after": {
+        "scrollY": 484,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 89.265625,
+          "top": 0,
+          "bottom": 89.265625
+        },
+        "brand": {
+          "x": 63.359375,
+          "y": 8.921875,
+          "width": 129.59375,
+          "height": 70.40625,
+          "top": 8.921875,
+          "bottom": 79.328125
+        },
+        "image": {
+          "x": 63.359375,
+          "y": 8.921875,
+          "width": 129.59375,
+          "height": 55.03125,
+          "top": 8.921875,
+          "bottom": 63.953125
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "route": "/showroom-casablanca/",
+      "bytes": 145083,
+      "sha256": "484b28d86f4a1673b26d6659c8408e2c9797e66ed8ee91517619a3657e423a11"
+    },
+    {
+      "name": "catalogue",
+      "path": "docs/screenshots/cloudflare-2026-09-29/catalogue-1440-light.jpg",
+      "theme": "light",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "filename": "catalogue-1440-light.jpg",
+      "before": {
+        "scrollY": 0,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 89.265625,
+          "top": 0,
+          "bottom": 89.265625
+        },
+        "brand": {
+          "x": 63.359375,
+          "y": 8.921875,
+          "width": 129.59375,
+          "height": 70.40625,
+          "top": 8.921875,
+          "bottom": 79.328125
+        },
+        "image": {
+          "x": 63.359375,
+          "y": 8.921875,
+          "width": 129.59375,
+          "height": 55.03125,
+          "top": 8.921875,
+          "bottom": 63.953125
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "after": {
+        "scrollY": 0,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 89.265625,
+          "top": 0,
+          "bottom": 89.265625
+        },
+        "brand": {
+          "x": 63.359375,
+          "y": 8.921875,
+          "width": 129.59375,
+          "height": 70.40625,
+          "top": 8.921875,
+          "bottom": 79.328125
+        },
+        "image": {
+          "x": 63.359375,
+          "y": 8.921875,
+          "width": 129.59375,
+          "height": 55.03125,
+          "top": 8.921875,
+          "bottom": 63.953125
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "route": "/catalogue/",
+      "bytes": 121305,
+      "sha256": "74c81f80a1eedbb31912609e528c079085906f24034f33af9798eed19800b1c1"
+    },
+    {
+      "name": "home-showroom",
+      "path": "docs/screenshots/cloudflare-2026-09-29/home-showroom-390-light.jpg",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "filename": "home-showroom-390-light.jpg",
+      "before": {
+        "scrollY": 2246,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 60,
+          "top": 0,
+          "bottom": 60
+        },
+        "brand": {
+          "x": 20,
+          "y": -0.359375,
+          "width": 110,
+          "height": 60.71875,
+          "top": -0.359375,
+          "bottom": 60.359375
+        },
+        "image": {
+          "x": 20,
+          "y": -0.359375,
+          "width": 110,
+          "height": 46.71875,
+          "top": -0.359375,
+          "bottom": 46.359375
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "after": {
+        "scrollY": 2246,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 60,
+          "top": 0,
+          "bottom": 60
+        },
+        "brand": {
+          "x": 20,
+          "y": -0.359375,
+          "width": 110,
+          "height": 60.71875,
+          "top": -0.359375,
+          "bottom": 60.359375
+        },
+        "image": {
+          "x": 20,
+          "y": -0.359375,
+          "width": 110,
+          "height": 46.71875,
+          "top": -0.359375,
+          "bottom": 46.359375
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "route": "/",
+      "bytes": 63441,
+      "sha256": "87cec8fd860dfa75fc9f5e00a52e0313dcce5b8b9dda85c2231d95ac80188525"
+    },
+    {
+      "name": "showroom",
+      "path": "docs/screenshots/cloudflare-2026-09-29/showroom-390-light.jpg",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "filename": "showroom-390-light.jpg",
+      "before": {
+        "scrollY": 380,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 60,
+          "top": 0,
+          "bottom": 60
+        },
+        "brand": {
+          "x": 20,
+          "y": 2.5,
+          "width": 110,
+          "height": 54,
+          "top": 2.5,
+          "bottom": 56.5
+        },
+        "image": {
+          "x": 27.921875,
+          "y": 2.5,
+          "width": 94.15625,
+          "height": 40,
+          "top": 2.5,
+          "bottom": 42.5
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "after": {
+        "scrollY": 380,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 60,
+          "top": 0,
+          "bottom": 60
+        },
+        "brand": {
+          "x": 20,
+          "y": 2.5,
+          "width": 110,
+          "height": 54,
+          "top": 2.5,
+          "bottom": 56.5
+        },
+        "image": {
+          "x": 27.921875,
+          "y": 2.5,
+          "width": 94.15625,
+          "height": 40,
+          "top": 2.5,
+          "bottom": 42.5
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "route": "/showroom-casablanca/",
+      "bytes": 50882,
+      "sha256": "b36a46af14739bf00f1b69762b83d7bcf8d9425bbea1014e6ba4693fb73e6f85"
+    },
+    {
+      "name": "catalogue",
+      "path": "docs/screenshots/cloudflare-2026-09-29/catalogue-390-light.jpg",
+      "theme": "light",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "filename": "catalogue-390-light.jpg",
+      "before": {
+        "scrollY": 0,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 60,
+          "top": 0,
+          "bottom": 60
+        },
+        "brand": {
+          "x": 20,
+          "y": 2.5,
+          "width": 110,
+          "height": 54,
+          "top": 2.5,
+          "bottom": 56.5
+        },
+        "image": {
+          "x": 27.921875,
+          "y": 2.5,
+          "width": 94.15625,
+          "height": 40,
+          "top": 2.5,
+          "bottom": 42.5
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "after": {
+        "scrollY": 0,
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 60,
+          "top": 0,
+          "bottom": 60
+        },
+        "brand": {
+          "x": 20,
+          "y": 2.5,
+          "width": 110,
+          "height": 54,
+          "top": 2.5,
+          "bottom": 56.5
+        },
+        "image": {
+          "x": 27.921875,
+          "y": 2.5,
+          "width": 94.15625,
+          "height": 40,
+          "top": 2.5,
+          "bottom": 42.5
+        },
+        "naturalWidth": 824,
+        "naturalHeight": 350
+      },
+      "route": "/catalogue/",
+      "bytes": 41144,
+      "sha256": "f3ea2adc9883c8385922f2ccd1770fc4ddf8e55bab40e0345b9100919871ceba"
+    }
+  ],
+  "limits": [
+    "The existing preview privacy page has no meta-description; 27 editorial pages do.",
+    "Browser suites are anonymous and block all writes and private CMS/auth APIs. Valid form and private PDF checks are reported separately.",
+    "No physical iPhone test or pixel-perfect design parity is claimed. Owner registration is documented separately from these read-only suites.",
+    "The first SEO snapshot was captured during media upload; final photo and browser checks occurred after the relevant files were available."
+  ],
+  "catalogue": {
+    "apiPassed": true,
+    "apiConsentOmittedPersistedFalse": true,
+    "apiSyntheticContactRemoved": true,
+    "browser": {
+      "startedAt": "2026-09-29T21:16:23.053Z",
+      "finishedAt": "2026-09-29T21:16:33.971Z",
+      "engine": "chromium",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actualUiSubmit": true,
+      "optionalConsentInitiallyUnchecked": true,
+      "transmittedConsent": false,
+      "persistedBeforeCleanup": true,
+      "cleanupOwnedRowOnly": true,
+      "deletedRows": 1,
+      "remainingOwnedRows": 0,
+      "revokedDownloadStatus": 410,
+      "authenticationRequests": 0,
+      "unexpectedWrites": 0,
+      "errors": [],
+      "passed": true
+    },
+    "pdfBytes": 23232,
+    "pdfSha256": "7fc069fe5b9aef04a950e93cd1b78f133bf4862de6f74189fb68d9c3ec694cf4"
+  },
+  "ownerAccess": {
+    "confirmedByOwner": true,
+    "newPasskeyVerified": true,
+    "recoveryConsumed": true,
+    "verifiedToronto": "2026-09-29 17:10 America/Toronto",
+    "automatedAuthenticationTests": false
+  }
+}

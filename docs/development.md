@@ -194,9 +194,9 @@ Elle sauvegarde les valeurs dans `.wrangler/migrations/`, contrôle les révisio
 
 Les contrôles publics restent anonymes et en lecture seule ; les vérifications qui changent le CMS sont réservées à la copie jetable ci-dessous. `node tests/showroom-browser.mjs` concerne les coordonnées, l’itinéraire et la carte Google Maps à la demande ; `PUBLIC_TEST_URL` choisit l’origine et les résultats vont par défaut dans `test-results/showroom-browser/`. `node tests/geographic-map-browser.mjs` vérifie la carte géographique et ses interactions. Le [premier rapport showroom](test-results-showroom.md) est historique et ne prouve pas le nouveau rendu géographique. Voir le [rapport dédié à la géographie](test-results-geographic-map.md) pour ses contrôles et captures.
 
-## Préparer Cloudflare ensuite
+## Préproduction Cloudflare
 
-Après connexion du compte, créer un environnement de préproduction avec ses propres ressources D1, R2 et secrets, puis tester l'application sur son URL Workers. Le domaine `cattelanitalia.ma` sera raccordé plus tard. Ne pas lancer `npm run deploy` avant d'avoir choisi le compte et les noms de ressources.
+L’environnement distant `cattelan` utilise exclusivement les ressources Cattelan déclarées dans `wrangler.jsonc`. Le compte et les identifiants sont contrôlés avant chaque envoi par `npm run deploy`. Voir la [procédure Cloudflare](deployment-cloudflare.md) et le [rapport de vérification](test-results-cloudflare.md). Les liaisons locales restent séparées ; le domaine `cattelanitalia.ma` n’est pas raccordé.
 
 Configurer aussi l’URL du site dans EmDash et `EMDASH_SITE_URL` avec l’origine Workers de préproduction : ne pas conserver l’URL localhost lors du transfert. Vérifier les canoniques, les aperçus signés et les passkeys sur cette origine. `SITE_INDEXABLE` reste à `false` jusqu’à la validation de la mise en ligne.
 
