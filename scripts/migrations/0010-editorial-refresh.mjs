@@ -13,10 +13,10 @@ const id = '0010-editorial-refresh';
 const pathFor = (collection, slug) => `/_emdash/api/content/${collection}/${encodeURIComponent(slug)}`;
 const schemaPath = collection => `/_emdash/api/schema/collections/${collection}?includeFields=true`;
 const allowed = {
-  pages: ['title', 'intro', 'sections', 'brand_caption', 'seo_title', 'meta_description'],
-  families: ['intro', 'card_text', 'content', 'seo_title', 'meta_description'],
+  pages: ['title', 'intro', 'sections', 'brand_caption', 'seo_title', 'meta_description', 'hero_image'],
+  families: ['intro', 'card_text', 'content', 'seo_title', 'meta_description', 'image_caption', 'image'],
   models: ['description', 'content', 'availability_note'],
-  posts: ['title', 'excerpt', 'content', 'sources', 'cta_text', 'cta_label', 'cta_href', 'seo_title', 'meta_description'],
+  posts: ['title', 'excerpt', 'content', 'sources', 'cta_text', 'cta_label', 'cta_href', 'seo_title', 'meta_description', 'image_caption', 'image'],
   site_content: ['footer_text', 'catalogue_label', 'contact_label', 'model_notice', 'preview_notice', 'form_email_label', 'form_opt_in_label', 'form_hint', 'form_privacy', 'form_pending', 'form_email_error', 'form_error', 'form_success_title', 'form_success_text', 'form_unavailable', 'map_note'],
 };
 
@@ -38,7 +38,14 @@ export function validateRefresh(entries, menu) {
     assert.deepEqual(Object.keys(e.before).sort(), Object.keys(e.after).sort());
     for (const [key, value] of Object.entries(e.after)) {
       assert(allowed[e.collection].includes(key), `Forbidden editorial field: ${e.collection}.${key}`);
-      if (['sections', 'content', 'sources'].includes(key)) {
+      if (['image', 'hero_image'].includes(key)) {
+        // An editorial alt correction cannot select, replace, resize or delete
+        // an existing asset. Every other media property must stay identical.
+        const before = e.before[key];
+        assert(value && before && typeof value === 'object' && !Array.isArray(value));
+        assert(typeof value.alt === 'string' && value.alt.trim() && value.alt.length <= 500);
+        assert.deepEqual({...value,alt:before.alt},before,'Only the existing image alt text may change.');
+      } else if (['sections', 'content', 'sources'].includes(key)) {
         assert(Array.isArray(value) && value.length <= 100, 'Invalid content list.');
         if (key === 'sections') for (const section of value) {
           assert(Object.keys(section).every(k => ['section_key', 'heading', 'display_heading', 'text', 'cta_label', 'cta_href'].includes(k)), 'Sections may not change media.');
@@ -75,13 +82,30 @@ export function validateRefresh(entries, menu) {
   return { entries, menu };
 }
 
+function completedData(data, expected) {
+  // Native image saves hydrate these media-library values. Ignore additions
+  // only when recognizing an already-completed entry, so it is not rewritten.
+  // The initial-state comparison below remains exact, including all metadata.
+  return Object.fromEntries(Object.entries(data).map(([key, value]) => {
+    const wanted = expected[key];
+    if (!['image', 'hero_image'].includes(key) || !value?.meta || !wanted?.meta
+      || typeof value.meta !== 'object' || Array.isArray(value.meta)
+      || typeof wanted.meta !== 'object' || Array.isArray(wanted.meta)) return [key, value];
+    const meta = { ...value.meta };
+    for (const added of ['caption', 'blurhash', 'dominantColor']) {
+      if (!Object.hasOwn(wanted.meta, added)) delete meta[added];
+    }
+    return [key, { ...value, meta }];
+  }));
+}
+
 export function planCopy(response, entry) {
   assertNoDraft(response.item);
   assert.equal(response.item.status, 'published', 'This refresh only changes published entries; preserve the draft.');
   assert(response._rev && response.item.type === entry.collection && response.item.slug === entry.slug, 'Entry identity/revision mismatch.');
   const data = Object.fromEntries(Object.keys(entry.before).map(key => [key, response.item.data[key]]));
   const seo = entry.seoBefore ? { title: response.item.seo?.title ?? null, description: response.item.seo?.description ?? null } : undefined;
-  if (isDeepStrictEqual(data, entry.after) && isDeepStrictEqual(seo, entry.seoAfter)) return false;
+  if (isDeepStrictEqual(completedData(data, entry.after), entry.after) && isDeepStrictEqual(seo, entry.seoAfter)) return false;
   assert(isDeepStrictEqual(data, entry.before) && isDeepStrictEqual(seo, entry.seoBefore), `${entry.collection}/${entry.slug}: text/SEO differs from the exact initial or completed state. Preserve this edit or partial migration and review it; nothing overwritten.`);
   return true;
 }
@@ -96,7 +120,7 @@ export async function prepareRefresh(api, entries, menu) {
     assert(schema.supports.includes('revisions') && (!entry.seoAfter || schema.supports.includes('seo')));
     for (const [key, value] of Object.entries(entry.after)) {
       const field = schema.fields.find(f => f.slug === key);
-      const type = key === 'content' ? 'portableText' : ['sections', 'sources'].includes(key) ? 'repeater' : null;
+      const type = key === 'content' ? 'portableText' : ['sections', 'sources'].includes(key) ? 'repeater' : ['image', 'hero_image'].includes(key) ? 'image' : null;
       assert(field && (type ? field.type === type : ['text', 'string'].includes(field.type)), `${c}.${key}: incompatible schema.`);
       if (typeof value === 'string') { assert(!field.required || value.trim()); assert(!field.validation?.maxLength || value.length <= field.validation.maxLength); }
     }

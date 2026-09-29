@@ -49,7 +49,7 @@ try {
           }),
           mainText, wordCount: mainText.split(/\s+/).filter(Boolean).length,
           links: [...document.querySelectorAll('a[href]')].map(node => ({ href: node.getAttribute('href'), text: compact(node.textContent) || node.getAttribute('aria-label') || '', inMain: !!node.closest('main'), target: node.target, rel: node.rel })),
-          images: [...document.querySelectorAll('img')].map(node => ({ src: node.getAttribute('src'), alt: node.getAttribute('alt'), width: node.getAttribute('width'), height: node.getAttribute('height'), loading: node.loading, srcset: node.getAttribute('srcset'), sizes: node.getAttribute('sizes') })),
+          images: [...document.querySelectorAll('img')].map(node => ({ src: node.getAttribute('src'), originalSrc: node.getAttribute('data-original-src'), alt: node.getAttribute('alt'), width: node.getAttribute('width'), height: node.getAttribute('height'), loading: node.loading, srcset: node.getAttribute('srcset'), sizes: node.getAttribute('sizes') })),
           forms: [...document.querySelectorAll('form')].map(node => ({ action: node.getAttribute('action'), method: node.getAttribute('method'), fields: [...node.querySelectorAll('input')].map(input => ({ name: input.name, type: input.type, required: input.required, checked: input.checked })) })),
           ids: [...document.querySelectorAll('[id]')].map(node => node.id), domNodes: document.querySelectorAll('*').length,
         };

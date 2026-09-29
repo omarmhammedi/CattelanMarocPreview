@@ -4,6 +4,7 @@ import react from '@astrojs/react';
 import emdash from 'emdash/astro';
 import { d1, r2 } from '@emdash-cms/cloudflare';
 import { cataloguePlugin } from './src/plugins/catalogue/index.ts';
+import { siteSeoPlugin } from './src/plugins/seo/index.ts';
 
 export default defineConfig({
   output: 'server',
@@ -33,7 +34,7 @@ export default defineConfig({
     emdash({
       database: d1({ binding: 'DB', session: 'disabled' }),
       storage: r2({ binding: 'MEDIA' }),
-      plugins: [cataloguePlugin()],
+      plugins: [cataloguePlugin(), siteSeoPlugin()],
     }),
   ],
   devToolbar: { enabled: false },

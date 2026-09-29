@@ -5,6 +5,7 @@ import SeoHead from '../components/SeoHead.astro';
 import PageMenu from '../components/PageMenu.astro';
 import Brand from '../components/Brand.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
+import type { BreadcrumbItem } from 'emdash';
 
 interface Props {
   title: string;
@@ -12,9 +13,10 @@ interface Props {
   site: any;
   image?: any;
   entry?: any;
+  breadcrumbs?: BreadcrumbItem[];
 }
 
-const { title, description, site, image, entry } = Astro.props;
+const { title, description, site, image, entry, breadcrumbs } = Astro.props;
 const path = Astro.url.pathname;
 const navigation = site.navigation || [];
 ---
@@ -22,7 +24,7 @@ const navigation = site.navigation || [];
 <html lang="fr" data-mode="dark">
   <head>
     <meta charset="UTF-8" />
-    <SeoHead title={title} description={description} site={site} image={image} entry={entry} article={entry?._collection === 'posts'} />
+    <SeoHead title={title} description={description} site={site} image={image} entry={entry} breadcrumbs={breadcrumbs} article={entry?._collection === 'posts'} />
     <meta name="theme-color" content="#0E2028" />
     <slot name="head" />
   </head>

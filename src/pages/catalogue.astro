@@ -1,4 +1,5 @@
 ---
+import { coverSizes, imageAttributes } from '../lib/images';
 import EditorialSection from '../components/EditorialSection.astro';
 import PageLayout from '../layouts/PageLayout.astro';
 import CatalogueForm from '../components/CatalogueForm.astro';
@@ -16,17 +17,17 @@ const descriptionRepeatsNotice = catalogue?.isPlaceholder && site.placeholderNot
       <h1 {...page.entry?.edit?.title}>{page.title}</h1>
       {page.intro && <p class="page-lead" {...page.entry?.edit?.intro}>{page.intro}</p>}
       {page.body?.length > 0 && <div class="page-prose"><PortableText value={page.body} /></div>}
-      {Astro.props.previewOnly ? <p class="page-note">Prévisualisation du catalogue : le formulaire public continue à utiliser l’édition publiée.</p> : catalogue ? <CatalogueForm id="catalogue-request" catalogueId={catalogue.id} labels={site.form} /> : <div class="catalogue-unavailable" role="status"><p>{site.form.unavailable}</p><a class="text-link" href="/showroom-casablanca/#showroom-contact">{site.labels.contact}<span aria-hidden="true">↗</span></a></div>}
+      {Astro.props.previewOnly ? <p class="page-note">Prévisualisation du catalogue : le formulaire public continue à utiliser l’édition publiée.</p> : catalogue ? <CatalogueForm id="catalogue-request" site={site} catalogue={catalogue} catalogueId={catalogue.id} labels={site.form} /> : <div class="catalogue-unavailable" role="status"><p>{site.form.unavailable}</p><a class="text-link" href="/showroom-casablanca/#showroom-contact">{site.labels.contact}<span aria-hidden="true">↗</span></a></div>}
     </div>
     {catalogue && <aside class="catalogue-page-preview" data-page-reveal>
       <div class="catalogue-book">
-        {catalogue.cover && <img src={catalogue.cover.src} alt={catalogue.cover.alt || catalogue.title} width={catalogue.cover.width} height={catalogue.cover.height} fetchpriority="high" />}
+        {catalogue.cover && <img {...imageAttributes(catalogue.cover, coverSizes(catalogue.cover, .73, .73, 38), 1080)} alt={catalogue.cover.alt || catalogue.title} fetchpriority="high" />}
         <div class="catalogue-book-title"><span>{site.name}</span><p>{catalogue.edition || catalogue.title}</p></div>
       </div>
       <div class="catalogue-description"><h2>{catalogue.title}</h2>{catalogue.description && !descriptionRepeatsNotice && <p>{catalogue.description}</p>}{catalogue.isPlaceholder && site.placeholderNotice && <p class="page-note">{site.placeholderNotice}</p>}</div>
     </aside>}
   </section>
-  {page.image && <figure class="page-gutter page-full-figure page-hero-figure" data-page-reveal><div class="page-image"><img src={page.image.src} alt={page.image.alt || ''} width={page.image.width} height={page.image.height} loading="lazy" /></div></figure>}
+  {page.image && <figure class="page-gutter page-full-figure page-hero-figure" data-page-reveal><div class="page-image"><img {...imageAttributes(page.image, '100vw', 1600)} alt={page.image.alt || ''} loading="lazy" /></div></figure>}
   {page.sections?.length > 0 && <section class="page-cta page-gutter">
     {page.sections.map((section: any) => <EditorialSection section={section} prominent />)}
   </section>}

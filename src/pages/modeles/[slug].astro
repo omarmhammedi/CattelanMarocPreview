@@ -7,6 +7,6 @@ const [model,site]=await Promise.all([Astro.props.preloaded || getModel(Astro.pa
 if(!model)return new Response('Modèle introuvable',{status:404});
 const families=await getModelFamilies(model.slug);
 ---
-<PageLayout title={model.seoTitle || model.title} description={model.description} site={site} image={model.image} entry={model.entry}>
+<PageLayout title={model.seoTitle || model.title} description={model.description} site={site} image={model.image} entry={model.entry} breadcrumbs={[{name:site.labels.collections || 'Collections',url:'/collections/'},...(families[0]?[{name:families[0].title,url:families[0].href}]:[]),{name:model.title,url:model.href}]}>
   <ModelDetail model={model} site={site} families={families}/>
 </PageLayout>

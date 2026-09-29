@@ -1,0 +1,616 @@
+{
+  "title": "Transfert initial des images — préproduction Cattelan Italia Maroc",
+  "date": "2026-09-29",
+  "timeZone": "America/Toronto",
+  "origin": "https://cattelan-maroc-preview.omar-8b8.workers.dev",
+  "workerVersionBefore": "8bf5538b-a76b-4ab8-b498-6e249f4738b8",
+  "workerVersionAfter": "058227fd-2705-441b-9152-6f12ecec196c",
+  "method": "Chromium CDP Network.loadingFinished.encodedDataLength for HTTP image responses; includes response headers.",
+  "browserVersion": "151.0.7922.34",
+  "conditions": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "deviceScaleFactor": 1,
+    "theme": "dark",
+    "browserCacheDisabled": true,
+    "serviceWorkers": "block",
+    "freshContextPerPage": true,
+    "networkThrottling": "none",
+    "scroll": false,
+    "stableIntervalMs": 3000
+  },
+  "interpretation": "Observed total image transfer in two controlled initial-page runs. Image counts can rise when thumbnails use their own smaller renditions instead of sharing original-image URLs.",
+  "limits": [
+    "One controlled run per page, not a statistical loading-time or Core Web Vitals assessment.",
+    "Viewport emulation at DPR 1; no physical iPhone or cellular network measurement.",
+    "Browser cache is disabled; Cloudflare edge-cache state is observed but not reset.",
+    "Lazy images requested automatically near the initial viewport are included; there is no scrolling.",
+    "The deployed versions also differ in editorial copy and metadata. This measures total initial image transfer, not compression alone or an isolated encoding experiment."
+  ],
+  "reproduce": {
+    "before": "node tests/seo-image-transfer.mjs before",
+    "after": "node tests/seo-image-transfer.mjs after"
+  },
+  "before": {
+    "startedAtToronto": "29 septembre 2026 à 18 h 29 min 08 s HAE",
+    "finishedAtToronto": "29 septembre 2026 à 18 h 29 min 25 s HAE",
+    "passed": true,
+    "pages": [
+      {
+        "path": "/modeles/greta/",
+        "measuredAtToronto": "29 septembre 2026 à 18 h 29 min 19 s HAE",
+        "status": 200,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "settleMsAfterLoad": 4382,
+        "pendingRequests": 0,
+        "imageRequestCount": 10,
+        "uniqueImageUrlCount": 10,
+        "encodedImageTransferBytes": 2567232,
+        "browserCachedImageCount": 0,
+        "images": [
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_emdash/api/media/file/01M3J7SBK89RCDYCVP6RPJFR35.png",
+            "status": 200,
+            "mimeType": "image/png",
+            "encodedTransferBytes": 15230,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_emdash/api/media/file/01M3J7SBGYYWXQMYKH1WYETSD3.png",
+            "status": 200,
+            "mimeType": "image/png",
+            "encodedTransferBytes": 17030,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_emdash/api/media/file/01M3N0R4HG3FRCACJNQJ5J1EEA.jpg",
+            "status": 200,
+            "mimeType": "image/jpeg",
+            "encodedTransferBytes": 639360,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_emdash/api/media/file/01M3N0R5NB8Z0MAWRRY12P3W5V.jpg",
+            "status": 200,
+            "mimeType": "image/jpeg",
+            "encodedTransferBytes": 721320,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_emdash/api/media/file/01M3N0R6ZKWSGXSCZDP1EREH4E.jpg",
+            "status": 200,
+            "mimeType": "image/jpeg",
+            "encodedTransferBytes": 307586,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_emdash/api/media/file/01M3N0R78FPFG0KPGCNYB2YQ7C.jpg",
+            "status": 200,
+            "mimeType": "image/jpeg",
+            "encodedTransferBytes": 241609,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_emdash/api/media/file/01M3N0R7PZZ0FYB0P6N7C6Y70V.jpg",
+            "status": 200,
+            "mimeType": "image/jpeg",
+            "encodedTransferBytes": 145605,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_emdash/api/media/file/01M3N0R7YT3T2XTGDZ8YR5W8W7.jpg",
+            "status": 200,
+            "mimeType": "image/jpeg",
+            "encodedTransferBytes": 293551,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_emdash/api/media/file/01M3N0R87RCRW90VWPMK7YBN8X.jpg",
+            "status": 200,
+            "mimeType": "image/jpeg",
+            "encodedTransferBytes": 85739,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_emdash/api/media/file/01M3N0R90Y0SQN4MMJWXJPQZWW.jpg",
+            "status": 200,
+            "mimeType": "image/jpeg",
+            "encodedTransferBytes": 100202,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "path": "/",
+        "measuredAtToronto": "29 septembre 2026 à 18 h 29 min 25 s HAE",
+        "status": 200,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "settleMsAfterLoad": 4615,
+        "pendingRequests": 0,
+        "imageRequestCount": 7,
+        "uniqueImageUrlCount": 7,
+        "encodedImageTransferBytes": 3321497,
+        "browserCachedImageCount": 0,
+        "images": [
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_emdash/api/media/file/01M3J7SBK89RCDYCVP6RPJFR35.png",
+            "status": 200,
+            "mimeType": "image/png",
+            "encodedTransferBytes": 15232,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_emdash/api/media/file/01M3J7SBGYYWXQMYKH1WYETSD3.png",
+            "status": 200,
+            "mimeType": "image/png",
+            "encodedTransferBytes": 16538,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_emdash/api/media/file/01M3J7SAP7G4EGCR7M1CHTGG2E.jpg",
+            "status": 200,
+            "mimeType": "image/jpeg",
+            "encodedTransferBytes": 260563,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_emdash/api/media/file/01M3N0P0GN7RR34KR1PJZ98X10.jpg",
+            "status": 200,
+            "mimeType": "image/jpeg",
+            "encodedTransferBytes": 202031,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_emdash/api/media/file/01M3J7S9CMS91DTYNP40308G9W.jpg",
+            "status": 200,
+            "mimeType": "image/jpeg",
+            "encodedTransferBytes": 260973,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_emdash/api/media/file/01M3J7S9JDDQG2TDMKSWC22XTM.jpg",
+            "status": 200,
+            "mimeType": "image/jpeg",
+            "encodedTransferBytes": 419834,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_emdash/api/media/file/01M3Q6MRRPXFR3GKSWVR5MBFB4.jpg",
+            "status": 200,
+            "mimeType": "image/jpeg",
+            "encodedTransferBytes": 2146326,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          }
+        ]
+      }
+    ],
+    "validation": {
+      "javascriptErrors": 0,
+      "attemptedWrites": 0,
+      "blockedPrivateRequests": 0
+    }
+  },
+  "after": {
+    "startedAtToronto": "29 septembre 2026 à 19 h 03 min 11 s HAE",
+    "finishedAtToronto": "29 septembre 2026 à 19 h 03 min 28 s HAE",
+    "passed": true,
+    "pages": [
+      {
+        "path": "/modeles/greta/",
+        "measuredAtToronto": "29 septembre 2026 à 19 h 03 min 21 s HAE",
+        "status": 200,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "settleMsAfterLoad": 4946,
+        "pendingRequests": 0,
+        "imageRequestCount": 15,
+        "uniqueImageUrlCount": 15,
+        "encodedImageTransferBytes": 206044,
+        "browserCachedImageCount": 0,
+        "images": [
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3J7SBK89RCDYCVP6RPJFR35.png&w=240&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 3975,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3J7SBGYYWXQMYKH1WYETSD3.png&w=240&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 6568,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3N0R4HG3FRCACJNQJ5J1EEA.jpg&w=480&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 8847,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3N0R4HG3FRCACJNQJ5J1EEA.jpg&w=240&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 4346,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3N0R5NB8Z0MAWRRY12P3W5V.jpg&w=240&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 4042,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3N0R6ZKWSGXSCZDP1EREH4E.jpg&w=240&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 12929,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3N0R78FPFG0KPGCNYB2YQ7C.jpg&w=240&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 14641,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3N0R7PZZ0FYB0P6N7C6Y70V.jpg&w=240&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 7399,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3N0R7YT3T2XTGDZ8YR5W8W7.jpg&w=240&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 11185,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3N0R87RCRW90VWPMK7YBN8X.jpg&w=240&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 5769,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3N0R90Y0SQN4MMJWXJPQZWW.jpg&w=240&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 5052,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3N0R5NB8Z0MAWRRY12P3W5V.jpg&w=480&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 8569,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3N0R6ZKWSGXSCZDP1EREH4E.jpg&w=480&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 45772,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3N0R78FPFG0KPGCNYB2YQ7C.jpg&w=480&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 49346,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3N0R7PZZ0FYB0P6N7C6Y70V.jpg&w=480&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 17604,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "path": "/",
+        "measuredAtToronto": "29 septembre 2026 à 19 h 03 min 28 s HAE",
+        "status": 200,
+        "scroll": {
+          "x": 0,
+          "y": 0
+        },
+        "settleMsAfterLoad": 3228,
+        "pendingRequests": 0,
+        "imageRequestCount": 7,
+        "uniqueImageUrlCount": 7,
+        "encodedImageTransferBytes": 454892,
+        "browserCachedImageCount": 0,
+        "images": [
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3J7SBK89RCDYCVP6RPJFR35.png&w=240&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 4356,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3J7SBGYYWXQMYKH1WYETSD3.png&w=240&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 6301,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3J7SAP7G4EGCR7M1CHTGG2E.jpg&w=480&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 50620,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3N0P0GN7RR34KR1PJZ98X10.jpg&w=735&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 150864,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3J7S9CMS91DTYNP40308G9W.jpg&w=480&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 50629,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3J7S9JDDQG2TDMKSWC22XTM.jpg&w=480&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 127635,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          },
+          {
+            "url": "https://cattelan-maroc-preview.omar-8b8.workers.dev/_image?href=%2F_emdash%2Fapi%2Fmedia%2Ffile%2F01M3Q6MRRPXFR3GKSWVR5MBFB4.jpg&w=480&f=webp&q=85",
+            "status": 200,
+            "mimeType": "image/webp",
+            "encodedTransferBytes": 64487,
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "servedFromCache": false,
+            "edgeCacheStatus": null,
+            "cacheControl": "public, max-age=0, must-revalidate"
+          }
+        ]
+      }
+    ],
+    "validation": {
+      "javascriptErrors": 0,
+      "attemptedWrites": 0,
+      "blockedPrivateRequests": 0
+    }
+  },
+  "comparison": [
+    {
+      "path": "/modeles/greta/",
+      "beforeImageRequests": 10,
+      "afterImageRequests": 15,
+      "beforeEncodedBytes": 2567232,
+      "afterEncodedBytes": 206044,
+      "encodedBytesSaved": 2361188,
+      "reductionPercent": 91.97
+    },
+    {
+      "path": "/",
+      "beforeImageRequests": 7,
+      "afterImageRequests": 7,
+      "beforeEncodedBytes": 3321497,
+      "afterEncodedBytes": 454892,
+      "encodedBytesSaved": 2866605,
+      "reductionPercent": 86.3
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 ---
+import { coverSizes, imageAttributes } from '../../lib/images';
 import EditorialSection from '../../components/EditorialSection.astro';
 import PageLayout from '../../layouts/PageLayout.astro';
 import { PortableText } from 'emdash/ui';
@@ -13,11 +14,11 @@ if (!page) return new Response('Page introuvable', { status: 404 });
     <h1 {...page.entry?.edit?.title}>{page.title}</h1>
     {page.intro && <p class="page-lead" {...page.entry?.edit?.intro}>{page.intro}</p>}
   </section>
-  {page.image && <figure class="page-gutter page-full-figure page-hero-figure" data-page-reveal><div class="page-image"><img src={page.image.src} alt={page.image.alt || ''} width={page.image.width} height={page.image.height} fetchpriority="high" /></div></figure>}
+  {page.image && <figure class="page-gutter page-full-figure page-hero-figure" data-page-reveal><div class="page-image"><img {...imageAttributes(page.image, '100vw', 1600)} alt={page.image.alt || ''} fetchpriority="high" /></div></figure>}
   <section class="journal-grid page-gutter" aria-label="Articles du Journal">
     {posts.map((post: any, index: number) => <article class:list={['journal-card', { 'journal-card-featured': index === 0 }]} data-page-reveal>
       <a href={`/journal/${post.slug}/`}>
-        {post.image && <div class="page-image"><img src={post.image.src} alt={post.image.alt || ''} width={post.image.width} height={post.image.height} loading={index === 0 ? 'eager' : 'lazy'} /></div>}
+        {post.image && <div class="page-image"><img {...imageAttributes(post.image, coverSizes(post.image, 1.1, 1.1, 52), 1600)} alt={post.image.alt || ''} loading={index === 0 ? 'eager' : 'lazy'} /></div>}
         <div class="journal-card-copy"><p class="kick">{post.category}</p><h2>{post.title}</h2><p>{post.excerpt}</p><span class="text-link">{site.labels.readArticle} <span aria-hidden="true">↗</span></span></div>
       </a>
     </article>)}

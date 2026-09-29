@@ -76,7 +76,7 @@ button, input { font-family: inherit; }
 #accueil .card .veil { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(10,24,30,0.86) 0%, rgba(10,24,30,0.35) 45%, rgba(10,24,30,0.15) 100%); opacity: var(--g); }
 #accueil .over { position: absolute; left: var(--gut); right: var(--gut); bottom: 7vh; display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; opacity: var(--t); transform: translateY(calc((1 - var(--t)) * 30px)); pointer-events: none; }
 #accueil .over.on { pointer-events: auto; }
-#accueil .over h2 { margin: 16px 0 0; font-size: calc(var(--u) * 2.4); font-weight: 200; line-height: 1.2; max-width: 22em; text-wrap: balance; }
+#accueil .over .hero-intro { margin: 16px 0 0; font-size: calc(var(--u) * 2.4); font-weight: 200; line-height: 1.2; max-width: 22em; text-wrap: balance; }
 #accueil .over .row { margin-top: 28px; }
 #accueil .hint { font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted); }
 .m #m-accueil h1 { text-transform: none; font-size: clamp(30px, 8.6vw, 44px); line-height: 1.12; letter-spacing: -0.01em; }
@@ -113,7 +113,7 @@ button, input { font-family: inherit; }
 .cc.cta { --r: 0.62; }
 .cc.cta .frame { display: flex; flex-direction: column; justify-content: space-between; padding: calc(var(--u) * 2.6); background: var(--bg2); border: 1px solid var(--hair); }
 .cc.cta .frame svg.deco { width: 60%; height: auto; opacity: 0.9; }
-.cc.cta .frame h3 { margin: 0; font-size: calc(var(--u) * 2.8); font-weight: 200; line-height: 1.1; }
+.cc.cta .frame .cta-heading { margin: 0; font-size: calc(var(--u) * 2.8); font-weight: 200; line-height: 1.1; color: inherit; }
 #collections .bar { position: absolute; left: var(--gut); right: var(--gut); bottom: 5vh; height: 1px; background: var(--hair); }
 #collections .bar i { position: absolute; left: 0; top: 0; height: 1px; width: calc(var(--h) * 100%); background: var(--ink); }
 
@@ -264,7 +264,7 @@ svg.map .m-zone { fill: rgba(var(--ink-rgb),0.05); stroke: rgba(var(--ink-rgb),0
 .brand-name { max-width: 12em; font-weight: 300; line-height: 1.15; }
 .hd .brand-name { width: max(110px, calc(var(--u) * 9)); font-size: 16px; text-align: center; }
 .ft .brand-name { width: 180px; font-size: 28px; }
-.section-image { width: 100%; max-height: 22vh; object-fit: cover; }
+.section-image { width: 100%; height: auto; max-height: 22vh; object-fit: cover; }
 .section-link, .article-link { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; line-height: 1.6; }
 .section-link { align-self: flex-start; border-bottom: 1px solid var(--hair); padding-bottom: 5px; }
 .article-link { color: var(--muted); }

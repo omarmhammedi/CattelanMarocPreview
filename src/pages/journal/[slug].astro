@@ -1,4 +1,5 @@
 ---
+import { imageAttributes } from '../../lib/images';
 import PageLayout from '../../layouts/PageLayout.astro';
 import { PortableText } from 'emdash/ui';
 import { getPost, getSite } from '../../lib/content';
@@ -19,7 +20,7 @@ const hasDate = publishedDate && !Number.isNaN(publishedDate.getTime());
       {hasDate && <time class="article-date" datetime={publishedDate!.toISOString()}>{publishedDate!.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</time>}
     </header>
     {post.image && <figure class="page-gutter page-full-figure article-figure" data-page-reveal>
-      <div class="page-image"><img src={post.image.src} alt={post.image.alt || ''} width={post.image.width} height={post.image.height} fetchpriority="high" /></div>
+      <div class="page-image"><img {...imageAttributes(post.image, '100vw', 1600)} alt={post.image.alt || ''} fetchpriority="high" /></div>
       {post.imageCaption && <figcaption>{post.imageCaption}</figcaption>}
     </figure>}
     <div class="page-gutter article-reading"><div class="page-prose"><PortableText value={post.body} /></div></div>

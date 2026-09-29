@@ -1,4 +1,5 @@
 ---
+import { coverSizes, imageAttributes } from '../../lib/images';
 import EditorialSection from '../../components/EditorialSection.astro';
 import PageLayout from '../../layouts/PageLayout.astro';
 import { PortableText } from 'emdash/ui';
@@ -13,11 +14,11 @@ if (!page) return new Response('Page introuvable', { status: 404 });
     <h1 {...page.entry?.edit?.title}>{page.title}</h1>
     {page.intro && <p class="page-lead" {...page.entry?.edit?.intro}>{page.intro}</p>}
   </section>
-  {page.image && <figure class="page-gutter page-full-figure page-hero-figure" data-page-reveal><div class="page-image"><img src={page.image.src} alt={page.image.alt || ''} width={page.image.width} height={page.image.height} fetchpriority="high" /></div></figure>}
+  {page.image && <figure class="page-gutter page-full-figure page-hero-figure" data-page-reveal><div class="page-image"><img {...imageAttributes(page.image, '100vw', 1600)} alt={page.image.alt || ''} fetchpriority="high" /></div></figure>}
   <section class="families-grid page-gutter" aria-label="Univers de mobilier">
     {families.map((family: any, index: number) => <a class="family-tile" href={`/collections/${family.slug}/`} data-page-reveal>
       <div class="page-image family-tile-image">
-        {family.image && <img src={family.image.src} alt={family.image.alt || family.shortTitle} width={family.image.width} height={family.image.height} loading={index < 2 ? 'eager' : 'lazy'} />}
+        {family.image && <img {...imageAttributes(family.image, coverSizes(family.image, 1/1.08, 1/1.08, 45), 1600)} alt={family.image.alt || family.shortTitle} loading={index < 2 ? 'eager' : 'lazy'} />}
         <span class="tile-index">{String(index + 1).padStart(2, '0')}</span>
         <span class="tile-arrow" aria-hidden="true">↗</span>
       </div>

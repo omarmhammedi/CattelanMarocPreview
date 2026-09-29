@@ -42,7 +42,7 @@ try {
     assert.match(page.headers.cacheControl || '', /no-store/u, `${page.path}: no-store`);
     assert.equal(page.lang, 'fr', `${page.path}: language`);
     assert(page.title.length > 0, `${page.path}: title present`);
-    if (page.path !== '/confidentialite/') assert(page.description[0]?.length > 0, `${page.path}: editorial description present`);
+    assert(page.description[0]?.length > 0, `${page.path}: description present`);
     assert.equal(page.h1.length, page.path === '/' ? 2 : 1, `${page.path}: responsive title count`);
     assert(page.jsonLd.every(value => !value.parseError), `${page.path}: structured data parses`);
     for (const value of [...page.ogImage, ...page.images.map(image => image.src), ...page.links.map(link => link.href)]) {
@@ -50,7 +50,7 @@ try {
     }
   }
   results.checks.push({ name: '28 routes, metadata, canonicals, noindex, no-store and internal links', count: 28 });
-  results.limits = ['The existing preview privacy page has no meta-description; the 27 editorial pages do. This check does not rewrite page content.'];
+  results.limits = ['This anonymous smoke check verifies the existing preproduction; it does not authorize indexing or real catalogue collection.'];
   const robots = audit.variants.find(item => item.path === '/robots.txt');
   assert.equal(robots?.status, 200);
   assert.match(robots.body, /Disallow:\s*\/\s*(?:\n|$)/u);
@@ -64,7 +64,7 @@ try {
   const showroom = audit.pages.find(page => page.path === '/showroom-casablanca/');
   const selected = showroom.images.find(image => image.alt === ownerPhoto.image.alt);
   assert(selected, 'Owner photograph is rendered on showroom page');
-  const imageUrl = new URL(selected.src, origin);
+  const imageUrl = new URL(selected.originalSrc || selected.src, origin);
   assert.equal(imageUrl.origin, origin);
   assert(imageUrl.pathname.startsWith('/_emdash/api/media/file/'));
   const response = await fetch(imageUrl, { redirect: 'manual', signal: AbortSignal.timeout(30000) });
@@ -75,8 +75,11 @@ try {
   const sha256 = createHash('sha256').update(bytes).digest('hex');
   assert.equal(sha256, ownerPhoto.image.sha256);
   const home = audit.pages.find(page => page.path === '/');
-  assert(home.images.some(image => new URL(image.src, origin).href === imageUrl.href), 'Homepage shares the published photo');
-  results.checks.push({ name: 'Owner photo bytes identical on remote site', bytes: bytes.byteLength, sha256 });
+  assert(home.images.some(image => new URL(image.originalSrc || image.src, origin).href === imageUrl.href), 'Homepage shares the published photo');
+  const rendition = await fetch(new URL(selected.src, origin), {redirect:'error',signal:AbortSignal.timeout(30000)});
+  assert.equal(rendition.status,200); assert.match(rendition.headers.get('content-type') || '', /^image\//u);
+  await rendition.arrayBuffer();
+  results.checks.push({ name: 'Owner original photo bytes preserved and displayed rendition available', bytes: bytes.byteLength, sha256 });
   results.pages = audit.pages.map(({ path, status, canonical, headers }) => ({ path, status, canonical, headers }));
   results.passed = true;
   console.log(JSON.stringify({ passed: true, routes: audit.pages.length, checks: results.checks }, null, 2));

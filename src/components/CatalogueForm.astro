@@ -1,8 +1,17 @@
 ---
 import { getSite, getCatalogue } from '../lib/content';
-interface Props { id: string; catalogueId?: string; labels?: Record<string, string>; compact?: boolean; }
+interface Props {
+  id: string; catalogueId?: string; labels?: Record<string, string>; compact?: boolean;
+  site?: {form: Record<string, string>; labels: {contact?: string}};
+  catalogue?: {id: string; downloadLabel: string} | null;
+}
 const { id, compact = false } = Astro.props;
-const [site, catalogue] = await Promise.all([getSite(), getCatalogue()]);
+// Parent pages already resolved the published or signed-preview context.
+// Explicit null means no active catalogue; only absent props trigger a read.
+const [site, catalogue] = await Promise.all([
+  Astro.props.site ?? getSite(),
+  Astro.props.catalogue === undefined ? getCatalogue() : Astro.props.catalogue,
+]);
 const labels = { ...site.form, ...Astro.props.labels };
 const catalogueId = Astro.props.catalogueId || catalogue?.id;
 const contactLabel = site.labels.contact || 'Coordonnées du showroom';

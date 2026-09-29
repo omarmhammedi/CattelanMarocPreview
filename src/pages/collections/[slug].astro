@@ -1,4 +1,5 @@
 ---
+import { imageAttributes } from '../../lib/images';
 import PageLayout from '../../layouts/PageLayout.astro';
 import ModelCard from '../../components/ModelCard.astro';
 import { PortableText } from 'emdash/ui';
@@ -14,7 +15,7 @@ if (!family) return new Response('Collection introuvable', { status: 404 });
     <p class="page-lead" {...family.entry?.edit?.intro}>{family.intro}</p>
   </section>
   {family.image && <figure class="page-gutter page-full-figure" data-page-reveal>
-    <div class="page-image"><img src={family.image.src} alt={family.image.alt || family.shortTitle} width={family.image.width} height={family.image.height} fetchpriority="high" /></div>
+    <div class="page-image"><img {...imageAttributes(family.image, '100vw', 1600)} alt={family.image.alt || family.shortTitle} fetchpriority="high" /></div>
     {family.imageCaption && <figcaption>{family.imageCaption}</figcaption>}
   </figure>}
   {family.body?.length > 0 && <section class="page-gutter page-reading-section" data-page-reveal><div class="page-prose"><PortableText value={family.body} /></div></section>}

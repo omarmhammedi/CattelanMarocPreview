@@ -1,4 +1,5 @@
 ---
+import { imageAttributes } from '../lib/images';
 import '../styles/models.css';
 import {PortableText} from 'emdash/ui';
 import {finishGroupLabel, finishHasSeparateCode, finishNameLabel} from '../lib/model-labels';
@@ -94,7 +95,7 @@ for (const finish of model.finishes || []) {
         <a class="text-link model-contact-link" href="/showroom-casablanca/#showroom-contact">{contactLabel}<span aria-hidden="true">↗</span></a>
       </div>
       {model.image?.src && <figure class="model-hero-figure">
-        <div class="page-image model-hero-image"><img src={model.image.src} alt={model.image.alt || model.title} width={model.image.width} height={model.image.height} fetchpriority="high" /></div>
+        <div class="page-image model-hero-image"><img {...imageAttributes(model.image, '(max-width: 850px) 100vw, 54vw', 1600)} alt={model.image.alt || model.title} fetchpriority="high" /></div>
         {(model.imageCaption || model.image.caption) && <figcaption class="page-note">{model.imageCaption || model.image.caption}</figcaption>}
       </figure>}
     </div>
@@ -109,13 +110,13 @@ for (const finish of model.finishes || []) {
     <div class="section-heading" data-page-reveal><h2 id="model-gallery-heading">Photos</h2></div>
     {gallery.length > 1 && <nav class="model-gallery-thumbnails" aria-label={`Les vues de ${model.title}`}>
       {gallery.map((picture, index) => <a href={`#model-view-${index + 1}`} aria-label={`${model.title} — voir la vue ${index + 1}`}>
-        <img src={picture.src} alt="" width={picture.width} height={picture.height} loading="lazy" />
+        <img {...imageAttributes(picture, '(max-width: 500px) 70px, clamp(70px, 8vw, 116px)', 240)} alt="" loading="lazy" />
         <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
       </a>)}
     </nav>}
     <div class="model-gallery-grid">
       {gallery.map((picture, index) => <figure id={`model-view-${index + 1}`} class="model-gallery-view" tabindex="-1" data-page-reveal>
-        <div class="page-image"><img src={picture.src} alt={picture.alt || `${model.title} — vue ${index + 1}`} width={picture.width} height={picture.height} loading="lazy" /></div>
+        <div class="page-image"><img {...imageAttributes(picture, index % 3 === 0 ? '92vw' : '(max-width: 500px) 100vw, 45vw', 1600)} alt={picture.alt || `${model.title} — vue ${index + 1}`} loading="lazy" /></div>
         {picture.caption && <figcaption class="page-note">{picture.caption}</figcaption>}
       </figure>)}
     </div>

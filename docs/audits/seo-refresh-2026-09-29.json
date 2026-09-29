@@ -1,0 +1,807 @@
+{
+  "recordedAt": "2026-09-29T23:32:32.699Z",
+  "timezone": "America/Toronto",
+  "origin": "https://cattelan-maroc-preview.omar-8b8.workers.dev",
+  "workerVersion": "a4eed856-99ec-435e-bc14-d1361c68c7c8",
+  "publication": {
+    "entries": 27,
+    "nativeSeoPairs": 6,
+    "imageAltOccurrences": 12,
+    "finalDryRunMutations": 0
+  },
+  "preservation": {
+    "verifiedAt": "2026-09-29T23:09:40.522Z",
+    "integrity": "ok",
+    "foreignKeyViolations": 0,
+    "tableCount": 74,
+    "unchangedTables": [
+      {
+        "table": "_emdash_404_log",
+        "before": 4,
+        "after": 4
+      },
+      {
+        "table": "_emdash_api_tokens",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_authorization_codes",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_block_type_versions",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_block_types",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_byline_field_group_values",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_byline_field_values",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_byline_fields",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_bylines",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "table": "_emdash_collections",
+        "before": 6,
+        "after": 6
+      },
+      {
+        "table": "_emdash_comment_reactions",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_comments",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_content_bylines",
+        "before": 5,
+        "after": 5
+      },
+      {
+        "table": "_emdash_content_references",
+        "before": 17,
+        "after": 17
+      },
+      {
+        "table": "_emdash_cron_tasks",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_entry_locks",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_fields",
+        "before": 99,
+        "after": 99
+      },
+      {
+        "table": "_emdash_media_upload_attempts",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_media_usage_activation",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "table": "_emdash_media_usage_collection_deletions",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_media_usage_generation_writes",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_media_usage_reconciliations",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_menu_items",
+        "before": 4,
+        "after": 4
+      },
+      {
+        "table": "_emdash_menus",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "table": "_emdash_migrations",
+        "before": 86,
+        "after": 86
+      },
+      {
+        "table": "_emdash_migrations_lock",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "table": "_emdash_oauth_clients",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_redirect_write_lock",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "table": "_emdash_redirects",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_relations",
+        "before": 3,
+        "after": 3
+      },
+      {
+        "table": "_emdash_revision_prune_queue",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_sections",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_taxonomy_def_groups",
+        "before": 2,
+        "after": 2
+      },
+      {
+        "table": "_emdash_taxonomy_defs",
+        "before": 2,
+        "after": 2
+      },
+      {
+        "table": "_emdash_transfer_approvals",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_transfer_identity_map",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_transfer_media_blobs",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_transfer_operations",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_transfer_package_index",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_transfer_staged_files",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_widget_areas",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_emdash_widgets",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_plugin_indexes",
+        "before": 6,
+        "after": 6
+      },
+      {
+        "table": "_plugin_state",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "_plugin_storage",
+        "before": 4,
+        "after": 4
+      },
+      {
+        "table": "allowed_domains",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "audit_logs",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "auth_challenges",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "auth_tokens",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "content_taxonomies",
+        "before": 5,
+        "after": 5
+      },
+      {
+        "table": "credentials",
+        "before": 3,
+        "after": 3
+      },
+      {
+        "table": "ec_catalogues",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "table": "media",
+        "before": 625,
+        "after": 625
+      },
+      {
+        "table": "media_folders",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "oauth_accounts",
+        "before": 0,
+        "after": 0
+      },
+      {
+        "table": "taxonomies",
+        "before": 3,
+        "after": 3
+      },
+      {
+        "table": "users",
+        "before": 2,
+        "after": 2
+      }
+    ],
+    "changedTables": [
+      {
+        "table": "_emdash_device_codes",
+        "before": 2,
+        "after": 1
+      },
+      {
+        "table": "_emdash_media_usage",
+        "before": 1417,
+        "after": 1800
+      },
+      {
+        "table": "_emdash_media_usage_cleanup",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "table": "_emdash_media_usage_cleanup_fence",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "table": "_emdash_media_usage_index_status",
+        "before": 6,
+        "after": 6
+      },
+      {
+        "table": "_emdash_media_usage_sources",
+        "before": 31,
+        "after": 31
+      },
+      {
+        "table": "_emdash_media_usage_work",
+        "before": 4,
+        "after": 4
+      },
+      {
+        "table": "_emdash_oauth_tokens",
+        "before": 0,
+        "after": 2
+      },
+      {
+        "table": "_emdash_rate_limits",
+        "before": 37,
+        "after": 8
+      },
+      {
+        "table": "_emdash_seo",
+        "before": 17,
+        "after": 17
+      },
+      {
+        "table": "ec_families",
+        "before": 6,
+        "after": 6
+      },
+      {
+        "table": "ec_models",
+        "before": 11,
+        "after": 11
+      },
+      {
+        "table": "ec_pages",
+        "before": 5,
+        "after": 5
+      },
+      {
+        "table": "ec_posts",
+        "before": 5,
+        "after": 5
+      },
+      {
+        "table": "ec_site_content",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "table": "options",
+        "before": 12,
+        "after": 12
+      },
+      {
+        "table": "revisions",
+        "before": 99,
+        "after": 126
+      }
+    ],
+    "publishedEntries": 27,
+    "allUntargetedEditorialFieldsPreserved": true,
+    "existingRevisionsPreserved": 99,
+    "newRevisions": 27,
+    "users": 2,
+    "credentials": 3,
+    "media": 625
+  },
+  "validation": {
+    "unitTests": 140,
+    "astroFiles": 117,
+    "astroDiagnostics": 0,
+    "cloudflareBuildSeconds": 23.47,
+    "targetGuard": true,
+    "dryRun": true,
+    "seedReadOnlyValidation": true,
+    "cms": {
+      "passed": true,
+      "distinctChecks": 14,
+      "disposable": true,
+      "completedAt": "2026-09-29T23:19:57.959Z"
+    },
+    "catalogue": {
+      "checks": 11,
+      "disposable": true,
+      "pdfBytes": 23232,
+      "pdfSha256": "7fc069fe5b9aef04a950e93cd1b78f133bf4862de6f74189fb68d9c3ec694cf4"
+    },
+    "browser": [
+      {
+        "engine": "chromium",
+        "version": "a8c61922-0a9b-4f4a-b65f-08292ccbbc8e",
+        "layouts": 24,
+        "checks": [
+          "chromium dark 1440: six layouts, image selection and deferred finishes",
+          "chromium dark 390: six layouts, image selection and deferred finishes",
+          "chromium light 1440: six layouts, image selection and deferred finishes",
+          "chromium light 390: six layouts, image selection and deferred finishes"
+        ],
+        "errors": [],
+        "attemptedWrites": [],
+        "blockedPrivateRequests": [],
+        "failure": "",
+        "finishedAt": "2026-09-29T23:24:04.243Z"
+      },
+      {
+        "engine": "webkit",
+        "version": "a8c61922-0a9b-4f4a-b65f-08292ccbbc8e",
+        "layouts": 24,
+        "checks": [
+          "webkit dark 1440: six layouts, image selection and deferred finishes",
+          "webkit dark 390: six layouts, image selection and deferred finishes",
+          "webkit light 1440: six layouts, image selection and deferred finishes",
+          "webkit light 390: six layouts, image selection and deferred finishes"
+        ],
+        "errors": [],
+        "attemptedWrites": [],
+        "blockedPrivateRequests": [],
+        "failure": "",
+        "finishedAt": "2026-09-29T23:25:55.118Z"
+      }
+    ],
+    "interaction": {
+      "engine": "webkit",
+      "theme": "dark",
+      "layouts": 56,
+      "checks": [
+        "webkit/dark/1440 : 28 pages sans débordement, thème et DOM complets",
+        "webkit/dark/1440 : animations et composition de l’accueil",
+        "webkit/dark/1440 : showroom, guide, article, erreurs locales du formulaire et consentement facultatif",
+        "webkit/dark/1440 : thème au clavier et navigation accueil→famille→modèle",
+        "webkit/dark/390 : 28 pages sans débordement, thème et DOM complets",
+        "webkit/dark/390 : animations et composition de l’accueil",
+        "webkit/dark/390 : showroom, guide, article, erreurs locales du formulaire et consentement facultatif",
+        "webkit/dark/390 : thème au clavier et navigation accueil→famille→modèle",
+        "webkit/dark : contenu accessible avec mouvement réduit"
+      ],
+      "animationPositions": [
+        {
+          "selector": "#accueil",
+          "progress": 0.8,
+          "engine": "webkit",
+          "theme": "dark"
+        },
+        {
+          "selector": "#italie",
+          "progress": 0.3,
+          "engine": "webkit",
+          "theme": "dark"
+        },
+        {
+          "selector": "#collections",
+          "progress": 1,
+          "engine": "webkit",
+          "theme": "dark"
+        },
+        {
+          "selector": "#showroom",
+          "progress": 0.7,
+          "engine": "webkit",
+          "theme": "dark"
+        },
+        {
+          "selector": "#catalogue",
+          "progress": 0.6,
+          "engine": "webkit",
+          "theme": "dark"
+        }
+      ],
+      "passed": true,
+      "errors": [],
+      "attemptedWrites": [],
+      "blockedPrivateRequests": []
+    },
+    "finalForm": {
+      "workerVersion": "a4eed856-99ec-435e-bc14-d1361c68c7c8",
+      "startedAt": "2026-09-29T23:31:17.409Z",
+      "checks": [
+        {
+          "path": "/",
+          "theme": "dark",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "status": 200
+        },
+        {
+          "path": "/catalogue/",
+          "theme": "dark",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "status": 200
+        },
+        {
+          "path": "/",
+          "theme": "dark",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "status": 200
+        },
+        {
+          "path": "/catalogue/",
+          "theme": "dark",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "status": 200
+        },
+        {
+          "path": "/",
+          "theme": "light",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "status": 200
+        },
+        {
+          "path": "/catalogue/",
+          "theme": "light",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "status": 200
+        },
+        {
+          "path": "/",
+          "theme": "light",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "status": 200
+        },
+        {
+          "path": "/catalogue/",
+          "theme": "light",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "status": 200
+        }
+      ],
+      "errors": [],
+      "writes": [],
+      "passed": true,
+      "finishedAt": "2026-09-29T23:31:43.067Z"
+    },
+    "publicSmoke": {
+      "passed": true,
+      "checks": [
+        {
+          "name": "28 routes, metadata, canonicals, noindex, no-store and internal links",
+          "count": 28
+        },
+        {
+          "name": "robots.txt, sitemap and real 404"
+        },
+        {
+          "name": "Owner original photo bytes preserved and displayed rendition available",
+          "bytes": 2145163,
+          "sha256": "27fb665fc83d84f5c70157172a5f4d1dcd3e6153a1bbc717fb1ca4fc6933fe11"
+        }
+      ],
+      "pages": 28,
+      "startedAt": "2026-09-29T23:30:06.593Z",
+      "finishedAt": "2026-09-29T23:30:37.811Z"
+    }
+  },
+  "hosting": {
+    "previousErrors": "Cloudflare 1102 with exceededCpu at 10 ms observed before request-reuse fixes.",
+    "subscriptionChanged": false,
+    "currentAvailability": "Final public checks pass. Earlier CPU capacity failures and >10 ms observations prevent a long-term availability claim.",
+    "initialProjectionCpu": {
+      "checkedAt": "2026-09-29T23:21:46.681Z",
+      "events": [
+        {
+          "outcome": "ok",
+          "cpuTime": 65,
+          "wallTime": 1343,
+          "exceptions": []
+        },
+        {
+          "outcome": "ok",
+          "cpuTime": 193,
+          "wallTime": 2053,
+          "exceptions": [],
+          "path": "/"
+        },
+        {
+          "outcome": "ok",
+          "cpuTime": 13,
+          "wallTime": 350,
+          "exceptions": [],
+          "path": "/showroom-casablanca/"
+        },
+        {
+          "outcome": "ok",
+          "cpuTime": 25,
+          "wallTime": 1034,
+          "exceptions": [],
+          "path": "/catalogue/"
+        },
+        {
+          "outcome": "ok",
+          "cpuTime": 73,
+          "wallTime": 1227,
+          "exceptions": [],
+          "path": "/modeles/greta/"
+        },
+        {
+          "outcome": "ok",
+          "cpuTime": 56,
+          "wallTime": 1079,
+          "exceptions": [],
+          "path": "/"
+        }
+      ]
+    },
+    "finalCpu": {
+      "checkedAt": "2026-09-29T23:31:44.477Z",
+      "version": "a4eed856-99ec-435e-bc14-d1361c68c7c8",
+      "events": [
+        {
+          "path": "/collections/canapes-fauteuils/",
+          "outcome": "ok",
+          "cpuMs": 20
+        },
+        {
+          "path": "/collections/buffets-bibliotheques/",
+          "outcome": "ok",
+          "cpuMs": 16
+        },
+        {
+          "path": "/collections/luminaires/",
+          "outcome": "ok",
+          "cpuMs": 11
+        },
+        {
+          "path": "/collections/mobilier-exterieur/",
+          "outcome": "ok",
+          "cpuMs": 11
+        },
+        {
+          "path": "/modeles/skorpio/",
+          "outcome": "ok",
+          "cpuMs": 48
+        },
+        {
+          "path": "/modeles/napoleon-keramik/",
+          "outcome": "ok",
+          "cpuMs": 38
+        },
+        {
+          "path": "/modeles/rhonda/",
+          "outcome": "ok",
+          "cpuMs": 37
+        },
+        {
+          "path": "/modeles/greta/",
+          "outcome": "ok",
+          "cpuMs": 43
+        },
+        {
+          "path": "/modeles/ruby/",
+          "outcome": "ok",
+          "cpuMs": 38
+        },
+        {
+          "path": "/modeles/ruby-lounge/",
+          "outcome": "ok",
+          "cpuMs": 38
+        },
+        {
+          "path": "/modeles/chelsea/",
+          "outcome": "ok",
+          "cpuMs": 33
+        },
+        {
+          "path": "/modeles/airport/",
+          "outcome": "ok",
+          "cpuMs": 33
+        },
+        {
+          "path": "/modeles/bloom/",
+          "outcome": "ok",
+          "cpuMs": 31
+        },
+        {
+          "path": "/modeles/napoleon-keramik-outdoor/",
+          "outcome": "ok",
+          "cpuMs": 30
+        },
+        {
+          "path": "/modeles/greta-outdoor/",
+          "outcome": "ok",
+          "cpuMs": 30
+        },
+        {
+          "path": "/journal/choisir-forme-proportions-table-salle-a-manger/",
+          "outcome": "ok",
+          "cpuMs": 8
+        },
+        {
+          "path": "/journal/associer-table-chaises-salle-a-manger/",
+          "outcome": "ok",
+          "cpuMs": 7
+        },
+        {
+          "path": "/journal/choisir-buffet-bibliotheque-salon/",
+          "outcome": "ok",
+          "cpuMs": 10
+        },
+        {
+          "path": "/home",
+          "outcome": "ok",
+          "cpuMs": 35
+        },
+        {
+          "path": "/collections",
+          "outcome": "ok",
+          "cpuMs": 11
+        },
+        {
+          "path": "/modeles/skorpio",
+          "outcome": "ok",
+          "cpuMs": 36
+        },
+        {
+          "path": "/collections/",
+          "outcome": "ok",
+          "cpuMs": 10
+        },
+        {
+          "path": "/sitemap.xml",
+          "outcome": "ok",
+          "cpuMs": 5
+        }
+      ]
+    },
+    "finalHomeCatalogueCpu": {
+      "checkedAt": "2026-09-29T23:33:30.174Z",
+      "events": [
+        {
+          "path": "/",
+          "outcome": "ok",
+          "cpuMs": 113
+        },
+        {
+          "path": "/catalogue/",
+          "outcome": "ok",
+          "cpuMs": 23
+        },
+        {
+          "path": "/",
+          "outcome": "ok",
+          "cpuMs": 62
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Existing imagery only; ambiance imagery remains unidentified.",
+    "Two responsive homepage DOM compositions remain; one H1 visible at a time.",
+    "SITE_INDEXABLE=false; domain, real PDF and legal launch readiness remain.",
+    "No physical iPhone or field Core Web Vitals measurement.",
+    "No primary content/auth test mutations; only authorized native editorial publication."
+  ]
+}

@@ -1,9 +1,10 @@
 /**
- * Anonymous public checks after migration 0010. No credentials, storage state,
+ * Anonymous public checks after migration 0010 or 0011. No credentials, storage state,
  * native CMS API, publication, setup, or valid catalogue submissions are used.
  * All requests except GET/HEAD are blocked before they leave the browser.
  *
  * PUBLIC_TEST_ENGINE=chromium|webkit PUBLIC_TEST_THEME=dark|light
+ * PUBLIC_TEST_REVISION=0010|0011 (default 0010 for the historical/local content)
  * PUBLIC_TEST_URL=http://localhost:4321 node tests/editorial-refresh-browser.mjs
  * Optional --only-content / --only-layouts; PUBLIC_TEST_SCREENSHOTS=false.
  * Default: five desktop/dark and five mobile/light Chromium captures in total.
@@ -20,8 +21,10 @@ assert.equal(base.pathname, '/', 'Choose a public preview origin, not a private 
 assert(!base.search && !base.hash, 'Signed previews and query credentials are outside this suite.');
 const engine = process.env.PUBLIC_TEST_ENGINE || 'chromium';
 const theme = process.env.PUBLIC_TEST_THEME || 'dark';
+const revision = process.env.PUBLIC_TEST_REVISION || '0010';
 assert(['chromium', 'webkit'].includes(engine));
 assert(['dark', 'light'].includes(theme));
+assert(['0010', '0011'].includes(revision), 'Choose editorial revision 0010 or 0011.');
 const onlyContent = process.argv.includes('--only-content');
 const onlyLayouts = process.argv.includes('--only-layouts');
 assert(!(onlyContent && onlyLayouts));
@@ -31,6 +34,19 @@ const screenshots = process.env.PUBLIC_TEST_SCREENSHOTS !== 'false' && engine ==
 const captureAll = process.env.PUBLIC_TEST_CAPTURE_VIEWPORTS === 'all';
 const load = async name => JSON.parse(await readFile(`content/${name}.json`, 'utf8'));
 const entries = (await Promise.all(['editorial-refresh-pages', 'editorial-refresh-products', 'editorial-refresh-journal'].map(load))).flat();
+if (revision === '0011') {
+  const updates = await load('seo-editorial-2026-09-29');
+  const seen = new Set();
+  for (const update of updates) {
+    const key = `${update.collection}/${update.slug}`;
+    assert(!seen.has(key), `Duplicate revision 0011 entry: ${key}`);
+    seen.add(key);
+    const entry = entries.find(item => item.collection === update.collection && item.slug === update.slug);
+    assert(entry, `Revision 0011 must update an existing 0010 entry: ${key}`);
+    entry.after = {...entry.after, ...update.after};
+    if (update.seoAfter) entry.seoAfter = {...entry.seoAfter, ...update.seoAfter};
+  }
+}
 const global = entries.find(entry => entry.collection === 'site_content' && entry.slug === 'global').after;
 const modelBaseline = new Map((await load('model-editorial')).entries.map(entry => [entry.slug, entry]));
 const modelDetails = new Map((await load('model-details')).models.map(entry => [entry.slug, entry]));
@@ -48,7 +64,7 @@ assert.equal(pageEntries.filter(entry => entry.collection === 'posts').length, 5
 const articlePath = '/journal/choisir-forme-proportions-table-salle-a-manger/';
 const viewports = [{ width: 1440, height: 900 }, { width: 390, height: 844 }];
 const report = {
-  startedAt: new Date().toISOString(), origin: base.origin, engine, theme, readOnly: true,
+  startedAt: new Date().toISOString(), origin: base.origin, engine, theme, revision, readOnly: true,
   checks: [], routes: [], links: [], layouts: [], screenshots: [], captureImages: [], animationPositions: [],
   attemptedWrites: [], blockedPrivateRequests: [], errors: [], failure: '',
   limits: ['No valid catalogue request or private PDF download is attempted.', 'External source URLs are checked as rendered links; their remote availability is not tested.'],
@@ -61,6 +77,12 @@ let failure;
 await mkdir(output, { recursive: true });
 
 function isPrivate(url) {
+  if (url.pathname === '/_image') {
+    const source = url.searchParams.get('href') || '';
+    // Keep the native image service from reaching a private CMS/auth URL
+    // through its source parameter. Only public raster media is in scope.
+    if (!/^\/_emdash\/api\/media\/file\/[A-Za-z0-9._-]+\.(?:jpe?g|png|webp|avif)$/i.test(source)) return true;
+  }
   return url.pathname.startsWith('/preview/') || url.searchParams.has('_preview') ||
     (url.pathname.startsWith('/_emdash/') && !url.pathname.startsWith('/_emdash/api/media/file/'));
 }
@@ -189,8 +211,11 @@ async function verifyContent(browser) {
       } else if (entry.collection === 'models') {
         await exact(page, html, '.page-lead', [after.description || modelBaseline.get(entry.slug).after.description], path);
         await exact(page, html, '.model-story .page-prose > :is(p,h2,h3)', after.content.map(blockText), path);
-        await exact(page, html, '.model-availability', [after.availability_note], path);
-        await exact(page, html, '.model-project :is(h2,.kick,.model-site-notice)', []);
+        const availability = normalize(after.availability_note);
+        await exact(page, html, '.model-availability', availability ? [availability] : [], path);
+        await exact(page, html, '.model-project :is(h2,.kick)', []);
+        const sharedNotice = normalize(global.model_notice);
+        await exact(page, html, '.model-project .model-site-notice', sharedNotice && sharedNotice !== availability ? [sharedNotice] : [], path);
         await exact(page, html, '#model-gallery-heading', ['Photos']);
         const details = modelDetails.get(entry.slug);
         assert.equal((await nodes(page, html, '.model-gallery-view')).length, details.gallery.length, path);
@@ -235,7 +260,7 @@ async function verifyContent(browser) {
     }
     assert.equal(reachedModels.size, 11);
     const homeEntry = pageEntries.find(entry => entry.slug === 'home');
-    await exact(page, home, '#accueil .over h2, #m-accueil > .txt', [homeEntry.after.intro, homeEntry.after.intro]);
+    await exact(page, home, '#accueil .over .hero-intro, #m-accueil > .txt', [homeEntry.after.intro, homeEntry.after.intro]);
     for (const section of homeEntry.after.sections) {
       const desktop = { brand: '#italie .col', collections: '#collections .intro', showroom: '#showroom .info', catalogue: '#catalogue .form', journal: '#journal' }[section.section_key];
       const mobile = `#m-${section.section_key === 'brand' ? 'italie' : section.section_key}`;
@@ -244,8 +269,11 @@ async function verifyContent(browser) {
     await exact(page, home, '#italie .cap', [homeEntry.after.brand_caption]);
     await exact(page, home, '#plan .note, #m-plan > .legal', []);
     const showroom = await markup('/showroom-casablanca/');
-    await exact(page, showroom, '#showroom-contact [data-section-key="contact_note"] p', [pageEntries.find(entry => entry.slug === 'showroom-casablanca').after.sections[0].text]);
-    await exact(page, showroom, '.page-faq, .showroom-editorial [data-section-key]', []);
+    const showroomSections = pageEntries.find(entry => entry.slug === 'showroom-casablanca').after.sections;
+    const showroomContactNotes = showroomSections.filter(section => section.section_key === 'contact_note');
+    await exact(page, showroom, '#showroom-contact [data-section-key="contact_note"] p', showroomContactNotes.flatMap(section => section.text ? [section.text] : []));
+    await exact(page, showroom, '.page-faq', []);
+    assert.deepEqual(await nodes(page, showroom, '.showroom-editorial [data-section-key]', 'data-section-key'), showroomSections.filter(section => section.section_key !== 'contact_note' && !section.section_key.startsWith('faq_')).map(section => section.section_key));
     assert.equal((await nodes(page, showroom, `#showroom-contact a[href="${phone}"]`)).length, 1);
     assert.equal((await nodes(page, showroom, 'iframe')).length, 0, 'Google map remains unloaded.');
     const directions = new URL((await nodes(page, showroom, '.showroom-directions', 'href'))[0]);
@@ -264,7 +292,7 @@ async function verifyContent(browser) {
       const navLabels = await nodes(page, html, `header a[href="${menu.url}"]`);
       assert(navLabels.length > 0 && navLabels.every(label => label === menu.afterLabel), 'Native menu uses the concise catalogue label.');
     }
-    pass('Accueil, showroom simplifié, catalogue, formulaire facultatif et navigation : champs globaux et suppression des répétitions');
+    pass(`Révision ${revision} : accueil, showroom, catalogue, formulaire facultatif et navigation — champs globaux et suppression des répétitions`);
     for (const href of localLinks) {
       const target = publicUrl(href);
       if (target.pathname.startsWith('/_emdash/api/media/file/') || /\.[a-z0-9]+$/iu.test(target.pathname)) await get(href, 'HEAD');
