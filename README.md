@@ -18,6 +18,8 @@ Ouvrir `http://localhost:4321/_emdash/admin/` et suivre l'initialisation native.
 
 Le dossier `.devcontainer/` permet d'ouvrir cette branche dans GitHub Codespaces. La base D1 et les deux espaces R2 sont simulés localement par workerd. Aucun compte Cloudflare n'est nécessaire pour ces essais. Le port contenant l'administration doit rester privé.
 
+Une fois le site initialisé, l'aperçu se relance au démarrage du Codespace ou à la reconnexion de l'éditeur ; le Codespace existant couvre aussi la reconnexion SSH. Ce démarrage ne change pas l'arrêt automatique après quinze minutes de fin de tâches. Voir [le fonctionnement et la commande de désactivation](docs/development.md#relancer-automatiquement-laperçu-après-un-redémarrage).
+
 ## Contenus
 
 - Cinq pages fixes, six familles, onze fiches de modèles et cinq articles complets.

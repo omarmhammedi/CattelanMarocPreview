@@ -20,6 +20,9 @@ export default defineConfig({
       ),
     },
     server: {
+      // The private preview and auth origin use one fixed forwarded port.
+      // Fail clearly on a collision instead of silently starting on 4322.
+      strictPort: true,
       allowedHosts: process.env.CODESPACE_NAME
         ? [`${process.env.CODESPACE_NAME}-4321.${process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN || 'app.github.dev'}`]
         : [],

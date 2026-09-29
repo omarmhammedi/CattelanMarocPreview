@@ -12,6 +12,30 @@ Le nouveau site est une application Astro + EmDash 0.41 exécutée dans le runti
 
 Le conteneur rétablit la visibilité privée à la reconnexion. Si GitHub refuse cette commande, le terminal invite à la vérifier dans **Ports**. Une prévisualisation publique destinée au client se fera sur un environnement Cloudflare séparé, après configuration de l'administration.
 
+### Relancer automatiquement l'aperçu après un redémarrage
+
+Sur une installation déjà initialisée, `.devcontainer/preview-start.sh` lance Astro une fois au démarrage du conteneur ou à l'ouverture de l'éditeur. Le Codespace existant possède aussi un appel dans `~/.ssh/rc`, exécuté avec le profil de connexion `bash -lc`, pour les reconnexions SSH depuis le mobile. Les dépendances, `.dev.vars` et le stockage D1 local doivent déjà exister : ce mécanisme n'installe rien et ne réinitialise pas EmDash.
+
+Un verrou temporaire empêche deux connexions simultanées de lancer deux serveurs. Astro réutilise son serveur existant ou élimine son ancien verrou si le processus a disparu. Le port demandé reste 4321 ; une collision échoue explicitement au lieu de déplacer le site sur 4322. Le démarrage a un délai borné et ne se répète pas en boucle. Les journaux sont `.astro/preview-start.log` et `.astro/dev.log`.
+
+```sh
+# Demander une seule tentative de démarrage en arrière-plan
+bash .devcontainer/preview-start.sh start
+
+# Garder le serveur arrêté pendant une maintenance, même à la reconnexion
+bash .devcontainer/preview-start.sh disable
+npx astro dev stop
+
+# Réactiver le démarrage automatique et lancer l'aperçu
+bash .devcontainer/preview-start.sh enable
+```
+
+Sans désactivation explicite, un arrêt manuel d'Astro dure jusqu'au prochain démarrage, rattachement de l'éditeur ou accès SSH. Le marqueur de désactivation reste local sous `.astro/preview-autostart.disabled` et ne touche pas le réglage d'arrêt du Codespace.
+
+Ce mécanisme ne réveille pas une machine arrêtée, ne la maintient pas allumée et ne modifie pas le délai de quinze minutes après les tâches. Il démarre le site **après la reprise du Codespace**. L'aperçu reste inaccessible lorsque la machine est éteinte. Il ne surveille pas continuellement un serveur bloqué ; `npx astro dev status` et une requête HTTP restent nécessaires pour diagnostiquer ce cas distinct.
+
+Les tests `node --test .devcontainer/preview-start.test.mjs` utilisent des répertoires jetables et un faux binaire Astro, sans accès au CMS. Ils vérifient notamment les connexions simultanées, la fin du verrou, les prérequis, la désactivation et l'absence de boucle de relance.
+
 ### Afficher le site dans l’éditeur
 
 Dans **Ports**, faire un clic droit sur **4321 → Preview in Editor**. Les pages publiques GET/HEAD autorisent leur intégration uniquement dans l’environnement de développement Codespaces : une politique explicite `object-src 'none'`, sans restriction `frame-ancestors`, évite aussi l’ajout de `X-Frame-Options` par EmDash. Une liste limitée aux domaines connus des webviews ne couvre pas toutes les imbrications de l’éditeur. Ce choix autorise délibérément tout ancêtre à afficher les pages publiques de développement, formulaire catalogue compris ; le port privé continue d’exiger l’authentification GitHub. Il ne donne pas accès au contenu de l’iframe depuis une autre origine. Les pages d’administration, les API, les aperçus CMS signés et la version compilée gardent leurs protections d’intégration ; une politique CSP existante n’est jamais remplacée. Ouvrir l’administration dans un onglet normal du navigateur.

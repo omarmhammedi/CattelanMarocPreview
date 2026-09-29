@@ -14,10 +14,14 @@
     }
   },
   "postCreateCommand": "npm ci && node scripts/setup-dev.mjs",
-  "postStartCommand": "node .devcontainer/task-autostop.mjs start",
+  "postStartCommand": {
+    "taskAutostop": "node .devcontainer/task-autostop.mjs start",
+    "preview": "bash .devcontainer/preview-start.sh start"
+  },
   "postAttachCommand": {
     "privatePort": "node .devcontainer/private-port.mjs",
-    "taskAutostop": "node .devcontainer/task-autostop.mjs start"
+    "taskAutostop": "node .devcontainer/task-autostop.mjs start",
+    "preview": "bash .devcontainer/preview-start.sh start"
   },
   "customizations": {
     "vscode": {
