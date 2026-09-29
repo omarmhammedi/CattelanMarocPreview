@@ -158,15 +158,21 @@ async function privateJson(path, value) {
   await rename(temp, path);
 }
 
-async function main() {
+export async function runEditorialMigration({
+  manifestFiles = ['family-editorial.json', 'model-editorial.json'],
+  expectedCollections = ['families', 'models'],
+  migrationId = '0004-collection-editorial',
+} = {}) {
+  assert(/^\d{4}-[a-z0-9-]+$/.test(migrationId), 'Invalid migration identifier.');
+  assert(manifestFiles.every(file => /^[a-z0-9-]+\.json$/.test(file)), 'Invalid content manifest filename.');
   const flags = process.argv.slice(2);
   assert(flags.every(flag => ['--apply', '--dry-run'].includes(flag)) && !(flags.includes('--apply') && flags.includes('--dry-run')), 'Use --dry-run (default) or --apply only.');
   const apply = flags.includes('--apply');
   const origin = new URL(process.env.EMDASH_BASE_URL || 'http://localhost:4321');
   assert(['http:', 'https:'].includes(origin.protocol) && ['localhost', '127.0.0.1', '[::1]'].includes(origin.hostname) && !origin.username && !origin.password && origin.pathname === '/' && !origin.search && !origin.hash, 'This migration accepts only a local development origin.');
   const manifests = [];
-  for (const file of ['family-editorial.json', 'model-editorial.json']) manifests.push(validateEditorialManifest(JSON.parse(await readFile(join(root, 'content', file), 'utf8'))));
-  assert.deepEqual(manifests.map(manifest => manifest.collection), ['families', 'models'], 'Editorial files target unexpected collections.');
+  for (const file of manifestFiles) manifests.push(validateEditorialManifest(JSON.parse(await readFile(join(root, 'content', file), 'utf8'))));
+  assert.deepEqual(manifests.map(manifest => manifest.collection), expectedCollections, 'Editorial files target unexpected collections.');
   const auth = await authentication(origin);
   const api = async (path, { method = 'GET', data } = {}) => {
     assert(path.startsWith('/_emdash/api/'), 'Native API path is invalid.');
@@ -197,22 +203,22 @@ async function main() {
     }
   }
   const changed = plans.filter(plan => Object.keys(plan.values).length);
-  console.log(`${apply ? 'Apply' : 'Dry run'} 0004: ${changed.length} entries to improve; ${plans.length - changed.length} already match the completed copy.`);
+  console.log(`${apply ? 'Apply' : 'Dry run'} ${migrationId}: ${changed.length} entries to improve; ${plans.length - changed.length} already match the completed copy.`);
   for (const plan of plans) console.log(`${plan.collection}/${plan.entry.slug}: ${Object.keys(plan.values).length ? [...Object.keys(plan.values), ...(plan.entry.afterSeo ? ['native SEO title/description'] : [])].join(', ') : 'already updated; no change'}`);
   if (changed.some(plan => plan.entry.afterSeo)) console.log('Native EmDash SEO metadata is saved immediately, outside content drafts. Only originally published entries are published again; SEO image/canonical/noIndex are preserved.');
   if (!apply) { console.log('No CMS, media, authentication or local state was written.'); return; }
-  if (!changed.length) { console.log('Migration 0004 already applied; nothing was changed.'); return; }
+  if (!changed.length) { console.log(`Migration ${migrationId} already applied; nothing was changed.`); return; }
 
   const privateDir = join(root, '.wrangler/migrations');
-  const lockDir = join(privateDir, '.0004-collection-editorial.lock');
+  const lockDir = join(privateDir, `.${migrationId}.lock`);
   await mkdir(privateDir, { recursive: true, mode: 0o700 });
   try { await mkdir(lockDir, { mode: 0o700 }); } catch (error) {
-    if (error.code === 'EEXIST') throw new Error(`Another 0004 import may be active. If it has stopped, remove only its lock directory: ${lockDir}`);
+    if (error.code === 'EEXIST') throw new Error(`Another ${migrationId} import may be active. If it has stopped, remove only its lock directory: ${lockDir}`);
     throw error;
   }
   const stamp = new Date().toISOString().replaceAll(/[:.]/g, '-');
-  const reportPath = join(privateDir, `0004-collection-editorial-${stamp}-report.json`);
-  const report = { migration: '0004-collection-editorial', startedAt: new Date().toISOString(), manifestSha256: createHash('sha256').update(JSON.stringify(manifests)).digest('hex'), entries: [], complete: false };
+  const reportPath = join(privateDir, `${migrationId}-${stamp}-report.json`);
+  const report = { migration: migrationId, startedAt: new Date().toISOString(), manifestSha256: createHash('sha256').update(JSON.stringify(manifests)).digest('hex'), entries: [], complete: false };
   try {
     // Validate all entries again before the first mutation, not only the next one.
     for (const [collection, schema] of Object.entries(schemas)) assert.deepEqual((await api(schemaPath(collection))).item, schema, `${collection}: schema changed during preparation; nothing was written.`);
@@ -221,7 +227,7 @@ async function main() {
       assertUnchangedEntry(fresh, plan.before, `${plan.collection}/${plan.entry.slug}`);
       assert.deepEqual(await readReferences(api, plan.collection, fresh.item, schemas[plan.collection].fields), plan.references, `${plan.entry.slug}: references changed during preparation; nothing was written.`);
     }
-    const backupPath = join(privateDir, `0004-collection-editorial-${stamp}-backup.json`);
+    const backupPath = join(privateDir, `${migrationId}-${stamp}-backup.json`);
     await privateJson(backupPath, { migration: report.migration, createdAt: report.startedAt, schemas, entries: changed.map(({ collection, before, references }) => ({ collection, before, references })) });
     console.log(`Private affected-entry backup: ${backupPath}`);
     for (const plan of changed) {
@@ -245,7 +251,7 @@ async function main() {
     report.complete = true;
     report.finishedAt = new Date().toISOString();
     await privateJson(reportPath, report);
-    console.log(`Migration 0004 complete. Private report: ${reportPath}`);
+    console.log(`Migration ${migrationId} complete. Private report: ${reportPath}`);
   } catch (error) {
     report.failedAt = new Date().toISOString();
     report.error = error instanceof Error ? error.message : 'Migration failed';
@@ -258,5 +264,5 @@ async function main() {
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  main().catch(error => { console.error(error instanceof Error ? error.message : 'Migration 0004 failed'); process.exitCode = 1; });
+  runEditorialMigration().catch(error => { console.error(error instanceof Error ? error.message : 'Migration 0004 failed'); process.exitCode = 1; });
 }

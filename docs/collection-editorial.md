@@ -1,5 +1,16 @@
 # Contenus des familles et des modèles
 
+**Évolution du 29 septembre :** les six familles sont désormais réécrites dans `content/family-guides.json` pour présenter d’abord la gamme et les critères de choix, puis les modèles sélectionnés. La migration `0008-family-guides.mjs` applique ce second passage après 0004, sans modifier les onze fiches modèles. Le reste de cette section décrit la première révision 0004 et conserve son contrat historique.
+
+La 0008 réutilise le moteur de publication de la 0004, avec une sélection limitée au nouveau manifeste des six familles. Elle conserve les mêmes protections : état avant/après exact, refus des brouillons et des changements personnalisés, sauvegarde privée avant mutation, révisions, références et SEO non concernés préservés. Ne pas relancer la 0004 pour essayer de remplacer les guides récents par les textes précédents.
+
+```sh
+EMDASH_AUTH_FILE=.wrangler/admin-session.json node scripts/migrations/0008-family-guides.mjs --dry-run
+EMDASH_AUTH_FILE=.wrangler/admin-session.json node scripts/migrations/0008-family-guides.mjs --apply
+```
+
+`tests/family-guides-cms.mjs` teste cette publication et le cycle brouillon/aperçu/publication/effacement sur une base jetable avec le marqueur d’isolation, jamais sur 4321. `tests/family-guides-browser.mjs` contrôle les textes publics, les onze modèles conservés, les liens et les compositions ordinateur/mobile en lecture seule. Les métadonnées SEO natives restent immédiates, indépendamment des brouillons de corps de page.
+
 Cette révision applique la [stratégie de contenu](seo-content-strategy.md) aux six familles et aux onze modèles déjà sélectionnés. Les familles comparent les références ; les fiches décrivent le modèle exact. Aucun minimum de mots, ajout de ville, prix, stock ou avis inventé ne sert à allonger les textes.
 
 Les sources de migration sont `content/family-editorial.json` et `content/model-editorial.json`. Chaque entrée conserve son texte précédent, sa proposition et les URL officielles correspondantes. Les faits techniques viennent des pages françaises et des données publiques examinées pour `content/model-details.json`. Le texte français est rédigé pour le parcours local, avec onze liens contextuels famille → modèle. Ces fichiers ne sont jamais lus par le frontend : EmDash reste l'unique source publiée.

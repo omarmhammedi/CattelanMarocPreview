@@ -30,7 +30,7 @@ if (!family) return new Response('Collection introuvable', { status: 404 });
     <a href={`/journal/${family.relatedPost.slug}/`}><h2>{family.relatedPost.title}</h2><span class="text-link">{site.labels.readArticle} <span aria-hidden="true">↗</span></span></a>
   </section>}
   <section class="page-cta page-gutter" data-page-reveal>
-    <p class="kick">Votre sélection commence ici</p><h2>{site.labels.catalogue}</h2>
-    <div class="row"><a class="btn" href="/catalogue/">{site.labels.catalogue}</a><a class="text-link" href="/showroom-casablanca/">{site.labels.contact}<span aria-hidden="true">↗</span></a></div>
+    <p class="kick">Pour poursuivre votre découverte</p><h2>Précisons votre projet</h2>
+    <div class="row"><a class="btn" href="/catalogue/">{site.labels.catalogue}</a><a class="text-link" href="/showroom-casablanca/#showroom-contact">{site.labels.contact}<span aria-hidden="true">↗</span></a></div>
   </section>
 </PageLayout>

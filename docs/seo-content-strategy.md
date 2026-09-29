@@ -11,8 +11,8 @@ Google propose notamment ce critère : « Le titre résume-t-il clairement le co
 | Pages existantes | Besoin à satisfaire | Information à privilégier |
 | --- | --- | --- |
 | Accueil | Identifier la marque au Maroc et choisir un point d'entrée | Positionnement, six familles, accès au showroom et au catalogue |
-| `/collections/` | Trouver la bonne famille de mobilier | Catégories lisibles et différences entre leurs sélections |
-| `/collections/{famille}/` | Comparer les références présentées | Différences de construction, formats et contraintes qui orientent le choix |
+| `/collections/` | Trouver la bonne famille de mobilier | Catégories lisibles, usages et possibilités de chaque famille |
+| `/collections/{famille}/` | Comprendre la famille et préparer son choix | Vue d’ensemble sourcée, critères concrets, puis sélection de modèles comme exemples |
 | `/modeles/{modele}/` | Vérifier une référence exacte | Version, matériaux, dimensions, finitions, images et fiche technique |
 | Journal et ses cinq articles | Résoudre une question de choix ou d'association | Méthode concrète, exemples documentés et liens vers les références concernées |
 | Showroom Casablanca | Préparer une visite ou une demande | Coordonnées, accès, horaires et modalités réellement confirmés |
@@ -22,16 +22,18 @@ Le titre SEO et la description doivent refléter le contenu effectivement dispon
 
 ## Le rôle des six familles
 
-| Famille | Comparaison utile dans la sélection actuelle |
+| Famille | Questions auxquelles la page doit répondre |
 | --- | --- |
-| Tables | Transparence et piètement visible de Skorpio ; continuité de céramique de Napoleon Keramik ; formats et nombre de places selon les chaises |
-| Chaises et tabourets | Dossiers, encombrement et revêtements de Rhonda et Greta ; préciser que les deux fiches présentées sont des chaises |
-| Canapés et fauteuils | Formats Ruby, fiche distincte Ruby Lounge, frêne teinté et options de revêtement propres à chaque référence |
-| Buffets et bibliothèques | Buffet complet Chelsea et composition modulaire Airport ; rangement fermé, ouvert et conditions de fixation |
-| Luminaires | Formats des suspensions et du lampadaire Bloom ; dimensions et portée exacte de l'option de variation |
-| Mobilier extérieur | Matériaux de Napoleon Keramik Outdoor et Greta Outdoor ; dimensions de l'ensemble et usage couvert protégé des intempéries |
+| Tables | Matière réelle du plateau, forme, format, rallonges selon les modèles, piètement et places selon les chaises |
+| Chaises et tabourets | Hauteur selon la table ou le comptoir, encombrement des accoudoirs, piètements et revêtements propres à la référence |
+| Canapés et fauteuils | Implantation droite ou composée, profondeur d’assise, passages et habillages propres à la version |
+| Buffets et bibliothèques | Rangement fermé ou ouvert, objets à accueillir, dimensions utiles, fixation et composition |
+| Luminaires | Type et emplacement, proportions, arrivée électrique, source lumineuse et variation selon la référence |
+| Mobilier extérieur | Exposition autorisée, zone couverte, encombrement de l’ensemble et consignes propres aux matières |
 
-Ces pages restent des outils de comparaison. Les listes détaillées de finitions appartiennent aux fiches modèles ; les méthodes transversales de composition appartiennent au Journal. Recopier les mêmes conseils sur chaque famille ajouterait peu d'information.
+La présentation d’ensemble et les critères de choix précèdent les exemples. Les onze modèles conservés illustrent la gamme ; ils ne la définissent pas à eux seuls. Les deux cartes d’assises restent des chaises, tandis que les possibilités de tabourets sont étayées par des références officielles distinctes. Bloom reste la fiche sélectionnée, au sein d’une présentation plus large des luminaires. Les deux modèles Outdoor retenus exigent un extérieur couvert et protégé.
+
+Les listes détaillées de finitions appartiennent aux fiches modèles ; les méthodes transversales de composition appartiennent au Journal. Les actions catalogue et contact du showroom terminent chaque famille. Le formulaire catalogue et son consentement facultatif restent inchangés.
 
 ## Règle de rédaction
 
@@ -47,11 +49,11 @@ Les textes publiés pour les six familles contiennent onze liens contextuels ver
 
 ## État et prochaines validations
 
-La réécriture de cette étape concerne **dix-sept entrées : six familles et onze modèles**. Elle ne couvre pas tout le catalogue international. Les fichiers de contenu sont des sources de migration ciblée ; ils ne prouvent pas à eux seuls que les nouvelles versions sont publiées dans EmDash. La publication doit être vérifiée sur les pages rendues, en conservant les modifications et brouillons de l'éditeur.
+La révision initiale concernait **dix-sept entrées : six familles et onze modèles**. La révision 0008 du 29 septembre concerne uniquement les six familles, à partir de `content/family-guides.json` ; les fiches modèles restent intactes. Elle ne couvre pas tout le catalogue international. Les fichiers de contenu sont des sources de migration ciblée, jamais une source de remplacement pour le frontend EmDash. La publication doit être vérifiée sur les pages rendues, en conservant les modifications et brouillons de l'éditeur.
 
-Cette publication dans l'aperçu principal a été effectuée le 28 septembre 2026. Le [rapport de publication](test-results-publication.md) consigne la vérification des textes et métadonnées effectivement servis, des médias et de la conservation des données existantes.
+La publication initiale dans l'aperçu principal a été effectuée le 28 septembre 2026. Le [rapport de publication](test-results-publication.md) consigne la vérification des textes et métadonnées alors servis, des médias et de la conservation des données existantes. La révision des six guides du 29 septembre est documentée dans son [rapport dédié](test-results-family-guides.md).
 
-Les informations locales à confirmer restent l'adresse, les horaires, les coordonnées commerciales et les photographies réelles du showroom. Le PDF définitif doit remplacer le document de démonstration avant de présenter le catalogue comme prêt pour le public. Ces faits apportent davantage à une recherche locale qu'une liste de villes sans modalités concrètes. Ne pas créer de pages de villes sans établissement, service ou contenu spécifique vérifiable.
+L’adresse, le téléphone et les horaires du showroom ont été fournis et publiés. Les photographies réelles, les services et les autres informations commerciales non documentées restent à confirmer. Le PDF définitif doit remplacer le document de démonstration avant de présenter le catalogue comme prêt pour le public. Ces faits apportent davantage à une recherche locale qu'une liste de villes sans modalités concrètes. Ne pas créer de pages de villes sans établissement, service ou contenu spécifique vérifiable.
 
 La prévisualisation reste **privée et non indexable**, avec `SITE_INDEXABLE=false` et le port 4321 privé. Ce travail n'autorise aucun déploiement, changement de domaine ou connexion à un service externe.
 

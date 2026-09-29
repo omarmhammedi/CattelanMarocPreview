@@ -1,5 +1,5 @@
 /**
- * Public, read-only verification after native migrations 0003 + 0004.
+ * Public, read-only verification after native migrations 0003 + 0004 + 0008.
  * No credentials, CMS content API, setup, authentication or publication calls.
  *
  * PUBLIC_TEST_URL=http://localhost:4321 node tests/published-content-browser.mjs
@@ -21,8 +21,8 @@ const onlyWebkit = process.argv.includes('--only-webkit');
 assert([onlyContent, onlyLayouts, onlyWebkit].filter(Boolean).length <= 1, 'Choose one focused suite.');
 const selectedWidth = process.env.PUBLIC_TEST_WIDTH ? Number(process.env.PUBLIC_TEST_WIDTH) : null;
 assert(selectedWidth === null || [390, 1440].includes(selectedWidth), 'Unsupported focused viewport.');
-const manifests = await Promise.all(['family', 'model'].map(async kind =>
-  JSON.parse(await readFile(`content/${kind}-editorial.json`, 'utf8'))));
+const manifests = await Promise.all(['family-guides.json', 'model-editorial.json'].map(async file =>
+  JSON.parse(await readFile(`content/${file}`, 'utf8'))));
 const details = JSON.parse(await readFile('content/model-details.json', 'utf8'));
 const models = new Map(details.models.map(model => [model.slug, model]));
 const modelCopy = new Map(manifests[1].entries.map(model => [model.slug, model]));

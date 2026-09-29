@@ -2,6 +2,8 @@
 
 Audit du contenu publié dans l’aperçu privé le **28 septembre 2026 à 20 h 18, heure de Toronto**. Les constats portent sur les réponses HTML des 28 routes, leurs textes, titres, descriptions et liens, conservés dans `test-results/seo-audit/report.json` et `page-copy.txt`. Le seed et les contrats de migration ont servi à comprendre le modèle éditorial, pas à présumer ce qui était publié.
 
+**Évolutions depuis ce relevé :** les [coordonnées et le parcours de contact du showroom](test-results-showroom.md) ont été publiés, puis les [six guides de collections](test-results-family-guides.md) ont été élargis le 29 septembre. Les constats ci-dessous sur le contact manquant et les textes centrés sur quelques modèles décrivent donc l’état antérieur ; les autres éléments à finaliser restent à suivre.
+
 Les 28 routes répondent en HTTP 200. Le relevé ne trouve aucun doublon de titre ou de description entre pages, ni destination interne ou fragment cassé parmi les liens contrôlés. Cela ne suffit pas à valider un parcours : « Contacter le showroom » renvoie actuellement à une page sans moyen de contact, et son propre bouton recharge cette même page.
 
 Cette carte conserve les cinq pages fixes, les six familles, les onze modèles, les cinq articles et la confidentialité. Elle ne demande ni nouvelle page de ville, ni suppression d’article, ni modification de la direction visuelle B. Les formulations de recherche sont des **hypothèses de ciblage**, sans volume, position, difficulté ou promesse de classement. Elles ne sont pas des textes à répéter systématiquement dans les pages.
