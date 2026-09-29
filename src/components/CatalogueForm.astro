@@ -5,9 +5,10 @@ const { id, compact = false } = Astro.props;
 const [site, catalogue] = await Promise.all([getSite(), getCatalogue()]);
 const labels = { ...site.form, ...Astro.props.labels };
 const catalogueId = Astro.props.catalogueId || catalogue?.id;
+const contactLabel = site.labels.contact || 'Coordonnées du showroom';
 ---
-{catalogueId ? <form method="post" action="/_emdash/api/plugins/catalogue-leads/request" class:list={['catalogue-form', { compact }]} data-catalogue-form data-catalogue-id={catalogueId} data-error={labels.error} data-name-error={labels.nameError} data-email-error={labels.emailError} data-unavailable={labels.unavailable} data-pending={labels.pending} data-success-title={labels.successTitle} data-success-text={labels.successText} data-download-label={catalogue?.downloadLabel}>
-  <noscript><p>Activez JavaScript pour télécharger le catalogue, ou contactez le showroom.</p><style>.catalogue-form button[type=submit]{display:none}</style></noscript>
+{catalogueId ? <form method="post" action="/_emdash/api/plugins/catalogue-leads/request" class:list={['catalogue-form', { compact }]} data-catalogue-form data-catalogue-id={catalogueId} data-error={labels.error} data-name-error={labels.nameError} data-email-error={labels.emailError} data-unavailable={labels.unavailable} data-pending={labels.pending} data-success-title={labels.successTitle} data-success-text={labels.successText} data-download-label={catalogue?.downloadLabel} data-contact-label={contactLabel}>
+  <noscript><p>Activez JavaScript pour télécharger le catalogue, ou <a href="/showroom-casablanca/#showroom-contact">contactez le showroom</a>.</p><style>.catalogue-form button[type=submit]{display:none}</style></noscript>
   <div class="catalogue-fields">
     <div><label for={`${id}-name`}>{labels.name}</label><input id={`${id}-name`} name="name" autocomplete="name" required minlength="2" maxlength="120" aria-describedby={`${id}-name-error`} /><span class="field-error" id={`${id}-name-error`} data-field-error="name" hidden></span></div>
     <div><label for={`${id}-email`}>{labels.email}</label><input id={`${id}-email`} name="email" type="email" autocomplete="email" required maxlength="254" aria-describedby={`${id}-email-error`} /><span class="field-error" id={`${id}-email-error`} data-field-error="email" hidden></span></div>
@@ -18,8 +19,9 @@ const catalogueId = Astro.props.catalogueId || catalogue?.id;
   <p class="form-privacy">{labels.privacy} <a href="/confidentialite/">Confidentialité</a></p>
   <button class="btn solid" type="submit">{labels.submit} <span aria-hidden="true">↗</span></button>
   <div class="form-message" role="status" aria-live="polite" tabindex="-1"></div>
-</form> : <p role="status">{labels.unavailable}</p>}
+</form> : <div class="catalogue-unavailable" role="status"><p>{labels.unavailable}</p><a class="text-link" href="/showroom-casablanca/#showroom-contact">{contactLabel}</a></div>}
 <script>
+  import {catalogueFailureMessage} from '../lib/catalogue-messages';
   document.querySelectorAll<HTMLFormElement>('[data-catalogue-form]').forEach(form => {
     let requestId = crypto.randomUUID();
     let fingerprint = '';
@@ -40,11 +42,19 @@ const catalogueId = Astro.props.catalogueId || catalogue?.id;
       const invalidName = name.length < 2 || name.length > 120 || /[\u0000-\u001f\u007f]/u.test(name);
       const invalidEmail = email.length > 254 || /[\u0000-\u001f\u007f]/u.test(email) || !/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/u.test(email);
       setFieldError(nameInput, invalidName ? (form.dataset.nameError || 'Indiquez votre nom.') : '');
-      setFieldError(emailInput, invalidEmail ? (form.dataset.emailError || 'Vérifiez votre adresse email.') : '');
+      setFieldError(emailInput, invalidEmail ? (form.dataset.emailError || 'Vérifiez votre adresse e-mail.') : '');
       if (invalidName || invalidEmail) { (invalidName ? nameInput : emailInput).focus(); return; }
       const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
       if (button.disabled) return;
       const message = form.querySelector<HTMLElement>('.form-message')!;
+      const showFailure = (text: string) => {
+        const description = document.createElement('p'); description.textContent = text;
+        const contact = document.createElement('a');
+        contact.className = 'text-link'; contact.href = '/showroom-casablanca/#showroom-contact';
+        contact.textContent = form.dataset.contactLabel || 'Coordonnées du showroom';
+        message.replaceChildren(description, contact);
+        message.focus();
+      };
       const data = new FormData(form);
       const payload = { name, email, communicationsConsent: data.get('communicationsConsent') === 'yes', website: String(data.get('website') || ''), catalogueId: form.dataset.catalogueId, sourcePath: location.pathname };
       const nextFingerprint = JSON.stringify(payload);
@@ -65,7 +75,7 @@ const catalogueId = Astro.props.catalogueId || catalogue?.id;
             setFieldError(field, (isName ? form.dataset.nameError : form.dataset.emailError) || result.message || form.dataset.error || '');
             message.textContent = '';
             field.focus();
-          } else message.textContent = (result?.code === 'CATALOGUE_UNAVAILABLE' ? form.dataset.unavailable : undefined) || form.dataset.error || result?.message || '';
+          } else showFailure(catalogueFailureMessage(result, {unavailable: form.dataset.unavailable, error: form.dataset.error}));
           return;
         }
         message.replaceChildren();
@@ -76,7 +86,7 @@ const catalogueId = Astro.props.catalogueId || catalogue?.id;
         message.appendChild(text);
         message.appendChild(link);
         message.focus();
-      } catch { message.textContent = form.dataset.error || ''; }
+      } catch { showFailure(form.dataset.error || ''); }
       finally { button.disabled = false; form.removeAttribute('aria-busy'); }
     });
   });

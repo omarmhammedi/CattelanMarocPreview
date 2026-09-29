@@ -76,7 +76,7 @@ for (const [engine, launcher] of Object.entries(engines)) {
       assert.match(await contact.innerText(), /Dimanche/);
       assert.equal(await contact.locator('a[href="tel:+212771105490"]').count(), 1);
       assert.equal(await page.locator('a[href*="wa.me"]').count(), 0, 'Unconfirmed WhatsApp omitted');
-      assert.equal(await page.locator('.showroom-editorial a[href="#showroom-contact"]').count(), 1, 'Contact CTA goes to usable details');
+      assert((await contact.innerText()).includes('Pour les prix, les délais ou savoir si un modèle est exposé, appelez le showroom.'), 'One useful note accompanies the phone');
       const toggle = page.getByRole('button', { name: 'Afficher la carte interactive' });
       await toggle.focus();
       await page.keyboard.press('Enter');
@@ -117,7 +117,7 @@ for (const [engine, launcher] of Object.entries(engines)) {
         assert.equal(await page.locator('[data-showroom-map-toggle]').isVisible(), false);
         assert.equal(await page.locator('iframe').count(), 0);
         assert.equal(requests.length, 0);
-        assert(await page.getByRole('link', { name: /Préparer l’itinéraire/ }).count());
+        assert(await page.getByRole('link', { name: /^Itinéraire/ }).count());
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), true);
         records.push({ engine, width, javaScript: false, passed: true });
         await context.close();

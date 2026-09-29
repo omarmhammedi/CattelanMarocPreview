@@ -29,10 +29,14 @@ Une fois le site initialisé, l'aperçu se relance au démarrage du Codespace ou
 - Carte de l’accueil : zoom et déplacement à la demande, coordonnées du showroom éditables dans EmDash, attribution visible et données locales téléchargeables. La page showroom conserve séparément son itinéraire et sa carte Google Maps chargée à la demande.
 - PDF privé de démonstration, formulaire nom/email, préférence facultative pour les communications.
 - Contacts et événement CRM atomiques en stockage privé, reprise et dédoublonnage ; aucun CRM externe activé.
-- La révision showroom associe une photographie réelle tirée de l’article fourni par le propriétaire à un texte de visite concis. La séquence « Dessiné en Italie » réutilise deux images officielles de Skorpio déjà présentes dans EmDash. Voir le [contrat de contenu](docs/content-map.md#migration-0009--photographies-et-présentation-du-showroom).
+- Le showroom associe une photographie réelle tirée de l’article fourni par le propriétaire à une courte présentation, aux coordonnées et aux horaires. La séquence « Dessiné en Italie » réutilise deux images officielles de Skorpio déjà présentes dans EmDash. Voir le [contrat de contenu](docs/content-map.md#migration-0009--photographies-et-présentation-du-showroom).
 - Les autres photos d’ambiance et le PDF de démonstration restent provisoires. Les exemples de meubles ne constituent pas une liste de stock ou de pièces exposées.
 
 ## Vérifications
+
+La révision éditoriale 0010 applique le [réaudit des 28 pages](docs/editorial-audit-2026-09-29.md) : suppression des préparatifs systématiques, textes factuels, liens contextuels dans les articles et téléchargement explicite. Les manifestes `content/editorial-refresh-*.json` servent uniquement à la migration ciblée ; EmDash reste la source du site. Le [rapport de révision](docs/test-results-editorial-refresh.md) décrit la publication, les tests et les limites.
+
+`PUBLIC_TEST_ENGINE=chromium|webkit PUBLIC_TEST_THEME=dark|light node tests/editorial-refresh-browser.mjs` contrôle les textes publiés des 28 routes et les compositions ordinateur/mobile, sans écriture. `tests/editorial-refresh-cms.mjs` vérifie la migration et les brouillons uniquement dans une base jetable. Les anciens rapports restent des preuves historiques ; les contrôles familles/publication/showroom suivent désormais le texte de la migration 0010.
 
 ```sh
 npm run check

@@ -14,7 +14,7 @@ const frameId = 'showroom-interactive-map';
 const title = ['Carte Google Maps', name, address].filter(Boolean).join(' — ');
 ---
 {(mapUrl || source) && <div class="showroom-map" data-showroom-map>
-  {mapUrl && <a class="btn showroom-directions" href={mapUrl} target="_blank" rel="noopener noreferrer">Préparer l’itinéraire <span aria-hidden="true">↗</span></a>}
+  {mapUrl && <a class="btn showroom-directions" href={mapUrl} target="_blank" rel="noopener noreferrer">Itinéraire <span aria-hidden="true">↗</span></a>}
   {source && <>
     <button class="text-link showroom-map-toggle" type="button" hidden aria-expanded="false" aria-controls={frameId} data-showroom-map-toggle>
       <span data-showroom-map-label>Afficher la carte interactive</span><span aria-hidden="true" data-showroom-map-symbol>+</span>

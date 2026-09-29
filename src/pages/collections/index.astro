@@ -30,8 +30,6 @@ if (!page) return new Response('Page introuvable', { status: 404 });
     {page.sections?.map((section: any) => <EditorialSection section={section} />)}
   </section>}
   <section class="page-cta page-gutter" data-page-reveal>
-    <p class="kick">{site.name}</p>
-    <h2>{site.labels.catalogue}</h2>
     <a class="btn" href="/catalogue/">{site.labels.catalogue}<span aria-hidden="true">↗</span></a>
   </section>
 </PageLayout>

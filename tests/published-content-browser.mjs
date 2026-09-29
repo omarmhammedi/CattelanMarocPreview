@@ -1,5 +1,5 @@
 /**
- * Public, read-only verification after native migrations 0003 + 0004 + 0008.
+ * Public, read-only verification after native migrations 0003 through 0010.
  * No credentials, CMS content API, setup, authentication or publication calls.
  *
  * PUBLIC_TEST_URL=http://localhost:4321 node tests/published-content-browser.mjs
@@ -11,6 +11,7 @@ import {createHash} from 'node:crypto';
 import {mkdir, readFile, writeFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {chromium, webkit} from 'playwright';
+import {finishHasSeparateCode} from '../src/lib/model-labels.ts';
 
 const base = new URL(process.env.PUBLIC_TEST_URL || 'http://localhost:4321');
 assert(['http:', 'https:'].includes(base.protocol) && !base.username && !base.password);
@@ -23,6 +24,13 @@ const selectedWidth = process.env.PUBLIC_TEST_WIDTH ? Number(process.env.PUBLIC_
 assert(selectedWidth === null || [390, 1440].includes(selectedWidth), 'Unsupported focused viewport.');
 const manifests = await Promise.all(['family-guides.json', 'model-editorial.json'].map(async file =>
   JSON.parse(await readFile(`content/${file}`, 'utf8'))));
+const refreshedCopy = JSON.parse(await readFile('content/editorial-refresh-products.json', 'utf8'));
+for (const manifest of manifests) for (const entry of manifest.entries) {
+  const refresh = refreshedCopy.find(value => value.collection === manifest.collection && value.slug === entry.slug);
+  assert(refresh, 'Missing current editorial expectation.');
+  entry.after = {...entry.after, ...refresh.after};
+  if (refresh.seoAfter) entry.afterSeo = refresh.seoAfter;
+}
 const details = JSON.parse(await readFile('content/model-details.json', 'utf8'));
 const models = new Map(details.models.map(model => [model.slug, model]));
 const modelCopy = new Map(manifests[1].entries.map(model => [model.slug, model]));
@@ -143,7 +151,7 @@ async function verifyContent(engine) {
         assert.deepEqual(await nodes(page, html, '.model-dimension-value'), model.dimensions.map(row => row.value).filter(Boolean), `${route}: dimension values.`);
         assert.equal((await nodes(page, html, '.model-drawings img')).length, model.drawings.length, `${route}: drawing count.`);
         assert.equal((await nodes(page, html, '.model-finish')).length, model.finishes.length, `${route}: finish count.`);
-        assert.deepEqual(await nodes(page, html, '.model-finish-code'), model.finishes.filter(row => row.code).map(row => row.code), `${route}: finish codes.`);
+        assert.deepEqual(await nodes(page, html, '.model-finish-code'), model.finishes.filter(finishHasSeparateCode).map(row => row.code), `${route}: separate finish codes (codes already in names are not repeated).`);
         assert.deepEqual(await nodes(page, html, '.model-source a', 'href'), [model.source_url]);
         pairAsset((await nodes(page, html, '.model-hero-figure img', 'src'))[0], model.image, `${entry.slug}: hero`);
         for (const [selector, rows, label] of [

@@ -1,5 +1,7 @@
 # Réaudit de tous les textes du site
 
+**Mise à jour après approbation :** les corrections ont été appliquées dans la révision 0010. Voir le [résultat, les contrôles et les limites](test-results-editorial-refresh.md). Le relevé ci-dessous conserve les constats et propositions de l’audit initial.
+
 **29 septembre 2026, capture à 11 h 47, heure de Toronto.** Audit des 28 pages publiques de l’aperçu existant, après la révision showroom `a3127b2`, ainsi que des textes communs et des messages d’interface. Les propositions de ce rapport ne sont pas publiées.
 
 ## Conclusion

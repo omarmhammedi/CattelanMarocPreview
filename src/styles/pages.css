@@ -131,6 +131,8 @@
 .showroom-contact { padding: 34px; border: 1px solid var(--hair); align-self: start; position: sticky; top: 30px; scroll-margin-top: max(90px, calc(var(--u) * 8)); }
 .showroom-contact h2 { margin: 24px 0 38px; font-size: clamp(32px, 3.4vw, 48px); font-weight: 200; letter-spacing: -.03em; }
 .showroom-contact dl { margin: 0 0 30px; }
+.showroom-contact .page-text-block { margin-bottom: 24px; }
+.showroom-contact .page-text-block p { margin-block: 0 14px; font-size: 15px; line-height: 1.7; }
 .showroom-contact dl > div { border-top: 1px solid var(--hair); padding-block: 18px; }
 .showroom-contact dt { margin-bottom: 9px; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--faint); }
 .public-email { overflow-wrap: anywhere; text-transform: none !important; letter-spacing: normal !important; }

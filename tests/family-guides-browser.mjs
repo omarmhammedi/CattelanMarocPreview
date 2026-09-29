@@ -1,5 +1,5 @@
 /**
- * Anonymous, read-only verification of the six family guides after migration 0008.
+ * Anonymous, read-only verification of the six family guides after migration 0010.
  * Never reads credentials or calls setup, authentication, content or publication APIs.
  *
  * PUBLIC_TEST_ENGINE=chromium|webkit PUBLIC_TEST_THEME=dark|light
@@ -26,6 +26,13 @@ const takeScreenshots = process.env.PUBLIC_TEST_SCREENSHOTS !== 'false' && engin
 const manifest = JSON.parse(await readFile('content/family-guides.json', 'utf8'));
 const previous = JSON.parse(await readFile('content/family-editorial.json', 'utf8'));
 const modelManifest = JSON.parse(await readFile('content/model-editorial.json', 'utf8'));
+const refresh = JSON.parse(await readFile('content/editorial-refresh-products.json', 'utf8'));
+for (const current of [manifest, modelManifest]) for (const entry of current.entries) {
+  const patch = refresh.find(value => value.collection === current.collection && value.slug === entry.slug);
+  assert(patch);
+  entry.after = {...entry.after, ...patch.after};
+  if (patch.seoAfter) entry.afterSeo = patch.seoAfter;
+}
 const details = JSON.parse(await readFile('content/model-details.json', 'utf8'));
 assert.equal(manifest.collection, 'families');
 assert.equal(manifest.entries.length, 6);

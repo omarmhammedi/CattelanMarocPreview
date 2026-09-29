@@ -1,10 +1,10 @@
 # Stratégie de contenu et SEO
 
-Le [réaudit éditorial du 29 septembre 2026](editorial-audit-2026-09-29.md) révise l’orientation de rédaction ci-dessous : les invitations systématiques à préparer un projet ou une visite rendent plusieurs pages artificielles. Il recommande de supprimer ces étapes imposées, de présenter les meubles directement et de conserver les conseils là où ils répondent à une question précise. Ses propositions ne sont pas encore publiées.
+Le [réaudit éditorial du 29 septembre 2026](editorial-audit-2026-09-29.md) a conduit à la révision 0010 : suppression des préparatifs systématiques, présentation directe des meubles et conseils placés là où ils répondent à une question précise. Le [rapport de révision](test-results-editorial-refresh.md) consigne les contrôles et l’état de publication.
 
 L'[audit du contenu publié du 28 septembre 2026](seo-audit-2026-09-28.md) complète cette stratégie : [carte des 28 pages et intentions](seo-page-map.md), constats techniques et plan de finalisation priorisé. Il conserve les six familles et onze modèles documentés, et distingue les corrections réalisables des faits commerciaux encore à confirmer.
 
-Le site doit aider à choisir une référence Cattelan Italia et à préparer un échange avec le showroom de Casablanca. Chaque page a une fonction distincte dans ce parcours. Les intentions ci-dessous sont des hypothèses éditoriales tirées du contenu et de l'offre présentée ; elles ne constituent pas une étude de volumes de recherche ni une promesse de classement.
+Le site doit permettre de découvrir le mobilier, de vérifier une référence ou de trouver les informations du showroom de Casablanca. Chaque page répond à un besoin ; contacter le magasin n’est pas une étape obligatoire. Les intentions ci-dessous sont des hypothèses éditoriales tirées du contenu et de l'offre présentée ; elles ne constituent pas une étude de volumes de recherche ni une promesse de classement.
 
 Google propose notamment ce critère : « Le titre résume-t-il clairement le contenu de la page ? » Il privilégie l'utilité et la fiabilité et ne recommande aucun nombre de mots à atteindre. Le contenu doit donc apporter une réponse, sans allongement destiné au référencement. [Conseils officiels sur les contenus utiles](https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=fr).
 
@@ -14,10 +14,10 @@ Google propose notamment ce critère : « Le titre résume-t-il clairement le co
 | --- | --- | --- |
 | Accueil | Identifier la marque au Maroc et choisir un point d'entrée | Positionnement, six familles, accès au showroom et au catalogue |
 | `/collections/` | Trouver la bonne famille de mobilier | Catégories lisibles, usages et possibilités de chaque famille |
-| `/collections/{famille}/` | Comprendre la famille et préparer son choix | Vue d’ensemble sourcée, critères concrets, puis sélection de modèles comme exemples |
+| `/collections/{famille}/` | Comprendre la gamme et les différences entre meubles | Vue d’ensemble sourcée, critères concrets, puis sélection de modèles comme exemples |
 | `/modeles/{modele}/` | Vérifier une référence exacte | Version, matériaux, dimensions, finitions, images et fiche technique |
 | Journal et ses cinq articles | Résoudre une question de choix ou d'association | Méthode concrète, exemples documentés et liens vers les références concernées |
-| Showroom Casablanca | Comprendre l’intérêt d’une visite et la préparer | Photographie réelle, découverte sur place, conseil, coordonnées, accès et horaires |
+| Showroom Casablanca | Voir le magasin et trouver ses informations pratiques | Photographie réelle, surface, quartier, coordonnées, accès et horaires |
 | Catalogue | Comprendre le document proposé et y accéder | Édition, contenu du PDF et fonctionnement de la demande |
 
 Le titre SEO et la description doivent refléter le contenu effectivement disponible sur chaque page. Le nom d'une catégorie ne justifie pas de présenter sa sélection comme exhaustive. Les fiches de modèles doivent distinguer le modèle exact de ses déclinaisons : Skorpio en verre ne décrit pas automatiquement Skorpio Wood ou Keramik.
@@ -41,7 +41,7 @@ Les listes détaillées de finitions appartiennent aux fiches modèles ; les mé
 
 L’accueil donne une raison concrète de venir : une photographie du magasin, un paragraphe et un seul lien vers la page dédiée. La paire officielle de Skorpio dans la séquence « Dessiné en Italie » illustre le mobilier de la marque ; elle n’est pas présentée comme une photographie du magasin.
 
-La page showroom développe le conseil et la préparation de visite, avec les coordonnées conservées dans la configuration globale. Deux questions utiles couvrent les pièces exposées et la demande de prix/délai. La liste de villes et la question de livraison sont retirées, faute de modalités confirmées. L’article Maisons du Maroc transmis par le propriétaire étaye la présentation du lieu ; il ne remplace pas ses coordonnées approuvées et ne prouve pas qu’un modèle précis est actuellement exposé.
+La page showroom présente le magasin et ses coordonnées. Une seule note près du téléphone indique comment connaître les prix, délais et modèles exposés. Elle ne demande ni dossier, ni plans, ni photos avant une visite. L’article Maisons du Maroc transmis par le propriétaire étaye la présentation du lieu ; il ne remplace pas ses coordonnées approuvées et ne prouve pas qu’un modèle précis est actuellement exposé.
 
 La migration 0009 conserve le panneau SEO natif vide et actualise les champs éditoriaux de titre et de description de la page showroom. Son [contrat de contenu](content-map.md#migration-0009--photographies-et-présentation-du-showroom) précise les champs et images concernés ; le [rapport de révision](test-results-showroom-refresh.md) est le point de référence pour les preuves de publication et de validation.
 
@@ -53,9 +53,9 @@ Conserver la référence et la source officielle derrière chaque caractéristiq
 
 ## Relier les pages selon le besoin
 
-Le parcours principal va de l'accueil aux familles, puis aux modèles et au contact. Le catalogue reste accessible pour une consultation d'ensemble. Un visiteur du Journal doit pouvoir rejoindre directement la famille ou le modèle qui illustre le conseil, sans revenir à la navigation générale.
+L’accueil, les familles et les modèles sont reliés entre eux ; les coordonnées du showroom restent accessibles. Le PDF disponible est encore un document de démonstration, clairement signalé. Un visiteur du Journal peut rejoindre directement la famille ou le modèle qui illustre le conseil, sans revenir à la navigation générale.
 
-Les textes publiés pour les six familles contiennent onze liens contextuels vers les modèles. Les fiches possèdent un retour vers leur famille et les familles un article associé lorsqu'il existe. Les liens contextuels dans les cinq articles du Journal restent à compléter et à vérifier ; leur simple mention d'un modèle ne constitue pas encore un lien. Préserver des ancres explicites et des liens HTML utilisables, comme le recommande le [guide SEO de Google](https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=fr).
+Les six familles contiennent onze liens contextuels vers les modèles. Les fiches possèdent un retour vers leur famille et les familles un article associé lorsqu'il existe. La révision 0010 ajoute huit liens contextuels dans les articles du Journal et oriente leurs boutons vers les familles pertinentes. Préserver des ancres explicites et des liens HTML utilisables, comme le recommande le [guide SEO de Google](https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=fr).
 
 ## État et prochaines validations
 

@@ -1,5 +1,7 @@
 # Carte des 28 pages et intentions de recherche
 
+**Mise à jour après approbation :** les corrections ont été appliquées dans la révision 0010. Voir le [résultat, les contrôles et les limites](test-results-editorial-refresh.md). Le relevé ci-dessous conserve les constats et propositions de l’audit initial.
+
 Audit du contenu publié dans l’aperçu privé le **28 septembre 2026 à 20 h 18, heure de Toronto**. Les constats portent sur les réponses HTML des 28 routes, leurs textes, titres, descriptions et liens, conservés dans `test-results/seo-audit/report.json` et `page-copy.txt`. Le seed et les contrats de migration ont servi à comprendre le modèle éditorial, pas à présumer ce qui était publié.
 
 **Évolutions depuis ce relevé :** les [coordonnées et le parcours de contact du showroom](test-results-showroom.md) ont été publiés, puis les [six guides de collections](test-results-family-guides.md) ont été élargis le 29 septembre. Les constats ci-dessous sur le contact manquant et les textes centrés sur quelques modèles décrivent donc l’état antérieur ; les autres éléments à finaliser restent à suivre.

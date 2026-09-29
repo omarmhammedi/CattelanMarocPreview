@@ -48,7 +48,7 @@ const navigation = site.navigation || [];
       <div class="page-footer-intro">
         <Brand site={site} />
         {site.tagline && <p class="page-tagline">{site.tagline}</p>}
-        <p>{site.footerText}</p>
+        {site.footerText && <p>{site.footerText}</p>}
       </div>
       <nav aria-label="Navigation de pied de page">
         <PageMenu items={navigation} />

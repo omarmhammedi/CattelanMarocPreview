@@ -23,6 +23,8 @@ const output = resolve(process.env.PUBLIC_TEST_OUTPUT || 'test-results/showroom-
 const screenshots = process.env.PUBLIC_TEST_SCREENSHOTS !== 'false' && engine === 'chromium';
 const location = JSON.parse(await readFile('content/showroom-location.json', 'utf8'));
 const editorial = JSON.parse(await readFile('content/showroom-editorial-copy.json', 'utf8'));
+const refresh = JSON.parse(await readFile('content/editorial-refresh-pages.json', 'utf8'));
+Object.assign(editorial.showroom, refresh.find(entry => entry.collection === 'pages' && entry.slug === 'showroom-casablanca').after);
 const expectedPhone = `tel:${location.global.after.contact_phone.replace(/[^+\d]/gu, '')}`;
 const expectedDirections = new URL(location.global.after.map_url);
 const viewports = [{ width: 1440, height: 900 }, { width: 390, height: 844 }];
@@ -258,8 +260,9 @@ async function normalMotionCase(browser, viewport) {
     assert.equal(await page.title(), editorial.showroom.seo_title);
     assert.equal(await page.locator('meta[name="description"]').getAttribute('content'), editorial.showroom.meta_description);
     const faqHeadings = editorial.showroom.sections.filter(section => section.section_key.startsWith('faq_')).map(section => section.heading);
-    assert.equal(faqHeadings.length, 2, 'The approved copy contains two useful questions.');
-    assert.equal(await page.locator('.page-faq details').count(), 2);
+    assert.equal(faqHeadings.length, 0, 'The repeated questions are now one contact note.');
+    assert.equal(await page.locator('.page-faq details').count(), 0);
+    assert((await page.locator('#showroom-contact').innerText()).includes(editorial.showroom.sections.find(section => section.section_key === 'contact_note').text));
     assert.deepEqual(await page.locator('.page-faq details summary').evaluateAll(summaries => summaries.map(summary =>
       [...summary.childNodes].filter(node => node.nodeType === Node.TEXT_NODE).map(node => node.textContent).join('').trim()
     )), faqHeadings);

@@ -19,7 +19,7 @@ if (!family) return new Response('Collection introuvable', { status: 404 });
   </figure>}
   {family.body?.length > 0 && <section class="page-gutter page-reading-section" data-page-reveal><div class="page-prose"><PortableText value={family.body} /></div></section>}
   {family.models?.length > 0 && <section class="page-gutter models-section">
-    <div class="section-heading"><p class="kick">La sélection</p><h2>Quelques pièces à découvrir</h2></div>
+    <div class="section-heading"><h2>Quelques modèles</h2></div>
     <div class="model-grid">
       {family.models.map((model: any) => <ModelCard model={model} sharedNotice={site.modelNotice}/>)}
     </div>
@@ -30,7 +30,6 @@ if (!family) return new Response('Collection introuvable', { status: 404 });
     <a href={`/journal/${family.relatedPost.slug}/`}><h2>{family.relatedPost.title}</h2><span class="text-link">{site.labels.readArticle} <span aria-hidden="true">↗</span></span></a>
   </section>}
   <section class="page-cta page-gutter" data-page-reveal>
-    <p class="kick">Pour poursuivre votre découverte</p><h2>Précisons votre projet</h2>
     <div class="row"><a class="btn" href="/catalogue/">{site.labels.catalogue}</a><a class="text-link" href="/showroom-casablanca/#showroom-contact">{site.labels.contact}<span aria-hidden="true">↗</span></a></div>
   </section>
 </PageLayout>

@@ -1,0 +1,976 @@
+{
+  "date": "2026-09-29",
+  "displayTimeZone": "America/Toronto",
+  "scope": "Owner-approved editorial refresh of all 28 public pages, published in the existing private preview only",
+  "publication": {
+    "startedAt": "2026-09-29T16:23:12.153Z",
+    "finishedAt": "2026-09-29T16:24:04.938Z",
+    "complete": true,
+    "manifestSha256": "0b95d4a2e99fed23db16a009bfbb22fa8ed1cc5598a0fd3902d29dfb795d6448",
+    "entries": [
+      {
+        "collection": "pages",
+        "slug": "home",
+        "fields": [
+          "intro",
+          "sections",
+          "brand_caption",
+          "meta_description"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "pages",
+        "slug": "collections",
+        "fields": [
+          "intro",
+          "sections"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "pages",
+        "slug": "showroom-casablanca",
+        "fields": [
+          "intro",
+          "sections",
+          "meta_description"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "pages",
+        "slug": "catalogue",
+        "fields": [
+          "title",
+          "intro",
+          "sections",
+          "seo_title",
+          "meta_description"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "site_content",
+        "slug": "global",
+        "fields": [
+          "footer_text",
+          "catalogue_label",
+          "contact_label",
+          "model_notice",
+          "preview_notice",
+          "form_email_label",
+          "form_opt_in_label",
+          "form_hint",
+          "form_privacy",
+          "form_pending",
+          "form_email_error",
+          "form_error",
+          "form_success_title",
+          "form_success_text",
+          "form_unavailable",
+          "map_note"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "families",
+        "slug": "tables",
+        "fields": [
+          "intro",
+          "card_text",
+          "content",
+          "meta_description"
+        ],
+        "nativeSeo": [
+          "title",
+          "description"
+        ]
+      },
+      {
+        "collection": "families",
+        "slug": "chaises-tabourets",
+        "fields": [
+          "intro",
+          "card_text",
+          "content",
+          "meta_description"
+        ],
+        "nativeSeo": [
+          "title",
+          "description"
+        ]
+      },
+      {
+        "collection": "families",
+        "slug": "canapes-fauteuils",
+        "fields": [
+          "intro",
+          "card_text",
+          "content",
+          "meta_description"
+        ],
+        "nativeSeo": [
+          "title",
+          "description"
+        ]
+      },
+      {
+        "collection": "families",
+        "slug": "buffets-bibliotheques",
+        "fields": [
+          "intro",
+          "card_text",
+          "content",
+          "meta_description"
+        ],
+        "nativeSeo": [
+          "title",
+          "description"
+        ]
+      },
+      {
+        "collection": "families",
+        "slug": "luminaires",
+        "fields": [
+          "intro",
+          "card_text",
+          "content",
+          "meta_description"
+        ],
+        "nativeSeo": [
+          "title",
+          "description"
+        ]
+      },
+      {
+        "collection": "families",
+        "slug": "mobilier-exterieur",
+        "fields": [
+          "intro",
+          "card_text",
+          "content",
+          "meta_description"
+        ],
+        "nativeSeo": [
+          "title",
+          "description"
+        ]
+      },
+      {
+        "collection": "models",
+        "slug": "skorpio",
+        "fields": [
+          "content",
+          "availability_note"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "models",
+        "slug": "napoleon-keramik",
+        "fields": [
+          "content",
+          "availability_note"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "models",
+        "slug": "rhonda",
+        "fields": [
+          "content",
+          "availability_note"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "models",
+        "slug": "greta",
+        "fields": [
+          "content",
+          "availability_note"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "models",
+        "slug": "ruby",
+        "fields": [
+          "content",
+          "availability_note"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "models",
+        "slug": "ruby-lounge",
+        "fields": [
+          "content",
+          "availability_note"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "models",
+        "slug": "chelsea",
+        "fields": [
+          "content",
+          "availability_note"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "models",
+        "slug": "airport",
+        "fields": [
+          "content",
+          "availability_note"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "models",
+        "slug": "bloom",
+        "fields": [
+          "content",
+          "availability_note"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "models",
+        "slug": "napoleon-keramik-outdoor",
+        "fields": [
+          "content",
+          "availability_note"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "models",
+        "slug": "greta-outdoor",
+        "fields": [
+          "content",
+          "availability_note"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "pages",
+        "slug": "journal",
+        "fields": [
+          "intro",
+          "sections",
+          "meta_description"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "posts",
+        "slug": "choisir-forme-proportions-table-salle-a-manger",
+        "fields": [
+          "title",
+          "excerpt",
+          "content",
+          "cta_text",
+          "cta_label",
+          "cta_href",
+          "meta_description"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "posts",
+        "slug": "associer-table-chaises-salle-a-manger",
+        "fields": [
+          "excerpt",
+          "content",
+          "cta_text",
+          "cta_label",
+          "cta_href",
+          "meta_description"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "posts",
+        "slug": "ceramique-verre-bois-choisir-finition-meuble",
+        "fields": [
+          "title",
+          "excerpt",
+          "content",
+          "sources",
+          "cta_text",
+          "cta_label",
+          "cta_href",
+          "seo_title",
+          "meta_description"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "posts",
+        "slug": "composer-salon-canape-fauteuil",
+        "fields": [
+          "excerpt",
+          "content",
+          "sources",
+          "cta_text",
+          "cta_label",
+          "meta_description"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "collection": "posts",
+        "slug": "choisir-buffet-bibliotheque-salon",
+        "fields": [
+          "excerpt",
+          "content",
+          "cta_text",
+          "cta_label"
+        ],
+        "nativeSeo": []
+      },
+      {
+        "menu": "primary",
+        "url": "/catalogue/",
+        "label": "Catalogue"
+      }
+    ]
+  },
+  "changes": {
+    "publishedEntries": 28,
+    "editedFields": 111,
+    "nativeSeoPairs": 6,
+    "menuLabels": 1,
+    "newMedia": 0,
+    "removedPages": 0,
+    "secondDryRunChanges": 0
+  },
+  "preservation": {
+    "verifiedAt": "2026-09-29T16:27:54.475Z",
+    "ok": true,
+    "errors": [],
+    "strictTables": 51,
+    "approvedEntriesVerified": 28,
+    "nativeSeoEntriesVerified": 6,
+    "menuLabelsVerified": 1,
+    "existingRevisionsVerified": 69,
+    "newRevisions": 28,
+    "existingFilesVerified": 627,
+    "protectedBytes": 191784549,
+    "users": 2,
+    "passkeys": 2,
+    "media": 624,
+    "addedTechnicalUsers": 0,
+    "changedTables": [
+      {
+        "table": "_cf_METADATA",
+        "before": 1,
+        "after": 1,
+        "bookkeeping": true
+      },
+      {
+        "table": "_emdash_media_usage",
+        "before": 1809,
+        "after": 2211,
+        "bookkeeping": true
+      },
+      {
+        "table": "_emdash_media_usage_index_status",
+        "before": 6,
+        "after": 6,
+        "bookkeeping": true
+      },
+      {
+        "table": "_emdash_media_usage_sources",
+        "before": 23,
+        "after": 31,
+        "bookkeeping": true
+      },
+      {
+        "table": "_emdash_media_usage_work",
+        "before": 12,
+        "after": 4,
+        "bookkeeping": true
+      },
+      {
+        "table": "_emdash_menu_items",
+        "before": 4,
+        "after": 4,
+        "bookkeeping": false
+      },
+      {
+        "table": "_emdash_revision_prune_queue",
+        "before": 9,
+        "after": 1,
+        "bookkeeping": true
+      },
+      {
+        "table": "_emdash_seo",
+        "before": 17,
+        "after": 17,
+        "bookkeeping": false
+      },
+      {
+        "table": "ec_families",
+        "before": 6,
+        "after": 6,
+        "bookkeeping": false
+      },
+      {
+        "table": "ec_models",
+        "before": 11,
+        "after": 11,
+        "bookkeeping": false
+      },
+      {
+        "table": "ec_pages",
+        "before": 5,
+        "after": 5,
+        "bookkeeping": false
+      },
+      {
+        "table": "ec_posts",
+        "before": 5,
+        "after": 5,
+        "bookkeeping": false
+      },
+      {
+        "table": "ec_site_content",
+        "before": 1,
+        "after": 1,
+        "bookkeeping": false
+      },
+      {
+        "table": "revisions",
+        "before": 69,
+        "after": 97,
+        "bookkeeping": false
+      }
+    ]
+  },
+  "authCleanup": {
+    "completedAt": "2026-09-29T16:24:50.799Z",
+    "logoutStatus": 200,
+    "oldCookieStatus": 401,
+    "onlyNewCookieFileRemoved": true
+  },
+  "validation": {
+    "unitTestsPassed": 101,
+    "astroFilesChecked": 102,
+    "astroErrors": 0,
+    "astroWarnings": 0,
+    "astroHints": 0,
+    "seedValidatedOnly": true,
+    "buildPassed": true,
+    "buildSeconds": 20.97,
+    "buildWarning": "Existing client bundle warning above 500 kB",
+    "disposableCms": {
+      "completedAt": "2026-09-29T16:20:34.526Z",
+      "passed": true,
+      "checks": [
+        "Prepared 28 synthetic before-states and the original menu label through disposable native APIs; no media or authentication writes.",
+        "Dry preparation leaves all 28 entries, revisions, native SEO, schemas and menu untouched.",
+        "28 entries and one menu label publish with metadata, references and fixture media preserved; reapplication performs zero writes.",
+        "Contact-note draft stays private; signed preview shows the contact note and arbitrary extra section; invalid token is rejected and migration preserves the pending draft.",
+        "Clearing contact_note removes it in signed/public views without deleting arbitrary sections or adding a fallback FAQ; original note restored.",
+        "Clearing optional homepage sections is respected in signed preview and after publication, on both markup variants; sections restored.",
+        "Clearing an article CTA removes its section in preview and public content without a fallback catalogue button; CTA restored.",
+        "Native SEO updates and clearing take effect immediately while body draft remains private; original body/SEO restored.",
+        "All temporary publication tests restore the completed migration state, without pending drafts."
+      ],
+      "restoreErrors": []
+    },
+    "disposableCatalogue": {
+      "completedAt": "2026-09-29T16:21:22.660Z",
+      "passed": true,
+      "checks": [
+        "Contacts, export et suppression protégés ; une session sans l’en-tête CSRF est refusée.",
+        "Méthode incorrecte, origine étrangère et e-mail invalide refusés sans contact enregistré.",
+        "Demande persistée dans D1 avant téléchargement R2 ; nouvelle tentative sans doublon ni abonnement implicite.",
+        "Consentement facultatif : valeur omise ou false conservée sans abonnement ; choix true conservé ; réutilisation d’un UUID avec un autre choix refusée.",
+        "Faux lien refusé ; export privé fonctionnel ; traitement CRM clairement en attente de configuration.",
+        "PDF ajouté depuis l’API privée : le brouillon conserve l’ancienne édition ; la publication active le nouveau PDF dès la demande suivante.",
+        "Deux PDF de contenus distincts contrôlés par SHA-256 : le brouillon et l’ancien lien livrent les octets initiaux ; les nouvelles demandes livrent les octets de la nouvelle édition après publication.",
+        "Suppression administrative retire la demande et son événement, puis révoque le téléchargement.",
+        "Formulaire réel Chromium : téléchargement après saisie sans consentement, puis avec consentement explicite ; les deux choix sont persistés correctement.",
+        "Fiche Catalogue restaurée et republiée après le test.",
+        "Contacts et PDF ajoutés par ce test supprimés de l’environnement local."
+      ]
+    },
+    "disposableEnvironmentStoppedAndRemoved": true
+  },
+  "publicChecks": [
+    {
+      "engine": "chromium",
+      "theme": "dark",
+      "startedAt": "2026-09-29T16:26:03.930Z",
+      "finishedAt": "2026-09-29T16:29:14.521Z",
+      "passed": true,
+      "checks": [
+        {
+          "name": "SSR /: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /collections/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /showroom-casablanca/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /catalogue/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /collections/tables/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /collections/chaises-tabourets/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /collections/canapes-fauteuils/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /collections/buffets-bibliotheques/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /collections/luminaires/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /collections/mobilier-exterieur/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/skorpio/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/napoleon-keramik/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/rhonda/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/greta/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/ruby/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/ruby-lounge/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/chelsea/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/airport/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/bloom/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/napoleon-keramik-outdoor/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/greta-outdoor/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /journal/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /journal/choisir-forme-proportions-table-salle-a-manger/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /journal/associer-table-chaises-salle-a-manger/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /journal/ceramique-verre-bois-choisir-finition-meuble/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /journal/composer-salon-canape-fauteuil/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /journal/choisir-buffet-bibliotheque-salon/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "Accueil, showroom simplifié, catalogue, formulaire facultatif et navigation : champs globaux et suppression des répétitions"
+        },
+        {
+          "name": "199 liens internes : réponses 200 et ancres présentes"
+        },
+        {
+          "name": "chromium/dark/1440 : 28 pages sans débordement, thème et DOM complets"
+        },
+        {
+          "name": "chromium/dark/1440 : animations et composition de l’accueil"
+        },
+        {
+          "name": "chromium/dark/1440 : showroom, guide, article, erreurs locales du formulaire et consentement facultatif"
+        },
+        {
+          "name": "chromium/dark/1440 : thème au clavier et navigation accueil→famille→modèle"
+        },
+        {
+          "name": "chromium/dark/390 : 28 pages sans débordement, thème et DOM complets"
+        },
+        {
+          "name": "chromium/dark/390 : animations et composition de l’accueil"
+        },
+        {
+          "name": "chromium/dark/390 : showroom, guide, article, erreurs locales du formulaire et consentement facultatif"
+        },
+        {
+          "name": "chromium/dark/390 : thème au clavier et navigation accueil→famille→modèle"
+        },
+        {
+          "name": "chromium/dark : contenu accessible avec mouvement réduit"
+        }
+      ],
+      "routeCount": 28,
+      "linkCount": 199,
+      "layoutCount": 56,
+      "screenshots": [
+        "home-showroom-1440-dark.jpg",
+        "showroom-contact-1440-dark.jpg",
+        "family-tables-1440-dark.jpg",
+        "journal-table-1440-dark.jpg",
+        "catalogue-form-1440-dark.jpg"
+      ],
+      "animationPositions": [
+        {
+          "selector": "#accueil",
+          "progress": 0.8,
+          "engine": "chromium",
+          "theme": "dark"
+        },
+        {
+          "selector": "#italie",
+          "progress": 0.3,
+          "engine": "chromium",
+          "theme": "dark"
+        },
+        {
+          "selector": "#collections",
+          "progress": 1,
+          "engine": "chromium",
+          "theme": "dark"
+        },
+        {
+          "selector": "#showroom",
+          "progress": 0.7,
+          "engine": "chromium",
+          "theme": "dark"
+        },
+        {
+          "selector": "#catalogue",
+          "progress": 0.6,
+          "engine": "chromium",
+          "theme": "dark"
+        }
+      ],
+      "errors": [],
+      "attemptedWrites": [],
+      "blockedPrivateRequests": []
+    },
+    {
+      "engine": "chromium",
+      "theme": "light",
+      "startedAt": "2026-09-29T16:34:43.982Z",
+      "finishedAt": "2026-09-29T16:37:13.183Z",
+      "passed": true,
+      "checks": [
+        {
+          "name": "chromium/light/1440 : 28 pages sans débordement, thème et DOM complets"
+        },
+        {
+          "name": "chromium/light/1440 : animations et composition de l’accueil"
+        },
+        {
+          "name": "chromium/light/1440 : showroom, guide, article, erreurs locales du formulaire et consentement facultatif"
+        },
+        {
+          "name": "chromium/light/1440 : thème au clavier et navigation accueil→famille→modèle"
+        },
+        {
+          "name": "chromium/light/390 : 28 pages sans débordement, thème et DOM complets"
+        },
+        {
+          "name": "chromium/light/390 : animations et composition de l’accueil"
+        },
+        {
+          "name": "chromium/light/390 : showroom, guide, article, erreurs locales du formulaire et consentement facultatif"
+        },
+        {
+          "name": "chromium/light/390 : thème au clavier et navigation accueil→famille→modèle"
+        },
+        {
+          "name": "chromium/light : contenu accessible avec mouvement réduit"
+        }
+      ],
+      "routeCount": 0,
+      "linkCount": 0,
+      "layoutCount": 56,
+      "screenshots": [
+        "home-showroom-390-light.jpg",
+        "showroom-contact-390-light.jpg",
+        "family-tables-390-light.jpg",
+        "journal-table-390-light.jpg",
+        "catalogue-form-390-light.jpg"
+      ],
+      "animationPositions": [
+        {
+          "selector": "#accueil",
+          "progress": 0.8,
+          "engine": "chromium",
+          "theme": "light"
+        },
+        {
+          "selector": "#italie",
+          "progress": 0.3,
+          "engine": "chromium",
+          "theme": "light"
+        },
+        {
+          "selector": "#collections",
+          "progress": 1,
+          "engine": "chromium",
+          "theme": "light"
+        },
+        {
+          "selector": "#showroom",
+          "progress": 0.7,
+          "engine": "chromium",
+          "theme": "light"
+        },
+        {
+          "selector": "#catalogue",
+          "progress": 0.6,
+          "engine": "chromium",
+          "theme": "light"
+        }
+      ],
+      "errors": [],
+      "attemptedWrites": [],
+      "blockedPrivateRequests": []
+    },
+    {
+      "engine": "webkit",
+      "theme": "dark",
+      "startedAt": "2026-09-29T17:04:31.544Z",
+      "finishedAt": "2026-09-29T17:06:56.603Z",
+      "passed": true,
+      "checks": [
+        {
+          "name": "webkit/dark/1440 : 28 pages sans débordement, thème et DOM complets"
+        },
+        {
+          "name": "webkit/dark/1440 : animations et composition de l’accueil"
+        },
+        {
+          "name": "webkit/dark/1440 : showroom, guide, article, erreurs locales du formulaire et consentement facultatif"
+        },
+        {
+          "name": "webkit/dark/1440 : thème au clavier et navigation accueil→famille→modèle"
+        },
+        {
+          "name": "webkit/dark/390 : 28 pages sans débordement, thème et DOM complets"
+        },
+        {
+          "name": "webkit/dark/390 : animations et composition de l’accueil"
+        },
+        {
+          "name": "webkit/dark/390 : showroom, guide, article, erreurs locales du formulaire et consentement facultatif"
+        },
+        {
+          "name": "webkit/dark/390 : thème au clavier et navigation accueil→famille→modèle"
+        },
+        {
+          "name": "webkit/dark : contenu accessible avec mouvement réduit"
+        }
+      ],
+      "routeCount": 0,
+      "linkCount": 0,
+      "layoutCount": 56,
+      "screenshots": [],
+      "animationPositions": [
+        {
+          "selector": "#accueil",
+          "progress": 0.8,
+          "engine": "webkit",
+          "theme": "dark"
+        },
+        {
+          "selector": "#italie",
+          "progress": 0.3,
+          "engine": "webkit",
+          "theme": "dark"
+        },
+        {
+          "selector": "#collections",
+          "progress": 1,
+          "engine": "webkit",
+          "theme": "dark"
+        },
+        {
+          "selector": "#showroom",
+          "progress": 0.7,
+          "engine": "webkit",
+          "theme": "dark"
+        },
+        {
+          "selector": "#catalogue",
+          "progress": 0.6,
+          "engine": "webkit",
+          "theme": "dark"
+        }
+      ],
+      "errors": [],
+      "attemptedWrites": [],
+      "blockedPrivateRequests": []
+    },
+    {
+      "engine": "webkit",
+      "theme": "light",
+      "startedAt": "2026-09-29T17:07:07.421Z",
+      "finishedAt": "2026-09-29T17:08:47.123Z",
+      "passed": true,
+      "checks": [
+        {
+          "name": "webkit/light/1440 : 28 pages sans débordement, thème et DOM complets"
+        },
+        {
+          "name": "webkit/light/1440 : animations et composition de l’accueil"
+        },
+        {
+          "name": "webkit/light/1440 : showroom, guide, article, erreurs locales du formulaire et consentement facultatif"
+        },
+        {
+          "name": "webkit/light/1440 : thème au clavier et navigation accueil→famille→modèle"
+        },
+        {
+          "name": "webkit/light/390 : 28 pages sans débordement, thème et DOM complets"
+        },
+        {
+          "name": "webkit/light/390 : animations et composition de l’accueil"
+        },
+        {
+          "name": "webkit/light/390 : showroom, guide, article, erreurs locales du formulaire et consentement facultatif"
+        },
+        {
+          "name": "webkit/light/390 : thème au clavier et navigation accueil→famille→modèle"
+        },
+        {
+          "name": "webkit/light : contenu accessible avec mouvement réduit"
+        }
+      ],
+      "routeCount": 0,
+      "linkCount": 0,
+      "layoutCount": 56,
+      "screenshots": [],
+      "animationPositions": [
+        {
+          "selector": "#accueil",
+          "progress": 0.8,
+          "engine": "webkit",
+          "theme": "light"
+        },
+        {
+          "selector": "#italie",
+          "progress": 0.3,
+          "engine": "webkit",
+          "theme": "light"
+        },
+        {
+          "selector": "#collections",
+          "progress": 1,
+          "engine": "webkit",
+          "theme": "light"
+        },
+        {
+          "selector": "#showroom",
+          "progress": 0.7,
+          "engine": "webkit",
+          "theme": "light"
+        },
+        {
+          "selector": "#catalogue",
+          "progress": 0.6,
+          "engine": "webkit",
+          "theme": "light"
+        }
+      ],
+      "errors": [],
+      "attemptedWrites": [],
+      "blockedPrivateRequests": []
+    }
+  ],
+  "totals": {
+    "checks": 65,
+    "publicRoutes": 28,
+    "internalLinksAndAnchors": 199,
+    "layouts": 224,
+    "screenshots": 10
+  },
+  "screenshots": [
+    {
+      "path": "screenshots/editorial-refresh-2026-09-29/catalogue-form-1440-dark.jpg",
+      "bytes": 119919,
+      "sha256": "9084829c06d8f076733590921633f68cc56bd3f71f288a93780e843bfe654c0e"
+    },
+    {
+      "path": "screenshots/editorial-refresh-2026-09-29/catalogue-form-390-light.jpg",
+      "bytes": 40800,
+      "sha256": "2243c8b26dfd4d795561677efcfbc29abc1be3f8a09e8b13fdd582aebfea861b"
+    },
+    {
+      "path": "screenshots/editorial-refresh-2026-09-29/family-tables-1440-dark.jpg",
+      "bytes": 96424,
+      "sha256": "cf45ebdb512923f4fbb2bdd0fc71701bb8a5e9a7e0328f53159b2c24869d59d9"
+    },
+    {
+      "path": "screenshots/editorial-refresh-2026-09-29/family-tables-390-light.jpg",
+      "bytes": 56836,
+      "sha256": "16bc7e584e168b0fd5e950ebc6e80a255e4371ef8a9fdd2442b8390c53f6925c"
+    },
+    {
+      "path": "screenshots/editorial-refresh-2026-09-29/home-showroom-1440-dark.jpg",
+      "bytes": 106896,
+      "sha256": "d14c53cdd2fb7cc7a85d2bb213ac97e981f9c593e4a249f74733c9aac4291664"
+    },
+    {
+      "path": "screenshots/editorial-refresh-2026-09-29/home-showroom-390-light.jpg",
+      "bytes": 52663,
+      "sha256": "b4f59ab8d032d73264ca5fe8231d6d049dea84e599120e8670dbcbb7bf495419"
+    },
+    {
+      "path": "screenshots/editorial-refresh-2026-09-29/journal-table-1440-dark.jpg",
+      "bytes": 106038,
+      "sha256": "b972b5504c21bfb777d73e94187aef6a6936358c67c66b10d2c814b7e7be3c34"
+    },
+    {
+      "path": "screenshots/editorial-refresh-2026-09-29/journal-table-390-light.jpg",
+      "bytes": 63463,
+      "sha256": "7b6145a91802bfd5249c9dd954c5779981b17652dad5d70efdcc9dcc9d60ef22"
+    },
+    {
+      "path": "screenshots/editorial-refresh-2026-09-29/showroom-contact-1440-dark.jpg",
+      "bytes": 136542,
+      "sha256": "72d787ffd8cfedb59c33f9995458b621c152ca33e6adbefed505ecd80114200f"
+    },
+    {
+      "path": "screenshots/editorial-refresh-2026-09-29/showroom-contact-390-light.jpg",
+      "bytes": 38660,
+      "sha256": "1d4ca2b1bf7b80b048574c38732bfe3c13d8a8b6c3402e076eb3c0adff513eac"
+    }
+  ],
+  "limits": [
+    "Private non-indexable preview; no production deployment, main merge, static preview or GitHub Pages modification.",
+    "WebKit automation is not a physical iPhone test. No renewed pixel-perfect comparison with version B or ranking guarantee.",
+    "Valid catalogue/contact/PDF flows and publication mutations were tested only in a separate disposable environment with synthetic data, own database, media, secrets and passkey.",
+    "Demo catalogue, some provisional ambience images, final commercial/legal terms and image rights remain to finalize before public launch.",
+    "Unverified technical abbreviations and numbered image/plan labels were retained without guessing.",
+    "External source availability and the real Google Maps service are not proved by the read-only browser suite.",
+    "Simple Browser sandbox can block itinerary popup. Direct PDF failures remain server messages without a dedicated HTML error page.",
+    "An initial WebKit attempt was interrupted when the local server stopped, with no cgroup OOM event. Cause unconfirmed; server restarted with original state and successful suites used here."
+  ]
+}

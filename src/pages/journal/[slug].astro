@@ -24,7 +24,7 @@ const hasDate = publishedDate && !Number.isNaN(publishedDate.getTime());
     </figure>}
     <div class="page-gutter article-reading"><div class="page-prose"><PortableText value={post.body} /></div></div>
     {post.sources?.length > 0 && <aside class="article-sources page-gutter">
-      <details><summary>Pour aller plus loin</summary><ul>{post.sources.map((source: any) => <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} <span aria-hidden="true">↗</span></a></li>)}</ul></details>
+      <details><summary>Sources</summary><ul>{post.sources.map((source: any) => <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} <span aria-hidden="true">↗</span></a></li>)}</ul></details>
     </aside>}
     {(post.cta?.text || (post.cta?.label && post.cta?.href)) && <section class="page-cta page-gutter" data-page-reveal>
       {post.cta.text && <p class="cta-copy">{post.cta.text}</p>}
