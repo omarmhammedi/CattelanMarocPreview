@@ -29,7 +29,8 @@ Une fois le site initialisé, l'aperçu se relance au démarrage du Codespace ou
 - Carte de l’accueil : zoom et déplacement à la demande, coordonnées du showroom éditables dans EmDash, attribution visible et données locales téléchargeables. La page showroom conserve séparément son itinéraire et sa carte Google Maps chargée à la demande.
 - PDF privé de démonstration, formulaire nom/email, préférence facultative pour les communications.
 - Contacts et événement CRM atomiques en stockage privé, reprise et dédoublonnage ; aucun CRM externe activé.
-- Les textes, visuels et PDF restent provisoires. Les exemples de meubles ne constituent pas une liste de stock ou de pièces exposées.
+- La révision showroom associe une photographie réelle tirée de l’article fourni par le propriétaire à un texte de visite concis. La séquence « Dessiné en Italie » réutilise deux images officielles de Skorpio déjà présentes dans EmDash. Voir le [contrat de contenu](docs/content-map.md#migration-0009--photographies-et-présentation-du-showroom).
+- Les autres photos d’ambiance et le PDF de démonstration restent provisoires. Les exemples de meubles ne constituent pas une liste de stock ou de pièces exposées.
 
 ## Vérifications
 
@@ -50,6 +51,8 @@ La migration 0008 élargit les six familles à la présentation de gamme et aux 
 
 `node tests/showroom-browser.mjs` vérifie en lecture seule les coordonnées, les thèmes et la carte Google Maps à la demande, avec captures dans `test-results/showroom-browser/`. Le [premier rapport showroom](docs/test-results-showroom.md) décrit l’étape précédente avec le plan illustratif ; il ne valide pas la nouvelle géographie. `node tests/geographic-map-browser.mjs` contrôle la carte géographique et ses interactions ; ses preuves et limites sont consignées dans le [rapport dédié](docs/test-results-geographic-map.md).
 
+La migration 0009 cible uniquement les deux pages `home` et `showroom-casablanca` et leurs images approuvées. Les textes, références d’images et contrôles de départ sont décrits dans `content/showroom-editorial-copy.json` et `content/showroom-refresh.json` ; le site continue de lire EmDash à chaque requête. Le [rapport de cette révision](docs/test-results-showroom-refresh.md) rassemble les preuves de publication, les contrôles publics et les captures.
+
 Le cycle brouillon, aperçu signé, publication et effacement des champs relève de `tests/showroom-location-cms.mjs` pour la migration 0005 et de `tests/geographic-showroom-cms.mjs` pour les coordonnées de la migration 0006, **uniquement dans l’environnement jetable** décrit dans le guide de développement.
 
 `node tests/geographic-map-interaction-browser.mjs` contrôle aussi les clics sur `+` et `−` après défilement partiel de la carte, les limites du zoom, les noms de rues, les taps mobiles et l’affichage dans une iframe. Il accepte `PUBLIC_TEST_ENGINE=chromium` ou `webkit` et `PUBLIC_TEST_THEME=dark` ou `light`. Voir [le correctif des commandes et ses captures](docs/test-results-map-controls.md).
@@ -64,6 +67,7 @@ Le cycle brouillon, aperçu signé, publication et effacement des champs relève
 - [Stratégie de contenu et SEO](docs/seo-content-strategy.md)
 - [Audit des 28 pages et plan de finalisation SEO](docs/seo-audit-2026-09-28.md)
 - [Coordonnées du showroom, carte et preuves de validation](docs/test-results-showroom.md)
+- [Photographies et présentation du showroom](docs/test-results-showroom-refresh.md)
 - [Carte géographique : sources, attribution et données locales](docs/geographic-map.md)
 - [Vérifications de la carte géographique](docs/test-results-geographic-map.md)
 - [Carte des pages et intentions de recherche](docs/seo-page-map.md)
@@ -75,4 +79,4 @@ Le cycle brouillon, aperçu signé, publication et effacement des champs relève
 
 Connecter Cloudflare, créer les ressources de préproduction puis de production, importer les données et médias, configurer les secrets, inscrire l'administrateur et tester le parcours complet sur Workers. Le domaine `cattelanitalia.ma` sera raccordé à cette étape. `SITE_INDEXABLE=false` et les réponses sans cache protègent actuellement la prévisualisation contre une indexation involontaire et les contenus périmés.
 
-Avant une collecte réelle : finaliser le catalogue, les informations légales et la confidentialité, confirmer les services proposés et les droits sur les visuels. L’adresse, le téléphone et les horaires ont été fournis ; aucun email public ni usage de WhatsApp n’a été confirmé. Les photographies réelles du magasin restent à fournir. La page de confidentialité actuelle décrit uniquement les essais de développement.
+Avant une collecte réelle : finaliser le catalogue, les informations légales et la confidentialité, confirmer les services proposés et les droits sur les visuels. L’adresse, le téléphone et les horaires ont été fournis ; aucun email public ni usage de WhatsApp n’a été confirmé. Une photographie réelle du magasin est retenue depuis l’article transmis par le propriétaire ; les fichiers originaux et les droits pour la mise en ligne définitive restent à confirmer. La page de confidentialité actuelle décrit uniquement les essais de développement.

@@ -51,7 +51,7 @@ for (const [engine, launcher] of Object.entries(engines)) {
       await open('/');
       assert.equal(mapRequests.length, 0, 'Homepage must not load Google Maps');
       assert.equal(await page.locator('iframe').count(), 0);
-      assert(await page.locator('a[href="tel:+212771105490"]').count() >= 3, 'Homepage phone links');
+      assert.equal(await page.locator('.ft a[href="tel:+212771105490"]').count(), 1, 'Homepage phone stays in practical footer contacts');
       const plan = page.locator(width > 820 ? '#plan' : '#m-plan');
       const directions = new URL(await plan.getByRole('link', { name: 'Itinéraire', exact: true }).getAttribute('href'));
       assert.equal(directions.searchParams.get('destination_place_id'), 'ChIJnXzIEVjTpw0RXul0XQgeEHw');
@@ -65,7 +65,7 @@ for (const [engine, launcher] of Object.entries(engines)) {
         await page.evaluate(() => { const section = document.querySelector('#showroom'); scrollTo(0, section.offsetTop + section.offsetHeight - innerHeight); });
         await page.waitForTimeout(1200);
         const bounds = await page.locator('#showroom .info').boundingBox();
-        assert(bounds && bounds.y >= 0 && bounds.y + bounds.height <= height + 1, `Homepage showroom facts fit its scene at ${width}×${height}: ${JSON.stringify(bounds)}`);
+        assert(bounds && bounds.y >= 0 && bounds.y + bounds.height <= height + 1, `Homepage showroom presentation fits its scene at ${width}×${height}: ${JSON.stringify(bounds)}`);
       }
       await open('/showroom-casablanca/');
       assert.equal(mapRequests.length, 0, 'No map request before activation');

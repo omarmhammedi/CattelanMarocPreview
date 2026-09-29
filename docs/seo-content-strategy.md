@@ -15,7 +15,7 @@ Google propose notamment ce critère : « Le titre résume-t-il clairement le co
 | `/collections/{famille}/` | Comprendre la famille et préparer son choix | Vue d’ensemble sourcée, critères concrets, puis sélection de modèles comme exemples |
 | `/modeles/{modele}/` | Vérifier une référence exacte | Version, matériaux, dimensions, finitions, images et fiche technique |
 | Journal et ses cinq articles | Résoudre une question de choix ou d'association | Méthode concrète, exemples documentés et liens vers les références concernées |
-| Showroom Casablanca | Préparer une visite ou une demande | Coordonnées, accès, horaires et modalités réellement confirmés |
+| Showroom Casablanca | Comprendre l’intérêt d’une visite et la préparer | Photographie réelle, découverte sur place, conseil, coordonnées, accès et horaires |
 | Catalogue | Comprendre le document proposé et y accéder | Édition, contenu du PDF et fonctionnement de la demande |
 
 Le titre SEO et la description doivent refléter le contenu effectivement disponible sur chaque page. Le nom d'une catégorie ne justifie pas de présenter sa sélection comme exhaustive. Les fiches de modèles doivent distinguer le modèle exact de ses déclinaisons : Skorpio en verre ne décrit pas automatiquement Skorpio Wood ou Keramik.
@@ -35,6 +35,14 @@ La présentation d’ensemble et les critères de choix précèdent les exemples
 
 Les listes détaillées de finitions appartiennent aux fiches modèles ; les méthodes transversales de composition appartiennent au Journal. Les actions catalogue et contact du showroom terminent chaque famille. Le formulaire catalogue et son consentement facultatif restent inchangés.
 
+## Le rôle du showroom
+
+L’accueil donne une raison concrète de venir : une photographie du magasin, un paragraphe et un seul lien vers la page dédiée. La paire officielle de Skorpio dans la séquence « Dessiné en Italie » illustre le mobilier de la marque ; elle n’est pas présentée comme une photographie du magasin.
+
+La page showroom développe le conseil et la préparation de visite, avec les coordonnées conservées dans la configuration globale. Deux questions utiles couvrent les pièces exposées et la demande de prix/délai. La liste de villes et la question de livraison sont retirées, faute de modalités confirmées. L’article Maisons du Maroc transmis par le propriétaire étaye la présentation du lieu ; il ne remplace pas ses coordonnées approuvées et ne prouve pas qu’un modèle précis est actuellement exposé.
+
+La migration 0009 conserve le panneau SEO natif vide et actualise les champs éditoriaux de titre et de description de la page showroom. Son [contrat de contenu](content-map.md#migration-0009--photographies-et-présentation-du-showroom) précise les champs et images concernés ; le [rapport de révision](test-results-showroom-refresh.md) est le point de référence pour les preuves de publication et de validation.
+
 ## Règle de rédaction
 
 Chaque paragraphe doit apporter au moins un fait vérifiable, une comparaison qui aide à décider, une contrainte d'usage ou une action précise. Un passage qui pourrait décrire indifféremment n'importe quel meuble doit être remplacé par un exemple utile ou supprimé.
@@ -53,7 +61,7 @@ La révision initiale concernait **dix-sept entrées : six familles et onze mod�
 
 La publication initiale dans l'aperçu principal a été effectuée le 28 septembre 2026. Le [rapport de publication](test-results-publication.md) consigne la vérification des textes et métadonnées alors servis, des médias et de la conservation des données existantes. La révision des six guides du 29 septembre est documentée dans son [rapport dédié](test-results-family-guides.md).
 
-L’adresse, le téléphone et les horaires du showroom ont été fournis et publiés. Les photographies réelles, les services et les autres informations commerciales non documentées restent à confirmer. Le PDF définitif doit remplacer le document de démonstration avant de présenter le catalogue comme prêt pour le public. Ces faits apportent davantage à une recherche locale qu'une liste de villes sans modalités concrètes. Ne pas créer de pages de villes sans établissement, service ou contenu spécifique vérifiable.
+L’adresse, le téléphone et les horaires du showroom ont été fournis et publiés. Une photographie réelle est retenue depuis l’article transmis par le propriétaire pour la révision 0009. Les droits d’utilisation pour la mise en ligne définitive, les autres photos d’ambiance, les services et les informations commerciales non documentées restent à confirmer. Le PDF définitif doit remplacer le document de démonstration avant de présenter le catalogue comme prêt pour le public. Ces faits apportent davantage à une recherche locale qu'une liste de villes sans modalités concrètes. Ne pas créer de pages de villes sans établissement, service ou contenu spécifique vérifiable.
 
 La prévisualisation reste **privée et non indexable**, avec `SITE_INDEXABLE=false` et le port 4321 privé. Ce travail n'autorise aucun déploiement, changement de domaine ou connexion à un service externe.
 

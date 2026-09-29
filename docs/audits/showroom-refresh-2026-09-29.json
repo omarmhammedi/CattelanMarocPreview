@@ -1,0 +1,690 @@
+{
+  "date": "2026-09-29",
+  "displayTimeZone": "America/Toronto",
+  "scope": "Owner-approved homepage brand imagery and showroom presentation; private existing preview only",
+  "publication": {
+    "startedAt": "2026-09-29T15:24:58.582Z",
+    "finishedAt": "2026-09-29T15:25:05.589Z",
+    "complete": true
+  },
+  "changes": {
+    "publishedPages": 2,
+    "reusedImages": 2,
+    "newMedia": 1,
+    "editorialRevisions": 2,
+    "secondDryRunChanges": 0,
+    "nativeSeoUnchanged": true
+  },
+  "preservation": {
+    "verifiedAt": "2026-09-29T15:38:51.734Z",
+    "ok": true,
+    "errors": [],
+    "strictTables": 29,
+    "existingFilesVerified": 626,
+    "addedTechnicalUsers": 0,
+    "changedTables": [
+      {
+        "table": "_cf_METADATA",
+        "before": 1,
+        "after": 1
+      },
+      {
+        "table": "_emdash_media_usage",
+        "before": 1800,
+        "after": 1809
+      },
+      {
+        "table": "_emdash_media_usage_index_status",
+        "before": 6,
+        "after": 6
+      },
+      {
+        "table": "_emdash_media_usage_sources",
+        "before": 22,
+        "after": 23
+      },
+      {
+        "table": "_emdash_media_usage_work",
+        "before": 13,
+        "after": 12
+      },
+      {
+        "table": "_emdash_revision_prune_queue",
+        "before": 10,
+        "after": 9
+      },
+      {
+        "table": "ec_pages",
+        "before": 5,
+        "after": 5
+      },
+      {
+        "table": "media",
+        "before": 623,
+        "after": 624
+      },
+      {
+        "table": "revisions",
+        "before": 67,
+        "after": 69
+      }
+    ]
+  },
+  "authCleanup": {
+    "cleanedAt": "2026-09-29T15:26:19.800Z",
+    "logoutStatus": 200,
+    "oldCookieStatus": 401,
+    "onlyTaskCookieDeleted": true
+  },
+  "publicChecks": [
+    {
+      "engine": "chromium",
+      "theme": "dark",
+      "startedAt": "2026-09-29T15:31:24.102Z",
+      "finishedAt": "2026-09-29T15:32:00.936Z",
+      "passed": true,
+      "checks": [
+        {
+          "name": "chromium/1440/dark: animations accueil, Italie, six collections, showroom et catalogue"
+        },
+        {
+          "name": "chromium/1440/dark: accueil publié, photos sélectionnées, texte utile et CTA unique"
+        },
+        {
+          "name": "chromium/1440/dark accueil: clic itinéraire vers le lieu approuvé (requête interceptée)"
+        },
+        {
+          "name": "chromium/1440/dark page showroom: clic itinéraire vers le lieu approuvé (requête interceptée)"
+        },
+        {
+          "name": "chromium/1440/dark: page showroom, SEO, deux FAQ, même photo, coordonnées conservées et CTA accueil fonctionnel"
+        },
+        {
+          "name": "chromium/1440/dark: navigation et changement de thème clavier conservé entre les pages"
+        },
+        {
+          "name": "chromium/390/dark: composition mobile et léger mouvement des images au défilement"
+        },
+        {
+          "name": "chromium/390/dark: accueil publié, photos sélectionnées, texte utile et CTA unique"
+        },
+        {
+          "name": "chromium/390/dark accueil: clic itinéraire vers le lieu approuvé (requête interceptée)"
+        },
+        {
+          "name": "chromium/390/dark page showroom: clic itinéraire vers le lieu approuvé (requête interceptée)"
+        },
+        {
+          "name": "chromium/390/dark: page showroom, SEO, deux FAQ, même photo, coordonnées conservées et CTA accueil fonctionnel"
+        },
+        {
+          "name": "chromium/390/dark: navigation et changement de thème clavier conservé entre les pages"
+        },
+        {
+          "name": "chromium/1440/dark: mouvement réduit, contenus et contacts lisibles sans animation"
+        },
+        {
+          "name": "chromium/390/dark: mouvement réduit, contenus et contacts lisibles sans animation"
+        },
+        {
+          "name": "Lecture anonyme seulement : aucune écriture, requête privée ou exception JavaScript"
+        }
+      ],
+      "directions": [
+        {
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Cattelan%20Italia%2C%208-10%20Avenue%20Mohamed%20Sijilmassi%2C%20Casablanca%2020250%2C%20Maroc&destination_place_id=ChIJnXzIEVjTpw0RXul0XQgeEHw",
+          "method": "GET",
+          "intercepted": true
+        },
+        {
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Cattelan%20Italia%2C%208-10%20Avenue%20Mohamed%20Sijilmassi%2C%20Casablanca%2020250%2C%20Maroc&destination_place_id=ChIJnXzIEVjTpw0RXul0XQgeEHw",
+          "method": "GET",
+          "intercepted": true
+        },
+        {
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Cattelan%20Italia%2C%208-10%20Avenue%20Mohamed%20Sijilmassi%2C%20Casablanca%2020250%2C%20Maroc&destination_place_id=ChIJnXzIEVjTpw0RXul0XQgeEHw",
+          "method": "GET",
+          "intercepted": true
+        },
+        {
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Cattelan%20Italia%2C%208-10%20Avenue%20Mohamed%20Sijilmassi%2C%20Casablanca%2020250%2C%20Maroc&destination_place_id=ChIJnXzIEVjTpw0RXul0XQgeEHw",
+          "method": "GET",
+          "intercepted": true
+        }
+      ],
+      "scenePositions": [
+        {
+          "selector": "#accueil",
+          "progress": 0.8,
+          "waitedMs": 604,
+          "scrollY": 1224,
+          "offsetTop": 0,
+          "height": 2430,
+          "value": 1
+        },
+        {
+          "selector": "#italie",
+          "progress": 0.3,
+          "waitedMs": 660,
+          "scrollY": 2781,
+          "offsetTop": 2430,
+          "height": 2070,
+          "value": 1
+        },
+        {
+          "selector": "#collections",
+          "progress": 1,
+          "waitedMs": 881,
+          "scrollY": 7380,
+          "offsetTop": 4500,
+          "height": 3780,
+          "value": 0.9989
+        },
+        {
+          "selector": "#showroom",
+          "progress": 0.7,
+          "waitedMs": 283,
+          "scrollY": 9162,
+          "offsetTop": 8280,
+          "height": 2160,
+          "value": 0.9994
+        },
+        {
+          "selector": "#catalogue",
+          "progress": 0.6,
+          "waitedMs": 1640,
+          "scrollY": 11880,
+          "offsetTop": 11340,
+          "height": 1800,
+          "value": 1
+        },
+        {
+          "selector": "#showroom",
+          "progress": 0.7,
+          "waitedMs": 35,
+          "scrollY": 9162,
+          "offsetTop": 8280,
+          "height": 2160,
+          "value": 1
+        }
+      ],
+      "errors": [],
+      "attemptedWrites": [],
+      "blockedPrivateRequests": []
+    },
+    {
+      "engine": "chromium",
+      "theme": "light",
+      "startedAt": "2026-09-29T15:32:20.777Z",
+      "finishedAt": "2026-09-29T15:32:54.444Z",
+      "passed": true,
+      "checks": [
+        {
+          "name": "chromium/1440/light: animations accueil, Italie, six collections, showroom et catalogue"
+        },
+        {
+          "name": "chromium/1440/light: accueil publié, photos sélectionnées, texte utile et CTA unique"
+        },
+        {
+          "name": "chromium/1440/light accueil: clic itinéraire vers le lieu approuvé (requête interceptée)"
+        },
+        {
+          "name": "chromium/1440/light page showroom: clic itinéraire vers le lieu approuvé (requête interceptée)"
+        },
+        {
+          "name": "chromium/1440/light: page showroom, SEO, deux FAQ, même photo, coordonnées conservées et CTA accueil fonctionnel"
+        },
+        {
+          "name": "chromium/1440/light: navigation et changement de thème clavier conservé entre les pages"
+        },
+        {
+          "name": "chromium/390/light: composition mobile et léger mouvement des images au défilement"
+        },
+        {
+          "name": "chromium/390/light: accueil publié, photos sélectionnées, texte utile et CTA unique"
+        },
+        {
+          "name": "chromium/390/light accueil: clic itinéraire vers le lieu approuvé (requête interceptée)"
+        },
+        {
+          "name": "chromium/390/light page showroom: clic itinéraire vers le lieu approuvé (requête interceptée)"
+        },
+        {
+          "name": "chromium/390/light: page showroom, SEO, deux FAQ, même photo, coordonnées conservées et CTA accueil fonctionnel"
+        },
+        {
+          "name": "chromium/390/light: navigation et changement de thème clavier conservé entre les pages"
+        },
+        {
+          "name": "chromium/1440/light: mouvement réduit, contenus et contacts lisibles sans animation"
+        },
+        {
+          "name": "chromium/390/light: mouvement réduit, contenus et contacts lisibles sans animation"
+        },
+        {
+          "name": "Lecture anonyme seulement : aucune écriture, requête privée ou exception JavaScript"
+        }
+      ],
+      "directions": [
+        {
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Cattelan%20Italia%2C%208-10%20Avenue%20Mohamed%20Sijilmassi%2C%20Casablanca%2020250%2C%20Maroc&destination_place_id=ChIJnXzIEVjTpw0RXul0XQgeEHw",
+          "method": "GET",
+          "intercepted": true
+        },
+        {
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Cattelan%20Italia%2C%208-10%20Avenue%20Mohamed%20Sijilmassi%2C%20Casablanca%2020250%2C%20Maroc&destination_place_id=ChIJnXzIEVjTpw0RXul0XQgeEHw",
+          "method": "GET",
+          "intercepted": true
+        },
+        {
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Cattelan%20Italia%2C%208-10%20Avenue%20Mohamed%20Sijilmassi%2C%20Casablanca%2020250%2C%20Maroc&destination_place_id=ChIJnXzIEVjTpw0RXul0XQgeEHw",
+          "method": "GET",
+          "intercepted": true
+        },
+        {
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Cattelan%20Italia%2C%208-10%20Avenue%20Mohamed%20Sijilmassi%2C%20Casablanca%2020250%2C%20Maroc&destination_place_id=ChIJnXzIEVjTpw0RXul0XQgeEHw",
+          "method": "GET",
+          "intercepted": true
+        }
+      ],
+      "scenePositions": [
+        {
+          "selector": "#accueil",
+          "progress": 0.8,
+          "waitedMs": 574,
+          "scrollY": 1224,
+          "offsetTop": 0,
+          "height": 2430,
+          "value": 1
+        },
+        {
+          "selector": "#italie",
+          "progress": 0.3,
+          "waitedMs": 643,
+          "scrollY": 2781,
+          "offsetTop": 2430,
+          "height": 2070,
+          "value": 1
+        },
+        {
+          "selector": "#collections",
+          "progress": 1,
+          "waitedMs": 520,
+          "scrollY": 7380,
+          "offsetTop": 4500,
+          "height": 3780,
+          "value": 0.9989
+        },
+        {
+          "selector": "#showroom",
+          "progress": 0.7,
+          "waitedMs": 254,
+          "scrollY": 9162,
+          "offsetTop": 8280,
+          "height": 2160,
+          "value": 0.9998
+        },
+        {
+          "selector": "#catalogue",
+          "progress": 0.6,
+          "waitedMs": 1372,
+          "scrollY": 11880,
+          "offsetTop": 11340,
+          "height": 1800,
+          "value": 1
+        },
+        {
+          "selector": "#showroom",
+          "progress": 0.7,
+          "waitedMs": 17,
+          "scrollY": 9162,
+          "offsetTop": 8280,
+          "height": 2160,
+          "value": 1
+        }
+      ],
+      "errors": [],
+      "attemptedWrites": [],
+      "blockedPrivateRequests": []
+    },
+    {
+      "engine": "webkit",
+      "theme": "dark",
+      "startedAt": "2026-09-29T15:29:43.022Z",
+      "finishedAt": "2026-09-29T15:30:28.710Z",
+      "passed": true,
+      "checks": [
+        {
+          "name": "webkit/1440/dark: animations accueil, Italie, six collections, showroom et catalogue"
+        },
+        {
+          "name": "webkit/1440/dark: accueil publié, photos sélectionnées, texte utile et CTA unique"
+        },
+        {
+          "name": "webkit/1440/dark accueil: clic itinéraire vers le lieu approuvé (requête interceptée)"
+        },
+        {
+          "name": "webkit/1440/dark page showroom: clic itinéraire vers le lieu approuvé (requête interceptée)"
+        },
+        {
+          "name": "webkit/1440/dark: page showroom, SEO, deux FAQ, même photo, coordonnées conservées et CTA accueil fonctionnel"
+        },
+        {
+          "name": "webkit/1440/dark: navigation et changement de thème clavier conservé entre les pages"
+        },
+        {
+          "name": "webkit/390/dark: composition mobile et léger mouvement des images au défilement"
+        },
+        {
+          "name": "webkit/390/dark: accueil publié, photos sélectionnées, texte utile et CTA unique"
+        },
+        {
+          "name": "webkit/390/dark accueil: clic itinéraire vers le lieu approuvé (requête interceptée)"
+        },
+        {
+          "name": "webkit/390/dark page showroom: clic itinéraire vers le lieu approuvé (requête interceptée)"
+        },
+        {
+          "name": "webkit/390/dark: page showroom, SEO, deux FAQ, même photo, coordonnées conservées et CTA accueil fonctionnel"
+        },
+        {
+          "name": "webkit/390/dark: navigation et changement de thème clavier conservé entre les pages"
+        },
+        {
+          "name": "webkit/1440/dark: mouvement réduit, contenus et contacts lisibles sans animation"
+        },
+        {
+          "name": "webkit/390/dark: mouvement réduit, contenus et contacts lisibles sans animation"
+        },
+        {
+          "name": "Lecture anonyme seulement : aucune écriture, requête privée ou exception JavaScript"
+        }
+      ],
+      "directions": [
+        {
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Cattelan%20Italia%2C%208-10%20Avenue%20Mohamed%20Sijilmassi%2C%20Casablanca%2020250%2C%20Maroc&destination_place_id=ChIJnXzIEVjTpw0RXul0XQgeEHw",
+          "method": "GET",
+          "intercepted": true
+        },
+        {
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Cattelan%20Italia%2C%208-10%20Avenue%20Mohamed%20Sijilmassi%2C%20Casablanca%2020250%2C%20Maroc&destination_place_id=ChIJnXzIEVjTpw0RXul0XQgeEHw",
+          "method": "GET",
+          "intercepted": true
+        },
+        {
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Cattelan%20Italia%2C%208-10%20Avenue%20Mohamed%20Sijilmassi%2C%20Casablanca%2020250%2C%20Maroc&destination_place_id=ChIJnXzIEVjTpw0RXul0XQgeEHw",
+          "method": "GET",
+          "intercepted": true
+        },
+        {
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Cattelan%20Italia%2C%208-10%20Avenue%20Mohamed%20Sijilmassi%2C%20Casablanca%2020250%2C%20Maroc&destination_place_id=ChIJnXzIEVjTpw0RXul0XQgeEHw",
+          "method": "GET",
+          "intercepted": true
+        }
+      ],
+      "scenePositions": [
+        {
+          "selector": "#accueil",
+          "progress": 0.8,
+          "waitedMs": 1065,
+          "scrollY": 1224,
+          "offsetTop": 0,
+          "height": 2430,
+          "value": 1
+        },
+        {
+          "selector": "#italie",
+          "progress": 0.3,
+          "waitedMs": 1385,
+          "scrollY": 2781,
+          "offsetTop": 2430,
+          "height": 2070,
+          "value": 1
+        },
+        {
+          "selector": "#collections",
+          "progress": 1,
+          "waitedMs": 1542,
+          "scrollY": 7380,
+          "offsetTop": 4500,
+          "height": 3780,
+          "value": 0.9989
+        },
+        {
+          "selector": "#showroom",
+          "progress": 0.7,
+          "waitedMs": 828,
+          "scrollY": 9162,
+          "offsetTop": 8280,
+          "height": 2160,
+          "value": 0.9994
+        },
+        {
+          "selector": "#catalogue",
+          "progress": 0.6,
+          "waitedMs": 1794,
+          "scrollY": 11880,
+          "offsetTop": 11340,
+          "height": 1800,
+          "value": 1
+        },
+        {
+          "selector": "#showroom",
+          "progress": 0.7,
+          "waitedMs": 19,
+          "scrollY": 9162,
+          "offsetTop": 8280,
+          "height": 2160,
+          "value": 1
+        }
+      ],
+      "errors": [],
+      "attemptedWrites": [],
+      "blockedPrivateRequests": []
+    },
+    {
+      "engine": "webkit",
+      "theme": "light",
+      "startedAt": "2026-09-29T15:30:33.789Z",
+      "finishedAt": "2026-09-29T15:31:21.502Z",
+      "passed": true,
+      "checks": [
+        {
+          "name": "webkit/1440/light: animations accueil, Italie, six collections, showroom et catalogue"
+        },
+        {
+          "name": "webkit/1440/light: accueil publié, photos sélectionnées, texte utile et CTA unique"
+        },
+        {
+          "name": "webkit/1440/light accueil: clic itinéraire vers le lieu approuvé (requête interceptée)"
+        },
+        {
+          "name": "webkit/1440/light page showroom: clic itinéraire vers le lieu approuvé (requête interceptée)"
+        },
+        {
+          "name": "webkit/1440/light: page showroom, SEO, deux FAQ, même photo, coordonnées conservées et CTA accueil fonctionnel"
+        },
+        {
+          "name": "webkit/1440/light: navigation et changement de thème clavier conservé entre les pages"
+        },
+        {
+          "name": "webkit/390/light: composition mobile et léger mouvement des images au défilement"
+        },
+        {
+          "name": "webkit/390/light: accueil publié, photos sélectionnées, texte utile et CTA unique"
+        },
+        {
+          "name": "webkit/390/light accueil: clic itinéraire vers le lieu approuvé (requête interceptée)"
+        },
+        {
+          "name": "webkit/390/light page showroom: clic itinéraire vers le lieu approuvé (requête interceptée)"
+        },
+        {
+          "name": "webkit/390/light: page showroom, SEO, deux FAQ, même photo, coordonnées conservées et CTA accueil fonctionnel"
+        },
+        {
+          "name": "webkit/390/light: navigation et changement de thème clavier conservé entre les pages"
+        },
+        {
+          "name": "webkit/1440/light: mouvement réduit, contenus et contacts lisibles sans animation"
+        },
+        {
+          "name": "webkit/390/light: mouvement réduit, contenus et contacts lisibles sans animation"
+        },
+        {
+          "name": "Lecture anonyme seulement : aucune écriture, requête privée ou exception JavaScript"
+        }
+      ],
+      "directions": [
+        {
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Cattelan%20Italia%2C%208-10%20Avenue%20Mohamed%20Sijilmassi%2C%20Casablanca%2020250%2C%20Maroc&destination_place_id=ChIJnXzIEVjTpw0RXul0XQgeEHw",
+          "method": "GET",
+          "intercepted": true
+        },
+        {
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Cattelan%20Italia%2C%208-10%20Avenue%20Mohamed%20Sijilmassi%2C%20Casablanca%2020250%2C%20Maroc&destination_place_id=ChIJnXzIEVjTpw0RXul0XQgeEHw",
+          "method": "GET",
+          "intercepted": true
+        },
+        {
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Cattelan%20Italia%2C%208-10%20Avenue%20Mohamed%20Sijilmassi%2C%20Casablanca%2020250%2C%20Maroc&destination_place_id=ChIJnXzIEVjTpw0RXul0XQgeEHw",
+          "method": "GET",
+          "intercepted": true
+        },
+        {
+          "url": "https://www.google.com/maps/dir/?api=1&destination=Cattelan%20Italia%2C%208-10%20Avenue%20Mohamed%20Sijilmassi%2C%20Casablanca%2020250%2C%20Maroc&destination_place_id=ChIJnXzIEVjTpw0RXul0XQgeEHw",
+          "method": "GET",
+          "intercepted": true
+        }
+      ],
+      "scenePositions": [
+        {
+          "selector": "#accueil",
+          "progress": 0.8,
+          "waitedMs": 1174,
+          "scrollY": 1224,
+          "offsetTop": 0,
+          "height": 2430,
+          "value": 1
+        },
+        {
+          "selector": "#italie",
+          "progress": 0.3,
+          "waitedMs": 1432,
+          "scrollY": 2781,
+          "offsetTop": 2430,
+          "height": 2070,
+          "value": 1
+        },
+        {
+          "selector": "#collections",
+          "progress": 1,
+          "waitedMs": 1744,
+          "scrollY": 7380,
+          "offsetTop": 4500,
+          "height": 3780,
+          "value": 0.9989
+        },
+        {
+          "selector": "#showroom",
+          "progress": 0.7,
+          "waitedMs": 802,
+          "scrollY": 9162,
+          "offsetTop": 8280,
+          "height": 2160,
+          "value": 0.9994
+        },
+        {
+          "selector": "#catalogue",
+          "progress": 0.6,
+          "waitedMs": 1575,
+          "scrollY": 11880,
+          "offsetTop": 11340,
+          "height": 1800,
+          "value": 1
+        },
+        {
+          "selector": "#showroom",
+          "progress": 0.7,
+          "waitedMs": 29,
+          "scrollY": 9162,
+          "offsetTop": 8280,
+          "height": 2160,
+          "value": 1
+        }
+      ],
+      "errors": [],
+      "attemptedWrites": [],
+      "blockedPrivateRequests": []
+    }
+  ],
+  "screenshots": {
+    "count": 12,
+    "directory": "docs/screenshots/showroom-refresh-2026-09-29",
+    "engine": "chromium",
+    "normalMotion": true,
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "initialCaptureReports": "test-results/showroom-refresh/chromium-*/report-with-captures.json"
+  },
+  "tests": {
+    "unitPassed": 81,
+    "newInMemoryMigrationTests": 9,
+    "seedValidatedOnly": true,
+    "astroCheck": {
+      "files": 94,
+      "errors": 0,
+      "warnings": 0,
+      "hints": 0
+    },
+    "build": {
+      "passed": true,
+      "seconds": 20.44,
+      "existingWarning": "Chunks larger than 500 kB",
+      "initialInterruptions": {
+        "count": 2,
+        "exitCode": 143,
+        "cause": "Not established; container OOM counters remained zero"
+      },
+      "succeededWithDevServerTemporarilyStopped": true
+    }
+  },
+  "limitations": [
+    "Headless Linux Chromium and WebKit; no physical iPhone test.",
+    "No pixel-by-pixel comparison with original version B.",
+    "Directions requests intercepted after popup; real Google Maps service availability not tested in this suite.",
+    "VS Code Simple Browser popup restriction remains.",
+    "Skorpio main photograph is 735 by 735 pixels.",
+    "No primary contact submission or PDF flow repeated; protected existing data preserved.",
+    "No full draft-preview-publication lifecycle rerun; guarded engine previously validated in disposable environment.",
+    "Other provisional ambience photos and demonstration PDF remain."
+  ],
+  "runtime": {
+    "restarted": true,
+    "verifiedAt": "2026-09-29T15:38:48.609Z",
+    "checks": [
+      {
+        "path": "/",
+        "status": 200,
+        "bytes": 455167,
+        "updatedContent": true,
+        "noindex": true
+      },
+      {
+        "path": "/showroom-casablanca/",
+        "status": 200,
+        "bytes": 106341,
+        "updatedContent": true,
+        "noindex": true
+      }
+    ]
+  }
+}
