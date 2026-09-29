@@ -1,0 +1,276 @@
+{
+  "verifiedAt": "2026-09-29T01:50:34.448Z",
+  "timezone": "America/Toronto",
+  "scope": "Correct the existing styled homepage map to real Casablanca geography; preserve prior Google showroom option.",
+  "branch": "feat/emdash-migration",
+  "source": {
+    "osmTimestamp": "2026-09-29T01:18:02Z",
+    "bounds": [
+      -7.72,
+      33.555,
+      -7.575,
+      33.635
+    ],
+    "bytes": 301375,
+    "sha256": "ed983a2724188fdfb8fb80f4ff5a8e719240e5f07373498db4e5a3823be0119b",
+    "attribution": "https://www.openstreetmap.org/copyright",
+    "download": "/cartographie/casablanca.json"
+  },
+  "cms": {
+    "completedAt": "2026-09-29T01:30:23.321Z",
+    "disposableOrigin": "http://localhost:4331",
+    "mode": "full",
+    "results": [
+      "Migration 0006 dry run preserves native content, schema and revisions.",
+      "Native migration adds numeric coordinate fields and the real place pin, preserving map links, unrelated content, media, SEO and references.",
+      "A second native migration run preserves data, schema and revisions exactly.",
+      "Anonymous homepage markers use the published geographic place coordinates and retain directions.",
+      "Coordinate drafts remain private; signed global preview uses the draft marker with private, no-store/noindex and invalid-token isolation.",
+      "Publishing coordinates updates the next anonymous marker position without rebuilding.",
+      "Clearing one coordinate hides the marker in preview/public HTML while directions and optional interactive map settings remain intact.",
+      "The finally block restores approved coordinates and leaves no pending global draft."
+    ]
+  },
+  "finalBrowsers": [
+    {
+      "verifiedAt": "2026-09-29T01:49:49.267Z",
+      "base": "http://localhost:4321",
+      "results": [
+        {
+          "engine": "chromium",
+          "width": 1440,
+          "height": 900,
+          "mode": "dark",
+          "passed": true
+        },
+        {
+          "engine": "chromium",
+          "width": 1440,
+          "height": 900,
+          "mode": "light",
+          "passed": true
+        },
+        {
+          "engine": "chromium",
+          "width": 1024,
+          "height": 768,
+          "mode": "dark",
+          "passed": true
+        },
+        {
+          "engine": "chromium",
+          "width": 1024,
+          "height": 768,
+          "mode": "light",
+          "passed": true
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "height": 844,
+          "mode": "dark",
+          "passed": true
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "height": 844,
+          "mode": "light",
+          "passed": true
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "height": 740,
+          "mode": "dark",
+          "passed": true
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "height": 740,
+          "mode": "light",
+          "passed": true
+        },
+        {
+          "engine": "chromium",
+          "width": 1440,
+          "javaScript": false,
+          "passed": true
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "javaScript": false,
+          "passed": true
+        }
+      ],
+      "errors": [],
+      "writes": [],
+      "externalMaps": [],
+      "sourceDownloadVerified": true
+    },
+    {
+      "verifiedAt": "2026-09-29T01:48:54.821Z",
+      "base": "http://localhost:4321",
+      "results": [
+        {
+          "engine": "webkit",
+          "width": 1440,
+          "height": 900,
+          "mode": "dark",
+          "passed": true
+        },
+        {
+          "engine": "webkit",
+          "width": 1440,
+          "height": 900,
+          "mode": "light",
+          "passed": true
+        },
+        {
+          "engine": "webkit",
+          "width": 1024,
+          "height": 768,
+          "mode": "dark",
+          "passed": true
+        },
+        {
+          "engine": "webkit",
+          "width": 1024,
+          "height": 768,
+          "mode": "light",
+          "passed": true
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "height": 844,
+          "mode": "dark",
+          "passed": true
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "height": 844,
+          "mode": "light",
+          "passed": true
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "height": 740,
+          "mode": "dark",
+          "passed": true
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "height": 740,
+          "mode": "light",
+          "passed": true
+        }
+      ],
+      "errors": [],
+      "writes": [],
+      "externalMaps": [],
+      "sourceDownloadVerified": true
+    }
+  ],
+  "interruptedRepeat": {
+    "exitCode": 143,
+    "assertionFailureRecorded": false,
+    "primaryHealthy": true,
+    "cause": "Undetermined",
+    "resolution": "Complete final runs performed separately by browser engine."
+  },
+  "regression": {
+    "base": "http://localhost:4321",
+    "results": [
+      "17 public routes inspected at 1440×900, dark",
+      "Catalogue section and optional consent; invalid submissions blocked at 1440/dark",
+      "17 public routes inspected at 1440×900, light",
+      "Catalogue section and optional consent; invalid submissions blocked at 1440/light",
+      "17 public routes inspected at 390×844, dark",
+      "Catalogue section and optional consent; invalid submissions blocked at 390/dark",
+      "Mobile menu opens, closes with Escape, and follows CMS navigation (dark)",
+      "17 public routes inspected at 390×844, light",
+      "Catalogue section and optional consent; invalid submissions blocked at 390/light",
+      "Mobile menu opens, closes with Escape, and follows CMS navigation (light)",
+      "Compact viewport 1024×768: homepage and main inner templates fit",
+      "Compact viewport 320×740: homepage and main inner templates fit",
+      "Desktop hero, brand reveal, six-family rail, showroom transition, catalogue animation and cross-page themes",
+      "Reduced-motion homepage stays readable in normal document flow",
+      "30 distinct public image URLs respond with image content"
+    ],
+    "failures": [],
+    "errors": [],
+    "blockedWrites": [],
+    "mediaCount": 30
+  },
+  "checks": {
+    "unitTests": 60,
+    "astroFiles": 81,
+    "astroErrors": 0,
+    "astroWarnings": 0,
+    "astroHints": 0,
+    "seedValidation": "passed",
+    "build": "passed",
+    "buildSeconds": 24.05,
+    "largeBundleWarning": true
+  },
+  "preservation": {
+    "verifiedAt": "2026-09-29T01:45:14.306Z",
+    "strictTables": 28,
+    "existingFilesUnchanged": 626,
+    "addedUsers": 0,
+    "existingUsers": 2,
+    "existingPasskeys": 2,
+    "fieldsAdded": 2,
+    "revisionsAdded": 1,
+    "nativeLogoutStatus": 200,
+    "oldCookieStatus": 401,
+    "disposableEnvironmentRemoved": true
+  },
+  "screenshots": [
+    {
+      "path": "docs/screenshots/geographic-map-2026-09-28/home-1440-dark.jpg",
+      "sha256": "de7f8474acec4a285a32e7a44b6f490ce8dc0fa198182b0f73f7f2fd9db5b940"
+    },
+    {
+      "path": "docs/screenshots/geographic-map-2026-09-28/zoom-1440-dark.jpg",
+      "sha256": "45c77be2909aac81d608d310f4cf55a0cccf8def129d2e412636bb0ce3a5e9a9"
+    },
+    {
+      "path": "docs/screenshots/geographic-map-2026-09-28/home-1440-light.jpg",
+      "sha256": "e88666092a88fadd22f5adbcc169d012af30addba92d77c5becbc0e085e96370"
+    },
+    {
+      "path": "docs/screenshots/geographic-map-2026-09-28/zoom-1440-light.jpg",
+      "sha256": "5f7a5bba3713c45d3a3c9e8e3fe2d4a21a24ab260a8e36c2449c94dc7278d941"
+    },
+    {
+      "path": "docs/screenshots/geographic-map-2026-09-28/home-390-dark.jpg",
+      "sha256": "b31b890f20a2dfa543ac28c1c8a083dde5b9d877eb739a8f7b6ebcc514d0f036"
+    },
+    {
+      "path": "docs/screenshots/geographic-map-2026-09-28/zoom-390-dark.jpg",
+      "sha256": "2e6fe1865998c2c60c1e14639466901ca95ef2fcca8598e5a5a722fed43f7b5e"
+    },
+    {
+      "path": "docs/screenshots/geographic-map-2026-09-28/home-390-light.jpg",
+      "sha256": "bcb5dd5082b525518af579c347b80e713fea796a3dc64ffb00d48d21ec6683cc"
+    },
+    {
+      "path": "docs/screenshots/geographic-map-2026-09-28/zoom-390-light.jpg",
+      "sha256": "c8b36acc86ec3f0f2af778a143d21ffd97784ba4a3c1ef83b925c261642ae952"
+    }
+  ],
+  "limits": [
+    "Local Casablanca coverage, manually refreshed OSM extract, no route calculation.",
+    "Mobile map is 420px tall; no pixel-perfect claim.",
+    "WebKit emulation, no physical iPhone run.",
+    "Existing large-bundle warning retained.",
+    "Historical Google iframe/contact/PDF integration suites not repeated; unrelated storage protected."
+  ]
+}

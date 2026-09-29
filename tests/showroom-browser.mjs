@@ -1,4 +1,4 @@
-/** Read-only verification of the published location and on-demand Google map. */
+/** Read-only verification of published coordinates, geographic map and optional Google embed. */
 import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { chromium, webkit } from 'playwright';
@@ -56,7 +56,8 @@ for (const [engine, launcher] of Object.entries(engines)) {
       const directions = new URL(await plan.getByRole('link', { name: 'Itinéraire', exact: true }).getAttribute('href'));
       assert.equal(directions.searchParams.get('destination_place_id'), 'ChIJnXzIEVjTpw0RXul0XQgeEHw');
       assert.equal(directions.pathname, '/maps/dir/');
-      assert.equal(await page.locator('#city-map g[transform="translate(806 530)"]').count(), 1, 'Illustration marker geometry preserved');
+      assert.equal(await plan.locator('[data-showroom-marker]').getAttribute('data-latitude'), '33.5927007');
+      assert.equal(await plan.locator('[data-showroom-marker]').getAttribute('data-longitude'), '-7.6426741');
       await plan.scrollIntoViewIfNeeded();
       await page.waitForTimeout(500);
       if (engine === 'chromium' && [1440, 390].includes(width)) await page.screenshot({ path: `${screenshots}/home-map-${width}-${mode}.jpg`, type: 'jpeg', quality: 83 });
@@ -101,7 +102,7 @@ for (const [engine, launcher] of Object.entries(engines)) {
       assert.equal(await page.locator('iframe').count(), 0);
       assert.deepEqual(errors, [], 'No application JavaScript errors');
       records.push({ engine, width, height, mode, passed: true });
-      console.log(`PASS ${engine} ${width}px ${mode}: contacts, illustration, on-demand map, keyboard`);
+      console.log(`PASS ${engine} ${width}px ${mode}: contacts, real coordinates, on-demand map, keyboard`);
       await context.close();
       await browser.close();
     }

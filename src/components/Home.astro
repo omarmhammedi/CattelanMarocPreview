@@ -4,6 +4,8 @@ import { PortableText } from 'emdash/ui';
 import CatalogueForm from './CatalogueForm.astro';
 import ThemeToggle from './ThemeToggle.astro';
 import NativeNav, { type NavigationItem } from './NativeNav.astro';
+import GeographicMap from './GeographicMap.astro';
+import GeographicMapSymbols from './GeographicMapSymbols.astro';
 
 type Editable = { edit?: Record<string, Record<string, string>> };
 type Picture = { src: string; alt: string } | null;
@@ -26,6 +28,7 @@ interface Props {
     name: string; tagline: string; location: string; navigation: NavigationItem[]; logoLight: Picture; logoDark: Picture;
     whatsappHref?: string | null; phone?: string; address?: string; hours?: string; mapUrl?: string;
     mapNote?: string; previewNotice?: string; footerNote?: string; publicEmail?: string; placeholderNotice?: string;
+    showroomLatitude?: number | null; showroomLongitude?: number | null;
     labels: {
       collections: string; showroom: string; journal: string; catalogue: string;
       allArticles: string; discover: string; visit: string; appointment: string;
@@ -73,37 +76,7 @@ const brandLines = explicitBrandLines.length > 1 ? explicitBrandLines : [brandWo
       </g>
     </symbol>
     <symbol id="step" viewBox="0 0 44 24"><path d="M2 23 H42 M8 23 V15 H14 V9 H20 V3 H24 V9 H30 V15 H36 V23" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
-    <symbol id="city-map" viewBox="0 0 1440 900">
-<rect class="m-land" width="1440" height="900"/>
-<path class="m-sea" d="M0 0 H1440 V150 C1300 170 1180 120 1060 170 C930 225 820 250 700 285 C590 318 470 330 380 390 C300 445 190 470 0 520 Z"/>
-<path class="m-coast" d="M0 520 C190 470 300 445 380 390 C470 330 590 318 700 285 C820 250 930 225 1060 170 C1180 120 1300 170 1440 150" fill="none" stroke-width="1.5"/>
-<g class="m-grid" stroke-width="1" fill="none">
-<path d="M0 600 L1440 380"/><path d="M0 690 L1440 470"/><path d="M0 780 L1440 560"/><path d="M60 900 L1440 650"/><path d="M400 900 L1440 740"/>
-<path d="M300 900 L520 330"/><path d="M500 900 L700 290"/><path d="M700 900 L860 240"/><path d="M900 900 L1020 185"/><path d="M1100 900 L1180 150"/><path d="M1300 900 L1330 160"/>
-</g>
-<g class="m-road" stroke-width="2" fill="none">
-<path d="M120 900 C260 700 420 560 700 480 S1180 330 1440 300"/>
-<path d="M620 900 C640 760 700 600 760 470"/>
-<path d="M980 900 C940 720 900 560 860 420"/>
-</g>
-<path class="m-zone" d="M700 470 L905 440 L820 640 Z" stroke-width="1.5" stroke-dasharray="6 6"/>
-<g font-family="Helvetica Neue, Helvetica, Albert Sans, Arial, sans-serif" font-size="14" letter-spacing="3">
-<text class="m-sea-lbl" x="760" y="120" font-size="16" letter-spacing="6">OCÉAN ATLANTIQUE</text>
-<text class="m-lbl" x="150" y="455">CORNICHE · AÏN DIAB</text>
-<text class="m-lbl" x="300" y="610">ANFA</text>
-<text class="m-lbl" x="600" y="760">MAÂRIF</text>
-<text class="m-lbl" x="1110" y="330">CENTRE-VILLE</text>
-<text class="m-lbl" x="1250" y="215">PORT</text>
-<text class="m-hi" x="742" y="428" font-size="15" letter-spacing="4">TRIANGLE D'OR</text>
-</g>
-<g transform="translate(806 530)">
-<circle r="16" fill="none" stroke="#DB0812" stroke-width="2" class="pulse"/>
-<circle r="7" fill="#DB0812"/>
-<g class="m-pin" transform="translate(-22 -66)"><use href="#step" width="44" height="24"/></g>
-<line class="m-pin" x1="0" y1="-40" x2="0" y2="-10" stroke-width="1.2"/>
-<text class="m-hi" x="22" y="-48" font-family="Helvetica Neue, Helvetica, Albert Sans, Arial, sans-serif" font-size="15" letter-spacing="2">{site.name.toUpperCase()}</text>
-</g>
-    </symbol>
+    <GeographicMapSymbols/>
   </defs>
 </svg>
 <a class="skip-link" href="#main-content">Aller au contenu</a>
@@ -149,9 +122,9 @@ const brandLines = explicitBrandLines.length > 1 ? explicitBrandLines : [brandWo
     </div>
   </section>}
   <section id="plan">
-    <svg class="map" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration de Casablanca"><use href="#city-map"/></svg>
+    <GeographicMap id="desktop-city-map" name={site.name} latitude={site.showroomLatitude} longitude={site.showroomLongitude} mapUrl={site.mapUrl}/>
     <div class="panel"><p class="kick"><svg aria-hidden="true"><use href="#step"/></svg>{labels.showroom}</p><h2>{site.name}</h2>{site.address && <p class="txt">{site.address}</p>}{site.hours && <p class="txt">{site.hours}</p>}<div class="row">{site.mapUrl && <a class="btn solid" href={site.mapUrl} target="_blank" rel="noopener noreferrer">Itinéraire</a>}{hasCta(home.showroom) && <a class="btn" href={home.showroom.ctaHref}>{home.showroom.ctaLabel}</a>}</div></div>
-    <span class="note">{site.mapNote || 'Plan illustratif de Casablanca.'}</span>
+    {site.mapNote && <span class="note">{site.mapNote}</span>}
   </section>
   {home.catalogue.present !== false && <section class:list={['scene', {'without-visual': !(catalogueImage)}]} id="catalogue" data-scene={(catalogueImage) ? 'catalogue' : undefined} style="--c: 0; --d: 0;">
     <div class="pin"><svg class="fan deco" viewBox="0 0 200 104" aria-hidden="true"><use href="#fan"/></svg>{catalogueImage && <div class="book" aria-hidden="true"><div class="b"><div class="pg" style="--n: 3;"></div><div class="pg" style="--n: 2;"></div><div class="pg" style="--n: 1;"></div><div class="cv" {...(home.catalogue.image ? homeEdit?.sections : catalogue?.entry?.edit?.cover)}>{catalogueImage && <img class="pic" src={catalogueImage.src} alt="" loading="lazy"/>}<div class="t onphoto">{site.logoDark ? <img class="lg-w keep" src={site.logoDark.src} alt=""/> : <strong>{site.name}</strong>}<span class="loc">{site.location}</span><span>{catalogue?.edition}</span></div></div></div></div>}
@@ -168,7 +141,7 @@ const brandLines = explicitBrandLines.length > 1 ? explicitBrandLines : [brandWo
   {home.brand.present !== false && <section id="m-italie"><p class="kick"><svg aria-hidden="true"><use href="#step"/></svg>{site.name}</p>{home.brand.heading && <h2 class="big" {...homeEdit?.sections}>{brandLines.map((line, index) => <Fragment>{index > 0 && <br/>}{line}</Fragment>)}</h2>}{home.brand.text && <p class="txt" {...homeEdit?.sections}>{home.brand.text}</p>}{home.brand.image && <div class="mimg m-brand-image" {...homeEdit?.[home.brand.imageField || 'brand_image']}><img src={home.brand.image.src} alt={home.brand.image.alt} loading="lazy" style="object-position: center 55%;"/></div>}{home.brand.caption && <p class="legal" {...homeEdit?.brand_caption}>{home.brand.caption}</p>}{hasCta(home.brand) && <div class="row"><a class="btn" href={home.brand.ctaHref}>{home.brand.ctaLabel}</a></div>}</section>}
   {home.collections.present !== false && <section id="m-collections"><p class="kick"><svg aria-hidden="true"><use href="#step"/></svg>{labels.collections}</p>{home.collections.heading && <h2 class="big" {...homeEdit?.sections}>{home.collections.heading}</h2>}{home.collections.text && <p class="txt" {...homeEdit?.sections}>{home.collections.text}</p>}{home.collections.image && <div class="mimg m-section-image"><img src={home.collections.image.src} alt={home.collections.image.alt} loading="lazy"/></div>}{hasCta(home.collections) && <div class="row"><a class="btn" href={home.collections.ctaHref}>{home.collections.ctaLabel}</a></div>}<div class="hscroll" tabindex="0" aria-label={labels.collections}>{families.map(family => <a href={family.href}>{family.image && <div class="mimg m-family-image"><img src={family.image.src} alt={family.image.alt} loading="lazy" style={`object-position: center ${familyFrame(family.href).position}%;`}/></div>}<b class="m-family-title">{family.shortTitle || family.title}</b><span class="txt m-family-summary">{family.summary}</span></a>)}</div></section>}
   {home.showroom.present !== false && <section id="m-showroom"><p class="kick"><svg aria-hidden="true"><use href="#step"/></svg>{labels.showroom}</p>{home.showroom.heading && <h2 class="big" {...homeEdit?.sections}>{home.showroom.heading}</h2>}{home.showroom.image && <div class="mimg m-showroom-image" {...homeEdit?.[home.showroom.imageField || 'showroom_image']}><img src={home.showroom.image.src} alt={home.showroom.image.alt} loading="lazy" style="object-position: center 62%;"/></div>}{home.showroom.invitation && <p class="txt" {...homeEdit?.showroom_invitation}>{home.showroom.invitation}</p>}{home.showroom.text && <p class="txt" {...homeEdit?.sections}>{home.showroom.text}</p>}{hasContact && <dl class="facts">{site.address && <div><dt>Adresse</dt><dd {...siteEdit?.address}>{site.address}</dd></div>}{site.hours && <div><dt>Horaires</dt><dd {...siteEdit?.hours}>{site.hours}</dd></div>}<Fragment>{site.phone && <div><dt>Téléphone{site.whatsappHref && ' · WhatsApp'}</dt><dd {...siteEdit?.contact_phone}>{site.whatsappHref ? <a href={site.whatsappHref}>{site.phone}</a> : <a href={`tel:${site.phone.replace(/[^+\d]/g, '')}`}>{site.phone}</a>}</dd></div>}</Fragment>{site.publicEmail && <div><dt>E-mail</dt><dd {...siteEdit?.public_email}><a href={`mailto:${site.publicEmail}`}>{site.publicEmail}</a></dd></div>}</dl>}<div class="row">{site.whatsappHref && <a class="btn red" href={site.whatsappHref} target="_blank" rel="noopener noreferrer">{labels.appointment}</a>}{hasCta(home.showroom) && <a class="btn" href={home.showroom.ctaHref}>{home.showroom.ctaLabel}</a>}</div></section>}
-  <section id="m-plan"><svg class="map" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1440 900" role="img" aria-label="Illustration de Casablanca"><use href="#city-map"/></svg><p class="legal">{site.mapNote || 'Plan illustratif de Casablanca.'}</p>{site.mapUrl && <a class="btn solid" href={site.mapUrl} target="_blank" rel="noopener noreferrer">Itinéraire</a>}</section>
+  <section id="m-plan"><GeographicMap id="mobile-city-map" name={site.name} latitude={site.showroomLatitude} longitude={site.showroomLongitude} mapUrl={site.mapUrl} mobile/>{site.mapNote && <p class="legal">{site.mapNote}</p>}{site.mapUrl && <a class="btn solid" href={site.mapUrl} target="_blank" rel="noopener noreferrer">Itinéraire</a>}</section>
   {home.catalogue.present !== false && <section id="m-catalogue">{home.catalogue.image && <div class="mimg m-section-image"><img src={home.catalogue.image.src} alt={home.catalogue.image.alt} loading="lazy"/></div>}{catalogue?.title && <p class="kick"><svg aria-hidden="true"><use href="#step"/></svg>{catalogue.title}</p>}{home.catalogue.heading && <h2 class="big" {...homeEdit?.sections}>{home.catalogue.heading}</h2>}{home.catalogue.text && <p class="txt" {...homeEdit?.sections}>{home.catalogue.text}</p>}{hasCta(home.catalogue) && <a class="section-link" href={home.catalogue.ctaHref}>{home.catalogue.ctaLabel} <span aria-hidden="true">→</span></a>}{catalogue?.isPlaceholder && site.placeholderNotice && <p class="legal" {...siteEdit?.placeholder_notice}>{site.placeholderNotice}</p>}<CatalogueForm id="home-mobile" /></section>}
   {home.journal.present !== false && <section id="m-journal"><p class="kick"><svg aria-hidden="true"><use href="#step"/></svg>{labels.journal}</p>{home.journal.heading && <h2 class="big" {...homeEdit?.sections}>{home.journal.heading}</h2>}{home.journal.text && <p class="txt" {...homeEdit?.sections}>{home.journal.text}</p>}{home.journal.image && <div class="mimg m-section-image"><img src={home.journal.image.src} alt={home.journal.image.alt} loading="lazy"/></div>}{posts.slice(0, 5).map(post => <a class="jart" href={post.href}>{post.image && <div class="mimg m-journal-image"><img src={post.image.src} alt={post.image.alt} loading="lazy"/></div>}<span class="kick">{post.category}{post.readingTime && ` · ${post.readingTime}`}</span><h3 {...post.entry?.edit?.title}>{post.title}</h3><span class="article-link">{labels.readArticle} <span aria-hidden="true">→</span></span></a>)}{hasCta(home.journal) && <a class="btn" href={home.journal.ctaHref}>{home.journal.ctaLabel}</a>}</section>}
 </div>

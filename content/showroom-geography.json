@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "source": {
+    "place_id": "ChIJnXzIEVjTpw0RXul0XQgeEHw",
+    "coordinate_role": "Google Maps place pin, not the embed viewport center",
+    "embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5270.840575588588!2d-7.6452543873414465!3d33.592700673222254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d35811c87c9d%3A0x7c101e085d74e95e!2sCattelan%20Italia!5e1!3m2!1sen!2sca!4v1790641981144!5m2!1sen!2sca"
+  },
+  "before": {
+    "showroom_latitude": null,
+    "showroom_longitude": null,
+    "map_note": "Plan illustratif de Casablanca. Ouvrez l’itinéraire pour rejoindre le showroom."
+  },
+  "after": {
+    "showroom_latitude": 33.5927007,
+    "showroom_longitude": -7.6426741,
+    "map_note": "Retrouvez le showroom à Casablanca. Ouvrez l’itinéraire pour préparer votre visite."
+  }
+}

@@ -778,6 +778,32 @@
           }
         },
         {
+          "slug": "showroom_latitude",
+          "label": "Latitude du showroom",
+          "type": "number",
+          "required": false,
+          "validation": {
+            "min": -90,
+            "max": 90
+          },
+          "options": {
+            "helpText": "Coordonnée du repère réel du showroom en degrés décimaux. Vider une coordonnée masque le repère."
+          }
+        },
+        {
+          "slug": "showroom_longitude",
+          "label": "Longitude du showroom",
+          "type": "number",
+          "required": false,
+          "validation": {
+            "min": -180,
+            "max": 180
+          },
+          "options": {
+            "helpText": "Coordonnée du repère réel du showroom en degrés décimaux. Vider une coordonnée masque le repère."
+          }
+        },
+        {
           "slug": "logo_light",
           "label": "Logo sur fond clair",
           "type": "image",

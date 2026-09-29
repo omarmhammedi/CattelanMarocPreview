@@ -25,7 +25,8 @@ Une fois le site initialisé, l'aperçu se relance au démarrage du Codespace ou
 - Cinq pages fixes, six familles, onze fiches de modèles et cinq articles complets.
 - Contenus, médias, navigation et métadonnées lus dans EmDash à chaque requête.
 - Brouillons, publication et prévisualisations signées natifs ; aucun JSON de remplacement côté site.
-- Adresse, téléphone et horaires du showroom fournis par le propriétaire ; plan illustré de l’accueil conservé, itinéraire Google Maps et carte interactive chargée à la demande sur la page showroom.
+- Adresse, téléphone et horaires du showroom fournis par le propriétaire ; carte de Casablanca fondée sur la géographie réelle OpenStreetMap, avec la palette de la version B, des rues fines et le repère rouge animé.
+- Carte de l’accueil : zoom et déplacement à la demande, coordonnées du showroom éditables dans EmDash, attribution visible et données locales téléchargeables. La page showroom conserve séparément son itinéraire et sa carte Google Maps chargée à la demande.
 - PDF privé de démonstration, formulaire nom/email, préférence facultative pour les communications.
 - Contacts et événement CRM atomiques en stockage privé, reprise et dédoublonnage ; aucun CRM externe activé.
 - Les textes, visuels et PDF restent provisoires. Les exemples de meubles ne constituent pas une liste de stock ou de pièces exposées.
@@ -45,7 +46,9 @@ Le test `tests/cms-sync.mjs` utilise une vraie inscription et connexion EmDash a
 
 Après les migrations 0003 et 0004, `node tests/published-content-browser.mjs` vérifie aussi les textes et métadonnées publiés des six familles et onze modèles, les liens, les médias et les PDF techniques, puis leurs compositions dans Chromium et WebKit. Ce contrôle est anonyme et en lecture seule ; il compare les octets aux empreintes du cache officiel local de la migration. Voir le [rapport de publication dans l'aperçu privé](docs/test-results-publication.md).
 
-`node tests/showroom-browser.mjs` vérifie en lecture seule les coordonnées, le plan illustré, les thèmes et la carte Google Maps à la demande, avec captures dans `test-results/showroom-browser/`. Le cycle brouillon, aperçu signé, publication et effacement des champs de carte relève de `tests/showroom-location-cms.mjs`, **uniquement dans l’environnement jetable** décrit dans le guide de développement. Voir [les résultats et les captures](docs/test-results-showroom.md).
+`node tests/showroom-browser.mjs` vérifie en lecture seule les coordonnées, les thèmes et la carte Google Maps à la demande, avec captures dans `test-results/showroom-browser/`. Le [premier rapport showroom](docs/test-results-showroom.md) décrit l’étape précédente avec le plan illustratif ; il ne valide pas la nouvelle géographie. `node tests/geographic-map-browser.mjs` contrôle la carte géographique et ses interactions ; ses preuves et limites sont consignées dans le [rapport dédié](docs/test-results-geographic-map.md).
+
+Le cycle brouillon, aperçu signé, publication et effacement des champs relève de `tests/showroom-location-cms.mjs` pour la migration 0005 et de `tests/geographic-showroom-cms.mjs` pour les coordonnées de la migration 0006, **uniquement dans l’environnement jetable** décrit dans le guide de développement.
 
 ## Guides
 
@@ -55,6 +58,8 @@ Après les migrations 0003 et 0004, `node tests/published-content-browser.mjs` v
 - [Stratégie de contenu et SEO](docs/seo-content-strategy.md)
 - [Audit des 28 pages et plan de finalisation SEO](docs/seo-audit-2026-09-28.md)
 - [Coordonnées du showroom, carte et preuves de validation](docs/test-results-showroom.md)
+- [Carte géographique : sources, attribution et données locales](docs/geographic-map.md)
+- [Vérifications de la carte géographique](docs/test-results-geographic-map.md)
 - [Carte des pages et intentions de recherche](docs/seo-page-map.md)
 - [Catalogue, contacts privés et CRM](docs/catalogue.md)
 - [Résultats de compilation et périmètre de validation](docs/test-results-build.md)

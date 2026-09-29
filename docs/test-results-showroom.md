@@ -1,5 +1,7 @@
 # Coordonnées et carte du showroom
 
+**Rapport historique de l’étape `0ca901f`.** Le plan illustratif décrit ci-dessous a ensuite été remplacé par une carte géographique conservant son langage visuel, à la demande du propriétaire. Voir [la correction et ses nouvelles preuves](test-results-geographic-map.md). Les validations ci-dessous restent celles de l’étape précédente.
+
 Intégration publiée dans l’aperçu privé le **28 septembre 2026 à 20 h 59, heure de Toronto**. Les horaires affichés sur le site sont explicitement ceux de **Casablanca**.
 
 ## Résultat
