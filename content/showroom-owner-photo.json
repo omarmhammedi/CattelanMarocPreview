@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "source": {
+    "providedBy": "Propriétaire du site",
+    "originalFilename": "AMIN2589.jpg"
+  },
+  "image": {
+    "filename": "cattelan-italia-casablanca-entree-showroom.jpg",
+    "mimeType": "image/jpeg",
+    "width": 2000,
+    "height": 3000,
+    "bytes": 2145163,
+    "sha256": "27fb665fc83d84f5c70157172a5f4d1dcd3e6153a1bbc717fb1ca4fc6933fe11",
+    "alt": "Entrée et enseigne du showroom Cattelan Italia à Casablanca"
+  },
+  "targets": [
+    {
+      "collection": "pages",
+      "slug": "home",
+      "field": "showroom_image"
+    },
+    {
+      "collection": "pages",
+      "slug": "showroom-casablanca",
+      "field": "hero_image"
+    }
+  ],
+  "publishedAt": "2026-09-29T18:25:51.804Z",
+  "originalImagePreserved": true
+}

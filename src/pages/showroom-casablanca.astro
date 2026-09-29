@@ -23,7 +23,7 @@ const questions = page.sections?.filter((section: any) => section.key?.startsWit
   </section>
   <section class="showroom-information page-gutter">
     <div class="showroom-editorial">
-      {page.image && <figure class="page-full-figure"><div class="page-image"><img src={page.image.src} alt={page.image.alt || ''} width={page.image.width} height={page.image.height} /></div></figure>}
+      {page.image && <figure class="page-full-figure"><div class="page-image"><img src={page.image.src} alt={page.image.alt || ''} width={page.image.width} height={page.image.height} style={page.image.width && page.image.height && page.image.height > page.image.width ? 'object-position: center top;' : undefined} /></div></figure>}
       {page.body?.length > 0 && <div class="page-prose"><PortableText value={page.body} /></div>}
       {sections.map((section: any) => <EditorialSection section={section} />)}
     </div>

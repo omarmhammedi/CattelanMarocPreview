@@ -285,7 +285,7 @@ async function normalMotionCase(browser, viewport) {
     await scrollToContent(page, '#showroom-contact');
     await capture(page, 'showroom-contact', viewport);
     await clickDirections(page, contact.locator('.showroom-directions'), `${label} page showroom`);
-    pass(`${label}: page showroom, SEO, deux FAQ, même photo, coordonnées conservées et CTA accueil fonctionnel`);
+    pass(`${label}: page showroom, SEO, note de contact, même photo, coordonnées conservées et CTA accueil fonctionnel`);
 
     const otherTheme = theme === 'dark' ? 'light' : 'dark';
     await page.locator('[data-theme-toggle]').focus();
