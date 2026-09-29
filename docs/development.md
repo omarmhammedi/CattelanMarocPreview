@@ -16,7 +16,11 @@ Le conteneur rétablit la visibilité privée à la reconnexion. Si GitHub refus
 
 Sur une installation déjà initialisée, `.devcontainer/preview-start.sh` lance Astro une fois au démarrage du conteneur ou à l'ouverture de l'éditeur. Le Codespace existant possède aussi un appel dans `~/.ssh/rc`, exécuté avec le profil de connexion `bash -lc`, pour les reconnexions SSH depuis le mobile. Les dépendances, `.dev.vars` et le stockage D1 local doivent déjà exister : ce mécanisme n'installe rien et ne réinitialise pas EmDash.
 
-Un verrou temporaire empêche deux connexions simultanées de lancer deux serveurs. Astro réutilise son serveur existant ou élimine son ancien verrou si le processus a disparu. Le port demandé reste 4321 ; une collision échoue explicitement au lieu de déplacer le site sur 4322. Le démarrage a un délai borné et ne se répète pas en boucle. Les journaux sont `.astro/preview-start.log` et `.astro/dev.log`.
+Un ancien conteneur déjà créé peut conserver uniquement `node .devcontainer/private-port.mjs` comme commande de rattachement, même si le fichier de configuration du dépôt contient les nouveaux hooks. Cette entrée rétablit désormais le port privé, puis lance les helpers de suivi de fin de tâches et d'aperçu : la reconnexion de l'éditeur fonctionne donc aussi avec cette ancienne configuration, sans reconstruction. Si la visibilité privée n'est pas confirmée, cette entrée ne démarre pas l'aperçu et affiche un avertissement ; le suivi d'arrêt peut démarrer indépendamment. Les appels restent bornés et n'affichent pas les sorties privées des sous-commandes. Les verrous existants absorbent les appels concurrents des nouveaux hooks.
+
+Ce pont couvre le rattachement de l'éditeur ; il n'ajoute pas un événement de démarrage à un ancien conteneur qui ne possède pas de `postStartCommand`. Pour démarrer le site dès la reprise d'une machine sans connexion éditeur ou SSH, la configuration actuelle de `.devcontainer/devcontainer.json` doit être appliquée par le cycle normal de reconstruction. Aucune reconstruction de la machine contenant les données CMS n'a été effectuée pour ce correctif.
+
+Un verrou temporaire empêche deux connexions simultanées de lancer deux serveurs. Astro réutilise son serveur existant ou élimine son ancien verrou si le processus a disparu. Le port demandé reste 4321 ; une collision échoue explicitement au lieu de déplacer le site sur 4322. Le démarrage ne se répète pas en boucle : seule l'erreur native exacte de dépassement des 30 secondes d'Astro autorise une seconde tentative, après deux secondes et une nouvelle vérification des prérequis et de la désactivation. Chaque invocation a aussi une borne externe de 60 secondes. Les autres erreurs ne déclenchent aucune reprise. Les journaux sont `.astro/preview-start.log` et `.astro/dev.log`.
 
 ```sh
 # Demander une seule tentative de démarrage en arrière-plan
@@ -34,7 +38,7 @@ Sans désactivation explicite, un arrêt manuel d'Astro dure jusqu'au prochain d
 
 Ce mécanisme ne réveille pas une machine arrêtée, ne la maintient pas allumée et ne modifie pas le délai de quinze minutes après les tâches. Il démarre le site **après la reprise du Codespace**. L'aperçu reste inaccessible lorsque la machine est éteinte. Il ne surveille pas continuellement un serveur bloqué ; `npx astro dev status` et une requête HTTP restent nécessaires pour diagnostiquer ce cas distinct.
 
-Les tests `node --test .devcontainer/preview-start.test.mjs` utilisent des répertoires jetables et un faux binaire Astro, sans accès au CMS. Ils vérifient notamment les connexions simultanées, la fin du verrou, les prérequis, la désactivation et l'absence de boucle de relance.
+Les tests `node --test .devcontainer/private-port.test.mjs .devcontainer/preview-start.test.mjs` utilisent des répertoires jetables et de faux exécutables, sans GitHub ni accès au CMS. Ils vérifient notamment l'ancienne entrée de rattachement, les erreurs de visibilité, les connexions simultanées, la fin du verrou, les prérequis, la désactivation et la reprise unique après un démarrage à froid trop lent. Voir le [rapport de rétablissement](test-results-preview-reconnect.md).
 
 ### Afficher le site dans l’éditeur
 

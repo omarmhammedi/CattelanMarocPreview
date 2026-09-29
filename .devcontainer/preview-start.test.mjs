@@ -22,6 +22,7 @@ if (process.env.FIXTURE_RECORD_SESSION === '1') {
   record.session = Number(stat.slice(stat.lastIndexOf(')') + 2).split(' ')[3]);
 }
 appendFileSync(base + '/calls.jsonl', JSON.stringify(record) + '\n');
+const callCount = readFileSync(base + '/calls.jsonl', 'utf8').trim().split('\n').length;
 if (process.env.FIXTURE_CHILD === '1') {
   const child = spawn(process.execPath, ['-e', 'setTimeout(() => {}, 15000)'], {
     detached: true, stdio: 'ignore',
@@ -30,6 +31,11 @@ if (process.env.FIXTURE_CHILD === '1') {
   child.unref();
 }
 await new Promise((resolve) => setTimeout(resolve, Number(process.env.FIXTURE_DELAY || 0)));
+if (process.env.FIXTURE_NATIVE_TIMEOUT === 'always'
+  || (process.env.FIXTURE_NATIVE_TIMEOUT === 'once' && callCount === 1)) {
+  console.error(process.env.FIXTURE_TIMEOUT_TEXT || 'Dev server failed to start within 30s.');
+  process.exit(Number(process.env.FIXTURE_TIMEOUT_EXIT || 1));
+}
 if (process.env.FIXTURE_FAIL === '1') process.exit(7);
 if (!existsSync(base + '/fake-native-server')) {
   writeFileSync(base + '/fake-native-server', 'fake server; no listener\n');
@@ -200,6 +206,88 @@ test('a failed native start is bounded and retried only by the next startup even
   await until(async () => await f.completed() === 1, 'successful next startup event');
   assert.equal((await f.calls()).length, 2);
   assert.equal(await f.launches(), 1);
+});
+
+test('only the exact native cold-start timeout retries once while retaining the startup lock', async (t) => {
+  const f = await fixture(t);
+  const started = Date.now();
+  assert.equal((await f.run('start', { FIXTURE_NATIVE_TIMEOUT: 'once' })).code, 0);
+  await until(async () => (await f.calls()).length === 1, 'first native timeout');
+  // Further reconnects during the retry backoff must not bypass the same lock.
+  await Promise.all(Array.from({ length: 4 }, () => f.run('start')));
+  await until(async () => await f.completed() === 1, 'successful cold-start retry');
+  assert.ok(Date.now() - started >= 1_900, 'the retry must respect the two-second backoff');
+  assert.equal((await f.calls()).length, 2);
+  assert.equal(await f.launches(), 1);
+  await pause(250);
+  assert.equal((await f.calls()).length, 2, 'startup must stop retrying after success');
+});
+
+test('two native cold-start timeouts exhaust the bounded retry without a loop', async (t) => {
+  const f = await fixture(t);
+  const result = await f.run('run', { FIXTURE_NATIVE_TIMEOUT: 'always' });
+  assert.equal(result.code, 1);
+  assert.match(result.output, /attempt 2 of 2/);
+  assert.match(result.output, /No further automatic retry/);
+  assert.equal((await f.calls()).length, 2);
+  assert.equal(await f.launches(), 0);
+  await pause(250);
+  assert.equal((await f.calls()).length, 2);
+});
+
+test('the exact native JSON timeout used in agent environments also retries once', async (t) => {
+  const f = await fixture(t);
+  const result = await f.run('run', {
+    FIXTURE_NATIVE_TIMEOUT: 'once',
+    FIXTURE_TIMEOUT_TEXT: JSON.stringify({
+      message: 'Dev server failed to start within 30s.', label: 'SKIP_FORMAT', level: 'error',
+    }),
+  });
+  assert.equal(result.code, 0);
+  assert.match(result.output, /attempt 2 of 2/);
+  assert.equal((await f.calls()).length, 2);
+  assert.equal(await f.launches(), 1);
+  assert.equal(await f.completed(), 1);
+});
+
+test('retry rechecks the disable marker and existing CMS prerequisites', async (t) => {
+  for (const change of ['disabled', '.dev.vars']) {
+    await t.test(change, async (t) => {
+      const f = await fixture(t);
+      await f.run('start', { FIXTURE_NATIVE_TIMEOUT: 'once' });
+      await until(async () => (await f.calls()).length === 1, 'first native timeout');
+      if (change === 'disabled') await f.run('disable');
+      else await rm(join(f.root, change));
+      await until(async () => (await readFile(join(f.root, '.astro', 'preview-start.log'), 'utf8'))
+        .includes('Preview retry cancelled'), 'cancelled cold-start retry');
+      assert.equal((await f.calls()).length, 1);
+      assert.equal(await f.launches(), 0);
+    });
+  }
+});
+
+test('other exit codes and approximate timeout messages never trigger a retry', async (t) => {
+  const nativeMessage = { message: 'Dev server failed to start within 30s.', label: 'SKIP_FORMAT', level: 'error' };
+  for (const overrides of [
+    { FIXTURE_TIMEOUT_EXIT: '7' },
+    { FIXTURE_TIMEOUT_TEXT: 'Example: Dev server failed to start within 30s.' },
+    { FIXTURE_TIMEOUT_TEXT: 'Dev server failed to start within 60s.' },
+    { FIXTURE_TIMEOUT_TEXT: JSON.stringify(nativeMessage).slice(0, -1) },
+    { FIXTURE_TIMEOUT_TEXT: JSON.stringify({ ...nativeMessage, message: `Example: ${nativeMessage.message}` }) },
+    { FIXTURE_TIMEOUT_TEXT: JSON.stringify({ ...nativeMessage, label: 'other' }) },
+    { FIXTURE_TIMEOUT_TEXT: JSON.stringify({ ...nativeMessage, level: 'info' }) },
+    { FIXTURE_TIMEOUT_TEXT: JSON.stringify({ nested: nativeMessage }) },
+    { FIXTURE_TIMEOUT_TEXT: JSON.stringify([nativeMessage]) },
+    { FIXTURE_TIMEOUT_TEXT: JSON.stringify(nativeMessage), FIXTURE_TIMEOUT_EXIT: '7' },
+  ]) {
+    await t.test(JSON.stringify(overrides), async (t) => {
+      const f = await fixture(t);
+      const result = await f.run('run', { FIXTURE_NATIVE_TIMEOUT: 'always', ...overrides });
+      assert.equal(result.code, 1);
+      assert.equal((await f.calls()).length, 1);
+      assert.equal(await f.launches(), 0);
+    });
+  }
 });
 
 test('a hung native start receives the 60-second bound and exits without a restart loop', async (t) => {
