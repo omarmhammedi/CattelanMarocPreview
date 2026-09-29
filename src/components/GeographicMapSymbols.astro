@@ -1,6 +1,8 @@
 ---
 import data from '../data/casablanca-map.json';
 import { geographicPath, projectCoordinate, projectedBounds, roadLabel } from '../lib/geography';
+import { buildStreetLabels } from '../lib/map-labels';
+const streetCandidates = buildStreetLabels(data.roads);
 const [x, y, width, height] = projectedBounds(data.bounds);
 const groups = [
   { name: 'm-grid', kinds: ['residential', 'unclassified', 'pedestrian'], width: 1 },
@@ -14,6 +16,7 @@ const streets = streetNames.flatMap(name => {
   return candidates.sort((a, b) => b.length - a.length).slice(0, 1);
 });
 ---
+<metadata id="casablanca-label-data">{JSON.stringify(streetCandidates)}</metadata>
 <g id="casablanca-geography">
   <rect class="m-land" x={x} y={y} width={width} height={height}/>
   <path class="m-sea" d={data.seaPolygons.map(polygon => geographicPath(polygon, true)).join('')}/>

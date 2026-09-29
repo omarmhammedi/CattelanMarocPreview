@@ -22,7 +22,7 @@ const bounds = projectedBounds(data.bounds);
       <title id={`${id}-title`}>Carte géographique de Casablanca{point ? ` — ${name}` : ''}</title>
       <use href="#casablanca-geography"/>
       <use href="#casablanca-place-labels"/>
-      <use class="map-detail-labels" href="#casablanca-street-labels"/>
+      <g class="map-detail-labels" data-map-street-labels><use href="#casablanca-street-labels"/></g>
       {point && <g transform={`translate(${point[0]} ${point[1]})`} data-showroom-marker data-latitude={latitude} data-longitude={longitude}>
         <g class="map-glyph">
           <circle r="16" fill="none" stroke="#DB0812" stroke-width="2" class="pulse"/>

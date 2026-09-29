@@ -1,0 +1,864 @@
+{
+  "verifiedAt": "2026-09-29T13:43:10.190Z",
+  "timezone": "America/Toronto",
+  "branch": "feat/emdash-migration",
+  "unitTests": 69,
+  "runs": [
+    {
+      "verifiedAt": "2026-09-29T13:42:41.187Z",
+      "engine": "chromium",
+      "theme": "dark",
+      "base": "http://localhost:4321/",
+      "passed": true,
+      "failure": null,
+      "results": [
+        {
+          "case": "desktop-initial-buttons",
+          "viewport": "2000x1248",
+          "initial": "-1.1538461538461888 0 1442.3076923076924 900",
+          "zoomedOut": "-119.9999999999975 -79.26884136686357 1739.999999999995 1085.7599999999968",
+          "zoomedIn": "54.00000000000193 29.307158633136055 1391.9999999999961 868.6079999999976",
+          "initialStreetNames": [
+            "Boulevard de la Corniche",
+            "Boulevard Sidi Mohammed Ben Abdellah",
+            "Boulevard Abdelkrim El Khattabi",
+            "Avenue des Forces Armées Royales",
+            "Boulevard Ghandi",
+            "Trémie de Dakar",
+            "Avenue Pasteur",
+            "Avenue Ouled Ziane",
+            "Boulevard Abdelhadi Boutaleb",
+            "Boulevard Mohammed VI",
+            "Avenue Tan Tan",
+            "Boulevard de Bourgogne",
+            "Boulevard Kennedy",
+            "Boulevard Bir Anzarane",
+            "Boulevard de l'Océan Pacifique",
+            "Boulevard de Paris",
+            "Avenue Hassan II",
+            "Boulevard Rahal El Meskini",
+            "Boulevard Abdelmoumen",
+            "Boulevard Ibnou Sina",
+            "Avenue 2 Mars",
+            "Boulevard Sidi Abderrahmane",
+            "Boulevard Anoual",
+            "Boulevard El Fida",
+            "Avenue de Nice",
+            "Rue de Goulmima",
+            "Rue Al Fourate",
+            "Rue de l'Atlas",
+            "Avenue Idriss 1",
+            "Boulevard de Biarritz"
+          ]
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "2000x1248",
+          "offset": 70,
+          "plus": {
+            "x": 1889,
+            "y": 159,
+            "top": 137,
+            "bottom": 181,
+            "headerBottom": 124
+          },
+          "minus": {
+            "x": 1889,
+            "y": 203,
+            "top": 181,
+            "bottom": 225,
+            "headerBottom": 124
+          }
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "2000x1248",
+          "offset": 140,
+          "plus": {
+            "x": 1889,
+            "y": 159,
+            "top": 137,
+            "bottom": 181,
+            "headerBottom": 124
+          },
+          "minus": {
+            "x": 1889,
+            "y": 203,
+            "top": 181,
+            "bottom": 225,
+            "headerBottom": 124
+          }
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "2000x1248",
+          "offset": 220,
+          "plus": {
+            "x": 1889,
+            "y": 159,
+            "top": 137,
+            "bottom": 181,
+            "headerBottom": 124
+          },
+          "minus": {
+            "x": 1889,
+            "y": 203,
+            "top": 181,
+            "bottom": 225,
+            "headerBottom": 124
+          }
+        },
+        {
+          "case": "close-street-names",
+          "zoom": "7.450580596923828",
+          "visibleNames": [
+            "Avenue du Docteur Mohamed Sijelmassi",
+            "Boulevard d'Anfa",
+            "Rond-point Racine",
+            "Rond-point des Sports",
+            "Boulevard Abdellatif Ben Kaddour",
+            "Rue Aïn Harrouda",
+            "Avenue Ahmed Charci",
+            "Rue Al Kaissi",
+            "Rue Assanaani",
+            "Impasse Rif",
+            "Rue Bab Al Ifrane",
+            "Rue Ain El Aouda",
+            "Rue Ahmed Amine",
+            "Rue Imam El Alloussi",
+            "Rue de la Rive",
+            "Boulevard Ain Taoujtate",
+            "Rue Abou Al Abass",
+            "Rue Mozart",
+            "Rue Molière",
+            "Rue Ait Ishaq",
+            "Rue Ahmed El Mokri",
+            "Rue Michel Ange",
+            "Rue Omar Al Kindy زنقة عمر الكندي",
+            "Rue Bab Chellah",
+            "Rue d'Asilah",
+            "Rue Ain Yefren",
+            "Rue Lahcen el Basri",
+            "Rue Halima Saadia"
+          ]
+        },
+        {
+          "case": "zoom-limits",
+          "maximum": 16,
+          "minimum": 0.8289124668435037,
+          "widest": [
+            -119.9999999999975,
+            -12.63962486723733,
+            1739.999999999995,
+            1085.7599999999968
+          ],
+          "coverage": [
+            -119.99999999999746,
+            -79.26884136686358,
+            1739.999999999995,
+            1152.5033175362785
+          ]
+        },
+        {
+          "case": "normal-wheel-scroll",
+          "zoomUnchanged": "1"
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "1440x900",
+          "offset": 140,
+          "plus": {
+            "x": 1353.640625,
+            "y": 124.265625,
+            "top": 102.265625,
+            "bottom": 146.265625,
+            "headerBottom": 89.265625
+          },
+          "minus": {
+            "x": 1353.640625,
+            "y": 168.265625,
+            "top": 146.265625,
+            "bottom": 190.265625,
+            "headerBottom": 89.265625
+          }
+        },
+        {
+          "case": "mobile-partial-scroll-tap",
+          "viewport": "390x844",
+          "offset": 70,
+          "visibleNames": [
+            "Rue Démocrite"
+          ],
+          "closeVisibleNames": [
+            "Rue Bab Al Ifrane"
+          ]
+        },
+        {
+          "case": "sandboxed-iframe-partial-scroll",
+          "offset": 140,
+          "plus": {
+            "x": 1323.0625,
+            "y": 122.28125,
+            "top": 100.28125,
+            "bottom": 144.28125,
+            "headerBottom": 87.28125
+          },
+          "minus": {
+            "x": 1323.0625,
+            "y": 166.28125,
+            "top": 144.28125,
+            "bottom": 188.28125,
+            "headerBottom": 87.28125
+          }
+        }
+      ],
+      "errors": [],
+      "attemptedWrites": []
+    },
+    {
+      "verifiedAt": "2026-09-29T13:41:27.189Z",
+      "engine": "chromium",
+      "theme": "light",
+      "base": "http://localhost:4321/",
+      "passed": true,
+      "failure": null,
+      "results": [
+        {
+          "case": "desktop-initial-buttons",
+          "viewport": "2000x1248",
+          "initial": "-1.1538461538461888 0 1442.3076923076924 900",
+          "zoomedOut": "-119.9999999999975 -79.26884136686357 1739.999999999995 1085.7599999999968",
+          "zoomedIn": "54.00000000000193 29.307158633136055 1391.9999999999961 868.6079999999976",
+          "initialStreetNames": [
+            "Boulevard de la Corniche",
+            "Boulevard Sidi Mohammed Ben Abdellah",
+            "Boulevard Abdelkrim El Khattabi",
+            "Avenue des Forces Armées Royales",
+            "Boulevard Ghandi",
+            "Trémie de Dakar",
+            "Avenue Pasteur",
+            "Avenue Ouled Ziane",
+            "Boulevard Abdelhadi Boutaleb",
+            "Boulevard Mohammed VI",
+            "Avenue Tan Tan",
+            "Boulevard de Bourgogne",
+            "Boulevard Kennedy",
+            "Boulevard Bir Anzarane",
+            "Boulevard de l'Océan Pacifique",
+            "Boulevard de Paris",
+            "Avenue Hassan II",
+            "Boulevard Rahal El Meskini",
+            "Boulevard Abdelmoumen",
+            "Boulevard Ibnou Sina",
+            "Avenue 2 Mars",
+            "Boulevard Sidi Abderrahmane",
+            "Boulevard Anoual",
+            "Boulevard El Fida",
+            "Avenue de Nice",
+            "Rue de Goulmima",
+            "Rue Al Fourate",
+            "Rue de l'Atlas",
+            "Avenue Idriss 1",
+            "Boulevard de Biarritz"
+          ]
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "2000x1248",
+          "offset": 70,
+          "plus": {
+            "x": 1889,
+            "y": 159,
+            "top": 137,
+            "bottom": 181,
+            "headerBottom": 124
+          },
+          "minus": {
+            "x": 1889,
+            "y": 203,
+            "top": 181,
+            "bottom": 225,
+            "headerBottom": 124
+          }
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "2000x1248",
+          "offset": 140,
+          "plus": {
+            "x": 1889,
+            "y": 159,
+            "top": 137,
+            "bottom": 181,
+            "headerBottom": 124
+          },
+          "minus": {
+            "x": 1889,
+            "y": 203,
+            "top": 181,
+            "bottom": 225,
+            "headerBottom": 124
+          }
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "2000x1248",
+          "offset": 220,
+          "plus": {
+            "x": 1889,
+            "y": 159,
+            "top": 137,
+            "bottom": 181,
+            "headerBottom": 124
+          },
+          "minus": {
+            "x": 1889,
+            "y": 203,
+            "top": 181,
+            "bottom": 225,
+            "headerBottom": 124
+          }
+        },
+        {
+          "case": "close-street-names",
+          "zoom": "7.450580596923828",
+          "visibleNames": [
+            "Avenue du Docteur Mohamed Sijelmassi",
+            "Boulevard d'Anfa",
+            "Rond-point Racine",
+            "Rond-point des Sports",
+            "Boulevard Abdellatif Ben Kaddour",
+            "Rue Aïn Harrouda",
+            "Avenue Ahmed Charci",
+            "Rue Al Kaissi",
+            "Rue Assanaani",
+            "Impasse Rif",
+            "Rue Bab Al Ifrane",
+            "Rue Ain El Aouda",
+            "Rue Ahmed Amine",
+            "Rue Imam El Alloussi",
+            "Rue de la Rive",
+            "Boulevard Ain Taoujtate",
+            "Rue Abou Al Abass",
+            "Rue Mozart",
+            "Rue Molière",
+            "Rue Ait Ishaq",
+            "Rue Ahmed El Mokri",
+            "Rue Michel Ange",
+            "Rue Omar Al Kindy زنقة عمر الكندي",
+            "Rue Bab Chellah",
+            "Rue d'Asilah",
+            "Rue Ain Yefren",
+            "Rue Lahcen el Basri",
+            "Rue Halima Saadia"
+          ]
+        },
+        {
+          "case": "zoom-limits",
+          "maximum": 16,
+          "minimum": 0.8289124668435037,
+          "widest": [
+            -119.9999999999975,
+            -12.63962486723733,
+            1739.999999999995,
+            1085.7599999999968
+          ],
+          "coverage": [
+            -119.99999999999746,
+            -79.26884136686358,
+            1739.999999999995,
+            1152.5033175362785
+          ]
+        },
+        {
+          "case": "normal-wheel-scroll",
+          "zoomUnchanged": "1"
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "1440x900",
+          "offset": 140,
+          "plus": {
+            "x": 1353.640625,
+            "y": 124.265625,
+            "top": 102.265625,
+            "bottom": 146.265625,
+            "headerBottom": 89.265625
+          },
+          "minus": {
+            "x": 1353.640625,
+            "y": 168.265625,
+            "top": 146.265625,
+            "bottom": 190.265625,
+            "headerBottom": 89.265625
+          }
+        },
+        {
+          "case": "mobile-partial-scroll-tap",
+          "viewport": "390x844",
+          "offset": 70,
+          "visibleNames": [
+            "Rue Démocrite"
+          ],
+          "closeVisibleNames": [
+            "Rue Bab Al Ifrane"
+          ]
+        },
+        {
+          "case": "sandboxed-iframe-partial-scroll",
+          "offset": 140,
+          "plus": {
+            "x": 1323.0625,
+            "y": 122.28125,
+            "top": 100.28125,
+            "bottom": 144.28125,
+            "headerBottom": 87.28125
+          },
+          "minus": {
+            "x": 1323.0625,
+            "y": 166.28125,
+            "top": 144.28125,
+            "bottom": 188.28125,
+            "headerBottom": 87.28125
+          }
+        }
+      ],
+      "errors": [],
+      "attemptedWrites": []
+    },
+    {
+      "verifiedAt": "2026-09-29T13:42:07.642Z",
+      "engine": "webkit",
+      "theme": "dark",
+      "base": "http://localhost:4321/",
+      "passed": true,
+      "failure": null,
+      "results": [
+        {
+          "case": "desktop-initial-buttons",
+          "viewport": "2000x1248",
+          "initial": "-1.1538461538461888 0 1442.3076923076924 900",
+          "zoomedOut": "-119.9999999999975 -79.26884136686357 1739.999999999995 1085.7599999999968",
+          "zoomedIn": "54.00000000000193 29.307158633136055 1391.9999999999961 868.6079999999976",
+          "initialStreetNames": [
+            "Boulevard de la Corniche",
+            "Boulevard Sidi Mohammed Ben Abdellah",
+            "Boulevard Abdelkrim El Khattabi",
+            "Avenue des Forces Armées Royales",
+            "Boulevard Ghandi",
+            "Trémie de Dakar",
+            "Avenue Pasteur",
+            "Avenue Ouled Ziane",
+            "Boulevard Abdelhadi Boutaleb",
+            "Boulevard Mohammed VI",
+            "Avenue Tan Tan",
+            "Boulevard de Bourgogne",
+            "Boulevard Kennedy",
+            "Boulevard Bir Anzarane",
+            "Boulevard de l'Océan Pacifique",
+            "Boulevard de Paris",
+            "Avenue Hassan II",
+            "Boulevard Rahal El Meskini",
+            "Boulevard Abdelmoumen",
+            "Boulevard Ibnou Sina",
+            "Avenue 2 Mars",
+            "Boulevard Sidi Abderrahmane",
+            "Boulevard Anoual",
+            "Boulevard El Fida",
+            "Avenue de Nice",
+            "Rue de Goulmima",
+            "Rue Al Fourate",
+            "Rue de l'Atlas",
+            "Avenue Idriss 1",
+            "Boulevard de Biarritz"
+          ]
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "2000x1248",
+          "offset": 70,
+          "plus": {
+            "x": 1889,
+            "y": 159,
+            "top": 137,
+            "bottom": 181,
+            "headerBottom": 124
+          },
+          "minus": {
+            "x": 1889,
+            "y": 203,
+            "top": 181,
+            "bottom": 225,
+            "headerBottom": 124
+          }
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "2000x1248",
+          "offset": 140,
+          "plus": {
+            "x": 1889,
+            "y": 159,
+            "top": 137,
+            "bottom": 181,
+            "headerBottom": 124
+          },
+          "minus": {
+            "x": 1889,
+            "y": 203,
+            "top": 181,
+            "bottom": 225,
+            "headerBottom": 124
+          }
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "2000x1248",
+          "offset": 220,
+          "plus": {
+            "x": 1889,
+            "y": 159,
+            "top": 137,
+            "bottom": 181,
+            "headerBottom": 124
+          },
+          "minus": {
+            "x": 1889,
+            "y": 203,
+            "top": 181,
+            "bottom": 225,
+            "headerBottom": 124
+          }
+        },
+        {
+          "case": "close-street-names",
+          "zoom": "7.450580596923828",
+          "visibleNames": [
+            "Avenue du Docteur Mohamed Sijelmassi",
+            "Boulevard d'Anfa",
+            "Rond-point Racine",
+            "Rond-point des Sports",
+            "Boulevard Abdellatif Ben Kaddour",
+            "Rue Aïn Harrouda",
+            "Avenue Ahmed Charci",
+            "Rue Al Kaissi",
+            "Rue Assanaani",
+            "Impasse Rif",
+            "Rue Bab Al Ifrane",
+            "Rue Ain El Aouda",
+            "Rue Ahmed Amine",
+            "Rue Imam El Alloussi",
+            "Rue de la Rive",
+            "Boulevard Ain Taoujtate",
+            "Rue Abou Al Abass",
+            "Rue Mozart",
+            "Rue Molière",
+            "Rue Ait Ishaq",
+            "Rue Ahmed El Mokri",
+            "Rue Michel Ange",
+            "Rue Omar Al Kindy زنقة عمر الكندي",
+            "Rue Bab Chellah",
+            "Rue d'Asilah",
+            "Rue Ain Yefren",
+            "Rue Lahcen el Basri",
+            "Rue Halima Saadia"
+          ]
+        },
+        {
+          "case": "zoom-limits",
+          "maximum": 16,
+          "minimum": 0.8289124668435037,
+          "widest": [
+            -119.9999999999975,
+            -12.63962486723733,
+            1739.999999999995,
+            1085.7599999999968
+          ],
+          "coverage": [
+            -119.99999999999746,
+            -79.26884136686358,
+            1739.999999999995,
+            1152.5033175362785
+          ]
+        },
+        {
+          "case": "normal-wheel-scroll",
+          "zoomUnchanged": "1"
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "1440x900",
+          "offset": 140,
+          "plus": {
+            "x": 1353.640625,
+            "y": 124.265625,
+            "top": 102.265625,
+            "bottom": 146.265625,
+            "headerBottom": 89.265625
+          },
+          "minus": {
+            "x": 1353.640625,
+            "y": 168.265625,
+            "top": 146.265625,
+            "bottom": 190.265625,
+            "headerBottom": 89.265625
+          }
+        },
+        {
+          "case": "mobile-partial-scroll-tap",
+          "viewport": "390x844",
+          "offset": 70,
+          "visibleNames": [
+            "Rue Démocrite"
+          ],
+          "closeVisibleNames": [
+            "Rue Bab Al Ifrane"
+          ]
+        },
+        {
+          "case": "sandboxed-iframe-partial-scroll",
+          "offset": 140,
+          "plus": {
+            "x": 1323.0625,
+            "y": 122.28125,
+            "top": 100.28125,
+            "bottom": 144.28125,
+            "headerBottom": 87.28125
+          },
+          "minus": {
+            "x": 1323.0625,
+            "y": 166.28125,
+            "top": 144.28125,
+            "bottom": 188.28125,
+            "headerBottom": 87.28125
+          }
+        }
+      ],
+      "errors": [],
+      "attemptedWrites": []
+    },
+    {
+      "verifiedAt": "2026-09-29T13:42:21.486Z",
+      "engine": "webkit",
+      "theme": "light",
+      "base": "http://localhost:4321/",
+      "passed": true,
+      "failure": null,
+      "results": [
+        {
+          "case": "desktop-initial-buttons",
+          "viewport": "2000x1248",
+          "initial": "-1.1538461538461888 0 1442.3076923076924 900",
+          "zoomedOut": "-119.9999999999975 -79.26884136686357 1739.999999999995 1085.7599999999968",
+          "zoomedIn": "54.00000000000193 29.307158633136055 1391.9999999999961 868.6079999999976",
+          "initialStreetNames": [
+            "Boulevard de la Corniche",
+            "Boulevard Sidi Mohammed Ben Abdellah",
+            "Boulevard Abdelkrim El Khattabi",
+            "Avenue des Forces Armées Royales",
+            "Boulevard Ghandi",
+            "Trémie de Dakar",
+            "Avenue Pasteur",
+            "Avenue Ouled Ziane",
+            "Boulevard Abdelhadi Boutaleb",
+            "Boulevard Mohammed VI",
+            "Avenue Tan Tan",
+            "Boulevard de Bourgogne",
+            "Boulevard Kennedy",
+            "Boulevard Bir Anzarane",
+            "Boulevard de l'Océan Pacifique",
+            "Boulevard de Paris",
+            "Avenue Hassan II",
+            "Boulevard Rahal El Meskini",
+            "Boulevard Abdelmoumen",
+            "Boulevard Ibnou Sina",
+            "Avenue 2 Mars",
+            "Boulevard Sidi Abderrahmane",
+            "Boulevard Anoual",
+            "Boulevard El Fida",
+            "Avenue de Nice",
+            "Rue de Goulmima",
+            "Rue Al Fourate",
+            "Rue de l'Atlas",
+            "Avenue Idriss 1",
+            "Boulevard de Biarritz"
+          ]
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "2000x1248",
+          "offset": 70,
+          "plus": {
+            "x": 1889,
+            "y": 159,
+            "top": 137,
+            "bottom": 181,
+            "headerBottom": 124
+          },
+          "minus": {
+            "x": 1889,
+            "y": 203,
+            "top": 181,
+            "bottom": 225,
+            "headerBottom": 124
+          }
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "2000x1248",
+          "offset": 140,
+          "plus": {
+            "x": 1889,
+            "y": 159,
+            "top": 137,
+            "bottom": 181,
+            "headerBottom": 124
+          },
+          "minus": {
+            "x": 1889,
+            "y": 203,
+            "top": 181,
+            "bottom": 225,
+            "headerBottom": 124
+          }
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "2000x1248",
+          "offset": 220,
+          "plus": {
+            "x": 1889,
+            "y": 159,
+            "top": 137,
+            "bottom": 181,
+            "headerBottom": 124
+          },
+          "minus": {
+            "x": 1889,
+            "y": 203,
+            "top": 181,
+            "bottom": 225,
+            "headerBottom": 124
+          }
+        },
+        {
+          "case": "close-street-names",
+          "zoom": "7.450580596923828",
+          "visibleNames": [
+            "Avenue du Docteur Mohamed Sijelmassi",
+            "Boulevard d'Anfa",
+            "Rond-point Racine",
+            "Rond-point des Sports",
+            "Boulevard Abdellatif Ben Kaddour",
+            "Rue Aïn Harrouda",
+            "Avenue Ahmed Charci",
+            "Rue Al Kaissi",
+            "Rue Assanaani",
+            "Impasse Rif",
+            "Rue Bab Al Ifrane",
+            "Rue Ain El Aouda",
+            "Rue Ahmed Amine",
+            "Rue Imam El Alloussi",
+            "Rue de la Rive",
+            "Boulevard Ain Taoujtate",
+            "Rue Abou Al Abass",
+            "Rue Mozart",
+            "Rue Molière",
+            "Rue Ait Ishaq",
+            "Rue Ahmed El Mokri",
+            "Rue Michel Ange",
+            "Rue Omar Al Kindy زنقة عمر الكندي",
+            "Rue Bab Chellah",
+            "Rue d'Asilah",
+            "Rue Ain Yefren",
+            "Rue Lahcen el Basri",
+            "Rue Halima Saadia"
+          ]
+        },
+        {
+          "case": "zoom-limits",
+          "maximum": 16,
+          "minimum": 0.8289124668435037,
+          "widest": [
+            -119.9999999999975,
+            -12.63962486723733,
+            1739.999999999995,
+            1085.7599999999968
+          ],
+          "coverage": [
+            -119.99999999999746,
+            -79.26884136686358,
+            1739.999999999995,
+            1152.5033175362785
+          ]
+        },
+        {
+          "case": "normal-wheel-scroll",
+          "zoomUnchanged": "1"
+        },
+        {
+          "case": "desktop-partial-scroll",
+          "viewport": "1440x900",
+          "offset": 140,
+          "plus": {
+            "x": 1353.640625,
+            "y": 124.265625,
+            "top": 102.265625,
+            "bottom": 146.265625,
+            "headerBottom": 89.265625
+          },
+          "minus": {
+            "x": 1353.640625,
+            "y": 168.265625,
+            "top": 146.265625,
+            "bottom": 190.265625,
+            "headerBottom": 89.265625
+          }
+        },
+        {
+          "case": "mobile-partial-scroll-tap",
+          "viewport": "390x844",
+          "offset": 70,
+          "visibleNames": [
+            "Rue Démocrite"
+          ],
+          "closeVisibleNames": [
+            "Rue Bab Al Ifrane"
+          ]
+        },
+        {
+          "case": "sandboxed-iframe-partial-scroll",
+          "offset": 140,
+          "plus": {
+            "x": 1323.0625,
+            "y": 122.28125,
+            "top": 100.28125,
+            "bottom": 144.28125,
+            "headerBottom": 87.28125
+          },
+          "minus": {
+            "x": 1323.0625,
+            "y": 166.28125,
+            "top": 144.28125,
+            "bottom": 188.28125,
+            "headerBottom": 87.28125
+          }
+        }
+      ],
+      "errors": [],
+      "attemptedWrites": []
+    }
+  ],
+  "screenshots": [
+    "docs/screenshots/map-controls-2026-09-29/desktop-partial-scroll-dark.jpg",
+    "docs/screenshots/map-controls-2026-09-29/desktop-close-streets-dark.jpg",
+    "docs/screenshots/map-controls-2026-09-29/mobile-partial-scroll-dark.jpg",
+    "docs/screenshots/map-controls-2026-09-29/mobile-close-streets-dark.jpg",
+    "docs/screenshots/map-controls-2026-09-29/desktop-partial-scroll-light.jpg",
+    "docs/screenshots/map-controls-2026-09-29/desktop-close-streets-light.jpg",
+    "docs/screenshots/map-controls-2026-09-29/mobile-partial-scroll-light.jpg",
+    "docs/screenshots/map-controls-2026-09-29/mobile-close-streets-light.jpg"
+  ],
+  "cmsWrites": 0,
+  "physicalIphone": false
+}

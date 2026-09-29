@@ -2,11 +2,13 @@
 
 Correction du **28 septembre 2026, heure de Toronto**, après la précision du propriétaire : c’est le plan stylisé de l’accueil qui doit devenir géographique. L’étape précédente avait conservé un dessin illustratif et ajouté une carte Google séparée ; elle ne répondait pas entièrement à cette demande.
 
+**Suivi des commandes et des noms de rues :** les premiers essais ci-dessous positionnaient la carte en haut de l’écran. Le propriétaire a ensuite signalé un véritable défaut des boutons `+` / `−` pendant le défilement. La correction et les tests aux positions ordinaires sont détaillés dans [le complément de validation](test-results-map-controls.md).
+
 ## Résultat visible
 
 Le plan de l’accueil utilise maintenant le littoral, le port et les rues réels de Casablanca issus d’OpenStreetMap. Le rendu conserve la palette clair/sombre, les lignes fines, la typographie espacée, le pictogramme et le repère rouge animé. Le panneau du showroom et ses informations publiées restent en place. Les coordonnées du repère viennent de l’établissement indiqué par le propriétaire, distinctes du centre de l’iframe Google.
 
-Le zoom va de 1 à 6. Le bouton de déplacement active le glissement ; les flèches du clavier fonctionnent lorsque la carte a le focus. Le bouton de recentrage rétablit la composition initiale. Le défilement normal et le zoom à deux doigts du navigateur restent autorisés hors du mode déplacement. L’itinéraire ouvre Google Maps ; la carte locale ne calcule pas de trajet.
+Le premier contrôle ci-dessous portait sur un zoom de 1 à 6. Le correctif suivant étend le rapprochement à 16 et permet de dézoomer depuis le cadrage initial jusqu’aux limites des données. Le bouton de déplacement active le glissement ; les flèches du clavier fonctionnent lorsque la carte a le focus. Le bouton de recentrage rétablit la composition initiale. Le défilement normal et le zoom à deux doigts du navigateur restent autorisés hors du mode déplacement. L’itinéraire ouvre Google Maps ; la carte locale ne calcule pas de trajet.
 
 Les rues et la côte sont servies avec le site, sans requête vers un service cartographique pendant la consultation. L’attribution OSM est visible et l’extrait dérivé est téléchargeable sous ODbL. La page showroom garde sa carte Google facultative, chargée uniquement à la demande. Voir [les sources et la méthode](geographic-map.md).
 

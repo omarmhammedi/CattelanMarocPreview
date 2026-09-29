@@ -50,6 +50,8 @@ Après les migrations 0003 et 0004, `node tests/published-content-browser.mjs` v
 
 Le cycle brouillon, aperçu signé, publication et effacement des champs relève de `tests/showroom-location-cms.mjs` pour la migration 0005 et de `tests/geographic-showroom-cms.mjs` pour les coordonnées de la migration 0006, **uniquement dans l’environnement jetable** décrit dans le guide de développement.
 
+`node tests/geographic-map-interaction-browser.mjs` contrôle aussi les clics sur `+` et `−` après défilement partiel de la carte, les limites du zoom, les noms de rues, les taps mobiles et l’affichage dans une iframe. Il accepte `PUBLIC_TEST_ENGINE=chromium` ou `webkit` et `PUBLIC_TEST_THEME=dark` ou `light`. Voir [le correctif des commandes et ses captures](docs/test-results-map-controls.md).
+
 ## Guides
 
 - [Développement et Codespaces](docs/development.md)
