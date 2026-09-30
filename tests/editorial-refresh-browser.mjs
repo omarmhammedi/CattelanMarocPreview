@@ -277,7 +277,7 @@ async function verifyContent(browser) {
       await exact(page, home, `${desktop} > .txt:not(.showroom-invitation)`, section.text ? [section.text] : [], section.section_key);
     }
     await exact(page, home, '#italie .cap', [homeEntry.after.brand_caption]);
-    await exact(page, home, '#plan .note, #m-plan > .legal', []);
+    await exact(page, home, '#plan .note', []);
     const showroom = await markup('/showroom-casablanca/');
     const showroomSections = pageEntries.find(entry => entry.slug === 'showroom-casablanca').after.sections;
     const showroomContactNotes = showroomSections.filter(section => section.section_key === 'contact_note');

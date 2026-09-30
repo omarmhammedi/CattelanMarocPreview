@@ -201,16 +201,16 @@ async function normalMotionCase(browser, viewport) {
     if (!expectedBrandImages) await brandReference(page);
     assert.equal(await page.locator('iframe').count(), 0, 'Homepage does not embed Google Maps.');
     assert(await page.locator(`a[href="${expectedPhone}"]`).count() >= 1, 'Owner-provided phone remains in the homepage footer.');
-    const brand = desktop ? '#italie' : '#m-italie';
-    const showroom = desktop ? '#showroom' : '#m-showroom';
-    const plan = desktop ? '#plan' : '#m-plan';
-    const brandMain = desktop ? '#italie .p1 img' : '#m-italie .m-brand-image img';
+    const brand = '#italie';
+    const showroom = '#showroom';
+    const plan = '#plan';
+    const brandMain = '#italie .p1 img';
     await imageDecoded(page.locator(brandMain), expectedBrandImages.main, /Skorpio/iu);
     if (desktop) await imageDecoded(page.locator('#italie .p2 img'), expectedBrandImages.detail, /Skorpio/iu);
-    const photo = await imageDecoded(page.locator(`${showroom} ${desktop ? '.img' : '.m-showroom-image'} img`), showroomImage, /(?:showroom|magasin).*(?:Casablanca)|Casablanca.*(?:showroom|magasin)/iu);
+    const photo = await imageDecoded(page.locator(`${showroom} .showroom-photo > img`), showroomImage, /(?:showroom|magasin).*(?:Casablanca)|Casablanca.*(?:showroom|magasin)/iu);
     showroomImage ||= photo;
     assert(!Object.values(expectedBrandImages).includes(photo), 'Showroom uses a real store photo, distinct from the product photos.');
-    const copy = page.locator(desktop ? '#showroom .info' : '#m-showroom');
+    const copy = page.locator('#showroom .info');
     await showroomFacts(copy);
     assert.equal(await copy.locator('dl, .facts').count(), 0, 'Homepage scene no longer repeats practical contact details.');
     assert.equal(await copy.locator('a').count(), 1, 'One clear next step in the homepage showroom scene.');
@@ -239,7 +239,7 @@ async function normalMotionCase(browser, viewport) {
     } else {
       await scrollToContent(page, brand);
       await capture(page, 'home-brand', viewport);
-      await scrollToContent(page, '#m-italie .m-brand-image');
+      await scrollToContent(page, '#italie .p1');
       const before = await page.locator(brandMain).evaluate(image => image.style.transform);
       await page.evaluate(() => scrollBy({ top: 70, behavior: 'instant' }));
       await page.waitForTimeout(200);
@@ -327,11 +327,11 @@ async function reducedMotionCase(browser, viewport) {
       assert.equal(await page.locator('#showroom .pin').evaluate(el => getComputedStyle(el).position), 'relative');
       assert.equal(await page.locator('#showroom .info').evaluate(el => Number(getComputedStyle(el).opacity)), 1);
     }
-    const section = desktop ? '#showroom' : '#m-showroom';
+    const section = '#showroom';
     await scrollToContent(page, section);
     await showroomFacts(page.locator(section));
     assert.equal(await page.locator(`${section} a[inert]`).count(), 0);
-    if (!desktop) assert.equal(await page.locator('#m-showroom .mimg img').evaluate(image => image.style.transform), '');
+    if (!desktop) assert.equal(await page.locator('#showroom .showroom-photo > img').evaluate(image => image.style.transform), '');
     await noOverflow(page, 'Reduced-motion homepage');
     await open(page, '/showroom-casablanca/');
     await scrollToContent(page, '#showroom-contact');

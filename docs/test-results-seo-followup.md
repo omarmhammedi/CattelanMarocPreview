@@ -32,6 +32,8 @@ La comparaison locale utilise le contenu 0010 inchangé : 36 positions à 1440 �
 
 Le contrôle Astro termine avec zéro erreur et zéro avertissement sur 132 fichiers. Deux suggestions TypeScript portent uniquement sur un script de diagnostic temporaire ignoré par Git. La compilation réussit en 32,98 s, avec l’avertissement existant de taille de chunk. La cible Cloudflare est contrôlée avant un dry-run réussi, puis déployée sous la version `220432fc-d357-4877-807b-48b7abb9a3fa`, dans les ressources dédiées existantes.
 
+Les anciens tests CMS/showroom utilisent aussi les nouveaux sélecteurs communs. Le test showroom local repasse ses quinze contrôles dans chacun des deux moteurs, sur mobile et ordinateur, avec mouvement normal/réduit et navigation. Le test CMS complet d’inscription n’est pas relancé : les quatre groupes isolés de champs de l’accueil couvrent ces comportements sans nouvelle authentification.
+
 ## Vérifications de la version publiée
 
 - Les 28 routes publiques répondent 200, avec les textes attendus, un seul H1 par page et les métadonnées contrôlées ; les 199 liens internes vérifiés répondent 200 et leurs ancres existent.

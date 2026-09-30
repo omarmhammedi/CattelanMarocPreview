@@ -347,26 +347,30 @@ async function checkEditableFields(pages, home, post) {
   }
 
   await checkFields({
-    collection: 'pages', entry: home, route: '/', label: 'Accueil ordinateur/mobile : CTA des sections et sections ajoutées',
+    collection: 'pages', entry: home, route: '/', label: 'Accueil responsive : CTA des sections et sections ajoutées',
     mutate: (data, marker) => ({ ...data, content: paragraph(`${marker}-body`), sections: [
       ...data.sections.map((section) => ({ ...section, cta_label: `${marker}-${section.section_key}`, cta_href: `/collections/?cms-integration=${section.section_key}`, image: { ...imageFixture, alt: `${marker}-${section.section_key}-image` } })),
       { section_key: 'integration-extra', heading: `${marker}-extra`, text: `${marker}-text`, cta_label: `${marker}-button`, cta_href: '/collections/?cms-integration=extra' },
     ] }),
     verify: async (html, marker) => {
       const sections = [
-        ['brand', 'italie', '.p1 img', '.m-brand-image img'],
-        ['collections', 'collections', '.intro .section-image', '.m-section-image img'],
-        ['showroom', 'showroom', '.ph.img img', '.m-showroom-image img'],
-        ['catalogue', 'catalogue', '.book .pic', '.m-section-image img'],
-        ['journal', 'journal', '.journal-section-image', '.m-section-image img'],
+        ['brand', 'italie', '.p1[data-mobile-frame] > img'],
+        ['collections', 'collections', '.section-image-frame > img.section-image'],
+        ['showroom', 'showroom', '.showroom-photo > img'],
+        ['catalogue', 'catalogue', '.book .cv > img.pic'],
+        ['journal', 'journal', '.journal-section-frame > img.journal-section-image'],
       ];
-      for (const [key, id, desktopImage, mobileImage] of sections) {
-        for (const [section, imageSelector] of [[`.desk #${id}`, desktopImage], [`.mob #m-${id}`, mobileImage]]) {
-          await includesAt(html, `${section} a[href="/collections/?cms-integration=${key}"]`, `${marker}-${key}`);
-          await imageAt(html, `${section} ${imageSelector}`, imageSource);
-          // The desktop catalogue book is decorative (aria-hidden, empty alt).
-          if (!(key === 'catalogue' && section.startsWith('.desk'))) await includesAt(html, `${section} ${imageSelector}`, `${marker}-${key}-image`, 'alt');
-        }
+      for (const [key, id, imageSelector] of sections) {
+        const section = `main.home .home-sections > section#${id}`;
+        const cta = `${section} a[href="/collections/?cms-integration=${key}"]`;
+        assert.equal((await inspect(html, `#${id}`)).length, 1, `Expected one responsive ${id} section.`);
+        assert.equal((await inspect(html, section)).length, 1, `Expected ${id} in the shared editorial tree.`);
+        assert.equal((await inspect(html, cta)).length, 1, `Expected one editable CTA in ${id}.`);
+        await includesAt(html, cta, `${marker}-${key}`);
+        await imageAt(html, `${section} ${imageSelector}`, imageSource);
+        // A CMS section image retains its semantic alt, including the catalogue cover.
+        await includesAt(html, `${section} ${imageSelector}`, `${marker}-${key}-image`, 'alt');
+        assert.equal((await inspect(html, `main img[alt="${marker}-${key}-image"]`)).length, 1, `Expected one responsive ${id} image.`);
       }
       await includesAt(html, 'main', `${marker}-body`);
       await includesAt(html, 'main', `${marker}-extra`);
@@ -376,7 +380,7 @@ async function checkEditableFields(pages, home, post) {
     verifyCleared: async (html) => {
       assert.equal((await inspect(html, 'main a[href*="cms-integration="]')).length, 0);
       for (const id of ['italie', 'collections', 'showroom', 'catalogue', 'journal']) {
-        assert.equal((await inspect(html, `.desk #${id}, .mob #m-${id}`)).length, 0, `Cleared ${id} section must disappear from desktop and mobile markup.`);
+        assert.equal((await inspect(html, `main #${id}`)).length, 0, `Cleared ${id} section must disappear from the shared responsive markup.`);
       }
       assert.equal((await inspect(html, 'main .home-editorial')).length, 0);
     },

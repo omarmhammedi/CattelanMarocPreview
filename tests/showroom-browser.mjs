@@ -52,7 +52,7 @@ for (const [engine, launcher] of Object.entries(engines)) {
       assert.equal(mapRequests.length, 0, 'Homepage must not load Google Maps');
       assert.equal(await page.locator('iframe').count(), 0);
       assert.equal(await page.locator('.ft a[href="tel:+212771105490"]').count(), 1, 'Homepage phone stays in practical footer contacts');
-      const plan = page.locator(width > 820 ? '#plan' : '#m-plan');
+      const plan = page.locator('#plan');
       const directions = new URL(await plan.getByRole('link', { name: 'Itinéraire', exact: true }).getAttribute('href'));
       assert.equal(directions.searchParams.get('destination_place_id'), 'ChIJnXzIEVjTpw0RXul0XQgeEHw');
       assert.equal(directions.pathname, '/maps/dir/');
