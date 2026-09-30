@@ -2,18 +2,31 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { parseArgs } from 'node:util';
 import { unstable_readConfig } from 'wrangler';
 
-const ACCOUNT_ID = '8b8bdf3e76e55a18b03f4043effaf7c8';
 const WORKER = 'cattelan-maroc-preview';
-const ORIGIN = 'https://cattelan-maroc-preview.omar-8b8.workers.dev';
-const DATABASE_ID = 'ca2a675f-d0c6-4f12-b356-423c0018ad80';
-const SESSION_NAMESPACE_ID = 'c5b29de1d2384476a027c6a22272bf48';
+const TARGETS = {
+  cattelan: {
+    accountId: '8b8bdf3e76e55a18b03f4043effaf7c8',
+    origin: 'https://cattelan-maroc-preview.omar-8b8.workers.dev',
+    databaseId: 'ca2a675f-d0c6-4f12-b356-423c0018ad80',
+    sessionNamespaceId: 'c5b29de1d2384476a027c6a22272bf48',
+  },
+  'cattelan-client': {
+    accountId: 'dba3e3d7b3e2bfbdcca8acf3667916f6',
+    origin: 'https://cattelan-maroc-preview.cattelan.workers.dev',
+    databaseId: 'c636dd25-e3b1-4f1d-bc8c-e294ec20717e',
+    sessionNamespaceId: '29a57d89be95411a962f810e0dbb74ac',
+  },
+};
 const ALLOWED_VARS = ['EMDASH_PREVIEW_PATH_PATTERN', 'EMDASH_SITE_URL', 'SITE_INDEXABLE'];
 const resource = (items, fields) => (items || []).map((item) => Object.fromEntries(fields.map((key) => [key, item[key]])));
 
 // This is a read-only checkpoint. It does not authenticate, create resources or deploy.
-export function validateCloudflareTarget(source, built, processEnvironment = {}) {
+export function validateCloudflareTarget(source, built, processEnvironment = {}, environment = 'cattelan') {
+  assert.ok(Object.hasOwn(TARGETS, environment), 'Unapproved Cloudflare environment');
+  const { accountId: ACCOUNT_ID, origin: ORIGIN, databaseId: DATABASE_ID, sessionNamespaceId: SESSION_NAMESPACE_ID } = TARGETS[environment];
   for (const key of ['CLOUDFLARE_ACCOUNT_ID', 'CF_ACCOUNT_ID']) {
     assert.ok(!processEnvironment[key] || processEnvironment[key] === ACCOUNT_ID, `${key} overrides the approved account`);
   }
@@ -70,10 +83,12 @@ export function validateCloudflareTarget(source, built, processEnvironment = {})
 
 if (import.meta.url === pathToFileURL(resolve(process.argv[1] || '')).href) {
   try {
-    assert.ok(process.argv.length <= 3, 'Usage: node scripts/check-cloudflare-target.mjs [built-wrangler.json]');
-    const source = unstable_readConfig({ config: 'wrangler.jsonc', env: 'cattelan' }, { hideWarnings: true });
-    const built = JSON.parse(await readFile(process.argv[2] || 'dist/server/wrangler.json', 'utf8'));
-    console.log(JSON.stringify({ ok: true, ...validateCloudflareTarget(source, built, process.env) }, null, 2));
+    const { values, positionals } = parseArgs({ options: { env: { type: 'string', default: 'cattelan' } }, allowPositionals: true });
+    assert.ok(positionals.length <= 1, 'Usage: node scripts/check-cloudflare-target.mjs [built-wrangler.json] [--env cattelan|cattelan-client]');
+    assert.ok(Object.hasOwn(TARGETS, values.env), 'Unapproved Cloudflare environment');
+    const source = unstable_readConfig({ config: 'wrangler.jsonc', env: values.env }, { hideWarnings: true });
+    const built = JSON.parse(await readFile(positionals[0] || 'dist/server/wrangler.json', 'utf8'));
+    console.log(JSON.stringify({ ok: true, environment: values.env, ...validateCloudflareTarget(source, built, process.env, values.env) }, null, 2));
   } catch (error) {
     console.error(`Cloudflare deployment target check failed: ${error.message}`);
     process.exitCode = 1;

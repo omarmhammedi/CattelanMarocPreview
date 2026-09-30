@@ -7,11 +7,25 @@ import {
   type Catalogue, type Lead,
 } from "./core.ts";
 
+import { catalogueEmail, dispatchCatalogueEmail } from "./email.ts";
+
 const PLUGIN_ID = "catalogue-leads";
 const PREFIX = `/_emdash/api/plugins/${PLUGIN_ID}`;
 const MAX_PDF_BYTES = 8 * 1024 * 1024;
 const PRIVATE_KEY = /^catalogues\/[a-zA-Z0-9_-]+\.pdf$/u;
 
+function emailSettings() {
+  const values = env as unknown as { RESEND_API_KEY?: string; EMDASH_SITE_URL?: string };
+  return values.RESEND_API_KEY && values.EMDASH_SITE_URL ? { origin: values.EMDASH_SITE_URL } : null;
+}
+async function sendCatalogue(ctx: PluginContext, id: string) {
+  const settings = emailSettings();
+  if (!settings) return 'skipped';
+  return dispatchCatalogueEmail(leads(ctx), id, async lead => {
+    if (!ctx.email) throw new Error('Email provider unavailable');
+    await ctx.email.send(await catalogueEmail(lead, settings.origin, bindings().secret));
+  });
+}
 function bindings() {
   const values = env as unknown as { CATALOGUES?: R2Bucket; CATALOGUE_TOKEN_SECRET?: string };
   if (!values.CATALOGUES || !values.CATALOGUE_TOKEN_SECRET || values.CATALOGUE_TOKEN_SECRET.length < 32) {
@@ -33,6 +47,7 @@ function publicLead(lead: Lead) {
     createdAt: lead.createdAt, communicationsConsent: lead.communicationsConsent,
     consentVersion: lead.consentVersion, sourcePath: lead.sourcePath,
     catalogueTitle: lead.catalogue.title, placeholder: lead.catalogue.placeholder,
+    emailStatus: lead.emailStatus, emailSentAt: lead.emailSentAt,
     crmStatus: lead.crmStatus, crmAttempts: lead.crmAttempts, crmLastError: lead.crmLastError,
   };
 }
@@ -53,7 +68,7 @@ async function publishedCatalogue(id: string): Promise<Catalogue> {
   };
 }
 
-async function rateLimit(ctx: PluginContext, identity: string, secret: string): Promise<boolean> {
+async function rateLimit(ctx: PluginContext, identity: string, secret: string, limit = 30): Promise<boolean> {
   const now = Date.now();
   const hour = Math.floor(now / 3_600_000);
   const hash = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(`${secret}:${identity}:${hour}`));
@@ -61,7 +76,7 @@ async function rateLimit(ctx: PluginContext, identity: string, secret: string): 
   const store = ctx.storage.rates as StorageCollection<{ count: number; expiresAt: number }>;
   for (let attempt = 0; attempt < 5; attempt++) {
     const current = await store.getVersioned(id);
-    if ((current?.value.count ?? 0) >= 30) return false;
+    if ((current?.value.count ?? 0) >= limit) return false;
     const write = await store.compareAndSet(id, current?.revision ?? null, {
       count: (current?.value.count ?? 0) + 1,
       expiresAt: (hour + 2) * 3_600_000,
@@ -82,6 +97,12 @@ export async function processPending(ctx: PluginContext) {
       if (await dispatchLead(store, item.id, mockCrm, now) !== "skipped") processed++;
     }
   }
+  if (emailSettings()) {
+    for (const emailStatus of ['pending', 'processing'] as const) {
+      const page = await store.query({ where: { emailStatus, emailNextAttemptAt: { lte: now } }, orderBy: { emailNextAttemptAt: 'asc' }, limit: 5 });
+      for (const item of page.items) await sendCatalogue(ctx, item.id);
+    }
+  }
   const expired = await ctx.storage.rates.query({ where: { expiresAt: { lt: now } }, limit: 100 });
   if (expired.items.length) await ctx.storage.rates.deleteMany(expired.items.map((item) => item.id));
   return { processed, mode: "mock", message: "Aucune donnée n’a été envoyée à un CRM externe." };
@@ -91,9 +112,9 @@ export function createPlugin() {
   return definePlugin({
     id: PLUGIN_ID,
     version: "0.1.0",
-    capabilities: ["content:read"],
+    capabilities: ["content:read", "email:send"],
     storage: {
-      leads: { indexes: ["createdAt", "email", "crmStatus", "crmNextAttemptAt", ["crmStatus", "crmNextAttemptAt"]] },
+      leads: { indexes: ["createdAt", "email", "crmStatus", "crmNextAttemptAt", ["crmStatus", "crmNextAttemptAt"], "emailStatus", "emailNextAttemptAt", ["emailStatus", "emailNextAttemptAt"]] },
       rates: { indexes: ["expiresAt"] },
     },
     admin: {
@@ -131,12 +152,23 @@ export function createPlugin() {
             if (!object || object.size > MAX_PDF_BYTES) {
               return { ok: false, code: "CATALOGUE_UNAVAILABLE", message: "Le catalogue est momentanément indisponible. Veuillez réessayer plus tard." };
             }
-            const lead = await persistRequest(leads(ctx), input, catalogue);
+            const emailEnabled = Boolean(emailSettings());
+            if (!saved && emailEnabled && !await rateLimit(ctx, `email:${input.email}`, secret, 3)) {
+              return { ok: false, code: "RATE_LIMITED", message: "Trop de demandes pour cette adresse. Veuillez réessayer plus tard." };
+            }
+            const lead = await persistRequest(leads(ctx), input, catalogue, Date.now(), emailEnabled);
+            // A failed provider leaves a durable retry; the on-page PDF stays available.
+            let emailStatus: string | undefined;
+            if (emailEnabled) {
+              try { await sendCatalogue(ctx, lead.requestId); } catch { /* Retry is already durable. */ }
+              emailStatus = (await leads(ctx).get(lead.requestId))?.emailStatus;
+            }
             // The URL is minted only after the durable lead + event write succeeds.
             const token = await signDownload(lead.requestId, secret);
             return {
               ok: true,
               downloadUrl: `${PREFIX}/download?token=${encodeURIComponent(token)}`,
+              emailStatus,
               placeholder: lead.catalogue.placeholder,
               message: "Votre demande est enregistrée. Le catalogue est prêt à être téléchargé.",
             };

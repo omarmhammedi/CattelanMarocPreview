@@ -6,8 +6,8 @@ import { validateCloudflareTarget } from '../scripts/check-cloudflare-target.mjs
 
 // Read the actual source environment; no build, credentials or remote calls.
 const config = fileURLToPath(new URL('../wrangler.jsonc', import.meta.url));
-const approved = unstable_readConfig({ config, env: 'cattelan' }, { hideWarnings: true });
-function fixture() {
+function fixture(environment = 'cattelan') {
+  const approved = unstable_readConfig({ config, env: environment }, { hideWarnings: true });
   return {
     source: structuredClone(approved),
     built: {
@@ -69,4 +69,45 @@ test('a stale build targeting another Worker is rejected even when the source is
   const { source, built } = fixture();
   built.name = 'another-site';
   assert.throws(() => validateCloudflareTarget(source, built), /built configuration: wrong Worker/);
+});
+
+test('the dedicated client account can deploy only with its explicit environment', () => {
+  const { source, built } = fixture('cattelan-client');
+  const result = validateCloudflareTarget(source, built, {}, 'cattelan-client');
+  assert.equal(result.accountId, 'dba3e3d7b3e2bfbdcca8acf3667916f6');
+  assert.equal(result.origin, 'https://cattelan-maroc-preview.cattelan.workers.dev');
+  assert.throws(() => validateCloudflareTarget(source, built), /wrong account/);
+  const old = fixture();
+  assert.throws(() => validateCloudflareTarget(old.source, old.built, {}, 'cattelan-client'), /wrong account/);
+});
+
+for (const [name, alter, expectedError] of unsafeTargets) {
+  test(`the client environment rejects ${name}`, () => {
+    const { source, built } = fixture('cattelan-client');
+    alter(source);
+    alter(built);
+    assert.throws(() => validateCloudflareTarget(source, built, {}, 'cattelan-client'), expectedError);
+  });
+}
+
+test('client deployment rejects resource IDs copied from the original account', () => {
+  const old = fixture();
+  for (const [binding, expectedError] of [['d1_databases', /unapproved D1 resource/], ['kv_namespaces', /unapproved session namespace/]]) {
+    const { source, built } = fixture('cattelan-client');
+    source[binding] = structuredClone(old.source[binding]);
+    built[binding] = structuredClone(old.built[binding]);
+    assert.throws(() => validateCloudflareTarget(source, built, {}, 'cattelan-client'), expectedError);
+  }
+});
+
+test('unknown environments and account overrides cannot redirect a client deployment', () => {
+  const { source, built } = fixture('cattelan-client');
+  for (const environment of ['unknown', '__proto__']) {
+    assert.throws(() => validateCloudflareTarget(source, built, {}, environment), /Unapproved Cloudflare environment/);
+  }
+  for (const variable of ['CLOUDFLARE_ACCOUNT_ID', 'CF_ACCOUNT_ID']) {
+    assert.throws(() => validateCloudflareTarget(source, built, {
+      [variable]: '8b8bdf3e76e55a18b03f4043effaf7c8',
+    }, 'cattelan-client'), /overrides the approved account/);
+  }
 });

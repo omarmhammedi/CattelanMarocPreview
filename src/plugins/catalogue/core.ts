@@ -1,5 +1,6 @@
 /** Pure domain logic. EmDash supplies the durable CAS storage adapter at runtime. */
 export const DOWNLOAD_LIFETIME_MS = 15 * 60_000;
+export const EMAIL_DOWNLOAD_LIFETIME_MS = 24 * 60 * 60_000;
 export const LEASE_MS = 60_000;
 export const CONSENT_VERSION = "catalogue-fr-v1";
 
@@ -18,6 +19,12 @@ export type Catalogue = {
   placeholder: boolean;
 };
 export type Lead = RequestInput & {
+  emailStatus?: "pending" | "processing" | "sent" | "failed";
+  emailAttempts?: number;
+  emailNextAttemptAt?: number;
+  emailLeaseUntil?: number;
+  emailLeaseId?: string | null;
+  emailSentAt?: number | null;
   schemaVersion: 1;
   createdAt: number;
   consentVersion: string;
@@ -105,7 +112,7 @@ export function validateInput(value: unknown): RequestInput {
 }
 
 /** Lead and outbox state are one value: a crash cannot leave a lead without its pending event. */
-export async function persistRequest(store: AtomicStore<Lead>, input: RequestInput, catalogue: Catalogue, now = Date.now()): Promise<Lead> {
+export async function persistRequest(store: AtomicStore<Lead>, input: RequestInput, catalogue: Catalogue, now = Date.now(), emailEnabled = false): Promise<Lead> {
   for (let attempt = 0; attempt < 4; attempt++) {
     const existing = await store.getVersioned(input.requestId);
     if (existing) {
@@ -117,6 +124,8 @@ export async function persistRequest(store: AtomicStore<Lead>, input: RequestInp
     }
     const lead: Lead = {
       ...input,
+      ...(emailEnabled ? { emailStatus: "pending" as const, emailAttempts: 0, emailNextAttemptAt: now,
+        emailLeaseUntil: 0, emailLeaseId: null, emailSentAt: null } : {}),
       schemaVersion: 1,
       createdAt: now,
       consentVersion: CONSENT_VERSION,
@@ -189,8 +198,11 @@ async function signingKey(secret: string): Promise<CryptoKey> {
   if (secret.length < 32) throw new Error("Le téléchargement est temporairement indisponible.");
   return crypto.subtle.importKey("raw", new TextEncoder().encode(secret), { name: "HMAC", hash: "SHA-256" }, false, ["sign", "verify"]);
 }
-export async function signDownload(id: string, secret: string, now = Date.now()): Promise<string> {
-  const payload = encode(new TextEncoder().encode(JSON.stringify({ id, expires: now + DOWNLOAD_LIFETIME_MS })));
+export async function signDownload(id: string, secret: string, now = Date.now(), purpose: "web" | "email" = "web"): Promise<string> {
+  const payload = encode(new TextEncoder().encode(JSON.stringify({ id,
+    expires: now + (purpose === "email" ? EMAIL_DOWNLOAD_LIFETIME_MS : DOWNLOAD_LIFETIME_MS),
+    ...(purpose === "email" ? { purpose } : {}),
+  })));
   const signature = await crypto.subtle.sign("HMAC", await signingKey(secret), new TextEncoder().encode(payload));
   return `${payload}.${encode(new Uint8Array(signature))}`;
 }
@@ -201,7 +213,7 @@ export async function verifyDownload(token: unknown, secret: string, now = Date.
     if (!payload || !signature || extra || !/^[a-zA-Z0-9_-]+$/u.test(payload + signature)) return null;
     if (!await crypto.subtle.verify("HMAC", await signingKey(secret), decode(signature), new TextEncoder().encode(payload))) return null;
     const data = JSON.parse(new TextDecoder().decode(decode(payload)));
-    if (typeof data.id !== "string" || !Number.isFinite(data.expires) || data.expires <= now || data.expires > now + DOWNLOAD_LIFETIME_MS) return null;
+    if (typeof data.id !== "string" || !Number.isFinite(data.expires) || data.expires <= now || data.expires > now + (data.purpose === "email" ? EMAIL_DOWNLOAD_LIFETIME_MS : DOWNLOAD_LIFETIME_MS)) return null;
     return data.id;
   } catch { return null; }
 }

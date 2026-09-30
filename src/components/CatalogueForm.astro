@@ -24,8 +24,9 @@ const contactLabel = site.labels.contact || 'Coordonnées du showroom';
   </div>
   <div class="form-trap" aria-hidden="true"><label for={`${id}-website`}>Site web</label><input id={`${id}-website`} name="website" tabindex="-1" autocomplete="off" /></div>
   <label class="form-consent"><input type="checkbox" name="communicationsConsent" value="yes" /><span>{labels.consent}</span></label>
+  {import.meta.env.CATTELAN_EMAIL_ENABLED && <p class="form-note">Le catalogue vous sera aussi envoyé par e-mail.</p>}
   {labels.note && <p class="form-note">{labels.note}</p>}
-  <p class="form-privacy">{labels.privacy} <a href="/confidentialite/">Confidentialité</a></p>
+  <p class="form-privacy">{import.meta.env.CATTELAN_EMAIL_ENABLED ? "Utilisez une adresse e-mail que vous contrôlez. Vos coordonnées permettent de traiter votre demande de catalogue." : labels.privacy} <a href="/confidentialite/">Confidentialité</a></p>
   <button class="btn solid" type="submit">{labels.submit} <span aria-hidden="true">↗</span></button>
   <div class="form-message" role="status" aria-live="polite" tabindex="-1"></div>
 </form> : <div class="catalogue-unavailable" role="status"><p>{labels.unavailable}</p><a class="text-link" href="/showroom-casablanca/#showroom-contact">{contactLabel}</a></div>}
@@ -74,7 +75,7 @@ const contactLabel = site.labels.contact || 'Coordonnées du showroom';
       message.textContent = form.dataset.pending || '';
       try {
         const response = await fetch('/_emdash/api/plugins/catalogue-leads/request', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-EmDash-Request': '1' }, body: JSON.stringify({ ...payload, requestId }) });
-        const envelope = await response.json() as { success?: boolean; data?: { ok?: boolean; downloadUrl?: string; code?: string; message?: string } };
+        const envelope = await response.json() as { success?: boolean; data?: { ok?: boolean; downloadUrl?: string; code?: string; message?: string; emailStatus?: string } };
         const result = envelope.data;
         if (!response.ok || !envelope.success) throw new Error('request_failed');
         if (!result?.ok || !result.downloadUrl) {
@@ -94,6 +95,14 @@ const contactLabel = site.labels.contact || 'Coordonnées du showroom';
         message.appendChild(title);
         message.appendChild(text);
         message.appendChild(link);
+        if (result.emailStatus) {
+          const emailNote = document.createElement('p');
+          emailNote.textContent = result.emailStatus === 'sent'
+            ? 'Un e-mail contenant le catalogue vous a été envoyé. Son lien est valable 24 heures.'
+            : result.emailStatus === 'failed' ? 'L’e-mail n’a pas pu être envoyé. Vous pouvez télécharger le PDF ci-dessus.'
+            : 'L’envoi du catalogue par e-mail est en cours. Vous pouvez déjà télécharger le PDF ci-dessus.';
+          message.appendChild(emailNote);
+        }
         message.focus();
       } catch { showFailure(form.dataset.error || ''); }
       finally { button.disabled = false; form.removeAttribute('aria-busy'); }

@@ -45,6 +45,52 @@
         "logs": { "enabled": true, "invocation_logs": false },
         "traces": { "enabled": true, "head_sampling_rate": 0 }
       }
+    },
+    "cattelan-client": {
+      "account_id": "dba3e3d7b3e2bfbdcca8acf3667916f6",
+      "name": "cattelan-maroc-preview",
+      "workers_dev": true,
+      "preview_urls": false,
+      "routes": [],
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "cattelan-maroc-preview",
+          "database_id": "c636dd25-e3b1-4f1d-bc8c-e294ec20717e"
+        }
+      ],
+      "r2_buckets": [
+        {
+          "binding": "MEDIA",
+          "bucket_name": "cattelan-maroc-media-preview"
+        },
+        {
+          "binding": "CATALOGUES",
+          "bucket_name": "cattelan-maroc-catalogues-preview"
+        }
+      ],
+      "kv_namespaces": [
+        {
+          "binding": "SESSION",
+          "id": "29a57d89be95411a962f810e0dbb74ac"
+        }
+      ],
+      "vars": {
+        "SITE_INDEXABLE": "false",
+        "EMDASH_PREVIEW_PATH_PATTERN": "/preview/{collection}/{id}/",
+        "EMDASH_SITE_URL": "https://cattelan-maroc-preview.cattelan.workers.dev"
+      },
+      "observability": {
+        "enabled": true,
+        "logs": {
+          "enabled": true,
+          "invocation_logs": false
+        },
+        "traces": {
+          "enabled": true,
+          "head_sampling_rate": 0
+        }
+      }
     }
   }
 }
