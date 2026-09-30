@@ -1,5 +1,7 @@
 # Déploiement Cloudflare de Cattelan
 
+Le compte client dédié est préparé dans l'environnement `cattelan-client` ; voir [le suivi du transfert](deployment-cloudflare-client.md). Le présent guide conserve les références du déploiement original, dans l'environnement `cattelan`.
+
 Le propriétaire a autorisé un déploiement séparé de Cattelan dans son compte Cloudflare existant. Les ressources de Civico et des autres sites ne font pas partie de cette opération. Le développement local conserve sa base, ses médias, ses secrets et son port privé 4321.
 
 Ce guide décrit la procédure de déploiement. Une compilation réussie ou un `--dry-run` ne prouve pas que le site a été publié : l'adresse effective et les vérifications distantes doivent figurer dans le rapport de mise en ligne.
@@ -38,7 +40,7 @@ npx wrangler deploy --config dist/server/wrangler.json --dry-run
 
 Le contrôle est strictement local et en lecture seule : il refuse un autre compte, des bindings différents, une route de domaine, des variables inattendues ou une compilation différente de l'environnement source. Il ne prouve pas à lui seul que les identifiants désignent de nouvelles ressources ; cette vérification nécessite les reçus de création et l'inventaire distant.
 
-Le déploiement utilise ensuite exactement cette configuration contrôlée. Ajouter `--env cattelan` uniquement au moment du déploiement ne corrigerait pas une compilation faite pour le mauvais environnement. Pour les mises à jour autorisées après le premier transfert, `npm run deploy:cattelan` enchaîne la compilation de cet environnement, le contrôle de cible et l'envoi du fichier généré. `npm run deploy` est un alias de cette commande protégée : il ne déploie jamais implicitement la configuration locale.
+Le déploiement utilise ensuite exactement cette configuration contrôlée. Ajouter `--env cattelan` uniquement au moment du déploiement ne corrigerait pas une compilation faite pour le mauvais environnement. Pour les mises à jour autorisées du compte original, `npm run deploy:cattelan` enchaîne la compilation de cet environnement, le contrôle de cible et l'envoi du fichier généré. `npm run deploy` cible désormais le compte client via `deploy:client` ; ces deux commandes ne déploient jamais implicitement la configuration locale.
 
 L'adaptateur Astro reste inchangé : il ajoute le binding `IMAGES`. Depuis la révision SEO 0011, les photographies et logos internes dont les dimensions sont connues utilisent le service natif EmDash `/_image` pour des variantes WebP adaptées à leur cadre. Les originaux R2 sont conservés ; les plans, PDF et nuanciers restent servis directement. Ce changement demande des transformations au service Images existant : il ne constitue pas une garantie de gratuité et n'active aucun abonnement ou changement de forfait. Le namespace `SESSION` est explicite pour éviter une création implicite imprévisible par l'adaptateur Astro.
 
