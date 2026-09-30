@@ -1,0 +1,94 @@
+---
+import '../styles/site.css';
+import '../styles/pages.css';
+import SeoHead from '../components/SeoHead.astro';
+import PageMenu from '../components/PageMenu.astro';
+import Brand from '../components/Brand.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+import type { BreadcrumbItem } from 'emdash';
+
+interface Props {
+  title: string;
+  description?: string;
+  site: any;
+  image?: any;
+  entry?: any;
+  breadcrumbs?: BreadcrumbItem[];
+}
+
+const { title, description, site, image, entry, breadcrumbs } = Astro.props;
+const path = Astro.url.pathname;
+const navigation = site.navigation || [];
+---
+<!doctype html>
+<html lang="fr" data-mode="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <SeoHead title={title} description={description} site={site} image={image} entry={entry} breadcrumbs={breadcrumbs} article={entry?._collection === 'posts'} />
+    <meta name="theme-color" content="#0E2028" />
+    <slot name="head" />
+  </head>
+  <body class="inner-page">
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+    <header class="page-header">
+      <Brand site={site} />
+      <nav class="page-desktop-nav" aria-label="Navigation principale">
+        <PageMenu items={navigation} path={path} />
+      </nav>
+      <div class="page-header-tools">
+        <details class="page-mobile-menu">
+          <summary aria-label="Ouvrir le menu"><span></span><span></span></summary>
+          <nav aria-label="Navigation mobile">
+            <PageMenu items={navigation} path={path} />
+          </nav>
+        </details>
+        <ThemeToggle />
+      </div>
+    </header>
+    <main id="main-content"><slot /></main>
+    <footer class="page-footer">
+      <div class="page-footer-intro">
+        <Brand site={site} />
+        {site.tagline && <p class="page-tagline">{site.tagline}</p>}
+        {site.footerText && <p>{site.footerText}</p>}
+      </div>
+      <nav aria-label="Navigation de pied de page">
+        <PageMenu items={navigation} />
+      </nav>
+      <div class="page-footer-contact">
+        <p>{site.city}</p>
+        {site.whatsappUrl && <a href={site.whatsappUrl} target="_blank" rel="noopener noreferrer">{site.labels.contact} · WhatsApp <span aria-hidden="true">↗</span></a>}
+        {site.phone && <a href={`tel:${site.phone.replace(/[^+\d]/g, '')}`}>{site.phone}</a>}
+        {site.publicEmail && <a class="public-email" href={`mailto:${site.publicEmail}`}>{site.publicEmail}</a>}
+      </div>
+      {site.previewNotice && <p class="page-preview-notice page-note">{site.previewNotice}</p>}
+      <div class="page-footer-bottom"><span>© {new Date().getFullYear()} {site.name}</span><a href="/confidentialite/">Confidentialité</a></div>
+    </footer>
+    <script>
+      const mobileMenu = document.querySelector<HTMLDetailsElement>('.page-mobile-menu');
+      mobileMenu?.addEventListener('toggle', () => {
+        mobileMenu.querySelector('summary')?.setAttribute('aria-label', mobileMenu.open ? 'Fermer le menu' : 'Ouvrir le menu');
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && mobileMenu?.open) {
+          mobileMenu.open = false;
+          mobileMenu.querySelector('summary')?.focus();
+        }
+      });
+      document.addEventListener('click', (event) => {
+        if (mobileMenu?.open && event.target instanceof Node && !mobileMenu.contains(event.target)) mobileMenu.open = false;
+      });
+      mobileMenu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => { mobileMenu.open = false; }));
+      const reveals = document.querySelectorAll<HTMLElement>('[data-page-reveal]');
+      if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        }), { threshold: 0.08 });
+        reveals.forEach((item) => { item.classList.add('will-reveal'); observer.observe(item); });
+      }
+    </script>
+  </body>
+</html>

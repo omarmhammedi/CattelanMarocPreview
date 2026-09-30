@@ -1,0 +1,36 @@
+---
+import { coverSizes, imageAttributes } from '../../lib/images';
+import EditorialSection from '../../components/EditorialSection.astro';
+import PageLayout from '../../layouts/PageLayout.astro';
+import { PortableText } from 'emdash/ui';
+import { getPage, getFamilies, getSite } from '../../lib/content';
+
+const [page, families, site] = await Promise.all([Astro.props.preloaded || getPage('collections'), getFamilies(), getSite()]);
+if (!page) return new Response('Page introuvable', { status: 404 });
+---
+<PageLayout title={page.seoTitle || page.title} description={page.description} site={site} image={page.image} entry={page.entry}>
+  <section class="page-intro page-gutter">
+    {page.eyebrow && <p class="kick">{page.eyebrow}</p>}
+    <h1 {...page.entry?.edit?.title}>{page.title}</h1>
+    {page.intro && <p class="page-lead" {...page.entry?.edit?.intro}>{page.intro}</p>}
+  </section>
+  {page.image && <figure class="page-gutter page-full-figure page-hero-figure" data-page-reveal><div class="page-image"><img {...imageAttributes(page.image, '100vw', 1600)} alt={page.image.alt || ''} fetchpriority="high" /></div></figure>}
+  <section class="families-grid page-gutter" aria-label="Univers de mobilier">
+    {families.map((family: any, index: number) => <a class="family-tile" href={`/collections/${family.slug}/`} data-page-reveal>
+      <div class="page-image family-tile-image">
+        {family.image && <img {...imageAttributes(family.image, coverSizes(family.image, 1/1.08, 1/1.08, 45), 1600)} alt={family.image.alt || family.shortTitle} loading={index < 2 ? 'eager' : 'lazy'} />}
+        <span class="tile-index">{String(index + 1).padStart(2, '0')}</span>
+        <span class="tile-arrow" aria-hidden="true">↗</span>
+      </div>
+      <h2>{family.shortTitle || family.title}</h2>
+      <p>{family.cardText || family.intro}</p>
+    </a>)}
+  </section>
+  {(page.body?.length > 0 || page.sections?.length > 0) && <section class="page-gutter page-editorial-section">
+    {page.body?.length > 0 && <div class="page-prose"><PortableText value={page.body} /></div>}
+    {page.sections?.map((section: any) => <EditorialSection section={section} />)}
+  </section>}
+  <section class="page-cta page-gutter" data-page-reveal>
+    <a class="btn" href="/catalogue/">{site.labels.catalogue}<span aria-hidden="true">↗</span></a>
+  </section>
+</PageLayout>

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "url": "https://maisonsdumaroc.com/architectures-et-design/cattelan-italia-ouvre-son-premier-flagship-store-au-maroc",
+      "title": "Cattelan Italia ouvre son premier flagship store au Maroc — Maisons du Maroc",
+      "supports": [
+        "Showroom de 400 m² au Triangle d’Or de Casablanca.",
+        "Compositions de salons, salles à manger et chambres.",
+        "Accompagnement sur les modèles, dimensions et revêtements pour particuliers, architectes et décorateurs."
+      ]
+    }
+  ],
+  "home": {
+    "section": {
+      "section_key": "showroom",
+      "heading": "Découvrez le showroom de Casablanca",
+      "display_heading": "Découvrez le showroom de Casablanca",
+      "text": "Au cœur du Triangle d’Or, notre showroom de 400 m² présente des compositions pour le salon, la salle à manger et la chambre. Découvrez les matières et les proportions des meubles en situation, puis échangez avec notre équipe sur les modèles, dimensions et revêtements adaptés à votre projet.",
+      "cta_label": "Découvrir le showroom",
+      "cta_href": "/showroom-casablanca/"
+    },
+    "showroom_invitation": ""
+  },
+  "showroom": {
+    "intro": "Au Triangle d’Or, 400 m² réunissent salons, salles à manger et chambres. Une visite permet d’apprécier les volumes, les matières et les associations de mobilier avant de préciser votre sélection.",
+    "sections": [
+      {
+        "section_key": "advice",
+        "heading": "Préciser votre choix avec l’équipe",
+        "text": "Particuliers, architectes et décorateurs peuvent échanger avec l’équipe sur les modèles, dimensions et revêtements adaptés à leur espace. Les possibilités se précisent selon les options proposées pour chaque meuble."
+      },
+      {
+        "section_key": "visit",
+        "heading": "Préparer votre visite",
+        "text": "Notez les références qui vous intéressent et contactez-nous pour vérifier les pièces exposées. Apportez les dimensions de votre pièce, quelques photos et, si vous en avez un, votre plan : ces repères faciliteront la discussion sur l’encombrement des meubles et leur place dans votre intérieur.",
+        "cta_label": "Contacter le showroom",
+        "cta_href": "#showroom-contact"
+      },
+      {
+        "section_key": "faq_1",
+        "heading": "Tous les modèles du site sont-ils exposés ?",
+        "text": "Les collections du site présentent une sélection de modèles, pas un inventaire du showroom. Appelez-nous avant de vous déplacer si vous souhaitez voir une référence précise."
+      },
+      {
+        "section_key": "faq_2",
+        "heading": "Comment connaître le prix et le délai d’un modèle ?",
+        "text": "Communiquez le nom du modèle, la dimension et la finition qui vous intéressent. L’équipe pourra vous renseigner sur cette configuration et sa disponibilité."
+      }
+    ],
+    "seo_title": "Showroom à Casablanca | Cattelan Italia Maroc",
+    "meta_description": "Visitez le showroom Cattelan Italia de 400 m² au Triangle d’Or, à Casablanca. Découvrez les ambiances et préparez votre visite : adresse, horaires et contact."
+  },
+  "editorial_notes": {
+    "scope": "Texte uniquement : les images seront affectées séparément dans le CMS. Le titre, l’eyebrow, le corps et les autres champs de chaque page restent conservés.",
+    "home": "Le texte approuvé remplace l’invitation générique. L’invitation secondaire est effacée pour ne pas répéter le même appel à la visite. La section conserve un seul CTA.",
+    "sections": "La section cities est remplacée par advice. visit, faq_1 et faq_2 conservent leur rôle ; faq_3 répétait la préparation de visite et faq_4 évoquait une livraison non confirmée. Les éventuelles clés natives _key des lignes conservées doivent être reprises depuis la réponse CMS lors de la construction de la migration.",
+    "contact": "Ne pas recopier le téléphone de l’article. Adresse, téléphone +212771105490, horaires et itinéraire restent lus dans site_content/global sans duplication éditoriale.",
+    "claims": "Aucune promesse de stock, d’exposition d’un modèle précis, de délai, de livraison ou de prestation de conception. Les faits issus de l’article sont paraphrasés et limités à la surface, la localisation, les ambiances et le conseil. Les conseils pour préparer la visite sont une rédaction pratique originale.",
+    "seo": "Une description locale utile, sans liste artificielle de villes. Le panneau SEO natif, vide dans l’état de départ, reste inchangé. Seuls les champs éditoriaux seo_title et meta_description reçoivent les valeurs approuvées ; une future valeur native conserve sa priorité habituelle."
+  }
+}

@@ -1,0 +1,41 @@
+<button class="theme-toggle" type="button" data-theme-toggle aria-label="Activer le thème clair" title="Activer le thème clair">
+  <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+  <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1a9 9 0 1 0 10 10Z"/></svg>
+</button>
+<script>
+  let disposeTheme: (() => void) | undefined;
+  function initializeTheme() {
+    disposeTheme?.();
+    const controller = new AbortController();
+    const buttons = document.querySelectorAll<HTMLButtonElement>('[data-theme-toggle]');
+    const setMode = (mode: string | undefined) => {
+      const value = mode === 'light' ? 'light' : 'dark';
+      document.documentElement.dataset.mode = value;
+      document.documentElement.classList.toggle('light', value === 'light');
+      document.documentElement.classList.toggle('dark', value === 'dark');
+      const label = value === 'light' ? 'Activer le thème sombre' : 'Activer le thème clair';
+      buttons.forEach(button => { button.setAttribute('aria-label', label); button.title = label; });
+    };
+    let saved = document.documentElement.dataset.mode;
+    try { saved = localStorage.getItem('ci-mode') || saved; } catch { /* Keep the current appearance. */ }
+    setMode(saved);
+    buttons.forEach(button => button.addEventListener('click', () => {
+      const next = document.documentElement.dataset.mode === 'light' ? 'dark' : 'light';
+      setMode(next);
+      try { localStorage.setItem('ci-mode', next); } catch { /* The switch also works without storage. */ }
+    }, { signal: controller.signal }));
+    disposeTheme = () => controller.abort();
+  }
+  initializeTheme();
+  document.addEventListener('astro:page-load', initializeTheme);
+  document.addEventListener('astro:before-swap', () => disposeTheme?.());
+  window.addEventListener('pageshow', event => { if (event.persisted) initializeTheme(); });
+</script>
+<style>
+  .theme-toggle { display: grid; place-items: center; flex: 0 0 44px; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; color: var(--ink); cursor: pointer; }
+  .theme-toggle svg { width: 18px; height: 18px; }
+  .theme-icon-moon { display: none; }
+  :global(html[data-mode="light"]) .theme-icon-sun { display: none; }
+  :global(html[data-mode="light"]) .theme-icon-moon { display: block; }
+  @media (hover: hover) { .theme-toggle:hover { color: var(--muted); } }
+</style>

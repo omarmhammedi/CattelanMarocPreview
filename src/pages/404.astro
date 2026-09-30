@@ -1,0 +1,6 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import {getSite} from '../lib/content';
+const site=await getSite();Astro.response.status=404;
+---
+<PageLayout title="Page introuvable" site={site}><section class="page-intro page-gutter"><p class="kick">404</p><h1>Cette page est introuvable.</h1><a class="btn" href="/">Revenir à l’accueil</a></section></PageLayout>

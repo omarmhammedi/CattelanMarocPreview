@@ -1,0 +1,16 @@
+---
+import { imageAttributes } from '../lib/images';
+interface Props { section: any; prominent?: boolean; showHeading?: boolean; }
+const { section, prominent = false, showHeading = true } = Astro.props;
+const heading = section.displayHeading || section.heading;
+const hasLink = Boolean(section.ctaLabel && section.ctaHref);
+const hasContent = Boolean((showHeading && heading) || section.text || section.image || hasLink);
+---
+{hasContent && <div class:list={['page-text-block', { 'editorial-prominent': prominent, 'editorial-with-image': !!section.image }]} data-page-reveal data-section-key={section.key}>
+  {section.image && <div class="page-image editorial-image"><img {...imageAttributes(section.image, '(max-width: 760px) 100vw, 65vw', 1600)} alt={section.image.alt || ''} loading="lazy" /></div>}
+  <div class="editorial-copy">
+    {showHeading && heading && <h2>{heading}</h2>}
+    {section.text && <p>{section.text}</p>}
+    {hasLink && <a class={prominent ? 'btn' : 'text-link'} href={section.ctaHref}>{section.ctaLabel}<span aria-hidden="true">↗</span></a>}
+  </div>
+</div>}

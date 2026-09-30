@@ -1,0 +1,23 @@
+---
+// The development preview can be inspected at desktop width on a phone.
+// Public production pages always keep their normal responsive viewport.
+const desktopPreview = import.meta.env.DEV && Astro.url.searchParams.get('view') === 'desktop';
+---
+<meta name="viewport" content={desktopPreview ? 'width=1280' : 'width=device-width, initial-scale=1'} />
+{import.meta.env.DEV && <script is:inline>
+  function applyPreviewViewport() {
+    const requested = new URL(location.href).searchParams.get('view');
+    let desktop = requested === 'desktop';
+    try {
+      if (requested === 'desktop') sessionStorage.setItem('ci-preview-view', 'desktop');
+      else if (requested === 'auto') sessionStorage.removeItem('ci-preview-view');
+      else desktop = sessionStorage.getItem('ci-preview-view') === 'desktop';
+    } catch { /* An explicit URL choice still works when storage is unavailable. */ }
+    document.querySelector('meta[name="viewport"]')?.setAttribute('content',
+      desktop ? 'width=1280' : 'width=device-width, initial-scale=1');
+  }
+  applyPreviewViewport();
+  window.addEventListener('pageshow', event => {
+    if (event.persisted) applyPreviewViewport();
+  });
+</script>}

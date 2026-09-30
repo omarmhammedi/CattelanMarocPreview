@@ -1,0 +1,1656 @@
+{
+  "version": 1,
+  "collection": "models",
+  "entries": [
+    {
+      "slug": "skorpio",
+      "sources": [
+        "https://www.cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8"
+      ],
+      "before": {
+        "description": "Un piètement géométrique et une famille de variantes, notamment en verre, en bois et en céramique, pour explorer différentes expressions d’une même table.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "skorpio-p1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "skorpio-s1",
+                "text": "Skorpio associe un piètement composé de lignes obliques à un plateau en verre qui laisse apparaître sa géométrie. Cette fiche concerne la version en verre ; les tables Wood, Marble, Keramik et Crystalart appartiennent à la même famille mais constituent des modèles distincts.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "skorpio-p2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "skorpio-s2",
+                "text": "La base est réalisée en acier. Les finitions proposées sont les laques gaufrées GFM11, GFM18, GFM69, GFM70 et GFM73, ainsi que Brushed Bronze et Brushed Grey. Les nuances et traces de brossage de ces deux dernières finitions varient avec le travail artisanal.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "skorpio-p3",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "skorpio-s3",
+                "text": "Le plateau repose sur le piètement. Le verre est proposé en clair, extra-clair, extra-clair à bords biseautés ou à biseau inversé, et en verre cuit MIST. Épaisseur annoncée : 15 mm, réduite à 12 mm pour les formats 160 × 90, 182 × 90 et 200 × 106 cm.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "description": "Une table en verre qui dévoile un piètement d’acier aux lignes croisées. Plateaux clairs, extra-clairs ou MIST, bords travaillés et bases laquées ou brossées composent les variantes de ce modèle.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "skorpio-editorial-1-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "skorpio-editorial-1-1-text",
+                "text": "Les bords et l’épaisseur du plateau",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "skorpio-editorial-1-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "skorpio-editorial-1-2-text",
+                "text": "Le choix de verre comprend le clair, l’extra-clair, les bords biseautés ou à biseau inversé et le verre cuit MIST. Le plateau repose sur la base. Son épaisseur est de 15 mm, sauf pour les formats 160 × 90, 182 × 90 et 200 × 106 cm, réalisés en 12 mm.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "skorpio-editorial-2-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "skorpio-editorial-2-1-text",
+                "text": "Les finitions du piètement",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "skorpio-editorial-2-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "skorpio-editorial-2-2-text",
+                "text": "L’acier se décline en titane GFM11, bronze GFM18, graphite GFM69, pearl GFM70 et noir GFM73 gaufrés, ou en Brushed Bronze et Brushed Grey. Les finitions brossées présentent des nuances et traces liées au travail artisanal. La transparence du plateau laisse apparaître ces surfaces et les croisements de la structure depuis le dessus.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "skorpio-editorial-3-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "skorpio-editorial-3-1-text",
+                "text": "Skorpio en verre et les autres versions",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "skorpio-editorial-3-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "skorpio-editorial-3-2-text",
+                "text": "Cette fiche concerne Skorpio en verre. Les modèles Skorpio Wood, Marble, Keramik et Crystalart appartiennent à la même famille, avec des plateaux et des caractéristiques distincts. Leurs matériaux ne sont pas des options interchangeables de la référence présentée.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "beforeSeo": {
+        "title": null,
+        "description": null
+      },
+      "afterSeo": {
+        "title": "Skorpio : table en verre | Cattelan Italia Maroc",
+        "description": "Table Skorpio en verre : base en acier, plateaux de 12 ou 15 mm selon le format, finitions, dimensions et fiche technique Cattelan Italia."
+      }
+    },
+    {
+      "slug": "napoleon-keramik",
+      "sources": [
+        "https://www.cattelanitalia.com/fr/products/DD24EC9D-FA00-4C0D-A989-9ADD6E56BFD0"
+      ],
+      "before": {
+        "description": "Un plateau et une base arrondie habillés de céramique, qui donnent à la table une présence continue dans la pièce.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "napoleon-keramik-p1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "napoleon-keramik-s1",
+                "text": "Napoleon Keramik réunit un plateau et une base centrale en céramique. Deux volumes symétriques composent le piètement, dont les surfaces arrondies sont interrompues par un creux vertical. Les différents formats permettent de choisir une table rectangulaire ou un contour plus enveloppant.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "napoleon-keramik-p2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "napoleon-keramik-s2",
+                "text": "La céramique Marmi habille le plateau et la base dans cinq finitions : KM07 Portoro opaque, KM18 Borghini Calacatta opaque, KM21 Colosseo, KM24 Invisible opaque et KM26 Taj Mahal. Le plateau est posé sur la base.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "napoleon-keramik-p3",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "napoleon-keramik-s3",
+                "text": "Le façonnage de la base peut entraîner des différences de teinte, de forme ou de surface. Le fabricant les présente comme des particularités de fabrication, sans les qualifier de défauts.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "description": "Une table dont le plateau et la base arrondie sont habillés de céramique Marmi. Deux coques symétriques, séparées par un creux vertical, donnent son relief au piètement central.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "napoleon-keramik-editorial-1-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "napoleon-keramik-editorial-1-1-text",
+                "text": "Une base en céramique modelée",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "napoleon-keramik-editorial-1-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "napoleon-keramik-editorial-1-2-text",
+                "text": "Les plaques arrondies forment deux volumes symétriques. Sur les petits côtés, un renfoncement vertical interrompt leur surface et distingue le piètement d’un socle monobloc. Le façonnage peut produire des différences de teinte, de surface et de forme, signalées comme caractéristiques de fabrication. Le plateau est posé en appui sur cette base.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "napoleon-keramik-editorial-2-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "napoleon-keramik-editorial-2-1-text",
+                "text": "Les cinq décors Marmi",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "napoleon-keramik-editorial-2-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "napoleon-keramik-editorial-2-2-text",
+                "text": "Portoro opaque KM07, Borghini Calacatta opaque KM18, Colosseo KM21, Invisible opaque KM24 et Taj Mahal KM26 composent le choix de finitions du plateau et de la base. Il s’agit de céramique aux décors inspirés des marbres, et non de marbre naturel.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "napoleon-keramik-editorial-3-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "napoleon-keramik-editorial-3-1-text",
+                "text": "Les formes de plateau et les versions Napoleon",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "napoleon-keramik-editorial-3-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "napoleon-keramik-editorial-3-2-text",
+                "text": "Les dix formats publiés vont du plateau de 200 × 120 cm à celui de 320 × 138 cm ; la gamme comprend notamment des plateaux ovales et polygonaux. Napoleon Keramik Premium se distingue par son bord épais brossé ; Napoleon Wood par son plateau en bois. La version Outdoor possède sa propre fiche et ses propres conditions d’usage.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "beforeSeo": {
+        "title": null,
+        "description": null
+      },
+      "afterSeo": {
+        "title": "Napoleon Keramik : table en céramique | Cattelan Italia Maroc",
+        "description": "Napoleon Keramik : plateau et base arrondie en céramique Marmi. Comparez les cinq décors, les formats et les plans de cette table Cattelan Italia."
+      }
+    },
+    {
+      "slug": "rhonda",
+      "sources": [
+        "https://www.cattelanitalia.com/fr/products/41ED48AE-E379-4863-8E3C-28EE1D985390"
+      ],
+      "before": {
+        "description": "Une famille d’assises aux lignes arrondies, avec plusieurs piètements et des déclinaisons permettant de rapprocher chaises, tabourets et fauteuil lounge.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "rhonda-p1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "rhonda-s1",
+                "text": "Rhonda est une chaise à accoudoirs dont le dossier enveloppant oppose un extérieur lisse à une face intérieure plissée. La version présentée repose sur des pieds en métal ; les déclinaisons Wood, Cantilever, Turn, Wheels, Lounge et tabouret possèdent leurs propres fiches.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "rhonda-p2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "rhonda-s2",
+                "text": "Le châssis en acier reçoit une finition chromée 08 ou une laque gaufrée : GFM11, GFM18, GFM69, GFM70 ou GFM73. L’assise peut être habillée de tissu, micro nubuck, cuir mince ou simili cuir, dans les coloris du nuancier officiel.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "rhonda-p3",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "rhonda-s3",
+                "text": "Le revêtement est fixe : il ne peut pas être retiré pour le lavage.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "description": "Une chaise à accoudoirs dont le dossier arrondi associe une coque extérieure lisse à un intérieur plissé. Cette version repose sur des pieds en acier chromé ou laqué, avec un revêtement fixe en tissu ou en cuir selon la gamme.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "rhonda-editorial-1-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "rhonda-editorial-1-1-text",
+                "text": "Le dossier plissé et la coque lisse",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "rhonda-editorial-1-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "rhonda-editorial-1-2-text",
+                "text": "Les plis de la face intérieure contrastent avec le dos lisse de la coque. Le dossier se courbe autour de l’assise et rejoint les accoudoirs ; à l’arrière, la jonction avec les pieds souligne cette forme enveloppante. Le gabarit publié est de 63 × 60 × 79 cm.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "rhonda-editorial-2-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "rhonda-editorial-2-1-text",
+                "text": "Chrome, laques et revêtements fixes",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "rhonda-editorial-2-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "rhonda-editorial-2-2-text",
+                "text": "Le châssis en acier existe en chrome 08 ou dans cinq laques gaufrées : titane GFM11, bronze GFM18, graphite GFM69, pearl GFM70 et noir GFM73. Le revêtement se choisit parmi les tissus, micro nubucks, cuirs minces et simili cuirs du nuancier. Il est non déhoussable.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "rhonda-editorial-3-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "rhonda-editorial-3-1-text",
+                "text": "Rhonda, Wood, Cantilever, Turn et Wheels",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "rhonda-editorial-3-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "rhonda-editorial-3-2-text",
+                "text": "La référence présentée possède des pieds métalliques. Wood adopte des pieds en bois ; Cantilever une structure en porte-à-faux ; Turn une base pivotante ; Wheels des roulettes. Le fauteuil Lounge et les tabourets complètent la famille. Chaque déclinaison possède ses propres dimensions et sa propre fiche.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "beforeSeo": {
+        "title": null,
+        "description": null
+      },
+      "afterSeo": {
+        "title": "Rhonda : chaise à accoudoirs | Cattelan Italia Maroc",
+        "description": "Rhonda : dossier arrondi plissé, pieds en acier et revêtements non déhoussables. Dimensions, finitions et différences avec les autres versions."
+      }
+    },
+    {
+      "slug": "greta",
+      "sources": [
+        "https://www.cattelanitalia.com/fr/products/A73FA6B3-0BA9-4F13-ADB6-FBAFC6E39BBF"
+      ],
+      "before": {
+        "description": "Une chaise aux accoudoirs enveloppants, proposée avec différentes variantes de piètement dans sa famille. Une piste pour coordonner les assises de l’espace de vie.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "greta-p1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "greta-s1",
+                "text": "Greta dessine une séparation visible entre l’assise et le dossier rembourré qui se prolonge en accoudoirs. Ses pieds métalliques élancés contrastent avec les volumes souples. À l’arrière, deux éléments rapprochés forment un appui central tout en conservant une fente verticale.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "greta-p2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "greta-s2",
+                "text": "La structure en acier est disponible avec les laques gaufrées GFM11 titane, GFM18 bronze, GFM69 graphite, GFM70 pearl ou GFM73 noir. Le fabricant indique un habillage en tissu, micro nubuck, cuir mince ou simili cuir ; les échantillons ci-dessous conservent les familles et références publiées pour ce modèle.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "greta-p3",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "greta-s3",
+                "text": "Le revêtement n’est pas amovible. Les versions Wood, Lounge, Outdoor et tabouret sont des déclinaisons distinctes.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "description": "Une chaise à accoudoirs avec une ouverture entre l’assise et le dossier rembourré. Ses pieds d’acier à section elliptique et son appui arrière dédoublé dessinent une silhouette de 62 × 62 × 78 cm.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "greta-editorial-1-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "greta-editorial-1-1-text",
+                "text": "Le coussin et le dossier séparés",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "greta-editorial-1-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "greta-editorial-1-2-text",
+                "text": "L’ouverture entre l’assise et le dossier rend visibles les deux volumes rembourrés. Quatre surpiqûres structurent le coussin ; le dossier garde une ligne arrondie qui se prolonge en accoudoirs. Ce détail de construction caractérise la famille Greta.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "greta-editorial-2-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "greta-editorial-2-1-text",
+                "text": "L’appui arrière dédoublé",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "greta-editorial-2-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "greta-editorial-2-2-text",
+                "text": "Les tubes d’acier à section elliptique forment des appuis fins. À l’arrière, ce qui paraît être un pied central est constitué de deux éléments rapprochés, séparés par une fente verticale. Cinq finitions gaufrées sont proposées : titane GFM11, bronze GFM18, graphite GFM69, pearl GFM70 et noir GFM73.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "greta-editorial-3-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "greta-editorial-3-1-text",
+                "text": "Les revêtements de Greta d’intérieur",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "greta-editorial-3-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "greta-editorial-3-2-text",
+                "text": "Le tissu, le micro nubuck, le cuir mince et le simili cuir figurent parmi les habillages indiqués pour cette chaise. Le revêtement n’est pas déhoussable. Greta Wood, Lounge, Outdoor et les tabourets ont des caractéristiques propres ; les matériaux et dimensions de ces déclinaisons ne s’appliquent pas automatiquement à la version présentée.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "beforeSeo": {
+        "title": null,
+        "description": null
+      },
+      "afterSeo": {
+        "title": "Greta : chaise rembourrée | Cattelan Italia Maroc",
+        "description": "Chaise Greta : assise et dossier séparés, appui arrière dédoublé et acier laqué. Consultez les dimensions, revêtements fixes et plans."
+      }
+    },
+    {
+      "slug": "ruby",
+      "sources": [
+        "https://www.cattelanitalia.com/fr/products/75C6DB4B-1A99-400D-AEE7-9D5797651F05"
+      ],
+      "before": {
+        "description": "Un canapé avec une structure en bois apparente et des lignes enveloppantes, à envisager seul ou dans une composition avec le fauteuil de la même famille.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "ruby-p1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "ruby-s1",
+                "text": "Ruby propose un canapé et un fauteuil aux lignes arrondies, avec un cadre en bois apparent et de généreux coussins. Le dossier se prolonge vers les accoudoirs. La collection permet de coordonner les assises du salon avec Ruby Lounge tout en conservant des pièces autonomes.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "ruby-p2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "ruby-s2",
+                "text": "Le modèle associe une ossature intérieure en bois à une garniture en mousse de polyuréthane. La structure visible est en frêne, avec une teinte noyer Canaletto frNC ou rouvre brûlé frRB.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "ruby-p3",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "ruby-s3",
+                "text": "Deux formats sont publiés : fauteuil AC80 et canapé S200. Le revêtement, proposé en tissu ou en cuir selon le nuancier, reste fixé à l’assise et n’est pas déhoussable.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "description": "Un canapé et un fauteuil à cadre de frêne apparent, avec dossier courbe et coussins rembourrés de mousse polyuréthane. La fiche Ruby réunit les formats S200 et AC80, habillés de tissu ou de cuir non déhoussable.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "ruby-editorial-1-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "ruby-editorial-1-1-text",
+                "text": "Les courbes du cadre et des coussins",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "ruby-editorial-1-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "ruby-editorial-1-2-text",
+                "text": "Le dossier rejoint les accoudoirs et les surpiqûres marquent les volumes rembourrés. La marque rattache ce dessin aux formes organiques du mobilier nordique et des années 1970. La construction associe une ossature intérieure en bois à une garniture en mousse polyuréthane.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "ruby-editorial-2-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "ruby-editorial-2-1-text",
+                "text": "Du frêne dans les deux finitions",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "ruby-editorial-2-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "ruby-editorial-2-2-text",
+                "text": "La structure apparente est réalisée en frêne teinté noyer Canaletto frNC ou rouvre brûlé frRB. Ces noms désignent les teintes du frêne, pas deux essences de substitution. Les habillages en tissu ou en cuir sont choisis dans le nuancier Ruby et ne sont pas déhoussables.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "ruby-editorial-3-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "ruby-editorial-3-1-text",
+                "text": "Le canapé S200 et le fauteuil AC80",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "ruby-editorial-3-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "ruby-editorial-3-2-text",
+                "text": "Le canapé S200 mesure 200 × 92 × 76 cm ; le fauteuil AC80, 81 × 92 × 76 cm. Les deux formats partagent profondeur et hauteur totale. Ruby Lounge, présenté séparément dans la sélection, appartient au même univers formel mais conserve sa propre fiche de revêtements et de caractéristiques.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "beforeSeo": {
+        "title": null,
+        "description": null
+      },
+      "afterSeo": {
+        "title": "Ruby : canapé et fauteuil en frêne | Cattelan Italia Maroc",
+        "description": "Ruby S200 et AC80 : canapé de 200 cm et fauteuil de 81 cm, cadre en frêne teinté, tissu ou cuir. Comparez dimensions, finitions et fiche technique."
+      }
+    },
+    {
+      "slug": "ruby-lounge",
+      "sources": [
+        "https://www.cattelanitalia.com/fr/products/3BFE3570-1D83-4026-A81F-F0913AEE75BD"
+      ],
+      "before": {
+        "description": "Le fauteuil de la famille Ruby reprend le dialogue entre la structure en bois et l’assise rembourrée. Il peut compléter le canapé ou trouver sa place indépendamment.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "ruby-lounge-p1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "ruby-lounge-s1",
+                "text": "Ruby Lounge est un fauteuil bas à structure en bois apparent. L’assise large, les coutures visibles et le dossier arrondi composent une pièce qui peut être associée au canapé Ruby ou utilisée seule dans un espace de détente.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "ruby-lounge-p2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "ruby-lounge-s2",
+                "text": "Le cadre est en frêne teinté : noyer Canaletto frNC ou rouvre brûlé frRB. Le descriptif technique mentionne les habillages en tissu, micro nubuck et cuir mince. Les groupes de matières et coloris reproduisent le nuancier officiel de cette fiche.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "ruby-lounge-p3",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "ruby-lounge-s3",
+                "text": "Le revêtement est non amovible. Le format publié mesure 81 × 92 × 76 cm.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "description": "Un fauteuil bas de 81 × 92 × 76 cm, avec cadre de frêne apparent, dossier arrondi et coutures visibles. Le bois teinté noyer Canaletto ou rouvre brûlé accompagne un revêtement fixe en tissu, micro nubuck ou cuir mince.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "ruby-lounge-editorial-1-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "ruby-lounge-editorial-1-1-text",
+                "text": "Un cadre en frêne teinté",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "ruby-lounge-editorial-1-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "ruby-lounge-editorial-1-2-text",
+                "text": "Le bois reste visible autour des volumes rembourrés. Les deux finitions, noyer Canaletto frNC et rouvre brûlé frRB, sont des teintes appliquées au frêne : elles ne désignent pas un changement d’essence. Les coutures soulignent l’assise et le dossier se prolonge en accoudoirs.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "ruby-lounge-editorial-2-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "ruby-lounge-editorial-2-1-text",
+                "text": "Les revêtements du fauteuil",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "ruby-lounge-editorial-2-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "ruby-lounge-editorial-2-2-text",
+                "text": "Le descriptif technique de Ruby Lounge mentionne le tissu, le micro nubuck et le cuir mince. Le revêtement n’est pas amovible. Les références doivent être choisies dans le nuancier de ce fauteuil : les options du canapé Ruby ne se reportent pas automatiquement sur Ruby Lounge.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "ruby-lounge-editorial-3-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "ruby-lounge-editorial-3-1-text",
+                "text": "Ruby Lounge et la famille Ruby",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "ruby-lounge-editorial-3-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "ruby-lounge-editorial-3-2-text",
+                "text": "Le fauteuil est présenté comme une pièce indépendante ou associée au canapé. Son format de 81 cm de large et 92 cm de profondeur est celui d’une assise lounge. La coordination avec Ruby repose sur le dessin du cadre, les courbes du dossier et les teintes du bois.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "beforeSeo": {
+        "title": null,
+        "description": null
+      },
+      "afterSeo": {
+        "title": "Ruby Lounge : fauteuil en frêne | Cattelan Italia Maroc",
+        "description": "Ruby Lounge : fauteuil de 81 × 92 × 76 cm en frêne teinté, tissu, micro nubuck ou cuir mince. Consultez les finitions et la fiche technique."
+      }
+    },
+    {
+      "slug": "chelsea",
+      "sources": [
+        "https://www.cattelanitalia.com/fr/products/B7E158FA-BF2D-484D-9F9A-0C3D14138E8E"
+      ],
+      "before": {
+        "description": "Un buffet au dessin polygonal, avec un plateau proposé en verre miroir ou en céramique selon la version, pour donner une présence au rangement fermé.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "chelsea-p1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "chelsea-s1",
+                "text": "Chelsea est un buffet à silhouette polygonale. Son plateau s’inscrit dans un rebord supérieur incliné, tandis que des tablettes en verre organisent le rangement intérieur. Plusieurs longueurs et hauteurs permettent de composer un meuble bas ou un buffet plus haut.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "chelsea-p2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "chelsea-s2",
+                "text": "Le caisson en bois laqué existe en titane M11, Paprika M14 et Mint M75. Le dessus peut être en verre miroir bronze ou en céramique Marmi, avec les décors Colosseo KM21 et Taj Mahal KM26. Les étagères intérieures sont en verre clair.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "chelsea-p3",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "chelsea-s3",
+                "text": "Les versions B ajoutent un piètement en acier, chromé 08 ou laqué graphite OP69. Les huit formats publiés sont listés séparément ; Chelsea Drawers et Chelsea Night sont d’autres modèles de la famille.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "description": "Un buffet en bois laqué aux pans polygonaux, avec tablettes intérieures en verre clair. Son dessus en miroir bronze ou en céramique Marmi s’inscrit dans un rebord incliné ; les versions B ajoutent un piètement d’acier.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "chelsea-editorial-1-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "chelsea-editorial-1-1-text",
+                "text": "Le rebord incliné et le rangement intérieur",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "chelsea-editorial-1-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "chelsea-editorial-1-2-text",
+                "text": "Le plateau s’inscrit à l’intérieur du contour polygonal du meuble, dont le bord supérieur incliné encadre les objets posés dessus. Des étagères en verre clair organisent le rangement fermé.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "chelsea-editorial-2-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "chelsea-editorial-2-1-text",
+                "text": "Les laques et les plateaux Chelsea",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "chelsea-editorial-2-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "chelsea-editorial-2-2-text",
+                "text": "Le caisson en bois est proposé en titane M11, Paprika M14 ou Mint M75. Le dessus existe en verre miroir bronze ou en céramique Marmi Colosseo KM21 et Taj Mahal KM26. Les versions B ajoutent une base en acier chromé 08 ou graphite OP69.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "chelsea-editorial-3-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "chelsea-editorial-3-1-text",
+                "text": "Les formats bas, hauts et sur piètement",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "chelsea-editorial-3-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "chelsea-editorial-3-2-text",
+                "text": "Les huit formats publiés mesurent 46 cm de profondeur. Les longueurs vont de 137,5 à 248 cm, avec des hauteurs de 50, 65, 75 ou 100 cm selon la référence. Les versions sur piètement B3 et B4 mesurent respectivement 193 et 248 cm de long, pour 65 cm de haut. Chelsea Drawers et Chelsea Night sont d’autres modèles de la famille, avec leurs propres usages et dimensions.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "beforeSeo": {
+        "title": null,
+        "description": null
+      },
+      "afterSeo": {
+        "title": "Chelsea : buffet laqué | Cattelan Italia Maroc",
+        "description": "Buffet Chelsea : bois laqué, tablettes en verre et dessus miroir bronze ou céramique. Comparez huit formats, dont les versions sur piètement."
+      }
+    },
+    {
+      "slug": "airport",
+      "sources": [
+        "https://www.cattelanitalia.com/fr/products/0BD758C3-F539-4263-BA05-CEB859A760A4"
+      ],
+      "before": {
+        "description": "Une bibliothèque modulaire avec fixation murale ou au plafond, dont les éléments permettent de composer un rangement adapté à l’espace.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "airport-p1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "airport-s1",
+                "text": "Airport est une bibliothèque modulaire dont la composition peut longer un mur, former un angle ou servir de séparation. Les éléments se fixent au mur ou au plafond. Étagères et caissons permettent de combiner exposition et rangement selon l’espace disponible.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "airport-p2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "airport-s2",
+                "text": "Les montants et supports utilisent l’acier dans les finitions gaufrées GFM11 titane, GFM18 bronze, GFM69 graphite, GFM71 blanc et GFM73 noir. Les éléments en bois sont proposés en graphite GF69, blanc GF71, noyer Canaletto NC, rouvre brûlé RB, Brushed Bronze ou Brushed Grey.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "airport-p3",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "airport-s3",
+                "text": "Les dimensions publiées correspondent aux étagères, aux caissons Box et au module Desk ; elles ne décrivent pas une composition unique. Les plans officiels précisent le système et ses éléments.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "description": "Une bibliothèque modulaire fixée au mur ou au plafond, à composer avec étagères, caissons Box et module Desk. Ses montants d’acier et ses éléments en bois permettent des implantations murales, en angle ou en séparation de pièce.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "airport-editorial-1-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "airport-editorial-1-1-text",
+                "text": "La fixation au mur ou au plafond",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "airport-editorial-1-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "airport-editorial-1-2-text",
+                "text": "Le système peut suivre un mur, se retourner dans un angle ou servir de séparation dans un grand espace. Il repose sur des montants et des supports en acier, avec fixation murale ou au plafond. Airport ne désigne donc pas un meuble de dimensions uniques.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "airport-editorial-2-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "airport-editorial-2-1-text",
+                "text": "Les étagères, Box et Desk",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "airport-editorial-2-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "airport-editorial-2-2-text",
+                "text": "Les étagères mesurent 29 cm de profondeur et existent en six longueurs, de 60 à 310 cm. Les caissons Box sont proposés en 110 ou 160 cm de longueur, avec une hauteur de 36 cm. Un module Desk de 110 × 60 cm complète le système. Ces dimensions sont celles des composants ; l’encombrement total dépend de la composition.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "airport-editorial-3-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "airport-editorial-3-1-text",
+                "text": "Les finitions de l’acier et du bois",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "airport-editorial-3-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "airport-editorial-3-2-text",
+                "text": "Les montants et supports se déclinent en titane, bronze, graphite, blanc et noir gaufrés. Pour les étagères et caissons en bois, les finitions comprennent graphite, blanc, noyer Canaletto, rouvre brûlé, Brushed Bronze et Brushed Grey. Les groupes de finitions distinguent la structure, les étagères et les conteneurs.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "beforeSeo": {
+        "title": null,
+        "description": null
+      },
+      "afterSeo": {
+        "title": "Airport : bibliothèque modulaire | Cattelan Italia Maroc",
+        "description": "Airport : bibliothèque fixée au mur ou au plafond, étagères, caissons Box et module Desk. Dimensions des composants et finitions acier et bois."
+      }
+    },
+    {
+      "slug": "bloom",
+      "sources": [
+        "https://www.cattelanitalia.com/fr/products/D19C292D-87C6-429C-845C-AB448E928B3A"
+      ],
+      "before": {
+        "description": "Des branches métalliques et des volumes de verre transparent composent ce luminaire. Sa famille comprend une version suspendue et une version sur pied.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "bloom-p1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "bloom-s1",
+                "text": "Bloom décline un dessin ramifié en suspension et en lampadaire. Des tiges métalliques portent les diffuseurs transparents, avec des raccords en laiton brossé. Les différentes orientations permettent de choisir une silhouette horizontale, verticale ou sur pied.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "bloom-p2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "bloom-s2",
+                "text": "La structure reçoit une peinture iron grey satinée et les diffuseurs sont en verre borosilicate transparent. Les suspensions utilisent une fixation de plafond en acier chromé noir 06 ; le lampadaire possède une plaque de base en acier gaufré noir GFM73.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "bloom-p3",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "bloom-s3",
+                "text": "Les ampoules fournies ne sont pas dimmables. Le fabricant propose en option une télécommande avec récepteur-variateur uniquement pour les versions O/LO et V/LV. Les six dimensions officielles incluent les variantes et l’élément S2/4.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "description": "Un luminaire ramifié où le verre borosilicate transparent rencontre l’acier iron grey et les détails en laiton brossé. La collection réunit plusieurs suspensions et un lampadaire de 178 cm.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "bloom-editorial-1-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "bloom-editorial-1-1-text",
+                "text": "Le verre, les branches et les raccords",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "bloom-editorial-1-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "bloom-editorial-1-2-text",
+                "text": "Les diffuseurs sont en verre borosilicate transparent. Leurs tiges d’acier reçoivent une finition iron grey satinée ; les raccords et extrémités en laiton brossé restent visibles et ponctuent les ramifications.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "bloom-editorial-2-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "bloom-editorial-2-1-text",
+                "text": "Les suspensions O/LO, V/LV et le lampadaire P",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "bloom-editorial-2-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "bloom-editorial-2-2-text",
+                "text": "Les suspensions O et LO mesurent 150 × 86 × 46 cm ; V et LV mesurent 150 × 46 × 90 cm. Le lampadaire P mesure 57 × 45 × 178 cm et possède une plaque de base en acier gaufré noir GFM73. Les suspensions utilisent une fixation de plafond en acier chromé noir 06.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "bloom-editorial-3-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "bloom-editorial-3-1-text",
+                "text": "Ampoules et variation de lumière",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "bloom-editorial-3-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "bloom-editorial-3-2-text",
+                "text": "Les ampoules fournies sont indiquées comme non dimmables. Une télécommande avec récepteur-variateur est proposée en option uniquement pour O/LO et V/LV. Cette option ne doit donc pas être supposée incluse, ni étendue au lampadaire P.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "beforeSeo": {
+        "title": null,
+        "description": null
+      },
+      "afterSeo": {
+        "title": "Bloom : suspension et lampadaire | Cattelan Italia Maroc",
+        "description": "Bloom : luminaire en métal et verre borosilicate, en suspension ou sur pied. Formats, plans et options de variation lumineuse selon la version."
+      }
+    },
+    {
+      "slug": "napoleon-keramik-outdoor",
+      "sources": [
+        "https://www.cattelanitalia.com/fr/products/0C0E3429-09CC-4873-917D-A92A63F45D60"
+      ],
+      "before": {
+        "description": "Une table avec plateau et base en céramique, conçue pour un espace extérieur couvert. Son piètement central reprend les formes arrondies de la famille Napoleon.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "napoleon-keramik-outdoor-p1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "napoleon-keramik-outdoor-s1",
+                "text": "Napoleon Keramik Outdoor reprend la base centrale formée de deux volumes symétriques de la famille Napoleon. Le plateau et le piètement en céramique composent une table destinée à un patio ou à une véranda abrités.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "napoleon-keramik-outdoor-p2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "napoleon-keramik-outdoor-s2",
+                "text": "Cinq finitions Marmi sont proposées pour le plateau et la base : KM07 Portoro opaque, KM18 Borghini Calacatta opaque, KM21 Colosseo, KM24 Invisible opaque et KM26 Taj Mahal. Le plateau repose sur la base. Les différences de teinte, de surface ou de forme de celle-ci résultent du façonnage et sont présentées par le fabricant comme des caractéristiques de fabrication.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "napoleon-keramik-outdoor-p3",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "napoleon-keramik-outdoor-s3",
+                "text": "Usage extérieur couvert uniquement : cette table doit rester protégée d’une exposition directe aux intempéries.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "description": "Une table en céramique Marmi, du plateau aux deux coques arrondies de la base centrale. Cette version Outdoor est destinée exclusivement aux espaces extérieurs couverts, protégés d’une exposition directe aux intempéries.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "napoleon-keramik-outdoor-editorial-1-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "napoleon-keramik-outdoor-editorial-1-1-text",
+                "text": "Les deux coques de la base",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "napoleon-keramik-outdoor-editorial-1-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "napoleon-keramik-outdoor-editorial-1-2-text",
+                "text": "Les surfaces courbes du piètement sont interrompues sur les petits côtés par un renfoncement vertical. Le plateau est posé en appui sur la base. Les différences de teinte, de surface ou de forme de cette dernière sont présentées comme des caractéristiques de son façonnage.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "napoleon-keramik-outdoor-editorial-2-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "napoleon-keramik-outdoor-editorial-2-1-text",
+                "text": "Les décors Marmi et les formats Outdoor",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "napoleon-keramik-outdoor-editorial-2-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "napoleon-keramik-outdoor-editorial-2-2-text",
+                "text": "Les cinq finitions sont Portoro opaque KM07, Borghini Calacatta opaque KM18, Colosseo KM21, Invisible opaque KM24 et Taj Mahal KM26. Ces décors sont en céramique, et non en marbre naturel. Dix formats sont publiés, de 200 × 120 à 320 × 138 cm, avec notamment des plateaux ovales et polygonaux.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "napoleon-keramik-outdoor-editorial-3-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "napoleon-keramik-outdoor-editorial-3-1-text",
+                "text": "Un usage extérieur couvert uniquement",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "napoleon-keramik-outdoor-editorial-3-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "napoleon-keramik-outdoor-editorial-3-2-text",
+                "text": "Le fabricant prescrit un emplacement couvert et protégé d’une exposition directe aux agents atmosphériques. Une terrasse ouverte sans protection ne correspond pas à cet usage. Cette restriction concerne la version Outdoor elle-même ; elle reste applicable quelle que soit la finition choisie.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "beforeSeo": {
+        "title": null,
+        "description": null
+      },
+      "afterSeo": {
+        "title": "Napoleon Keramik Outdoor | Cattelan Italia Maroc",
+        "description": "Table Napoleon Keramik Outdoor en céramique Marmi : formats, plans et finitions. Usage réservé aux extérieurs couverts, protégés des intempéries."
+      }
+    },
+    {
+      "slug": "greta-outdoor",
+      "sources": [
+        "https://www.cattelanitalia.com/fr/products/92839EB8-BAD8-4D0F-B0C6-C02BF107C361"
+      ],
+      "before": {
+        "description": "Une chaise d’extérieur rembourrée, destinée à un espace couvert et protégé des intempéries, conformément aux indications de la marque.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "greta-outdoor-p1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "greta-outdoor-s1",
+                "text": "Greta Outdoor reprend l’assise rembourrée et le dossier enveloppant à accoudoirs de la famille Greta. Son piètement fin dégage l’espace sous l’assise. Cette déclinaison est conçue pour prolonger un espace de vie vers une terrasse abritée.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "greta-outdoor-p2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "greta-outdoor-s2",
+                "text": "La structure utilise l’acier inoxydable 304, avec les laques gaufrées GFM11 titane, GFM18 bronze, GFM69 graphite, GFM70 pearl ou GFM73 noir. L’habillage est en tissu, dans les références du nuancier Outdoor. Il reste fixé au siège et n’est pas déhoussable.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "greta-outdoor-p3",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "greta-outdoor-s3",
+                "text": "Usage extérieur couvert uniquement : la chaise doit être protégée d’une exposition directe aux intempéries.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "description": "La chaise Greta adaptée à un extérieur couvert : structure en acier inoxydable 304, assise et dossier rembourrés en tissu Outdoor non déhoussable. Elle doit rester protégée d’une exposition directe aux intempéries.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "greta-outdoor-editorial-1-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "greta-outdoor-editorial-1-1-text",
+                "text": "L’acier inoxydable 304 et ses finitions",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "greta-outdoor-editorial-1-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "greta-outdoor-editorial-1-2-text",
+                "text": "Cette déclinaison utilise de l’acier inoxydable 304. Cinq laques gaufrées sont proposées : titane GFM11, bronze GFM18, graphite GFM69, pearl GFM70 et noir GFM73. Son gabarit est de 62 × 62 × 78 cm.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "greta-outdoor-editorial-2-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "greta-outdoor-editorial-2-1-text",
+                "text": "Un tissu propre à la gamme Outdoor",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "greta-outdoor-editorial-2-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "greta-outdoor-editorial-2-2-text",
+                "text": "Le coussin d’assise reste visuellement séparé du dossier qui se prolonge en accoudoirs. Les deux volumes sont habillés de tissu dans les références du nuancier Outdoor. Les cuirs et autres revêtements de Greta d’intérieur ne sont pas des options de cette fiche. Le tissu est fixé au siège et n’est pas déhoussable.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "greta-outdoor-editorial-3-1",
+            "style": "h3",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "greta-outdoor-editorial-3-1-text",
+                "text": "Une chaise pour les extérieurs couverts",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "greta-outdoor-editorial-3-2",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "greta-outdoor-editorial-3-2-text",
+                "text": "Le fabricant réserve Greta Outdoor aux espaces couverts, sans exposition directe aux intempéries. L’acier inoxydable et le tissu Outdoor ne suppriment pas cette restriction : la chaise n’est pas prévue pour rester sur une terrasse ouverte sans protection.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "beforeSeo": {
+        "title": null,
+        "description": null
+      },
+      "afterSeo": {
+        "title": "Greta Outdoor : chaise en inox 304 | Cattelan Italia Maroc",
+        "description": "Greta Outdoor : chaise en inox 304 et tissu non déhoussable. Dimensions et finitions pour un extérieur couvert, protégé des intempéries."
+      }
+    }
+  ]
+}

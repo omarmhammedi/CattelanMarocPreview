@@ -1,0 +1,9 @@
+---
+export interface NavigationItem { label: string; url?: string; target?: string | null; children?: NavigationItem[] }
+interface Props { items: NavigationItem[]; variant?: 'header' | 'mobile' | 'footer' | 'submenu' }
+const {items,variant='header'}=Astro.props;
+---
+{items.map(item => item.children?.length ? <details class="native-nav-group">
+  <summary>{item.label}</summary>
+  <div class="native-nav-children">{item.url && <a href={item.url} target={item.target} rel={item.target === '_blank' ? 'noopener noreferrer' : undefined}>{item.label}</a>}<Astro.self items={item.children} variant="submenu" /></div>
+</details> : item.url ? <a class:list={{btn:variant==='header' && item.url==='/catalogue/'}} href={item.url} target={item.target} rel={item.target === '_blank' ? 'noopener noreferrer' : undefined}>{item.label}</a> : <span>{item.label}</span>)}

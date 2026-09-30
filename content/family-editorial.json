@@ -1,0 +1,1194 @@
+{
+  "version": 1,
+  "collection": "families",
+  "entries": [
+    {
+      "slug": "tables",
+      "sources": [
+        "https://www.cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8",
+        "https://www.cattelanitalia.com/fr/products/DD24EC9D-FA00-4C0D-A989-9ADD6E56BFD0"
+      ],
+      "before": {
+        "intro": "La table accompagne les repas du quotidien et les moments où l’on reçoit. Découvrez des modèles dont la forme et le piètement donnent une direction à la salle à manger, puis comparez les finitions qui s’accordent à votre intérieur.",
+        "card_text": "Formes de plateaux, piètements et matières : trouvez le point de départ de votre salle à manger.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "b0",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Choisir une présence dans la pièce",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "b1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Un plateau peut attirer le regard par son dessin ou laisser davantage de place au piètement. Observez la table avec les chaises, le sol et le luminaire : c’est cet ensemble qui donnera son équilibre à votre espace repas.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "b2",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Penser aux usages et aux passages",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "b3",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Avant de retenir une configuration, prenez les dimensions de la pièce et imaginez les chaises occupées. La forme du plateau et la position des pieds doivent être étudiées ensemble pour préserver les déplacements et le confort autour de la table.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "intro": "Deux approches de la table de repas : Skorpio révèle sa base géométrique à travers le verre, tandis que Napoleon Keramik réunit plateau et piètement dans la céramique. La sélection permet de comparer des structures, des contours et des finitions avant de choisir un format adapté à la pièce.",
+        "card_text": "Skorpio en verre, Napoleon en céramique : deux façons de dessiner le centre de la salle à manger.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "tables-1-h",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-1-0",
+                "text": "Verre et céramique : deux effets dans la pièce",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "tables-1-p",
+            "style": "normal",
+            "markDefs": [
+              {
+                "_type": "link",
+                "_key": "link-skorpio",
+                "href": "/modeles/skorpio/"
+              },
+              {
+                "_type": "link",
+                "_key": "link-napoleon-keramik",
+                "href": "/modeles/napoleon-keramik/"
+              }
+            ],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-1-1-before-skorpio",
+                "text": "Sur ",
+                "marks": []
+              },
+              {
+                "_type": "span",
+                "_key": "s-1-1-skorpio",
+                "text": "Skorpio",
+                "marks": [
+                  "link-skorpio"
+                ]
+              },
+              {
+                "_type": "span",
+                "_key": "s-1-1-after-skorpio-before-napoleon-keramik",
+                "text": ", le plateau en verre laisse voir les lignes obliques du piètement en acier. Sur ",
+                "marks": []
+              },
+              {
+                "_type": "span",
+                "_key": "s-1-1-after-skorpio-napoleon-keramik",
+                "text": "Napoleon Keramik",
+                "marks": [
+                  "link-napoleon-keramik"
+                ]
+              },
+              {
+                "_type": "span",
+                "_key": "s-1-1-after-skorpio-after-napoleon-keramik",
+                "text": ", la céramique habille à la fois le plateau et la base arrondie, composée de deux volumes. Le choix porte donc sur la présence du meuble dans son ensemble : structure apparente pour l’un, continuité de matière pour l’autre. Skorpio Wood et Skorpio Keramik sont des modèles distincts de la version en verre présentée ici.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "tables-2-h",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-2-0",
+                "text": "Comparer les formes et les formats",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "tables-2-p",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-2-1",
+                "text": "Skorpio propose notamment un plateau de 160 × 90 cm et des formats de 300 cm de long. Napoleon Keramik comprend plusieurs contours, dont une version façonnée de 200 × 120 cm et un ovale de 300 × 150 cm. Une longueur identique ne signifie donc pas le même encombrement : comparez aussi la largeur et le tracé du plateau dans les plans.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "tables-3-h",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-3-0",
+                "text": "Le nombre de places dépend aussi des chaises",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "tables-3-p",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-3-1",
+                "text": "Pour un Skorpio de 240 × 100 cm, le fabricant distingue dix places avec des chaises standard et huit avec de grandes chaises. Cette différence compte dans le choix d’un ensemble avec accoudoirs. Les fiches réunissent dimensions, plans et finitions pour comparer la table avec les assises retenues.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "beforeSeo": {
+        "title": null,
+        "description": null
+      },
+      "afterSeo": {
+        "title": "Tables de salle à manger | Cattelan Italia Maroc",
+        "description": "Comparez Skorpio en verre et Napoleon Keramik en céramique : formes, dimensions, piètements et nombre de places selon les chaises."
+      }
+    },
+    {
+      "slug": "chaises-tabourets",
+      "sources": [
+        "https://www.cattelanitalia.com/fr/products/41ED48AE-E379-4863-8E3C-28EE1D985390",
+        "https://www.cattelanitalia.com/fr/products/A73FA6B3-0BA9-4F13-ADB6-FBAFC6E39BBF"
+      ],
+      "before": {
+        "intro": "Les assises complètent la table et participent au caractère de la pièce. Explorez les dossiers, les piètements et les revêtements proposés selon les modèles pour composer un ensemble qui trouve sa place chez vous.",
+        "card_text": "Des assises à associer autour de la table ou du comptoir, selon vos envies et votre espace.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "b0",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Trouver un lien entre les pièces",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "b1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Une courbe, une nuance ou un détail de piètement peut relier les chaises à la table. Vous pouvez rechercher une continuité ou choisir un contraste, tout en gardant une intention claire pour l’ensemble.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "b2",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Vérifier les proportions ensemble",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "b3",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Hauteur d’assise, accoudoirs et position des pieds de table influencent la manière de s’installer. Comparez les dimensions de la configuration envisagée et conservez les références des variantes retenues pour préciser votre demande.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "intro": "Rhonda et Greta proposent deux dessins de chaise à accoudoirs : un dossier enveloppant aux plis intérieurs pour Rhonda, une assise séparée du dossier pour Greta. Les versions métalliques présentées ici permettent de comparer les proportions, le travail du rembourrage et les revêtements.",
+        "card_text": "Dossier plissé de Rhonda, lignes séparées de Greta : comparez deux chaises à accoudoirs et leurs revêtements.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "chaises-tabourets-1-h",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-1-0",
+                "text": "Rhonda et Greta : comparer les dossiers",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "chaises-tabourets-1-p",
+            "style": "normal",
+            "markDefs": [
+              {
+                "_type": "link",
+                "_key": "link-rhonda",
+                "href": "/modeles/rhonda/"
+              },
+              {
+                "_type": "link",
+                "_key": "link-greta",
+                "href": "/modeles/greta/"
+              }
+            ],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-1-1-rhonda",
+                "text": "Rhonda",
+                "marks": [
+                  "link-rhonda"
+                ]
+              },
+              {
+                "_type": "span",
+                "_key": "s-1-1-after-rhonda-before-greta",
+                "text": " associe un extérieur lisse à un intérieur plissé ; son dossier arrondi se prolonge en accoudoirs. ",
+                "marks": []
+              },
+              {
+                "_type": "span",
+                "_key": "s-1-1-after-rhonda-greta",
+                "text": "Greta",
+                "marks": [
+                  "link-greta"
+                ]
+              },
+              {
+                "_type": "span",
+                "_key": "s-1-1-after-rhonda-after-greta",
+                "text": " sépare visuellement l’assise du dossier rembourré. À l’arrière, ses deux éléments de piètement rapprochés conservent une fine ouverture verticale. Ces détails distinguent les chaises jusque dans leur vue de dos autour de la table.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "chaises-tabourets-2-h",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-2-0",
+                "text": "Deux modèles rembourrés, plusieurs matières",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "chaises-tabourets-2-p",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-2-1",
+                "text": "Les versions présentées utilisent un châssis en acier laqué gaufré ; Rhonda propose également le chrome. Tissu, micro nubuck, cuir mince et simili cuir figurent dans les descriptifs des deux modèles. Les revêtements sont fixes : le choix doit intégrer les consignes d’entretien propres à la matière, puisqu’ils ne se retirent pas pour le lavage.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "chaises-tabourets-3-h",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-3-0",
+                "text": "Comparer l’encombrement et la bonne déclinaison",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "chaises-tabourets-3-p",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-3-1",
+                "text": "Rhonda mesure 63 × 60 × 79 cm ; Greta, 62 × 62 × 78 cm, en largeur, profondeur et hauteur totale. Le passage des accoudoirs sous la table se vérifie sur les plans, indépendamment de la hauteur totale. Les deux références présentées sont des chaises. Les tabourets Rhonda et Greta sont des déclinaisons distinctes, avec leurs propres dimensions et finitions.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "beforeSeo": {
+        "title": null,
+        "description": null
+      },
+      "afterSeo": {
+        "title": "Chaises et tabourets | Cattelan Italia Maroc",
+        "description": "Comparez les chaises Rhonda et Greta : dossier, accoudoirs, dimensions et revêtements fixes. Distinguez ces modèles de leurs déclinaisons tabourets."
+      }
+    },
+    {
+      "slug": "canapes-fauteuils",
+      "sources": [
+        "https://www.cattelanitalia.com/fr/products/75C6DB4B-1A99-400D-AEE7-9D5797651F05",
+        "https://www.cattelanitalia.com/fr/products/3BFE3570-1D83-4026-A81F-F0913AEE75BD"
+      ],
+      "before": {
+        "intro": "Un canapé accueille les moments partagés ; un fauteuil peut créer un espace de lecture ou compléter la conversation. Découvrez des pièces à rapprocher selon les volumes de votre salon et les usages que vous souhaitez y retrouver.",
+        "card_text": "Des pièces à associer pour composer le salon autour de votre façon de vivre.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "b0",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Composer avec les volumes",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "b1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Regardez la profondeur, la hauteur des dossiers et la présence des accoudoirs. Une composition doit trouver sa place dans la pièce et préserver les passages, en tenant compte des meubles que vous souhaitez conserver.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "b2",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Relier les matières au décor",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "b3",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Le sol, les rideaux et la table basse constituent des points de départ utiles pour choisir un revêtement. Comparez les options proposées pour chaque modèle et renseignez-vous sur leurs consignes d’entretien avant de retenir une version.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "intro": "La sélection réunit Ruby et Ruby Lounge autour d’un même détail : une structure en frêne apparent qui dessine le contour de l’assise. Canapé et fauteuil associent ce cadre à des volumes rembourrés, avec des formats et des revêtements à comparer pour composer le salon.",
+        "card_text": "Ruby et Ruby Lounge associent frêne apparent, dossiers arrondis et assises rembourrées dans deux formats de salon.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "canapes-fauteuils-1-h",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-1-0",
+                "text": "Ruby : choisir entre canapé et fauteuil",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "canapes-fauteuils-1-p",
+            "style": "normal",
+            "markDefs": [
+              {
+                "_type": "link",
+                "_key": "link-ruby",
+                "href": "/modeles/ruby/"
+              }
+            ],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-1-1-before-ruby",
+                "text": "La fiche ",
+                "marks": []
+              },
+              {
+                "_type": "span",
+                "_key": "s-1-1-ruby",
+                "text": "Ruby",
+                "marks": [
+                  "link-ruby"
+                ]
+              },
+              {
+                "_type": "span",
+                "_key": "s-1-1-after-ruby",
+                "text": " réunit le canapé S200 de 200 cm de large et le fauteuil AC80 de 81 cm. Les deux partagent une profondeur de 92 cm et une hauteur de 76 cm. Le cadre apparent et le dossier arrondi donnent une continuité à un ensemble canapé-fauteuil, tout en permettant de comparer précisément son encombrement.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "canapes-fauteuils-2-h",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-2-0",
+                "text": "Ruby Lounge : comparer la fiche du fauteuil",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "canapes-fauteuils-2-p",
+            "style": "normal",
+            "markDefs": [
+              {
+                "_type": "link",
+                "_key": "link-ruby-lounge",
+                "href": "/modeles/ruby-lounge/"
+              }
+            ],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-2-1-ruby-lounge",
+                "text": "Ruby Lounge",
+                "marks": [
+                  "link-ruby-lounge"
+                ]
+              },
+              {
+                "_type": "span",
+                "_key": "s-2-1-after-ruby-lounge",
+                "text": " est documenté séparément, dans un format de 81 × 92 × 76 cm. Ruby et Ruby Lounge utilisent du frêne teinté noyer Canaletto ou rouvre brûlé : il s’agit des teintes du frêne, et non de deux autres essences. La finition du bois peut donc servir de point commun entre les pièces.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "canapes-fauteuils-3-h",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-3-0",
+                "text": "Le revêtement se choisit modèle par modèle",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "canapes-fauteuils-3-p",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-3-1",
+                "text": "Ruby est proposé en tissu ou en cuir ; le descriptif de Ruby Lounge mentionne aussi le micro nubuck. Dans les deux cas, le revêtement est fixe et non déhoussable. Comparez les matières dans le nuancier de la référence choisie : une proximité de nom ou de silhouette ne suffit pas à confirmer toutes les mêmes options.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "beforeSeo": {
+        "title": null,
+        "description": null
+      },
+      "afterSeo": {
+        "title": "Canapés et fauteuils | Cattelan Italia Maroc",
+        "description": "Ruby et Ruby Lounge : comparez les formats canapé et fauteuil, le frêne teinté et les revêtements non déhoussables de chaque référence."
+      }
+    },
+    {
+      "slug": "buffets-bibliotheques",
+      "sources": [
+        "https://www.cattelanitalia.com/fr/products/B7E158FA-BF2D-484D-9F9A-0C3D14138E8E",
+        "https://www.cattelanitalia.com/fr/products/0BD758C3-F539-4263-BA05-CEB859A760A4"
+      ],
+      "before": {
+        "intro": "Un rangement peut accueillir la vaisselle, mettre en valeur des livres ou organiser une pièce ouverte. Explorez les buffets et bibliothèques Cattelan Italia en partant des objets que vous souhaitez conserver à portée de main.",
+        "card_text": "Ranger, exposer et organiser l’espace avec des meubles qui participent au décor.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "b0",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Choisir ce que l’on montre",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "b1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Un meuble fermé rassemble les objets derrière ses façades. Des étagères ouvertes permettent de composer avec leur présence. Ces deux approches peuvent se compléter selon vos habitudes et la place disponible.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "b2",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Dessiner une place dans la pièce",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "b3",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Comparez la hauteur, la profondeur et l’ouverture des portes avec les dimensions de votre espace. Pour une composition modulable, les possibilités d’implantation et les conditions de fixation doivent aussi être examinées selon le projet.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "intro": "Chelsea et Airport répondent à deux façons de ranger : un buffet fermé au contour polygonal, ou une bibliothèque ouverte composée de montants, d’étagères et de modules. Leur comparaison porte autant sur ce que l’on veut montrer que sur la manière d’occuper un mur ou de séparer un espace.",
+        "card_text": "Chelsea ferme le rangement derrière ses façades ; Airport compose étagères et modules sur un système ouvert.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "buffets-bibliotheques-1-h",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-1-0",
+                "text": "Chelsea : un buffet fermé en plusieurs formats",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "buffets-bibliotheques-1-p",
+            "style": "normal",
+            "markDefs": [
+              {
+                "_type": "link",
+                "_key": "link-chelsea",
+                "href": "/modeles/chelsea/"
+              }
+            ],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-1-1-chelsea",
+                "text": "Chelsea",
+                "marks": [
+                  "link-chelsea"
+                ]
+              },
+              {
+                "_type": "span",
+                "_key": "s-1-1-after-chelsea",
+                "text": " concentre le rangement derrière ses façades polygonales, avec des tablettes intérieures en verre. Son plateau en miroir bronze ou en céramique s’inscrit dans un rebord incliné. Les huit formats conservent une profondeur de 46 cm ; les versions B ajoutent des pieds en acier. On choisit ici un meuble complet, avec sa longueur, sa hauteur et sa finition.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "buffets-bibliotheques-2-h",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-2-0",
+                "text": "Airport : une bibliothèque à composer",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "buffets-bibliotheques-2-p",
+            "style": "normal",
+            "markDefs": [
+              {
+                "_type": "link",
+                "_key": "link-airport",
+                "href": "/modeles/airport/"
+              }
+            ],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-2-1-airport",
+                "text": "Airport",
+                "marks": [
+                  "link-airport"
+                ]
+              },
+              {
+                "_type": "span",
+                "_key": "s-2-1-after-airport",
+                "text": " associe des montants en acier à des étagères en bois, avec fixation au mur ou au plafond selon l’implantation. Le système peut former un angle ou une séparation. Les étagères de 29 cm de profondeur existent dans plusieurs longueurs, de 60 à 310 cm ; des caissons Box et un module Desk complètent la composition.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "buffets-bibliotheques-3-h",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-3-0",
+                "text": "Choisir selon ce que le rangement doit accueillir",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "buffets-bibliotheques-3-p",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-3-1",
+                "text": "Chelsea convient à une recherche de rangement fermé ; Airport laisse les livres et objets participer à la composition, tout en permettant d’ajouter des caissons. Leurs dimensions se lisent différemment : celles de Chelsea décrivent le buffet, celles d’Airport décrivent ses éléments. Pour ce dernier, l’encombrement final et les fixations dépendent de l’assemblage retenu.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "beforeSeo": {
+        "title": null,
+        "description": null
+      },
+      "afterSeo": {
+        "title": "Buffets et bibliothèques | Cattelan Italia Maroc",
+        "description": "Chelsea ou Airport : comparez un buffet fermé et une bibliothèque modulaire, leurs dimensions, matériaux et possibilités de composition."
+      }
+    },
+    {
+      "slug": "luminaires",
+      "sources": [
+        "https://www.cattelanitalia.com/fr/products/D19C292D-87C6-429C-845C-AB448E928B3A"
+      ],
+      "before": {
+        "intro": "Un luminaire se regarde aussi lorsqu’il est éteint. Au-dessus d’une table ou près d’une assise, sa forme participe à la composition de l’espace. Découvrez des pièces dont le dessin dialogue avec le mobilier.",
+        "card_text": "Des formes et des compositions lumineuses pour accompagner les espaces de la maison.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "b0",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Partir de la place et de l’usage",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "b1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Repérez l’emplacement envisagé, les arrivées électriques et les activités à accompagner. Une suspension au-dessus de la table et une lampe près d’un fauteuil ne jouent pas le même rôle dans la pièce.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "b2",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Observer le luminaire avec les meubles",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "b3",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Comparez sa silhouette à celle de la table, du buffet ou du canapé. Vérifiez ensuite les dimensions et les caractéristiques de la version retenue : la photographie seule ne permet pas de déterminer si elle convient à votre installation.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "intro": "Bloom développe un dessin de branches métalliques ponctuées de verre transparent. Suspension ou lampadaire : la sélection explore les versions d’un même luminaire, dont le format et les caractéristiques électriques doivent être choisis ensemble.",
+        "card_text": "Bloom décline ses branches métalliques et son verre transparent en suspension et en lampadaire.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "luminaires-1-h",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-1-0",
+                "text": "Bloom : plusieurs formats de suspension et un lampadaire",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "luminaires-1-p",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-1-1",
+                "text": "Les versions O et LO mesurent 150 × 86 × 46 cm. Les versions V et LV mesurent 150 × 46 × 90 cm, tandis que le lampadaire P mesure 57 × 45 × 178 cm. Au sein d’un même dessin de branches, ces références occupent donc des volumes différents et ne s’installent pas de la même façon.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "luminaires-2-h",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-2-0",
+                "text": "Un dessin de métal et de verre transparent",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "luminaires-2-p",
+            "style": "normal",
+            "markDefs": [
+              {
+                "_type": "link",
+                "_key": "link-bloom",
+                "href": "/modeles/bloom/"
+              }
+            ],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-2-1-before-bloom",
+                "text": "La structure iron grey satinée, les raccords en laiton brossé et le verre borosilicate transparent constituent les points communs de ",
+                "marks": []
+              },
+              {
+                "_type": "span",
+                "_key": "s-2-1-bloom",
+                "text": "Bloom",
+                "marks": [
+                  "link-bloom"
+                ]
+              },
+              {
+                "_type": "span",
+                "_key": "s-2-1-after-bloom",
+                "text": ". La suspension utilise une fixation de plafond en acier chromé noir ; le lampadaire possède une base en acier gaufré noir. La fiche présente les vues et les plans de ces versions.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "luminaires-3-h",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-3-0",
+                "text": "Vérifier la variation lumineuse",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "luminaires-3-p",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-3-1",
+                "text": "Les ampoules fournies sont indiquées comme non variables. Le fabricant propose une télécommande avec récepteur-variateur en option pour les seules versions O/LO et V/LV. Cette option doit être vérifiée pour la référence et l’installation retenues ; elle ne s’étend pas automatiquement au lampadaire.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "beforeSeo": {
+        "title": null,
+        "description": null
+      },
+      "afterSeo": {
+        "title": "Luminaires design | Cattelan Italia Maroc",
+        "description": "Bloom en suspension ou sur pied : comparez formats, métal et verre borosilicate, ampoules fournies et options de variation lumineuse."
+      }
+    },
+    {
+      "slug": "mobilier-exterieur",
+      "sources": [
+        "https://www.cattelanitalia.com/fr/products/0C0E3429-09CC-4873-917D-A92A63F45D60",
+        "https://www.cattelanitalia.com/fr/products/92839EB8-BAD8-4D0F-B0C6-C02BF107C361"
+      ],
+      "before": {
+        "intro": "Une terrasse ou une véranda peut prolonger l’univers de la maison. Découvrez les créations extérieures Cattelan Italia et imaginez les liens de formes et de matières avec vos espaces intérieurs.",
+        "card_text": "Prolonger les lignes de la maison dans un espace extérieur adapté aux modèles choisis.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "b0",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Composer un ensemble cohérent",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "b1",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Commencez par l’usage souhaité : partager un repas, recevoir ou profiter d’un moment au calme. Regardez les meubles depuis l’intérieur pour imaginer la continuité entre les deux espaces.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "b2",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Choisir selon les conditions du lieu",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "b3",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s0",
+                "text": "Précisez si votre espace est couvert et comment il est exposé. Les conditions d’utilisation varient selon les modèles : les deux références présentées ici sont destinées à des espaces extérieurs couverts, protégés de l’exposition directe aux intempéries.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "intro": "Napoleon Keramik Outdoor et Greta Outdoor transposent les courbes de leurs familles vers un espace de repas abrité. La table associe plateau et base en céramique ; la chaise utilise une structure en acier inoxydable. Les deux modèles sont destinés exclusivement à un extérieur couvert, protégé des intempéries.",
+        "card_text": "Napoleon Keramik Outdoor et Greta Outdoor, pour un espace repas extérieur couvert et protégé des intempéries.",
+        "content": [
+          {
+            "_type": "block",
+            "_key": "mobilier-exterieur-1-h",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-1-0",
+                "text": "Une table en céramique et une chaise en inox",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "mobilier-exterieur-1-p",
+            "style": "normal",
+            "markDefs": [
+              {
+                "_type": "link",
+                "_key": "link-napoleon-keramik-outdoor",
+                "href": "/modeles/napoleon-keramik-outdoor/"
+              },
+              {
+                "_type": "link",
+                "_key": "link-greta-outdoor",
+                "href": "/modeles/greta-outdoor/"
+              }
+            ],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-1-1-napoleon-keramik-outdoor",
+                "text": "Napoleon Keramik Outdoor",
+                "marks": [
+                  "link-napoleon-keramik-outdoor"
+                ]
+              },
+              {
+                "_type": "span",
+                "_key": "s-1-1-after-napoleon-keramik-outdoor-before-greta-outdoor",
+                "text": " habille de céramique Marmi son plateau et sa base centrale arrondie. ",
+                "marks": []
+              },
+              {
+                "_type": "span",
+                "_key": "s-1-1-after-napoleon-keramik-outdoor-greta-outdoor",
+                "text": "Greta Outdoor",
+                "marks": [
+                  "link-greta-outdoor"
+                ]
+              },
+              {
+                "_type": "span",
+                "_key": "s-1-1-after-napoleon-keramik-outdoor-after-greta-outdoor",
+                "text": " utilise une structure en acier inoxydable 304 et un tissu Outdoor non déhoussable. Les deux reprennent des silhouettes des collections intérieures, avec des fiches spécifiques qui définissent leurs matières, finitions et conditions d’usage.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "mobilier-exterieur-2-h",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-2-0",
+                "text": "Comparer les dimensions de l’ensemble repas",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "mobilier-exterieur-2-p",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-2-1",
+                "text": "La table existe notamment en version façonnée de 200 × 120 cm et en ovale de 300 × 150 cm. Greta Outdoor mesure 62 × 62 × 78 cm. Ces dimensions permettent de comparer les configurations de table avec la largeur et la profondeur de la chaise, au-delà de l’impression donnée par une photo d’ambiance.",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "mobilier-exterieur-3-h",
+            "style": "h2",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-3-0",
+                "text": "Un extérieur couvert et protégé des intempéries",
+                "marks": []
+              }
+            ]
+          },
+          {
+            "_type": "block",
+            "_key": "mobilier-exterieur-3-p",
+            "style": "normal",
+            "markDefs": [],
+            "children": [
+              {
+                "_type": "span",
+                "_key": "s-3-1",
+                "text": "Cette condition concerne les deux références : le fabricant les réserve aux espaces extérieurs couverts, protégés d’une exposition directe aux intempéries. La mention Outdoor ne suffit donc pas à valider une terrasse ouverte. La couverture et l’exposition réelle du lieu doivent être précisées avant de retenir la composition.",
+                "marks": []
+              }
+            ]
+          }
+        ]
+      },
+      "beforeSeo": {
+        "title": null,
+        "description": null
+      },
+      "afterSeo": {
+        "title": "Mobilier extérieur | Cattelan Italia Maroc",
+        "description": "Napoleon Keramik Outdoor et Greta Outdoor : dimensions, céramique et inox 304, pour un extérieur couvert et protégé des intempéries."
+      }
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "verifiedAt": "2026-09-29T14:11:31.448Z",
+  "results": [
+    {
+      "route": "/",
+      "theme": "dark",
+      "viewport": "1440x900",
+      "branding": [
+        "Maroc",
+        "Maroc",
+        "Maroc"
+      ]
+    },
+    {
+      "route": "/catalogue/",
+      "theme": "dark",
+      "viewport": "1440x900",
+      "branding": [
+        "Maroc",
+        "Maroc"
+      ]
+    },
+    {
+      "route": "/showroom-casablanca/",
+      "theme": "dark",
+      "viewport": "1440x900",
+      "branding": [
+        "Maroc",
+        "Maroc"
+      ]
+    },
+    {
+      "route": "/collections/tables/",
+      "theme": "dark",
+      "viewport": "1440x900",
+      "branding": [
+        "Maroc",
+        "Maroc"
+      ]
+    },
+    {
+      "route": "/",
+      "theme": "dark",
+      "viewport": "390x844",
+      "branding": [
+        "Maroc",
+        "Maroc",
+        "Maroc"
+      ]
+    },
+    {
+      "route": "/catalogue/",
+      "theme": "dark",
+      "viewport": "390x844",
+      "branding": [
+        "Maroc",
+        "Maroc"
+      ]
+    },
+    {
+      "route": "/showroom-casablanca/",
+      "theme": "dark",
+      "viewport": "390x844",
+      "branding": [
+        "Maroc",
+        "Maroc"
+      ]
+    },
+    {
+      "route": "/collections/tables/",
+      "theme": "dark",
+      "viewport": "390x844",
+      "branding": [
+        "Maroc",
+        "Maroc"
+      ]
+    },
+    {
+      "route": "/",
+      "theme": "light",
+      "viewport": "1440x900",
+      "branding": [
+        "Maroc",
+        "Maroc",
+        "Maroc"
+      ]
+    },
+    {
+      "route": "/catalogue/",
+      "theme": "light",
+      "viewport": "1440x900",
+      "branding": [
+        "Maroc",
+        "Maroc"
+      ]
+    },
+    {
+      "route": "/showroom-casablanca/",
+      "theme": "light",
+      "viewport": "1440x900",
+      "branding": [
+        "Maroc",
+        "Maroc"
+      ]
+    },
+    {
+      "route": "/collections/tables/",
+      "theme": "light",
+      "viewport": "1440x900",
+      "branding": [
+        "Maroc",
+        "Maroc"
+      ]
+    },
+    {
+      "route": "/",
+      "theme": "light",
+      "viewport": "390x844",
+      "branding": [
+        "Maroc",
+        "Maroc",
+        "Maroc"
+      ]
+    },
+    {
+      "route": "/catalogue/",
+      "theme": "light",
+      "viewport": "390x844",
+      "branding": [
+        "Maroc",
+        "Maroc"
+      ]
+    },
+    {
+      "route": "/showroom-casablanca/",
+      "theme": "light",
+      "viewport": "390x844",
+      "branding": [
+        "Maroc",
+        "Maroc"
+      ]
+    },
+    {
+      "route": "/collections/tables/",
+      "theme": "light",
+      "viewport": "390x844",
+      "branding": [
+        "Maroc",
+        "Maroc"
+      ]
+    }
+  ],
+  "errors": [],
+  "writes": [],
+  "timezone": "America/Toronto",
+  "unitTests": 72,
+  "astroCheck": {
+    "files": 87,
+    "errors": 0,
+    "warnings": 0,
+    "hints": 0
+  },
+  "build": {
+    "passed": true,
+    "existingChunkWarning": true
+  },
+  "publication": {
+    "addedField": "brand_location",
+    "publishedValue": "Maroc",
+    "cityPreserved": true,
+    "secondDryRunChanges": 0
+  },
+  "preservation": {
+    "strictTables": 28,
+    "protectedFiles": 626,
+    "newUsers": 0
+  },
+  "nativeTemporarySessionLoggedOut": true
+}

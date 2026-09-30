@@ -1,0 +1,109 @@
+/* Product pages extend the type, spacing and palette of the version B interiors. */
+.model-detail { overflow-wrap: anywhere; }
+.model-detail .model-detail-hero { padding-top: clamp(38px, 5vw, 78px); }
+.model-breadcrumb { margin-bottom: clamp(40px, 5vw, 80px); color: var(--muted); }
+.model-breadcrumb ol { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 14px; margin: 0; padding: 0; list-style: none; font-size: 10px; letter-spacing: .13em; text-transform: uppercase; line-height: 1.8; }
+.model-breadcrumb li + li::before { content: '/'; display: inline-block; margin-right: 14px; color: var(--faint); }
+.model-breadcrumb a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 5px; }
+.model-breadcrumb [aria-current] { color: var(--ink); }
+.model-hero-grid { display: grid; gap: clamp(36px, 5vw, 80px); align-items: center; }
+.model-hero-with-image { grid-template-columns: minmax(0, .85fr) minmax(0, 1.25fr); }
+.model-hero-copy { min-width: 0; }
+.model-detail .model-detail-hero h1 { margin-block: 25px 30px; font-size: clamp(40px, 5.2vw, 84px); line-height: 1.04; text-transform: uppercase; }
+.model-hero-copy .page-lead { max-width: 560px; }
+.model-year { margin: 28px 0 0; font-size: 12px; line-height: 1.7; }
+.model-year > div { display: flex; gap: 24px; }
+.model-year dt { color: var(--faint); }
+.model-year dd { margin: 0; }
+.model-availability { margin: 24px 0 0; }
+.model-contact-link { margin-top: 28px; }
+.model-hero-figure { min-width: 0; margin: 0; }
+.model-hero-image { aspect-ratio: 4 / 3; }
+.model-detail .model-hero-image img { object-fit: contain; }
+.model-hero-figure figcaption { margin-top: 14px; }
+.model-story { display: grid; grid-template-columns: minmax(0, .6fr) minmax(0, 1.4fr); gap: 6vw; padding-block: 20px clamp(70px, 8vw, 125px); }
+.model-story > .kick { display: block; padding-top: 9px; font-weight: 400; }
+.model-story .page-prose { margin: 0; }
+.model-story .page-prose p { white-space: pre-line; }
+.model-story .page-prose p:last-child { margin-bottom: 0; }
+.model-gallery, .model-technical, .model-finishes { padding-block: clamp(55px, 7vw, 110px); border-top: 1px solid var(--hair); }
+.model-gallery-thumbnails { display: flex; flex-wrap: wrap; gap: 14px; margin-block: 0 32px; }
+.model-gallery-thumbnails a { position: relative; display: block; width: clamp(70px, 8vw, 116px); aspect-ratio: 1.15; background: var(--bg3); border: 1px solid var(--hair); transition: border-color .25s ease; }
+.model-gallery-thumbnails a:hover { border-color: var(--ink); }
+.model-gallery-thumbnails img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.model-gallery-thumbnails span { position: absolute; right: 5px; bottom: 5px; padding: 3px 5px; background: var(--bg); color: var(--muted); font-size: 9px; line-height: 1; font-variant-numeric: tabular-nums; }
+.model-gallery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 4vw, 64px); align-items: start; }
+.model-gallery-view { min-width: 0; margin: 0; scroll-margin-top: 120px; }
+.model-gallery-view:nth-child(3n + 1) { grid-column: 1 / -1; }
+.model-gallery-view .page-image { aspect-ratio: 1.3; }
+.model-gallery-view:nth-child(3n + 1) .page-image { aspect-ratio: 1.85; }
+.model-detail .model-gallery-view img { object-fit: contain; }
+.model-gallery-view figcaption { margin-top: 13px; }
+.model-technical { background: var(--bg2); }
+.model-dimensions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 4.3vw; margin: 0; }
+.model-dimension { min-width: 0; border-top: 1px solid var(--hair); padding-top: 20px; }
+.model-dimension-drawing { display: flex; align-items: center; justify-content: center; aspect-ratio: 1.8; padding: clamp(18px, 3vw, 40px); background: #fff; }
+.model-dimension-drawing img { width: 100%; height: 100%; max-height: 320px; object-fit: contain; }
+.model-dimension dt { font-size: 16px; font-weight: 400; line-height: 1.6; }
+.model-dimension dd { margin: 8px 0 0; white-space: pre-line; font-size: 15px; font-weight: 300; line-height: 1.8; color: var(--muted); }
+.model-dimension .model-seating { display: flex; flex-direction: column; gap: 3px; font-size: 12px; }
+.model-drawings { margin-top: 45px; }
+.model-drawings h3 { margin: 0 0 24px; font-size: 24px; font-weight: 300; }
+.model-drawings-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 4.3vw; }
+.model-drawings figure { min-width: 0; margin: 0; }
+.model-drawings figcaption { margin-top: 14px; }
+.model-technical-download { flex-wrap: wrap; column-gap: 18px; margin-top: 35px; }
+.model-technical-download .model-file-format { color: var(--faint); font-size: 10px; font-weight: 400; letter-spacing: .1em; }
+.model-finish-group { border-top: 1px solid var(--hair); scroll-margin-top: 140px; }
+.model-detail :is(h2[id], summary) { scroll-margin-top: 140px; }
+.model-finish-group:last-child { border-bottom: 1px solid var(--hair); }
+.model-finish-group summary { display: flex; align-items: center; gap: 20px; padding-block: 24px; cursor: pointer; list-style: none; }
+.model-finish-group summary::-webkit-details-marker { display: none; }
+.model-finish-group h3 { flex: 1; margin: 0; font-size: clamp(19px, 1.65vw, 25px); font-weight: 300; line-height: 1.5; letter-spacing: -.01em; }
+.model-finish-count { flex: none; color: var(--faint); font-size: 11px; line-height: 1.6; }
+.model-finish-toggle { flex: none; font-size: 27px; font-weight: 200; line-height: 1; transition: transform .25s ease; }
+.model-finish-group[open] .model-finish-toggle { transform: rotate(45deg); }
+.model-finish-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 3vw; list-style: none; margin: 0; padding: 0; }
+.model-finish-group[open] .model-finish-list { padding-block: 8px 35px; }
+.model-finish { min-width: 0; }
+.model-finish-image { display: block; aspect-ratio: 1.25; margin-bottom: 16px; background: var(--bg3); }
+.model-finish-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.model-finish p { margin: 0; font-size: 15px; font-weight: 300; line-height: 1.6; }
+.model-finish-code { display: block; margin-top: 6px; color: var(--faint); font-size: 11px; line-height: 1.6; letter-spacing: .06em; }
+.model-source { padding-block: 20px 55px; }
+.model-source .text-link { color: var(--muted); font-size: 10px; }
+.model-project .btn { white-space: normal; height: auto; min-height: 48px; padding-block: 15px; text-align: center; line-height: 1.6; }
+.model-detail .model-project .model-site-notice { margin: 28px 0 0; max-width: 780px; font-size: 12px; line-height: 1.7; color: var(--faint); }
+
+@media (max-width: 850px) {
+  .model-detail .model-detail-hero { padding-top: 30px; }
+  .model-breadcrumb { margin-bottom: 38px; }
+  .model-breadcrumb ol { gap: 8px 10px; font-size: 9px; }
+  .model-breadcrumb li + li::before { margin-right: 10px; }
+  .model-hero-with-image { grid-template-columns: 1fr; }
+  .model-detail .model-detail-hero h1 { max-width: 700px; font-size: clamp(38px, 8.5vw, 64px); }
+  .model-hero-copy .page-lead { max-width: 680px; }
+  .model-hero-image { aspect-ratio: 4 / 3; }
+  .model-story { grid-template-columns: 1fr; gap: 22px; padding-top: 5px; }
+  .model-story > .kick { padding-top: 0; }
+  .model-dimensions { gap: 32px 24px; }
+  .model-finish-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px 24px; }
+}
+@media (max-width: 500px) {
+  .model-breadcrumb { margin-bottom: 30px; }
+  .model-detail .model-detail-hero h1 { font-size: clamp(36px, 10vw, 50px); }
+  .model-hero-image { aspect-ratio: 4 / 3; }
+  .model-gallery-thumbnails { gap: 10px; }
+  .model-gallery-thumbnails a { width: 70px; }
+  .model-gallery-grid, .model-dimensions, .model-drawings-grid { grid-template-columns: 1fr; }
+  .model-gallery-view:nth-child(3n + 1) { grid-column: auto; }
+  .model-gallery-view .page-image, .model-gallery-view:nth-child(3n + 1) .page-image { aspect-ratio: 1.15; }
+  .model-gallery-view { scroll-margin-top: 95px; }
+  .model-finish-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; }
+  .model-finish p { font-size: 14px; }
+  .model-finish-group summary { flex-wrap: wrap; column-gap: 14px; row-gap: 8px; }
+  .model-finish-group h3 { flex-basis: calc(100% - 41px); order: 0; }
+  .model-finish-toggle { order: 1; width: 27px; text-align: right; }
+  .model-finish-count { order: 2; flex-basis: 100%; }
+  .model-source { padding-bottom: 42px; }
+}

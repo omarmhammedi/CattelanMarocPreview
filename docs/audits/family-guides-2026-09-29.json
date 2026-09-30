@@ -1,0 +1,357 @@
+{
+  "date": "2026-09-29",
+  "timezone": "America/Toronto",
+  "branch": "feat/emdash-migration",
+  "migration": "0008-family-guides",
+  "publishedAtToronto": "2026-09-29 10:36:57–10:37:09 EDT",
+  "manifestSha256": "bda81fcb942ae1fbce76bb682f1093c15846ad04db41617f178dda77215766a4",
+  "familiesPublished": 6,
+  "existingModelsPreserved": 11,
+  "idempotent": true,
+  "cms": {
+    "verifiedAt": "2026-09-29T14:34:51.215Z",
+    "disposable": true,
+    "passed": true,
+    "results": [
+      "Six synthetic family baselines prepared through native APIs in disposable state.",
+      "Dry run leaves all entries unchanged.",
+      "Six guides published with original fields preserved; repeated migration makes zero changes.",
+      "Anonymous visitors retain published content while the guide has a draft.",
+      "The signed preview renders the draft.",
+      "Migration refuses a pending editor draft without changing its revision.",
+      "Native publication updates the public page without a rebuild.",
+      "Clearing the optional guide body removes its headings from the public page.",
+      "Native SEO remains immediate, independently of content publication."
+    ]
+  },
+  "publicSuites": [
+    {
+      "engine": "chromium",
+      "theme": "dark",
+      "passed": true,
+      "checks": [
+        {
+          "name": "SSR tables: introduction, corps, carte, SEO et sélection existante",
+          "models": [
+            "skorpio",
+            "napoleon-keramik"
+          ]
+        },
+        {
+          "name": "SSR chaises-tabourets: introduction, corps, carte, SEO et sélection existante",
+          "models": [
+            "rhonda",
+            "greta"
+          ]
+        },
+        {
+          "name": "SSR canapes-fauteuils: introduction, corps, carte, SEO et sélection existante",
+          "models": [
+            "ruby",
+            "ruby-lounge"
+          ]
+        },
+        {
+          "name": "SSR buffets-bibliotheques: introduction, corps, carte, SEO et sélection existante",
+          "models": [
+            "chelsea",
+            "airport"
+          ]
+        },
+        {
+          "name": "SSR luminaires: introduction, corps, carte, SEO et sélection existante",
+          "models": [
+            "bloom"
+          ]
+        },
+        {
+          "name": "SSR mobilier-exterieur: introduction, corps, carte, SEO et sélection existante",
+          "models": [
+            "napoleon-keramik-outdoor",
+            "greta-outdoor"
+          ]
+        },
+        {
+          "name": "11 fiches modèles : textes, SEO, galeries et liens PDF conservés"
+        },
+        {
+          "name": "29 liens internes des familles : réponses 200 et ancres présentes"
+        },
+        {
+          "name": "chromium 1440×900 dark : tables, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 1440×900 dark : chaises-tabourets, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 1440×900 dark : canapes-fauteuils, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 1440×900 dark : buffets-bibliotheques, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 1440×900 dark : luminaires, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 1440×900 dark : mobilier-exterieur, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 1440 : lien famille→modèle et changement de thème au clavier"
+        },
+        {
+          "name": "chromium 390×844 dark : tables, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 390×844 dark : chaises-tabourets, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 390×844 dark : canapes-fauteuils, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 390×844 dark : buffets-bibliotheques, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 390×844 dark : luminaires, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 390×844 dark : mobilier-exterieur, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 390 : lien famille→modèle et changement de thème au clavier"
+        }
+      ],
+      "internalLinks": [
+        "/collections/tables/#main-content",
+        "/",
+        "/collections/",
+        "/showroom-casablanca/",
+        "/journal/",
+        "/catalogue/",
+        "/modeles/skorpio/",
+        "/modeles/napoleon-keramik/",
+        "/showroom-casablanca/#showroom-contact",
+        "/journal/choisir-forme-proportions-table-salle-a-manger/",
+        "/confidentialite/",
+        "/collections/chaises-tabourets/#main-content",
+        "/modeles/rhonda/",
+        "/modeles/greta/",
+        "/journal/associer-table-chaises-salle-a-manger/",
+        "/collections/canapes-fauteuils/#main-content",
+        "/modeles/ruby/",
+        "/modeles/ruby-lounge/",
+        "/journal/composer-salon-canape-fauteuil/",
+        "/collections/buffets-bibliotheques/#main-content",
+        "/modeles/chelsea/",
+        "/modeles/airport/",
+        "/journal/choisir-buffet-bibliotheque-salon/",
+        "/collections/luminaires/#main-content",
+        "/modeles/bloom/",
+        "/journal/ceramique-verre-bois-choisir-finition-meuble/",
+        "/collections/mobilier-exterieur/#main-content",
+        "/modeles/napoleon-keramik-outdoor/",
+        "/modeles/greta-outdoor/"
+      ],
+      "errors": [],
+      "attemptedWrites": [],
+      "blockedPrivateRequests": []
+    },
+    {
+      "engine": "chromium",
+      "theme": "light",
+      "passed": true,
+      "checks": [
+        {
+          "name": "chromium 1440×900 light : tables, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 1440×900 light : chaises-tabourets, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 1440×900 light : canapes-fauteuils, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 1440×900 light : buffets-bibliotheques, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 1440×900 light : luminaires, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 1440×900 light : mobilier-exterieur, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 1440 : lien famille→modèle et changement de thème au clavier"
+        },
+        {
+          "name": "chromium 390×844 light : tables, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 390×844 light : chaises-tabourets, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 390×844 light : canapes-fauteuils, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 390×844 light : buffets-bibliotheques, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 390×844 light : luminaires, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 390×844 light : mobilier-exterieur, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "chromium 390 : lien famille→modèle et changement de thème au clavier"
+        }
+      ],
+      "internalLinks": [],
+      "errors": [],
+      "attemptedWrites": [],
+      "blockedPrivateRequests": []
+    },
+    {
+      "engine": "webkit",
+      "theme": "dark",
+      "passed": true,
+      "checks": [
+        {
+          "name": "webkit 1440×900 dark : tables, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 1440×900 dark : chaises-tabourets, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 1440×900 dark : canapes-fauteuils, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 1440×900 dark : buffets-bibliotheques, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 1440×900 dark : luminaires, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 1440×900 dark : mobilier-exterieur, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 1440 : lien famille→modèle et changement de thème au clavier"
+        },
+        {
+          "name": "webkit 390×844 dark : tables, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 390×844 dark : chaises-tabourets, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 390×844 dark : canapes-fauteuils, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 390×844 dark : buffets-bibliotheques, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 390×844 dark : luminaires, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 390×844 dark : mobilier-exterieur, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 390 : lien famille→modèle et changement de thème au clavier"
+        }
+      ],
+      "internalLinks": [],
+      "errors": [],
+      "attemptedWrites": [],
+      "blockedPrivateRequests": []
+    },
+    {
+      "engine": "webkit",
+      "theme": "light",
+      "passed": true,
+      "checks": [
+        {
+          "name": "webkit 1440×900 light : tables, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 1440×900 light : chaises-tabourets, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 1440×900 light : canapes-fauteuils, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 1440×900 light : buffets-bibliotheques, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 1440×900 light : luminaires, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 1440×900 light : mobilier-exterieur, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 1440 : lien famille→modèle et changement de thème au clavier"
+        },
+        {
+          "name": "webkit 390×844 light : tables, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 390×844 light : chaises-tabourets, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 390×844 light : canapes-fauteuils, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 390×844 light : buffets-bibliotheques, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 390×844 light : luminaires, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 390×844 light : mobilier-exterieur, guide/sélection/actions sans débordement"
+        },
+        {
+          "name": "webkit 390 : lien famille→modèle et changement de thème au clavier"
+        }
+      ],
+      "internalLinks": [],
+      "errors": [],
+      "attemptedWrites": [],
+      "blockedPrivateRequests": []
+    }
+  ],
+  "validation": {
+    "unitTests": 72,
+    "astro": {
+      "files": 91,
+      "errors": 0,
+      "warnings": 0,
+      "hints": 0
+    },
+    "seedValidatedOnly": true,
+    "buildSeconds": 24.33,
+    "buildWarning": "Existing bundle >500 kB"
+  },
+  "preservation": {
+    "ok": true,
+    "strictTables": 29,
+    "existingFilesVerified": 626,
+    "addedTechnicalUsers": 0,
+    "existingUsers": 2,
+    "existingPasskeys": 2,
+    "nativeLogoutStatus": 200,
+    "oldCookieStatus": 401,
+    "newSessionFileDeleted": true
+  },
+  "screenshotsDirectory": "docs/screenshots/family-guides-2026-09-29",
+  "constraints": {
+    "port4321": "private",
+    "previewIndexable": false,
+    "pr": 1,
+    "draft": true,
+    "productionDeployed": false,
+    "primarySetupOrReseed": false
+  },
+  "limitations": [
+    "Provisional family ambience images and demonstration catalogue PDF preserved.",
+    "Catalogue form/contact/private-download flow unchanged; no new primary submission.",
+    "Public layouts use reduced motion; no new normal-animation or physical-iPhone validation.",
+    "Native SEO saves immediately outside content drafts.",
+    "Existing broader SEO backlog remains."
+  ]
+}

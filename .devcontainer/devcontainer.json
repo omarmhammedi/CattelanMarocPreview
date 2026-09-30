@@ -1,0 +1,33 @@
+{
+  "name": "Cattelan Maroc · EmDash",
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "24" },
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "forwardPorts": [4321],
+  "portsAttributes": {
+    "4321": {
+      "label": "Cattelan + administration (privé)",
+      "onAutoForward": "notify",
+      "protocol": "http"
+    }
+  },
+  "postCreateCommand": "npm ci && node scripts/setup-dev.mjs",
+  "postStartCommand": {
+    "taskAutostop": "node .devcontainer/task-autostop.mjs start",
+    "preview": "bash .devcontainer/preview-start.sh start"
+  },
+  "postAttachCommand": {
+    "privatePort": "node .devcontainer/private-port.mjs",
+    "taskAutostop": "node .devcontainer/task-autostop.mjs start",
+    "preview": "bash .devcontainer/preview-start.sh start"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["astro-build.astro-vscode"],
+      "settings": { "files.exclude": { "**/.wrangler": true } }
+    }
+  },
+  "remoteUser": "vscode"
+}

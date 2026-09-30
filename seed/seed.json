@@ -1,0 +1,3194 @@
+{
+  "$schema": "https://emdashcms.com/seed.schema.json",
+  "version": "1",
+  "defaultLocale": "fr",
+  "meta": {
+    "name": "Cattelan Italia Maroc — version B",
+    "description": "Site vitrine français, catalogue sur demande et Journal. Contenus de préparation à valider.",
+    "author": "Cattelan Italia Maroc"
+  },
+  "settings": {
+    "title": "Cattelan Italia Maroc",
+    "tagline": "Vivre italien, à Casablanca",
+    "timezone": "Africa/Casablanca",
+    "postsPerPage": 12,
+    "dateFormat": "d MMMM yyyy"
+  },
+  "collections": [
+    {
+      "slug": "pages",
+      "label": "Pages",
+      "labelSingular": "Pages",
+      "group": "Contenu du site",
+      "sortOrder": 1,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "seo"
+      ],
+      "routable": true,
+      "commentsEnabled": false,
+      "titleField": "title",
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Titre principal",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "route_key",
+          "label": "Page du site",
+          "type": "select",
+          "required": true,
+          "validation": {
+            "options": [
+              "home",
+              "collections",
+              "showroom",
+              "catalogue",
+              "journal"
+            ]
+          }
+        },
+        {
+          "slug": "eyebrow",
+          "label": "Sur-titre",
+          "type": "string"
+        },
+        {
+          "slug": "intro",
+          "label": "Introduction",
+          "type": "text"
+        },
+        {
+          "slug": "hero_image",
+          "label": "Image principale",
+          "type": "image",
+          "validation": {
+            "allowedMimeTypes": [
+              "image/jpeg",
+              "image/png",
+              "image/webp",
+              "image/avif"
+            ]
+          }
+        },
+        {
+          "slug": "content",
+          "label": "Corps de page",
+          "type": "portableText"
+        },
+        {
+          "slug": "sections",
+          "label": "Sections éditoriales",
+          "type": "repeater",
+          "validation": {
+            "maxItems": 20,
+            "subFields": [
+              {
+                "slug": "section_key",
+                "label": "Repère de section",
+                "type": "string"
+              },
+              {
+                "slug": "heading",
+                "label": "Titre éditorial",
+                "type": "string"
+              },
+              {
+                "slug": "display_heading",
+                "label": "Titre court pour l’affichage",
+                "type": "string"
+              },
+              {
+                "slug": "text",
+                "label": "Texte",
+                "type": "text"
+              },
+              {
+                "slug": "cta_label",
+                "label": "Libellé du bouton",
+                "type": "string"
+              },
+              {
+                "slug": "cta_href",
+                "label": "Destination du bouton",
+                "type": "string"
+              },
+              {
+                "slug": "image",
+                "label": "Image",
+                "type": "image",
+                "validation": {
+                  "allowedMimeTypes": [
+                    "image/jpeg",
+                    "image/png",
+                    "image/webp",
+                    "image/avif"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "slug": "brand_image",
+          "label": "Image de la présentation de marque",
+          "type": "image",
+          "validation": {
+            "allowedMimeTypes": [
+              "image/jpeg",
+              "image/png",
+              "image/webp",
+              "image/avif"
+            ]
+          }
+        },
+        {
+          "slug": "brand_detail_image",
+          "label": "Détail de matière",
+          "type": "image",
+          "validation": {
+            "allowedMimeTypes": [
+              "image/jpeg",
+              "image/png",
+              "image/webp",
+              "image/avif"
+            ]
+          }
+        },
+        {
+          "slug": "brand_caption",
+          "label": "Légende de la présentation",
+          "type": "string"
+        },
+        {
+          "slug": "showroom_image",
+          "label": "Image de l’invitation showroom",
+          "type": "image",
+          "validation": {
+            "allowedMimeTypes": [
+              "image/jpeg",
+              "image/png",
+              "image/webp",
+              "image/avif"
+            ]
+          }
+        },
+        {
+          "slug": "showroom_invitation",
+          "label": "Invitation à préparer sa visite",
+          "type": "text"
+        },
+        {
+          "slug": "seo_title",
+          "label": "Titre pour les moteurs de recherche",
+          "type": "string",
+          "validation": {
+            "maxLength": 90
+          }
+        },
+        {
+          "slug": "meta_description",
+          "label": "Description pour les moteurs de recherche",
+          "type": "text",
+          "validation": {
+            "maxLength": 180
+          }
+        }
+      ],
+      "urlPattern": "/{slug}/"
+    },
+    {
+      "slug": "families",
+      "label": "Familles de mobilier",
+      "labelSingular": "Familles de mobilier",
+      "group": "Contenu du site",
+      "sortOrder": 2,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "seo"
+      ],
+      "routable": true,
+      "commentsEnabled": false,
+      "titleField": "title",
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Titre principal",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "short_title",
+          "label": "Nom court",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "card_text",
+          "label": "Texte de carte",
+          "type": "text"
+        },
+        {
+          "slug": "intro",
+          "label": "Introduction",
+          "type": "text"
+        },
+        {
+          "slug": "image",
+          "label": "Image d’ambiance",
+          "type": "image",
+          "validation": {
+            "allowedMimeTypes": [
+              "image/jpeg",
+              "image/png",
+              "image/webp",
+              "image/avif"
+            ]
+          }
+        },
+        {
+          "slug": "image_caption",
+          "label": "Légende de l’image",
+          "type": "string"
+        },
+        {
+          "slug": "content",
+          "label": "Corps de page",
+          "type": "portableText"
+        },
+        {
+          "slug": "sort_order",
+          "label": "Ordre d’affichage",
+          "type": "integer",
+          "required": true,
+          "defaultValue": 0
+        },
+        {
+          "slug": "models",
+          "label": "Sélection de modèles",
+          "type": "reference",
+          "validation": {
+            "relation": "family_models"
+          }
+        },
+        {
+          "slug": "related_post",
+          "label": "Article associé",
+          "type": "reference",
+          "validation": {
+            "relation": "family_posts"
+          }
+        },
+        {
+          "slug": "seo_title",
+          "label": "Titre pour les moteurs de recherche",
+          "type": "string",
+          "validation": {
+            "maxLength": 90
+          }
+        },
+        {
+          "slug": "meta_description",
+          "label": "Description pour les moteurs de recherche",
+          "type": "text",
+          "validation": {
+            "maxLength": 180
+          }
+        }
+      ],
+      "urlPattern": "/collections/{slug}/",
+      "admin": {
+        "listColumns": [
+          "sort_order"
+        ]
+      }
+    },
+    {
+      "slug": "models",
+      "label": "Modèles présentés",
+      "labelSingular": "Modèles présentés",
+      "group": "Contenu du site",
+      "sortOrder": 3,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "seo"
+      ],
+      "routable": true,
+      "commentsEnabled": false,
+      "titleField": "title",
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Nom du modèle",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "description",
+          "label": "Présentation courte",
+          "type": "text",
+          "required": true
+        },
+        {
+          "slug": "image",
+          "label": "Photographie du modèle exact",
+          "type": "image",
+          "validation": {
+            "allowedMimeTypes": [
+              "image/jpeg",
+              "image/png",
+              "image/webp",
+              "image/avif"
+            ]
+          }
+        },
+        {
+          "slug": "image_caption",
+          "label": "Légende",
+          "type": "string"
+        },
+        {
+          "slug": "official_url",
+          "label": "Fiche officielle Cattelan Italia",
+          "type": "url"
+        },
+        {
+          "slug": "availability_note",
+          "label": "Mention sur disponibilité et exposition",
+          "type": "text"
+        },
+        {
+          "slug": "release_year",
+          "label": "Année de création",
+          "type": "integer",
+          "required": false
+        },
+        {
+          "slug": "content",
+          "label": "Présentation et détails techniques",
+          "type": "portableText",
+          "required": false
+        },
+        {
+          "slug": "gallery",
+          "label": "Galerie du modèle",
+          "type": "repeater",
+          "required": false,
+          "validation": {
+            "subFields": [
+              {
+                "slug": "image",
+                "label": "Photographie",
+                "type": "image"
+              },
+              {
+                "slug": "caption",
+                "label": "Légende",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "dimensions",
+          "label": "Dimensions et configurations",
+          "type": "repeater",
+          "required": false,
+          "validation": {
+            "subFields": [
+              {
+                "slug": "label",
+                "label": "Configuration",
+                "type": "string"
+              },
+              {
+                "slug": "value",
+                "label": "Dimensions",
+                "type": "string"
+              },
+              {
+                "slug": "seats",
+                "label": "Places",
+                "type": "integer"
+              },
+              {
+                "slug": "large_seats",
+                "label": "Places avec de grandes chaises",
+                "type": "integer"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "drawings",
+          "label": "Dessins techniques",
+          "type": "repeater",
+          "required": false,
+          "validation": {
+            "subFields": [
+              {
+                "slug": "label",
+                "label": "Légende",
+                "type": "string"
+              },
+              {
+                "slug": "row",
+                "label": "Rangée",
+                "type": "integer"
+              },
+              {
+                "slug": "column",
+                "label": "Colonne",
+                "type": "integer"
+              },
+              {
+                "slug": "image",
+                "label": "Dessin",
+                "type": "image"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "finishes",
+          "label": "Matériaux et finitions",
+          "type": "repeater",
+          "required": false,
+          "validation": {
+            "subFields": [
+              {
+                "slug": "group",
+                "label": "Élément",
+                "type": "string"
+              },
+              {
+                "slug": "material_group",
+                "label": "Famille de matériaux",
+                "type": "string"
+              },
+              {
+                "slug": "material",
+                "label": "Matériau",
+                "type": "string"
+              },
+              {
+                "slug": "name",
+                "label": "Finition",
+                "type": "string"
+              },
+              {
+                "slug": "code",
+                "label": "Référence",
+                "type": "string"
+              },
+              {
+                "slug": "image",
+                "label": "Échantillon",
+                "type": "image"
+              }
+            ]
+          }
+        },
+        {
+          "slug": "technical_sheet",
+          "label": "Fiche technique publique",
+          "type": "file",
+          "required": false,
+          "validation": {
+            "allowedMimeTypes": [
+              "application/pdf"
+            ]
+          }
+        },
+        {
+          "slug": "technical_sheet_label",
+          "label": "Libellé de la fiche technique",
+          "type": "string",
+          "required": false
+        },
+        {
+          "slug": "source_url",
+          "label": "Source officielle française",
+          "type": "url",
+          "required": false
+        },
+        {
+          "slug": "source_verified_at",
+          "label": "Source vérifiée le",
+          "type": "datetime",
+          "required": false
+        }
+      ],
+      "urlPattern": "/modeles/{slug}/"
+    },
+    {
+      "slug": "posts",
+      "label": "Journal",
+      "labelSingular": "Journal",
+      "group": "Contenu du site",
+      "sortOrder": 4,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "seo"
+      ],
+      "routable": true,
+      "commentsEnabled": false,
+      "titleField": "title",
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Titre",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "excerpt",
+          "label": "Extrait",
+          "type": "text",
+          "required": true
+        },
+        {
+          "slug": "content",
+          "label": "Article",
+          "type": "portableText",
+          "required": true
+        },
+        {
+          "slug": "image",
+          "label": "Image principale",
+          "type": "image",
+          "validation": {
+            "allowedMimeTypes": [
+              "image/jpeg",
+              "image/png",
+              "image/webp",
+              "image/avif"
+            ]
+          }
+        },
+        {
+          "slug": "image_caption",
+          "label": "Légende de l’image",
+          "type": "string"
+        },
+        {
+          "slug": "sources",
+          "label": "Sources officielles",
+          "type": "repeater",
+          "validation": {
+            "maxItems": 12,
+            "subFields": [
+              {
+                "slug": "label",
+                "label": "Source",
+                "type": "string",
+                "required": true
+              },
+              {
+                "slug": "url",
+                "label": "Adresse",
+                "type": "url",
+                "required": true
+              }
+            ]
+          }
+        },
+        {
+          "slug": "cta_text",
+          "label": "Invitation en fin d’article",
+          "type": "text"
+        },
+        {
+          "slug": "cta_label",
+          "label": "Libellé du bouton",
+          "type": "string"
+        },
+        {
+          "slug": "cta_href",
+          "label": "Destination du bouton",
+          "type": "string"
+        },
+        {
+          "slug": "seo_title",
+          "label": "Titre pour les moteurs de recherche",
+          "type": "string",
+          "validation": {
+            "maxLength": 90
+          }
+        },
+        {
+          "slug": "meta_description",
+          "label": "Description pour les moteurs de recherche",
+          "type": "text",
+          "validation": {
+            "maxLength": 180
+          }
+        }
+      ],
+      "urlPattern": "/journal/{slug}/"
+    },
+    {
+      "slug": "catalogues",
+      "label": "Catalogues",
+      "labelSingular": "Catalogues",
+      "group": "Contenu du site",
+      "sortOrder": 5,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "seo"
+      ],
+      "routable": false,
+      "commentsEnabled": false,
+      "titleField": "title",
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Titre du catalogue",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "edition",
+          "label": "Édition",
+          "type": "string"
+        },
+        {
+          "slug": "description",
+          "label": "Présentation",
+          "type": "text"
+        },
+        {
+          "slug": "cover",
+          "label": "Couverture",
+          "type": "image",
+          "validation": {
+            "allowedMimeTypes": [
+              "image/jpeg",
+              "image/png",
+              "image/webp",
+              "image/avif"
+            ]
+          }
+        },
+        {
+          "slug": "download_label",
+          "label": "Libellé du téléchargement",
+          "type": "string"
+        },
+        {
+          "slug": "private_file_key",
+          "label": "Référence du PDF privé",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "is_placeholder",
+          "label": "Document de démonstration",
+          "type": "boolean",
+          "defaultValue": true
+        }
+      ],
+      "urlPattern": "/catalogue/"
+    },
+    {
+      "slug": "site_content",
+      "label": "Contenus communs",
+      "labelSingular": "Contenus communs",
+      "group": "Contenu du site",
+      "sortOrder": 6,
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "seo"
+      ],
+      "routable": false,
+      "commentsEnabled": false,
+      "titleField": "title",
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Nom de cette configuration",
+          "type": "string",
+          "required": true
+        },
+        {
+          "slug": "city",
+          "label": "Ville du showroom",
+          "type": "string"
+        },
+        {
+          "slug": "brand_location",
+          "label": "Libellé sous le logo",
+          "type": "string",
+          "required": false,
+          "options": {
+            "helpText": "Libellé géographique de la marque, distinct de la ville du showroom. Vider ce champ masque la ligne sous le logo."
+          }
+        },
+        {
+          "slug": "contact_phone",
+          "label": "Téléphone public",
+          "type": "string"
+        },
+        {
+          "slug": "whatsapp_url",
+          "label": "Lien WhatsApp",
+          "type": "url"
+        },
+        {
+          "slug": "public_email",
+          "label": "Email commercial public",
+          "type": "string"
+        },
+        {
+          "slug": "address",
+          "label": "Adresse vérifiée",
+          "type": "text"
+        },
+        {
+          "slug": "hours",
+          "label": "Horaires vérifiés",
+          "type": "text"
+        },
+        {
+          "slug": "map_url",
+          "label": "Itinéraire vers le magasin",
+          "type": "url"
+        },
+        {
+          "slug": "map_embed_url",
+          "label": "Carte Google Maps interactive — URL seulement",
+          "type": "url",
+          "required": false,
+          "options": {
+            "helpText": "Collez uniquement l’URL https://www.google.com/maps/embed?pb=… du code Google Maps, sans balise iframe. La carte est chargée sur demande ; vider ce champ masque le bouton."
+          }
+        },
+        {
+          "slug": "map_note",
+          "label": "Précision sur le plan illustré",
+          "type": "text",
+          "required": false,
+          "options": {
+            "helpText": "Cette note distingue le plan illustratif du véritable itinéraire Google Maps."
+          }
+        },
+        {
+          "slug": "showroom_latitude",
+          "label": "Latitude du showroom",
+          "type": "number",
+          "required": false,
+          "validation": {
+            "min": -90,
+            "max": 90
+          },
+          "options": {
+            "helpText": "Coordonnée du repère réel du showroom en degrés décimaux. Vider une coordonnée masque le repère."
+          }
+        },
+        {
+          "slug": "showroom_longitude",
+          "label": "Longitude du showroom",
+          "type": "number",
+          "required": false,
+          "validation": {
+            "min": -180,
+            "max": 180
+          },
+          "options": {
+            "helpText": "Coordonnée du repère réel du showroom en degrés décimaux. Vider une coordonnée masque le repère."
+          }
+        },
+        {
+          "slug": "logo_light",
+          "label": "Logo sur fond clair",
+          "type": "image",
+          "validation": {
+            "allowedMimeTypes": [
+              "image/jpeg",
+              "image/png",
+              "image/webp",
+              "image/avif"
+            ]
+          }
+        },
+        {
+          "slug": "logo_dark",
+          "label": "Logo sur fond sombre",
+          "type": "image",
+          "validation": {
+            "allowedMimeTypes": [
+              "image/jpeg",
+              "image/png",
+              "image/webp",
+              "image/avif"
+            ]
+          }
+        },
+        {
+          "slug": "footer_text",
+          "label": "Présentation du pied de page",
+          "type": "text"
+        },
+        {
+          "slug": "catalogue_label",
+          "label": "Bouton catalogue",
+          "type": "string"
+        },
+        {
+          "slug": "contact_label",
+          "label": "Bouton de contact",
+          "type": "string"
+        },
+        {
+          "slug": "collections_label",
+          "label": "Navigation collections",
+          "type": "string"
+        },
+        {
+          "slug": "showroom_label",
+          "label": "Navigation showroom",
+          "type": "string"
+        },
+        {
+          "slug": "journal_label",
+          "label": "Navigation Journal",
+          "type": "string"
+        },
+        {
+          "slug": "read_article_label",
+          "label": "Lien lire un article",
+          "type": "string"
+        },
+        {
+          "slug": "discover_label",
+          "label": "Bouton découvrir une collection",
+          "type": "string",
+          "required": true,
+          "defaultValue": "Découvrir"
+        },
+        {
+          "slug": "model_notice",
+          "label": "Précision sur la sélection de modèles",
+          "type": "text"
+        },
+        {
+          "slug": "preview_notice",
+          "label": "Mention de prévisualisation",
+          "type": "text"
+        },
+        {
+          "slug": "form_name_label",
+          "label": "Libellé du nom",
+          "type": "string"
+        },
+        {
+          "slug": "form_email_label",
+          "label": "Libellé de l’email",
+          "type": "string"
+        },
+        {
+          "slug": "form_opt_in_label",
+          "label": "Choix facultatif de communications",
+          "type": "text"
+        },
+        {
+          "slug": "form_hint",
+          "label": "Précision sous le formulaire",
+          "type": "text"
+        },
+        {
+          "slug": "form_privacy",
+          "label": "Information sur les coordonnées",
+          "type": "text"
+        },
+        {
+          "slug": "form_pending",
+          "label": "Demande en cours",
+          "type": "text"
+        },
+        {
+          "slug": "form_name_error",
+          "label": "Erreur de nom",
+          "type": "text"
+        },
+        {
+          "slug": "form_email_error",
+          "label": "Erreur d’email",
+          "type": "text"
+        },
+        {
+          "slug": "form_error",
+          "label": "Erreur générale",
+          "type": "text"
+        },
+        {
+          "slug": "form_success_title",
+          "label": "Titre après enregistrement",
+          "type": "string"
+        },
+        {
+          "slug": "form_success_text",
+          "label": "Texte après enregistrement",
+          "type": "text"
+        },
+        {
+          "slug": "form_unavailable",
+          "label": "Catalogue indisponible",
+          "type": "text"
+        },
+        {
+          "slug": "placeholder_notice",
+          "label": "Mention du PDF de test",
+          "type": "text"
+        },
+        {
+          "slug": "active_catalogue",
+          "label": "Catalogue actuellement proposé",
+          "type": "reference",
+          "validation": {
+            "relation": "site_catalogue"
+          }
+        }
+      ],
+      "urlPattern": "/",
+      "description": "Conserver une seule entrée « Configuration du site ». Les informations pratiques non vérifiées doivent rester vides."
+    }
+  ],
+  "relations": [
+    {
+      "slug": "family_models",
+      "parentCollection": "families",
+      "childCollection": "models",
+      "parentLabel": "Familles",
+      "childLabel": "Modèles",
+      "maxChildrenPerParent": null
+    },
+    {
+      "slug": "family_posts",
+      "parentCollection": "families",
+      "childCollection": "posts",
+      "parentLabel": "Familles",
+      "childLabel": "Article associé",
+      "maxChildrenPerParent": 1
+    },
+    {
+      "slug": "site_catalogue",
+      "parentCollection": "site_content",
+      "childCollection": "catalogues",
+      "parentLabel": "Configuration du site",
+      "childLabel": "Catalogue actif",
+      "maxChildrenPerParent": 1
+    }
+  ],
+  "taxonomies": [
+    {
+      "name": "category",
+      "label": "Rubriques du Journal",
+      "labelSingular": "Rubrique",
+      "hierarchical": false,
+      "collections": [
+        "posts"
+      ],
+      "terms": [
+        {
+          "slug": "conseils-damenagement",
+          "label": "Conseils d’aménagement"
+        },
+        {
+          "slug": "associations-et-matieres",
+          "label": "Associations et matières"
+        },
+        {
+          "slug": "matieres-et-finitions",
+          "label": "Matières et finitions"
+        }
+      ]
+    }
+  ],
+  "bylines": [
+    {
+      "id": "editorial-cattelan",
+      "slug": "cattelan-italia-maroc",
+      "displayName": "Cattelan Italia Maroc",
+      "isGuest": true
+    }
+  ],
+  "content": {
+    "models": [
+      {
+        "id": "model-skorpio",
+        "slug": "skorpio",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Skorpio",
+          "description": "Un piètement géométrique et une famille de variantes, notamment en verre, en bois et en céramique, pour explorer différentes expressions d’une même table.",
+          "official_url": "https://cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+        }
+      },
+      {
+        "id": "model-napoleon-keramik",
+        "slug": "napoleon-keramik",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Napoleon Keramik",
+          "description": "Un plateau et une base arrondie habillés de céramique, qui donnent à la table une présence continue dans la pièce.",
+          "official_url": "https://cattelanitalia.com/fr/products/DD24EC9D-FA00-4C0D-A989-9ADD6E56BFD0",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+        }
+      },
+      {
+        "id": "model-rhonda",
+        "slug": "rhonda",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Rhonda",
+          "description": "Une famille d’assises aux lignes arrondies, avec plusieurs piètements et des déclinaisons permettant de rapprocher chaises, tabourets et fauteuil lounge.",
+          "official_url": "https://cattelanitalia.com/fr/products/41ED48AE-E379-4863-8E3C-28EE1D985390",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+        }
+      },
+      {
+        "id": "model-greta",
+        "slug": "greta",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Greta",
+          "description": "Une chaise aux accoudoirs enveloppants, proposée avec différentes variantes de piètement dans sa famille. Une piste pour coordonner les assises de l’espace de vie.",
+          "official_url": "https://cattelanitalia.com/fr/products/A73FA6B3-0BA9-4F13-ADB6-FBAFC6E39BBF",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+        }
+      },
+      {
+        "id": "model-ruby",
+        "slug": "ruby",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Ruby",
+          "description": "Un canapé avec une structure en bois apparente et des lignes enveloppantes, à envisager seul ou dans une composition avec le fauteuil de la même famille.",
+          "official_url": "https://cattelanitalia.com/en/products/75C6DB4B-1A99-400D-AEE7-9D5797651F05?c=5",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+        }
+      },
+      {
+        "id": "model-ruby-lounge",
+        "slug": "ruby-lounge",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Ruby Lounge",
+          "description": "Le fauteuil de la famille Ruby reprend le dialogue entre la structure en bois et l’assise rembourrée. Il peut compléter le canapé ou trouver sa place indépendamment.",
+          "official_url": "https://cattelanitalia.com/fr/products/3BFE3570-1D83-4026-A81F-F0913AEE75BD",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+        }
+      },
+      {
+        "id": "model-chelsea",
+        "slug": "chelsea",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Chelsea",
+          "description": "Un buffet au dessin polygonal, avec un plateau proposé en verre miroir ou en céramique selon la version, pour donner une présence au rangement fermé.",
+          "official_url": "https://cattelanitalia.com/fr/products/B7E158FA-BF2D-484D-9F9A-0C3D14138E8E",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+        }
+      },
+      {
+        "id": "model-airport",
+        "slug": "airport",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Airport",
+          "description": "Une bibliothèque modulaire avec fixation murale ou au plafond, dont les éléments permettent de composer un rangement adapté à l’espace.",
+          "official_url": "https://www.cattelanitalia.com/fr/products/0BD758C3-F539-4263-BA05-CEB859A760A4",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+        }
+      },
+      {
+        "id": "model-bloom",
+        "slug": "bloom",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Bloom",
+          "description": "Des branches métalliques et des volumes de verre transparent composent ce luminaire. Sa famille comprend une version suspendue et une version sur pied.",
+          "official_url": "https://www.cattelanitalia.com/fr/products/D19C292D-87C6-429C-845C-AB448E928B3A?c=5",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+        }
+      },
+      {
+        "id": "model-napoleon-keramik-outdoor",
+        "slug": "napoleon-keramik-outdoor",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Napoleon Keramik Outdoor",
+          "description": "Une table avec plateau et base en céramique, conçue pour un espace extérieur couvert. Son piètement central reprend les formes arrondies de la famille Napoleon.",
+          "official_url": "https://www.cattelanitalia.com/fr/products/0C0E3429-09CC-4873-917D-A92A63F45D60?c=8",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+        }
+      },
+      {
+        "id": "model-greta-outdoor",
+        "slug": "greta-outdoor",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Greta Outdoor",
+          "description": "Une chaise d’extérieur rembourrée, destinée à un espace couvert et protégé des intempéries, conformément aux indications de la marque.",
+          "official_url": "https://www.cattelanitalia.com/fr/products/92839EB8-BAD8-4D0F-B0C6-C02BF107C361?c=21",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+        }
+      }
+    ],
+    "posts": [
+      {
+        "id": "post-choisir-forme-proportions-table-salle-a-manger",
+        "slug": "choisir-forme-proportions-table-salle-a-manger",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Comment choisir la forme et les proportions de sa table de salle à manger ?",
+          "excerpt": "La bonne table se choisit autant pour sa silhouette que pour la place qu’elle laisse autour d’elle. Quelques repères pour comparer les formes et se projeter.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "b0",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Partir de la pièce et de ses usages",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Une table attire souvent l’attention dès l’entrée dans une salle à manger. Pourtant, son dessin ne suffit pas à déterminer si elle trouvera sa place. Avant de comparer les modèles, observez les trajets quotidiens : de la cuisine au salon, vers une baie vitrée ou devant un buffet. La table et les chaises doivent permettre de conserver ces passages.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Distinguez ensuite vos repas habituels des occasions où vous recevez davantage de monde. Cette réflexion évite de dimensionner toute la pièce pour une situation exceptionnelle. Notez aussi les usages complémentaires : travailler ponctuellement, dessiner avec les enfants ou partager un long repas. Pensez également aux portes de placards, aux tiroirs et aux autres éléments qui doivent pouvoir s’ouvrir lorsque les sièges sont occupés. Leur position peut modifier votre implantation préférée.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b3",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Comparer les formes dans leur contexte",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b4",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Une table rectangulaire peut accompagner la longueur d’une pièce et organiser clairement un espace repas ouvert sur le salon. Une table ronde crée une composition centrée, intéressante lorsque l’on souhaite disposer les sièges autour d’un même point. Ces orientations restent à vérifier sur votre plan : une forme ronde n’occupe pas automatiquement moins de place.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b5",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Une silhouette ovale peut être envisagée lorsque l’on recherche un plateau allongé avec des extrémités courbes. Pour comparer, dessinez plusieurs propositions à la même échelle, avec les chaises. Vous verrez mieux les passages disponibles qu’en regardant uniquement les dimensions du plateau.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b6",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Regarder aussi sous le plateau",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b7",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Le piètement participe fortement à la présence d’une table. Il intervient également dans la façon dont les chaises se placent et dont les convives s’installent. Une base centrale n’offre pas nécessairement le même dégagement sur tout son pourtour ; des pieds placés aux angles peuvent aussi influencer la position des assises.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b8",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "La famille Skorpio de Cattelan Italia réunit notamment des plateaux en verre, en bois ou en céramique, ainsi que des versions rondes. Comparez chaque configuration avec les chaises envisagées, plutôt que de raisonner uniquement à partir du nom de la collection.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b9",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Évaluer l’ensemble et tester son implantation",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b10",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Deux tables de dimensions proches peuvent produire des impressions différentes. La couleur du plateau, son épaisseur apparente, le dessin de la base et les chaises modifient la lecture de l’ensemble. Une table très expressive peut devenir le point de départ de la décoration ; une silhouette plus discrète laisse davantage de place aux autres éléments.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b11",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Placez les images des modèles à côté de celles du sol, du buffet et du luminaire. Ce rapprochement aide à repérer une accumulation de motifs ou, au contraire, un ensemble trop uniforme pour l’ambiance recherchée.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b12",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Matérialisez le plateau au sol avec du papier ou du ruban adapté au revêtement. Positionnez quelques chaises, reculez-les comme pendant un repas et parcourez la pièce. Photographiez cette implantation depuis plusieurs points de vue. Ce petit exercice transforme une préférence visuelle en choix concret, plus facile à comparer avec les dimensions de la configuration retenue.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/salle-manger.jpg",
+              "filename": "salle-manger.jpg",
+              "alt": "Ambiance de mobilier — illustration provisoire de l’article",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          },
+          "image_caption": "Photographie d’ambiance provisoire.",
+          "sources": [
+            {
+              "label": "Cattelan Italia — Skorpio, présentation et fiche technique",
+              "url": "https://cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8"
+            }
+          ],
+          "cta_text": "Découvrez les collections dans le catalogue, puis contactez le showroom de Casablanca pour connaître la disponibilité de la configuration qui vous intéresse.",
+          "cta_label": "Recevoir le catalogue",
+          "cta_href": "/catalogue/",
+          "seo_title": "Choisir sa table de salle à manger | Cattelan Italia Maroc",
+          "meta_description": "Table ronde ou rectangulaire : apprenez à comparer les formes, les proportions et les piètements pour composer une salle à manger adaptée à votre intérieur."
+        },
+        "taxonomies": {
+          "category": [
+            "conseils-damenagement"
+          ]
+        },
+        "bylines": [
+          {
+            "byline": "editorial-cattelan",
+            "roleLabel": "Rédaction"
+          }
+        ]
+      },
+      {
+        "id": "post-associer-table-chaises-salle-a-manger",
+        "slug": "associer-table-chaises-salle-a-manger",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Comment associer une table et des chaises sans tout assortir ?",
+          "excerpt": "Une salle à manger cohérente peut réunir des formes et des matières différentes. L’essentiel est de choisir les liens qui donneront une unité à l’ensemble.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "b0",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Choisir une intention pour l’ensemble",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Composer une salle à manger commence souvent par un coup de cœur pour une table ou une chaise. Gardez cette première préférence comme point de départ. Chercher simultanément à faire de chaque meuble la pièce maîtresse peut compliquer les choix et multiplier les effets visuels.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Si la table possède un plateau très dessiné ou un piètement expressif, commencez par des chaises dont la silhouette vous semble lisible autour d’elle. À l’inverse, une table sobre peut accueillir des assises plus présentes. Il s’agit de choisir où l’on souhaite porter le regard, puis d’organiser les autres éléments autour de cette intention.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b3",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Si vous souhaitez mélanger plusieurs chaises, choisissez ce qui restera commun : le modèle avec deux coloris, une famille de teintes ou une hauteur de dossier proche. Varier un élément à la fois facilite la composition. Photographiez ensuite vos propositions avec le buffet et le luminaire : l’association doit trouver sa place dans toute la pièce, au-delà du seul duo table et chaises.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b4",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Créer un lien sans répéter toutes les finitions",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b5",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Table et chaises n’ont pas besoin de partager exactement la même matière ou la même couleur. Un rapprochement peut venir d’une nuance commune, d’une courbe ou d’un détail de piètement. Sélectionnez le lien que vous souhaitez conserver avant d’ajouter des contrastes.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b6",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Par exemple, des pieds de chaises foncés peuvent rappeler une base de table sombre, tandis qu’un revêtement clair apporte une autre tonalité. Avec un plateau marqué par des veines, observez les couleurs secondaires du motif : l’une d’elles peut guider le choix des assises. Comparez les échantillons ensemble lorsque cela est possible, car des photographies prises séparément ne montrent pas toujours les mêmes nuances.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b7",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Observer le dialogue entre les silhouettes",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b8",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Les courbes d’un dossier, la hauteur des assises et l’épaisseur du plateau composent une silhouette collective. Regardez donc les meubles ensemble, de face et de côté. Une chaise appréciée isolément peut paraître très enveloppante une fois répétée autour de la table.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b9",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "La collection Rhonda de Cattelan Italia permet d’explorer cette question : ses chaises à accoudoirs présentent des lignes arrondies, notamment avec des pieds métalliques ou des pieds en bois sur Rhonda Wood. Ces variations offrent plusieurs pistes d’association autour d’une même forme d’assise.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b10",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Vérifier la compatibilité au quotidien",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b11",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "L’accord visuel doit aussi fonctionner pendant un repas. Vérifiez la hauteur de l’assise par rapport au plateau, l’espace pour les jambes et la possibilité de rapprocher la chaise de la table. Les accoudoirs méritent une attention particulière : leur hauteur et leur forme peuvent empêcher de glisser complètement l’assise sous le plateau.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b12",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Tenez également compte du nombre de chaises prévu et du piètement de la table. Dessiner l’ensemble à l’échelle, puis tester une installation avec les sièges disponibles chez vous, permet de préciser les points à vérifier avant une commande. Une fois assis, assurez-vous que chacun peut se rapprocher du plateau et se lever sans déplacer toute la composition.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/chaise-cuir.jpg",
+              "filename": "chaise-cuir.jpg",
+              "alt": "Ambiance de mobilier — illustration provisoire de l’article",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          },
+          "image_caption": "Photographie d’ambiance provisoire.",
+          "sources": [
+            {
+              "label": "Cattelan Italia — Rhonda, présentation et fiche technique",
+              "url": "https://cattelanitalia.com/fr/products/41ED48AE-E379-4863-8E3C-28EE1D985390"
+            }
+          ],
+          "cta_text": "Explorez les tables et les assises Cattelan Italia dans le catalogue pour préparer les associations de votre projet.",
+          "cta_label": "Recevoir le catalogue",
+          "cta_href": "/catalogue/",
+          "seo_title": "Associer table et chaises | Cattelan Italia Maroc",
+          "meta_description": "Formes, couleurs, matières et proportions : découvrez comment associer une table et des chaises pour créer une salle à manger cohérente et personnelle."
+        },
+        "taxonomies": {
+          "category": [
+            "associations-et-matieres"
+          ]
+        },
+        "bylines": [
+          {
+            "byline": "editorial-cattelan",
+            "roleLabel": "Rédaction"
+          }
+        ]
+      },
+      {
+        "id": "post-ceramique-verre-bois-choisir-finition-meuble",
+        "slug": "ceramique-verre-bois-choisir-finition-meuble",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Céramique, verre ou bois : comment choisir la finition d’un meuble ?",
+          "excerpt": "Une même forme change de présence selon sa finition. Pour choisir, observez ce que la matière apporte à la pièce et vérifiez les caractéristiques de la version qui vous intéresse.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "b0",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Regarder le meuble dans son environnement",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Le choix d’un plateau ou d’une façade se fait rarement sur une couleur seule. Le sol, les murs et les meubles déjà présents influencent la manière dont une finition sera perçue. Avant de comparer les options, rassemblez quelques photographies de votre pièce prises en journée et le soir. Elles permettront de repérer les couleurs dominantes et les éléments que vous souhaitez mettre en valeur.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Observez aussi la quantité de motifs déjà présente. Un sol fortement veiné, un tapis dessiné et un plateau expressif peuvent cohabiter, mais leur association mérite d’être regardée dans son ensemble. À l’inverse, une pièce aux surfaces unies peut accueillir une matière plus graphique comme point d’attention.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b3",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Identifier la matière derrière son apparence",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b4",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Une apparence marbrée ne désigne pas nécessairement du marbre naturel. Dans les collections Cattelan Italia, les dénominations des variantes permettent de distinguer notamment les plateaux en céramique, en bois, en verre ou en marbre. La famille Skorpio illustre cette diversité. Vérifiez donc le nom complet du modèle et sa fiche, au-delà de la photographie qui vous a attiré.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b5",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Les brochures de la marque présentent également CrystalArt, un décor imprimé sur verre, et Brushed, une finition travaillée par brossage manuel. Ces termes décrivent des solutions différentes. Les identifier aide à formuler une demande précise et à comparer des options qui ne se résument pas à une teinte.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b6",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Comparer le dessin et les reflets",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b7",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Commencez par le dessin de la surface : préférez-vous une texture discrète, un veinage marqué ou une transparence qui laisse voir le piètement ? Regardez ensuite la teinte à côté des autres matériaux de la pièce. Une association réussie peut reposer sur un rappel de couleur, sans répéter partout la même finition.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b8",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Les reflets comptent également. Examinez les photographies sous plusieurs angles et, lorsqu’un échantillon est accessible, observez-le sous différents éclairages. Un gros plan renseigne sur un détail ; une vue d’ensemble permet de comprendre sa place dans le meuble. Gardez toutefois à l’esprit que l’écran et l’éclairage de la prise de vue peuvent modifier la perception des couleurs.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b9",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Relier le choix à votre usage",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b10",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Une table de repas, un bureau et un buffet ne sont pas sollicités de la même façon. Notez ce que vous poserez sur la surface et les usages fréquents avant de demander les recommandations du fabricant. L’entretien, les précautions et les propriétés doivent être vérifiés pour la finition exacte ; le seul nom d’une matière ne suffit pas à les déduire.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b11",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Pour avancer, retenez deux ou trois options et notez ce qui vous plaît dans chacune. Conservez la référence du modèle, le nom de la finition et une photographie de votre intérieur. Vous disposerez d’une base claire pour échanger avec le showroom de Casablanca et préciser votre sélection.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/table-detail.jpg",
+              "filename": "table-detail.jpg",
+              "alt": "Ambiance de mobilier — illustration provisoire de l’article",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          },
+          "image_caption": "Photographie d’ambiance provisoire.",
+          "sources": [
+            {
+              "label": "Cattelan Italia — Skorpio",
+              "url": "https://cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8"
+            },
+            {
+              "label": "Cattelan Italia — Catalogues et brochures de finitions",
+              "url": "https://cattelanitalia.com/fr/catalogues"
+            }
+          ],
+          "cta_text": "Découvrez les ambiances du catalogue et repérez les modèles dont vous souhaitez explorer les finitions.",
+          "cta_label": "Recevoir le catalogue",
+          "cta_href": "/catalogue/",
+          "seo_title": "Céramique, verre ou bois | Cattelan Italia Maroc",
+          "meta_description": "Comparez le dessin, la teinte et les effets de matière pour choisir une finition de meuble en accord avec votre intérieur et votre usage."
+        },
+        "taxonomies": {
+          "category": [
+            "matieres-et-finitions"
+          ]
+        },
+        "bylines": [
+          {
+            "byline": "editorial-cattelan",
+            "roleLabel": "Rédaction"
+          }
+        ]
+      },
+      {
+        "id": "post-composer-salon-canape-fauteuil",
+        "slug": "composer-salon-canape-fauteuil",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Composer un salon avec un canapé et un fauteuil",
+          "excerpt": "Un canapé et un fauteuil peuvent partager les mêmes lignes ou jouer sur leurs différences. Le point de départ reste votre façon de vivre le salon.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "b0",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Partir des moments vécus dans le salon",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Conversation, soirée en famille ou lecture : avant de choisir les assises, demandez-vous quelle place ces activités occupent chez vous. Le canapé accueille souvent plusieurs personnes ; le fauteuil crée une assise distincte, orientée vers la conversation ou vers un autre point de la pièce.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Dessinez une implantation avec les meubles à conserver. Repérez les portes, les fenêtres et les trajets habituels. Un fauteuil séduisant sur une photo doit trouver une place où l’on a envie de s’installer, sans devoir le déplacer à chaque passage.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b3",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Choisir entre continuité et contraste",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b4",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Associer des modèles d’une même famille est une manière de créer une continuité visuelle. Chez Cattelan Italia, le canapé Ruby et le fauteuil Ruby Lounge partagent une structure en bois apparente et des lignes enveloppantes. Leur dessin commun permet de les envisager ensemble, tout en conservant à chaque assise son rôle dans la composition.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b5",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Vous pouvez également rapprocher deux modèles différents. Choisissez alors un élément commun : une courbe, une teinte ou une matière. Ce fil conducteur aide à construire l’ensemble. Un contraste se lit mieux lorsqu’il porte sur un choix précis, plutôt que sur toutes les caractéristiques à la fois.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b6",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Évaluer les volumes dans leur ensemble",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b7",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "La largeur ne suffit pas à comprendre la place d’une assise. Regardez aussi sa profondeur, la hauteur de son dossier et la présence de ses accoudoirs. Un canapé aux volumes généreux peut gagner à être accompagné d’un fauteuil qui laisse davantage voir le sol. À l’inverse, deux silhouettes affirmées peuvent devenir le centre de la pièce.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b8",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Reportez les dimensions envisagées sur votre plan, puis matérialisez leur emprise au sol avec du papier. Observez la composition depuis l’entrée et depuis les autres pièces. Cette vérification permet de juger les passages et les perspectives avant de vous attacher à une configuration.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b9",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Relier les matières à votre intérieur",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b10",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Le choix du revêtement prend du sens lorsqu’on le rapproche du sol, des rideaux et de la table basse. Commencez par les éléments qui resteront dans la pièce. Un bois déjà présent peut guider une finition ; la couleur d’un tapis peut suggérer une tonalité pour le fauteuil. Il n’est pas nécessaire de retrouver exactement la même nuance partout.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b11",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Gardez aussi une place pour les questions pratiques. Demandez les consignes d’entretien du revêtement envisagé et vérifiez si la housse est amovible. Ces caractéristiques varient selon les modèles : elles doivent être examinées avec autant d’attention que la couleur ou la texture.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b12",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Rassemblez un plan, quelques photos du salon et des ambiances qui vous plaisent. Notez ce qui vous attire : le dessin du dossier, la présence du bois ou la relation entre les assises.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b13",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Explorez ensuite les canapés et fauteuils Cattelan Italia pour retenir quelques pistes. Si vous souhaitez découvrir un modèle au showroom de Casablanca, contactez l’équipe pour vérifier les pièces exposées. Vous pourrez ainsi poursuivre votre choix en tenant compte du confort recherché.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/salon-angle.jpg",
+              "filename": "salon-angle.jpg",
+              "alt": "Ambiance de mobilier — illustration provisoire de l’article",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          },
+          "image_caption": "Photographie d’ambiance provisoire.",
+          "sources": [
+            {
+              "label": "Cattelan Italia — Ruby, présentation officielle et fiche technique",
+              "url": "https://cattelanitalia.com/en/products/75C6DB4B-1A99-400D-AEE7-9D5797651F05?c=5"
+            }
+          ],
+          "cta_text": "Découvrez les lignes et les matières des collections pour préparer votre sélection.",
+          "cta_label": "Explorer les canapés et fauteuils",
+          "cta_href": "/collections/canapes-fauteuils/",
+          "seo_title": "Associer canapé et fauteuil | Cattelan Italia Maroc",
+          "meta_description": "Disposition, proportions et matières : quelques repères pour associer un canapé et un fauteuil et composer un salon adapté à votre quotidien."
+        },
+        "taxonomies": {
+          "category": [
+            "conseils-damenagement"
+          ]
+        },
+        "bylines": [
+          {
+            "byline": "editorial-cattelan",
+            "roleLabel": "Rédaction"
+          }
+        ]
+      },
+      {
+        "id": "post-choisir-buffet-bibliotheque-salon",
+        "slug": "choisir-buffet-bibliotheque-salon",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Buffet ou bibliothèque : quel rangement choisir pour le salon ?",
+          "excerpt": "Le bon rangement dépend autant de ce que vous souhaitez montrer que de ce que vous préférez garder à l’abri des regards. Voici comment orienter votre choix.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "b0",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Commencer par ce que vous avez à ranger",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Livres, vaisselle, documents et souvenirs ne demandent pas tous le même rangement. Rassemblez vos objets par usage et distinguez ceux que vous utilisez régulièrement de ceux que vous souhaitez exposer. Cette sélection donne une première direction avant de comparer les meubles.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Évitez de choisir une capacité uniquement à partir de la taille extérieure du meuble. La hauteur des étagères, la profondeur utile et la répartition des compartiments peuvent changer la manière de l’utiliser. Prenez les mesures des objets les plus encombrants pour vérifier qu’ils trouveront réellement leur place.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b3",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Le buffet pour regrouper et dissimuler",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b4",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Un buffet permet de réunir des objets derrière des portes tout en conservant une surface disponible au-dessus. Il peut convenir si vous souhaitez ranger la vaisselle près de la salle à manger, ou rassembler des affaires du quotidien dans le salon. Le plateau accueille ensuite quelques éléments choisis, selon l’usage et les indications du fabricant.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b5",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Dans les collections Cattelan Italia, Chelsea se distingue par un dessin polygonal et des étagères intérieures en verre. Son plateau existe en verre miroir ou en céramique selon la version. Cet exemple montre comment un rangement fermé peut participer au décor par sa forme, sans dépendre uniquement des objets posés dessus.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b6",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "La bibliothèque pour donner une place aux objets visibles",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b7",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Une bibliothèque ouverte permet de composer avec les livres et les objets. Leur disposition devient une partie du décor : des ouvrages regroupés, un objet isolé et une étagère moins remplie produisent des effets différents. Avant de retenir cette solution, demandez-vous si vous aimez faire évoluer cette présentation ou si vous préférez un rangement plus discret.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b8",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Airport, dessinée par Giorgio Cattelan, est une bibliothèque composée d’éléments, avec fixation au mur ou au plafond. Ses étagères et ses conteneurs offrent différentes possibilités de composition. Le choix d’une configuration demande donc d’examiner les dimensions de la pièce et les conditions de fixation propres au projet.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b9",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Trouver la bonne place dans le salon",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b10",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Un buffet bas laisse une place au mur pour un tableau. Une bibliothèque plus haute attire le regard vers les étagères. Comparez ces effets avec les éléments présents : fenêtres, canapé et meubles à conserver. Le rangement participe ainsi à la composition générale du salon.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b11",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Sur le plan, prévoyez l’ouverture des portes et des tiroirs, ainsi que la place pour les utiliser. Repérez également les prises et les interrupteurs. Ces vérifications évitent de retenir une implantation qui compliquerait un geste quotidien.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b12",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Buffet et bibliothèque peuvent se compléter lorsque la pièce et vos besoins le justifient. Le premier accueille ce que vous préférez dissimuler ; la seconde compose un décor visible. Une tonalité ou une finition commune peut les relier, tout en préservant leurs fonctions distinctes.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b13",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Préparez ensuite des photos du salon et les dimensions disponibles. Consultez les collections pour comparer les silhouettes. Contactez le showroom de Casablanca pour vous renseigner sur les modèles retenus et vérifier lesquels sont exposés avant votre visite.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/buffet-bois.jpg",
+              "filename": "buffet-bois.jpg",
+              "alt": "Ambiance de mobilier — illustration provisoire de l’article",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          },
+          "image_caption": "Photographie d’ambiance provisoire.",
+          "sources": [
+            {
+              "label": "Cattelan Italia — Chelsea, présentation officielle et fiche technique",
+              "url": "https://cattelanitalia.com/fr/products/B7E158FA-BF2D-484D-9F9A-0C3D14138E8E"
+            },
+            {
+              "label": "Cattelan Italia — Airport, présentation officielle et fiche technique",
+              "url": "https://www.cattelanitalia.com/fr/products/0BD758C3-F539-4263-BA05-CEB859A760A4"
+            }
+          ],
+          "cta_text": "Comparez les silhouettes et les compositions de rangement proposées par Cattelan Italia.",
+          "cta_label": "Découvrir les buffets et bibliothèques",
+          "cta_href": "/collections/buffets-bibliotheques/",
+          "seo_title": "Buffet ou bibliothèque pour le salon ? | Cattelan Italia Maroc",
+          "meta_description": "Rangement fermé ou étagères ouvertes : choisissez un buffet ou une bibliothèque selon vos objets, vos habitudes et la place disponible dans le salon."
+        },
+        "taxonomies": {
+          "category": [
+            "conseils-damenagement"
+          ]
+        },
+        "bylines": [
+          {
+            "byline": "editorial-cattelan",
+            "roleLabel": "Rédaction"
+          }
+        ]
+      }
+    ],
+    "catalogues": [
+      {
+        "id": "catalogue-demonstration",
+        "slug": "demonstration",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Catalogue Cattelan Italia",
+          "edition": "Document de démonstration",
+          "description": "Document de démonstration utilisé pour tester le téléchargement. Le catalogue définitif sera ajouté ultérieurement.",
+          "cover": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/salle-manger.jpg",
+              "filename": "salle-manger.jpg",
+              "alt": "Ambiance de salle à manger — couverture de démonstration",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          },
+          "download_label": "Télécharger le PDF",
+          "private_file_key": "catalogues/cattelan-demonstration.pdf",
+          "is_placeholder": true
+        }
+      }
+    ],
+    "families": [
+      {
+        "id": "family-tables",
+        "slug": "tables",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Les tables Cattelan Italia",
+          "short_title": "Tables",
+          "card_text": "Formes de plateaux, piètements et matières : trouvez le point de départ de votre salle à manger.",
+          "intro": "La table accompagne les repas du quotidien et les moments où l’on reçoit. Découvrez des modèles dont la forme et le piètement donnent une direction à la salle à manger, puis comparez les finitions qui s’accordent à votre intérieur.",
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/salle-manger.jpg",
+              "filename": "salle-manger.jpg",
+              "alt": "Ambiance tables — visuel provisoire",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          },
+          "image_caption": "Ambiance illustrative. Les modèles de cette image restent à identifier.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "b0",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Choisir une présence dans la pièce",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Un plateau peut attirer le regard par son dessin ou laisser davantage de place au piètement. Observez la table avec les chaises, le sol et le luminaire : c’est cet ensemble qui donnera son équilibre à votre espace repas.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Penser aux usages et aux passages",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b3",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Avant de retenir une configuration, prenez les dimensions de la pièce et imaginez les chaises occupées. La forme du plateau et la position des pieds doivent être étudiées ensemble pour préserver les déplacements et le confort autour de la table.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "sort_order": 1,
+          "models": [
+            "$ref:model-skorpio",
+            "$ref:model-napoleon-keramik"
+          ],
+          "related_post": "$ref:post-choisir-forme-proportions-table-salle-a-manger",
+          "seo_title": "Tables de salle à manger | Cattelan Italia Maroc",
+          "meta_description": "Explorez les tables Cattelan Italia, leurs formes et leurs finitions. Découvrez une sélection de modèles et préparez votre projet avec le showroom de Casablanca."
+        }
+      },
+      {
+        "id": "family-chaises-tabourets",
+        "slug": "chaises-tabourets",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Les chaises et tabourets Cattelan Italia",
+          "short_title": "Chaises et tabourets",
+          "card_text": "Des assises à associer autour de la table ou du comptoir, selon vos envies et votre espace.",
+          "intro": "Les assises complètent la table et participent au caractère de la pièce. Explorez les dossiers, les piètements et les revêtements proposés selon les modèles pour composer un ensemble qui trouve sa place chez vous.",
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/chaise-cuir.jpg",
+              "filename": "chaise-cuir.jpg",
+              "alt": "Ambiance chaises et tabourets — visuel provisoire",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          },
+          "image_caption": "Ambiance illustrative. Les modèles de cette image restent à identifier.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "b0",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Trouver un lien entre les pièces",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Une courbe, une nuance ou un détail de piètement peut relier les chaises à la table. Vous pouvez rechercher une continuité ou choisir un contraste, tout en gardant une intention claire pour l’ensemble.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Vérifier les proportions ensemble",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b3",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Hauteur d’assise, accoudoirs et position des pieds de table influencent la manière de s’installer. Comparez les dimensions de la configuration envisagée et conservez les références des variantes retenues pour préciser votre demande.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "sort_order": 2,
+          "models": [
+            "$ref:model-rhonda",
+            "$ref:model-greta"
+          ],
+          "related_post": "$ref:post-associer-table-chaises-salle-a-manger",
+          "seo_title": "Chaises et tabourets | Cattelan Italia Maroc",
+          "meta_description": "Découvrez les chaises et tabourets Cattelan Italia. Comparez les silhouettes et les revêtements pour imaginer les assises de votre intérieur."
+        }
+      },
+      {
+        "id": "family-canapes-fauteuils",
+        "slug": "canapes-fauteuils",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Les canapés et fauteuils Cattelan Italia",
+          "short_title": "Canapés et fauteuils",
+          "card_text": "Des pièces à associer pour composer le salon autour de votre façon de vivre.",
+          "intro": "Un canapé accueille les moments partagés ; un fauteuil peut créer un espace de lecture ou compléter la conversation. Découvrez des pièces à rapprocher selon les volumes de votre salon et les usages que vous souhaitez y retrouver.",
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/salon-angle.jpg",
+              "filename": "salon-angle.jpg",
+              "alt": "Ambiance canapés et fauteuils — visuel provisoire",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          },
+          "image_caption": "Ambiance illustrative. Les modèles de cette image restent à identifier.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "b0",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Composer avec les volumes",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Regardez la profondeur, la hauteur des dossiers et la présence des accoudoirs. Une composition doit trouver sa place dans la pièce et préserver les passages, en tenant compte des meubles que vous souhaitez conserver.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Relier les matières au décor",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b3",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Le sol, les rideaux et la table basse constituent des points de départ utiles pour choisir un revêtement. Comparez les options proposées pour chaque modèle et renseignez-vous sur leurs consignes d’entretien avant de retenir une version.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "sort_order": 3,
+          "models": [
+            "$ref:model-ruby",
+            "$ref:model-ruby-lounge"
+          ],
+          "related_post": "$ref:post-composer-salon-canape-fauteuil",
+          "seo_title": "Canapés et fauteuils | Cattelan Italia Maroc",
+          "meta_description": "Explorez les canapés et fauteuils Cattelan Italia. Découvrez des pièces à associer pour composer votre salon et consultez le catalogue."
+        }
+      },
+      {
+        "id": "family-buffets-bibliotheques",
+        "slug": "buffets-bibliotheques",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Les buffets et bibliothèques Cattelan Italia",
+          "short_title": "Buffets et bibliothèques",
+          "card_text": "Ranger, exposer et organiser l’espace avec des meubles qui participent au décor.",
+          "intro": "Un rangement peut accueillir la vaisselle, mettre en valeur des livres ou organiser une pièce ouverte. Explorez les buffets et bibliothèques Cattelan Italia en partant des objets que vous souhaitez conserver à portée de main.",
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/buffet-bois.jpg",
+              "filename": "buffet-bois.jpg",
+              "alt": "Ambiance buffets et bibliothèques — visuel provisoire",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          },
+          "image_caption": "Ambiance illustrative. Les modèles de cette image restent à identifier.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "b0",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Choisir ce que l’on montre",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Un meuble fermé rassemble les objets derrière ses façades. Des étagères ouvertes permettent de composer avec leur présence. Ces deux approches peuvent se compléter selon vos habitudes et la place disponible.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Dessiner une place dans la pièce",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b3",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Comparez la hauteur, la profondeur et l’ouverture des portes avec les dimensions de votre espace. Pour une composition modulable, les possibilités d’implantation et les conditions de fixation doivent aussi être examinées selon le projet.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "sort_order": 4,
+          "models": [
+            "$ref:model-chelsea",
+            "$ref:model-airport"
+          ],
+          "related_post": "$ref:post-choisir-buffet-bibliotheque-salon",
+          "seo_title": "Buffets et bibliothèques | Cattelan Italia Maroc",
+          "meta_description": "Découvrez les buffets et bibliothèques Cattelan Italia. Explorez différentes façons de ranger, d’exposer vos objets et de composer votre salon."
+        }
+      },
+      {
+        "id": "family-luminaires",
+        "slug": "luminaires",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Les luminaires Cattelan Italia",
+          "short_title": "Luminaires",
+          "card_text": "Des formes et des compositions lumineuses pour accompagner les espaces de la maison.",
+          "intro": "Un luminaire se regarde aussi lorsqu’il est éteint. Au-dessus d’une table ou près d’une assise, sa forme participe à la composition de l’espace. Découvrez des pièces dont le dessin dialogue avec le mobilier.",
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/lampe-salon.jpg",
+              "filename": "lampe-salon.jpg",
+              "alt": "Ambiance luminaires — visuel provisoire",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          },
+          "image_caption": "Ambiance illustrative. Les modèles de cette image restent à identifier.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "b0",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Partir de la place et de l’usage",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Repérez l’emplacement envisagé, les arrivées électriques et les activités à accompagner. Une suspension au-dessus de la table et une lampe près d’un fauteuil ne jouent pas le même rôle dans la pièce.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Observer le luminaire avec les meubles",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b3",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Comparez sa silhouette à celle de la table, du buffet ou du canapé. Vérifiez ensuite les dimensions et les caractéristiques de la version retenue : la photographie seule ne permet pas de déterminer si elle convient à votre installation.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "sort_order": 5,
+          "models": [
+            "$ref:model-bloom"
+          ],
+          "related_post": "$ref:post-ceramique-verre-bois-choisir-finition-meuble",
+          "seo_title": "Luminaires design | Cattelan Italia Maroc",
+          "meta_description": "Découvrez les luminaires Cattelan Italia et imaginez leur place au-dessus d’une table ou dans le salon. Explorez les collections et le catalogue."
+        }
+      },
+      {
+        "id": "family-mobilier-exterieur",
+        "slug": "mobilier-exterieur",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Le mobilier extérieur Cattelan Italia",
+          "short_title": "Mobilier extérieur",
+          "card_text": "Prolonger les lignes de la maison dans un espace extérieur adapté aux modèles choisis.",
+          "intro": "Une terrasse ou une véranda peut prolonger l’univers de la maison. Découvrez les créations extérieures Cattelan Italia et imaginez les liens de formes et de matières avec vos espaces intérieurs.",
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/terrasse-outdoor.jpg",
+              "filename": "terrasse-outdoor.jpg",
+              "alt": "Ambiance mobilier extérieur — visuel provisoire",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          },
+          "image_caption": "Ambiance illustrative. Les modèles de cette image restent à identifier.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "b0",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Composer un ensemble cohérent",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Commencez par l’usage souhaité : partager un repas, recevoir ou profiter d’un moment au calme. Regardez les meubles depuis l’intérieur pour imaginer la continuité entre les deux espaces.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Choisir selon les conditions du lieu",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b3",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Précisez si votre espace est couvert et comment il est exposé. Les conditions d’utilisation varient selon les modèles : les deux références présentées ici sont destinées à des espaces extérieurs couverts, protégés de l’exposition directe aux intempéries.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "sort_order": 6,
+          "models": [
+            "$ref:model-napoleon-keramik-outdoor",
+            "$ref:model-greta-outdoor"
+          ],
+          "related_post": [],
+          "seo_title": "Mobilier extérieur | Cattelan Italia Maroc",
+          "meta_description": "Explorez le mobilier extérieur Cattelan Italia. Découvrez une sélection de modèles et vérifiez les conditions d’usage adaptées à votre espace."
+        }
+      }
+    ],
+    "pages": [
+      {
+        "id": "page-home",
+        "slug": "home",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Vivre italien, à Casablanca",
+          "route_key": "home",
+          "eyebrow": "Cattelan Italia · Showroom à Casablanca",
+          "intro": "Découvrez le mobilier contemporain Cattelan Italia pour votre intérieur. Explorez les collections et leurs matières, puis poursuivez votre projet avec notre showroom de Casablanca.",
+          "content": [],
+          "sections": [
+            {
+              "section_key": "brand",
+              "heading": "Le design italien dans les détails",
+              "display_heading": "Dessiné en Italie.",
+              "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, Cattelan Italia crée du mobilier fabriqué en Italie. La recherche des formes et le travail des matières donnent aux collections leur caractère, avec une attention portée aux espaces de vie.",
+              "cta_label": "",
+              "cta_href": ""
+            },
+            {
+              "section_key": "collections",
+              "heading": "Des pièces pour composer votre intérieur",
+              "display_heading": "Les collections",
+              "text": "Une table autour de laquelle se retrouver, une assise qui trouve sa place, un rangement qui organise la pièce. Découvrez six univers pour préciser vos envies et imaginer les associations qui vous ressemblent.",
+              "cta_label": "Explorer les collections",
+              "cta_href": "/collections/"
+            },
+            {
+              "section_key": "showroom",
+              "heading": "Votre point de rencontre à Casablanca",
+              "display_heading": "À Casablanca",
+              "text": "Vous avez repéré une pièce dans les collections ? Contactez notre showroom pour vous renseigner et préparer votre visite. Notre équipe vous indiquera les modèles que vous pourrez découvrir sur place.",
+              "cta_label": "Découvrir le showroom",
+              "cta_href": "/showroom-casablanca/"
+            },
+            {
+              "section_key": "catalogue",
+              "heading": "Prenez le temps de choisir",
+              "display_heading": "Le catalogue",
+              "text": "Recevez le catalogue Cattelan Italia et parcourez les collections à votre rythme. Conservez les références qui vous attirent pour poursuivre votre découverte avec le showroom.",
+              "cta_label": "Recevoir le catalogue",
+              "cta_href": "/catalogue/"
+            },
+            {
+              "section_key": "journal",
+              "heading": "Des idées pour avancer dans votre projet",
+              "display_heading": "Le Journal",
+              "text": "Proportions, matières et associations : les articles du Journal vous donnent des repères pour choisir votre mobilier et imaginer sa place chez vous.",
+              "cta_label": "Lire le Journal",
+              "cta_href": "/journal/"
+            }
+          ],
+          "seo_title": "Cattelan Italia Maroc | Mobilier italien à Casablanca",
+          "meta_description": "Découvrez le mobilier Cattelan Italia au Maroc. Explorez les collections, recevez le catalogue et préparez votre visite au showroom de Casablanca.",
+          "hero_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/salle-manger.jpg",
+              "filename": "salle-manger.jpg",
+              "alt": "Ambiance de salon contemporain — visuel provisoire",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          },
+          "brand_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/lampe-salon.jpg",
+              "filename": "lampe-salon.jpg",
+              "alt": "Ambiance de salon et luminaire — visuel provisoire",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          },
+          "brand_detail_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/chaise-cuir.jpg",
+              "filename": "chaise-cuir.jpg",
+              "alt": "Détail d’assise — visuel provisoire",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          },
+          "brand_caption": "Formes, matières et savoir-faire italien",
+          "showroom_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/salon-nuit.jpg",
+              "filename": "salon-nuit.jpg",
+              "alt": "Ambiance de mobilier — cette image ne représente pas le showroom de Casablanca",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          },
+          "showroom_invitation": "Contactez notre équipe pour préparer votre visite."
+        }
+      },
+      {
+        "id": "page-collections",
+        "slug": "collections",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Les collections Cattelan Italia",
+          "route_key": "collections",
+          "eyebrow": "Cattelan Italia · Casablanca",
+          "intro": "Parcourez les univers Cattelan Italia et une sélection de modèles de la marque. Du salon à la salle à manger, chaque famille permet d’explorer des formes et des matières pour votre projet.",
+          "content": [],
+          "sections": [
+            {
+              "section_key": "contact",
+              "heading": "Une pièce a retenu votre attention",
+              "text": "Notez son nom et les détails qui vous plaisent. Notre showroom de Casablanca est votre point de contact pour connaître les possibilités de commande et vérifier les modèles exposés.",
+              "cta_label": "Contacter le showroom",
+              "cta_href": "/showroom-casablanca/"
+            },
+            {
+              "section_key": "professional",
+              "heading": "Vous préparez un projet professionnel",
+              "text": "Architecte ou décorateur, vous pouvez nous transmettre les références qui vous intéressent pour discuter de votre sélection avec le showroom.",
+              "cta_label": "Échanger avec notre équipe",
+              "cta_href": "/showroom-casablanca/"
+            }
+          ],
+          "seo_title": "Collections de mobilier | Cattelan Italia Maroc",
+          "meta_description": "Tables, assises, canapés, rangements, luminaires et mobilier extérieur : explorez les collections Cattelan Italia et contactez le showroom de Casablanca.",
+          "hero_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/salle-manger.jpg",
+              "filename": "salle-manger.jpg",
+              "alt": "Ambiance de salle à manger — visuel provisoire",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          }
+        }
+      },
+      {
+        "id": "page-showroom",
+        "slug": "showroom-casablanca",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Le showroom Cattelan Italia à Casablanca",
+          "route_key": "showroom",
+          "eyebrow": "Cattelan Italia · Casablanca",
+          "intro": "Le showroom de Casablanca est votre point de rencontre avec Cattelan Italia au Maroc. Contactez notre équipe pour vous renseigner sur les collections et préparer votre visite autour des pièces qui vous intéressent.",
+          "content": [],
+          "sections": [
+            {
+              "section_key": "visit",
+              "heading": "Préparer votre visite",
+              "text": "Vous avez repéré un modèle dans le catalogue ? Transmettez-nous sa référence pour savoir s’il est présenté au showroom. Quelques photos de votre intérieur et les dimensions de votre pièce peuvent également vous aider à préciser les questions à poser.",
+              "cta_label": "Contacter le showroom",
+              "cta_href": "/showroom-casablanca/"
+            },
+            {
+              "section_key": "cities",
+              "heading": "Un projet dans une autre ville",
+              "text": "Vous préparez un projet à Rabat, Marrakech ou Tanger ? Commencez par explorer les collections et contactez notre showroom de Casablanca pour discuter des modèles qui vous intéressent et des modalités de votre projet."
+            },
+            {
+              "section_key": "faq_1",
+              "heading": "Tous les modèles sont-ils exposés au showroom ?",
+              "text": "Le showroom présente une sélection de pièces. Contactez notre équipe pour vérifier la présence du modèle que vous souhaitez découvrir."
+            },
+            {
+              "section_key": "faq_2",
+              "heading": "Comment connaître le prix et le délai ?",
+              "text": "Indiquez le nom du modèle et, si possible, la version ou la finition repérée. Notre équipe pourra préciser les informations correspondant à votre demande."
+            },
+            {
+              "section_key": "faq_3",
+              "heading": "Peut-on préparer son choix avant de venir ?",
+              "text": "Oui. Vous pouvez consulter le catalogue, conserver les références qui vous plaisent et nous écrire avant votre visite."
+            },
+            {
+              "section_key": "faq_4",
+              "heading": "Comment se renseigner sur une livraison hors de Casablanca ?",
+              "text": "Précisez la ville de votre projet et les pièces envisagées pour obtenir les modalités correspondant à votre demande."
+            }
+          ],
+          "seo_title": "Showroom à Casablanca | Cattelan Italia Maroc",
+          "meta_description": "Préparez votre visite au showroom Cattelan Italia de Casablanca. Contactez l’équipe pour connaître les modèles exposés et discuter de votre sélection.",
+          "hero_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/salon-nuit.jpg",
+              "filename": "salon-nuit.jpg",
+              "alt": "Ambiance de mobilier — cette image ne représente pas le showroom de Casablanca",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          }
+        }
+      },
+      {
+        "id": "page-catalogue",
+        "slug": "catalogue",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Recevez le catalogue Cattelan Italia",
+          "route_key": "catalogue",
+          "eyebrow": "Cattelan Italia · Casablanca",
+          "intro": "Découvrez les collections en images et prenez le temps de repérer vos pièces préférées. Laissez votre nom et votre adresse email pour accéder au catalogue en PDF.",
+          "content": [],
+          "sections": [
+            {
+              "section_key": "contact",
+              "heading": "Poursuivons votre découverte",
+              "text": "Vous pourrez ensuite contacter notre showroom de Casablanca pour parler d’un modèle ou connaître les pièces exposées.",
+              "cta_label": "Échanger avec le showroom",
+              "cta_href": "/showroom-casablanca/"
+            }
+          ],
+          "seo_title": "Catalogue Cattelan Italia | Recevoir le PDF",
+          "meta_description": "Recevez le catalogue Cattelan Italia après votre demande. Explorez les collections et poursuivez votre projet avec le showroom de Casablanca.",
+          "hero_image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/salle-manger.jpg",
+              "filename": "salle-manger.jpg",
+              "alt": "Ambiance de salle à manger — visuel provisoire",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          }
+        }
+      },
+      {
+        "id": "page-journal",
+        "slug": "journal",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Le Journal Cattelan Italia Maroc",
+          "route_key": "journal",
+          "eyebrow": "Cattelan Italia · Casablanca",
+          "intro": "Choisir un meuble, c’est aussi penser à sa place dans la pièce et à la façon de vivre avec lui. Retrouvez nos conseils sur les proportions, les matières et les associations pour préparer votre projet.",
+          "content": [],
+          "sections": [
+            {
+              "section_key": "catalogue",
+              "heading": "Des idées à votre sélection",
+              "text": "Une idée vous plaît ? Retrouvez les collections dans le catalogue et repérez les pièces à explorer pour votre intérieur.",
+              "cta_label": "Recevoir le catalogue",
+              "cta_href": "/catalogue/"
+            }
+          ],
+          "seo_title": "Journal mobilier et design | Cattelan Italia Maroc",
+          "meta_description": "Matières, proportions et associations : découvrez nos conseils pour choisir votre mobilier et préparer votre projet avec Cattelan Italia au Maroc."
+        }
+      }
+    ],
+    "site_content": [
+      {
+        "id": "site-global",
+        "slug": "global",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Configuration du site",
+          "city": "Casablanca, Maroc",
+          "brand_location": "Maroc",
+          "contact_phone": "",
+          "whatsapp_url": null,
+          "public_email": "",
+          "address": "",
+          "hours": "",
+          "map_url": null,
+          "logo_light": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/logo-rouge.png",
+              "filename": "logo-rouge.png",
+              "alt": "Cattelan Italia",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          },
+          "logo_dark": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/logo-blanc.png",
+              "filename": "logo-blanc.png",
+              "alt": "Cattelan Italia",
+              "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
+            }
+          },
+          "footer_text": "Cattelan Italia au Maroc. Découvrez les collections et poursuivez votre projet avec notre showroom de Casablanca.",
+          "catalogue_label": "Recevoir le catalogue",
+          "contact_label": "Contacter le showroom",
+          "collections_label": "Collections",
+          "showroom_label": "Showroom",
+          "journal_label": "Journal",
+          "read_article_label": "Lire l’article",
+          "model_notice": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "preview_notice": "Cette prévisualisation présente la direction de design. Les textes et les images sont provisoires : l’objectif est de valider le design avant de finaliser le contenu.",
+          "form_name_label": "Nom",
+          "form_email_label": "Adresse email",
+          "form_opt_in_label": "Je souhaite également recevoir les nouveautés et invitations du showroom.",
+          "form_hint": "Accédez au PDF après l’envoi du formulaire. Aucun compte à créer.",
+          "form_privacy": "Vos coordonnées permettent de traiter votre demande de catalogue. Pour en savoir plus sur leur utilisation, consultez notre politique de confidentialité.",
+          "form_pending": "Votre demande est en cours…",
+          "form_name_error": "Indiquez votre nom.",
+          "form_email_error": "Vérifiez votre adresse email.",
+          "form_error": "Votre demande n’a pas pu aboutir. Réessayez ou contactez-nous sur WhatsApp.",
+          "form_success_title": "Votre catalogue est prêt",
+          "form_success_text": "Merci pour votre intérêt. Vous pouvez maintenant télécharger le catalogue et poursuivre votre découverte à votre rythme.",
+          "form_unavailable": "Le catalogue est momentanément indisponible. Contactez notre équipe sur WhatsApp pour poursuivre votre demande.",
+          "placeholder_notice": "Document de démonstration utilisé pour tester le téléchargement. Le catalogue définitif sera ajouté ultérieurement.",
+          "active_catalogue": "$ref:catalogue-demonstration",
+          "discover_label": "Découvrir"
+        }
+      }
+    ]
+  },
+  "menus": [
+    {
+      "name": "primary",
+      "label": "Navigation principale",
+      "items": [
+        {
+          "type": "custom",
+          "label": "Collections",
+          "url": "/collections/"
+        },
+        {
+          "type": "custom",
+          "label": "Showroom",
+          "url": "/showroom-casablanca/"
+        },
+        {
+          "type": "custom",
+          "label": "Journal",
+          "url": "/journal/"
+        },
+        {
+          "type": "custom",
+          "label": "Recevoir le catalogue",
+          "url": "/catalogue/"
+        }
+      ]
+    }
+  ]
+}

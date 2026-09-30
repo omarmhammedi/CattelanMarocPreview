@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "copy_file": "showroom-editorial-copy.json",
+  "before": {
+    "home": {
+      "showroom_section": {
+        "section_key": "showroom",
+        "heading": "Votre point de rencontre à Casablanca",
+        "display_heading": "À Casablanca",
+        "text": "Vous avez repéré une pièce dans les collections ? Contactez notre showroom pour vous renseigner et préparer votre visite. Notre équipe vous indiquera les modèles que vous pourrez découvrir sur place.",
+        "cta_label": "Découvrir le showroom",
+        "cta_href": "/showroom-casablanca/"
+      },
+      "showroom_invitation": "Contactez notre équipe pour préparer votre visite.",
+      "brand_image": {
+        "filename": "lampe-salon.jpg",
+        "alt": "Ambiance de salon et luminaire — visuel provisoire",
+        "width": 1080,
+        "height": 1215,
+        "mimeType": "image/jpeg",
+        "sha256": "adea22800ca08e5a35b7d7c68cac7c4cff367e15c45c297b6e3c55d21ea96836"
+      },
+      "brand_detail_image": {
+        "filename": "chaise-cuir.jpg",
+        "alt": "Détail d’assise — visuel provisoire",
+        "width": 956,
+        "height": 1700,
+        "mimeType": "image/jpeg",
+        "sha256": "94314b209ce41e0e76b36afaecc40a89db08224a14c3951c2074a10809e0aef3"
+      },
+      "showroom_image": {
+        "filename": "salon-nuit.jpg",
+        "alt": "Ambiance de mobilier — cette image ne représente pas le showroom de Casablanca",
+        "width": 956,
+        "height": 1700,
+        "mimeType": "image/jpeg",
+        "sha256": "bd4e3f80e9f9eeabf2f50e5a8356ad9c36e9bcf7cbf0bc019719fce7cbe9ed47"
+      }
+    },
+    "showroom": {
+      "intro": "Le showroom de Casablanca est votre point de rencontre avec Cattelan Italia au Maroc. Contactez notre équipe pour vous renseigner sur les collections et préparer votre visite autour des pièces qui vous intéressent.",
+      "sections": [
+        {
+          "section_key": "visit",
+          "heading": "Préparer votre visite",
+          "text": "Vous avez repéré un modèle dans le catalogue ? Transmettez-nous sa référence pour savoir s’il est présenté au showroom. Quelques photos de votre intérieur et les dimensions de votre pièce peuvent également vous aider à préciser les questions à poser.",
+          "cta_label": "Contacter le showroom",
+          "cta_href": "#showroom-contact"
+        },
+        {
+          "section_key": "cities",
+          "heading": "Un projet dans une autre ville",
+          "text": "Vous préparez un projet à Rabat, Marrakech ou Tanger ? Commencez par explorer les collections et contactez notre showroom de Casablanca pour discuter des modèles qui vous intéressent et des modalités de votre projet."
+        },
+        {
+          "section_key": "faq_1",
+          "heading": "Tous les modèles sont-ils exposés au showroom ?",
+          "text": "Le showroom présente une sélection de pièces. Contactez notre équipe pour vérifier la présence du modèle que vous souhaitez découvrir."
+        },
+        {
+          "section_key": "faq_2",
+          "heading": "Comment connaître le prix et le délai ?",
+          "text": "Indiquez le nom du modèle et, si possible, la version ou la finition repérée. Notre équipe pourra préciser les informations correspondant à votre demande."
+        },
+        {
+          "section_key": "faq_3",
+          "heading": "Peut-on préparer son choix avant de venir ?",
+          "text": "Oui. Vous pouvez consulter le catalogue, conserver les références qui vous plaisent et nous écrire avant votre visite."
+        },
+        {
+          "section_key": "faq_4",
+          "heading": "Comment se renseigner sur une livraison hors de Casablanca ?",
+          "text": "Précisez la ville de votre projet et les pièces envisagées pour obtenir les modalités correspondant à votre demande."
+        }
+      ],
+      "seo_title": "Showroom à Casablanca | Cattelan Italia Maroc",
+      "meta_description": "Préparez votre visite au showroom Cattelan Italia de Casablanca. Contactez l’équipe pour connaître les modèles exposés et discuter de votre sélection.",
+      "hero_image": {
+        "filename": "salon-nuit.jpg",
+        "alt": "Ambiance de mobilier — cette image ne représente pas le showroom de Casablanca",
+        "width": 956,
+        "height": 1700,
+        "mimeType": "image/jpeg",
+        "sha256": "bd4e3f80e9f9eeabf2f50e5a8356ad9c36e9bcf7cbf0bc019719fce7cbe9ed47"
+      }
+    }
+  },
+  "assets": {
+    "brand": {
+      "model": "skorpio",
+      "gallery_index": 5,
+      "source_url": "https://download.cattelanitalia.com/multimedia/hd/30e29264-d6f3-4b11-8351-14c2603979e4.jpg?t=1758703697",
+      "filename": "cattelan-skorpio-30e29264-d6f3-4b11-8351-14c2603979e4.jpg",
+      "alt": "Salle à manger avec table Skorpio en verre et piètement sculptural — Cattelan Italia",
+      "width": 735,
+      "height": 735,
+      "mimeType": "image/jpeg",
+      "sha256": "4ebc83912b1aa9916832a52d7ff48e551413c80b80142e23d6657dff92bf2c81"
+    },
+    "detail": {
+      "model": "skorpio",
+      "gallery_index": 7,
+      "source_url": "https://download.cattelanitalia.com/multimedia/hd/9997cf91-aae7-42d4-8f2c-083db41f17cf.jpg?t=1669795913",
+      "filename": "cattelan-skorpio-9997cf91-aae7-42d4-8f2c-083db41f17cf.jpg",
+      "alt": "Détail du piètement métallique et du plateau en verre de la table Skorpio",
+      "width": 1200,
+      "height": 735,
+      "mimeType": "image/jpeg",
+      "sha256": "c660acdb5e85d25a04b705ed4001b4112d94ff37d6810c241c791dfd9325c1b5"
+    },
+    "showroom": {
+      "url": "https://maisonsdumaroc.com/wp-content/uploads/2026/09/Cattelan-Italia-Casablanca-1.jpg",
+      "source_page": "https://maisonsdumaroc.com/architectures-et-design/cattelan-italia-ouvre-son-premier-flagship-store-au-maroc",
+      "filename": "cattelan-showroom-casablanca-salon.jpg",
+      "alt": "Salon présenté au showroom Cattelan Italia à Casablanca",
+      "mimeType": "image/jpeg",
+      "width": 1409,
+      "height": 763,
+      "bytes": 766000,
+      "sha256": "18938598d36ca3062da57ff6a592587e17514f588d0780003edc1f8d0082d04e"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+---
+import { normalizeGoogleMapsEmbedUrl } from '../lib/maps';
+
+interface Props {
+  embedUrl?: string;
+  mapUrl?: string;
+  name: string;
+  address?: string;
+}
+
+const { embedUrl, mapUrl, name, address } = Astro.props;
+const source = normalizeGoogleMapsEmbedUrl(embedUrl);
+const frameId = 'showroom-interactive-map';
+const title = ['Carte Google Maps', name, address].filter(Boolean).join(' — ');
+---
+{(mapUrl || source) && <div class="showroom-map" data-showroom-map>
+  {mapUrl && <a class="btn showroom-directions" href={mapUrl} target="_blank" rel="noopener noreferrer">Itinéraire <span aria-hidden="true">↗</span></a>}
+  {source && <>
+    <button class="text-link showroom-map-toggle" type="button" hidden aria-expanded="false" aria-controls={frameId} data-showroom-map-toggle>
+      <span data-showroom-map-label>Afficher la carte interactive</span><span aria-hidden="true" data-showroom-map-symbol>+</span>
+    </button>
+    <div class="showroom-map-content" id={frameId} hidden data-showroom-map-content>
+      <p class="showroom-map-provider">Google Maps</p>
+      <div class="showroom-map-frame" data-showroom-map-frame></div>
+    </div>
+    <template data-showroom-map-template>
+      <iframe src={source} width="600" height="450" title={title} allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </template>
+  </>}
+</div>}
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-showroom-map]').forEach((map) => {
+    const toggle = map.querySelector<HTMLButtonElement>('[data-showroom-map-toggle]');
+    const content = map.querySelector<HTMLElement>('[data-showroom-map-content]');
+    const frame = map.querySelector<HTMLElement>('[data-showroom-map-frame]');
+    const template = map.querySelector<HTMLTemplateElement>('[data-showroom-map-template]');
+    const label = map.querySelector<HTMLElement>('[data-showroom-map-label]');
+    const symbol = map.querySelector<HTMLElement>('[data-showroom-map-symbol]');
+    if (!toggle || !content || !frame || !template || !label || !symbol) return;
+
+    const setExpanded = (expanded: boolean) => {
+      // An inert template makes no Google request. Closing also removes the loaded frame.
+      if (expanded) frame.appendChild(template.content.cloneNode(true));
+      else frame.replaceChildren();
+      content.hidden = !expanded;
+      toggle.setAttribute('aria-expanded', String(expanded));
+      label.textContent = expanded ? 'Masquer la carte interactive' : 'Afficher la carte interactive';
+      symbol.textContent = expanded ? '−' : '+';
+    };
+
+    toggle.hidden = false;
+    toggle.addEventListener('click', () => setExpanded(toggle.getAttribute('aria-expanded') !== 'true'));
+    map.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        setExpanded(false);
+        toggle.focus();
+      }
+    });
+  });
+</script>

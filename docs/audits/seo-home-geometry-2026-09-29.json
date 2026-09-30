@@ -1,0 +1,75 @@
+{
+  "comparedNodes": 64,
+  "comparedPositions": 18,
+  "differences": [
+    {
+      "theme": "dark",
+      "width": 1440,
+      "position": "catalogue",
+      "tag": "IMG",
+      "class": "lg-w keep",
+      "property": "y",
+      "before": 581.0877685546875,
+      "after": 581.056884765625,
+      "delta": 0.0308837890625
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "position": "catalogue",
+      "tag": "IMG",
+      "class": "lg-w keep",
+      "property": "height",
+      "before": 65.664306640625,
+      "after": 65.6951904296875,
+      "delta": 0.0308837890625
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "position": "catalogue",
+      "tag": "IMG",
+      "class": "pic",
+      "property": "width",
+      "before": 396.47119140625,
+      "after": 396.568359375,
+      "delta": 0.09716796875
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "position": "catalogue",
+      "tag": "IMG",
+      "class": "lg-w keep",
+      "property": "y",
+      "before": 581.0877685546875,
+      "after": 581.073974609375,
+      "delta": 0.0137939453125
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "position": "catalogue",
+      "tag": "IMG",
+      "class": "lg-w keep",
+      "property": "width",
+      "before": 151.14744567871094,
+      "after": 151.16629028320312,
+      "delta": 0.0188446044921875
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "position": "catalogue",
+      "tag": "IMG",
+      "class": "lg-w keep",
+      "property": "height",
+      "before": 65.664306640625,
+      "after": 65.68316650390625,
+      "delta": 0.01885986328125
+    }
+  ],
+  "missingDimensionsBefore": 31,
+  "missingDimensionsAfter": 0,
+  "images": 35
+}

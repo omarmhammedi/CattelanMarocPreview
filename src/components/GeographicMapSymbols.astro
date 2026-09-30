@@ -1,0 +1,35 @@
+---
+import data from '../data/casablanca-map.json';
+import { geographicPath, projectCoordinate, projectedBounds, roadLabel } from '../lib/geography';
+import { buildStreetLabels } from '../lib/map-labels';
+const streetCandidates = buildStreetLabels(data.roads);
+const [x, y, width, height] = projectedBounds(data.bounds);
+const groups = [
+  { name: 'm-grid', kinds: ['residential', 'unclassified', 'pedestrian'], width: 1 },
+  { name: 'm-road map-road-secondary', kinds: ['tertiary', 'secondary'], width: 1.25 },
+  { name: 'm-road map-road-primary', kinds: ['primary', 'trunk'], width: 1.8 },
+];
+const places = data.places.filter(place => ['Anfa Supérieur', 'Ain Diab', 'Bourgogne', 'El Hank', 'Centre-Ville', 'Ancienne Medina', 'Triangle d\'Or', 'Val Fleuri'].includes(place.name) || (place.name === 'Maârif' && place.kind === 'quarter'));
+const streetNames = ['Avenue du Docteur Mohamed Sijelmassi', "Boulevard d'Anfa", 'Boulevard Mohamed Zerktouni', 'Boulevard Abdellatif Ben Kaddour', 'Boulevard Al Massira Al Khadra', 'Boulevard de Bourgogne', 'Boulevard Moulay Youssef', 'Avenue Hassan Souktani'];
+const streets = streetNames.flatMap(name => {
+  const candidates = data.roads.filter(road => road.name === name).map(road => ({ ...roadLabel(road.coordinates), name }));
+  return candidates.sort((a, b) => b.length - a.length).slice(0, 1);
+});
+---
+<metadata id="casablanca-label-data">{JSON.stringify(streetCandidates)}</metadata>
+<g id="casablanca-geography">
+  <rect class="m-land" x={x} y={y} width={width} height={height}/>
+  <path class="m-sea" d={data.seaPolygons.map(polygon => geographicPath(polygon, true)).join('')}/>
+  {groups.map(group => <path class={group.name} d={data.roads.filter(road => group.kinds.includes(road.kind)).map(road => geographicPath(road.coordinates)).join('')} fill="none" stroke-width={group.width} vector-effect="non-scaling-stroke"/>)}
+  <path class="m-coast" d={data.coastline.map(line => geographicPath(line.coordinates)).join('')} fill="none" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+</g>
+<g id="casablanca-place-labels">
+  <g transform="translate(760 120)"><g class="map-glyph"><text class="m-sea-lbl map-ocean-label" text-anchor="middle">OCÉAN ATLANTIQUE</text></g></g>
+  {places.map(place => {
+    const [x, y] = projectCoordinate(place.coordinates);
+    return <g transform={`translate(${x} ${y})`} data-osm-place={place.osmId}><g class="map-glyph"><text class="m-lbl map-place-label" text-anchor="middle">{place.name.toUpperCase()}</text></g></g>;
+  })}
+</g>
+<g id="casablanca-street-labels">
+  {streets.map(street => <g transform={`translate(${street.x} ${street.y}) rotate(${street.angle})`}><g class="map-glyph"><text class="m-lbl map-street-label" text-anchor="middle" y="-5">{street.name}</text></g></g>)}
+</g>

@@ -1,0 +1,51 @@
+---
+import data from '../data/casablanca-map.json';
+import { projectCoordinate, projectedBounds, showroomCoordinate } from '../lib/geography';
+import '../styles/geographic-map.css';
+interface Props {
+  id: string;
+  name: string;
+  latitude?: number | null;
+  longitude?: number | null;
+  mapUrl?: string;
+  mobile?: boolean;
+  responsive?: boolean;
+}
+const { id, name, latitude, longitude, mapUrl, mobile = false, responsive = false } = Astro.props;
+const coordinate = showroomCoordinate(latitude, longitude, data.bounds);
+const point = coordinate ? projectCoordinate(coordinate) : null;
+const mobileView = [(point?.[0] ?? 808) - 300, (point?.[1] ?? 530) - 360, 600, 720];
+const initial = mobile ? mobileView : [0, 0, 1440, 900];
+const bounds = projectedBounds(data.bounds);
+---
+<div class:list={['geographic-map', {'geographic-map-mobile': mobile, 'geographic-map-responsive': responsive}]} data-geographic-map data-initial-view={initial.join(' ')} data-mobile-view={responsive ? mobileView.join(' ') : undefined} data-bounds={bounds.join(' ')} data-pin={point?.join(' ')} data-panning="false" data-zoom-detail="false">
+  <div class="geographic-map-viewport" data-map-viewport tabindex="0" role="group" aria-label="Carte de Casablanca" aria-describedby={`${id}-instructions`}>
+    <svg class="map" data-map-svg viewBox={initial.join(' ')} preserveAspectRatio="xMidYMid slice" role="group" aria-labelledby={`${id}-title`}>
+      <title id={`${id}-title`}>Carte géographique de Casablanca{point ? ` — ${name}` : ''}</title>
+      <use href="#casablanca-geography"/>
+      <use href="#casablanca-place-labels"/>
+      <g class="map-detail-labels" data-map-street-labels><use href="#casablanca-street-labels"/></g>
+      {point && <g transform={`translate(${point[0]} ${point[1]})`} data-showroom-marker data-latitude={latitude} data-longitude={longitude}>
+        <g class="map-glyph">
+          <circle r="16" fill="none" stroke="#DB0812" stroke-width="2" class="pulse"/>
+          <circle r="7" fill="#DB0812"/>
+          <g class="m-pin" transform="translate(-22 -66)"><use href="#step" width="44" height="24"/></g>
+          <line class="m-pin" x1="0" y1="-40" x2="0" y2="-10" stroke-width="1.2"/>
+          <text class="m-hi map-store-label" x={mobile ? 0 : 22} y={mobile ? -80 : -48} text-anchor={mobile ? 'middle' : 'start'}>{name.toUpperCase()}</text>
+          {mapUrl && <a href={mapUrl} target="_blank" rel="noopener noreferrer" aria-label={`Itinéraire vers ${name}`}><circle class="map-pin-link" r="24" fill="transparent"/></a>}
+        </g>
+      </g>}
+    </svg>
+  </div>
+  <div class="geographic-map-controls" data-map-controls hidden>
+    <button type="button" data-map-zoom-in aria-label="Zoomer sur la carte" title="Zoomer"><span aria-hidden="true">+</span></button>
+    <button type="button" data-map-zoom-out aria-label="Dézoomer la carte" title="Dézoomer"><span aria-hidden="true">−</span></button>
+    <button type="button" data-map-reset aria-label="Recentrer la carte" title="Recentrer"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="6"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/></svg></button>
+    <button type="button" data-map-pan aria-label="Déplacer la carte" aria-pressed="false" title="Déplacer la carte"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M2 12h20m-13-7 3-3 3 3M9 19l3 3 3-3M5 9l-3 3 3 3m14-6 3 3-3 3"/></svg></button>
+  </div>
+  <p id={`${id}-instructions`} class="map-instructions">Au trackpad, déplacez deux doigts pour parcourir la carte et pincez pour zoomer. Utilisez aussi + et − pour zoomer. Activez le déplacement pour faire glisser la carte, ou utilisez les flèches au clavier. Échap termine le déplacement.</p>
+  <p class="geographic-map-attribution"><a href={data.source.attributionUrl} target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a><span aria-hidden="true"> · </span><a href="/cartographie/casablanca.json" download="casablanca.json">Données ODbL</a></p>
+</div>
+<script>
+  import '../scripts/geographic-map';
+</script>

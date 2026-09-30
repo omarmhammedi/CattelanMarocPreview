@@ -1,0 +1,241 @@
+[
+  {
+    "collection": "pages",
+    "slug": "home",
+    "before": {
+      "intro": "Découvrez le mobilier contemporain Cattelan Italia pour votre intérieur. Explorez les collections et leurs matières, puis poursuivez votre projet avec notre showroom de Casablanca.",
+      "sections": [
+        {
+          "section_key": "brand",
+          "heading": "Le design italien dans les détails",
+          "display_heading": "Dessiné en Italie.",
+          "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, Cattelan Italia crée du mobilier fabriqué en Italie. La recherche des formes et le travail des matières donnent aux collections leur caractère, avec une attention portée aux espaces de vie.",
+          "cta_label": "",
+          "cta_href": ""
+        },
+        {
+          "section_key": "collections",
+          "heading": "Des pièces pour composer votre intérieur",
+          "display_heading": "Les collections",
+          "text": "Une table autour de laquelle se retrouver, une assise qui trouve sa place, un rangement qui organise la pièce. Découvrez six univers pour préciser vos envies et imaginer les associations qui vous ressemblent.",
+          "cta_label": "Explorer les collections",
+          "cta_href": "/collections/"
+        },
+        {
+          "section_key": "showroom",
+          "heading": "Découvrez le showroom de Casablanca",
+          "display_heading": "Découvrez le showroom de Casablanca",
+          "text": "Au cœur du Triangle d’Or, notre showroom de 400 m² présente des compositions pour le salon, la salle à manger et la chambre. Découvrez les matières et les proportions des meubles en situation, puis échangez avec notre équipe sur les modèles, dimensions et revêtements adaptés à votre projet.",
+          "cta_label": "Découvrir le showroom",
+          "cta_href": "/showroom-casablanca/"
+        },
+        {
+          "section_key": "catalogue",
+          "heading": "Prenez le temps de choisir",
+          "display_heading": "Le catalogue",
+          "text": "Recevez le catalogue Cattelan Italia et parcourez les collections à votre rythme. Conservez les références qui vous attirent pour poursuivre votre découverte avec le showroom.",
+          "cta_label": "Recevoir le catalogue",
+          "cta_href": "/catalogue/"
+        },
+        {
+          "section_key": "journal",
+          "heading": "Des idées pour avancer dans votre projet",
+          "display_heading": "Le Journal",
+          "text": "Proportions, matières et associations : les articles du Journal vous donnent des repères pour choisir votre mobilier et imaginer sa place chez vous.",
+          "cta_label": "Lire le Journal",
+          "cta_href": "/journal/"
+        }
+      ],
+      "brand_caption": "Formes, matières et savoir-faire italien",
+      "meta_description": "Découvrez le mobilier Cattelan Italia au Maroc. Explorez les collections, recevez le catalogue et préparez votre visite au showroom de Casablanca."
+    },
+    "after": {
+      "intro": "Mobilier contemporain Cattelan Italia : tables, chaises, canapés, rangements et luminaires. Découvrez les collections et notre showroom à Casablanca.",
+      "sections": [
+        {
+          "section_key": "brand",
+          "heading": "Le design italien dans les détails",
+          "display_heading": "Dessiné en Italie.",
+          "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, Cattelan Italia crée du mobilier fabriqué en Italie.",
+          "cta_label": "",
+          "cta_href": ""
+        },
+        {
+          "section_key": "collections",
+          "heading": "Les collections",
+          "display_heading": "Les collections",
+          "text": "",
+          "cta_label": "Explorer les collections",
+          "cta_href": "/collections/"
+        },
+        {
+          "section_key": "showroom",
+          "heading": "Le showroom de Casablanca",
+          "display_heading": "Le showroom de Casablanca",
+          "text": "Au Triangle d’Or, notre showroom de 400 m² présente du mobilier pour le salon, la salle à manger et la chambre.",
+          "cta_label": "Découvrir le showroom",
+          "cta_href": "/showroom-casablanca/"
+        },
+        {
+          "section_key": "catalogue",
+          "heading": "Le catalogue",
+          "display_heading": "Le catalogue",
+          "text": "",
+          "cta_label": "Télécharger le catalogue",
+          "cta_href": "/catalogue/"
+        },
+        {
+          "section_key": "journal",
+          "heading": "Le Journal",
+          "display_heading": "Le Journal",
+          "text": "",
+          "cta_label": "Lire le Journal",
+          "cta_href": "/journal/"
+        }
+      ],
+      "brand_caption": "Table Skorpio — plateau en verre et piètement métallique.",
+      "meta_description": "Découvrez les collections Cattelan Italia et leurs fiches modèles. Retrouvez l’adresse et les horaires du showroom de Casablanca."
+    }
+  },
+  {
+    "collection": "pages",
+    "slug": "collections",
+    "before": {
+      "intro": "Parcourez les univers Cattelan Italia et une sélection de modèles de la marque. Du salon à la salle à manger, chaque famille permet d’explorer des formes et des matières pour votre projet.",
+      "sections": [
+        {
+          "section_key": "contact",
+          "heading": "Une pièce a retenu votre attention",
+          "text": "Notez son nom et les détails qui vous plaisent. Notre showroom de Casablanca est votre point de contact pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "cta_label": "Contacter le showroom",
+          "cta_href": "/showroom-casablanca/"
+        },
+        {
+          "section_key": "professional",
+          "heading": "Vous préparez un projet professionnel",
+          "text": "Architecte ou décorateur, vous pouvez nous transmettre les références qui vous intéressent pour discuter de votre sélection avec le showroom.",
+          "cta_label": "Échanger avec notre équipe",
+          "cta_href": "/showroom-casablanca/"
+        }
+      ]
+    },
+    "after": {
+      "intro": "",
+      "sections": [
+        {
+          "section_key": "contact",
+          "cta_label": "Coordonnées du showroom",
+          "cta_href": "/showroom-casablanca/#showroom-contact"
+        }
+      ]
+    }
+  },
+  {
+    "collection": "pages",
+    "slug": "showroom-casablanca",
+    "before": {
+      "intro": "Au Triangle d’Or, 400 m² réunissent salons, salles à manger et chambres. Une visite permet d’apprécier les volumes, les matières et les associations de mobilier avant de préciser votre sélection.",
+      "sections": [
+        {
+          "section_key": "advice",
+          "heading": "Préciser votre choix avec l’équipe",
+          "text": "Particuliers, architectes et décorateurs peuvent échanger avec l’équipe sur les modèles, dimensions et revêtements adaptés à leur espace. Les possibilités se précisent selon les options proposées pour chaque meuble."
+        },
+        {
+          "section_key": "visit",
+          "heading": "Préparer votre visite",
+          "text": "Notez les références qui vous intéressent et contactez-nous pour vérifier les pièces exposées. Apportez les dimensions de votre pièce, quelques photos et, si vous en avez un, votre plan : ces repères faciliteront la discussion sur l’encombrement des meubles et leur place dans votre intérieur.",
+          "cta_label": "Contacter le showroom",
+          "cta_href": "#showroom-contact"
+        },
+        {
+          "section_key": "faq_1",
+          "heading": "Tous les modèles du site sont-ils exposés ?",
+          "text": "Les collections du site présentent une sélection de modèles, pas un inventaire du showroom. Appelez-nous avant de vous déplacer si vous souhaitez voir une référence précise."
+        },
+        {
+          "section_key": "faq_2",
+          "heading": "Comment connaître le prix et le délai d’un modèle ?",
+          "text": "Communiquez le nom du modèle, la dimension et la finition qui vous intéressent. L’équipe pourra vous renseigner sur cette configuration et sa disponibilité."
+        }
+      ],
+      "meta_description": "Visitez le showroom Cattelan Italia de 400 m² au Triangle d’Or, à Casablanca. Découvrez les ambiances et préparez votre visite : adresse, horaires et contact."
+    },
+    "after": {
+      "intro": "Le showroom Cattelan Italia se situe au Triangle d’Or, à Casablanca. Sur 400 m², il présente du mobilier pour le salon, la salle à manger et la chambre.",
+      "sections": [
+        {
+          "section_key": "contact_note",
+          "text": "Pour les prix, les délais ou savoir si un modèle est exposé, appelez le showroom."
+        }
+      ],
+      "meta_description": "Showroom Cattelan Italia de 400 m² au Triangle d’Or, à Casablanca : présentation du magasin, adresse, horaires, téléphone et itinéraire."
+    }
+  },
+  {
+    "collection": "pages",
+    "slug": "catalogue",
+    "before": {
+      "title": "Recevez le catalogue Cattelan Italia",
+      "intro": "Découvrez les collections en images et prenez le temps de repérer vos pièces préférées. Laissez votre nom et votre adresse email pour accéder au catalogue en PDF.",
+      "sections": [
+        {
+          "section_key": "contact",
+          "heading": "Poursuivons votre découverte",
+          "text": "Vous pourrez ensuite contacter notre showroom de Casablanca pour parler d’un modèle ou connaître les pièces exposées.",
+          "cta_label": "Échanger avec le showroom",
+          "cta_href": "/showroom-casablanca/"
+        }
+      ],
+      "seo_title": "Catalogue Cattelan Italia | Recevoir le PDF",
+      "meta_description": "Recevez le catalogue Cattelan Italia après votre demande. Explorez les collections et poursuivez votre projet avec le showroom de Casablanca."
+    },
+    "after": {
+      "title": "Télécharger le catalogue Cattelan Italia",
+      "intro": "Renseignez votre nom et votre adresse e-mail pour accéder au PDF.",
+      "sections": [],
+      "seo_title": "Catalogue Cattelan Italia | Télécharger le PDF",
+      "meta_description": "Accédez au PDF après le formulaire. Le document disponible dans cet aperçu est un catalogue de démonstration."
+    }
+  },
+  {
+    "collection": "site_content",
+    "slug": "global",
+    "before": {
+      "footer_text": "Cattelan Italia au Maroc. Découvrez les collections et poursuivez votre projet avec notre showroom de Casablanca.",
+      "catalogue_label": "Recevoir le catalogue",
+      "contact_label": "Contacter le showroom",
+      "model_notice": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+      "preview_notice": "Cette prévisualisation présente la direction de design. Les textes et les images sont provisoires : l’objectif est de valider le design avant de finaliser le contenu.",
+      "form_email_label": "Adresse email",
+      "form_opt_in_label": "Je souhaite également recevoir les nouveautés et invitations du showroom.",
+      "form_hint": "Accédez au PDF après l’envoi du formulaire. Aucun compte à créer.",
+      "form_privacy": "Vos coordonnées permettent de traiter votre demande de catalogue. Pour en savoir plus sur leur utilisation, consultez notre politique de confidentialité.",
+      "form_pending": "Votre demande est en cours…",
+      "form_email_error": "Vérifiez votre adresse email.",
+      "form_error": "Votre demande n’a pas pu aboutir. Réessayez ou contactez-nous sur WhatsApp.",
+      "form_success_title": "Votre catalogue est prêt",
+      "form_success_text": "Merci pour votre intérêt. Vous pouvez maintenant télécharger le catalogue et poursuivre votre découverte à votre rythme.",
+      "form_unavailable": "Le catalogue est momentanément indisponible. Contactez notre équipe sur WhatsApp pour poursuivre votre demande.",
+      "map_note": "Retrouvez le showroom à Casablanca. Ouvrez l’itinéraire pour préparer votre visite."
+    },
+    "after": {
+      "footer_text": "",
+      "catalogue_label": "Télécharger le catalogue",
+      "contact_label": "Coordonnées du showroom",
+      "model_notice": "Contactez le showroom pour connaître les modèles exposés et les possibilités de commande.",
+      "preview_notice": "Version de travail. Certains visuels et le catalogue restent provisoires.",
+      "form_email_label": "Adresse e-mail",
+      "form_opt_in_label": "Je souhaite recevoir les nouveautés et invitations du showroom par e-mail (facultatif).",
+      "form_hint": "Le lien de téléchargement s’affiche après l’envoi du formulaire.",
+      "form_privacy": "Utilisez des coordonnées fictives : elles sont enregistrées pour tester le téléchargement.",
+      "form_pending": "Envoi en cours…",
+      "form_email_error": "Indiquez une adresse e-mail valide.",
+      "form_error": "Le formulaire n’a pas pu être envoyé. Réessayez.",
+      "form_success_title": "Le PDF est prêt",
+      "form_success_text": "Ce lien de téléchargement est valable 15 minutes.",
+      "form_unavailable": "Le catalogue est momentanément indisponible.",
+      "map_note": ""
+    }
+  }
+]

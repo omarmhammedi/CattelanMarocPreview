@@ -1,0 +1,127 @@
+---
+import { getSite, getCatalogue } from '../lib/content';
+interface Props {
+  id: string; catalogueId?: string; labels?: Record<string, string>; compact?: boolean;
+  site?: {form: Record<string, string>; labels: {contact?: string}};
+  catalogue?: {id: string; downloadLabel: string} | null;
+}
+const { id, compact = false } = Astro.props;
+// Parent pages already resolved the published or signed-preview context.
+// Explicit null means no active catalogue; only absent props trigger a read.
+const [site, catalogue] = await Promise.all([
+  Astro.props.site ?? getSite(),
+  Astro.props.catalogue === undefined ? getCatalogue() : Astro.props.catalogue,
+]);
+const labels = { ...site.form, ...Astro.props.labels };
+const catalogueId = Astro.props.catalogueId || catalogue?.id;
+const contactLabel = site.labels.contact || 'Coordonnées du showroom';
+---
+{catalogueId ? <form method="post" action="/_emdash/api/plugins/catalogue-leads/request" class:list={['catalogue-form', { compact }]} data-catalogue-form data-catalogue-id={catalogueId} data-error={labels.error} data-name-error={labels.nameError} data-email-error={labels.emailError} data-unavailable={labels.unavailable} data-pending={labels.pending} data-success-title={labels.successTitle} data-success-text={labels.successText} data-download-label={catalogue?.downloadLabel} data-contact-label={contactLabel}>
+  <noscript><p>Activez JavaScript pour télécharger le catalogue, ou <a href="/showroom-casablanca/#showroom-contact">contactez le showroom</a>.</p><style>.catalogue-form button[type=submit]{display:none}</style></noscript>
+  <div class="catalogue-fields">
+    <div><label for={`${id}-name`}>{labels.name}</label><input id={`${id}-name`} name="name" autocomplete="name" required minlength="2" maxlength="120" aria-describedby={`${id}-name-error`} /><span class="field-error" id={`${id}-name-error`} data-field-error="name" hidden></span></div>
+    <div><label for={`${id}-email`}>{labels.email}</label><input id={`${id}-email`} name="email" type="email" autocomplete="email" required maxlength="254" aria-describedby={`${id}-email-error`} /><span class="field-error" id={`${id}-email-error`} data-field-error="email" hidden></span></div>
+  </div>
+  <div class="form-trap" aria-hidden="true"><label for={`${id}-website`}>Site web</label><input id={`${id}-website`} name="website" tabindex="-1" autocomplete="off" /></div>
+  <label class="form-consent"><input type="checkbox" name="communicationsConsent" value="yes" /><span>{labels.consent}</span></label>
+  {labels.note && <p class="form-note">{labels.note}</p>}
+  <p class="form-privacy">{labels.privacy} <a href="/confidentialite/">Confidentialité</a></p>
+  <button class="btn solid" type="submit">{labels.submit} <span aria-hidden="true">↗</span></button>
+  <div class="form-message" role="status" aria-live="polite" tabindex="-1"></div>
+</form> : <div class="catalogue-unavailable" role="status"><p>{labels.unavailable}</p><a class="text-link" href="/showroom-casablanca/#showroom-contact">{contactLabel}</a></div>}
+<script>
+  import {catalogueFailureMessage} from '../lib/catalogue-messages';
+  document.querySelectorAll<HTMLFormElement>('[data-catalogue-form]').forEach(form => {
+    let requestId = crypto.randomUUID();
+    let fingerprint = '';
+    form.noValidate = true;
+    const nameInput = form.elements.namedItem('name') as HTMLInputElement;
+    const emailInput = form.elements.namedItem('email') as HTMLInputElement;
+    const setFieldError = (field: HTMLInputElement, text: string) => {
+      const error = form.querySelector<HTMLElement>(`[data-field-error="${field.name}"]`)!;
+      error.textContent = text;
+      error.hidden = !text;
+      field.setAttribute('aria-invalid', String(Boolean(text)));
+    };
+    [nameInput, emailInput].forEach(field => field.addEventListener('input', () => setFieldError(field, '')));
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      const name = nameInput.value.trim();
+      const email = emailInput.value.trim();
+      const invalidName = name.length < 2 || name.length > 120 || /[\u0000-\u001f\u007f]/u.test(name);
+      const invalidEmail = email.length > 254 || /[\u0000-\u001f\u007f]/u.test(email) || !/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/u.test(email);
+      setFieldError(nameInput, invalidName ? (form.dataset.nameError || 'Indiquez votre nom.') : '');
+      setFieldError(emailInput, invalidEmail ? (form.dataset.emailError || 'Vérifiez votre adresse e-mail.') : '');
+      if (invalidName || invalidEmail) { (invalidName ? nameInput : emailInput).focus(); return; }
+      const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
+      if (button.disabled) return;
+      const message = form.querySelector<HTMLElement>('.form-message')!;
+      const showFailure = (text: string) => {
+        const description = document.createElement('p'); description.textContent = text;
+        const contact = document.createElement('a');
+        contact.className = 'text-link'; contact.href = '/showroom-casablanca/#showroom-contact';
+        contact.textContent = form.dataset.contactLabel || 'Coordonnées du showroom';
+        message.replaceChildren(description, contact);
+        message.focus();
+      };
+      const data = new FormData(form);
+      const payload = { name, email, communicationsConsent: data.get('communicationsConsent') === 'yes', website: String(data.get('website') || ''), catalogueId: form.dataset.catalogueId, sourcePath: location.pathname };
+      const nextFingerprint = JSON.stringify(payload);
+      if (fingerprint && fingerprint !== nextFingerprint) requestId = crypto.randomUUID();
+      fingerprint = nextFingerprint;
+      button.disabled = true;
+      form.setAttribute('aria-busy', 'true');
+      message.textContent = form.dataset.pending || '';
+      try {
+        const response = await fetch('/_emdash/api/plugins/catalogue-leads/request', { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-EmDash-Request': '1' }, body: JSON.stringify({ ...payload, requestId }) });
+        const envelope = await response.json() as { success?: boolean; data?: { ok?: boolean; downloadUrl?: string; code?: string; message?: string } };
+        const result = envelope.data;
+        if (!response.ok || !envelope.success) throw new Error('request_failed');
+        if (!result?.ok || !result.downloadUrl) {
+          if (result?.code === 'INVALID_NAME' || result?.code === 'INVALID_EMAIL') {
+            const isName = result.code === 'INVALID_NAME';
+            const field = isName ? nameInput : emailInput;
+            setFieldError(field, (isName ? form.dataset.nameError : form.dataset.emailError) || result.message || form.dataset.error || '');
+            message.textContent = '';
+            field.focus();
+          } else showFailure(catalogueFailureMessage(result, {unavailable: form.dataset.unavailable, error: form.dataset.error}));
+          return;
+        }
+        message.replaceChildren();
+        const title = document.createElement('strong'); title.textContent = form.dataset.successTitle || '';
+        const text = document.createElement('p'); text.textContent = form.dataset.successText || '';
+        const link = document.createElement('a'); link.className = 'btn'; link.href = result.downloadUrl; link.textContent = form.dataset.downloadLabel || ''; link.setAttribute('download', '');
+        message.appendChild(title);
+        message.appendChild(text);
+        message.appendChild(link);
+        message.focus();
+      } catch { showFailure(form.dataset.error || ''); }
+      finally { button.disabled = false; form.removeAttribute('aria-busy'); }
+    });
+  });
+</script>
+<style>
+.catalogue-form{width:100%;margin-top:0}
+.catalogue-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*2)}
+.catalogue-fields label{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.catalogue-fields input{height:48px;border:0;border-bottom:1px solid rgba(var(--ink-rgb),.35);border-radius:0;background:transparent;color:var(--ink);font-size:max(16px,calc(var(--u)*1.3));font-weight:300;min-width:0;width:100%;padding:0}
+.catalogue-fields input:focus{outline:none;border-bottom-color:var(--ink)}
+.catalogue-fields input[aria-invalid="true"]{border-bottom-color:var(--ink);border-bottom-width:2px}
+.field-error{display:block;margin-top:8px;font-size:12px;line-height:1.5;color:var(--ink)}
+.field-error[hidden]{display:none}
+.form-consent{display:flex;align-items:flex-start;gap:10px;font-size:12px;line-height:1.6;color:var(--muted);margin:22px 0 10px;cursor:pointer}
+.form-consent input{width:16px;height:16px;margin:2px 0 0;flex:none;accent-color:var(--ink)}
+.form-note,.form-privacy{font-size:12px;line-height:1.6;color:var(--faint);margin:8px 0;max-width:44em}
+.form-privacy a{text-decoration:underline;text-underline-offset:3px}
+.catalogue-form button{margin-top:18px;gap:20px}
+.catalogue-form button:disabled{opacity:.5;cursor:wait}
+.form-message{font-size:15px;font-weight:300;line-height:1.7}
+.form-message:not(:empty){margin-top:20px}
+.form-message p{margin:8px 0}
+.form-trap{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+@media(max-width:700px){
+  .catalogue-fields{grid-template-columns:1fr;gap:18px}
+  .catalogue-form .btn{max-width:100%;height:auto;min-height:46px;padding-block:14px;white-space:normal;overflow-wrap:anywhere;line-height:1.5;text-align:center}
+  .catalogue-form .btn > span{flex:none}
+}
+</style>

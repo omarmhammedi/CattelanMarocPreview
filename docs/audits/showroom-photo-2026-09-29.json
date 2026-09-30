@@ -1,0 +1,326 @@
+{
+  "date": "2026-09-29",
+  "displayTimeZone": "America/Toronto",
+  "scope": "Owner-provided photograph on homepage and dedicated showroom page; private EmDash preview",
+  "publication": {
+    "completedAt": "2026-09-29T18:25:51.804Z",
+    "complete": true,
+    "entries": [
+      {
+        "collection": "pages",
+        "slug": "home",
+        "fields": [
+          "showroom_image"
+        ]
+      },
+      {
+        "collection": "pages",
+        "slug": "showroom-casablanca",
+        "fields": [
+          "hero_image"
+        ]
+      }
+    ],
+    "media": {
+      "id": "01M3Q6MSMHERFQPJK77BFQ5EP3",
+      "filename": "cattelan-italia-casablanca-entree-showroom.jpg",
+      "bytes": 2145163,
+      "width": 2000,
+      "height": 3000,
+      "sha256": "27fb665fc83d84f5c70157172a5f4d1dcd3e6153a1bbc717fb1ca4fc6933fe11",
+      "deduplicated": false
+    },
+    "oldImagePreserved": true,
+    "nativeSeoPreserved": true
+  },
+  "authCleanup": {
+    "completedAt": "2026-09-29T18:25:52.098Z",
+    "logout": 200,
+    "oldSessionRejected": 401,
+    "onlyNewCookieFileRemoved": true,
+    "publicationCompleted": true
+  },
+  "preservation": {
+    "verifiedAt": "2026-09-29T18:26:42.397Z",
+    "ok": true,
+    "errors": [],
+    "strictTables": 56,
+    "approvedPagesVerified": 2,
+    "existingRevisionsVerified": 97,
+    "newRevisions": 2,
+    "existingMediaVerified": 624,
+    "addedMedia": 1,
+    "existingFilesVerified": 627,
+    "addedFiles": 1,
+    "protectedBytes": 191784549,
+    "addedBytes": 2145163,
+    "users": 2,
+    "passkeys": 2,
+    "media": 625,
+    "addedTechnicalUsers": 0,
+    "changedTables": [
+      {
+        "table": "_cf_METADATA",
+        "before": 1,
+        "after": 1,
+        "bookkeeping": true
+      },
+      {
+        "table": "_emdash_media_usage",
+        "before": 2211,
+        "after": 2216,
+        "bookkeeping": true
+      },
+      {
+        "table": "_emdash_media_usage_index_status",
+        "before": 6,
+        "after": 6,
+        "bookkeeping": true
+      },
+      {
+        "table": "_emdash_media_usage_sources",
+        "before": 31,
+        "after": 31,
+        "bookkeeping": true
+      },
+      {
+        "table": "ec_pages",
+        "before": 5,
+        "after": 5,
+        "bookkeeping": false
+      },
+      {
+        "table": "media",
+        "before": 624,
+        "after": 625,
+        "bookkeeping": false
+      },
+      {
+        "table": "revisions",
+        "before": 97,
+        "after": 99,
+        "bookkeeping": false
+      }
+    ]
+  },
+  "browserChecks": [
+    {
+      "engine": "chromium",
+      "theme": "dark",
+      "startedAt": "2026-09-29T18:28:28.016Z",
+      "finishedAt": "2026-09-29T18:29:12.639Z",
+      "checks": 15,
+      "passed": true,
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900
+        },
+        {
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "javascriptErrors": [],
+      "attemptedWrites": [],
+      "blockedPrivateRequests": [],
+      "imageDimensions": [
+        {
+          "width": 735,
+          "height": 735,
+          "alt": "Salle à manger avec table Skorpio en verre et piètement sculptural — Cattelan Italia"
+        },
+        {
+          "width": 1200,
+          "height": 735,
+          "alt": "Détail du piètement métallique et du plateau en verre de la table Skorpio"
+        },
+        {
+          "width": 2000,
+          "height": 3000,
+          "alt": "Entrée et enseigne du showroom Cattelan Italia à Casablanca"
+        }
+      ],
+      "interceptedDirections": 4
+    },
+    {
+      "engine": "chromium",
+      "theme": "light",
+      "startedAt": "2026-09-29T18:29:48.398Z",
+      "finishedAt": "2026-09-29T18:30:24.615Z",
+      "checks": 15,
+      "passed": true,
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900
+        },
+        {
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "javascriptErrors": [],
+      "attemptedWrites": [],
+      "blockedPrivateRequests": [],
+      "imageDimensions": [
+        {
+          "width": 735,
+          "height": 735,
+          "alt": "Salle à manger avec table Skorpio en verre et piètement sculptural — Cattelan Italia"
+        },
+        {
+          "width": 1200,
+          "height": 735,
+          "alt": "Détail du piètement métallique et du plateau en verre de la table Skorpio"
+        },
+        {
+          "width": 2000,
+          "height": 3000,
+          "alt": "Entrée et enseigne du showroom Cattelan Italia à Casablanca"
+        }
+      ],
+      "interceptedDirections": 4
+    },
+    {
+      "engine": "webkit",
+      "theme": "dark",
+      "startedAt": "2026-09-29T18:31:29.116Z",
+      "finishedAt": "2026-09-29T18:32:38.942Z",
+      "checks": 15,
+      "passed": true,
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900
+        },
+        {
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "javascriptErrors": [],
+      "attemptedWrites": [],
+      "blockedPrivateRequests": [],
+      "imageDimensions": [
+        {
+          "width": 735,
+          "height": 735,
+          "alt": "Salle à manger avec table Skorpio en verre et piètement sculptural — Cattelan Italia"
+        },
+        {
+          "width": 1200,
+          "height": 735,
+          "alt": "Détail du piètement métallique et du plateau en verre de la table Skorpio"
+        },
+        {
+          "width": 2000,
+          "height": 3000,
+          "alt": "Entrée et enseigne du showroom Cattelan Italia à Casablanca"
+        }
+      ],
+      "interceptedDirections": 4
+    },
+    {
+      "engine": "webkit",
+      "theme": "light",
+      "startedAt": "2026-09-29T18:33:00.696Z",
+      "finishedAt": "2026-09-29T18:33:45.512Z",
+      "checks": 15,
+      "passed": true,
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 900
+        },
+        {
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "javascriptErrors": [],
+      "attemptedWrites": [],
+      "blockedPrivateRequests": [],
+      "imageDimensions": [
+        {
+          "width": 735,
+          "height": 735,
+          "alt": "Salle à manger avec table Skorpio en verre et piètement sculptural — Cattelan Italia"
+        },
+        {
+          "width": 1200,
+          "height": 735,
+          "alt": "Détail du piètement métallique et du plateau en verre de la table Skorpio"
+        },
+        {
+          "width": 2000,
+          "height": 3000,
+          "alt": "Entrée et enseigne du showroom Cattelan Italia à Casablanca"
+        }
+      ],
+      "interceptedDirections": 4
+    }
+  ],
+  "browserTotal": 60,
+  "screenshots": [
+    {
+      "path": "screenshots/showroom-photo-2026-09-29/home-showroom-1440-dark.jpg",
+      "bytes": 144425,
+      "sha256": "5d200ae39a7d4f7a3b30b1d7573d7c6a038360f41bc224d527e2de0e849b84cf"
+    },
+    {
+      "path": "screenshots/showroom-photo-2026-09-29/home-showroom-390-light.jpg",
+      "bytes": 63441,
+      "sha256": "87cec8fd860dfa75fc9f5e00a52e0313dcce5b8b9dda85c2231d95ac80188525"
+    },
+    {
+      "path": "screenshots/showroom-photo-2026-09-29/showroom-information-1440-dark.jpg",
+      "bytes": 145260,
+      "sha256": "f101ee0804549c2445278d186ce3a5d7360e09bd04524d8963a5455b8c551fd2"
+    },
+    {
+      "path": "screenshots/showroom-photo-2026-09-29/showroom-information-390-light.jpg",
+      "bytes": 51537,
+      "sha256": "a9ae9c9844295ddf7fc456f058f0cc0d4aa16d48f9ffedc7d64d70e568bd4ddd"
+    }
+  ],
+  "limits": [
+    "Original 2000×3000 JPEG retained without retouching or recompression (2145163bytes).",
+    "No physical iPhone, production deployment, new version-B pixel comparison or form submission.",
+    "Direction clicks intercept the existing approved Google URL; no external provider availability claim.",
+    "Initial mobile-animation assertion failed during component adjustments; final suite repeated on stable code.",
+    "A shell wrapper stopped after a successful Chromium light run; its complete report was retained and WebKit runs started separately."
+  ],
+  "validation": {
+    "astroCheck": {
+      "files": 102,
+      "errors": 0,
+      "warnings": 0,
+      "hints": 0
+    },
+    "build": {
+      "passed": true,
+      "seconds": 20.46,
+      "warning": "Existing bundle over 500 kB"
+    },
+    "finalHttp": {
+      "verifiedAt": "2026-09-29T18:38:21.702Z",
+      "routes": [
+        {
+          "path": "/",
+          "status": 200,
+          "complete": true,
+          "matchingImages": 2
+        },
+        {
+          "path": "/showroom-casablanca/",
+          "status": 200,
+          "complete": true,
+          "matchingImages": 1
+        }
+      ],
+      "mediaHashMatchesOriginal": true,
+      "adminStatus": 302
+    }
+  }
+}

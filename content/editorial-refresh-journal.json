@@ -1,0 +1,1861 @@
+[
+  {
+    "collection": "pages",
+    "slug": "journal",
+    "before": {
+      "intro": "Choisir un meuble, c’est aussi penser à sa place dans la pièce et à la façon de vivre avec lui. Retrouvez nos conseils sur les proportions, les matières et les associations pour préparer votre projet.",
+      "sections": [
+        {
+          "section_key": "catalogue",
+          "heading": "Des idées à votre sélection",
+          "text": "Une idée vous plaît ? Retrouvez les collections dans le catalogue et repérez les pièces à explorer pour votre intérieur.",
+          "cta_label": "Recevoir le catalogue",
+          "cta_href": "/catalogue/"
+        }
+      ],
+      "meta_description": "Matières, proportions et associations : découvrez nos conseils pour choisir votre mobilier et préparer votre projet avec Cattelan Italia au Maroc."
+    },
+    "after": {
+      "intro": "Table ronde ou rectangulaire, buffet ou bibliothèque, matières et finitions : nos articles expliquent les différences.",
+      "sections": [],
+      "meta_description": "Forme et dimensions d’une table, association des chaises, matières et rangements : les conseils du Journal Cattelan Italia Maroc."
+    }
+  },
+  {
+    "collection": "posts",
+    "slug": "choisir-forme-proportions-table-salle-a-manger",
+    "before": {
+      "title": "Comment choisir la forme et les proportions de sa table de salle à manger ?",
+      "excerpt": "La bonne table se choisit autant pour sa silhouette que pour la place qu’elle laisse autour d’elle. Quelques repères pour comparer les formes et se projeter.",
+      "content": [
+        {
+          "_type": "block",
+          "_key": "b0",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Partir de la pièce et de ses usages",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Une table attire souvent l’attention dès l’entrée dans une salle à manger. Pourtant, son dessin ne suffit pas à déterminer si elle trouvera sa place. Avant de comparer les modèles, observez les trajets quotidiens : de la cuisine au salon, vers une baie vitrée ou devant un buffet. La table et les chaises doivent permettre de conserver ces passages.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Distinguez ensuite vos repas habituels des occasions où vous recevez davantage de monde. Cette réflexion évite de dimensionner toute la pièce pour une situation exceptionnelle. Notez aussi les usages complémentaires : travailler ponctuellement, dessiner avec les enfants ou partager un long repas. Pensez également aux portes de placards, aux tiroirs et aux autres éléments qui doivent pouvoir s’ouvrir lorsque les sièges sont occupés. Leur position peut modifier votre implantation préférée.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b3",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Comparer les formes dans leur contexte",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b4",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Une table rectangulaire peut accompagner la longueur d’une pièce et organiser clairement un espace repas ouvert sur le salon. Une table ronde crée une composition centrée, intéressante lorsque l’on souhaite disposer les sièges autour d’un même point. Ces orientations restent à vérifier sur votre plan : une forme ronde n’occupe pas automatiquement moins de place.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b5",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Une silhouette ovale peut être envisagée lorsque l’on recherche un plateau allongé avec des extrémités courbes. Pour comparer, dessinez plusieurs propositions à la même échelle, avec les chaises. Vous verrez mieux les passages disponibles qu’en regardant uniquement les dimensions du plateau.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b6",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Regarder aussi sous le plateau",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b7",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Le piètement participe fortement à la présence d’une table. Il intervient également dans la façon dont les chaises se placent et dont les convives s’installent. Une base centrale n’offre pas nécessairement le même dégagement sur tout son pourtour ; des pieds placés aux angles peuvent aussi influencer la position des assises.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b8",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "La famille Skorpio de Cattelan Italia réunit notamment des plateaux en verre, en bois ou en céramique, ainsi que des versions rondes. Comparez chaque configuration avec les chaises envisagées, plutôt que de raisonner uniquement à partir du nom de la collection.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b9",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Évaluer l’ensemble et tester son implantation",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b10",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Deux tables de dimensions proches peuvent produire des impressions différentes. La couleur du plateau, son épaisseur apparente, le dessin de la base et les chaises modifient la lecture de l’ensemble. Une table très expressive peut devenir le point de départ de la décoration ; une silhouette plus discrète laisse davantage de place aux autres éléments.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b11",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Placez les images des modèles à côté de celles du sol, du buffet et du luminaire. Ce rapprochement aide à repérer une accumulation de motifs ou, au contraire, un ensemble trop uniforme pour l’ambiance recherchée.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b12",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Matérialisez le plateau au sol avec du papier ou du ruban adapté au revêtement. Positionnez quelques chaises, reculez-les comme pendant un repas et parcourez la pièce. Photographiez cette implantation depuis plusieurs points de vue. Ce petit exercice transforme une préférence visuelle en choix concret, plus facile à comparer avec les dimensions de la configuration retenue.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "cta_text": "Découvrez les collections dans le catalogue, puis contactez le showroom de Casablanca pour connaître la disponibilité de la configuration qui vous intéresse.",
+      "cta_label": "Recevoir le catalogue",
+      "cta_href": "/catalogue/",
+      "meta_description": "Table ronde ou rectangulaire : apprenez à comparer les formes, les proportions et les piètements pour composer une salle à manger adaptée à votre intérieur."
+    },
+    "after": {
+      "title": "Quelle forme et quelles dimensions pour une table de salle à manger ?",
+      "excerpt": "Une table doit laisser assez de place pour s’asseoir, reculer les chaises et circuler. La forme du plateau et la position des pieds comptent autant que sa longueur.",
+      "content": [
+        {
+          "_type": "block",
+          "_key": "table-refresh-1",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "La place autour de la table",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "table-refresh-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "La table et les chaises occupent plus de place que le plateau seul. Le passage vers la cuisine, la baie vitrée ou le buffet doit rester libre lorsque quelqu’un est assis. Les portes et les tiroirs doivent aussi pouvoir s’ouvrir.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "table-refresh-3",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Le nombre de places dépend du plateau, mais aussi de la largeur des chaises et de la position des pieds. Distinguer les repas habituels des grandes tablées occasionnelles aide à éviter une table trop encombrante au quotidien.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "table-refresh-4",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Ronde, rectangulaire ou ovale",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "table-refresh-5",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Une table rectangulaire peut suivre la longueur d’une pièce. Une table ronde répartit les sièges autour de son plateau, sans prendre automatiquement moins de place. Une forme ovale conserve un plateau allongé avec des extrémités courbes.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "table-refresh-6",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Pour comparer les formes, on peut tracer leur encombrement au sol avec du papier, puis placer quelques chaises autour. Le point à observer : peut-on reculer son siège et passer derrière une personne assise ?",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "table-refresh-7",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "L’espace sous le plateau",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "table-refresh-8",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Une base centrale peut empiéter sur l’espace des pieds ; des pieds aux angles peuvent gêner certaines places. La hauteur des accoudoirs et l’épaisseur du plateau déterminent aussi si les chaises peuvent se ranger dessous.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "table-refresh-9",
+          "style": "normal",
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "link1",
+              "href": "/modeles/skorpio/"
+            }
+          ],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Sur ",
+              "marks": []
+            },
+            {
+              "_type": "span",
+              "_key": "s1",
+              "text": "Skorpio en verre",
+              "marks": [
+                "link1"
+              ]
+            },
+            {
+              "_type": "span",
+              "_key": "s2",
+              "text": ", le plateau transparent laisse voir les branches du piètement en acier. Les vues de la fiche permettent d’observer leur position avant de comparer les dimensions avec celles des chaises envisagées.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "cta_text": "",
+      "cta_label": "Voir les tables",
+      "cta_href": "/collections/tables/",
+      "meta_description": "Table ronde, rectangulaire ou ovale : comparez l’espace pour les chaises, les passages et le piètement avant de choisir les dimensions."
+    }
+  },
+  {
+    "collection": "posts",
+    "slug": "associer-table-chaises-salle-a-manger",
+    "before": {
+      "excerpt": "Une salle à manger cohérente peut réunir des formes et des matières différentes. L’essentiel est de choisir les liens qui donneront une unité à l’ensemble.",
+      "content": [
+        {
+          "_type": "block",
+          "_key": "b0",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Choisir une intention pour l’ensemble",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Composer une salle à manger commence souvent par un coup de cœur pour une table ou une chaise. Gardez cette première préférence comme point de départ. Chercher simultanément à faire de chaque meuble la pièce maîtresse peut compliquer les choix et multiplier les effets visuels.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Si la table possède un plateau très dessiné ou un piètement expressif, commencez par des chaises dont la silhouette vous semble lisible autour d’elle. À l’inverse, une table sobre peut accueillir des assises plus présentes. Il s’agit de choisir où l’on souhaite porter le regard, puis d’organiser les autres éléments autour de cette intention.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b3",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Si vous souhaitez mélanger plusieurs chaises, choisissez ce qui restera commun : le modèle avec deux coloris, une famille de teintes ou une hauteur de dossier proche. Varier un élément à la fois facilite la composition. Photographiez ensuite vos propositions avec le buffet et le luminaire : l’association doit trouver sa place dans toute la pièce, au-delà du seul duo table et chaises.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b4",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Créer un lien sans répéter toutes les finitions",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b5",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Table et chaises n’ont pas besoin de partager exactement la même matière ou la même couleur. Un rapprochement peut venir d’une nuance commune, d’une courbe ou d’un détail de piètement. Sélectionnez le lien que vous souhaitez conserver avant d’ajouter des contrastes.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b6",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Par exemple, des pieds de chaises foncés peuvent rappeler une base de table sombre, tandis qu’un revêtement clair apporte une autre tonalité. Avec un plateau marqué par des veines, observez les couleurs secondaires du motif : l’une d’elles peut guider le choix des assises. Comparez les échantillons ensemble lorsque cela est possible, car des photographies prises séparément ne montrent pas toujours les mêmes nuances.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b7",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Observer le dialogue entre les silhouettes",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b8",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Les courbes d’un dossier, la hauteur des assises et l’épaisseur du plateau composent une silhouette collective. Regardez donc les meubles ensemble, de face et de côté. Une chaise appréciée isolément peut paraître très enveloppante une fois répétée autour de la table.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b9",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "La collection Rhonda de Cattelan Italia permet d’explorer cette question : ses chaises à accoudoirs présentent des lignes arrondies, notamment avec des pieds métalliques ou des pieds en bois sur Rhonda Wood. Ces variations offrent plusieurs pistes d’association autour d’une même forme d’assise.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b10",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Vérifier la compatibilité au quotidien",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b11",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "L’accord visuel doit aussi fonctionner pendant un repas. Vérifiez la hauteur de l’assise par rapport au plateau, l’espace pour les jambes et la possibilité de rapprocher la chaise de la table. Les accoudoirs méritent une attention particulière : leur hauteur et leur forme peuvent empêcher de glisser complètement l’assise sous le plateau.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b12",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Tenez également compte du nombre de chaises prévu et du piètement de la table. Dessiner l’ensemble à l’échelle, puis tester une installation avec les sièges disponibles chez vous, permet de préciser les points à vérifier avant une commande. Une fois assis, assurez-vous que chacun peut se rapprocher du plateau et se lever sans déplacer toute la composition.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "cta_text": "Explorez les tables et les assises Cattelan Italia dans le catalogue pour préparer les associations de votre projet.",
+      "cta_label": "Recevoir le catalogue",
+      "cta_href": "/catalogue/",
+      "meta_description": "Formes, couleurs, matières et proportions : découvrez comment associer une table et des chaises pour créer une salle à manger cohérente et personnelle."
+    },
+    "after": {
+      "excerpt": "La table et les chaises peuvent avoir des matières différentes. Un rappel de couleur peut les rapprocher ; leurs dimensions doivent surtout permettre de s’installer confortablement.",
+      "content": [
+        {
+          "_type": "block",
+          "_key": "chaises-refresh-1",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Un rappel de couleur suffit parfois",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "chaises-refresh-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Des pieds de chaises foncés peuvent rappeler une base de table sombre, avec un revêtement plus clair sur l’assise. Avec un plateau veiné, une couleur présente dans le motif peut aussi se retrouver sur les chaises. Ce sont des possibilités, pas des règles à suivre.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "chaises-refresh-3",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Pour mélanger plusieurs chaises, une solution simple consiste à garder le même modèle dans deux coloris. Les échantillons placés côte à côte permettent de comparer les nuances plus sûrement que des photographies prises sous des éclairages différents.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "chaises-refresh-4",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Regarder les chaises autour de la table",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "chaises-refresh-5",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Un dossier haut ou des accoudoirs larges occupent une place visuelle et physique différente une fois répétés autour d’un plateau. Regardez l’ensemble de face et de côté, avec le nombre de sièges prévu.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "chaises-refresh-6",
+          "style": "normal",
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "link0",
+              "href": "/modeles/rhonda/"
+            }
+          ],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Rhonda",
+              "marks": [
+                "link0"
+              ]
+            },
+            {
+              "_type": "span",
+              "_key": "s1",
+              "text": " associe un dossier arrondi à des accoudoirs et à des pieds métalliques. Sa fiche présente les dimensions et les revêtements de cette version. Rhonda Wood possède un autre piètement ; ses caractéristiques ne se déduisent pas de celles de Rhonda.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "chaises-refresh-7",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Les accoudoirs passent-ils sous le plateau ?",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "chaises-refresh-8",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "La hauteur totale de la table ne donne pas la place disponible sous le plateau. Son épaisseur, sa ceinture éventuelle et son piètement peuvent limiter le passage des accoudoirs ou des jambes.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "chaises-refresh-9",
+          "style": "normal",
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "link1",
+              "href": "/journal/choisir-forme-proportions-table-salle-a-manger/"
+            }
+          ],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "La largeur des chaises compte aussi : chacun doit pouvoir se rapprocher de la table et se lever. Si vous choisissez encore le plateau, l’article sur ",
+              "marks": []
+            },
+            {
+              "_type": "span",
+              "_key": "s1",
+              "text": "la forme et les dimensions d’une table",
+              "marks": [
+                "link1"
+              ]
+            },
+            {
+              "_type": "span",
+              "_key": "s2",
+              "text": " détaille les points à comparer.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "cta_text": "",
+      "cta_label": "Voir les chaises et tabourets",
+      "cta_href": "/collections/chaises-tabourets/",
+      "meta_description": "Associer une table et des chaises : rappels de couleur, largeur des sièges et hauteur des accoudoirs. Les points utiles à comparer."
+    }
+  },
+  {
+    "collection": "posts",
+    "slug": "ceramique-verre-bois-choisir-finition-meuble",
+    "before": {
+      "title": "Céramique, verre ou bois : comment choisir la finition d’un meuble ?",
+      "excerpt": "Une même forme change de présence selon sa finition. Pour choisir, observez ce que la matière apporte à la pièce et vérifiez les caractéristiques de la version qui vous intéresse.",
+      "content": [
+        {
+          "_type": "block",
+          "_key": "b0",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Regarder le meuble dans son environnement",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Le choix d’un plateau ou d’une façade se fait rarement sur une couleur seule. Le sol, les murs et les meubles déjà présents influencent la manière dont une finition sera perçue. Avant de comparer les options, rassemblez quelques photographies de votre pièce prises en journée et le soir. Elles permettront de repérer les couleurs dominantes et les éléments que vous souhaitez mettre en valeur.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Observez aussi la quantité de motifs déjà présente. Un sol fortement veiné, un tapis dessiné et un plateau expressif peuvent cohabiter, mais leur association mérite d’être regardée dans son ensemble. À l’inverse, une pièce aux surfaces unies peut accueillir une matière plus graphique comme point d’attention.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b3",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Identifier la matière derrière son apparence",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b4",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Une apparence marbrée ne désigne pas nécessairement du marbre naturel. Dans les collections Cattelan Italia, les dénominations des variantes permettent de distinguer notamment les plateaux en céramique, en bois, en verre ou en marbre. La famille Skorpio illustre cette diversité. Vérifiez donc le nom complet du modèle et sa fiche, au-delà de la photographie qui vous a attiré.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b5",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Les brochures de la marque présentent également CrystalArt, un décor imprimé sur verre, et Brushed, une finition travaillée par brossage manuel. Ces termes décrivent des solutions différentes. Les identifier aide à formuler une demande précise et à comparer des options qui ne se résument pas à une teinte.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b6",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Comparer le dessin et les reflets",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b7",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Commencez par le dessin de la surface : préférez-vous une texture discrète, un veinage marqué ou une transparence qui laisse voir le piètement ? Regardez ensuite la teinte à côté des autres matériaux de la pièce. Une association réussie peut reposer sur un rappel de couleur, sans répéter partout la même finition.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b8",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Les reflets comptent également. Examinez les photographies sous plusieurs angles et, lorsqu’un échantillon est accessible, observez-le sous différents éclairages. Un gros plan renseigne sur un détail ; une vue d’ensemble permet de comprendre sa place dans le meuble. Gardez toutefois à l’esprit que l’écran et l’éclairage de la prise de vue peuvent modifier la perception des couleurs.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b9",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Relier le choix à votre usage",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b10",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Une table de repas, un bureau et un buffet ne sont pas sollicités de la même façon. Notez ce que vous poserez sur la surface et les usages fréquents avant de demander les recommandations du fabricant. L’entretien, les précautions et les propriétés doivent être vérifiés pour la finition exacte ; le seul nom d’une matière ne suffit pas à les déduire.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b11",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Pour avancer, retenez deux ou trois options et notez ce qui vous plaît dans chacune. Conservez la référence du modèle, le nom de la finition et une photographie de votre intérieur. Vous disposerez d’une base claire pour échanger avec le showroom de Casablanca et préciser votre sélection.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Cattelan Italia — Skorpio",
+          "url": "https://cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8"
+        },
+        {
+          "label": "Cattelan Italia — Catalogues et brochures de finitions",
+          "url": "https://cattelanitalia.com/fr/catalogues"
+        }
+      ],
+      "cta_text": "Découvrez les ambiances du catalogue et repérez les modèles dont vous souhaitez explorer les finitions.",
+      "cta_label": "Recevoir le catalogue",
+      "cta_href": "/catalogue/",
+      "seo_title": "Céramique, verre ou bois | Cattelan Italia Maroc",
+      "meta_description": "Comparez le dessin, la teinte et les effets de matière pour choisir une finition de meuble en accord avec votre intérieur et votre usage."
+    },
+    "after": {
+      "title": "Comprendre les matières et finitions Cattelan Italia",
+      "excerpt": "Keramik, Wood, CrystalArt et Brushed : ces noms apparaissent dans les fiches Cattelan Italia. Ils désignent une matière, un décor ou un travail de surface.",
+      "content": [
+        {
+          "_type": "block",
+          "_key": "matieres-refresh-1",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Keramik, Wood et Marble : la matière du plateau",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "matieres-refresh-2",
+          "style": "normal",
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "link1",
+              "href": "/modeles/skorpio/"
+            }
+          ],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Dans la famille Skorpio, les noms précisent le matériau : Wood désigne le bois, Keramik la céramique et Marble le marbre naturel. La fiche ",
+              "marks": []
+            },
+            {
+              "_type": "span",
+              "_key": "s1",
+              "text": "Skorpio présentée sur ce site",
+              "marks": [
+                "link1"
+              ]
+            },
+            {
+              "_type": "span",
+              "_key": "s2",
+              "text": " correspond, elle, à la table avec plateau en verre.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "matieres-refresh-3",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Un motif veiné ne permet donc pas, à lui seul, d’identifier du marbre. La marque propose notamment des céramiques à effet marbré. Le nom complet de la version et sa fiche technique indiquent la matière utilisée.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "matieres-refresh-4",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "CrystalArt : un décor imprimé sur verre",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "matieres-refresh-5",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "CrystalArt désigne un décor obtenu par impression sur le verre. Un plateau CrystalArt reste donc un plateau en verre, même si son dessin évoque une autre matière.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "matieres-refresh-6",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Brushed : une finition brossée à la main",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "matieres-refresh-7",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Le terme Brushed décrit le travail de brossage manuel de la surface. Sur Skorpio, Brushed Bronze et Brushed Grey font partie des finitions de la base en acier. Ils ne désignent pas le matériau du plateau.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "matieres-refresh-8",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Lire séparément le plateau et la base",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "matieres-refresh-9",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Un même meuble peut associer plusieurs matériaux et finitions. Pour comparer deux versions, regardez quelle option concerne le plateau, le piètement ou le revêtement. Les couleurs affichées à l’écran peuvent varier avec l’éclairage de la photo ; les consignes d’entretien, elles, se vérifient pour la finition exacte.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Cattelan Italia — Skorpio et ses variantes",
+          "url": "https://www.cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8"
+        },
+        {
+          "label": "Cattelan Italia — brochures Keramik, Brushed et CrystalArt",
+          "url": "https://www.cattelanitalia.com/fr/catalogues"
+        }
+      ],
+      "cta_text": "",
+      "cta_label": "Voir les tables",
+      "cta_href": "/collections/tables/",
+      "seo_title": "Matières et finitions : les termes Cattelan Italia",
+      "meta_description": "Keramik, Wood, CrystalArt et Brushed : comprendre les matières et finitions indiquées dans les fiches Cattelan Italia, avec l’exemple de Skorpio."
+    }
+  },
+  {
+    "collection": "posts",
+    "slug": "composer-salon-canape-fauteuil",
+    "before": {
+      "excerpt": "Un canapé et un fauteuil peuvent partager les mêmes lignes ou jouer sur leurs différences. Le point de départ reste votre façon de vivre le salon.",
+      "content": [
+        {
+          "_type": "block",
+          "_key": "b0",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Partir des moments vécus dans le salon",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Conversation, soirée en famille ou lecture : avant de choisir les assises, demandez-vous quelle place ces activités occupent chez vous. Le canapé accueille souvent plusieurs personnes ; le fauteuil crée une assise distincte, orientée vers la conversation ou vers un autre point de la pièce.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Dessinez une implantation avec les meubles à conserver. Repérez les portes, les fenêtres et les trajets habituels. Un fauteuil séduisant sur une photo doit trouver une place où l’on a envie de s’installer, sans devoir le déplacer à chaque passage.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b3",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Choisir entre continuité et contraste",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b4",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Associer des modèles d’une même famille est une manière de créer une continuité visuelle. Chez Cattelan Italia, le canapé Ruby et le fauteuil Ruby Lounge partagent une structure en bois apparente et des lignes enveloppantes. Leur dessin commun permet de les envisager ensemble, tout en conservant à chaque assise son rôle dans la composition.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b5",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Vous pouvez également rapprocher deux modèles différents. Choisissez alors un élément commun : une courbe, une teinte ou une matière. Ce fil conducteur aide à construire l’ensemble. Un contraste se lit mieux lorsqu’il porte sur un choix précis, plutôt que sur toutes les caractéristiques à la fois.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b6",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Évaluer les volumes dans leur ensemble",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b7",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "La largeur ne suffit pas à comprendre la place d’une assise. Regardez aussi sa profondeur, la hauteur de son dossier et la présence de ses accoudoirs. Un canapé aux volumes généreux peut gagner à être accompagné d’un fauteuil qui laisse davantage voir le sol. À l’inverse, deux silhouettes affirmées peuvent devenir le centre de la pièce.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b8",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Reportez les dimensions envisagées sur votre plan, puis matérialisez leur emprise au sol avec du papier. Observez la composition depuis l’entrée et depuis les autres pièces. Cette vérification permet de juger les passages et les perspectives avant de vous attacher à une configuration.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b9",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Relier les matières à votre intérieur",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b10",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Le choix du revêtement prend du sens lorsqu’on le rapproche du sol, des rideaux et de la table basse. Commencez par les éléments qui resteront dans la pièce. Un bois déjà présent peut guider une finition ; la couleur d’un tapis peut suggérer une tonalité pour le fauteuil. Il n’est pas nécessaire de retrouver exactement la même nuance partout.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b11",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Gardez aussi une place pour les questions pratiques. Demandez les consignes d’entretien du revêtement envisagé et vérifiez si la housse est amovible. Ces caractéristiques varient selon les modèles : elles doivent être examinées avec autant d’attention que la couleur ou la texture.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b12",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Rassemblez un plan, quelques photos du salon et des ambiances qui vous plaisent. Notez ce qui vous attire : le dessin du dossier, la présence du bois ou la relation entre les assises.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b13",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Explorez ensuite les canapés et fauteuils Cattelan Italia pour retenir quelques pistes. Si vous souhaitez découvrir un modèle au showroom de Casablanca, contactez l’équipe pour vérifier les pièces exposées. Vous pourrez ainsi poursuivre votre choix en tenant compte du confort recherché.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Cattelan Italia — Ruby, présentation officielle et fiche technique",
+          "url": "https://cattelanitalia.com/en/products/75C6DB4B-1A99-400D-AEE7-9D5797651F05?c=5"
+        }
+      ],
+      "cta_text": "Découvrez les lignes et les matières des collections pour préparer votre sélection.",
+      "cta_label": "Explorer les canapés et fauteuils",
+      "meta_description": "Disposition, proportions et matières : quelques repères pour associer un canapé et un fauteuil et composer un salon adapté à votre quotidien."
+    },
+    "after": {
+      "excerpt": "La profondeur d’un fauteuil peut surprendre autant que la largeur d’un canapé. Dimensions, circulation et revêtements comptent dans le choix de l’ensemble.",
+      "content": [
+        {
+          "_type": "block",
+          "_key": "salon-refresh-1",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Laisser le passage libre",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "salon-refresh-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Un fauteuil peut faire face au canapé pour discuter, ou être orienté vers une fenêtre pour lire. Dans les deux cas, il faut pouvoir le rejoindre sans contourner tous les meubles, et conserver l’accès aux portes et aux fenêtres.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "salon-refresh-3",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Comparer la profondeur, pas seulement la largeur",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "salon-refresh-4",
+          "style": "normal",
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "link1",
+              "href": "/modeles/ruby/"
+            },
+            {
+              "_type": "link",
+              "_key": "link3",
+              "href": "/modeles/ruby-lounge/"
+            }
+          ],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Le canapé ",
+              "marks": []
+            },
+            {
+              "_type": "span",
+              "_key": "s1",
+              "text": "Ruby S200",
+              "marks": [
+                "link1"
+              ]
+            },
+            {
+              "_type": "span",
+              "_key": "s2",
+              "text": " mesure 200 cm de large et 92 cm de profondeur. Le fauteuil ",
+              "marks": []
+            },
+            {
+              "_type": "span",
+              "_key": "s3",
+              "text": "Ruby Lounge",
+              "marks": [
+                "link3"
+              ]
+            },
+            {
+              "_type": "span",
+              "_key": "s4",
+              "text": " est moins large, à 81 cm, mais occupe également 92 cm en profondeur. Un fauteuil plus étroit ne libère donc pas forcément le passage devant lui.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "salon-refresh-5",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Pour vérifier la place disponible, on peut reporter ces dimensions au sol avec du papier. Il reste à compter l’espace pour s’asseoir, se lever et circuler autour de la table basse.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "salon-refresh-6",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Accorder les assises sans tout assortir",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "salon-refresh-7",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Ruby et Ruby Lounge partagent un cadre en frêne apparent et un dossier courbe. Ces éléments permettent de les associer sans choisir nécessairement le même revêtement. Avec deux modèles différents, on peut aussi reprendre une couleur déjà présente sur le tapis ou les rideaux.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "salon-refresh-8",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Vérifier le revêtement de chaque modèle",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "salon-refresh-9",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Les options de tissu ou de cuir sont propres à chaque fiche : celles du canapé Ruby ne se reportent pas automatiquement sur Ruby Lounge. Leurs revêtements sont fixes. Si vous recherchez une housse amovible, cette caractéristique doit être précisée pour le modèle retenu ; le choix d’un tissu ne suffit pas à la garantir.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Cattelan Italia — Ruby, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/75C6DB4B-1A99-400D-AEE7-9D5797651F05"
+        },
+        {
+          "label": "Cattelan Italia — Ruby Lounge, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/3BFE3570-1D83-4026-A81F-F0913AEE75BD"
+        },
+        {
+          "label": "Cattelan Italia — catalogue canapés et fauteuils, Ruby et Ruby Lounge",
+          "url": "https://download.cattelanitalia.com/catalogues/718.pdf?t=1774003834"
+        }
+      ],
+      "cta_text": "",
+      "cta_label": "Voir les canapés et fauteuils",
+      "meta_description": "Associer canapé et fauteuil : comparer profondeur, passages et revêtements. L’exemple de Ruby et Ruby Lounge pour comprendre leur encombrement."
+    }
+  },
+  {
+    "collection": "posts",
+    "slug": "choisir-buffet-bibliotheque-salon",
+    "before": {
+      "excerpt": "Le bon rangement dépend autant de ce que vous souhaitez montrer que de ce que vous préférez garder à l’abri des regards. Voici comment orienter votre choix.",
+      "content": [
+        {
+          "_type": "block",
+          "_key": "b0",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Commencer par ce que vous avez à ranger",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Livres, vaisselle, documents et souvenirs ne demandent pas tous le même rangement. Rassemblez vos objets par usage et distinguez ceux que vous utilisez régulièrement de ceux que vous souhaitez exposer. Cette sélection donne une première direction avant de comparer les meubles.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Évitez de choisir une capacité uniquement à partir de la taille extérieure du meuble. La hauteur des étagères, la profondeur utile et la répartition des compartiments peuvent changer la manière de l’utiliser. Prenez les mesures des objets les plus encombrants pour vérifier qu’ils trouveront réellement leur place.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b3",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Le buffet pour regrouper et dissimuler",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b4",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Un buffet permet de réunir des objets derrière des portes tout en conservant une surface disponible au-dessus. Il peut convenir si vous souhaitez ranger la vaisselle près de la salle à manger, ou rassembler des affaires du quotidien dans le salon. Le plateau accueille ensuite quelques éléments choisis, selon l’usage et les indications du fabricant.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b5",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Dans les collections Cattelan Italia, Chelsea se distingue par un dessin polygonal et des étagères intérieures en verre. Son plateau existe en verre miroir ou en céramique selon la version. Cet exemple montre comment un rangement fermé peut participer au décor par sa forme, sans dépendre uniquement des objets posés dessus.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b6",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "La bibliothèque pour donner une place aux objets visibles",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b7",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Une bibliothèque ouverte permet de composer avec les livres et les objets. Leur disposition devient une partie du décor : des ouvrages regroupés, un objet isolé et une étagère moins remplie produisent des effets différents. Avant de retenir cette solution, demandez-vous si vous aimez faire évoluer cette présentation ou si vous préférez un rangement plus discret.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b8",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Airport, dessinée par Giorgio Cattelan, est une bibliothèque composée d’éléments, avec fixation au mur ou au plafond. Ses étagères et ses conteneurs offrent différentes possibilités de composition. Le choix d’une configuration demande donc d’examiner les dimensions de la pièce et les conditions de fixation propres au projet.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b9",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Trouver la bonne place dans le salon",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b10",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Un buffet bas laisse une place au mur pour un tableau. Une bibliothèque plus haute attire le regard vers les étagères. Comparez ces effets avec les éléments présents : fenêtres, canapé et meubles à conserver. Le rangement participe ainsi à la composition générale du salon.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b11",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Sur le plan, prévoyez l’ouverture des portes et des tiroirs, ainsi que la place pour les utiliser. Repérez également les prises et les interrupteurs. Ces vérifications évitent de retenir une implantation qui compliquerait un geste quotidien.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b12",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Buffet et bibliothèque peuvent se compléter lorsque la pièce et vos besoins le justifient. Le premier accueille ce que vous préférez dissimuler ; la seconde compose un décor visible. Une tonalité ou une finition commune peut les relier, tout en préservant leurs fonctions distinctes.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "b13",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Préparez ensuite des photos du salon et les dimensions disponibles. Consultez les collections pour comparer les silhouettes. Contactez le showroom de Casablanca pour vous renseigner sur les modèles retenus et vérifier lesquels sont exposés avant votre visite.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "cta_text": "Comparez les silhouettes et les compositions de rangement proposées par Cattelan Italia.",
+      "cta_label": "Découvrir les buffets et bibliothèques"
+    },
+    "after": {
+      "excerpt": "Le buffet garde les objets derrière ses portes ; la bibliothèque ouverte les laisse visibles. Le choix dépend aussi des dimensions de ce que vous voulez ranger.",
+      "content": [
+        {
+          "_type": "block",
+          "_key": "rangement-refresh-1",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Le buffet pour le rangement fermé",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "rangement-refresh-2",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Vaisselle, papiers et objets du quotidien peuvent être regroupés derrière les portes d’un buffet. Ses dimensions extérieures ne disent toutefois pas tout : un grand plat ou un classeur doit tenir entre les étagères, en hauteur comme en profondeur.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "rangement-refresh-3",
+          "style": "normal",
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "link1",
+              "href": "/modeles/chelsea/"
+            }
+          ],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Le buffet ",
+              "marks": []
+            },
+            {
+              "_type": "span",
+              "_key": "s1",
+              "text": "Chelsea",
+              "marks": [
+                "link1"
+              ]
+            },
+            {
+              "_type": "span",
+              "_key": "s2",
+              "text": " possède des étagères intérieures en verre et un dessus en miroir bronze ou en céramique selon la version. Ses formats bas, hauts ou sur piètement n’occupent pas la même place contre le mur.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "rangement-refresh-4",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "La bibliothèque ouverte pour les livres et les objets",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "rangement-refresh-5",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Une bibliothèque ouverte laisse son contenu visible et accessible. La hauteur et la profondeur des étagères doivent correspondre aux livres ou aux objets à exposer. Un rangement fermé peut la compléter pour ce que vous préférez garder hors de vue.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "rangement-refresh-6",
+          "style": "normal",
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "link0",
+              "href": "/modeles/airport/"
+            }
+          ],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Airport",
+              "marks": [
+                "link0"
+              ]
+            },
+            {
+              "_type": "span",
+              "_key": "s1",
+              "text": " se compose d’étagères et de caissons, avec fixation au mur ou au plafond. Les dimensions de ses éléments ne sont pas celles d’une bibliothèque complète : la largeur totale dépend de la composition choisie.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "rangement-refresh-7",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "L’ouverture des portes et les fixations",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "rangement-refresh-8",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "s0",
+              "text": "Devant un buffet, il faut garder la place d’ouvrir les portes ou les tiroirs et de se tenir devant. Les prises et les interrupteurs doivent rester accessibles. Pour une bibliothèque fixée au mur ou au plafond, le support et la fixation prévue font partie du choix du meuble.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "cta_text": "",
+      "cta_label": "Voir les buffets et bibliothèques"
+    }
+  }
+]

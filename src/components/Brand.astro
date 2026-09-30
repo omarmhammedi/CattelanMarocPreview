@@ -1,0 +1,10 @@
+---
+import { imageAttributes } from '../lib/images';
+interface Props { site: any; }
+const { site } = Astro.props;
+---
+<a class="page-brand" href="/" aria-label={`${site.name} — Accueil`}>
+  {site.logoDark ? <img class="lg-w" {...imageAttributes(site.logoDark, '180px', 360)} alt={site.name} /> : <span class="brand-name lg-w">{site.name}</span>}
+  {site.logoLight ? <img class="lg-r" {...imageAttributes(site.logoLight, '180px', 360)} alt={site.name} /> : <span class="brand-name lg-r">{site.name}</span>}
+  {site.location && <span class:list={['loc', { 'loc-long': site.location.length > 8 }]}>{site.location}</span>}
+</a>

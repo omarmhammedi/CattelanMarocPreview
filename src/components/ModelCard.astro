@@ -1,0 +1,12 @@
+---
+import { coverSizes, imageAttributes } from '../lib/images';
+interface Props {model:any; sharedNotice?:string;}
+const {model, sharedNotice=''}=Astro.props;
+const availabilityNote=String(model.availabilityNote || '').trim();
+---
+<article class="model-card" data-page-reveal>
+ {model.image && <figure class="model-figure"><div class="page-image"><img {...imageAttributes(model.image, coverSizes(model.image, 1.2, 1.2, 45), 1600)} alt={model.image.alt || model.title || model.name} loading="lazy"/></div>{model.imageCaption && <figcaption class="page-note">{model.imageCaption}</figcaption>}</figure>}
+ <h3>{model.title || model.name}</h3><p>{model.description}</p>
+ {availabilityNote && availabilityNote !== sharedNotice.trim() && <p class="page-note">{model.availabilityNote}</p>}
+ {model.href && <a class="text-link" href={model.href}>Découvrir le modèle<span aria-hidden="true">↗</span></a>}
+</article>

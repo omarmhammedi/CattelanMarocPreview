@@ -1,0 +1,6 @@
+# Documentation uniquement. node scripts/setup-dev.mjs crée .dev.vars.
+# Ne jamais copier des secrets dans Git, dans wrangler.jsonc ou dans le navigateur.
+EMDASH_ENCRYPTION_KEY=
+CATALOGUE_TOKEN_SECRET=
+# Dans Codespaces, le script ajoute l'URL HTTPS du port 4321 pour les passkeys.
+# EMDASH_SITE_URL=https://<nom-du-codespace>-4321.app.github.dev
