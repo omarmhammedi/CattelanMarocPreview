@@ -18,7 +18,7 @@ test('maps native CMS mail to Resend with the approved sender and stable retry k
   assert.equal(data.html, message.html);
   assert.equal(new Headers(calls[0].init.headers).get('Authorization'), 'Bearer re_test');
   assert.equal(new Headers(calls[0].init.headers).get('Idempotency-Key'), new Headers(calls[1].init.headers).get('Idempotency-Key'));
-  assert.equal(calls[0].init.redirect, 'error');
+  assert.equal(calls[0].init.redirect, 'manual');
   assert.ok(calls[0].init.signal);
 });
 
@@ -43,4 +43,12 @@ test('rejections and network failures expose no provider body, token or recipien
 
 test('a successful HTTP status must contain a valid delivery id', async () => {
   await assert.rejects(deliverEmail(message, 're_test', (async () => Response.json({})) as typeof fetch), /did not confirm/);
+});
+
+
+test('redirects are rejected without forwarding the sending key', async () => {
+  await assert.rejects(deliverEmail(message, 're_test', (async (_url, init) => {
+    assert.equal(init?.redirect, 'manual');
+    return new Response(null, { status: 307, headers: { Location: 'https://untrusted.example' } });
+  }) as typeof fetch), { message: 'Resend email delivery failed (HTTP 307).' });
 });

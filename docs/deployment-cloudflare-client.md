@@ -4,7 +4,8 @@
 
 Le site est publié sur **https://cattelan-maroc-preview.cattelan.workers.dev** dans le compte `cattelan@client.kreedns.com`, avec les contenus et médias importés du site existant. Le domaine définitif sera ajouté plus tard. Le tableau de bord confirme **Workers Free — Current plan**. R2 est activé avec un tarif de base de 0 $ et une facturation possible au-delà des quotas inclus, expressément approuvée par le propriétaire. Aucun abonnement Workers Paid n'a été activé.
 
-Version déployée et vérifiée : `2540aafa-d381-4f57-bdbe-16f365c57fb3`.
+Version de migration initiale : `2540aafa-d381-4f57-bdbe-16f365c57fb3`.
+Version avec Resend activé : `3ef50408-0fe9-4bd9-a5dd-2a5d7a3c6e9a`.
 
 | Élément | Cible du compte client |
 | --- | --- |
@@ -69,4 +70,6 @@ Pour les nouvelles demandes uniquement, le contact et sa file d'envoi sont enreg
 
 L'e-mail de catalogue est transactionnel et indépendant du consentement marketing. Le texte du formulaire et la page de confidentialité expliquent l'envoi par Resend. Aucun abonnement marketing ni connexion CRM externe n'est créé. Le PDF actuel est une démonstration et le message le précise.
 
-Validation du code : 181 tests réussis ; contrôle Astro sans erreurs ni avertissements ; compilation de production et contrôle de cible réussis. L'activation et les essais de livraison réels restent à effectuer après création de la clé restreinte par le propriétaire.
+Validation du code : 183 tests réussis ; contrôle Astro sans erreurs ni avertissements ; compilation de production et contrôle de cible réussis. Le propriétaire a créé la clé `Cattelan Cloudflare email`, limitée à l'envoi depuis `client.kreedns.com`. Elle est installée comme secret Cloudflare `RESEND_API_KEY` et l'intégration est déployée. Les secrets préexistants sont conservés. Les pages d'accueil, catalogue et confidentialité répondent en HTTP 200 avec le nouveau texte ; le transport natif sélectionné est `cattelan-resend`. Après autorisation du propriétaire, les deux tests vers `omar@kreedns.com` sont confirmés **delivered** dans Resend : connexion administrateur et catalogue. La demande catalogue conserve un consentement marketing désactivé. Le lien exact reçu dans le catalogue a été vérifié : HTTP 200, PDF de 23 232 octets, empreinte SHA-256 identique au document stocké. Le contact de test est conservé pour que son lien reste utilisable.
+
+La sélection native du transport a été corrigée de `emdash-console-email` vers `cattelan-resend` dans l'option `emdash:exclusive_hook:email:deliver`. Le hook doit déclarer `exclusive: true` pour participer à cette sélection ; un test couvre ce contrat. Le transport utilise `redirect: manual` et refuse toute réponse non réussie afin de ne jamais transmettre sa clé à une redirection. Le runtime Workers utilisé refuse `redirect: error`, même si les types Web l'autorisent. Le titre système `emdash:site_title`, auparavant absent, est maintenant `Cattelan Italia Maroc` pour les prochains messages natifs.
