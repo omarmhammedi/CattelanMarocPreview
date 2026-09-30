@@ -6,7 +6,7 @@ const BASE = "/_emdash/api/plugins/catalogue-leads";
 type Contact = {
   requestId: string; name: string; email: string; createdAt: number;
   communicationsConsent: boolean; catalogueTitle: string; placeholder: boolean;
-  crmStatus: string; crmAttempts: number;
+  crmStatus: string; crmAttempts: number; emailStatus?: string;
 };
 type ContactPage = { items: Contact[]; cursor?: string; hasMore: boolean };
 type CatalogueItem = { id: string; status: string; data: Record<string, unknown> };
@@ -14,6 +14,7 @@ type CatalogueRevision = { item: CatalogueItem; _rev: string };
 type CataloguePage = { items: CatalogueItem[]; cursor?: string; hasMore?: boolean };
 const stateLabel: Record<string, string> = {
   pending: "En attente", processing: "Traitement en cours",
+  sent: "E-mail envoyé", failed: "Échec de l’e-mail",
   waiting_configuration: "CRM à connecter", delivered: "Transmis au CRM",
 };
 const buttonStyle: React.CSSProperties = { padding: "8px 14px", border: "1px solid currentColor", borderRadius: 6, cursor: "pointer", fontSize: 14 };
@@ -151,12 +152,13 @@ function ContactsPage() {
     {message && <p role="status" style={{ marginBottom: 12 }}>{message}</p>}
     <div style={{ overflowX: "auto" }}>
       <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", fontSize: 14 }}>
-        <thead><tr>{["Date", "Nom", "E-mail", "Catalogue", "Communications", "CRM", "Action"].map((heading) => <th key={heading} style={{ padding: 12, borderBottom: "1px solid #777" }}>{heading}</th>)}</tr></thead>
+        <thead><tr>{["Date", "Nom", "E-mail", "Catalogue", "Communications", "Envoi catalogue", "CRM", "Action"].map((heading) => <th key={heading} style={{ padding: 12, borderBottom: "1px solid #777" }}>{heading}</th>)}</tr></thead>
         <tbody>{contacts.map((contact) => <tr key={contact.requestId}>
           <td style={{ padding: 12 }}>{new Date(contact.createdAt).toLocaleString("fr-FR", { timeZone: "Africa/Casablanca" })}</td>
           <td style={{ padding: 12 }}>{contact.name}</td><td style={{ padding: 12 }}>{contact.email}</td>
           <td style={{ padding: 12 }}>{contact.catalogueTitle}{contact.placeholder ? " (démonstration)" : ""}</td>
           <td style={{ padding: 12 }}>{contact.communicationsConsent ? "Acceptées" : "Non demandées"}</td>
+          <td style={{ padding: 12 }}>{contact.emailStatus ? (stateLabel[contact.emailStatus] ?? contact.emailStatus) : "Non demandé"}</td>
           <td style={{ padding: 12 }}>{stateLabel[contact.crmStatus] ?? contact.crmStatus}</td>
           <td style={{ padding: 12 }}><button type="button" style={buttonStyle} disabled={busy} onClick={() => void deleteContact(contact)}>Supprimer</button></td>
         </tr>)}</tbody>

@@ -55,6 +55,18 @@ node --test tests/cloudflare-target.test.mjs
 
 Les utilisateurs existants sont conservés, mais les passkeys enregistrées sur l'ancienne origine ne sont pas valables sur la nouvelle. Le propriétaire doit utiliser une récupération native à usage unique puis enregistrer lui-même une passkey sur la nouvelle origine. Ne pas activer un contournement de connexion ni relancer le setup public. Les liens de récupération sont privés, limités à 15 minutes et ne doivent pas être enregistrés dans Git.
 
-Resend n'est pas encore configuré et aucun e-mail de test n'a été envoyé. Le branchement automatique des publications GitHub n'est pas configuré ; les commandes ci-dessus publient les modifications. Avant le lancement public, connecter le domaine définitif, adapter l'origine, réenregistrer les passkeys pour ce domaine et retirer `noindex` après validation.
+L'intégration Resend est décrite ci-dessous. Le branchement automatique des publications GitHub n'est pas configuré ; les commandes ci-dessus publient les modifications. Avant le lancement public, connecter le domaine définitif, adapter l'origine, réenregistrer les passkeys pour ce domaine et retirer `noindex` après validation.
 
 Les tests confirment le fonctionnement actuel sous Workers Free ; ils ne constituent pas un test de charge ni une garantie de rester sous les quotas pour tout trafic futur.
+
+## Intégration Resend
+
+Le domaine `client.kreedns.com` est vérifié dans le compte Resend `cattelan@client.kreedns.com`. Les enregistrements fournis par Resend ont été ajoutés via Hostinger : TXT `resend._domainkey.client`, CNAME `rsend.client` et CNAME `send.client`. Les MX existants et le transfert de la boîte Cattelan restent inchangés.
+
+Le plugin natif `cattelan-resend` est inclus uniquement lors d'une compilation `cattelan-client`. Il fournit le transport des e-mails EmDash (connexion, récupération et invitations) et des demandes de catalogue. Expéditeur : `Cattelan Italia Maroc <cattelan@client.kreedns.com>` ; réponse par défaut : `cattelan@client.kreedns.com`. La clé `RESEND_API_KEY` doit être un secret Cloudflare limité à l'envoi depuis ce domaine, jamais une variable publique ni une valeur Git.
+
+Pour les nouvelles demandes uniquement, le contact et sa file d'envoi sont enregistrés ensemble. Une première tentative accompagne la demande ; le cron existant reprend les échecs avec un délai croissant, une limite de huit tentatives et une fenêtre de six heures. Le corps du message reste stable pour la déduplication Resend. Les anciennes demandes ne sont pas envoyées rétroactivement. L'état de l'envoi est visible dans Contacts catalogue. Les liens envoyés par e-mail sont signés, privés et valables 24 heures ; le téléchargement affiché sur le site conserve sa durée de 15 minutes. Supprimer un contact révoque ses liens et ses envois en attente.
+
+L'e-mail de catalogue est transactionnel et indépendant du consentement marketing. Le texte du formulaire et la page de confidentialité expliquent l'envoi par Resend. Aucun abonnement marketing ni connexion CRM externe n'est créé. Le PDF actuel est une démonstration et le message le précise.
+
+Validation du code : 181 tests réussis ; contrôle Astro sans erreurs ni avertissements ; compilation de production et contrôle de cible réussis. L'activation et les essais de livraison réels restent à effectuer après création de la clé restreinte par le propriétaire.

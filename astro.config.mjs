@@ -5,6 +5,7 @@ import emdash from 'emdash/astro';
 import { d1, r2 } from '@emdash-cms/cloudflare';
 import { cataloguePlugin } from './src/plugins/catalogue/index.ts';
 import { siteSeoPlugin } from './src/plugins/seo/index.ts';
+import { resendEmailPlugin } from './src/plugins/email/index.ts';
 
 export default defineConfig({
   output: 'server',
@@ -14,6 +15,7 @@ export default defineConfig({
   trailingSlash: 'ignore',
   vite: {
     define: {
+      'import.meta.env.CATTELAN_EMAIL_ENABLED': JSON.stringify(process.env.CLOUDFLARE_ENV === 'cattelan-client'),
       'import.meta.env.CATTELAN_EDITOR_ORIGIN': JSON.stringify(
         /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(process.env.CODESPACE_NAME || '')
           ? `https://${process.env.CODESPACE_NAME}.github.dev`
@@ -34,7 +36,9 @@ export default defineConfig({
     emdash({
       database: d1({ binding: 'DB', session: 'disabled' }),
       storage: r2({ binding: 'MEDIA' }),
-      plugins: [cataloguePlugin(), siteSeoPlugin()],
+      plugins: [cataloguePlugin(), siteSeoPlugin(),
+        ...(process.env.CLOUDFLARE_ENV === 'cattelan-client' ? [resendEmailPlugin()] : []),
+      ],
     }),
   ],
   devToolbar: { enabled: false },
