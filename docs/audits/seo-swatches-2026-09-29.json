@@ -1,0 +1,717 @@
+{
+  "title": "Greta — vérification des chargements et réduction ciblée des vignettes de finitions",
+  "status": "Correctif déployé et vérifié sur Cloudflare ; comparaison distante avant/après réussie dans les deux formats.",
+  "method": "Chromium CDP image response MIME and encodedDataLength, including response headers; initial viewport, closed group in view, then first group opened.",
+  "settings": {
+    "variants": [
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "deviceScaleFactor": 2,
+    "theme": "dark",
+    "browserCacheDisabled": true,
+    "serviceWorkers": "block",
+    "settleMs": 3000
+  },
+  "browserVersion": "151.0.7922.34",
+  "initialAudit": {
+    "measuredAtToronto": "29 septembre 2026 à 21 h 51",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "deviceScaleFactor": 1,
+    "imageElements": 383,
+    "finishImageElements": 361,
+    "initialActualImageRequests": 15,
+    "initialImageTransferBytes": 206285,
+    "initialImageMimes": {
+      "image/webp": 15
+    },
+    "initialLoadedFinishes": 0,
+    "afterOpeningFirstGroup": {
+      "totalImageRequests": 40,
+      "totalImageTransferBytes": 5373187,
+      "imageMimes": {
+        "image/webp": 18,
+        "image/jpeg": 21,
+        "image/png": 1
+      },
+      "loadedFinishes": 21
+    }
+  },
+  "localBefore": {
+    "origin": "http://localhost:4321",
+    "startedAtToronto": "29 septembre 2026 à 21 h 56 min 00 s HAE",
+    "finishedAtToronto": "29 septembre 2026 à 21 h 56 min 34 s HAE",
+    "passed": true,
+    "variants": [
+      {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "snapshots": [
+          {
+            "name": "initial",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 0,
+            "openGroups": 0,
+            "imageRequests": 16,
+            "imageBytes": 314623,
+            "imageMimes": {
+              "image/webp": 16
+            },
+            "finishRequests": 0,
+            "finishBytes": 0,
+            "finishMimes": {}
+          },
+          {
+            "name": "closed-in-view",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 0,
+            "openGroups": 0,
+            "imageRequests": 20,
+            "imageBytes": 464993,
+            "imageMimes": {
+              "image/webp": 19,
+              "image/png": 1
+            },
+            "finishRequests": 0,
+            "finishBytes": 0,
+            "finishMimes": {}
+          },
+          {
+            "name": "opened",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 21,
+            "openGroups": 1,
+            "imageRequests": 41,
+            "imageBytes": 5540092,
+            "imageMimes": {
+              "image/webp": 19,
+              "image/png": 1,
+              "image/jpeg": 21
+            },
+            "finishRequests": 21,
+            "finishBytes": 5075099,
+            "finishMimes": {
+              "image/jpeg": 21
+            }
+          }
+        ],
+        "keyboardOriginalLinkValidated": false
+      },
+      {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "snapshots": [
+          {
+            "name": "initial",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 0,
+            "openGroups": 0,
+            "imageRequests": 14,
+            "imageBytes": 346460,
+            "imageMimes": {
+              "image/webp": 14
+            },
+            "finishRequests": 0,
+            "finishBytes": 0,
+            "finishMimes": {}
+          },
+          {
+            "name": "closed-in-view",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 0,
+            "openGroups": 0,
+            "imageRequests": 19,
+            "imageBytes": 519773,
+            "imageMimes": {
+              "image/webp": 18,
+              "image/png": 1
+            },
+            "finishRequests": 0,
+            "finishBytes": 0,
+            "finishMimes": {}
+          },
+          {
+            "name": "opened",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 21,
+            "openGroups": 1,
+            "imageRequests": 40,
+            "imageBytes": 5594854,
+            "imageMimes": {
+              "image/webp": 18,
+              "image/png": 1,
+              "image/jpeg": 21
+            },
+            "finishRequests": 21,
+            "finishBytes": 5075081,
+            "finishMimes": {
+              "image/jpeg": 21
+            }
+          }
+        ],
+        "keyboardOriginalLinkValidated": false
+      }
+    ]
+  },
+  "localAfter": {
+    "origin": "http://localhost:4321",
+    "startedAtToronto": "29 septembre 2026 à 21 h 59 min 57 s HAE",
+    "finishedAtToronto": "29 septembre 2026 à 22 h 00 min 40 s HAE",
+    "passed": true,
+    "variants": [
+      {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "snapshots": [
+          {
+            "name": "initial",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 0,
+            "openGroups": 0,
+            "imageRequests": 16,
+            "imageBytes": 314638,
+            "imageMimes": {
+              "image/webp": 16
+            },
+            "finishRequests": 0,
+            "finishBytes": 0,
+            "finishMimes": {}
+          },
+          {
+            "name": "closed-in-view",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 0,
+            "openGroups": 0,
+            "imageRequests": 20,
+            "imageBytes": 464999,
+            "imageMimes": {
+              "image/webp": 19,
+              "image/png": 1
+            },
+            "finishRequests": 0,
+            "finishBytes": 0,
+            "finishMimes": {}
+          },
+          {
+            "name": "opened",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 21,
+            "openGroups": 1,
+            "imageRequests": 41,
+            "imageBytes": 1906449,
+            "imageMimes": {
+              "image/webp": 40,
+              "image/png": 1
+            },
+            "finishRequests": 21,
+            "finishBytes": 1441450,
+            "finishMimes": {
+              "image/webp": 21
+            }
+          }
+        ],
+        "keyboardOriginalLinkValidated": true,
+        "focus": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "label": "Afficher l’échantillon original : D189 — D189 (nouvel onglet)"
+        }
+      },
+      {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "snapshots": [
+          {
+            "name": "initial",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 0,
+            "openGroups": 0,
+            "imageRequests": 14,
+            "imageBytes": 346429,
+            "imageMimes": {
+              "image/webp": 14
+            },
+            "finishRequests": 0,
+            "finishBytes": 0,
+            "finishMimes": {}
+          },
+          {
+            "name": "closed-in-view",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 0,
+            "openGroups": 0,
+            "imageRequests": 19,
+            "imageBytes": 519768,
+            "imageMimes": {
+              "image/webp": 18,
+              "image/png": 1
+            },
+            "finishRequests": 0,
+            "finishBytes": 0,
+            "finishMimes": {}
+          },
+          {
+            "name": "opened",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 21,
+            "openGroups": 1,
+            "imageRequests": 40,
+            "imageBytes": 1961307,
+            "imageMimes": {
+              "image/webp": 39,
+              "image/png": 1
+            },
+            "finishRequests": 21,
+            "finishBytes": 1441539,
+            "finishMimes": {
+              "image/webp": 21
+            }
+          }
+        ],
+        "keyboardOriginalLinkValidated": true,
+        "focus": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "label": "Afficher l’échantillon original : D189 — D189 (nouvel onglet)"
+        }
+      }
+    ]
+  },
+  "localComparison": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "beforeFinishBytes": 5075099,
+      "afterFinishBytes": 1441450,
+      "reductionPercent": 71.6
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "beforeFinishBytes": 5075081,
+      "afterFinishBytes": 1441539,
+      "reductionPercent": 71.6
+    }
+  ],
+  "geometryAndIdentity": "Assertions distantes avant/après : mêmes originaux, textes alternatifs de finition, dimensions source, largeur/hauteur affichées et object-fit pour les 21 finitions du groupe ouvert dans les deux formats. Les descriptions de galerie publiées séparément ne sont pas des alt de finitions.",
+  "imageChange": "Variantes WebP qualité85 via le helper natif déjà présent. Aucun recadrage, recoloriage, réimport ou écriture CMS. Le lien de chaque vignette ouvre son original en nouvel onglet avec noopener/noreferrer.",
+  "sizing": "La largeur calculée suit les 2/3/4 colonnes et tient compte de object-fit:contain dans un cadre de ratio1,25. Plafond768 pixels sans agrandissement. Sur les deux formats DPR2 contrôlés, les tissus de591×591 pixels sélectionnent une variante480 pixels.",
+  "markupTradeoff": {
+    "status": 200,
+    "localHTML": {
+      "raw": 499378,
+      "gzip": 45614,
+      "brotli": 33944
+    },
+    "finishImages": 361,
+    "finishMarkupResponsive": {
+      "raw": 352448,
+      "gzip": 19107,
+      "brotli": 13486
+    },
+    "finishMarkupSingleVariant": {
+      "raw": 175197,
+      "gzip": 13549,
+      "brotli": 10165
+    },
+    "method": "Node zlib default gzip and Brotli settings on the same rendered finish markup; reference compression only, not actual Cloudflare transfer.",
+    "additionalRawBytes": 177251,
+    "additionalReferenceBrotliBytes": 3321,
+    "decision": "Conserver les variantes : le surcoût compressé du markup des361 finitions est faible face aux économies lorsque les groupes sont ouverts ; aucune image de finition n’est transférée tant que le groupe reste fermé."
+  },
+  "remoteBefore": {
+    "origin": "https://cattelan-maroc-preview.omar-8b8.workers.dev",
+    "startedAtToronto": "29 septembre 2026 à 22 h 00 min 51 s HAE",
+    "finishedAtToronto": "29 septembre 2026 à 22 h 01 min 22 s HAE",
+    "passed": true,
+    "variants": [
+      {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "snapshots": [
+          {
+            "name": "initial",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 0,
+            "openGroups": 0,
+            "imageRequests": 16,
+            "imageBytes": 400668,
+            "imageMimes": {
+              "image/webp": 16
+            },
+            "finishRequests": 0,
+            "finishBytes": 0,
+            "finishMimes": {}
+          },
+          {
+            "name": "closed-in-view",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 0,
+            "openGroups": 0,
+            "imageRequests": 20,
+            "imageBytes": 598456,
+            "imageMimes": {
+              "image/webp": 19,
+              "image/png": 1
+            },
+            "finishRequests": 0,
+            "finishBytes": 0,
+            "finishMimes": {}
+          },
+          {
+            "name": "opened",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 21,
+            "openGroups": 1,
+            "imageRequests": 41,
+            "imageBytes": 5676628,
+            "imageMimes": {
+              "image/webp": 19,
+              "image/png": 1,
+              "image/jpeg": 21
+            },
+            "finishRequests": 21,
+            "finishBytes": 5078172,
+            "finishMimes": {
+              "image/jpeg": 21
+            }
+          }
+        ],
+        "keyboardOriginalLinkValidated": false
+      },
+      {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "snapshots": [
+          {
+            "name": "initial",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 0,
+            "openGroups": 0,
+            "imageRequests": 14,
+            "imageBytes": 462690,
+            "imageMimes": {
+              "image/webp": 14
+            },
+            "finishRequests": 0,
+            "finishBytes": 0,
+            "finishMimes": {}
+          },
+          {
+            "name": "closed-in-view",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 0,
+            "openGroups": 0,
+            "imageRequests": 19,
+            "imageBytes": 693658,
+            "imageMimes": {
+              "image/webp": 18,
+              "image/png": 1
+            },
+            "finishRequests": 0,
+            "finishBytes": 0,
+            "finishMimes": {}
+          },
+          {
+            "name": "opened",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 21,
+            "openGroups": 1,
+            "imageRequests": 40,
+            "imageBytes": 5771963,
+            "imageMimes": {
+              "image/webp": 18,
+              "image/png": 1,
+              "image/jpeg": 21
+            },
+            "finishRequests": 21,
+            "finishBytes": 5078305,
+            "finishMimes": {
+              "image/jpeg": 21
+            }
+          }
+        ],
+        "keyboardOriginalLinkValidated": false
+      }
+    ]
+  },
+  "remoteAfter": {
+    "origin": "https://cattelan-maroc-preview.omar-8b8.workers.dev",
+    "startedAtToronto": "29 septembre 2026 à 22 h 35 min 40 s HAE",
+    "finishedAtToronto": "29 septembre 2026 à 22 h 36 min 16 s HAE",
+    "passed": true,
+    "browserVersion": "151.0.7922.34",
+    "readOnly": true,
+    "errors": [],
+    "blockedRequests": [],
+    "variants": [
+      {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "status": 200,
+          "decodedHTMLBytes": 405834,
+          "contentEncoding": "zstd",
+          "encodedTransferBytes": 24338
+        },
+        "snapshots": [
+          {
+            "name": "initial",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 0,
+            "openGroups": 0,
+            "imageRequests": 16,
+            "imageBytes": 403336,
+            "imageMimes": {
+              "image/webp": 16
+            },
+            "finishRequests": 0,
+            "finishBytes": 0,
+            "finishMimes": {}
+          },
+          {
+            "name": "closed-in-view",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 0,
+            "openGroups": 0,
+            "imageRequests": 20,
+            "imageBytes": 601700,
+            "imageMimes": {
+              "image/webp": 19,
+              "image/png": 1
+            },
+            "finishRequests": 0,
+            "finishBytes": 0,
+            "finishMimes": {}
+          },
+          {
+            "name": "opened",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 21,
+            "openGroups": 1,
+            "imageRequests": 41,
+            "imageBytes": 2392793,
+            "imageMimes": {
+              "image/webp": 40,
+              "image/png": 1
+            },
+            "finishRequests": 21,
+            "finishBytes": 1791093,
+            "finishMimes": {
+              "image/webp": 21
+            }
+          }
+        ],
+        "keyboardOriginalLinkValidated": true,
+        "focus": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "label": "Afficher l’échantillon original : D189 — D189 (nouvel onglet)"
+        }
+      },
+      {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "document": {
+          "status": 200,
+          "decodedHTMLBytes": 405834,
+          "contentEncoding": "zstd",
+          "encodedTransferBytes": 24397
+        },
+        "snapshots": [
+          {
+            "name": "initial",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 0,
+            "openGroups": 0,
+            "imageRequests": 14,
+            "imageBytes": 462560,
+            "imageMimes": {
+              "image/webp": 14
+            },
+            "finishRequests": 0,
+            "finishBytes": 0,
+            "finishMimes": {}
+          },
+          {
+            "name": "closed-in-view",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 0,
+            "openGroups": 0,
+            "imageRequests": 19,
+            "imageBytes": 693114,
+            "imageMimes": {
+              "image/webp": 18,
+              "image/png": 1
+            },
+            "finishRequests": 0,
+            "finishBytes": 0,
+            "finishMimes": {}
+          },
+          {
+            "name": "opened",
+            "imageElements": 383,
+            "finishImages": 361,
+            "loadedFinishImages": 21,
+            "openGroups": 1,
+            "imageRequests": 40,
+            "imageBytes": 2484321,
+            "imageMimes": {
+              "image/webp": 39,
+              "image/png": 1
+            },
+            "finishRequests": 21,
+            "finishBytes": 1791207,
+            "finishMimes": {
+              "image/webp": 21
+            }
+          }
+        ],
+        "keyboardOriginalLinkValidated": true,
+        "focus": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "label": "Afficher l’échantillon original : D189 — D189 (nouvel onglet)"
+        }
+      }
+    ]
+  },
+  "remoteHTMLBefore": {
+    "origin": "https://cattelan-maroc-preview.omar-8b8.workers.dev",
+    "measuredAt": "2026-09-30T01:57:25.867Z",
+    "status": 200,
+    "rawHTMLBytes": 108210,
+    "actualEncodedHTMLBytes": 14796,
+    "contentEncoding": "br",
+    "referenceGzipBytes": 16447,
+    "referenceBrotliBytes": 12424
+  },
+  "observedAvailability": {
+    "firstBaselineHTTPStatus": 500,
+    "failedAtToronto": "29 septembre 2026 à 21 h 56 min 39 s HAE",
+    "action": "Arrêt dès le HTML500, puis une seule reprise bornée autorisée ; les deux pages de cette reprise ont répondu200.",
+    "cause": "Non déterminée par cet essai. Le risque de capacité Workers Free déjà documenté reste distinct du transfert des images.",
+    "afterRun": {
+      "startedAtToronto": "29 septembre 2026 à 22 h 35 min 40 s HAE",
+      "finishedAtToronto": "29 septembre 2026 à 22 h 36 min 16 s HAE",
+      "pageHTTPStatuses": [
+        200,
+        200
+      ],
+      "allRequestedImagesHTTP200": true,
+      "additionalHTMLGETStatus": 200,
+      "interpretation": "Ces réponses ont réussi pendant cet essai borné ; elles ne démontrent pas la capacité ou la disponibilité durable de Workers Free."
+    }
+  },
+  "screenshots": [
+    "docs/screenshots/seo-followup-2026-09-29/greta-finishes-390-dpr2.png",
+    "docs/screenshots/seo-followup-2026-09-29/greta-finishes-1440-dpr2.png"
+  ],
+  "visualReview": "Texture D189 inspectée dans les captures distantes avant/après à DPR2 ; cadrage et teinte générale conservés. La variante redimensionnée apparaît légèrement plus douce dans les détails fins. Le lien conserve l’accès au fichier original ; aucune équivalence colorimétrique ou pixel par pixel n’est revendiquée.",
+  "limits": [
+    "Single run per viewport; not a load test or a Core Web Vitals score.",
+    "Browser cache disabled; Cloudflare edge cache is not reset.",
+    "Mobile viewport emulation, not a physical phone.",
+    "Lossy WebP variants preserve the source and framing; this is not colorimetric certification.",
+    "Les nombres DOM (383 images, dont 361 finitions) ne représentent pas les téléchargements : seules 21 finitions du premier groupe ouvert ont été transférées dans cet essai.",
+    "Les économies locales (71,60 %) et distantes (64,73 %) sont rapportées séparément ; les variantes produites par les environnements local et Cloudflare n’ont pas le même poids."
+  ],
+  "deployedWorkerVersion": "220432fc-d357-4877-807b-48b7abb9a3fa",
+  "remoteComparison": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "beforeFinishBytes": 5078172,
+      "afterFinishBytes": 1791093,
+      "reductionPercent": 64.73
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "beforeFinishBytes": 5078305,
+      "afterFinishBytes": 1791207,
+      "reductionPercent": 64.73
+    }
+  ],
+  "remoteHTMLAfter": {
+    "origin": "https://cattelan-maroc-preview.omar-8b8.workers.dev",
+    "measuredAt": "2026-09-30T02:36:49.904Z",
+    "status": 200,
+    "actualEncodedHTMLBytes": 26295,
+    "contentEncoding": "br",
+    "rawHTMLBytes": 405834,
+    "referenceGzipBytes": 29181,
+    "referenceBrotliBytes": 19852,
+    "measuredAtToronto": "29 septembre 2026 à 22 h 36 min 49 s HAE"
+  },
+  "remoteHTMLComparison": {
+    "beforeRawBytes": 108210,
+    "afterRawBytes": 405834,
+    "additionalRawBytes": 297624,
+    "beforeActualBrotliBodyBytes": 14796,
+    "afterActualBrotliBodyBytes": 26295,
+    "additionalActualBrotliBodyBytes": 11499,
+    "beforeReferenceBrotliBytes": 12424,
+    "afterReferenceBrotliBytes": 19852,
+    "additionalReferenceBrotliBytes": 7428,
+    "method": "Deux GET HTTPS anonymes demandant Brotli, comptage du corps compressé puis décompression ; références gzip/Brotli calculées avec Node zlib. Le CDP des essais navigateur inclut aussi les en-têtes et reste présenté séparément.",
+    "interpretation": "Le HTML de la page complète augmente de 11 499 octets transférés en Brotli lors de ces deux mesures ; le groupe de 21 finitions économise environ 3,29 Mo une fois ouvert. Ce delta HTML inclut les autres changements intervenus sur la page (notamment les descriptions alternatives) et ne constitue pas une attribution exclusive au srcset. Le coût HTML existe même si aucun groupe n’est ouvert."
+  },
+  "screenshotSource": "Les deux captures partageables ci-dessus proviennent de la vérification locale. Les captures distantes avant/après sont conservées dans le dossier ignoré test-results/seo-swatches-cloudflare."
+}

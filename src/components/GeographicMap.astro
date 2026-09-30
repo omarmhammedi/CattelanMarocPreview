@@ -9,14 +9,16 @@ interface Props {
   longitude?: number | null;
   mapUrl?: string;
   mobile?: boolean;
+  responsive?: boolean;
 }
-const { id, name, latitude, longitude, mapUrl, mobile = false } = Astro.props;
+const { id, name, latitude, longitude, mapUrl, mobile = false, responsive = false } = Astro.props;
 const coordinate = showroomCoordinate(latitude, longitude, data.bounds);
 const point = coordinate ? projectCoordinate(coordinate) : null;
-const initial = mobile ? [(point?.[0] ?? 808) - 300, (point?.[1] ?? 530) - 360, 600, 720] : [0, 0, 1440, 900];
+const mobileView = [(point?.[0] ?? 808) - 300, (point?.[1] ?? 530) - 360, 600, 720];
+const initial = mobile ? mobileView : [0, 0, 1440, 900];
 const bounds = projectedBounds(data.bounds);
 ---
-<div class:list={['geographic-map', {'geographic-map-mobile': mobile}]} data-geographic-map data-initial-view={initial.join(' ')} data-bounds={bounds.join(' ')} data-pin={point?.join(' ')} data-panning="false" data-zoom-detail="false">
+<div class:list={['geographic-map', {'geographic-map-mobile': mobile, 'geographic-map-responsive': responsive}]} data-geographic-map data-initial-view={initial.join(' ')} data-mobile-view={responsive ? mobileView.join(' ') : undefined} data-bounds={bounds.join(' ')} data-pin={point?.join(' ')} data-panning="false" data-zoom-detail="false">
   <div class="geographic-map-viewport" data-map-viewport tabindex="0" role="group" aria-label="Carte de Casablanca" aria-describedby={`${id}-instructions`}>
     <svg class="map" data-map-svg viewBox={initial.join(' ')} preserveAspectRatio="xMidYMid slice" role="group" aria-labelledby={`${id}-title`}>
       <title id={`${id}-title`}>Carte géographique de Casablanca{point ? ` — ${name}` : ''}</title>

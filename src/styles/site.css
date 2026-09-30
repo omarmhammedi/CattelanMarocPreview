@@ -79,7 +79,6 @@ button, input { font-family: inherit; }
 #accueil .over .hero-intro { margin: 16px 0 0; font-size: calc(var(--u) * 2.4); font-weight: 200; line-height: 1.2; max-width: 22em; text-wrap: balance; }
 #accueil .over .row { margin-top: 28px; }
 #accueil .hint { font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted); }
-.m #m-accueil h1 { text-transform: none; font-size: clamp(30px, 8.6vw, 44px); line-height: 1.12; letter-spacing: -0.01em; }
 
 /* 2 dessiné */
 #italie { height: 230vh; }
@@ -101,7 +100,7 @@ button, input { font-family: inherit; }
 #collections .intro { flex: none; width: 38vw; display: flex; flex-direction: column; gap: calc(var(--u) * 2); padding-right: 3vw; }
 #collections .intro h2 { font-size: calc(var(--u) * 5.4); }
 .cc { flex: none; width: calc(60vh * var(--r, 0.8)); display: flex; flex-direction: column; gap: 14px; }
-.cc:nth-child(odd) { margin-top: 8vh; }
+.cc:nth-child(even) { margin-top: 8vh; }
 .cc .frame { position: relative; height: 60vh; overflow: hidden; background: var(--bg3); }
 .cc .frame img { position: absolute; top: 0; left: -5%; width: 110%; height: 100%; object-fit: cover; transform: translateX(calc((var(--h) * var(--count, 6) - var(--i)) * -0.6vw)); transition: filter .5s ease; }
 .cc:hover .frame img { filter: brightness(1.08); }
@@ -198,24 +197,12 @@ button, input { font-family: inherit; }
 .ft ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px; font-weight: 300; color: var(--muted); }
 .ft .base { grid-column: 1 / -1; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-top: 22px; border-top: 1px solid var(--hair); font-size: 12px; color: var(--faint); font-variant-numeric: tabular-nums; }
 
-.mob { display: none; }
 
-/* ---------- phone */
+/* ---------- phone header */
 @media (max-width: 820px) {
-  .desk { display: none !important; }
-  .mob { display: block; }
   .hd { height: 60px; background: var(--hdbg); padding-top: env(safe-area-inset-top, 0px); height: calc(60px + env(safe-area-inset-top, 0px)); }
   .hd nav a:not(.btn), .hd nav a.btn { display: none; }
-  .m { padding: 60px 20px 0; }
-  .m section { padding-top: 64px; display: flex; flex-direction: column; gap: 18px; }
-  .m .big { font-size: clamp(40px, 12vw, 68px); }
-  .m .mimg { position: relative; overflow: hidden; background: var(--bg3); max-width: 100%; }
-  .m .mimg img { position: absolute; left: 0; top: -8%; width: 100%; height: 116%; object-fit: cover; }
-  .m .hscroll { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -20px; padding: 0 20px 6px; }
-  .m .hscroll > a { flex: 0 0 78%; scroll-snap-align: start; display: flex; flex-direction: column; gap: 10px; }
-  .m svg.map { width: 100%; height: auto; display: block; }
-  .m .fields { grid-template-columns: 1fr; }
-  .m .jart { display: flex; flex-direction: column; gap: 10px; }
+  .home .fields { grid-template-columns: 1fr; }
   .ft { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { .pulse { animation: none; } .rv { transform: none; } }
@@ -229,7 +216,7 @@ svg.map .m-zone { fill: rgba(var(--ink-rgb),0.05); stroke: rgba(var(--ink-rgb),0
 .skip-link { position: fixed; z-index: 100; left: 16px; top: 16px; padding: 12px 18px; background: var(--ink); color: var(--on-ink); transform: translateY(-160%); }
 .skip-link:focus { transform: none; }
 .home { overflow: clip; }
-.home .desk { overflow: visible; }
+.home .home-sections { overflow: visible; }
 #accueil .card { --wb: var(--hero-bottom, calc(max(64px, var(--u) * 6.2) + 4vh + var(--u) * 0.82 * 1.4 + 14px + var(--u) * 5.2 * 1.1 + 4vh)); }
 #accueil .words > div:first-child { min-width: 0; }
 #accueil .words .side { flex: none; }
@@ -252,15 +239,6 @@ svg.map .m-zone { fill: rgba(var(--ink-rgb),0.05); stroke: rgba(var(--ink-rgb),0
 .preview-notice { flex-basis: 100%; margin: 8px 0 0; line-height: 1.6; }
 .mobile-menu-toggle, .mobile-navigation { display: none; }
 .mobile-navigation[hidden] { display: none !important; }
-.m-hero-image { height: 380px; }
-.m-brand-image { height: 420px; }
-.m-family-image { height: 360px; }
-.m-showroom-image { height: 320px; }
-.m-journal-image { height: 220px; }
-.m-family-title { font-size: 24px; font-weight: 200; line-height: 1.2; }
-.m-family-summary { font-size: 14px; }
-#m-journal { padding-bottom: 64px; }
-#m-journal .jart h3 { margin: 0; font-size: 20px; font-weight: 300; line-height: 1.3; }
 .brand-name { max-width: 12em; font-weight: 300; line-height: 1.15; }
 .hd .brand-name { width: max(110px, calc(var(--u) * 9)); font-size: 16px; text-align: center; }
 .ft .brand-name { width: 180px; font-size: 28px; }
@@ -277,7 +255,6 @@ svg.map .m-zone { fill: rgba(var(--ink-rgb),0.05); stroke: rgba(var(--ink-rgb),0
 .home-prose .big { font-size: calc(var(--u) * 5.6); }
 .home-prose a:not(.btn) { text-decoration: underline; text-underline-offset: .2em; }
 .editorial-image { width: 100%; height: auto; }
-.m-section-image { height: 260px; }
 
 @media (max-width: 1200px) and (min-width: 821px) {
   .hd nav { gap: 16px; }
@@ -296,11 +273,6 @@ svg.map .m-zone { fill: rgba(var(--ink-rgb),0.05); stroke: rgba(var(--ink-rgb),0
   .mobile-menu-toggle { display: block; border: 0; border-bottom: 1px solid var(--hair); background: transparent; color: var(--ink); padding: 8px 0; font: inherit; font-size: 11px; cursor: pointer; }
   .mobile-navigation { display: flex; position: fixed; top: calc(60px + env(safe-area-inset-top, 0px)); left: 0; right: 0; z-index: 19; padding: 24px 20px 28px; background: var(--hdbg); border-bottom: 1px solid var(--hair); flex-direction: column; gap: 20px; }
   .mobile-navigation a { font-size: 18px; font-weight: 300; }
-  .m { padding-top: calc(60px + env(safe-area-inset-top, 0px)); }
-  .m .big { overflow-wrap: break-word; }
-  .m .btn { min-width: 0; max-width: 100%; white-space: normal; height: auto; min-height: 46px; padding: 14px 20px; text-align: center; line-height: 1.4; }
-  .m .hscroll { overscroll-behavior-x: contain; }
-  .m .mimg { width: 100%; }
   .ft .base { line-height: 1.6; }
   .home-editorial { padding: 48px 20px; }
   .home-prose .big { font-size: clamp(40px, 12vw, 68px); }
@@ -310,7 +282,8 @@ svg.map .m-zone { fill: rgba(var(--ink-rgb),0.05); stroke: rgba(var(--ink-rgb),0
   .hd .logo img { width: 88px; }
 }
 
-/* Without scripts or with reduced motion, every scene remains readable in normal flow. */
+/* Without scripts or with reduced motion, desktop scenes remain readable in normal flow. */
+@media (min-width: 821px) {
 html:not(.motion-ready) .home .scene { height: auto !important; }
 html:not(.motion-ready) .home .pin { position: relative; height: auto; overflow: visible; }
 html:not(.motion-ready) #accueil { padding-top: 120px; }
@@ -342,9 +315,9 @@ html:not(.motion-ready) #catalogue .book { position: relative; inset: auto; marg
 html:not(.motion-ready) #catalogue .book .b { transform: none; }
 html:not(.motion-ready) #catalogue .form { position: relative; inset: auto; opacity: 1; transform: none; }
 html:not(.motion-ready) .rv { transform: none; }
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
-  .m .mimg img { transform: none !important; }
 }
 /* Symbols reused with <use> inherit these global paint rules in both layouts. */
 .m-sea { fill: var(--sea); }
@@ -367,9 +340,85 @@ html:not(.motion-ready) .rv { transform: none; }
 .hd .logo .loc-long { font-size: 8px; letter-spacing: .22em; margin-right: -.22em; white-space: nowrap; }
 
 /* An editor may remove a photograph; the copy then uses a readable, unpinned composition. */
+@media (min-width: 821px) {
 .home .scene.without-visual { height: auto !important; padding: 90px var(--gut); }
 .home .scene.without-visual .pin { position: relative; display: block; height: auto; overflow: visible; }
 .home .scene.without-visual .words, .home .scene.without-visual .col, .home .scene.without-visual .info, .home .scene.without-visual .form, .home .scene.without-visual .over { position: relative; inset: auto; width: auto; max-width: 66rem; margin: 0; padding: 0; transform: none; opacity: 1; }
 .home .scene.without-visual .over { margin-top: 40px; pointer-events: auto; background: transparent; }
 .home .scene.without-visual .fade, .home .scene.without-visual h2 span b { transform: none; opacity: 1; }
 .home .scene.without-visual .cap { position: relative; display: block; inset: auto; opacity: 1; margin-top: 24px; }
+
+}
+
+/* Layout wrappers do not duplicate editorial content between viewports. */
+.family-rail, .section-image-frame, .journal-section-frame { display: contents; }
+#showroom .showroom-photo { position: absolute; inset: 0; }
+#journal { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 30px; }
+#journal:not(:has(.journal-cta)) { grid-template-columns: minmax(0, 1fr); column-gap: 0; }
+#journal .top { grid-column: 1; grid-row: 1; }
+#journal .journal-cta { grid-column: 2; grid-row: 1; align-self: end; margin-bottom: calc(var(--u) * 3.4); }
+#journal .journal-intro, #journal .journal-section-image, #journal .jgrid { grid-column: 1 / -1; }
+
+/* Version B's mobile frames, type and rhythm applied to the same semantic tree.
+   Only neutral layout divs use display: contents; headings, links, sections and
+   the catalogue form retain their own accessible elements and focus order. */
+@media (max-width: 820px) {
+  .home-sections { padding: calc(60px + env(safe-area-inset-top, 0px)) 20px 0; }
+  .home-sections > section { height: auto !important; min-height: 0; padding: 64px 0 0; display: flex; flex-direction: column; gap: 18px; overflow: visible; background: transparent; }
+  .home-sections .pin { position: static; height: auto; overflow: visible; display: flex; flex-direction: column; gap: 18px; }
+  .home-sections .big { font-size: clamp(40px, 12vw, 68px); overflow-wrap: break-word; }
+  .home-sections .btn { min-width: 0; max-width: 100%; white-space: normal; height: auto; min-height: 46px; padding: 14px 20px; text-align: center; line-height: 1.4; }
+  .home-sections :is(#accueil, #italie, #collections, #showroom, #catalogue, #journal) [data-mobile-frame] { position: relative; inset: auto; width: 100%; max-width: 100%; overflow: hidden; background: var(--bg3); }
+  .home-sections :is(#accueil, #italie, #collections, #showroom, #catalogue, #journal) [data-mobile-frame] > img { position: absolute; inset: auto; left: 0; top: -8%; width: 100%; height: 116%; max-height: none; object-fit: cover; transform: none; margin: 0; }
+  .home-sections .onphoto { --ink: inherit; --ink-rgb: inherit; --on-ink: inherit; --muted: inherit; --faint: inherit; --hair: inherit; color: inherit; }
+  #accueil .words, #accueil .words > div:first-child, #accueil .over, #accueil .over > div,
+  #italie .col, #collections .track, #collections .intro,
+  #showroom .img, #showroom .say, #showroom .info,
+  #plan .panel, #plan .panel .row,
+  #catalogue .form,
+  #journal .top, #journal .top > div, #journal .jgrid, #journal .jside, #journal .tx { display: contents; opacity: 1; transform: none; }
+  #accueil .words .side, #accueil .words .kick, #accueil .veil, #italie .p2, #collections .bar, #collections .cc.cta,
+  #showroom .veil, #plan .panel > :not(.row), #plan .panel .row > :not(.map-directions),
+  #catalogue .fan, #catalogue .book:not(.section-cover), #catalogue .book .pg, #catalogue .book .t { display: none; }
+  #accueil .words h1 { margin: 0; max-width: none; font-size: clamp(30px, 8.6vw, 44px); font-weight: 200; line-height: 1.12; letter-spacing: -.01em; text-transform: none; text-wrap: wrap; }
+  #accueil .card { height: 380px; }
+  #accueil .over { pointer-events: auto; }
+  #accueil .over .hero-intro { margin: 0; max-width: 34em; font-size: 15px; font-weight: 300; line-height: 1.7; color: var(--muted); text-wrap: wrap; }
+  #accueil .over .row { margin: 0; }
+  #italie h2, #collections .intro h2, #showroom .info h2, #catalogue h2, #journal h2 { font-size: clamp(40px, 12vw, 68px); }
+  #italie h2 span b, #italie .fade { transform: none; opacity: 1; }
+  #italie .p1 { height: 420px; }
+  #italie .cap { position: static; margin: 0; max-width: 44em; font-size: 12px; line-height: 1.6; letter-spacing: normal; text-transform: none; color: var(--faint); opacity: 1; }
+  #italie .col .row { order: 1; }
+  #collections .family-rail { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; margin: 0 -20px; padding: 0 20px 6px; }
+  #collections .cc { flex: 0 0 78%; width: auto; margin: 0; scroll-snap-align: start; display: flex; flex-direction: column; gap: 10px; }
+  #collections .cc .frame { height: 360px; }
+  #collections .cc .nm { display: contents; }
+  #collections .cc .nm b { font-size: 24px; font-weight: 200; line-height: 1.2; }
+  #collections .cc .nm span { display: none; }
+  #collections .cc > p { margin: 0; font-size: 14px; font-weight: 300; line-height: 1.7; max-width: 34em; }
+  #collections .section-image-frame, #journal .journal-section-frame { display: block; height: 260px; }
+  #showroom .info > .kick { order: 0; }
+  #showroom .info > h2 { order: 1; }
+  #showroom .showroom-photo { position: relative; inset: auto; height: 320px; order: 2; }
+  #showroom .img .say h2, #showroom .showroom-invitation { order: 3; margin: 0; max-width: 34em; font-size: 15px; font-weight: 300; line-height: 1.7; letter-spacing: normal; text-transform: none; white-space: normal; color: var(--muted); }
+  #showroom .info > .txt:not(.showroom-invitation) { order: 4; }
+  #showroom .info > .row { order: 5; }
+  .home #plan { min-height: 0; overflow: visible; background: transparent; }
+  .home #plan > .geographic-map { position: relative; inset: auto; width: 100%; height: 420px; }
+  .home #plan .note { position: static; margin: 0; max-width: 44em; font-size: 12px; line-height: 1.6; letter-spacing: normal; text-align: left; order: 1; }
+  #plan .map-directions { order: 2; }
+  #catalogue .book.section-cover, #catalogue .book.section-cover .b { display: contents; transform: none; }
+  #catalogue .book .cv { position: relative; inset: auto; height: 260px; box-shadow: none; }
+  #catalogue .book .cv img.pic { inset: auto; left: 0; top: -8%; width: 100%; height: 116%; opacity: 1; }
+  .home #journal { padding: 64px 0; display: flex; }
+  #journal .journal-intro, #journal .journal-cta { margin: 0; align-self: auto; }
+  #journal .art { display: flex; flex-direction: column; align-items: stretch; gap: 10px; transform: none; }
+  #journal .art .im { height: 220px; }
+  #journal .art .meta { font-size: 11px; letter-spacing: .26em; }
+  #journal .art h3 { margin: 0; font-size: 20px; font-weight: 300; line-height: 1.3; }
+  #journal .art .im img { transition: none; }
+}
+@media (max-width: 820px) and (prefers-reduced-motion: reduce) {
+  .home-sections :is(#accueil, #italie, #collections, #showroom, #catalogue, #journal) [data-mobile-frame] > img { transform: none !important; }
+}

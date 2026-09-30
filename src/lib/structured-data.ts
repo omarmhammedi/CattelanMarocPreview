@@ -45,6 +45,7 @@ export function schemaProjection(page: PublicPageContext, site?: Data, entry?: D
       showroomLatitude: coordinate(site.showroomLatitude, 90),
       showroomLongitude: coordinate(site.showroomLongitude, 180),
       logoLight: mediaSource(site.logoLight || site.logoDark),
+      socialProfiles: socialProfiles(site),
     },
     entry: {
       slug: page.content.slug,
@@ -144,11 +145,26 @@ function postalAddress(value: unknown): Graph | undefined {
   const locality = parts.length === 3 && parts[1].match(/^(.+?)\s+(\d{5})$/);
   if (locality && parts[0] && parts[2]) return {
     '@type': 'PostalAddress', streetAddress: parts[0], addressLocality: locality[1],
-    postalCode: locality[2], addressCountry: parts[2],
+    postalCode: locality[2], addressCountry: /^(?:maroc|morocco|ma)$/i.test(parts[2]) ? 'MA' : parts[2],
   };
   // An unfamiliar format keeps the full published address instead of
   // silently retaining old city, postcode or country values.
   return {'@type': 'PostalAddress', streetAddress: address};
+}
+
+/** Only explicit public profile URLs configured in native site settings.
+ * No manufacturer profiles, inferred usernames or fabricated local listings.
+ */
+function socialProfiles(site: Data): string[] {
+  const values = Array.isArray(site.socialProfiles) ? site.socialProfiles : Object.values(site.settings?.social || {});
+  return [...new Set(values.flatMap((value: unknown) => {
+    const source = text(value);
+    if (!/^https?:\/\//i.test(source)) return [];
+    try {
+      const url = new URL(source);
+      return url.username || url.password ? [] : [url.href];
+    } catch { return []; }
+  }))];
 }
 
 function coordinate(value: unknown, limit: number): number | undefined {
@@ -168,6 +184,7 @@ export function furnitureStoreGraph(site: Data, entry: Data, origin: string): Gr
   const logo = absoluteWebUrl(mediaSource(site.logoLight || site.logoDark), origin);
   const map = absoluteWebUrl(site.mapUrl, origin);
   const hours = openingHours(site.hours);
+  const profiles = socialProfiles(site);
   return {
     '@context': 'https://schema.org', '@type': 'FurnitureStore',
     '@id': new URL('/#showroom', origin).href,
@@ -178,6 +195,7 @@ export function furnitureStoreGraph(site: Data, entry: Data, origin: string): Gr
     ...(text(site.publicEmail) && {email: text(site.publicEmail)}),
     ...(map && {hasMap: map}), ...(hours && {openingHoursSpecification: hours}),
     ...(image && {image}), ...(logo && {logo}),
+    ...(profiles.length && {sameAs: profiles}),
   };
 }
 

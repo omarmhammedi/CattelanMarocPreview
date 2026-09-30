@@ -1,0 +1,347 @@
+[
+  {
+    "collection": "pages",
+    "slug": "home",
+    "before": {
+      "sections": [
+        {
+          "section_key": "brand",
+          "heading": "Le design italien dans les détails",
+          "display_heading": "Dessiné en Italie.",
+          "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, Cattelan Italia crée du mobilier fabriqué en Italie.",
+          "cta_label": "",
+          "cta_href": ""
+        },
+        {
+          "section_key": "collections",
+          "heading": "Les collections",
+          "display_heading": "Les collections",
+          "text": "",
+          "cta_label": "Explorer les collections",
+          "cta_href": "/collections/"
+        },
+        {
+          "section_key": "showroom",
+          "heading": "Le showroom de Casablanca",
+          "display_heading": "Le showroom de Casablanca",
+          "text": "Au Triangle d’Or, 400 m² réunissent salons, salles à manger et chambres. Entrez dans le showroom Cattelan Italia pour découvrir les compositions et échanger avec notre équipe.",
+          "cta_label": "Découvrir le showroom",
+          "cta_href": "/showroom-casablanca/"
+        },
+        {
+          "section_key": "catalogue",
+          "heading": "Le catalogue",
+          "display_heading": "Le catalogue",
+          "text": "",
+          "cta_label": "Télécharger le catalogue",
+          "cta_href": "/catalogue/"
+        },
+        {
+          "section_key": "journal",
+          "heading": "Le Journal",
+          "display_heading": "Le Journal",
+          "text": "",
+          "cta_label": "Lire le Journal",
+          "cta_href": "/journal/"
+        }
+      ]
+    },
+    "after": {
+      "sections": [
+        {
+          "section_key": "brand",
+          "heading": "Le design italien dans les détails",
+          "display_heading": "Dessiné en Italie.",
+          "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, Cattelan Italia crée du mobilier fabriqué en Italie.",
+          "cta_label": "",
+          "cta_href": ""
+        },
+        {
+          "section_key": "collections",
+          "heading": "Les collections",
+          "display_heading": "Les collections",
+          "text": "",
+          "cta_label": "Explorer les collections",
+          "cta_href": "/collections/"
+        },
+        {
+          "section_key": "showroom",
+          "heading": "Le showroom de Casablanca",
+          "display_heading": "Le showroom de Casablanca",
+          "text": "Au Triangle d’Or, notre showroom de 400 m² présente des compositions pour le salon et la salle à manger. Découvrez les meubles en situation et échangez avec notre équipe. Nous livrons dans tout le Maroc.",
+          "cta_label": "Découvrir le showroom",
+          "cta_href": "/showroom-casablanca/"
+        },
+        {
+          "section_key": "catalogue",
+          "heading": "Le catalogue",
+          "display_heading": "Le catalogue",
+          "text": "",
+          "cta_label": "Télécharger le catalogue",
+          "cta_href": "/catalogue/"
+        },
+        {
+          "section_key": "journal",
+          "heading": "Le Journal",
+          "display_heading": "Le Journal",
+          "text": "",
+          "cta_label": "Lire le Journal",
+          "cta_href": "/journal/"
+        }
+      ]
+    }
+  },
+  {
+    "collection": "pages",
+    "slug": "showroom-casablanca",
+    "before": {
+      "intro": "Au Triangle d’Or, à Casablanca, le showroom Cattelan Italia réunit sur 400 m² des compositions pour le salon, la salle à manger et la chambre.",
+      "sections": [
+        {
+          "section_key": "discovery",
+          "heading": "Découvrir les meubles en situation",
+          "text": "Les compositions du showroom permettent de voir les meubles ensemble et d’apprécier leurs proportions au-delà des photographies. L’équipe vous renseigne sur les modèles, leurs dimensions et les revêtements proposés, que vous choisissiez une pièce ou plusieurs meubles.",
+          "cta_label": "Parcourir les collections",
+          "cta_href": "/collections/"
+        },
+        {
+          "section_key": "contact_note",
+          "text": "Vous souhaitez voir un modèle précis ? Appelez-nous pour connaître les pièces exposées, les prix et les délais de commande."
+        }
+      ],
+      "content": [],
+      "meta_description": "Découvrez le showroom Cattelan Italia : 400 m² au Triangle d’Or à Casablanca. Adresse avenue Mohamed Sijilmassi, téléphone, horaires et itinéraire."
+    },
+    "after": {
+      "intro": "Au Triangle d’Or, avenue Mohamed Sijilmassi, le showroom Cattelan Italia de Casablanca réunit sur 400 m² des compositions pour le salon et la salle à manger.",
+      "content": [
+        {
+          "_type": "block",
+          "_key": "seo-followup-showroom-0",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "seo-followup-showroom-0-s0",
+              "text": "Découvrir les meubles en situation",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "seo-followup-showroom-1",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "seo-followup-showroom-1-s0",
+              "text": "Voir les meubles ensemble permet d’apprécier leurs proportions et les associations de matières. L’équipe vous renseigne sur les modèles, leurs dimensions et les revêtements proposés.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "seo-followup-showroom-2",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "seo-followup-showroom-2-s0",
+              "text": "Du repas au salon",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "seo-followup-showroom-3",
+          "style": "normal",
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "seo-followup-showroom-3-l1",
+              "href": "/collections/tables/"
+            },
+            {
+              "_type": "link",
+              "_key": "seo-followup-showroom-3-l3",
+              "href": "/collections/chaises-tabourets/"
+            }
+          ],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "seo-followup-showroom-3-s0",
+              "text": "Sur le site, comparez les ",
+              "marks": []
+            },
+            {
+              "_type": "span",
+              "_key": "seo-followup-showroom-3-s1",
+              "text": "tables",
+              "marks": [
+                "seo-followup-showroom-3-l1"
+              ]
+            },
+            {
+              "_type": "span",
+              "_key": "seo-followup-showroom-3-s2",
+              "text": " et les ",
+              "marks": []
+            },
+            {
+              "_type": "span",
+              "_key": "seo-followup-showroom-3-s3",
+              "text": "chaises et tabourets",
+              "marks": [
+                "seo-followup-showroom-3-l3"
+              ]
+            },
+            {
+              "_type": "span",
+              "_key": "seo-followup-showroom-3-s4",
+              "text": ". Pour la salle à manger, la largeur des assises et la position du piètement aident à composer un ensemble adapté à votre espace.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "seo-followup-showroom-4",
+          "style": "normal",
+          "markDefs": [
+            {
+              "_type": "link",
+              "_key": "seo-followup-showroom-4-l1",
+              "href": "/collections/canapes-fauteuils/"
+            },
+            {
+              "_type": "link",
+              "_key": "seo-followup-showroom-4-l3",
+              "href": "/collections/buffets-bibliotheques/"
+            },
+            {
+              "_type": "link",
+              "_key": "seo-followup-showroom-4-l5",
+              "href": "/collections/luminaires/"
+            }
+          ],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "seo-followup-showroom-4-s0",
+              "text": "Dans le salon, découvrez les ",
+              "marks": []
+            },
+            {
+              "_type": "span",
+              "_key": "seo-followup-showroom-4-s1",
+              "text": "canapés et fauteuils",
+              "marks": [
+                "seo-followup-showroom-4-l1"
+              ]
+            },
+            {
+              "_type": "span",
+              "_key": "seo-followup-showroom-4-s2",
+              "text": ", les ",
+              "marks": []
+            },
+            {
+              "_type": "span",
+              "_key": "seo-followup-showroom-4-s3",
+              "text": "buffets et bibliothèques",
+              "marks": [
+                "seo-followup-showroom-4-l3"
+              ]
+            },
+            {
+              "_type": "span",
+              "_key": "seo-followup-showroom-4-s4",
+              "text": " et les ",
+              "marks": []
+            },
+            {
+              "_type": "span",
+              "_key": "seo-followup-showroom-4-s5",
+              "text": "luminaires",
+              "marks": [
+                "seo-followup-showroom-4-l5"
+              ]
+            },
+            {
+              "_type": "span",
+              "_key": "seo-followup-showroom-4-s6",
+              "text": ". Les fiches présentent les dimensions et les finitions des modèles : elles permettent de poursuivre la comparaison avant ou après votre visite.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "seo-followup-showroom-5",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "seo-followup-showroom-5-s0",
+              "text": "Livraison dans tout le Maroc",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "seo-followup-showroom-6",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "seo-followup-showroom-6-s0",
+              "text": "La livraison couvre tout le Maroc, notamment Casablanca, Rabat, Marrakech et Tanger. Pour connaître les frais et les délais de livraison, contactez l’équipe en précisant votre ville et le modèle choisi.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "section_key": "contact_note",
+          "text": "Pour vérifier si un modèle est exposé ou connaître son prix et son délai de commande, appelez-nous ou écrivez-nous sur WhatsApp."
+        }
+      ],
+      "meta_description": "Showroom Cattelan Italia de 400 m² au Triangle d’Or à Casablanca. Adresse, horaires, contact WhatsApp et livraison dans tout le Maroc."
+    }
+  },
+  {
+    "collection": "families",
+    "slug": "tables",
+    "before": {
+      "intro": "Le verre révèle le piètement, le bois apporte son veinage et la céramique se décline en décors marbrés. Les tables Cattelan Italia se choisissent aussi par leur forme et leurs dimensions, avec des versions à rallonges selon les modèles."
+    },
+    "after": {
+      "intro": "Les tables de salle à manger Cattelan Italia se déclinent en formes rondes, ovales ou rectangulaires, avec des versions à rallonges selon les modèles. Comparez l’encombrement et le nombre de places pour choisir une table adaptée à votre pièce."
+    }
+  },
+  {
+    "collection": "site_content",
+    "slug": "global",
+    "before": {
+      "contact_label": "Coordonnées du showroom"
+    },
+    "after": {
+      "whatsapp_url": "https://wa.me/212771105490",
+      "contact_label": "Contacter le showroom"
+    },
+    "beforeAbsent": [
+      "whatsapp_url"
+    ]
+  }
+]

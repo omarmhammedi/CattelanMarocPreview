@@ -1,0 +1,3280 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "skorpio",
+      "gallery": [
+        {
+          "index": 0,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/fb758427-7a7d-450a-a0ab-75fe6d1a2c8a.jpg?t=1745326095",
+          "sourceSha256": "44ee3bc7f60e8ac037080fbb8c913b1da9c2aaeab3a0454cb6d54a973c4eab34",
+          "expectedImage": {
+            "id": "01M3N0JQX4H4YM108P8WG96X79",
+            "provider": "local",
+            "filename": "cattelan-skorpio-fb758427-7a7d-450a-a0ab-75fe6d1a2c8a.jpg",
+            "mimeType": "image/jpeg",
+            "width": 3543,
+            "height": 2362,
+            "blurhash": "LISPX_?b-;?a_3j[Rjj[_NayIUj]",
+            "dominantColor": "rgb(242,242,241)",
+            "meta": {
+              "storageKey": "01M3N0JPAGCPXYVQWF7N8W8MFA.jpg",
+              "caption": null,
+              "blurhash": "LISPX_?b-;?a_3j[Rjj[_NayIUj]",
+              "dominantColor": "rgb(242,242,241)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 1",
+          "afterAlt": "Table Skorpio à plateau clair et piètement croisé, vue de face."
+        },
+        {
+          "index": 1,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/ea3b42a0-f55a-4c5c-822a-813954021d1d.jpg?t=1745326094",
+          "sourceSha256": "e9bff0932f0e51e29f76f07ad1f5153a07094c79d0b5a1138dae1cfbe3ab5588",
+          "expectedImage": {
+            "id": "01M3N0JSAWP1SBVWVGRC7RW6J7",
+            "provider": "local",
+            "filename": "cattelan-skorpio-ea3b42a0-f55a-4c5c-822a-813954021d1d.jpg",
+            "mimeType": "image/jpeg",
+            "width": 3543,
+            "height": 2362,
+            "blurhash": "LQR:HF%M?b-;-;R%V@t7~qa{IAV@",
+            "dominantColor": "rgb(238,238,237)",
+            "meta": {
+              "storageKey": "01M3N0JR8G2G2P5TJ028CBDB5N.jpg",
+              "caption": null,
+              "blurhash": "LQR:HF%M?b-;-;R%V@t7~qa{IAV@",
+              "dominantColor": "rgb(238,238,237)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 2",
+          "afterAlt": "Table Skorpio vue en plongée, avec le piètement visible sous le plateau."
+        },
+        {
+          "index": 2,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/d6b58d4a-be94-489c-98f9-40ad4385f74d.jpg?t=1745326094",
+          "sourceSha256": "cc44447466ca5e0327357f3e726ef974ed3eb2226037c8f946929d3b342afce8",
+          "expectedImage": {
+            "id": "01M3N0NX99RSVKXP3P7QMKQA9Q",
+            "provider": "local",
+            "filename": "cattelan-skorpio-d6b58d4a-be94-489c-98f9-40ad4385f74d.jpg",
+            "mimeType": "image/jpeg",
+            "width": 2362,
+            "height": 3543,
+            "blurhash": "LEKK[?%2_N?v9Y009FkBx^-;xbIU",
+            "dominantColor": "rgb(166,166,156)",
+            "meta": {
+              "storageKey": "01M3N0NVT212SBBZABM5E80JZV.jpg",
+              "caption": null,
+              "blurhash": "LEKK[?%2_N?v9Y009FkBx^-;xbIU",
+              "dominantColor": "rgb(166,166,156)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 3",
+          "afterAlt": "Détail du plateau texturé de Skorpio et des reflets du piètement."
+        },
+        {
+          "index": 3,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/4ee367be-4ac7-43e4-a241-cb555294866f.jpg?t=1745326092",
+          "sourceSha256": "85ec850f67597391ab862619e8cc5bd9f9bcb9e00ce22c2c25d0feb48ae0b75e",
+          "expectedImage": {
+            "id": "01M3N0NYK93ZE8S0DW17M1Q1RM",
+            "provider": "local",
+            "filename": "cattelan-skorpio-4ee367be-4ac7-43e4-a241-cb555294866f.jpg",
+            "mimeType": "image/jpeg",
+            "width": 3543,
+            "height": 2362,
+            "blurhash": "LGS$ou?b%g?b~qofRjj[?vofIUae",
+            "dominantColor": "rgb(248,247,247)",
+            "meta": {
+              "storageKey": "01M3N0NXKSPF7FKRVC70X420MZ.jpg",
+              "caption": null,
+              "blurhash": "LGS$ou?b%g?b~qofRjj[?vofIUae",
+              "dominantColor": "rgb(248,247,247)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 4",
+          "afterAlt": "Table Skorpio de face, avec son plateau aux extrémités arrondies."
+        },
+        {
+          "index": 4,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/d8bb6f1e-d03c-4d16-aecb-cbb9fdbfef62.jpg?t=1745326094",
+          "sourceSha256": "247a9a4467fa22ae6bd607ae5540cd9a3b999056f8d74db3fba178f7f0be7b51",
+          "expectedImage": {
+            "id": "01M3N0P01AM0CCPC2KF4NAQXQB",
+            "provider": "local",
+            "filename": "cattelan-skorpio-d8bb6f1e-d03c-4d16-aecb-cbb9fdbfef62.jpg",
+            "mimeType": "image/jpeg",
+            "width": 3543,
+            "height": 2362,
+            "blurhash": "LJSPX]%M?b_3_3WARjt7_NogIARP",
+            "dominantColor": "rgb(243,243,241)",
+            "meta": {
+              "storageKey": "01M3N0NYTP6F2FJ6902FHFKAAK.jpg",
+              "caption": null,
+              "blurhash": "LJSPX]%M?b_3_3WARjt7_NogIARP",
+              "dominantColor": "rgb(243,243,241)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 5",
+          "afterAlt": "Table Skorpio vue de trois quarts, avec ses branches de piètement entrecroisées."
+        },
+        {
+          "index": 5,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/30e29264-d6f3-4b11-8351-14c2603979e4.jpg?t=1758703697",
+          "sourceSha256": "4ebc83912b1aa9916832a52d7ff48e551413c80b80142e23d6657dff92bf2c81",
+          "expectedImage": {
+            "id": "01M3N0P0MCHNNSDJTZFZYCFXR9",
+            "provider": "local",
+            "filename": "cattelan-skorpio-30e29264-d6f3-4b11-8351-14c2603979e4.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "L4Ee[K8_IVRP~B^jS5NG9xE3Nb-o",
+            "dominantColor": "rgb(110,99,89)",
+            "meta": {
+              "storageKey": "01M3N0P0GN7RR34KR1PJZ98X10.jpg",
+              "caption": null,
+              "blurhash": "L4Ee[K8_IVRP~B^jS5NG9xE3Nb-o",
+              "dominantColor": "rgb(110,99,89)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 6",
+          "afterAlt": "Table Skorpio entourée de chaises, vue en plongée dans une salle à manger."
+        },
+        {
+          "index": 6,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/1c1e403f-80c2-4971-8e0c-7207e0a7428e.jpg?t=1669795903",
+          "sourceSha256": "7d0c48917281adbcdc749dfd5d613d8a0d5cfddf36e25c6ad55ccec7cce3163d",
+          "expectedImage": {
+            "id": "01M3N0P11K49WJXDFQT8C8ZMBQ",
+            "provider": "local",
+            "filename": "cattelan-skorpio-1c1e403f-80c2-4971-8e0c-7207e0a7428e.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LGKK{800-=9E%1IURjM{~qaeD%jZ",
+            "dominantColor": "rgb(160,162,165)",
+            "meta": {
+              "storageKey": "01M3N0P0VBZQJ0ESBN2MKEH520.jpg",
+              "caption": null,
+              "blurhash": "LGKK{800-=9E%1IURjM{~qaeD%jZ",
+              "dominantColor": "rgb(160,162,165)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 7",
+          "afterAlt": "Table Skorpio à plateau transparent dans une salle à manger claire."
+        },
+        {
+          "index": 7,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/9997cf91-aae7-42d4-8f2c-083db41f17cf.jpg?t=1669795913",
+          "sourceSha256": "c660acdb5e85d25a04b705ed4001b4112d94ff37d6810c241c791dfd9325c1b5",
+          "expectedImage": {
+            "id": "01M3N0P1MFD4QD8G8Z2JEJTK8W",
+            "provider": "local",
+            "filename": "cattelan-skorpio-9997cf91-aae7-42d4-8f2c-083db41f17cf.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LRM*BZWB_N%M?v?v?b8_V@WBM{RP",
+            "dominantColor": "rgb(181,185,189)",
+            "meta": {
+              "storageKey": "01M3N0P1CH6110M508Z8TVPQH6.jpg",
+              "caption": null,
+              "blurhash": "LRM*BZWB_N%M?v?v?b8_V@WBM{RP",
+              "dominantColor": "rgb(181,185,189)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 8",
+          "afterAlt": "Détail de la jonction des branches du piètement Skorpio sous le plateau."
+        },
+        {
+          "index": 8,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/935b6544-f789-42c4-acab-792fb75dbe7b.jpg?t=1718358513",
+          "sourceSha256": "12e0958d4ef6b2ec14bbf3badfb7bc1760bd210e117ce533dc0d209d695a13ae",
+          "expectedImage": {
+            "id": "01M3N0P2FJPKYD2SM4XRYTQEE3",
+            "provider": "local",
+            "filename": "cattelan-skorpio-935b6544-f789-42c4-acab-792fb75dbe7b.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "L5Gbeg009H4n009G~qxaD+?b4-ob",
+            "dominantColor": "rgb(130,124,112)",
+            "meta": {
+              "storageKey": "01M3N0P2A69TE1CGBADBETHPND.jpg",
+              "caption": null,
+              "blurhash": "L5Gbeg009H4n009G~qxaD+?b4-ob",
+              "dominantColor": "rgb(130,124,112)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 9",
+          "afterAlt": "Table Skorpio et chaises devant une bibliothèque, dans un intérieur gris."
+        },
+        {
+          "index": 9,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/c39d7325-b4a6-46ed-ac7e-4ab050aea1b9.jpg?t=1718358513",
+          "sourceSha256": "5e69a38bbb2c48f732c9245ccdd2eb6432309b7fde6435de2c090fd8e6d7d726",
+          "expectedImage": {
+            "id": "01M3N0P2XCXMJAVY7R0GVGCJZD",
+            "provider": "local",
+            "filename": "cattelan-skorpio-c39d7325-b4a6-46ed-ac7e-4ab050aea1b9.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LBIr1%t100~q4:oI-;?b4o4nWV%N",
+            "dominantColor": "rgb(146,142,133)",
+            "meta": {
+              "storageKey": "01M3N0P2SM99V7DAJKKNAJVE6P.jpg",
+              "caption": null,
+              "blurhash": "LBIr1%t100~q4:oI-;?b4o4nWV%N",
+              "dominantColor": "rgb(146,142,133)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 10",
+          "afterAlt": "Vue du dessus de la table Skorpio, avec des chaises autour du plateau transparent."
+        },
+        {
+          "index": 10,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/912beddc-e033-44d7-b0b8-af5bf109d73e.jpg?t=1669795912",
+          "sourceSha256": "25b8c58ed22971edeaf10ff5ce4a6c98b7ab0e27c30d259cea3f6e6cfbc47a4a",
+          "expectedImage": {
+            "id": "01M3N0P3B0FJPZQDAMZVCJRCEJ",
+            "provider": "local",
+            "filename": "cattelan-skorpio-912beddc-e033-44d7-b0b8-af5bf109d73e.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LQGutB~q%M?bD%RjWCj]-;ofj[ax",
+            "dominantColor": "rgb(127,122,114)",
+            "meta": {
+              "storageKey": "01M3N0P3642WRDH2GFMGVBYSGJ.jpg",
+              "caption": null,
+              "blurhash": "LQGutB~q%M?bD%RjWCj]-;ofj[ax",
+              "dominantColor": "rgb(127,122,114)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 11",
+          "afterAlt": "Table Skorpio de face, avec deux chaises et une suspension à globes."
+        },
+        {
+          "index": 11,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/f7859bc9-5253-43b6-9adf-ab7e3eb5f008.jpg?t=1669795920",
+          "sourceSha256": "d400a3713408b22b32bfd75e4c3821f882a335aa74cf6a9c7b63724edf4f2a52",
+          "expectedImage": {
+            "id": "01M3N0P3RPH9SVRK0JW7K436C7",
+            "provider": "local",
+            "filename": "cattelan-skorpio-f7859bc9-5253-43b6-9adf-ab7e3eb5f008.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LEK-az~qoz%LD$4.IUIU_3-;%MtR",
+            "dominantColor": "rgb(168,162,152)",
+            "meta": {
+              "storageKey": "01M3N0P3JSEX03F129TAKES958.jpg",
+              "caption": null,
+              "blurhash": "LEK-az~qoz%LD$4.IUIU_3-;%MtR",
+              "dominantColor": "rgb(168,162,152)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 12",
+          "afterAlt": "Table Skorpio vue de trois quarts, avec des chaises claires sur un tapis."
+        },
+        {
+          "index": 12,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/689203b8-aaee-425a-a197-912cd230b479.jpg?t=1669795909",
+          "sourceSha256": "54e5acda7d322090955f778886a4194f855eaa7eff6d1b301e774ad3aede6b40",
+          "expectedImage": {
+            "id": "01M3N0P470CWC3X5J7VS39HTMA",
+            "provider": "local",
+            "filename": "cattelan-skorpio-689203b8-aaee-425a-a197-912cd230b479.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LRMjgh~q4on$^*M{IokCxbbHWUbG",
+            "dominantColor": "rgb(177,163,151)",
+            "meta": {
+              "storageKey": "01M3N0P40JH9BGC6XTQTQGVF3P.jpg",
+              "caption": null,
+              "blurhash": "LRMjgh~q4on$^*M{IokCxbbHWUbG",
+              "dominantColor": "rgb(177,163,151)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 13",
+          "afterAlt": "Table Skorpio devant un grand décor mural végétal."
+        },
+        {
+          "index": 13,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/b22515a0-bc14-47bd-9a27-8b7e8629b556.jpg?t=1669795914",
+          "sourceSha256": "0c27b3b2e97a9a4d253ff5de182e6bf30ae9935650858f5874b923b014210911",
+          "expectedImage": {
+            "id": "01M3N0P4P888FKD5DM0H5DAQFB",
+            "provider": "local",
+            "filename": "cattelan-skorpio-b22515a0-bc14-47bd-9a27-8b7e8629b556.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LdL;ER~qNHt6^+IoIUWBRPV@tRog",
+            "dominantColor": "rgb(168,156,145)",
+            "meta": {
+              "storageKey": "01M3N0P4EYBK2H5JRF0CF3ZRZM.jpg",
+              "caption": null,
+              "blurhash": "LdL;ER~qNHt6^+IoIUWBRPV@tRog",
+              "dominantColor": "rgb(168,156,145)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 14",
+          "afterAlt": "Table Skorpio vue en plongée devant un décor mural végétal."
+        },
+        {
+          "index": 14,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/0772af99-1328-49ed-b086-ecf02aa99bdd.jpg?t=1669795901",
+          "sourceSha256": "c55f282c74a93f4a8bbd1a80904d906e606265631be72e7741af7560e9909a9c",
+          "expectedImage": {
+            "id": "01M3N0P54SXCYJHBDDM0C45QC1",
+            "provider": "local",
+            "filename": "cattelan-skorpio-0772af99-1328-49ed-b086-ecf02aa99bdd.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LLJ7wGVroge-~WD%M|adIU9Fj?xa",
+            "dominantColor": "rgb(153,135,126)",
+            "meta": {
+              "storageKey": "01M3N0P4YQXS56ZMEZ4NVZ1E4N.jpg",
+              "caption": null,
+              "blurhash": "LLJ7wGVroge-~WD%M|adIU9Fj?xa",
+              "dominantColor": "rgb(153,135,126)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 15",
+          "afterAlt": "Détail des surfaces angulaires du piètement Skorpio sous le plateau transparent."
+        },
+        {
+          "index": 15,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/06a570b6-f90c-4552-8113-5563f2dda369.jpg?t=1669795901",
+          "sourceSha256": "bdd1c6435b678d3b308659ac833954828f4b95d7b9584910d9b9c9dc48d8454a",
+          "expectedImage": {
+            "id": "01M3N0P5M1VV7B7W5193DC65HG",
+            "provider": "local",
+            "filename": "cattelan-skorpio-06a570b6-f90c-4552-8113-5563f2dda369.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LYMQnt4m~q%1%LWBogt7Rjozofoz",
+            "dominantColor": "rgb(178,170,160)",
+            "meta": {
+              "storageKey": "01M3N0P5D5TREJQBYGWNWJQJ6Y.jpg",
+              "caption": null,
+              "blurhash": "LYMQnt4m~q%1%LWBogt7Rjozofoz",
+              "dominantColor": "rgb(178,170,160)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 16",
+          "afterAlt": "Table Skorpio vue du dessus, entourée de six chaises."
+        },
+        {
+          "index": 16,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/a96de179-0fd1-43e4-bb6b-36dd8d67b515.jpg?t=1747057698",
+          "sourceSha256": "9bd803484ce368f55dbfc53ec781b521e290510aef0733814a260c97f7a0edfc",
+          "expectedImage": {
+            "id": "01M3N0P600AW27MQ0SXCKQ8P7N",
+            "provider": "local",
+            "filename": "cattelan-skorpio-a96de179-0fd1-43e4-bb6b-36dd8d67b515.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "L9Ex@N-V00~Vt8j[aJt74;t5oIIV",
+            "dominantColor": "rgb(115,100,83)",
+            "meta": {
+              "storageKey": "01M3N0P5WHGDZV66R2MVB14FRB.jpg",
+              "caption": null,
+              "blurhash": "L9Ex@N-V00~Vt8j[aJt74;t5oIIV",
+              "dominantColor": "rgb(115,100,83)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 17",
+          "afterAlt": "Table Skorpio à long plateau transparent dans une salle à manger avec des chaises vertes."
+        },
+        {
+          "index": 17,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/a9e9a2d0-5cd3-4096-8c68-bc76d2a26ae3.jpg?t=1669795914",
+          "sourceSha256": "e1d2fc27498ea2cccda99ac8e3fe36442664e297692aa8f79f08431b9d3b7b5d",
+          "expectedImage": {
+            "id": "01M3N0P6CDNHH6QJ5Z42SRDZ0J",
+            "provider": "local",
+            "filename": "cattelan-skorpio-a9e9a2d0-5cd3-4096-8c68-bc76d2a26ae3.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "L3EVQn0000$*y@kqBnr=00?^%#?b",
+            "dominantColor": "rgb(108,91,90)",
+            "meta": {
+              "storageKey": "01M3N0P6735F5YVF67DC3C5EGH.jpg",
+              "caption": null,
+              "blurhash": "L3EVQn0000$*y@kqBnr=00?^%#?b",
+              "dominantColor": "rgb(108,91,90)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 18",
+          "afterAlt": "Table Skorpio à piètement foncé devant un mur rouge et une cheminée."
+        },
+        {
+          "index": 18,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/3b6fd962-eb91-4c51-91b2-a3b2e61051da.jpg?t=1669795905",
+          "sourceSha256": "d3ff392d38a39832113d5cfa0997ce515cce670d8ef29a356f30c57616bc6401",
+          "expectedImage": {
+            "id": "01M3N0P7BTYMYKTAKCCPRRQ92M",
+            "provider": "local",
+            "filename": "cattelan-skorpio-3b6fd962-eb91-4c51-91b2-a3b2e61051da.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LUMQIsR5MwR5~Ws.IUIU_3RPWC%2",
+            "dominantColor": "rgb(177,159,144)",
+            "meta": {
+              "storageKey": "01M3N0P719KGNJC0JVMWQJBKKQ.jpg",
+              "caption": null,
+              "blurhash": "LUMQIsR5MwR5~Ws.IUIU_3RPWC%2",
+              "dominantColor": "rgb(177,159,144)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 19",
+          "afterAlt": "Table Skorpio dans une salle à manger avec un miroir et des cadres dorés."
+        },
+        {
+          "index": 19,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/886df8c3-5049-4f8d-b56e-e556f17df82f.jpg?t=1669795912",
+          "sourceSha256": "ea265892b21bdf0bb402688dbc8c1dae666b31365665579d12d0421f2dd84f0d",
+          "expectedImage": {
+            "id": "01M3N0P87VTX80JNBJPX81D5V4",
+            "provider": "local",
+            "filename": "cattelan-skorpio-886df8c3-5049-4f8d-b56e-e556f17df82f.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LDLgU:rWVrrpv{~q00RO_2I9NZV@",
+            "dominantColor": "rgb(169,150,135)",
+            "meta": {
+              "storageKey": "01M3N0P7WCQC4JG2Y1EFZSP6W3.jpg",
+              "caption": null,
+              "blurhash": "LDLgU:rWVrrpv{~q00RO_2I9NZV@",
+              "dominantColor": "rgb(169,150,135)"
+            }
+          },
+          "beforeAlt": "Skorpio — photographie officielle 20",
+          "afterAlt": "Vue en plongée de Skorpio, avec le piètement croisé visible à travers le plateau."
+        }
+      ],
+      "image": {
+        "index": 0,
+        "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/fb758427-7a7d-450a-a0ab-75fe6d1a2c8a.jpg?t=1745326095",
+        "sourceSha256": "44ee3bc7f60e8ac037080fbb8c913b1da9c2aaeab3a0454cb6d54a973c4eab34",
+        "expectedImage": {
+          "id": "01M3N0JQX4H4YM108P8WG96X79",
+          "provider": "local",
+          "filename": "cattelan-skorpio-fb758427-7a7d-450a-a0ab-75fe6d1a2c8a.jpg",
+          "mimeType": "image/jpeg",
+          "width": 3543,
+          "height": 2362,
+          "blurhash": "LISPX_?b-;?a_3j[Rjj[_NayIUj]",
+          "dominantColor": "rgb(242,242,241)",
+          "meta": {
+            "storageKey": "01M3N0JPAGCPXYVQWF7N8W8MFA.jpg",
+            "caption": null,
+            "blurhash": "LISPX_?b-;?a_3j[Rjj[_NayIUj]",
+            "dominantColor": "rgb(242,242,241)"
+          }
+        },
+        "beforeAlt": "Skorpio — photographie officielle 1",
+        "afterAlt": "Table Skorpio à plateau clair et piètement croisé, vue de face."
+      }
+    },
+    {
+      "slug": "napoleon-keramik",
+      "gallery": [
+        {
+          "index": 0,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/49468678-7a35-49ae-8ee1-f1995e80e489.jpg?t=1758786496",
+          "sourceSha256": "4d62e42a481a03838df4f1e05c273ef5cb7532390d67260f93ec5626c22c04eb",
+          "expectedImage": {
+            "id": "01M3N0PJV58S7PM589KZGP2G7K",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-49468678-7a35-49ae-8ee1-f1995e80e489.jpg",
+            "mimeType": "image/jpeg",
+            "width": 3543,
+            "height": 2362,
+            "blurhash": "LQR:E6?b?c%2_2j]Rjj@_4RjITt7",
+            "dominantColor": "rgb(241,239,236)",
+            "meta": {
+              "storageKey": "01M3N0PHTXKHYX7YQYHJ8C9TYB.jpg",
+              "caption": null,
+              "blurhash": "LQR:E6?b?c%2_2j]Rjj@_4RjITt7",
+              "dominantColor": "rgb(241,239,236)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik — photographie officielle 1",
+          "afterAlt": "Table Napoleon Keramik à plateau et pied central veinés, vue de trois quarts."
+        },
+        {
+          "index": 1,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/efe41228-fcb8-4d07-853a-07bffe26341a.jpg?t=1737967702",
+          "sourceSha256": "1d6e58984b9f256d894ed7298b1372133641a3c83dac3da4ac3ebd0846cd1337",
+          "expectedImage": {
+            "id": "01M3N0PM4KXADZ32CB4BDBHXJ4",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-efe41228-fcb8-4d07-853a-07bffe26341a.jpg",
+            "mimeType": "image/jpeg",
+            "width": 3543,
+            "height": 2362,
+            "blurhash": "LNSPU.?b?c%M?bj[WVj[_4V@Dit7",
+            "dominantColor": "rgb(244,243,242)",
+            "meta": {
+              "storageKey": "01M3N0PKA2DDTJRK892MK4FHJH.jpg",
+              "caption": null,
+              "blurhash": "LNSPU.?b?c%M?bj[WVj[_4V@Dit7",
+              "dominantColor": "rgb(244,243,242)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik — photographie officielle 2",
+          "afterAlt": "Table Napoleon Keramik vue de face, avec son plateau allongé et son pied central."
+        },
+        {
+          "index": 2,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/7e0f628d-c00d-4245-8298-0cce0e703a52.jpg?t=1770630494",
+          "sourceSha256": "c3e7c6ca702114a87d4b084c58703721aafa11c327264cc92e807b3096b7ff31",
+          "expectedImage": {
+            "id": "01M3N0PNDK0PSH3MZ6D2W1HCAD",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-7e0f628d-c00d-4245-8298-0cce0e703a52.jpg",
+            "mimeType": "image/jpeg",
+            "width": 3543,
+            "height": 2362,
+            "blurhash": "LJSY]h?b?c-;_3ayayof_4WBD$of",
+            "dominantColor": "rgb(246,245,243)",
+            "meta": {
+              "storageKey": "01M3N0PMBESSHHQ22C9MREEB5S.jpg",
+              "caption": null,
+              "blurhash": "LJSY]h?b?c-;_3ayayof_4WBD$of",
+              "dominantColor": "rgb(246,245,243)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik — photographie officielle 3",
+          "afterAlt": "Table Napoleon Keramik claire vue de face, avec un pied central incurvé."
+        },
+        {
+          "index": 3,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/1ed42ef4-7e75-4ced-9321-3add3df0f73f.jpg?t=1737967698",
+          "sourceSha256": "6dcd3b72af3e0296b4011bd9b96ebfe413578f9bc64a5fbd3628c54b91213841",
+          "expectedImage": {
+            "id": "01M3N0PPRW4M863217CT08B5JT",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-1ed42ef4-7e75-4ced-9321-3add3df0f73f.jpg",
+            "mimeType": "image/jpeg",
+            "width": 3543,
+            "height": 2362,
+            "blurhash": "LPR:E7?b_3xu_3j[Rjay_NRjD%t7",
+            "dominantColor": "rgb(240,239,238)",
+            "meta": {
+              "storageKey": "01M3N0PNPSN96TANBB6A2MEHVT.jpg",
+              "caption": null,
+              "blurhash": "LPR:E7?b_3xu_3j[Rjay_NRjD%t7",
+              "dominantColor": "rgb(240,239,238)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik — photographie officielle 4",
+          "afterAlt": "Table Napoleon Keramik claire à plateau aux angles arrondis, vue de trois quarts."
+        },
+        {
+          "index": 4,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/469dd4a2-9487-4324-beb9-a046e7ff9f94.jpg?t=1770626908",
+          "sourceSha256": "e0fca2605f53f259117d0a3fc07325f8e290e092e3fdfc80e832481e4285420e",
+          "expectedImage": {
+            "id": "01M3N0PQ35GGXSA7BX7CE8YBKZ",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-469dd4a2-9487-4324-beb9-a046e7ff9f94.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "L8EousXA~qV@0000%MIVSQ.8D%tS",
+            "dominantColor": "rgb(112,103,100)",
+            "meta": {
+              "storageKey": "01M3N0PPZSMSWAQ9RY358MWW60.jpg",
+              "caption": null,
+              "blurhash": "L8EousXA~qV@0000%MIVSQ.8D%tS",
+              "dominantColor": "rgb(112,103,100)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik — photographie officielle 5",
+          "afterAlt": "Table Napoleon Keramik claire entourée de chaises, sous une suspension linéaire."
+        },
+        {
+          "index": 5,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/a346830d-84ca-4ccc-a40b-5a9b711a3635.jpg?t=1790236099",
+          "sourceSha256": "7129dd782a53eee771cb3522e9d42df4fb4859bfd711d3044dfc26355865f92a",
+          "expectedImage": {
+            "id": "01M3N0PQFNVVH928FQXK4G6JWZ",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-a346830d-84ca-4ccc-a40b-5a9b711a3635.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LfGbk.~qtRozjXjsWBRjIUM{WBj[",
+            "dominantColor": "rgb(124,117,116)",
+            "meta": {
+              "storageKey": "01M3N0PQCPPA2H5YKPBBJMB88S.jpg",
+              "caption": null,
+              "blurhash": "LfGbk.~qtRozjXjsWBRjIUM{WBj[",
+              "dominantColor": "rgb(124,117,116)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik — photographie officielle 6",
+          "afterAlt": "Table Napoleon Keramik vue en plongée sur un tapis rond."
+        },
+        {
+          "index": 6,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/57a86f6a-e2de-430d-907b-0f690ead0dda.jpg?t=1737967703",
+          "sourceSha256": "27802047d7409811df75b03dafd92ce3b7d4f63c1bfa25a353c9c68208af3882",
+          "expectedImage": {
+            "id": "01M3N0PQW8JS7EKX995SMRK4DZ",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-57a86f6a-e2de-430d-907b-0f690ead0dda.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "L5C~;oDi4U?a00~q~Uov%hIAxuIo",
+            "dominantColor": "rgb(97,87,76)",
+            "meta": {
+              "storageKey": "01M3N0PQQYAJ4NJ94JYCZX9QWZ.jpg",
+              "caption": null,
+              "blurhash": "L5C~;oDi4U?a00~q~Uov%hIAxuIo",
+              "dominantColor": "rgb(97,87,76)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik — photographie officielle 7",
+          "afterAlt": "Table Napoleon Keramik veinée avec des chaises orange dans une salle à manger."
+        },
+        {
+          "index": 7,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/199bdac5-8ff4-4d01-a06a-8cfbb7722835.jpg?t=1737967702",
+          "sourceSha256": "c2bde16b8a4b7e9f353fd44104da0ff50ee0c791dfcff0e1a5603b8ef0d660c1",
+          "expectedImage": {
+            "id": "01M3N0PR8CRKDNEC6W7ZJNRQF5",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-199bdac5-8ff4-4d01-a06a-8cfbb7722835.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LDIhQq0000~W~U%2oyM{D%.8SzE1",
+            "dominantColor": "rgb(148,140,124)",
+            "meta": {
+              "storageKey": "01M3N0PR5FH5DMTAVGRQ7K5ZRW.jpg",
+              "caption": null,
+              "blurhash": "LDIhQq0000~W~U%2oyM{D%.8SzE1",
+              "dominantColor": "rgb(148,140,124)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik — photographie officielle 8",
+          "afterAlt": "Détail des veines du plateau et du pied central de Napoleon Keramik."
+        },
+        {
+          "index": 8,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/b7d66292-27a4-4791-91ae-36bc2ea0be29.jpg?t=1770626909",
+          "sourceSha256": "6aac6e17452a3899df8768e86a382cfbf51225c4586d9d3c6ff13171a333b495",
+          "expectedImage": {
+            "id": "01M3N0PRMBSY1HN2NA4QDWWW6Q",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-b7d66292-27a4-4791-91ae-36bc2ea0be29.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LpI}hg_Nx]xujaofoft7V@V@oejt",
+            "dominantColor": "rgb(154,143,135)",
+            "meta": {
+              "storageKey": "01M3N0PRFVKV64T3558NG8C0G4.jpg",
+              "caption": null,
+              "blurhash": "LpI}hg_Nx]xujaofoft7V@V@oejt",
+              "dominantColor": "rgb(154,143,135)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik — photographie officielle 9",
+          "afterAlt": "Table Napoleon Keramik claire devant une baie vitrée et un meuble haut."
+        },
+        {
+          "index": 9,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/d4421cae-0634-4583-993c-4eb2d432d648.jpg?t=1770626909",
+          "sourceSha256": "ff8dcd11ee03e37f9225986b6c83a61aa15f6ef880cd75c80ea737471603c888",
+          "expectedImage": {
+            "id": "01M3N0PRYVZ9GFSJ32QXPFN4FS",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-d4421cae-0634-4583-993c-4eb2d432d648.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LBL;T=Q+pI~q?b9Z?cD%5RNb8_IU",
+            "dominantColor": "rgb(182,174,170)",
+            "meta": {
+              "storageKey": "01M3N0PRTYJ4189WVEAKVJ177H.jpg",
+              "caption": null,
+              "blurhash": "LBL;T=Q+pI~q?b9Z?cD%5RNb8_IU",
+              "dominantColor": "rgb(182,174,170)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik — photographie officielle 10",
+          "afterAlt": "Vue du dessus du plateau Napoleon Keramik, avec des livres, une coupe et un vase."
+        },
+        {
+          "index": 10,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/0c90c3ea-caa3-4855-b71a-935e1239f950.jpg?t=1778507295",
+          "sourceSha256": "ef3c6503cc34d5180162d34bb3b22966f515842d9786ec062540fc5741b7958f",
+          "expectedImage": {
+            "id": "01M3N0PSC21QQV4R72D1SMM186",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-0c90c3ea-caa3-4855-b71a-935e1239f950.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LGH-.5~q9a5600D%bHoz-:smxYxE",
+            "dominantColor": "rgb(145,129,117)",
+            "meta": {
+              "storageKey": "01M3N0PS8V8TZ6DE48CQPBQG40.jpg",
+              "caption": null,
+              "blurhash": "LGH-.5~q9a5600D%bHoz-:smxYxE",
+              "dominantColor": "rgb(145,129,117)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik — photographie officielle 11",
+          "afterAlt": "Table Napoleon Keramik claire entourée de chaises sous une suspension à globes."
+        },
+        {
+          "index": 11,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/581d8ddd-8978-4cb3-8cc4-ff9f412a1bdb.jpg?t=1729669699",
+          "sourceSha256": "4463db90f71fceb28f9309a0df4507be1acba562ed9a62043a56985c3a52ca9a",
+          "expectedImage": {
+            "id": "01M3N0PSTNDVX0JPCXS8D797DK",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-581d8ddd-8978-4cb3-8cc4-ff9f412a1bdb.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LVKK7r~Wn$RPofxaWXWAxuxaIoNG",
+            "dominantColor": "rgb(158,134,116)",
+            "meta": {
+              "storageKey": "01M3N0PSNV4730DQYB77623C8E.jpg",
+              "caption": null,
+              "blurhash": "LVKK7r~Wn$RPofxaWXWAxuxaIoNG",
+              "dominantColor": "rgb(158,134,116)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik — photographie officielle 12",
+          "afterAlt": "Table Napoleon Keramik foncée et veinée dans une salle à manger."
+        },
+        {
+          "index": 12,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/b43e1109-2078-49de-a303-dddd2078be84.jpg?t=1733222898",
+          "sourceSha256": "6bac6ae9971ad8fbda8e58155204bbc6b547ca4f09861854de0849d5da600728",
+          "expectedImage": {
+            "id": "01M3N0PT6TJWVJBRKDJYRDE85W",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-b43e1109-2078-49de-a303-dddd2078be84.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LUH21R~WRjoLR*%M%Ma}E1R*xuj[",
+            "dominantColor": "rgb(122,106,92)",
+            "meta": {
+              "storageKey": "01M3N0PT33V884G0E8GBX3V1CF.jpg",
+              "caption": null,
+              "blurhash": "LUH21R~WRjoLR*%M%Ma}E1R*xuj[",
+              "dominantColor": "rgb(122,106,92)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik — photographie officielle 13",
+          "afterAlt": "Table Napoleon Keramik à pied central veiné dans un intérieur aux murs beiges."
+        },
+        {
+          "index": 13,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/9569c1a8-c749-4644-aba7-799ba48852ba.jpg?t=1729669699",
+          "sourceSha256": "b2beaa0947463da4d3f5226624594b73453d72df21af0f8a572244f8089f4d2f",
+          "expectedImage": {
+            "id": "01M3N0PTKMC4NSD2PA1MN9S8B0",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-9569c1a8-c749-4644-aba7-799ba48852ba.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "L8F#,U-:M|~V9Zxa_2xuM|%2E2Ip",
+            "dominantColor": "rgb(129,111,94)",
+            "meta": {
+              "storageKey": "01M3N0PTG9GRG0WRT7E0P599V9.jpg",
+              "caption": null,
+              "blurhash": "L8F#,U-:M|~V9Zxa_2xuM|%2E2Ip",
+              "dominantColor": "rgb(129,111,94)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik — photographie officielle 14",
+          "afterAlt": "Table Napoleon Keramik claire avec des chaises orange, vue de face."
+        },
+        {
+          "index": 14,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/40c5067c-53cb-4c9f-88ee-bd7c8a0b74e5.jpg?t=1713174513",
+          "sourceSha256": "e61678b63839ffac4c1e6401f9052c00de39a7c14ce3e59d4acc227efa0933bc",
+          "expectedImage": {
+            "id": "01M3N0PTXE1FQA7SJCXQJ03FA0",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-40c5067c-53cb-4c9f-88ee-bd7c8a0b74e5.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "L3Fh*G_N00000000?v_3R,Dioz~p",
+            "dominantColor": "rgb(124,108,94)",
+            "meta": {
+              "storageKey": "01M3N0PTVA7F6AECXY0KAFSNM6.jpg",
+              "caption": null,
+              "blurhash": "L3Fh*G_N00000000?v_3R,Dioz~p",
+              "dominantColor": "rgb(124,108,94)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik — photographie officielle 15",
+          "afterAlt": "Table Napoleon Keramik claire vue de trois quarts dans une salle à manger."
+        },
+        {
+          "index": 15,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/b444e981-a76d-4315-8b4f-d15888a23ddd.jpg?t=1713174514",
+          "sourceSha256": "33e7b970bce34efa67cf7988ea2e75edc288e2d9ed8d4cb8fab9aeed35b47768",
+          "expectedImage": {
+            "id": "01M3N0PVJNJ5XWWVVEPRS81HPA",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-b444e981-a76d-4315-8b4f-d15888a23ddd.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LmJ7:d~pt7NGoft7s:a}IVM{Rkof",
+            "dominantColor": "rgb(148,132,116)",
+            "meta": {
+              "storageKey": "01M3N0PVF7JZ0F1V5FH2WFFKQB.jpg",
+              "caption": null,
+              "blurhash": "LmJ7:d~pt7NGoft7s:a}IVM{Rkof",
+              "dominantColor": "rgb(148,132,116)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik — photographie officielle 16",
+          "afterAlt": "Détail de la courbe et de la ligne verticale du pied Napoleon Keramik."
+        },
+        {
+          "index": 16,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/5958651f-f3c7-477a-9da5-0ea84f199dda.jpg?t=1722343701",
+          "sourceSha256": "fd5a11b3de346984e531bcefa6c56eddaa041d7394405d72652b0420c6a66a55",
+          "expectedImage": {
+            "id": "01M3N0PVZ26JYCN7J24RY42B4A",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-5958651f-f3c7-477a-9da5-0ea84f199dda.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LBJQ_^NF00Md_4tR009GEkogIUt7",
+            "dominantColor": "rgb(155,138,127)",
+            "meta": {
+              "storageKey": "01M3N0PVW1PESSS2QJV4521R4W.jpg",
+              "caption": null,
+              "blurhash": "LBJQ_^NF00Md_4tR009GEkogIUt7",
+              "dominantColor": "rgb(155,138,127)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik — photographie officielle 17",
+          "afterAlt": "Table Napoleon Keramik devant une grande fenêtre, vue de face."
+        },
+        {
+          "index": 17,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/e517d563-241a-490b-9a3f-e2d9a7dcbd4e.jpg?t=1722343702",
+          "sourceSha256": "5fc1f98ba977111e03aa8ae5a21a4ac54c89ffb29fc53f24b605c65627b38445",
+          "expectedImage": {
+            "id": "01M3N0PW92XPDW9QX7A154VJDY",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-e517d563-241a-490b-9a3f-e2d9a7dcbd4e.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LHHnvoRO4.~W-pIUoe%ME1ofogM_",
+            "dominantColor": "rgb(144,128,116)",
+            "meta": {
+              "storageKey": "01M3N0PW6K7H66BGV13M3XM316.jpg",
+              "caption": null,
+              "blurhash": "LHHnvoRO4.~W-pIUoe%ME1ofogM_",
+              "dominantColor": "rgb(144,128,116)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik — photographie officielle 18",
+          "afterAlt": "Table Napoleon Keramik vue de trois quarts devant une fenêtre et un mur veiné."
+        }
+      ],
+      "image": {
+        "index": 0,
+        "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/49468678-7a35-49ae-8ee1-f1995e80e489.jpg?t=1758786496",
+        "sourceSha256": "4d62e42a481a03838df4f1e05c273ef5cb7532390d67260f93ec5626c22c04eb",
+        "expectedImage": {
+          "id": "01M3N0PJV58S7PM589KZGP2G7K",
+          "provider": "local",
+          "filename": "cattelan-napoleon-keramik-49468678-7a35-49ae-8ee1-f1995e80e489.jpg",
+          "mimeType": "image/jpeg",
+          "width": 3543,
+          "height": 2362,
+          "blurhash": "LQR:E6?b?c%2_2j]Rjj@_4RjITt7",
+          "dominantColor": "rgb(241,239,236)",
+          "meta": {
+            "storageKey": "01M3N0PHTXKHYX7YQYHJ8C9TYB.jpg",
+            "caption": null,
+            "blurhash": "LQR:E6?b?c%2_2j]Rjj@_4RjITt7",
+            "dominantColor": "rgb(241,239,236)"
+          }
+        },
+        "beforeAlt": "Napoleon Keramik — photographie officielle 1",
+        "afterAlt": "Table Napoleon Keramik à plateau et pied central veinés, vue de trois quarts."
+      }
+    },
+    {
+      "slug": "rhonda",
+      "gallery": [
+        {
+          "index": 0,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/ld/a07b7e84-d39a-4141-8c34-25097b43c799.jpg?t=1669795935",
+          "sourceSha256": "97cd67ddac0f54007e16ce89e41ce45149552de246c42934c7726f0dd9b22607",
+          "expectedImage": {
+            "id": "01M3N0Q1VX6JAGF3BRE0BS9FJ6",
+            "provider": "local",
+            "filename": "cattelan-rhonda-a07b7e84-d39a-4141-8c34-25097b43c799.jpg",
+            "mimeType": "image/jpeg",
+            "width": 960,
+            "height": 848,
+            "blurhash": "LPSF-C-;_N-;xtofxuWB?cofD$WA",
+            "dominantColor": "rgb(241,239,238)",
+            "meta": {
+              "storageKey": "01M3N0Q1SG0WE0Z46XQ7KGDTRP.jpg",
+              "caption": null,
+              "blurhash": "LPSF-C-;_N-;xtofxuWB?cofD$WA",
+              "dominantColor": "rgb(241,239,238)"
+            }
+          },
+          "beforeAlt": "Rhonda — photographie officielle 1",
+          "afterAlt": "Chaise Rhonda claire avec accoudoirs et dossier plissé, vue de trois quarts."
+        },
+        {
+          "index": 1,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/ld/ead884e7-ed17-4d9c-b89f-8915e1c0acbd.jpg?t=1669795941",
+          "sourceSha256": "168fcd6be94dab74a108ce02f1f1e4a5a4296354478012cc6ad7153939061c74",
+          "expectedImage": {
+            "id": "01M3N0Q2AYA5ZZYJ714AZGH88W",
+            "provider": "local",
+            "filename": "cattelan-rhonda-ead884e7-ed17-4d9c-b89f-8915e1c0acbd.jpg",
+            "mimeType": "image/jpeg",
+            "width": 960,
+            "height": 848,
+            "blurhash": "LNSPU.-;_N.8%2jsxuof?vay9Fjs",
+            "dominantColor": "rgb(243,241,239)",
+            "meta": {
+              "storageKey": "01M3N0Q28QR8BF12HRJPXYHA84.jpg",
+              "caption": null,
+              "blurhash": "LNSPU.-;_N.8%2jsxuof?vay9Fjs",
+              "dominantColor": "rgb(243,241,239)"
+            }
+          },
+          "beforeAlt": "Rhonda — photographie officielle 2",
+          "afterAlt": "Chaise Rhonda claire vue de dos, avec quatre pieds fins."
+        },
+        {
+          "index": 2,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/45701a06-e376-4a28-837b-32b5e0424764.jpg?t=1669795906",
+          "sourceSha256": "be5afdcddb2b261b990f7ab08a213b45454e83093d79a864d7d33af8c6e343ff",
+          "expectedImage": {
+            "id": "01M3N0Q2PC1EH8JPRQYEF3MGYZ",
+            "provider": "local",
+            "filename": "cattelan-rhonda-45701a06-e376-4a28-837b-32b5e0424764.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LVJkcdRjxut7~qa#f6j[-;ofIUj[",
+            "dominantColor": "rgb(151,147,148)",
+            "meta": {
+              "storageKey": "01M3N0Q2K2H4AW0M2699D9T51J.jpg",
+              "caption": null,
+              "blurhash": "LVJkcdRjxut7~qa#f6j[-;ofIUj[",
+              "dominantColor": "rgb(151,147,148)"
+            }
+          },
+          "beforeAlt": "Rhonda — photographie officielle 3",
+          "afterAlt": "Chaise Rhonda foncée à dossier enveloppant, sur un tapis à motifs."
+        },
+        {
+          "index": 3,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/c1512e99-6f54-4956-b1ad-00a9e1b389b3.jpg?t=1669795916",
+          "sourceSha256": "135f6ad52ce8c5ccd8217277052635f663712210c771b36571411a403a76f6e6",
+          "expectedImage": {
+            "id": "01M3N0Q30JCFRVWE5Q010T4NK6",
+            "provider": "local",
+            "filename": "cattelan-rhonda-c1512e99-6f54-4956-b1ad-00a9e1b389b3.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LNGk|AkX?GkD~qRks:of_3M_E1n$",
+            "dominantColor": "rgb(121,111,111)",
+            "meta": {
+              "storageKey": "01M3N0Q2WR41CSWVGTCFK5T8TK.jpg",
+              "caption": null,
+              "blurhash": "LNGk|AkX?GkD~qRks:of_3M_E1n$",
+              "dominantColor": "rgb(121,111,111)"
+            }
+          },
+          "beforeAlt": "Rhonda — photographie officielle 4",
+          "afterAlt": "Vue en plongée de l’assise et du dossier plissé de Rhonda."
+        },
+        {
+          "index": 4,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/5f661ab3-1c95-4558-89f9-f5338c5fcec6.jpg?t=1669795908",
+          "sourceSha256": "7799ca9e2dde78b1cf5797fbf5c8702561a7721467d5fee6362948961b6b7a2d",
+          "expectedImage": {
+            "id": "01M3N0Q3B87382E9VP74AA3RDQ",
+            "provider": "local",
+            "filename": "cattelan-rhonda-5f661ab3-1c95-4558-89f9-f5338c5fcec6.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LDIE-B9Ft7-;%L%MIUWV~qIUazRi",
+            "dominantColor": "rgb(138,133,134)",
+            "meta": {
+              "storageKey": "01M3N0Q375BZY1FP9J8NFZS74W.jpg",
+              "caption": null,
+              "blurhash": "LDIE-B9Ft7-;%L%MIUWV~qIUazRi",
+              "dominantColor": "rgb(138,133,134)"
+            }
+          },
+          "beforeAlt": "Rhonda — photographie officielle 5",
+          "afterAlt": "Chaises Rhonda foncées vues de dos autour d’une table."
+        },
+        {
+          "index": 5,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/d681e854-947d-48a8-9ba7-e6592dbd8be6.jpg?t=1669795917",
+          "sourceSha256": "1cae76e8d0489863821eb9bd16a72a5593337513c2cdf29d91369c176f82b41b",
+          "expectedImage": {
+            "id": "01M3N0Q3PHTP68RW456AXXS8JZ",
+            "provider": "local",
+            "filename": "cattelan-rhonda-d681e854-947d-48a8-9ba7-e6592dbd8be6.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LcJ8R=D%ofxu~qoft7t7-:s:t6xu",
+            "dominantColor": "rgb(141,140,137)",
+            "meta": {
+              "storageKey": "01M3N0Q3HH79PWBBHCJ00HF4XW.jpg",
+              "caption": null,
+              "blurhash": "LcJ8R=D%ofxu~qoft7t7-:s:t6xu",
+              "dominantColor": "rgb(141,140,137)"
+            }
+          },
+          "beforeAlt": "Rhonda — photographie officielle 6",
+          "afterAlt": "Ensemble de chaises Rhonda foncées autour d’une table de salle à manger."
+        },
+        {
+          "index": 6,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/bea574c0-4d92-4fb2-ad79-1e806013c3d0.jpg?t=1669795915",
+          "sourceSha256": "caeb2380e500e4941c50511cd6e7f97d79ec14ec9fb8326680705b401c5404e3",
+          "expectedImage": {
+            "id": "01M3N0Q43Z2JAKPPYANSJ7XTR4",
+            "provider": "local",
+            "filename": "cattelan-rhonda-bea574c0-4d92-4fb2-ad79-1e806013c3d0.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LIKd;^Rj^+WBRP-;~q?b_3%MM{-;",
+            "dominantColor": "rgb(164,160,157)",
+            "meta": {
+              "storageKey": "01M3N0Q3YVKH8V2NJJA794PEP4.jpg",
+              "caption": null,
+              "blurhash": "LIKd;^Rj^+WBRP-;~q?b_3%MM{-;",
+              "dominantColor": "rgb(164,160,157)"
+            }
+          },
+          "beforeAlt": "Rhonda — photographie officielle 7",
+          "afterAlt": "Chaise Rhonda foncée vue de trois quarts, près d’une table."
+        },
+        {
+          "index": 7,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/26fa0144-1451-4f80-87d8-318a7af83b7e.jpg?t=1669795904",
+          "sourceSha256": "4c11bf16730b435a35b734063591a3be1920f8e491015c5334db12c3b4dc33fd",
+          "expectedImage": {
+            "id": "01M3N0Q4GY1EFH1ER70M49ZNB5",
+            "provider": "local",
+            "filename": "cattelan-rhonda-26fa0144-1451-4f80-87d8-318a7af83b7e.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LGN^Sb~q.9.9Ip%MWFM{4ot7IAIU",
+            "dominantColor": "rgb(201,196,194)",
+            "meta": {
+              "storageKey": "01M3N0Q4CPGWJ3TJ7R1NJV54WS.jpg",
+              "caption": null,
+              "blurhash": "LGN^Sb~q.9.9Ip%MWFM{4ot7IAIU",
+              "dominantColor": "rgb(201,196,194)"
+            }
+          },
+          "beforeAlt": "Rhonda — photographie officielle 8",
+          "afterAlt": "Chaise Rhonda claire avec accoudoirs dans une salle à manger lumineuse."
+        },
+        {
+          "index": 8,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/6564f87d-90eb-4c9c-baa8-5a2db5a43bd4.jpg?t=1669795909",
+          "sourceSha256": "5d14bc92a4aaff777eb56c74326697d2ea66044badac882feb96aab283f08e43",
+          "expectedImage": {
+            "id": "01M3N0Q4WEVFQZF0VNZREWQ0TG",
+            "provider": "local",
+            "filename": "cattelan-rhonda-6564f87d-90eb-4c9c-baa8-5a2db5a43bd4.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LWMG|.~q-;%2o#t7tRofxvD*MxRj",
+            "dominantColor": "rgb(179,171,167)",
+            "meta": {
+              "storageKey": "01M3N0Q4QQXQQ1QVYCB5MENMAB.jpg",
+              "caption": null,
+              "blurhash": "LWMG|.~q-;%2o#t7tRofxvD*MxRj",
+              "dominantColor": "rgb(179,171,167)"
+            }
+          },
+          "beforeAlt": "Rhonda — photographie officielle 9",
+          "afterAlt": "Vue arrière du dossier arrondi de Rhonda, près d’une table."
+        },
+        {
+          "index": 9,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/fd23e1b6-5d41-4c65-8051-3e74340e6860.jpg?t=1669795920",
+          "sourceSha256": "9c96bc54dd2dca84e9616d897c31aec7e470e6d3e3915f7afb42aa4f8ec906f9",
+          "expectedImage": {
+            "id": "01M3N0Q55P5HS903BF66FXEG6A",
+            "provider": "local",
+            "filename": "cattelan-rhonda-fd23e1b6-5d41-4c65-8051-3e74340e6860.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LHH_x%?b?c~q-oRjt7xu%hRjM_t7",
+            "dominantColor": "rgb(146,141,143)",
+            "meta": {
+              "storageKey": "01M3N0Q5378M6HHYBWJGPTA6KY.jpg",
+              "caption": null,
+              "blurhash": "LHH_x%?b?c~q-oRjt7xu%hRjM_t7",
+              "dominantColor": "rgb(146,141,143)"
+            }
+          },
+          "beforeAlt": "Rhonda — photographie officielle 10",
+          "afterAlt": "Chaise Rhonda claire vue de dos devant un mur gris."
+        }
+      ],
+      "image": {
+        "index": 0,
+        "sourceUrl": "https://download.cattelanitalia.com/multimedia/ld/a07b7e84-d39a-4141-8c34-25097b43c799.jpg?t=1669795935",
+        "sourceSha256": "97cd67ddac0f54007e16ce89e41ce45149552de246c42934c7726f0dd9b22607",
+        "expectedImage": {
+          "id": "01M3N0Q1VX6JAGF3BRE0BS9FJ6",
+          "provider": "local",
+          "filename": "cattelan-rhonda-a07b7e84-d39a-4141-8c34-25097b43c799.jpg",
+          "mimeType": "image/jpeg",
+          "width": 960,
+          "height": 848,
+          "blurhash": "LPSF-C-;_N-;xtofxuWB?cofD$WA",
+          "dominantColor": "rgb(241,239,238)",
+          "meta": {
+            "storageKey": "01M3N0Q1SG0WE0Z46XQ7KGDTRP.jpg",
+            "caption": null,
+            "blurhash": "LPSF-C-;_N-;xtofxuWB?cofD$WA",
+            "dominantColor": "rgb(241,239,238)"
+          }
+        },
+        "beforeAlt": "Rhonda — photographie officielle 1",
+        "afterAlt": "Chaise Rhonda claire avec accoudoirs et dossier plissé, vue de trois quarts."
+      }
+    },
+    {
+      "slug": "greta",
+      "gallery": [
+        {
+          "index": 0,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/76195b97-d129-4196-b0a5-7710821b30d0.jpg?t=1713347297",
+          "sourceSha256": "838cac8978a7abccee427eae760138903f4134f8013734794c64345c3cbf371f",
+          "expectedImage": {
+            "id": "01M3N0R5BNYJ0HCKK9DXAZJD82",
+            "provider": "local",
+            "filename": "cattelan-greta-76195b97-d129-4196-b0a5-7710821b30d0.jpg",
+            "mimeType": "image/jpeg",
+            "width": 2362,
+            "height": 3543,
+            "blurhash": "LQRfh0?b?caes,ogogax_NRjIUxu",
+            "dominantColor": "rgb(233,231,227)",
+            "meta": {
+              "storageKey": "01M3N0R4HG3FRCACJNQJ5J1EEA.jpg",
+              "caption": null,
+              "blurhash": "LQRfh0?b?caes,ogogax_NRjIUxu",
+              "dominantColor": "rgb(233,231,227)"
+            }
+          },
+          "beforeAlt": "Greta — photographie officielle 1",
+          "afterAlt": "Chaise Greta claire à dossier arrondi, vue de trois quarts."
+        },
+        {
+          "index": 1,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/62af8125-8ea9-44ee-83b7-2679a6aab3b5.jpg?t=1713347296",
+          "sourceSha256": "420e1cf3d5e2a7e9745a6aa591641d0eb4da95ecaa6344f07df00d6b5959ca5c",
+          "expectedImage": {
+            "id": "01M3N0R6MXBHN8728E7JFH599J",
+            "provider": "local",
+            "filename": "cattelan-greta-62af8125-8ea9-44ee-83b7-2679a6aab3b5.jpg",
+            "mimeType": "image/jpeg",
+            "width": 2362,
+            "height": 3543,
+            "blurhash": "LXRMYrt7-=?bt5j@ogWV_NofIUM{",
+            "dominantColor": "rgb(231,229,225)",
+            "meta": {
+              "storageKey": "01M3N0R5NB8Z0MAWRRY12P3W5V.jpg",
+              "caption": null,
+              "blurhash": "LXRMYrt7-=?bt5j@ogWV_NofIUM{",
+              "dominantColor": "rgb(231,229,225)"
+            }
+          },
+          "beforeAlt": "Greta — photographie officielle 2",
+          "afterAlt": "Chaise Greta claire vue de dos, avec ses montants verticaux foncés."
+        },
+        {
+          "index": 2,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/edab6e17-3d0f-4e70-bb4b-ccd1556a09cd.jpg?t=1749052098",
+          "sourceSha256": "12458bf380aee96d806b411abd4553d400af43996b5cbe290cb474ab4775dca9",
+          "expectedImage": {
+            "id": "01M3N0R725KWGMSYBBBDZPYFB8",
+            "provider": "local",
+            "filename": "cattelan-greta-edab6e17-3d0f-4e70-bb4b-ccd1556a09cd.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LFK-k4_4V?9ZV?%Ms:R+R4-qIUtS",
+            "dominantColor": "rgb(171,169,162)",
+            "meta": {
+              "storageKey": "01M3N0R6ZKWSGXSCZDP1EREH4E.jpg",
+              "caption": null,
+              "blurhash": "LFK-k4_4V?9ZV?%Ms:R+R4-qIUtS",
+              "dominantColor": "rgb(171,169,162)"
+            }
+          },
+          "beforeAlt": "Greta — photographie officielle 3",
+          "afterAlt": "Chaises Greta claires autour d’une table, avec leurs assises capitonnées visibles."
+        },
+        {
+          "index": 3,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/2370208d-72ba-4a39-bf77-df4c1489b7d7.jpg?t=1749052097",
+          "sourceSha256": "60669fdc8f4be595639ba501d19722050d1bb0374c1aff6662abe9a07df709a1",
+          "expectedImage": {
+            "id": "01M3N0R7BAW61PW9815FTXWSQ5",
+            "provider": "local",
+            "filename": "cattelan-greta-2370208d-72ba-4a39-bf77-df4c1489b7d7.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LXI}#3~q?HxutR%N%MRj%Mt7fkRk",
+            "dominantColor": "rgb(144,141,133)",
+            "meta": {
+              "storageKey": "01M3N0R78FPFG0KPGCNYB2YQ7C.jpg",
+              "caption": null,
+              "blurhash": "LXI}#3~q?HxutR%N%MRj%Mt7fkRk",
+              "dominantColor": "rgb(144,141,133)"
+            }
+          },
+          "beforeAlt": "Greta — photographie officielle 4",
+          "afterAlt": "Chaises Greta vertes vues de dos autour d’une table."
+        },
+        {
+          "index": 4,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/b673ea62-c6da-4fb3-91c1-ed2d07e11d29.jpg?t=1749052097",
+          "sourceSha256": "ef3149a72e8ddabb55596b4625b310ae298b6521bc1f6f1470bd62a67770189a",
+          "expectedImage": {
+            "id": "01M3N0R7SCE6F0AYCY5XB9SGX1",
+            "provider": "local",
+            "filename": "cattelan-greta-b673ea62-c6da-4fb3-91c1-ed2d07e11d29.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LDD0Gg00D,~p00_3%LIUxtM{fkRj",
+            "dominantColor": "rgb(94,94,83)",
+            "meta": {
+              "storageKey": "01M3N0R7PZZ0FYB0P6N7C6Y70V.jpg",
+              "caption": null,
+              "blurhash": "LDD0Gg00D,~p00_3%LIUxtM{fkRj",
+              "dominantColor": "rgb(94,94,83)"
+            }
+          },
+          "beforeAlt": "Greta — photographie officielle 5",
+          "afterAlt": "Détail du dossier enveloppant et de l’assise capitonnée d’une Greta verte."
+        },
+        {
+          "index": 5,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/2d37002e-3934-4564-b47d-49e32b749b79.jpg?t=1713347302",
+          "sourceSha256": "466e5e03a57e23cc3c4492fdd345bc5e9cc610f5bb8c44df1b8d673995b34db6",
+          "expectedImage": {
+            "id": "01M3N0R81174SN8QJB9ME3NREH",
+            "provider": "local",
+            "filename": "cattelan-greta-2d37002e-3934-4564-b47d-49e32b749b79.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LWGbhp~q%gxu?b%Mxuofxta}t7WC",
+            "dominantColor": "rgb(124,117,106)",
+            "meta": {
+              "storageKey": "01M3N0R7YT3T2XTGDZ8YR5W8W7.jpg",
+              "caption": null,
+              "blurhash": "LWGbhp~q%gxu?b%Mxuofxta}t7WC",
+              "dominantColor": "rgb(124,117,106)"
+            }
+          },
+          "beforeAlt": "Greta — photographie officielle 6",
+          "afterAlt": "Chaise Greta claire près d’une table et d’un buffet."
+        },
+        {
+          "index": 6,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/c058b37e-ad31-4c53-a25f-85f1f1947586.jpg?t=1713347302",
+          "sourceSha256": "baf2eddaab6db13639b4d67ceeb079d2aec5520dbfa8f300b4ab3120e4bea9c5",
+          "expectedImage": {
+            "id": "01M3N0R8A0QCJ4SZTEK6193KK7",
+            "provider": "local",
+            "filename": "cattelan-greta-c058b37e-ad31-4c53-a25f-85f1f1947586.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LOH2cf$|NI-;~pWrayxaIVR-xZM{",
+            "dominantColor": "rgb(137,138,127)",
+            "meta": {
+              "storageKey": "01M3N0R87RCRW90VWPMK7YBN8X.jpg",
+              "caption": null,
+              "blurhash": "LOH2cf$|NI-;~pWrayxaIVR-xZM{",
+              "dominantColor": "rgb(137,138,127)"
+            }
+          },
+          "beforeAlt": "Greta — photographie officielle 7",
+          "afterAlt": "Détail de l’accoudoir arrondi et du capitonnage de l’assise Greta."
+        },
+        {
+          "index": 7,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/9333e981-8993-4ed8-be25-16de866dd4b5.jpg?t=1713347302",
+          "sourceSha256": "6d06da9b8d81c4e3d69f7c1065df1c97a52f83dae1c4484bdef66f9be30c9fb9",
+          "expectedImage": {
+            "id": "01M3N0R94JKZZNEW1QN1E9WJQV",
+            "provider": "local",
+            "filename": "cattelan-greta-9333e981-8993-4ed8-be25-16de866dd4b5.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LACPqr00Wr%2~UxaM|WC9F-:ofM|",
+            "dominantColor": "rgb(91,85,73)",
+            "meta": {
+              "storageKey": "01M3N0R90Y0SQN4MMJWXJPQZWW.jpg",
+              "caption": null,
+              "blurhash": "LACPqr00Wr%2~UxaM|WC9F-:ofM|",
+              "dominantColor": "rgb(91,85,73)"
+            }
+          },
+          "beforeAlt": "Greta — photographie officielle 8",
+          "afterAlt": "Détail arrière de Greta, montrant l’assise capitonnée et les montants du dossier."
+        }
+      ],
+      "image": {
+        "index": 0,
+        "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/76195b97-d129-4196-b0a5-7710821b30d0.jpg?t=1713347297",
+        "sourceSha256": "838cac8978a7abccee427eae760138903f4134f8013734794c64345c3cbf371f",
+        "expectedImage": {
+          "id": "01M3N0R5BNYJ0HCKK9DXAZJD82",
+          "provider": "local",
+          "filename": "cattelan-greta-76195b97-d129-4196-b0a5-7710821b30d0.jpg",
+          "mimeType": "image/jpeg",
+          "width": 2362,
+          "height": 3543,
+          "blurhash": "LQRfh0?b?caes,ogogax_NRjIUxu",
+          "dominantColor": "rgb(233,231,227)",
+          "meta": {
+            "storageKey": "01M3N0R4HG3FRCACJNQJ5J1EEA.jpg",
+            "caption": null,
+            "blurhash": "LQRfh0?b?caes,ogogax_NRjIUxu",
+            "dominantColor": "rgb(233,231,227)"
+          }
+        },
+        "beforeAlt": "Greta — photographie officielle 1",
+        "afterAlt": "Chaise Greta claire à dossier arrondi, vue de trois quarts."
+      }
+    },
+    {
+      "slug": "ruby",
+      "gallery": [
+        {
+          "index": 0,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/edcb94de-93bf-4ad2-8375-a0cbf4c998ea.jpg?t=1770043709",
+          "sourceSha256": "fd5360d102e8c895b8c75b8e705f3bfd69b1a056ba4da415b0fa868f9cabb9c6",
+          "expectedImage": {
+            "id": "01M3N0TPDBGAVCQ8JTKP1N8KEG",
+            "provider": "local",
+            "filename": "cattelan-ruby-edcb94de-93bf-4ad2-8375-a0cbf4c998ea.jpg",
+            "mimeType": "image/jpeg",
+            "width": 3543,
+            "height": 2362,
+            "blurhash": "LhQS}4t7.8%g-pofazRj~qofM_ay",
+            "dominantColor": "rgb(223,221,218)",
+            "meta": {
+              "storageKey": "01M3N0TNB1QCCSM77BP29PD2HA.jpg",
+              "caption": null,
+              "blurhash": "LhQS}4t7.8%g-pofazRj~qofM_ay",
+              "dominantColor": "rgb(223,221,218)"
+            }
+          },
+          "beforeAlt": "Ruby — photographie officielle 1",
+          "afterAlt": "Canapé Ruby clair à dossier arrondi et supports latéraux foncés."
+        },
+        {
+          "index": 1,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/708ee36e-6b5f-4b4e-9b0e-dfff830237b1.jpg?t=1770043712",
+          "sourceSha256": "4f69e375b53094cee42358181fd7d252cd8b06e56c3b3203631206d439e3f7f3",
+          "expectedImage": {
+            "id": "01M3N0TPPCN24981H3ZHWZT7JP",
+            "provider": "local",
+            "filename": "cattelan-ruby-708ee36e-6b5f-4b4e-9b0e-dfff830237b1.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LSJ*I-~pM|sl_3-;xaoe%MxuNGWB",
+            "dominantColor": "rgb(151,136,120)",
+            "meta": {
+              "storageKey": "01M3N0TPKXM0C4B7Y8MMKWV3JS.jpg",
+              "caption": null,
+              "blurhash": "LSJ*I-~pM|sl_3-;xaoe%MxuNGWB",
+              "dominantColor": "rgb(151,136,120)"
+            }
+          },
+          "beforeAlt": "Ruby — photographie officielle 2",
+          "afterAlt": "Canapé Ruby gris-vert devant une bibliothèque, avec un coussin orange."
+        },
+        {
+          "index": 2,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/69804bcd-08e2-480d-9373-bb0abb719e56.jpg?t=1770043712",
+          "sourceSha256": "6a23c6b45c1c9d3e78c30bd22dcc6ab3fb4401641b35735bc40473a455c67262",
+          "expectedImage": {
+            "id": "01M3N0TQ8GHQAB3Q9YE2W614TF",
+            "provider": "local",
+            "filename": "cattelan-ruby-69804bcd-08e2-480d-9373-bb0abb719e56.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LRHUtY?HD%IU~pt7M{RPIUs:Rjof",
+            "dominantColor": "rgb(131,117,104)",
+            "meta": {
+              "storageKey": "01M3N0TQ4J6WG9N4JBKFTAYXCN.jpg",
+              "caption": null,
+              "blurhash": "LRHUtY?HD%IU~pt7M{RPIUs:Rjof",
+              "dominantColor": "rgb(131,117,104)"
+            }
+          },
+          "beforeAlt": "Ruby — photographie officielle 3",
+          "afterAlt": "Canapé Ruby et fauteuil assorti vus de dos dans un salon."
+        },
+        {
+          "index": 3,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/b57ef7a5-d64b-45e4-94db-e068f3cb05e2.jpg?t=1770043712",
+          "sourceSha256": "f2ab3af6de133d3f6d3584bf2d29ab6e9e5a75ff4d60b4dba52dd4b708a16998",
+          "expectedImage": {
+            "id": "01M3N0TQKFA99479C5E46YABFS",
+            "provider": "local",
+            "filename": "cattelan-ruby-b57ef7a5-d64b-45e4-94db-e068f3cb05e2.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LAI4^Yiw00K+JB_3xDrD?b~qtRrW",
+            "dominantColor": "rgb(142,129,113)",
+            "meta": {
+              "storageKey": "01M3N0TQGC7RTXV44NZZ7F9KBA.jpg",
+              "caption": null,
+              "blurhash": "LAI4^Yiw00K+JB_3xDrD?b~qtRrW",
+              "dominantColor": "rgb(142,129,113)"
+            }
+          },
+          "beforeAlt": "Ruby — photographie officielle 4",
+          "afterAlt": "Détail arrière de Ruby, avec le dossier arrondi et les supports latéraux brun clair."
+        },
+        {
+          "index": 4,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/ff94e8f9-5f14-4af1-b904-8a655175cd4c.jpg?t=1770043712",
+          "sourceSha256": "0f15063c995a2019bf4ce534a35a3a6600dcd67e01419ccc0faa6841903c8ac7",
+          "expectedImage": {
+            "id": "01M3N0TR8Y0TBEHMPMYK11KQS5",
+            "provider": "local",
+            "filename": "cattelan-ruby-ff94e8f9-5f14-4af1-b904-8a655175cd4c.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LMK^yv=|^+-:?w.8x]IUIAsoH?-o",
+            "dominantColor": "rgb(170,153,134)",
+            "meta": {
+              "storageKey": "01M3N0TR3MCPNV5NRE4NS75AD4.jpg",
+              "caption": null,
+              "blurhash": "LMK^yv=|^+-:?w.8x]IUIAsoH?-o",
+              "dominantColor": "rgb(170,153,134)"
+            }
+          },
+          "beforeAlt": "Ruby — photographie officielle 5",
+          "afterAlt": "Détail du bord arrondi du dossier Ruby, près d’un coussin orange."
+        }
+      ],
+      "image": {
+        "index": 0,
+        "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/edcb94de-93bf-4ad2-8375-a0cbf4c998ea.jpg?t=1770043709",
+        "sourceSha256": "fd5360d102e8c895b8c75b8e705f3bfd69b1a056ba4da415b0fa868f9cabb9c6",
+        "expectedImage": {
+          "id": "01M3N0TPDBGAVCQ8JTKP1N8KEG",
+          "provider": "local",
+          "filename": "cattelan-ruby-edcb94de-93bf-4ad2-8375-a0cbf4c998ea.jpg",
+          "mimeType": "image/jpeg",
+          "width": 3543,
+          "height": 2362,
+          "blurhash": "LhQS}4t7.8%g-pofazRj~qofM_ay",
+          "dominantColor": "rgb(223,221,218)",
+          "meta": {
+            "storageKey": "01M3N0TNB1QCCSM77BP29PD2HA.jpg",
+            "caption": null,
+            "blurhash": "LhQS}4t7.8%g-pofazRj~qofM_ay",
+            "dominantColor": "rgb(223,221,218)"
+          }
+        },
+        "beforeAlt": "Ruby — photographie officielle 1",
+        "afterAlt": "Canapé Ruby clair à dossier arrondi et supports latéraux foncés."
+      }
+    },
+    {
+      "slug": "ruby-lounge",
+      "gallery": [
+        {
+          "index": 0,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/c268810f-97be-45d3-b710-83d4c72e3bb5.jpg?t=1770734912",
+          "sourceSha256": "e433a09df72509dbecfe79953884b83a286da7b96479f1d0eae755191659e6d5",
+          "expectedImage": {
+            "id": "01M3N0TVGCG1HRJNNHXT549GN3",
+            "provider": "local",
+            "filename": "cattelan-ruby-lounge-c268810f-97be-45d3-b710-83d4c72e3bb5.jpg",
+            "mimeType": "image/jpeg",
+            "width": 2362,
+            "height": 3543,
+            "blurhash": "LnRC-:-;-=ofxuj]WCax_NRjITt7",
+            "dominantColor": "rgb(229,225,219)",
+            "meta": {
+              "storageKey": "01M3N0TTEFXS72R4K2MKE5ZAZV.jpg",
+              "caption": null,
+              "blurhash": "LnRC-:-;-=ofxuj]WCax_NRjITt7",
+              "dominantColor": "rgb(229,225,219)"
+            }
+          },
+          "beforeAlt": "Ruby Lounge — photographie officielle 1",
+          "afterAlt": "Fauteuil Ruby Lounge beige à dossier enveloppant, vu de trois quarts."
+        },
+        {
+          "index": 1,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/8ae54d78-4d0d-4664-982a-55961ef274a5.jpg?t=1770734909",
+          "sourceSha256": "4bec8f42b32de31b997779a3efbe8db78c286f1af8588e38c27a50afe010c7a3",
+          "expectedImage": {
+            "id": "01M3N0TWPP6PDN4VVR2X5SAMWA",
+            "provider": "local",
+            "filename": "cattelan-ruby-lounge-8ae54d78-4d0d-4664-982a-55961ef274a5.jpg",
+            "mimeType": "image/jpeg",
+            "width": 2362,
+            "height": 3543,
+            "blurhash": "LqQ]yeof-=-:xuf6ayfk_Nt6ITRj",
+            "dominantColor": "rgb(224,220,215)",
+            "meta": {
+              "storageKey": "01M3N0TVPNT6EDBJ94BW70T1M8.jpg",
+              "caption": null,
+              "blurhash": "LqQ]yeof-=-:xuf6ayfk_Nt6ITRj",
+              "dominantColor": "rgb(224,220,215)"
+            }
+          },
+          "beforeAlt": "Ruby Lounge — photographie officielle 2",
+          "afterAlt": "Fauteuil Ruby Lounge beige vu de dos, avec ses supports foncés."
+        },
+        {
+          "index": 2,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/8c332fc6-69a7-4763-96ec-3ad034a674a5.jpg?t=1763459307",
+          "sourceSha256": "ee38d04a00de42135a61d11c53d4878b3147f5bf0d57e49bc3b1ba0ba39a10ab",
+          "expectedImage": {
+            "id": "01M3N0TY0JQEP3N2FX3FQMS7F7",
+            "provider": "local",
+            "filename": "cattelan-ruby-lounge-8c332fc6-69a7-4763-96ec-3ad034a674a5.jpg",
+            "mimeType": "image/jpeg",
+            "width": 2362,
+            "height": 3543,
+            "blurhash": "LhRyZ@xu.8%L%Mj[WBfk?wj[IAaz",
+            "dominantColor": "rgb(237,228,222)",
+            "meta": {
+              "storageKey": "01M3N0TWZ5F9WNRDBTYQD0KSSG.jpg",
+              "caption": null,
+              "blurhash": "LhRyZ@xu.8%L%Mj[WBfk?wj[IAaz",
+              "dominantColor": "rgb(237,228,222)"
+            }
+          },
+          "beforeAlt": "Ruby Lounge — photographie officielle 3",
+          "afterAlt": "Fauteuil Ruby Lounge clair vu de face, avec une assise arrondie."
+        },
+        {
+          "index": 3,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/215dc780-4f4d-4447-bda3-4130bf18a7f6.jpg?t=1763459303",
+          "sourceSha256": "51a816aaf3d99f6641597a1a1c85015ff491bc747e3218ebc331acd3e86fb867",
+          "expectedImage": {
+            "id": "01M3N0TZD182AVBKJ7HVJJ0WR5",
+            "provider": "local",
+            "filename": "cattelan-ruby-lounge-215dc780-4f4d-4447-bda3-4130bf18a7f6.jpg",
+            "mimeType": "image/jpeg",
+            "width": 2362,
+            "height": 3543,
+            "blurhash": "LiRyd0xv.9xuxtj[ayaz?^ayD$j[",
+            "dominantColor": "rgb(237,229,223)",
+            "meta": {
+              "storageKey": "01M3N0TY8Q81EK6S0XD4XS28S3.jpg",
+              "caption": null,
+              "blurhash": "LiRyd0xv.9xuxtj[ayaz?^ayD$j[",
+              "dominantColor": "rgb(237,229,223)"
+            }
+          },
+          "beforeAlt": "Ruby Lounge — photographie officielle 4",
+          "afterAlt": "Fauteuil Ruby Lounge clair vu de dos, avec deux montants verticaux."
+        },
+        {
+          "index": 4,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/9c4d7011-1ab8-4010-abeb-2313c6627d87.jpg?t=1783961293",
+          "sourceSha256": "00d962b74ab0d6a1c77a79979511b31b465bc55130df4599541d995f8053bd82",
+          "expectedImage": {
+            "id": "01M3N14KV222PYFQZS5E04VBA9",
+            "provider": "local",
+            "filename": "cattelan-ruby-lounge-9c4d7011-1ab8-4010-abeb-2313c6627d87.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LVHBbw~Vxu-p4oRjxZs.%MRjWBxt",
+            "dominantColor": "rgb(125,110,94)",
+            "meta": {
+              "storageKey": "01M3N14KBYTQJGRXTH4S6RZBMP.jpg",
+              "caption": null,
+              "blurhash": "LVHBbw~Vxu-p4oRjxZs.%MRjWBxt",
+              "dominantColor": "rgb(125,110,94)"
+            }
+          },
+          "beforeAlt": "Ruby Lounge — photographie officielle 5",
+          "afterAlt": "Fauteuil Ruby Lounge clair près d’une table basse dans un salon."
+        },
+        {
+          "index": 5,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/332a6dba-5403-4236-8892-b6fc85015d19.jpg?t=1763459311",
+          "sourceSha256": "e9a49e2e5d0182f3c148c8db4c91369efcf0029634153304fdf5ab8e8343918c",
+          "expectedImage": {
+            "id": "01M3N14M9950SMM2XQ81H21K5F",
+            "provider": "local",
+            "filename": "cattelan-ruby-lounge-332a6dba-5403-4236-8892-b6fc85015d19.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LSI}6E~W~W?HkXIoRkflE1M{M{WA",
+            "dominantColor": "rgb(154,131,106)",
+            "meta": {
+              "storageKey": "01M3N14M5PN90CSZAR4A3ZD145.jpg",
+              "caption": null,
+              "blurhash": "LSI}6E~W~W?HkXIoRkflE1M{M{WA",
+              "dominantColor": "rgb(154,131,106)"
+            }
+          },
+          "beforeAlt": "Ruby Lounge — photographie officielle 6",
+          "afterAlt": "Détail de l’accoudoir et de l’assise arrondis de Ruby Lounge."
+        },
+        {
+          "index": 6,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/0ee82e1f-abdb-426d-9af0-4cc84247f894.jpg?t=1763459311",
+          "sourceSha256": "2c4213e7bc42eef5fb5a1d1911f7123c9b76d4033030fc681b84e67ea4145867",
+          "expectedImage": {
+            "id": "01M3N14MNPR547WW2D35MA1A1B",
+            "provider": "local",
+            "filename": "cattelan-ruby-lounge-0ee82e1f-abdb-426d-9af0-4cc84247f894.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LWMQCV~p.8tR?vM|snIBbwWCxtM{",
+            "dominantColor": "rgb(183,160,137)",
+            "meta": {
+              "storageKey": "01M3N14MJJQF6PH27ECJ49MSHQ.jpg",
+              "caption": null,
+              "blurhash": "LWMQCV~p.8tR?vM|snIBbwWCxtM{",
+              "dominantColor": "rgb(183,160,137)"
+            }
+          },
+          "beforeAlt": "Ruby Lounge — photographie officielle 7",
+          "afterAlt": "Dossier enveloppant de Ruby Lounge vu en plongée depuis l’arrière."
+        },
+        {
+          "index": 7,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/c7703b16-cc3b-43a4-b098-ec0b4c37b5c3.jpg?t=1764589701",
+          "sourceSha256": "a58d6098f23329a3afbb45670b844a92c1b597c16cfb8177bcd92f5543e24108",
+          "expectedImage": {
+            "id": "01M3N14N45PKFJMQTWR8DYXS7A",
+            "provider": "local",
+            "filename": "cattelan-ruby-lounge-c7703b16-cc3b-43a4-b098-ec0b4c37b5c3.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LSO32$,vsp?a_NxtRkWB?]t,Ioof",
+            "dominantColor": "rgb(203,166,154)",
+            "meta": {
+              "storageKey": "01M3N14MY93B88WSHX2F4WDGZZ.jpg",
+              "caption": null,
+              "blurhash": "LSO32$,vsp?a_NxtRkWB?]t,Ioof",
+              "dominantColor": "rgb(203,166,154)"
+            }
+          },
+          "beforeAlt": "Ruby Lounge — photographie officielle 8",
+          "afterAlt": "Fauteuil Ruby Lounge rouge avec des tables d’appoint devant une fenêtre."
+        },
+        {
+          "index": 8,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/4ed927c0-702b-4e06-9695-e5e48ee141f4.jpg?t=1764589701",
+          "sourceSha256": "30dc0bb657ed19d6d249204555b166f43cea73d7831e92f704f29c4cff1d550b",
+          "expectedImage": {
+            "id": "01M3N14NTYX2Y7VC1VBXGJTB2M",
+            "provider": "local",
+            "filename": "cattelan-ruby-lounge-4ed927c0-702b-4e06-9695-e5e48ee141f4.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LbPs3GRQRi-;_NV@V@M{o}%MM{Mx",
+            "dominantColor": "rgb(217,188,176)",
+            "meta": {
+              "storageKey": "01M3N14NPSG41PXFCFSSJ8RTH0.jpg",
+              "caption": null,
+              "blurhash": "LbPs3GRQRi-;_NV@V@M{o}%MM{Mx",
+              "dominantColor": "rgb(217,188,176)"
+            }
+          },
+          "beforeAlt": "Ruby Lounge — photographie officielle 9",
+          "afterAlt": "Fauteuil Ruby Lounge rouge éclairé par une grande fenêtre."
+        },
+        {
+          "index": 9,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/67693a54-5802-4b7d-becb-16f5496e5d2e.jpg?t=1764589701",
+          "sourceSha256": "a487150f103a6a4f3bbb2fd2b3a31107e4e094db7101492ac1bc0b939134792e",
+          "expectedImage": {
+            "id": "01M3N14P453AGV5NVP5SR6JTSC",
+            "provider": "local",
+            "filename": "cattelan-ruby-lounge-67693a54-5802-4b7d-becb-16f5496e5d2e.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LaLUX1YO%z%M|{RQAWNuK4#oN[J7",
+            "dominantColor": "rgb(171,87,91)",
+            "meta": {
+              "storageKey": "01M3N14P1RTAJS2N46E5SBTKQC.jpg",
+              "caption": null,
+              "blurhash": "LaLUX1YO%z%M|{RQAWNuK4#oN[J7",
+              "dominantColor": "rgb(171,87,91)"
+            }
+          },
+          "beforeAlt": "Ruby Lounge — photographie officielle 10",
+          "afterAlt": "Détail arrière du dossier rouge et des montants foncés de Ruby Lounge."
+        },
+        {
+          "index": 10,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/a06034fc-7f7a-4807-bb63-9f0777308324.jpg?t=1758808102",
+          "sourceSha256": "9061b93d3add9c5a7abd2175e05b62a15740790b0747c40d33b557c132619617",
+          "expectedImage": {
+            "id": "01M3N14PEGGS61JRE557HM5TX2",
+            "provider": "local",
+            "filename": "cattelan-ruby-lounge-a06034fc-7f7a-4807-bb63-9f0777308324.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LpK_2pt5f,M{~qa#t8aex[Rjt7bI",
+            "dominantColor": "rgb(164,158,158)",
+            "meta": {
+              "storageKey": "01M3N14PBC0EMW3E7V17CBHJ4M.jpg",
+              "caption": null,
+              "blurhash": "LpK_2pt5f,M{~qa#t8aex[Rjt7bI",
+              "dominantColor": "rgb(164,158,158)"
+            }
+          },
+          "beforeAlt": "Ruby Lounge — photographie officielle 11",
+          "afterAlt": "Deux fauteuils Ruby Lounge dans un salon aux grandes fenêtres."
+        },
+        {
+          "index": 11,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/3cbc05bf-a5a7-44cb-83d3-5b3af139ae60.jpg?t=1758808102",
+          "sourceSha256": "4f09a5c71dd2e2d0abcf17c37a949afafcde8d574235252738032a76d429bd83",
+          "expectedImage": {
+            "id": "01M3N14PQ4D5T29NBR17QDMFZZ",
+            "provider": "local",
+            "filename": "cattelan-ruby-lounge-3cbc05bf-a5a7-44cb-83d3-5b3af139ae60.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LFLEZy?b0KMxRO_NM_WB9FD*t6Ri",
+            "dominantColor": "rgb(177,181,178)",
+            "meta": {
+              "storageKey": "01M3N14PMG9VCYBSHYQ6NW6N4G.jpg",
+              "caption": null,
+              "blurhash": "LFLEZy?b0KMxRO_NM_WB9FD*t6Ri",
+              "dominantColor": "rgb(177,181,178)"
+            }
+          },
+          "beforeAlt": "Ruby Lounge — photographie officielle 12",
+          "afterAlt": "Détail du revêtement texturé clair et de l’accoudoir Ruby Lounge."
+        },
+        {
+          "index": 12,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/59220ab1-d9c9-4e29-9d56-09f0b2864804.jpg?t=1758808102",
+          "sourceSha256": "46b4e870dc19218e1aace31ab2121c1eb50569b0f4feb370498ae61254eac656",
+          "expectedImage": {
+            "id": "01M3N14Q23GPHBZFK2HQ1FPGHF",
+            "provider": "local",
+            "filename": "cattelan-ruby-lounge-59220ab1-d9c9-4e29-9d56-09f0b2864804.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "L7I}Iu4:AGm,009vt,wI}@00WVnO",
+            "dominantColor": "rgb(155,136,125)",
+            "meta": {
+              "storageKey": "01M3N14Q029AT8T3WYC8BYV4FZ.jpg",
+              "caption": null,
+              "blurhash": "L7I}Iu4:AGm,009vt,wI}@00WVnO",
+              "dominantColor": "rgb(155,136,125)"
+            }
+          },
+          "beforeAlt": "Ruby Lounge — photographie officielle 13",
+          "afterAlt": "Deux fauteuils Ruby Lounge blancs devant un mur terracotta."
+        },
+        {
+          "index": 13,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/4db7a800-46ce-4583-8cba-04758d2159ee.jpg?t=1758808102",
+          "sourceSha256": "2d5bfa652ee05ceaf78930ca87952b98d68791c98f1e202ccebc2923daf6fda6",
+          "expectedImage": {
+            "id": "01M3N14QBGKADZ863Y4RWMFJBH",
+            "provider": "local",
+            "filename": "cattelan-ruby-lounge-4db7a800-46ce-4583-8cba-04758d2159ee.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LLJQ+n$%M_jEujR5%NRP~CjFx]xu",
+            "dominantColor": "rgb(156,137,129)",
+            "meta": {
+              "storageKey": "01M3N14Q9EQR0J2QK5H8ZRH9C8.jpg",
+              "caption": null,
+              "blurhash": "LLJQ+n$%M_jEujR5%NRP~CjFx]xu",
+              "dominantColor": "rgb(156,137,129)"
+            }
+          },
+          "beforeAlt": "Ruby Lounge — photographie officielle 14",
+          "afterAlt": "Fauteuil Ruby Lounge blanc avec une petite table d’appoint."
+        }
+      ],
+      "image": {
+        "index": 0,
+        "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/c268810f-97be-45d3-b710-83d4c72e3bb5.jpg?t=1770734912",
+        "sourceSha256": "e433a09df72509dbecfe79953884b83a286da7b96479f1d0eae755191659e6d5",
+        "expectedImage": {
+          "id": "01M3N0TVGCG1HRJNNHXT549GN3",
+          "provider": "local",
+          "filename": "cattelan-ruby-lounge-c268810f-97be-45d3-b710-83d4c72e3bb5.jpg",
+          "mimeType": "image/jpeg",
+          "width": 2362,
+          "height": 3543,
+          "blurhash": "LnRC-:-;-=ofxuj]WCax_NRjITt7",
+          "dominantColor": "rgb(229,225,219)",
+          "meta": {
+            "storageKey": "01M3N0TTEFXS72R4K2MKE5ZAZV.jpg",
+            "caption": null,
+            "blurhash": "LnRC-:-;-=ofxuj]WCax_NRjITt7",
+            "dominantColor": "rgb(229,225,219)"
+          }
+        },
+        "beforeAlt": "Ruby Lounge — photographie officielle 1",
+        "afterAlt": "Fauteuil Ruby Lounge beige à dossier enveloppant, vu de trois quarts."
+      }
+    },
+    {
+      "slug": "chelsea",
+      "gallery": [
+        {
+          "index": 0,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/af9bf38f-ceeb-4001-b4a5-34bf33dd5c25.jpg?t=1751467690",
+          "sourceSha256": "9f1af826a6c1b1de08659771fc403a46e26fdbbf5ad7c8d44babcbc94c52fef1",
+          "expectedImage": {
+            "id": "01M3N14SDM8RZMSP36VVMSV04Z",
+            "provider": "local",
+            "filename": "cattelan-chelsea-af9bf38f-ceeb-4001-b4a5-34bf33dd5c25.jpg",
+            "mimeType": "image/jpeg",
+            "width": 3543,
+            "height": 2362,
+            "blurhash": "LjRCudxu.8%M?vj[RPj[_Nj[IAay",
+            "dominantColor": "rgb(232,219,215)",
+            "meta": {
+              "storageKey": "01M3N14RGBAM7ZCQTRBQ1XKXZX.jpg",
+              "caption": null,
+              "blurhash": "LjRCudxu.8%M?vj[RPj[_Nj[IAay",
+              "dominantColor": "rgb(232,219,215)"
+            }
+          },
+          "beforeAlt": "Chelsea — photographie officielle 1",
+          "afterAlt": "Buffet Chelsea terracotta vu de face, avec un dessus bordé."
+        },
+        {
+          "index": 1,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/fbb4b8c8-e6d1-4e2a-aec0-b57110b5ee0c.jpg?t=1751467690",
+          "sourceSha256": "bc1731280c3faa5404c780246003e091686c04ca8356e9f261c0c90a06c8b5da",
+          "expectedImage": {
+            "id": "01M3N14TMX70QHJRHNW9PEMRJ7",
+            "provider": "local",
+            "filename": "cattelan-chelsea-fbb4b8c8-e6d1-4e2a-aec0-b57110b5ee0c.jpg",
+            "mimeType": "image/jpeg",
+            "width": 3543,
+            "height": 2362,
+            "blurhash": "LYRfd]%M.8%M_Nj[M{j[_Nj[ITWV",
+            "dominantColor": "rgb(233,230,226)",
+            "meta": {
+              "storageKey": "01M3N14SN2VSZ230HNCV1PJFQM.jpg",
+              "caption": null,
+              "blurhash": "LYRfd]%M.8%M_Nj[M{j[_Nj[ITWV",
+              "dominantColor": "rgb(233,230,226)"
+            }
+          },
+          "beforeAlt": "Chelsea — photographie officielle 2",
+          "afterAlt": "Buffet Chelsea beige vu de face, avec une façade sans poignées apparentes."
+        },
+        {
+          "index": 2,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/0ec02270-b7aa-4d45-8903-57f53e3978d1.jpg?t=1779706093",
+          "sourceSha256": "fc48cc4796344ddcb7d3f749a50688e5c9d3bce0832f98a09f8053f208d15ea9",
+          "expectedImage": {
+            "id": "01M3N14W869QMCRT0VE0M2ATR0",
+            "provider": "local",
+            "filename": "cattelan-chelsea-0ec02270-b7aa-4d45-8903-57f53e3978d1.jpg",
+            "mimeType": "image/jpeg",
+            "width": 3543,
+            "height": 2362,
+            "blurhash": "LWRW3h%M?b%M~qj[M{j[~Xj[E0ay",
+            "dominantColor": "rgb(233,235,232)",
+            "meta": {
+              "storageKey": "01M3N14TYXG3XN8JESXZQPAX6D.jpg",
+              "caption": null,
+              "blurhash": "LWRW3h%M?b%M~qj[M{j[~Xj[E0ay",
+              "dominantColor": "rgb(233,235,232)"
+            }
+          },
+          "beforeAlt": "Chelsea — photographie officielle 3",
+          "afterAlt": "Buffet Chelsea vert clair vu de face."
+        },
+        {
+          "index": 3,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/2636d82f-19ad-4383-aa41-d27fdbf2df5b.jpg?t=1779706094",
+          "sourceSha256": "7ec0de8ee39b02f0ee0bfe242384076b49ac558a3318fc3663187611ac818cfb",
+          "expectedImage": {
+            "id": "01M3N14XTRHB6MTNJT8BGPQ9AT",
+            "provider": "local",
+            "filename": "cattelan-chelsea-2636d82f-19ad-4383-aa41-d27fdbf2df5b.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LLLg;G00%M~q-p4n?cV@fRM{xuIU",
+            "dominantColor": "rgb(173,171,166)",
+            "meta": {
+              "storageKey": "01M3N14XES5AYVHF0NJ3N5RTB8.jpg",
+              "caption": null,
+              "blurhash": "LLLg;G00%M~q-p4n?cV@fRM{xuIU",
+              "dominantColor": "rgb(173,171,166)"
+            }
+          },
+          "beforeAlt": "Chelsea — photographie officielle 4",
+          "afterAlt": "Buffet Chelsea clair vu de trois quarts dans une salle à manger."
+        },
+        {
+          "index": 4,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/336db7d3-c26b-4209-915b-f1ac4ee0c1d7.jpg?t=1779713290",
+          "sourceSha256": "8f1264187ff0230f2476ba448ed55dfcf621702a51033b22145b594c3a91b9fa",
+          "expectedImage": {
+            "id": "01M3N14Y6EPP3YVA0DT9WQC5FW",
+            "provider": "local",
+            "filename": "cattelan-chelsea-336db7d3-c26b-4209-915b-f1ac4ee0c1d7.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LiNTq4IAxu%M~qt7t7j]RkogoeRj",
+            "dominantColor": "rgb(189,185,176)",
+            "meta": {
+              "storageKey": "01M3N14Y3WNFM8QEF04TZ00KJ5.jpg",
+              "caption": null,
+              "blurhash": "LiNTq4IAxu%M~qt7t7j]RkogoeRj",
+              "dominantColor": "rgb(189,185,176)"
+            }
+          },
+          "beforeAlt": "Chelsea — photographie officielle 5",
+          "afterAlt": "Buffet Chelsea clair contre un mur, avec des vases et un miroir au-dessus."
+        },
+        {
+          "index": 5,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/7799f896-ead5-4a5a-bf6d-ca8d454780c4.jpg?t=1669795911",
+          "sourceSha256": "03f0afefb82762a1f5d6b99403227697cf54e24c14bf46297ce857ae64168088",
+          "expectedImage": {
+            "id": "01M3N14YKMTT99CFPQDS6KPTRC",
+            "provider": "local",
+            "filename": "cattelan-chelsea-7799f896-ead5-4a5a-bf6d-ca8d454780c4.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LbLz,8M_ozxu~qt7t6t7t8jsM|M{",
+            "dominantColor": "rgb(172,164,151)",
+            "meta": {
+              "storageKey": "01M3N14YDE011MYAY8TSPFFZZT.jpg",
+              "caption": null,
+              "blurhash": "LbLz,8M_ozxu~qt7t6t7t8jsM|M{",
+              "dominantColor": "rgb(172,164,151)"
+            }
+          },
+          "beforeAlt": "Chelsea — photographie officielle 6",
+          "afterAlt": "Vue en plongée du dessus réfléchissant et de la façade claire de Chelsea."
+        },
+        {
+          "index": 6,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/02691d2e-881d-4451-808a-67fef7b5f81b.jpg?t=1669795901",
+          "sourceSha256": "0b2fd7e628e4afa32b81ff865f466b178d400c0623ff0b980ecf17517ed60968",
+          "expectedImage": {
+            "id": "01M3N14Z0XGFQPF42REGFXKD4S",
+            "provider": "local",
+            "filename": "cattelan-chelsea-02691d2e-881d-4451-808a-67fef7b5f81b.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LEHn:2MxN2_3~WD%x^-=%hWAjDM{",
+            "dominantColor": "rgb(145,134,124)",
+            "meta": {
+              "storageKey": "01M3N14YTZCC6NGZ28GY6MTPFY.jpg",
+              "caption": null,
+              "blurhash": "LEHn:2MxN2_3~WD%x^-=%hWAjDM{",
+              "dominantColor": "rgb(145,134,124)"
+            }
+          },
+          "beforeAlt": "Chelsea — photographie officielle 7",
+          "afterAlt": "Détail du dessus réfléchissant et de l’extrémité angulaire de Chelsea."
+        },
+        {
+          "index": 7,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/11ec37ce-3da2-44e7-a122-a351b6db9256.jpg?t=1760453295",
+          "sourceSha256": "6fd45c6129bc85856aaa6a1e5bae6cc7536f49924a7cc42808b398c84fa684ca",
+          "expectedImage": {
+            "id": "01M3N14ZB0DNB9PR93QHJPH940",
+            "provider": "local",
+            "filename": "cattelan-chelsea-11ec37ce-3da2-44e7-a122-a351b6db9256.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LRF=aQ?aS#t7_MoyaJt6XTWUV@oe",
+            "dominantColor": "rgb(124,108,97)",
+            "meta": {
+              "storageKey": "01M3N14Z7WZEDK2TYBQYCZ0BE5.jpg",
+              "caption": null,
+              "blurhash": "LRF=aQ?aS#t7_MoyaJt6XTWUV@oe",
+              "dominantColor": "rgb(124,108,97)"
+            }
+          },
+          "beforeAlt": "Chelsea — photographie officielle 8",
+          "afterAlt": "Buffet Chelsea terracotta placé derrière un canapé dans un salon."
+        },
+        {
+          "index": 8,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/cb857436-c3f3-42dd-a1de-bb2ed58d5f7d.jpg?t=1760453295",
+          "sourceSha256": "5f719d35ebb0f47650e3a67485505c37389cfc7bd6c852d0391578dd36f28860",
+          "expectedImage": {
+            "id": "01M3N14ZNMP99008CKZZG3BPDP",
+            "provider": "local",
+            "filename": "cattelan-chelsea-cb857436-c3f3-42dd-a1de-bb2ed58d5f7d.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LcJHK?4oyDRj_NV@Vsozx]t7RPt7",
+            "dominantColor": "rgb(156,129,118)",
+            "meta": {
+              "storageKey": "01M3N14ZH0Y22KT0PRWCB1YYGQ.jpg",
+              "caption": null,
+              "blurhash": "LcJHK?4oyDRj_NV@Vsozx]t7RPt7",
+              "dominantColor": "rgb(156,129,118)"
+            }
+          },
+          "beforeAlt": "Chelsea — photographie officielle 9",
+          "afterAlt": "Buffet Chelsea terracotta de face devant un décor mural."
+        },
+        {
+          "index": 9,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/15e7e9d3-fc5e-43e4-a8e7-2f42202f4d98.jpg?t=1760453295",
+          "sourceSha256": "450c1050ba90c992235a0130f901cad0e24f50174ac53d11f6c5bfa5882e6b2c",
+          "expectedImage": {
+            "id": "01M3N1503P8VEY5NBRQB85P8TC",
+            "provider": "local",
+            "filename": "cattelan-chelsea-15e7e9d3-fc5e-43e4-a8e7-2f42202f4d98.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LfL|P=D%ItVs?^aes.kWtTt7oxoz",
+            "dominantColor": "rgb(181,151,132)",
+            "meta": {
+              "storageKey": "01M3N1501FRP90ZTGDEWA5VYZV.jpg",
+              "caption": null,
+              "blurhash": "LfL|P=D%ItVs?^aes.kWtTt7oxoz",
+              "dominantColor": "rgb(181,151,132)"
+            }
+          },
+          "beforeAlt": "Chelsea — photographie officielle 10",
+          "afterAlt": "Détail du dessus et de la bordure terracotta de Chelsea."
+        },
+        {
+          "index": 10,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/6f6b64f4-a973-411b-8592-090b6a663be4.jpg?t=1781192897",
+          "sourceSha256": "6903785e7df1995daf0d27988dd02fa4a75dc08e523ab4fe02438ee3d1ef0c87",
+          "expectedImage": {
+            "id": "01M3N150G0ZYKQMR15SN4CR439",
+            "provider": "local",
+            "filename": "cattelan-chelsea-6f6b64f4-a973-411b-8592-090b6a663be4.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LcGbYI~o%2%LelWANGjsNJNHWVRk",
+            "dominantColor": "rgb(126,116,94)",
+            "meta": {
+              "storageKey": "01M3N150D9FMB80DY4PT7RPVSJ.jpg",
+              "caption": null,
+              "blurhash": "LcGbYI~o%2%LelWANGjsNJNHWVRk",
+              "dominantColor": "rgb(126,116,94)"
+            }
+          },
+          "beforeAlt": "Chelsea — photographie officielle 11",
+          "afterAlt": "Buffet Chelsea vert clair sous un miroir rond."
+        },
+        {
+          "index": 11,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/d8c49b9e-a11d-4993-be32-ebc5832a196c.jpg?t=1781192897",
+          "sourceSha256": "36bc5c6d183c7d5e1dee5bcabfe81588ac6f821ae73b413265db95c5eacdd305",
+          "expectedImage": {
+            "id": "01M3N150RTP4RMBY7V2199ZJH6",
+            "provider": "local",
+            "filename": "cattelan-chelsea-d8c49b9e-a11d-4993-be32-ebc5832a196c.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LUFYMo~VM{IVVsWBWAV?Ipo#%Ln~",
+            "dominantColor": "rgb(115,100,80)",
+            "meta": {
+              "storageKey": "01M3N150PPNG0ZN3MCVXFBY0TW.jpg",
+              "caption": null,
+              "blurhash": "LUFYMo~VM{IVVsWBWAV?Ipo#%Ln~",
+              "dominantColor": "rgb(115,100,80)"
+            }
+          },
+          "beforeAlt": "Chelsea — photographie officielle 12",
+          "afterAlt": "Vue en plongée du dessus clair de Chelsea avec des vases."
+        },
+        {
+          "index": 12,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/e927c1ba-735e-4de9-887f-c010ca4945ab.jpg?t=1669795919",
+          "sourceSha256": "635d3fcb6de86a960394f7db9d0c0262e1bf02a043dd43f7be17e99f0fef8f74",
+          "expectedImage": {
+            "id": "01M3N15165R04AAHZ51AV0JA6Y",
+            "provider": "local",
+            "filename": "cattelan-chelsea-e927c1ba-735e-4de9-887f-c010ca4945ab.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LBGIu~0000~q00%NjqRj4:WB?bRP",
+            "dominantColor": "rgb(113,116,113)",
+            "meta": {
+              "storageKey": "01M3N1511M2Y6ASVNSHTVXZBF1.jpg",
+              "caption": null,
+              "blurhash": "LBGIu~0000~q00%NjqRj4:WB?bRP",
+              "dominantColor": "rgb(113,116,113)"
+            }
+          },
+          "beforeAlt": "Chelsea — photographie officielle 13",
+          "afterAlt": "Buffet Chelsea clair contre un mur noir, avec des objets décoratifs."
+        },
+        {
+          "index": 13,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/08edc912-8c69-4c63-8018-b551c3e3d433.jpg?t=1669795901",
+          "sourceSha256": "b2fc20ff5c372c66710a9ce6d7c145b77854052de809e54044cfecb525346fe6",
+          "expectedImage": {
+            "id": "01M3N151JP6ZDY85B925B0XGEH",
+            "provider": "local",
+            "filename": "cattelan-chelsea-08edc912-8c69-4c63-8018-b551c3e3d433.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LDEfTf00?wD%IA%M%MIUD%.7RjIU",
+            "dominantColor": "rgb(96,96,92)",
+            "meta": {
+              "storageKey": "01M3N151ECGY6GAEVDZVQFCDM1.jpg",
+              "caption": null,
+              "blurhash": "LDEfTf00?wD%IA%M%MIUD%.7RjIU",
+              "dominantColor": "rgb(96,96,92)"
+            }
+          },
+          "beforeAlt": "Chelsea — photographie officielle 14",
+          "afterAlt": "Détail du dessus foncé réfléchissant et des angles de Chelsea."
+        },
+        {
+          "index": 14,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/d195c1b4-d935-41eb-97d6-b3c1d7f4a7f4.jpg?t=1669795917",
+          "sourceSha256": "fb233bb64f0106ce3a5e06692a7bc665009ca29b579465c5d7c5aa00f1762872",
+          "expectedImage": {
+            "id": "01M3N151YXYNZGMQXMTQCES2J3",
+            "provider": "local",
+            "filename": "cattelan-chelsea-d195c1b4-d935-41eb-97d6-b3c1d7f4a7f4.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LOJ7?o-o4TtQ~UWAM|kWs:j[S2WB",
+            "dominantColor": "rgb(154,140,125)",
+            "meta": {
+              "storageKey": "01M3N151SJY2J4WSCKGSRNKFQ4.jpg",
+              "caption": null,
+              "blurhash": "LOJ7?o-o4TtQ~UWAM|kWs:j[S2WB",
+              "dominantColor": "rgb(154,140,125)"
+            }
+          },
+          "beforeAlt": "Chelsea — photographie officielle 15",
+          "afterAlt": "Buffet bas Chelsea sous un téléviseur dans un salon."
+        },
+        {
+          "index": 15,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/2e08af9b-1142-414a-9606-fc9e0b754514.jpg?t=1669795904",
+          "sourceSha256": "fa61cf3bbd51cec46cc1d7b99eb4abbda1a566328d0f8310f992488b777a8798",
+          "expectedImage": {
+            "id": "01M3N152BF7NH8E0R4A10QETXY",
+            "provider": "local",
+            "filename": "cattelan-chelsea-2e08af9b-1142-414a-9606-fc9e0b754514.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LDHn+:xoD%t2~VoyE1Rj01t7bwWY",
+            "dominantColor": "rgb(144,133,118)",
+            "meta": {
+              "storageKey": "01M3N1525QZTVEVXKAJBCMBAWF.jpg",
+              "caption": null,
+              "blurhash": "LDHn+:xoD%t2~VoyE1Rj01t7bwWY",
+              "dominantColor": "rgb(144,133,118)"
+            }
+          },
+          "beforeAlt": "Chelsea — photographie officielle 16",
+          "afterAlt": "Détail de la façade claire et des pieds du buffet bas Chelsea."
+        }
+      ],
+      "image": {
+        "index": 0,
+        "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/af9bf38f-ceeb-4001-b4a5-34bf33dd5c25.jpg?t=1751467690",
+        "sourceSha256": "9f1af826a6c1b1de08659771fc403a46e26fdbbf5ad7c8d44babcbc94c52fef1",
+        "expectedImage": {
+          "id": "01M3N14SDM8RZMSP36VVMSV04Z",
+          "provider": "local",
+          "filename": "cattelan-chelsea-af9bf38f-ceeb-4001-b4a5-34bf33dd5c25.jpg",
+          "mimeType": "image/jpeg",
+          "width": 3543,
+          "height": 2362,
+          "blurhash": "LjRCudxu.8%M?vj[RPj[_Nj[IAay",
+          "dominantColor": "rgb(232,219,215)",
+          "meta": {
+            "storageKey": "01M3N14RGBAM7ZCQTRBQ1XKXZX.jpg",
+            "caption": null,
+            "blurhash": "LjRCudxu.8%M?vj[RPj[_Nj[IAay",
+            "dominantColor": "rgb(232,219,215)"
+          }
+        },
+        "beforeAlt": "Chelsea — photographie officielle 1",
+        "afterAlt": "Buffet Chelsea terracotta vu de face, avec un dessus bordé."
+      }
+    },
+    {
+      "slug": "airport",
+      "gallery": [
+        {
+          "index": 0,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/36298773-f41e-4b37-bb01-2fc34f6349e1.jpg?t=1671443333",
+          "sourceSha256": "c9331294c800d75ae9bbd9d19fdc619c80219ea93a390a34fecc45ac26f2b16e",
+          "expectedImage": {
+            "id": "01M3N157AKCQR3AW4XZ0GAA9GR",
+            "provider": "local",
+            "filename": "cattelan-airport-36298773-f41e-4b37-bb01-2fc34f6349e1.jpg",
+            "mimeType": "image/jpeg",
+            "width": 3543,
+            "height": 2362,
+            "blurhash": "LoKBBt~qIoWAxaaxoft7M{aet7WV",
+            "dominantColor": "rgb(145,139,135)",
+            "meta": {
+              "storageKey": "01M3N1566KMDJQXX0NB7PCJV4W.jpg",
+              "caption": null,
+              "blurhash": "LoKBBt~qIoWAxaaxoft7M{aet7WV",
+              "dominantColor": "rgb(145,139,135)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 1",
+          "afterAlt": "Bibliothèque Airport à montants verticaux et étagères ouvertes séparant un salon."
+        },
+        {
+          "index": 1,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/576bd360-c828-47cc-8542-5b06bb514d43.jpg?t=1671443337",
+          "sourceSha256": "19c64cd07f1bb652cc9d8749d8a41883ea5795d6aab1a631c3eed5ba2dfbd18c",
+          "expectedImage": {
+            "id": "01M3N158M0WMZQNT3A7GJYCSY2",
+            "provider": "local",
+            "filename": "cattelan-airport-576bd360-c828-47cc-8542-5b06bb514d43.jpg",
+            "mimeType": "image/jpeg",
+            "width": 2362,
+            "height": 3543,
+            "blurhash": "LfL4c}D%oJxt~qRPRjt7M{ofWBRj",
+            "dominantColor": "rgb(168,160,157)",
+            "meta": {
+              "storageKey": "01M3N157H8R5C668NVY8RGP998.jpg",
+              "caption": null,
+              "blurhash": "LfL4c}D%oJxt~qRPRjt7M{ofWBRj",
+              "dominantColor": "rgb(168,160,157)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 2",
+          "afterAlt": "Composition Airport étroite avec un bureau et une chaise."
+        },
+        {
+          "index": 2,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/e80e57e7-26e7-4ce7-bf10-22e56b670d7e.jpg?t=1671443370",
+          "sourceSha256": "1434e7d3d69ce7508bb1006b6b019be5251852dda22ec44ff423017b24a2255f",
+          "expectedImage": {
+            "id": "01M3N159XBK00MKSX2DY7BEAJV",
+            "provider": "local",
+            "filename": "cattelan-airport-e80e57e7-26e7-4ce7-bf10-22e56b670d7e.jpg",
+            "mimeType": "image/jpeg",
+            "width": 3543,
+            "height": 2362,
+            "blurhash": "L39tAV6A02%$~q?c0L9Z?w%gD*9Z",
+            "dominantColor": "rgb(65,64,62)",
+            "meta": {
+              "storageKey": "01M3N158T97NPQH0SKJRD8J948.jpg",
+              "caption": null,
+              "blurhash": "L39tAV6A02%$~q?c0L9Z?w%gD*9Z",
+              "dominantColor": "rgb(65,64,62)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 3",
+          "afterAlt": "Détail d’un caisson Airport ouvert, avec des verres et des accessoires."
+        },
+        {
+          "index": 3,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/89133235-958f-47d6-ab48-faf431584039.jpg?t=1669795912",
+          "sourceSha256": "855dcb3f3ed495049440c2bf082f0fca960fcfcae3a8c0e7bd12c397aaac4d41",
+          "expectedImage": {
+            "id": "01M3N15AQX1B5CDAP38GM4DB2F",
+            "provider": "local",
+            "filename": "cattelan-airport-89133235-958f-47d6-ab48-faf431584039.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "L8JH,VDNbbMdVX_N4Tt8%Ns,D$NH",
+            "dominantColor": "rgb(147,144,140)",
+            "meta": {
+              "storageKey": "01M3N15AHA8SZ0123HAJV8RGH5.jpg",
+              "caption": null,
+              "blurhash": "L8JH,VDNbbMdVX_N4Tt8%Ns,D$NH",
+              "dominantColor": "rgb(147,144,140)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 4",
+          "afterAlt": "Bibliothèque Airport foncée dans un angle, près de deux fauteuils bleus."
+        },
+        {
+          "index": 4,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/8653dc92-36de-4731-a046-27873128f4c0.jpg?t=1669795912",
+          "sourceSha256": "3cc7f44a136b48bee9aa43adb3eb874728de72f593f68607c91c6f45ae2eb3e0",
+          "expectedImage": {
+            "id": "01M3N15B2XT22KP9JE9EMK7PJF",
+            "provider": "local",
+            "filename": "cattelan-airport-8653dc92-36de-4731-a046-27873128f4c0.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LHIr1=9FkrjF-oRiMxD%~p%MD%Rj",
+            "dominantColor": "rgb(141,137,137)",
+            "meta": {
+              "storageKey": "01M3N15AZ0GM6F1HZ8N2SHJH78.jpg",
+              "caption": null,
+              "blurhash": "LHIr1=9FkrjF-oRiMxD%~p%MD%Rj",
+              "dominantColor": "rgb(141,137,137)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 5",
+          "afterAlt": "Vue en plongée des étagères Airport garnies de livres et d’objets."
+        },
+        {
+          "index": 5,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/7d546f81-6d41-43b0-90eb-095ba72f87b4.jpg?t=1669795911",
+          "sourceSha256": "6702b0d1e4fd04385a60a63f3f1b9dfbdab341089c06cbe3d81d2348933a7eee",
+          "expectedImage": {
+            "id": "01M3N15BY1ZAH6MBTP126EV0RF",
+            "provider": "local",
+            "filename": "cattelan-airport-7d546f81-6d41-43b0-90eb-095ba72f87b4.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LFIq_q00~qVr-;%Ls-IU4.%MxZIV",
+            "dominantColor": "rgb(136,130,126)",
+            "meta": {
+              "storageKey": "01M3N15BRS6XEQX2MHK8VKQV0Q.jpg",
+              "caption": null,
+              "blurhash": "LFIq_q00~qVr-;%Ls-IU4.%MxZIV",
+              "dominantColor": "rgb(136,130,126)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 6",
+          "afterAlt": "Détail des tablettes et des montants fins de la bibliothèque Airport."
+        },
+        {
+          "index": 6,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/12911836-11c4-480e-b954-2b32b52815a4.jpg?t=1718351312",
+          "sourceSha256": "3a7b153ac93390287517f5200dc05ca5452d0ab67b2a70b42dbc2be490fc11de",
+          "expectedImage": {
+            "id": "01M3N15CCYD4RF244PK0QFX7HD",
+            "provider": "local",
+            "filename": "cattelan-airport-12911836-11c4-480e-b954-2b32b52815a4.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LEFO.MNIRP~p8_D%kCRjD*t8t7Rk",
+            "dominantColor": "rgb(121,109,98)",
+            "meta": {
+              "storageKey": "01M3N15C8KDTK3WHK03Z30MRDJ.jpg",
+              "caption": null,
+              "blurhash": "LEFO.MNIRP~p8_D%kCRjD*t8t7Rk",
+              "dominantColor": "rgb(121,109,98)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 7",
+          "afterAlt": "Grande bibliothèque Airport murale avec des caissons fermés dans un salon."
+        },
+        {
+          "index": 7,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/bf07c05e-c0a9-49aa-8d8e-989a3cfda74b.jpg?t=1718351313",
+          "sourceSha256": "f43150ba0716b1c064525400df3d412a0efefdac8852683401149822af3e33cb",
+          "expectedImage": {
+            "id": "01M3N15CPYX2ZBG18HJWWTS6CG",
+            "provider": "local",
+            "filename": "cattelan-airport-bf07c05e-c0a9-49aa-8d8e-989a3cfda74b.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "L5HBuU0000Io00.8~qIoDh_300s,",
+            "dominantColor": "rgb(132,122,112)",
+            "meta": {
+              "storageKey": "01M3N15CMMCP4V28KDWKBRQCBV.jpg",
+              "caption": null,
+              "blurhash": "L5HBuU0000Io00.8~qIoDh_300s,",
+              "dominantColor": "rgb(132,122,112)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 8",
+          "afterAlt": "Bibliothèque Airport vue de côté, avec des tablettes ouvertes et des caissons bas."
+        },
+        {
+          "index": 8,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/1c5de853-81d4-45ce-9674-3f9176f087e1.jpg?t=1669795903",
+          "sourceSha256": "2dd7b4675ad7d0da81502ccad7516494fcfe7f712b255bf3c73be1f38c2b2f33",
+          "expectedImage": {
+            "id": "01M3N15D6DB0X6047FEZZTFH0E",
+            "provider": "local",
+            "filename": "cattelan-airport-1c5de853-81d4-45ce-9674-3f9176f087e1.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LoIhNu~qxut8xuj[ayayt8R*V@ae",
+            "dominantColor": "rgb(135,125,123)",
+            "meta": {
+              "storageKey": "01M3N15CY9YDHGJTEG0F5CK9QD.jpg",
+              "caption": null,
+              "blurhash": "LoIhNu~qxut8xuj[ayayt8R*V@ae",
+              "dominantColor": "rgb(135,125,123)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 9",
+          "afterAlt": "Bibliothèque Airport traversant l’espace entre salle à manger et salon."
+        },
+        {
+          "index": 9,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/71eb2693-0cd2-436a-9d59-33853edc0e50.jpg?t=1669795910",
+          "sourceSha256": "36e3c15287fb26f71c6f3d857b6c741c457c67096a932e6d6b7371cbbbc43df7",
+          "expectedImage": {
+            "id": "01M3N15DJWABE8FMFDRHV39RPH",
+            "provider": "local",
+            "filename": "cattelan-airport-71eb2693-0cd2-436a-9d59-33853edc0e50.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LoKd#q~qIUaet7f6ofofM{aeofWC",
+            "dominantColor": "rgb(147,140,136)",
+            "meta": {
+              "storageKey": "01M3N15DDQ970ZGN3SBJVP1ESN.jpg",
+              "caption": null,
+              "blurhash": "LoKd#q~qIUaet7f6ofofM{aeofWC",
+              "dominantColor": "rgb(147,140,136)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 10",
+          "afterAlt": "Composition Airport toute hauteur séparant un salon, vue de trois quarts."
+        },
+        {
+          "index": 10,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/49ec18da-8541-4ac4-91bc-0fbd4df6ae92.jpg?t=1669795906",
+          "sourceSha256": "21fe1e0fe54f1a472a3ebe001dbc63e90a3593c530e67420de89d1bcb14ca8d9",
+          "expectedImage": {
+            "id": "01M3N15E08JVJHF5XD6PJ3F776",
+            "provider": "local",
+            "filename": "cattelan-airport-49ec18da-8541-4ac4-91bc-0fbd4df6ae92.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LrIX]Z~qtRog%Mxuofj[jZoLj]of",
+            "dominantColor": "rgb(128,123,116)",
+            "meta": {
+              "storageKey": "01M3N15DTFGK9MERGQVD31NNYW.jpg",
+              "caption": null,
+              "blurhash": "LrIX]Z~qtRog%Mxuofj[jZoLj]of",
+              "dominantColor": "rgb(128,123,116)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 11",
+          "afterAlt": "Bibliothèque Airport foncée occupant un grand mur de salon."
+        },
+        {
+          "index": 11,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/17283fa3-59c8-4a30-8e72-426793ae1646.jpg?t=1669795903",
+          "sourceSha256": "2803c059abbf2f3e9d313c04d79671a488a6a069c13d0517a93977f172e27df3",
+          "expectedImage": {
+            "id": "01M3N15EDDNJEJVSSP59PS849T",
+            "provider": "local",
+            "filename": "cattelan-airport-17283fa3-59c8-4a30-8e72-426793ae1646.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LXLqIZ8_s:-p~pIAWBtRS5RPWBbI",
+            "dominantColor": "rgb(173,165,163)",
+            "meta": {
+              "storageKey": "01M3N15E9XMDRE6BGNPACBWFCV.jpg",
+              "caption": null,
+              "blurhash": "LXLqIZ8_s:-p~pIAWBtRS5RPWBbI",
+              "dominantColor": "rgb(173,165,163)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 12",
+          "afterAlt": "Composition Airport avec tablette de bureau et rangements en hauteur."
+        },
+        {
+          "index": 12,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/9820767f-745c-4307-b8ab-9c28aa6ab6cb.jpg?t=1669795913",
+          "sourceSha256": "eaca449d92f494e0343dafdfae22f8c1235cf51fba532ff5e2c497435a638bc5",
+          "expectedImage": {
+            "id": "01M3N15ER8G1A5E1GYJFNS7GQD",
+            "provider": "local",
+            "filename": "cattelan-airport-9820767f-745c-4307-b8ab-9c28aa6ab6cb.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LRLXDC9G^+_3~qITM|M{ITIURjWB",
+            "dominantColor": "rgb(167,159,157)",
+            "meta": {
+              "storageKey": "01M3N15EN7G59TZK8MW46S963T.jpg",
+              "caption": null,
+              "blurhash": "LRLXDC9G^+_3~qITM|M{ITIURjWB",
+              "dominantColor": "rgb(167,159,157)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 13",
+          "afterAlt": "Détail du bureau intégré à Airport, avec un ordinateur portable."
+        },
+        {
+          "index": 13,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/4703cb54-450f-4c62-9396-420986616c89.jpg?t=1669795906",
+          "sourceSha256": "62f3c349945392c13911dfd3f9e1640156a7d8d782b74e179bfc29c938a3967f",
+          "expectedImage": {
+            "id": "01M3N15F6SDDEMBTDH451DT6S2",
+            "provider": "local",
+            "filename": "cattelan-airport-4703cb54-450f-4c62-9396-420986616c89.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LKGIDk9Y~paeM{xuM_%gR+oeRPoz",
+            "dominantColor": "rgb(127,111,97)",
+            "meta": {
+              "storageKey": "01M3N15F09RMS13379R7D5TF09.jpg",
+              "caption": null,
+              "blurhash": "LKGIDk9Y~paeM{xuM_%gR+oeRPoz",
+              "dominantColor": "rgb(127,111,97)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 14",
+          "afterAlt": "Vue en plongée d’une tablette Airport avec des livres."
+        },
+        {
+          "index": 14,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/aba59829-7963-4a0f-b594-a16cf052df63.jpg?t=1669795914",
+          "sourceSha256": "9c5780a1c7829d8065c9c4358afb4bc3752cbddb66715ac0bcab561b99ca49b6",
+          "expectedImage": {
+            "id": "01M3N15FN4W5E2PY4SZTQEK2EK",
+            "provider": "local",
+            "filename": "cattelan-airport-aba59829-7963-4a0f-b594-a16cf052df63.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LFL4j900_Noc$dR+D*oJ$%-p-pa}",
+            "dominantColor": "rgb(170,164,155)",
+            "meta": {
+              "storageKey": "01M3N15FFAC65RBF7S9XNST23F.jpg",
+              "caption": null,
+              "blurhash": "LFL4j900_Noc$dR+D*oJ$%-p-pa}",
+              "dominantColor": "rgb(170,164,155)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 15",
+          "afterAlt": "Bibliothèque Airport murale près d’une table de salle à manger."
+        },
+        {
+          "index": 15,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/f1b29917-1131-4282-95b4-b7e6f7398b94.jpg?t=1669795919",
+          "sourceSha256": "c03845541c287bd9ab15d1267f512068c76dc9f9d8f95620975fb805a99c59a3",
+          "expectedImage": {
+            "id": "01M3N15G01PDARTMWSDT3F2SCJ",
+            "provider": "local",
+            "filename": "cattelan-airport-f1b29917-1131-4282-95b4-b7e6f7398b94.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LJI#cC.S00D%~pRObc-;VsDh%2%N",
+            "dominantColor": "rgb(137,128,115)",
+            "meta": {
+              "storageKey": "01M3N15FWV2JMF9K15ABP8KN11.jpg",
+              "caption": null,
+              "blurhash": "LJI#cC.S00D%~pRObc-;VsDh%2%N",
+              "dominantColor": "rgb(137,128,115)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 16",
+          "afterAlt": "Détail d’un montant Airport traversant une tablette."
+        },
+        {
+          "index": 16,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/f44a3f58-781e-42c5-adb7-19166dd5d8e7.jpg?t=1669795919",
+          "sourceSha256": "c1771d65f88cc6f31b1e64a57234186a089058053bd0d342c66ad5ec493ad9a1",
+          "expectedImage": {
+            "id": "01M3N15GA77TTQ0486CAP44HZE",
+            "provider": "local",
+            "filename": "cattelan-airport-f44a3f58-781e-42c5-adb7-19166dd5d8e7.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "L9K1g#IT9F.8~U9Z?b0000E19ZRi",
+            "dominantColor": "rgb(148,140,132)",
+            "meta": {
+              "storageKey": "01M3N15G64QYGW54MR9ACQVYFT.jpg",
+              "caption": null,
+              "blurhash": "L9K1g#IT9F.8~U9Z?b0000E19ZRi",
+              "dominantColor": "rgb(148,140,132)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 17",
+          "afterAlt": "Assemblage des montants et des tablettes Airport vu de près."
+        },
+        {
+          "index": 17,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/8f196563-9cb9-41b5-8d12-3e2bbe14e9ff.jpg?t=1669795912",
+          "sourceSha256": "b3419f32477fcd23283fab318e23c8f34ebbb4f58c8ae8c61cd2bcffc9373f96",
+          "expectedImage": {
+            "id": "01M3N15GQR3XT773Z6XZP1EPMF",
+            "provider": "local",
+            "filename": "cattelan-airport-8f196563-9cb9-41b5-8d12-3e2bbe14e9ff.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LSG[.,~WIVoJ%3-pxujYaef+RjM{",
+            "dominantColor": "rgb(120,120,123)",
+            "meta": {
+              "storageKey": "01M3N15GHMPVZV1W8BAKR9S9MS.jpg",
+              "caption": null,
+              "blurhash": "LSG[.,~WIVoJ%3-pxujYaef+RjM{",
+              "dominantColor": "rgb(120,120,123)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 18",
+          "afterAlt": "Bibliothèque Airport blanche avec des étagères décalées et un caisson bas."
+        },
+        {
+          "index": 18,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/72de972c-0ce0-4419-93fc-6c21e84dba39.jpg?t=1669795910",
+          "sourceSha256": "00677b010e4e851501775e6f30d7985e779c93a461116d9d0acbf592a27bd6cd",
+          "expectedImage": {
+            "id": "01M3N15H5TCMEDASYJ1557NV53",
+            "provider": "local",
+            "filename": "cattelan-airport-72de972c-0ce0-4419-93fc-6c21e84dba39.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LAFFpl_400^+={x]o#Mw4mo#-;V?",
+            "dominantColor": "rgb(101,100,102)",
+            "meta": {
+              "storageKey": "01M3N15GXJNQ7FS8NZ0PTKN85S.jpg",
+              "caption": null,
+              "blurhash": "LAFFpl_400^+={x]o#Mw4mo#-;V?",
+              "dominantColor": "rgb(101,100,102)"
+            }
+          },
+          "beforeAlt": "Airport — photographie officielle 19",
+          "afterAlt": "Détail des étagères blanches décalées d’Airport sur un mur foncé."
+        }
+      ],
+      "image": {
+        "index": 0,
+        "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/36298773-f41e-4b37-bb01-2fc34f6349e1.jpg?t=1671443333",
+        "sourceSha256": "c9331294c800d75ae9bbd9d19fdc619c80219ea93a390a34fecc45ac26f2b16e",
+        "expectedImage": {
+          "id": "01M3N157AKCQR3AW4XZ0GAA9GR",
+          "provider": "local",
+          "filename": "cattelan-airport-36298773-f41e-4b37-bb01-2fc34f6349e1.jpg",
+          "mimeType": "image/jpeg",
+          "width": 3543,
+          "height": 2362,
+          "blurhash": "LoKBBt~qIoWAxaaxoft7M{aet7WV",
+          "dominantColor": "rgb(145,139,135)",
+          "meta": {
+            "storageKey": "01M3N1566KMDJQXX0NB7PCJV4W.jpg",
+            "caption": null,
+            "blurhash": "LoKBBt~qIoWAxaaxoft7M{aet7WV",
+            "dominantColor": "rgb(145,139,135)"
+          }
+        },
+        "beforeAlt": "Airport — photographie officielle 1",
+        "afterAlt": "Bibliothèque Airport à montants verticaux et étagères ouvertes séparant un salon."
+      }
+    },
+    {
+      "slug": "bloom",
+      "gallery": [
+        {
+          "index": 0,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/ddae8578-a2e6-46e5-aed4-75c9282c5e5e.jpg?t=1759996092",
+          "sourceSha256": "64cf6e85f76ad3a4164c01e5e7c36d7a348c23338a950c7d72aad666dca87aa9",
+          "expectedImage": {
+            "id": "01M3N15NH1YXT5C89F6G8KJV8B",
+            "provider": "local",
+            "filename": "cattelan-bloom-ddae8578-a2e6-46e5-aed4-75c9282c5e5e.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1890,
+            "height": 2835,
+            "blurhash": "LBS~x5_3?b~q_3t7RjRjM{j[xuWB",
+            "dominantColor": "rgb(248,248,248)",
+            "meta": {
+              "storageKey": "01M3N15MYH80ZZVPYR565CZ237.jpg",
+              "caption": null,
+              "blurhash": "LBS~x5_3?b~q_3t7RjRjM{j[xuWB",
+              "dominantColor": "rgb(248,248,248)"
+            }
+          },
+          "beforeAlt": "Bloom — photographie officielle 1",
+          "afterAlt": "Lampadaire Bloom à deux tiges verticales et globes transparents."
+        },
+        {
+          "index": 1,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/5fb9a901-5a3a-4835-ba07-3c7ce251385c.jpg?t=1749138503",
+          "sourceSha256": "e5421c7bf4a427773509c9e220c2f1bbcad5f86a76dc4c01043168798f1b0a4c",
+          "expectedImage": {
+            "id": "01M3N15NY10TRPDMFTQHNS84KN",
+            "provider": "local",
+            "filename": "cattelan-bloom-5fb9a901-5a3a-4835-ba07-3c7ce251385c.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LyH_f6M{t7jZ~pRjofjs%MayWBj[",
+            "dominantColor": "rgb(129,116,107)",
+            "meta": {
+              "storageKey": "01M3N15NSPW1BHJZAWZG437527.jpg",
+              "caption": null,
+              "blurhash": "LyH_f6M{t7jZ~pRjofjs%MayWBj[",
+              "dominantColor": "rgb(129,116,107)"
+            }
+          },
+          "beforeAlt": "Bloom — photographie officielle 2",
+          "afterAlt": "Suspension Bloom horizontale à globes au-dessus d’une table."
+        },
+        {
+          "index": 2,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/966b62de-d289-4eb0-8fa5-748d34a6a22e.jpg?t=1749138503",
+          "sourceSha256": "e7fc14991206777320e1307de2fd018500747f789b5babab1d533814c1fc86c5",
+          "expectedImage": {
+            "id": "01M3N15P68MA904Y4XDBH7M3TB",
+            "provider": "local",
+            "filename": "cattelan-bloom-966b62de-d289-4eb0-8fa5-748d34a6a22e.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LTMQt]9ERP%L~qxvocRjE1bIxua}",
+            "dominantColor": "rgb(185,180,176)",
+            "meta": {
+              "storageKey": "01M3N15P4DYDXCWJ0N7QNYFKZX.jpg",
+              "caption": null,
+              "blurhash": "LTMQt]9ERP%L~qxvocRjE1bIxua}",
+              "dominantColor": "rgb(185,180,176)"
+            }
+          },
+          "beforeAlt": "Bloom — photographie officielle 3",
+          "afterAlt": "Suspension Bloom vue de près, avec des globes répartis le long des tiges."
+        },
+        {
+          "index": 3,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/6b2276a9-ca47-46d5-a62b-04440af34dc7.jpg?t=1713167421",
+          "sourceSha256": "38419bd8b3d6c829bcc8bf8587c5f4ad9e5afc009b68d1861f34e403d0f4dd9d",
+          "expectedImage": {
+            "id": "01M3N15PGSJ5FSGD8B8GB9RW1D",
+            "provider": "local",
+            "filename": "cattelan-bloom-6b2276a9-ca47-46d5-a62b-04440af34dc7.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LSJaM{8_ozxu~q9abG%2Ipxunhay",
+            "dominantColor": "rgb(153,132,114)",
+            "meta": {
+              "storageKey": "01M3N15PDJV2QVCYZ1HNH5Y2ZS.jpg",
+              "caption": null,
+              "blurhash": "LSJaM{8_ozxu~q9abG%2Ipxunhay",
+              "dominantColor": "rgb(153,132,114)"
+            }
+          },
+          "beforeAlt": "Bloom — photographie officielle 4",
+          "afterAlt": "Vue en plongée des globes de la suspension Bloom près d’une fenêtre."
+        },
+        {
+          "index": 4,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/b41c7b8a-4db7-4e03-bab0-e2c960a16315.jpg?t=1713167422",
+          "sourceSha256": "f6d533c3dcfd2c86cd9b61f3fad773f472705a3bbad1e8a04885b7e342b8fd37",
+          "expectedImage": {
+            "id": "01M3N15PSX9K82CCK2AYTY4A0B",
+            "provider": "local",
+            "filename": "cattelan-bloom-b41c7b8a-4db7-4e03-bab0-e2c960a16315.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LdJ7~_IUxuxu~pM|RjtRIoW=jYj[",
+            "dominantColor": "rgb(147,136,126)",
+            "meta": {
+              "storageKey": "01M3N15PQH9GS3JV0CQS28PK8C.jpg",
+              "caption": null,
+              "blurhash": "LdJ7~_IUxuxu~pM|RjtRIoW=jYj[",
+              "dominantColor": "rgb(147,136,126)"
+            }
+          },
+          "beforeAlt": "Bloom — photographie officielle 5",
+          "afterAlt": "Suspension Bloom au-dessus d’une table de salle à manger, vue en plongée."
+        },
+        {
+          "index": 5,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/19d8fd60-174b-4d81-b549-5217657766b0.jpg?t=1713167419",
+          "sourceSha256": "b151decf97b7c1f51c6ba7342ff81809b39220cdbc61921c21fe2584cb6d923d",
+          "expectedImage": {
+            "id": "01M3N15Q5ZPMCSK4FHKSTM8TK8",
+            "provider": "local",
+            "filename": "cattelan-bloom-19d8fd60-174b-4d81-b549-5217657766b0.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "L3Hn+@00I[-:0000xuIV00NG~poy",
+            "dominantColor": "rgb(145,134,123)",
+            "meta": {
+              "storageKey": "01M3N15Q2DJVRYAAY7X7D4PRVP.jpg",
+              "caption": null,
+              "blurhash": "L3Hn+@00I[-:0000xuIV00NG~poy",
+              "dominantColor": "rgb(145,134,123)"
+            }
+          },
+          "beforeAlt": "Bloom — photographie officielle 6",
+          "afterAlt": "Suspension Bloom horizontale devant un mur texturé."
+        },
+        {
+          "index": 6,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/1ff98b7f-20ab-466e-96ef-3386d1586bc3.jpg?t=1759996093",
+          "sourceSha256": "1407b24f4745900ab1200076027ba25bfa7114772275849549e0260eedda6400",
+          "expectedImage": {
+            "id": "01M3N15QFPS3EWSJR9D27Q5KDM",
+            "provider": "local",
+            "filename": "cattelan-bloom-1ff98b7f-20ab-466e-96ef-3386d1586bc3.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LSL;jOVY00^+_NRkNGM{t7-;-;t7",
+            "dominantColor": "rgb(172,170,160)",
+            "meta": {
+              "storageKey": "01M3N15QDHY8TEZGYYFSZ2C519.jpg",
+              "caption": null,
+              "blurhash": "LSL;jOVY00^+_NRkNGM{t7-;-;t7",
+              "dominantColor": "rgb(172,170,160)"
+            }
+          },
+          "beforeAlt": "Bloom — photographie officielle 7",
+          "afterAlt": "Lampadaire Bloom près d’un lit, avec des globes à différentes hauteurs."
+        },
+        {
+          "index": 7,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/c70ddf5c-2e0b-4bd8-94aa-57d7acb71ae8.jpg?t=1749138503",
+          "sourceSha256": "ca1f553fc31c232d45d2da1fa57c857a2e3a41f334ba5e36483f16e2b293003f",
+          "expectedImage": {
+            "id": "01M3N15QS24JHPV381P6JJKAYQ",
+            "provider": "local",
+            "filename": "cattelan-bloom-c70ddf5c-2e0b-4bd8-94aa-57d7acb71ae8.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LAH2J_00_4D%-;nhSiIU4.M{xut7",
+            "dominantColor": "rgb(133,127,116)",
+            "meta": {
+              "storageKey": "01M3N15QQ507PXRYCGCSS2AHH6.jpg",
+              "caption": null,
+              "blurhash": "LAH2J_00_4D%-;nhSiIU4.M{xut7",
+              "dominantColor": "rgb(133,127,116)"
+            }
+          },
+          "beforeAlt": "Bloom — photographie officielle 8",
+          "afterAlt": "Lampadaire Bloom entre une bibliothèque et un canapé."
+        },
+        {
+          "index": 8,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/5faead32-4a35-4613-995f-70a865c16605.jpg?t=1749138503",
+          "sourceSha256": "f4f2b869b57bd71452336d3f7623557d4724857806e25f0e3a7ffa5e1519b288",
+          "expectedImage": {
+            "id": "01M3N15R750HY3BF4ETKWGTY7G",
+            "provider": "local",
+            "filename": "cattelan-bloom-5faead32-4a35-4613-995f-70a865c16605.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "L8IE,}00.T%3?w-:_Nxs00tnx[Ro",
+            "dominantColor": "rgb(149,144,130)",
+            "meta": {
+              "storageKey": "01M3N15R5697R5W6FHACW0BYBX.jpg",
+              "caption": null,
+              "blurhash": "L8IE,}00.T%3?w-:_Nxs00tnx[Ro",
+              "dominantColor": "rgb(149,144,130)"
+            }
+          },
+          "beforeAlt": "Bloom — photographie officielle 9",
+          "afterAlt": "Globes du lampadaire Bloom devant une grande fenêtre."
+        },
+        {
+          "index": 9,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/0f43a5fd-000a-4e74-bbfd-dba610208a25.jpg?t=1749138503",
+          "sourceSha256": "dad329097e9eeae1e209121b7d8fb5538f789a2ad69d3259077f2aac0416b22f",
+          "expectedImage": {
+            "id": "01M3N15RG7G644GGM58TQTRZSN",
+            "provider": "local",
+            "filename": "cattelan-bloom-0f43a5fd-000a-4e74-bbfd-dba610208a25.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LMGv06xZ$xZ~~qoeMxM_%hxtDixZ",
+            "dominantColor": "rgb(127,135,134)",
+            "meta": {
+              "storageKey": "01M3N15RDS12VS579QRV8S6FBA.jpg",
+              "caption": null,
+              "blurhash": "LMGv06xZ$xZ~~qoeMxM_%hxtDixZ",
+              "dominantColor": "rgb(127,135,134)"
+            }
+          },
+          "beforeAlt": "Bloom — photographie officielle 10",
+          "afterAlt": "Détail des attaches rondes et des tiges du luminaire Bloom."
+        },
+        {
+          "index": 10,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/2f5661a1-2996-44dd-929b-bbd1f70637d6.jpg?t=1749138503",
+          "sourceSha256": "1aa7ca9b9f99c61b03e70ced1b38d3c5aeb618baec83bde9f0617c27a0c370f1",
+          "expectedImage": {
+            "id": "01M3N15RS0C2ZZZZMFGSR47SNF",
+            "provider": "local",
+            "filename": "cattelan-bloom-2f5661a1-2996-44dd-929b-bbd1f70637d6.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "L5A,zhTe00-;.T-=bco#00%M~pIo",
+            "dominantColor": "rgb(82,82,78)",
+            "meta": {
+              "storageKey": "01M3N15RPBKNNSCH875G23GQWA.jpg",
+              "caption": null,
+              "blurhash": "L5A,zhTe00-;.T-=bco#00%M~pIo",
+              "dominantColor": "rgb(82,82,78)"
+            }
+          },
+          "beforeAlt": "Bloom — photographie officielle 11",
+          "afterAlt": "Détail du socle arrondi et des deux tiges du lampadaire Bloom."
+        }
+      ],
+      "image": {
+        "index": 0,
+        "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/ddae8578-a2e6-46e5-aed4-75c9282c5e5e.jpg?t=1759996092",
+        "sourceSha256": "64cf6e85f76ad3a4164c01e5e7c36d7a348c23338a950c7d72aad666dca87aa9",
+        "expectedImage": {
+          "id": "01M3N15NH1YXT5C89F6G8KJV8B",
+          "provider": "local",
+          "filename": "cattelan-bloom-ddae8578-a2e6-46e5-aed4-75c9282c5e5e.jpg",
+          "mimeType": "image/jpeg",
+          "width": 1890,
+          "height": 2835,
+          "blurhash": "LBS~x5_3?b~q_3t7RjRjM{j[xuWB",
+          "dominantColor": "rgb(248,248,248)",
+          "meta": {
+            "storageKey": "01M3N15MYH80ZZVPYR565CZ237.jpg",
+            "caption": null,
+            "blurhash": "LBS~x5_3?b~q_3t7RjRjM{j[xuWB",
+            "dominantColor": "rgb(248,248,248)"
+          }
+        },
+        "beforeAlt": "Bloom — photographie officielle 1",
+        "afterAlt": "Lampadaire Bloom à deux tiges verticales et globes transparents."
+      }
+    },
+    {
+      "slug": "napoleon-keramik-outdoor",
+      "gallery": [
+        {
+          "index": 0,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/42ae842f-965d-47cf-ba6a-0501ac935576.jpg?t=1763473698",
+          "sourceSha256": "41da3b0fadea545f84da070c067c1d8223c5100a373c96fda13885ecfe290bba",
+          "expectedImage": {
+            "id": "01M3N15VZ931Z9KYR9YCTB8SMT",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-outdoor-42ae842f-965d-47cf-ba6a-0501ac935576.jpg",
+            "mimeType": "image/jpeg",
+            "width": 3543,
+            "height": 2362,
+            "blurhash": "LKSPX^?b?v-;_3ofM{of~qWBD$of",
+            "dominantColor": "rgb(245,244,244)",
+            "meta": {
+              "storageKey": "01M3N15V3MRE396BA1W6SW1F3V.jpg",
+              "caption": null,
+              "blurhash": "LKSPX^?b?v-;_3ofM{of~qWBD$of",
+              "dominantColor": "rgb(245,244,244)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik Outdoor — photographie officielle 1",
+          "afterAlt": "Table Napoleon Keramik Outdoor claire à pied central, vue de face."
+        },
+        {
+          "index": 1,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/5d1bfe2c-1a27-4232-aa8a-72ff648c1882.jpg?t=1763473701",
+          "sourceSha256": "6063861d883d1522876cf156d45d83d187b1bd7d5f4b835fa78289a0591892d6",
+          "expectedImage": {
+            "id": "01M3N15X8D7STTD7978NDS6GP7",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-outdoor-5d1bfe2c-1a27-4232-aa8a-72ff648c1882.jpg",
+            "mimeType": "image/jpeg",
+            "width": 3543,
+            "height": 2362,
+            "blurhash": "LNS6Md-;_3%M?bofRjay_NfkDit7",
+            "dominantColor": "rgb(243,241,240)",
+            "meta": {
+              "storageKey": "01M3N15W6P5526TTSAA7A3KEXD.jpg",
+              "caption": null,
+              "blurhash": "LNS6Md-;_3%M?bofRjay_NfkDit7",
+              "dominantColor": "rgb(243,241,240)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik Outdoor — photographie officielle 2",
+          "afterAlt": "Table Napoleon Keramik Outdoor claire vue de trois quarts."
+        },
+        {
+          "index": 2,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/ee1a424d-cc1e-4115-9c5d-10beae68d279.jpg?t=1763473703",
+          "sourceSha256": "262f0b3e35e4a78f1070018f70c249ecd797c95d9bf3326441f99378c882caef",
+          "expectedImage": {
+            "id": "01M3N15YZGWN7HGYQV5B6YQKER",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-outdoor-ee1a424d-cc1e-4115-9c5d-10beae68d279.jpg",
+            "mimeType": "image/jpeg",
+            "width": 3543,
+            "height": 2362,
+            "blurhash": "LOSF-A.8?cxu?aogRjjs_4WCD%t7",
+            "dominantColor": "rgb(243,241,237)",
+            "meta": {
+              "storageKey": "01M3N15XTM5NNDPC8MGDF3ZXW0.jpg",
+              "caption": null,
+              "blurhash": "LOSF-A.8?cxu?aogRjjs_4WCD%t7",
+              "dominantColor": "rgb(243,241,237)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik Outdoor — photographie officielle 3",
+          "afterAlt": "Table Napoleon Keramik Outdoor à plateau et pied veinés, vue de trois quarts."
+        },
+        {
+          "index": 3,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/5ffa98dc-1cb1-405f-860a-d868285040c7.jpg?t=1765788496",
+          "sourceSha256": "9768ba924f9e6f9a08f75998a8dda74fe8cba3649b46e5767f394845b518fca5",
+          "expectedImage": {
+            "id": "01M3N15ZANEK5B4K2KVDRCMAT3",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-outdoor-5ffa98dc-1cb1-405f-860a-d868285040c7.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LOH1[88_IUR*~qRPVrR+E1I;a#kC",
+            "dominantColor": "rgb(134,115,103)",
+            "meta": {
+              "storageKey": "01M3N15Z7ZVV5D3BHYAM7MYXTM.jpg",
+              "caption": null,
+              "blurhash": "LOH1[88_IUR*~qRPVrR+E1I;a#kC",
+              "dominantColor": "rgb(134,115,103)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik Outdoor — photographie officielle 4",
+          "afterAlt": "Table Napoleon Keramik Outdoor avec des chaises sur une terrasse couverte face à la mer."
+        },
+        {
+          "index": 4,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/b0118982-eb41-4102-b9a8-3c204354244a.jpg?t=1765788497",
+          "sourceSha256": "1b084778ec0a6f84ff1f01c4f71cabcc94bbdcaa55930e84b6fa346c71987b3b",
+          "expectedImage": {
+            "id": "01M3N15ZPXK2RQEJ7BYHM268ME",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-outdoor-b0118982-eb41-4102-b9a8-3c204354244a.jpg",
+            "mimeType": "image/jpeg",
+            "width": 1200,
+            "height": 735,
+            "blurhash": "LQJal*IAofoK~padNGay00NIt6of",
+            "dominantColor": "rgb(152,135,125)",
+            "meta": {
+              "storageKey": "01M3N15ZKHJGVWFNEJ3888T0YN.jpg",
+              "caption": null,
+              "blurhash": "LQJal*IAofoK~padNGay00NIt6of",
+              "dominantColor": "rgb(152,135,125)"
+            }
+          },
+          "beforeAlt": "Napoleon Keramik Outdoor — photographie officielle 5",
+          "afterAlt": "Table Napoleon Keramik Outdoor vue de face sous une terrasse couverte ouverte sur la mer."
+        }
+      ],
+      "image": {
+        "index": 0,
+        "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/42ae842f-965d-47cf-ba6a-0501ac935576.jpg?t=1763473698",
+        "sourceSha256": "41da3b0fadea545f84da070c067c1d8223c5100a373c96fda13885ecfe290bba",
+        "expectedImage": {
+          "id": "01M3N15VZ931Z9KYR9YCTB8SMT",
+          "provider": "local",
+          "filename": "cattelan-napoleon-keramik-outdoor-42ae842f-965d-47cf-ba6a-0501ac935576.jpg",
+          "mimeType": "image/jpeg",
+          "width": 3543,
+          "height": 2362,
+          "blurhash": "LKSPX^?b?v-;_3ofM{of~qWBD$of",
+          "dominantColor": "rgb(245,244,244)",
+          "meta": {
+            "storageKey": "01M3N15V3MRE396BA1W6SW1F3V.jpg",
+            "caption": null,
+            "blurhash": "LKSPX^?b?v-;_3ofM{of~qWBD$of",
+            "dominantColor": "rgb(245,244,244)"
+          }
+        },
+        "beforeAlt": "Napoleon Keramik Outdoor — photographie officielle 1",
+        "afterAlt": "Table Napoleon Keramik Outdoor claire à pied central, vue de face."
+      }
+    },
+    {
+      "slug": "greta-outdoor",
+      "gallery": [
+        {
+          "index": 0,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/84550c1f-e4bb-4fdf-8b89-1f3dfd0a9152.jpg?t=1779706094",
+          "sourceSha256": "7326719feb5b3a4b1db867db4d9cf6dbb7e0ae3342642f4568c90cfa5743a16d",
+          "expectedImage": {
+            "id": "01M3N161KH4T7WJ0XF90QKKMEN",
+            "provider": "local",
+            "filename": "cattelan-greta-outdoor-84550c1f-e4bb-4fdf-8b89-1f3dfd0a9152.jpg",
+            "mimeType": "image/jpeg",
+            "width": 2362,
+            "height": 3543,
+            "blurhash": "LPRysf-;_4xuWBofxuR%~qWB9Ft7",
+            "dominantColor": "rgb(232,234,231)",
+            "meta": {
+              "storageKey": "01M3N160M6EJN6HHX9XV1PB39S.jpg",
+              "caption": null,
+              "blurhash": "LPRysf-;_4xuWBofxuR%~qWB9Ft7",
+              "dominantColor": "rgb(232,234,231)"
+            }
+          },
+          "beforeAlt": "Greta Outdoor — photographie officielle 1",
+          "afterAlt": "Chaise Greta Outdoor verte à dossier arrondi, vue de trois quarts."
+        },
+        {
+          "index": 1,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/3519c004-5482-4995-a521-05be138adb39.jpg?t=1778507295",
+          "sourceSha256": "ced94b926273e7e1bf76f3df8837e7da6f846e3389c62bdd28758a10c082d7c1",
+          "expectedImage": {
+            "id": "01M3N1620K39WGQNVTFJH4SS10",
+            "provider": "local",
+            "filename": "cattelan-greta-outdoor-3519c004-5482-4995-a521-05be138adb39.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LMGRhzNGn~jE~ps:WCR*xut6WBkD",
+            "dominantColor": "rgb(125,107,93)",
+            "meta": {
+              "storageKey": "01M3N161WQBGP1Z1Y71387E6CB.jpg",
+              "caption": null,
+              "blurhash": "LMGRhzNGn~jE~ps:WCR*xut6WBkD",
+              "dominantColor": "rgb(125,107,93)"
+            }
+          },
+          "beforeAlt": "Greta Outdoor — photographie officielle 2",
+          "afterAlt": "Chaise Greta Outdoor claire près d’une table sur une terrasse face à la mer."
+        },
+        {
+          "index": 2,
+          "sourceUrl": "https://download.cattelanitalia.com/multimedia/hd/f4038d37-3a2d-446a-b28c-152ffadd7aed.jpg?t=1776685692",
+          "sourceSha256": "9768ba924f9e6f9a08f75998a8dda74fe8cba3649b46e5767f394845b518fca5",
+          "expectedImage": {
+            "id": "01M3N15ZANEK5B4K2KVDRCMAT3",
+            "provider": "local",
+            "filename": "cattelan-napoleon-keramik-outdoor-5ffa98dc-1cb1-405f-860a-d868285040c7.jpg",
+            "mimeType": "image/jpeg",
+            "width": 735,
+            "height": 735,
+            "blurhash": "LOH1[88_IUR*~qRPVrR+E1I;a#kC",
+            "dominantColor": "rgb(134,115,103)",
+            "meta": {
+              "storageKey": "01M3N15Z7ZVV5D3BHYAM7MYXTM.jpg",
+              "caption": null,
+              "blurhash": "LOH1[88_IUR*~qRPVrR+E1I;a#kC",
+              "dominantColor": "rgb(134,115,103)"
+            }
+          },
+          "beforeAlt": "Greta Outdoor — photographie officielle 3",
+          "afterAlt": "Chaises Greta Outdoor autour d’une table sur une terrasse couverte face à la mer."
+        }
+      ],
+      "image": {
+        "index": 0,
+        "sourceUrl": "https://download.cattelanitalia.com/multimedia/generic/84550c1f-e4bb-4fdf-8b89-1f3dfd0a9152.jpg?t=1779706094",
+        "sourceSha256": "7326719feb5b3a4b1db867db4d9cf6dbb7e0ae3342642f4568c90cfa5743a16d",
+        "expectedImage": {
+          "id": "01M3N161KH4T7WJ0XF90QKKMEN",
+          "provider": "local",
+          "filename": "cattelan-greta-outdoor-84550c1f-e4bb-4fdf-8b89-1f3dfd0a9152.jpg",
+          "mimeType": "image/jpeg",
+          "width": 2362,
+          "height": 3543,
+          "blurhash": "LPRysf-;_4xuWBofxuR%~qWB9Ft7",
+          "dominantColor": "rgb(232,234,231)",
+          "meta": {
+            "storageKey": "01M3N160M6EJN6HHX9XV1PB39S.jpg",
+            "caption": null,
+            "blurhash": "LPRysf-;_4xuWBofxuR%~qWB9Ft7",
+            "dominantColor": "rgb(232,234,231)"
+          }
+        },
+        "beforeAlt": "Greta Outdoor — photographie officielle 1",
+        "afterAlt": "Chaise Greta Outdoor verte à dossier arrondi, vue de trois quarts."
+      }
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 /**
- * Anonymous public checks after migration 0010 or 0011. No credentials, storage state,
+ * Anonymous public checks after migration 0010 through 0013. No credentials, storage state,
  * native CMS API, publication, setup, or valid catalogue submissions are used.
  * All requests except GET/HEAD are blocked before they leave the browser.
  *
  * PUBLIC_TEST_ENGINE=chromium|webkit PUBLIC_TEST_THEME=dark|light
- * PUBLIC_TEST_REVISION=0010|0011 (default 0010 for the historical/local content)
+ * PUBLIC_TEST_REVISION=0010|0011|0012|0013 (default 0010 for historical/local content)
  * PUBLIC_TEST_URL=http://localhost:4321 node tests/editorial-refresh-browser.mjs
  * Optional --only-content / --only-layouts; PUBLIC_TEST_SCREENSHOTS=false.
  * Default: five desktop/dark and five mobile/light Chromium captures in total.
@@ -24,7 +24,7 @@ const theme = process.env.PUBLIC_TEST_THEME || 'dark';
 const revision = process.env.PUBLIC_TEST_REVISION || '0010';
 assert(['chromium', 'webkit'].includes(engine));
 assert(['dark', 'light'].includes(theme));
-assert(['0010', '0011'].includes(revision), 'Choose editorial revision 0010 or 0011.');
+assert(['0010', '0011', '0012', '0013'].includes(revision), 'Choose editorial revision 0010 through 0013.');
 const onlyContent = process.argv.includes('--only-content');
 const onlyLayouts = process.argv.includes('--only-layouts');
 assert(!(onlyContent && onlyLayouts));
@@ -34,15 +34,15 @@ const screenshots = process.env.PUBLIC_TEST_SCREENSHOTS !== 'false' && engine ==
 const captureAll = process.env.PUBLIC_TEST_CAPTURE_VIEWPORTS === 'all';
 const load = async name => JSON.parse(await readFile(`content/${name}.json`, 'utf8'));
 const entries = (await Promise.all(['editorial-refresh-pages', 'editorial-refresh-products', 'editorial-refresh-journal'].map(load))).flat();
-if (revision === '0011') {
-  const updates = await load('seo-editorial-2026-09-29');
+for (const name of revision === '0010' ? [] : ['seo-editorial-2026-09-29', ...(['0012','0013'].includes(revision) ? ['seo-followup-2026-09-30'] : [])]) {
+  const updates = await load(name);
   const seen = new Set();
   for (const update of updates) {
     const key = `${update.collection}/${update.slug}`;
-    assert(!seen.has(key), `Duplicate revision 0011 entry: ${key}`);
+    assert(!seen.has(key), `Duplicate revision entry: ${key}`);
     seen.add(key);
     const entry = entries.find(item => item.collection === update.collection && item.slug === update.slug);
-    assert(entry, `Revision 0011 must update an existing 0010 entry: ${key}`);
+    assert(entry, `Revision must update an existing 0010 entry: ${key}`);
     entry.after = {...entry.after, ...update.after};
     if (update.seoAfter) entry.seoAfter = {...entry.seoAfter, ...update.seoAfter};
   }
@@ -50,6 +50,7 @@ if (revision === '0011') {
 const global = entries.find(entry => entry.collection === 'site_content' && entry.slug === 'global').after;
 const modelBaseline = new Map((await load('model-editorial')).entries.map(entry => [entry.slug, entry]));
 const modelDetails = new Map((await load('model-details')).models.map(entry => [entry.slug, entry]));
+const galleryAlts = new Map(revision === '0013' ? (await load('gallery-alt-2026-09-30')).entries.map(entry => [entry.slug, entry]) : []);
 const location = await load('showroom-location');
 const menu = await load('editorial-refresh-menu');
 const phone = `tel:${location.global.after.contact_phone.replace(/[^+\d]/gu, '')}`;
@@ -146,7 +147,7 @@ async function closeContext(context) {
   await context.close().catch(() => {});
 }
 async function checkFormMarkup(page, html, path) {
-  const count = path === '/' ? 2 : 1;
+  const count = 1;
   const selector = '[data-catalogue-form]';
   assert.equal((await nodes(page, html, selector)).length, count, path);
   const attributes = {
@@ -173,9 +174,11 @@ async function verifyContent(browser) {
     for (const path of routes) {
       const html = await markup(path);
       assert.equal((await nodes(page, html, 'head > title')).length, 1, path);
-      assert.equal((await nodes(page, html, 'h1')).length, path === '/' ? 2 : 1, path);
+      assert.equal((await nodes(page, html, 'h1')).length, 1, path);
       assert((await nodes(page, html, 'main'))[0]?.length > 20, `${path}: rendered main content.`);
-      for (const href of await nodes(page, html, 'a[href]', 'href')) {
+      // Finish originals are already preserved assets, verified by the bounded
+      // swatch test. Do not download hundreds of unchanged files on every audit.
+      for (const href of await nodes(page, html, 'a[href]:not(.model-finish-original)', 'href')) {
         const target = new URL(href, new URL(path, base));
         if (target.origin === base.origin) localLinks.add(target.href);
       }
@@ -201,7 +204,6 @@ async function verifyContent(browser) {
         await exact(page, html, '.page-reading-section .page-prose > :is(p,h2,h3)', after.content.map(blockText), path);
         await exact(page, index, `.family-tile[href="${path}"] > p`, [after.card_text], path);
         await exact(page, home, `#collections .cc[href="${path}"] > p`, [after.card_text], path);
-        await exact(page, home, `#m-collections a[href="${path}"] .m-family-summary`, [after.card_text], path);
         const cards = await nodes(page, html, '.model-card a', 'href');
         for (const href of cards) { assert.match(href, /^\/modeles\/[^/]+\/$/u); reachedModels.add(href); }
         const editorialModels = after.content.flatMap(block => block.markDefs || []).filter(mark => mark.href?.startsWith('/modeles/')).map(mark => mark.href);
@@ -219,12 +221,21 @@ async function verifyContent(browser) {
         await exact(page, html, '#model-gallery-heading', ['Photos']);
         const details = modelDetails.get(entry.slug);
         assert.equal((await nodes(page, html, '.model-gallery-view')).length, details.gallery.length, path);
+        if (galleryAlts.has(entry.slug)) {
+          const expected = galleryAlts.get(entry.slug);
+          assert.deepEqual(await nodes(page, html, '.model-gallery-view img', 'alt'), expected.gallery.map(image => image.afterAlt), `${path}: visually reviewed gallery descriptions`);
+          if (expected.image) assert.deepEqual(await nodes(page, html, '.model-hero-image img', 'alt'), [expected.image.afterAlt]);
+          assert((await nodes(page, html, '.model-gallery-thumbnails img', 'alt')).every(alt => alt === ''), 'Labelled navigation thumbnails stay decorative');
+        }
         await exact(page, html, '.model-dimension-value', details.dimensions.map(item => item.value), `${path}: technical dimensions retained.`);
         const pdf = (await nodes(page, html, '.model-technical-download', 'href'))[0];
         assert(pdf, `${path}: technical PDF remains linked.`);
         assert.match((await get(pdf, 'HEAD')).headers.get('content-type') || '', /application\/pdf/u);
         const groups = await nodes(page, html, '.model-finish-group h3');
         assert(groups.length > 0 && groups.every(group => !/metals|Cuir Chaise\/Lit|Tissu Canapé/u.test(group)), `${path}: translated finish groups.`);
+        const originalLinks = await nodes(page, html, '.model-finish-original', 'href');
+        const originalImages = await nodes(page, html, '.model-finish-original img', 'data-original-src');
+        assert.deepEqual(originalLinks, originalImages, `${path}: each finish links to its own preserved original.`);
         assert(!(await nodes(page, html, '.model-finish > p')).some(name => /balnc/u.test(name)));
       } else if (entry.collection === 'posts') {
         await exact(page, html, '.page-lead', [after.excerpt], path);
@@ -260,11 +271,10 @@ async function verifyContent(browser) {
     }
     assert.equal(reachedModels.size, 11);
     const homeEntry = pageEntries.find(entry => entry.slug === 'home');
-    await exact(page, home, '#accueil .over .hero-intro, #m-accueil > .txt', [homeEntry.after.intro, homeEntry.after.intro]);
+    await exact(page, home, '#accueil .over .hero-intro', [homeEntry.after.intro]);
     for (const section of homeEntry.after.sections) {
       const desktop = { brand: '#italie .col', collections: '#collections .intro', showroom: '#showroom .info', catalogue: '#catalogue .form', journal: '#journal' }[section.section_key];
-      const mobile = `#m-${section.section_key === 'brand' ? 'italie' : section.section_key}`;
-      await exact(page, home, `${desktop} > .txt, ${mobile} > .txt`, section.text ? [section.text, section.text] : [], section.section_key);
+      await exact(page, home, `${desktop} > .txt:not(.showroom-invitation)`, section.text ? [section.text] : [], section.section_key);
     }
     await exact(page, home, '#italie .cap', [homeEntry.after.brand_caption]);
     await exact(page, home, '#plan .note, #m-plan > .legal', []);
@@ -427,16 +437,16 @@ async function verifyLayouts(browser) {
         await seek(page, '#collections', 1);
         await seek(page, '#showroom', .7);
       } else {
-        await scrollToContent(page, '#m-showroom');
-        const picture = page.locator('#m-showroom .mimg img');
+        await scrollToContent(page, '#showroom');
+        const picture = page.locator('#showroom .showroom-photo > img');
         const before = await picture.evaluate(image => image.style.transform);
         await page.evaluate(() => scrollBy({ top: 70, behavior: 'instant' }));
         await page.waitForTimeout(200);
         assert.notEqual(await picture.evaluate(image => image.style.transform), before, 'Mobile image drift follows scrolling.');
-        await scrollToContent(page, '#m-showroom');
+        await scrollToContent(page, '#showroom');
       }
       await capture(page, 'home-showroom', viewport);
-      const homeShowroom = page.locator(desktop ? '#showroom .info' : '#m-showroom');
+      const homeShowroom = page.locator('#showroom .info');
       assert.equal(await homeShowroom.locator('a').count(), 1);
       if (desktop) {
         const bounds = await homeShowroom.boundingBox();

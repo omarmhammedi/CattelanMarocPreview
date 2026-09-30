@@ -20,7 +20,7 @@ const questions = page.sections?.filter((section: any) => section.key?.startsWit
     {page.eyebrow && <p class="kick">{page.eyebrow}</p>}
     <h1 {...page.entry?.edit?.title}>{page.title}</h1>
     {page.intro && <p class="page-lead" {...page.entry?.edit?.intro}>{page.intro}</p>}
-    {site.whatsappUrl && <a class="text-link intro-link" href={site.whatsappUrl} target="_blank" rel="noopener noreferrer">{site.labels.contact}<span aria-hidden="true">↗</span></a>}
+    {site.whatsappUrl && <a class="text-link intro-link" href={site.whatsappUrl} target="_blank" rel="noopener noreferrer">{site.labels.contact} · WhatsApp<span aria-hidden="true">↗</span></a>}
   </section>
   <section class="showroom-information page-gutter">
     <div class="showroom-editorial">
@@ -38,7 +38,7 @@ const questions = page.sections?.filter((section: any) => section.key?.startsWit
       </dl>
       {contactNotes.map((section: any) => <EditorialSection section={section} />)}
       <ShowroomMap embedUrl={site.mapEmbedUrl} mapUrl={site.mapUrl} name={site.name} address={site.address} />
-      {site.whatsappUrl && <a class="text-link" href={site.whatsappUrl} target="_blank" rel="noopener noreferrer">{site.labels.contact}<span aria-hidden="true">↗</span></a>}
+      {site.whatsappUrl && <a class="text-link" href={site.whatsappUrl} target="_blank" rel="noopener noreferrer">{site.labels.contact} · WhatsApp<span aria-hidden="true">↗</span></a>}
     </aside>
   </section>
   {questions.length > 0 && <section class="page-faq page-gutter">

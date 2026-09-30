@@ -13,11 +13,11 @@ const id = '0010-editorial-refresh';
 const pathFor = (collection, slug) => `/_emdash/api/content/${collection}/${encodeURIComponent(slug)}`;
 const schemaPath = collection => `/_emdash/api/schema/collections/${collection}?includeFields=true`;
 const allowed = {
-  pages: ['title', 'intro', 'sections', 'brand_caption', 'seo_title', 'meta_description', 'hero_image'],
+  pages: ['title', 'intro', 'content', 'sections', 'brand_caption', 'seo_title', 'meta_description', 'hero_image'],
   families: ['intro', 'card_text', 'content', 'seo_title', 'meta_description', 'image_caption', 'image'],
   models: ['description', 'content', 'availability_note'],
   posts: ['title', 'excerpt', 'content', 'sources', 'cta_text', 'cta_label', 'cta_href', 'seo_title', 'meta_description', 'image_caption', 'image'],
-  site_content: ['footer_text', 'catalogue_label', 'contact_label', 'model_notice', 'preview_notice', 'form_email_label', 'form_opt_in_label', 'form_hint', 'form_privacy', 'form_pending', 'form_email_error', 'form_error', 'form_success_title', 'form_success_text', 'form_unavailable', 'map_note'],
+  site_content: ['footer_text', 'catalogue_label', 'contact_label', 'whatsapp_url', 'model_notice', 'preview_notice', 'form_email_label', 'form_opt_in_label', 'form_hint', 'form_privacy', 'form_pending', 'form_email_error', 'form_error', 'form_success_title', 'form_success_text', 'form_unavailable', 'map_note'],
 };
 
 function safeHref(href) {
@@ -33,9 +33,17 @@ export function validateRefresh(entries, menu) {
     assert(!seen.has(`${e.collection}/${e.slug}`), 'Duplicate refresh entry.');
     seen.add(`${e.collection}/${e.slug}`);
     const hasSeo = 'seoBefore' in e || 'seoAfter' in e;
-    assert.deepEqual(Object.keys(e).sort(), ['collection', 'slug', 'before', 'after', ...(hasSeo ? ['seoBefore', 'seoAfter'] : [])].sort());
+    const hasAbsent = Object.hasOwn(e, 'beforeAbsent');
+    assert.deepEqual(Object.keys(e).sort(), ['collection', 'slug', 'before', 'after', ...(hasSeo ? ['seoBefore', 'seoAfter'] : []), ...(hasAbsent ? ['beforeAbsent'] : [])].sort());
     assert(e.before && e.after && Object.keys(e.after).length, 'Empty change.');
-    assert.deepEqual(Object.keys(e.before).sort(), Object.keys(e.after).sort());
+    // A native unset optional URL is absent, not null. Keep this explicit and
+    // limited to the newly configured WhatsApp field; do not relax old guards.
+    if (hasAbsent) {
+      assert(e.collection === 'site_content' && e.slug === 'global');
+      assert.deepEqual(e.beforeAbsent, ['whatsapp_url'], 'Only an absent WhatsApp URL may be introduced.');
+      assert(!Object.hasOwn(e.before, 'whatsapp_url') && Object.hasOwn(e.after, 'whatsapp_url'));
+    }
+    assert.deepEqual([...Object.keys(e.before), ...(e.beforeAbsent || [])].sort(), Object.keys(e.after).sort());
     for (const [key, value] of Object.entries(e.after)) {
       assert(allowed[e.collection].includes(key), `Forbidden editorial field: ${e.collection}.${key}`);
       if (['image', 'hero_image'].includes(key)) {
@@ -68,6 +76,8 @@ export function validateRefresh(entries, menu) {
             for (const span of block.children) assert(span._type === 'span' && typeof span.text === 'string' && span.text.length < 10000 && Array.isArray(span.marks) && span.marks.every(m => marks.has(m)));
           }
         }
+      } else if (key === 'whatsapp_url') {
+        assert(e.slug === 'global' && typeof value === 'string' && /^https:\/\/wa\.me\/[1-9][0-9]{7,14}$/.test(value), 'WhatsApp must be an exact HTTPS wa.me URL with international digits only.');
       } else assert(typeof value === 'string' && value.length <= 10000, 'Invalid editorial text.');
       if (key === 'cta_href' && value) safeHref(value);
     }
@@ -103,7 +113,7 @@ export function planCopy(response, entry) {
   assertNoDraft(response.item);
   assert.equal(response.item.status, 'published', 'This refresh only changes published entries; preserve the draft.');
   assert(response._rev && response.item.type === entry.collection && response.item.slug === entry.slug, 'Entry identity/revision mismatch.');
-  const data = Object.fromEntries(Object.keys(entry.before).map(key => [key, response.item.data[key]]));
+  const data = Object.fromEntries(Object.keys(entry.after).filter(key => Object.hasOwn(response.item.data, key)).map(key => [key, response.item.data[key]]));
   const seo = entry.seoBefore ? { title: response.item.seo?.title ?? null, description: response.item.seo?.description ?? null } : undefined;
   if (isDeepStrictEqual(completedData(data, entry.after), entry.after) && isDeepStrictEqual(seo, entry.seoAfter)) return false;
   assert(isDeepStrictEqual(data, entry.before) && isDeepStrictEqual(seo, entry.seoBefore), `${entry.collection}/${entry.slug}: text/SEO differs from the exact initial or completed state. Preserve this edit or partial migration and review it; nothing overwritten.`);
@@ -120,7 +130,7 @@ export async function prepareRefresh(api, entries, menu) {
     assert(schema.supports.includes('revisions') && (!entry.seoAfter || schema.supports.includes('seo')));
     for (const [key, value] of Object.entries(entry.after)) {
       const field = schema.fields.find(f => f.slug === key);
-      const type = key === 'content' ? 'portableText' : ['sections', 'sources'].includes(key) ? 'repeater' : ['image', 'hero_image'].includes(key) ? 'image' : null;
+      const type = key === 'content' ? 'portableText' : ['sections', 'sources'].includes(key) ? 'repeater' : ['image', 'hero_image'].includes(key) ? 'image' : key === 'whatsapp_url' ? 'url' : null;
       assert(field && (type ? field.type === type : ['text', 'string'].includes(field.type)), `${c}.${key}: incompatible schema.`);
       if (typeof value === 'string') { assert(!field.required || value.trim()); assert(!field.validation?.maxLength || value.length <= field.validation.maxLength); }
     }

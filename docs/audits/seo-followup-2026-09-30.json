@@ -1,0 +1,253 @@
+{
+  "status": "Published and final public checks passed",
+  "dateTimezone": "America/Toronto",
+  "nativePublications": {
+    "editorialEntries": 4,
+    "modelEntries": 11,
+    "galleryAlts": 129,
+    "heroAlts": 11
+  },
+  "preservation": {
+    "verifiedAt": "2026-09-30T02:28:07.845Z",
+    "integrity": "ok",
+    "foreignKeyViolations": 0,
+    "tables": 74,
+    "unchangedTables": 65,
+    "newRevisions": 15,
+    "existingRevisionsPreserved": 126,
+    "users": 2,
+    "passkeys": 3,
+    "media": 625,
+    "allUntargetedEditorialFieldsPreserved": true
+  },
+  "isolated": {
+    "unitTests": 156,
+    "editorial": {
+      "passed": true,
+      "checks": [
+        "Four native before-states are exact; dry planning preserves revisions/content and performs no writes.",
+        "Four entries publish with SEO/media/references preserved, five contextual links and WhatsApp; repeat performs zero writes.",
+        "Showroom body draft is private, valid preview works, invalid preview fails, pending draft is preserved, and clearing removes body without losing contact note.",
+        "WhatsApp follows native global draft/preview/publication and disappears when cleared; completed content restored before final fixture restoration.",
+        "Original fixture content, references, native SEO, media, menu and schemas restored; no pending drafts remain."
+      ]
+    },
+    "home": {
+      "passed": true,
+      "checks": [
+        "All five section images/CTAs, extra section and rich text appear once; draft stays private, signed preview and publication render the same values.",
+        "Cleared hero/brand/showroom photographs have no stale fallback and retain readable scenes.",
+        "Clearing optional sections removes their images, CTAs and catalogue form in preview and publication without resurrecting defaults.",
+        "Original fixture homepage, metadata, relationships and schema restored; no pending draft."
+      ]
+    },
+    "gallery": {
+      "restored": true,
+      "checks": [
+        "Native draft alt stays private while its signed preview shows the new description.",
+        "Native publication changes only the two gallery alt values and the matching hero; captions, image metadata, SEO, schema and parent relations are preserved.",
+        "Reapplying a fully published alt update performs no reads or writes.",
+        "An independently customized published alt aborts preparation without overwriting any gallery value.",
+        "An existing unpublished draft is rejected and left untouched.",
+        "Original fixture fields, SEO and schema restored; no new media, administrator or authentication state created."
+      ]
+    },
+    "catalogue": {
+      "groupsPassed": 11,
+      "browserSubmissions": 8
+    }
+  },
+  "public": {
+    "chromium": {
+      "passed": true,
+      "metadataRoutes": 28,
+      "layouts": 24,
+      "errors": [],
+      "writes": []
+    },
+    "webkit": {
+      "passed": true,
+      "layouts": 24,
+      "errors": [],
+      "writes": []
+    },
+    "content": {
+      "passed": true,
+      "checks": [
+        {
+          "name": "SSR /: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /collections/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /showroom-casablanca/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /catalogue/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /collections/tables/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /collections/chaises-tabourets/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /collections/canapes-fauteuils/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /collections/buffets-bibliotheques/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /collections/luminaires/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /collections/mobilier-exterieur/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/skorpio/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/napoleon-keramik/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/rhonda/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/greta/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/ruby/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/ruby-lounge/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/chelsea/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/airport/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/bloom/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/napoleon-keramik-outdoor/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /modeles/greta-outdoor/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /journal/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /journal/choisir-forme-proportions-table-salle-a-manger/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /journal/associer-table-chaises-salle-a-manger/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /journal/ceramique-verre-bois-choisir-finition-meuble/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /journal/composer-salon-canape-fauteuil/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "SSR /journal/choisir-buffet-bibliotheque-salon/: contenu publié, métadonnées et liens éditoriaux"
+        },
+        {
+          "name": "Révision 0013 : accueil, showroom, catalogue, formulaire facultatif et navigation — champs globaux et suppression des répétitions"
+        },
+        {
+          "name": "199 liens internes : réponses 200 et ancres présentes"
+        }
+      ],
+      "routeCount": 28,
+      "linkCount": 199
+    },
+    "home": {
+      "htmlBytes": 369210,
+      "imageElements": 21,
+      "imagesWithoutDimensions": 0,
+      "h1": [
+        "Vivre italien, à Casablanca"
+      ]
+    },
+    "indexing": "robots Disallow /; empty sitemap with noindex retained",
+    "adminStatus": 302,
+    "galleryFinalDryRunEntries": 0,
+    "homeCaptures": {
+      "passed": true,
+      "positions": 36,
+      "errors": [],
+      "writes": [],
+      "privateRequests": [],
+      "finishedAt": "2026-09-30T02:37:27.280Z"
+    },
+    "swatchesReport": "seo-swatches-2026-09-29.json"
+  },
+  "localVisual": {
+    "scope": "Local unchanged CMS content, 0010; source homepage responsive unification",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "themes": [
+      "dark",
+      "light"
+    ],
+    "positions": 36,
+    "matchedNodes": 254,
+    "rectTolerancePx": 0.6,
+    "positionsWithDifferences": 0,
+    "maximumScrollDelta": 0,
+    "before": {
+      "h1": 2,
+      "images": 35,
+      "forms": 2,
+      "maps": 2
+    },
+    "after": {
+      "h1": 1,
+      "images": 21,
+      "forms": 1,
+      "maps": 1
+    },
+    "finalCaptures": "after/",
+    "visualReview": [
+      "map-1440-dark.jpg",
+      "map-1440-light.jpg",
+      "map-390-dark.jpg",
+      "map-390-light.jpg",
+      "journal-390-dark.jpg",
+      "journal-390-light.jpg",
+      "showroom-1440-light.jpg",
+      "catalogue-1440-dark.jpg"
+    ],
+    "limitations": [
+      "Not a pixel-perfect comparison or a Core Web Vitals measurement.",
+      "Local CMS copy is unchanged 0010; final public editorial copy must be captured separately.",
+      "No-JavaScript map remains static; responsive camera framing is applied by JavaScript."
+    ],
+    "frontendRequestsWereReadOnly": true
+  },
+  "build": {
+    "passed": true,
+    "durationSeconds": 32.98,
+    "astroCheck": {
+      "files": 132,
+      "errors": 0,
+      "warnings": 0,
+      "hints": 2,
+      "hintScope": "Temporary ignored map diagnostic only"
+    }
+  },
+  "workerVersion": "220432fc-d357-4877-807b-48b7abb9a3fa",
+  "completedAt": "2026-09-30T02:41:02.964Z"
+}

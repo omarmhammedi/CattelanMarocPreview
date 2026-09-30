@@ -68,6 +68,14 @@ const dimensions = (model.dimensions || []).filter(item => item.value || item.se
 const drawings = (model.drawings || []).filter(item => item.image?.src).sort((a, b) =>
   (Number(a.row) || 0) - (Number(b.row) || 0) || (Number(a.column) || 0) - (Number(b.column) || 0));
 const finishGroups = new Map<string, {label: string; finishes: Finish[]}>();
+// Match the two/three/four-column grid, including the width of a contained
+// image within its 1.25-ratio frame. Keep DPR 2 detail at normal desktop widths;
+// each link retains access to the original without changing this presentation.
+function finishImageSizes(image: Picture) {
+  const ratio = image.width && image.height ? image.width / image.height : 1.25;
+  const factor = Math.min(1, ratio / 1.25);
+  return `(max-width: 500px) calc((50vw - max(20px, 4.4vw) - 10px) * ${factor}), (max-width: 850px) calc((30.4vw - 16px) * ${factor}), calc(20.55vw * ${factor})`;
+}
 for (const finish of model.finishes || []) {
   if (!finish.name && !finish.code && !finish.image?.src) continue;
   const key = JSON.stringify([finish.group || '', finish.materialGroup || '', finish.material || '']);
@@ -150,7 +158,9 @@ for (const finish of model.finishes || []) {
       <summary><h3>{label || 'Finitions'}</h3><span class="model-finish-count">{finishes.length} {finishes.length === 1 ? 'finition' : 'finitions'}</span><span class="model-finish-toggle" aria-hidden="true">+</span></summary>
       <ul class="model-finish-list" role="list">
         {finishes.map(finish => <li class="model-finish">
-          {finish.image?.src && <div class="model-finish-image"><img src={finish.image.src} alt={finish.image.alt || [finish.name, finish.code].filter(Boolean).join(' — ')} width={finish.image.width} height={finish.image.height} loading="lazy" /></div>}
+          {finish.image?.src && <a class="model-finish-image model-finish-original" href={finish.image.src} target="_blank" rel="noopener noreferrer" aria-label={`Afficher l’échantillon original${finish.name || finish.code ? ` : ${[finish.name, finish.code].filter(Boolean).join(' — ')}` : ''} (nouvel onglet)`}>
+            <img {...imageAttributes(finish.image, finishImageSizes(finish.image), 768)} alt={finish.image.alt || [finish.name, finish.code].filter(Boolean).join(' — ')} loading="lazy" />
+          </a>}
           {finish.name && <p>{finishNameLabel(finish)}</p>}
           {finishHasSeparateCode(finish) && <span class="model-finish-code">{finish.code}</span>}
         </li>)}

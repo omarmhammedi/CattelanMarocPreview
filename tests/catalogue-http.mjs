@@ -60,10 +60,12 @@ async function download(url, expectedHash) {
 async function checkBrowserRequests(expectedPdfHash) {
   const browser = await chromium.launch({ headless: true, args: ["--no-sandbox", "--disable-dev-shm-usage"], ...(process.env.PLAYWRIGHT_EXECUTABLE_PATH ? { executablePath: process.env.PLAYWRIGHT_EXECUTABLE_PATH } : {}) });
   try {
-    for (const consent of [false, true]) {
-      const page = await browser.newPage();
-      await page.goto(new URL("/catalogue/", base).href, { waitUntil: "networkidle" });
+    for (const path of ["/catalogue/", "/"]) for (const viewport of [{width:1440,height:900},{width:390,height:844}]) for (const consent of [false, true]) {
+      const page = await browser.newPage({viewport, reducedMotion:"reduce"});
+      await page.addInitScript(theme => localStorage.setItem("ci-mode", theme), consent ? "light" : "dark");
+      await page.goto(new URL(path, base).href, { waitUntil: "networkidle" });
       const form = page.locator("[data-catalogue-form]");
+      assert.equal(await form.count(), 1, "One responsive catalogue form per page.");
       assert.equal(await form.locator('[name="communicationsConsent"]').isChecked(), false, "Consent must begin unchecked.");
       await form.locator('[name="name"]').fill("Test catalogue local");
       await form.locator('[name="email"]').fill("catalogue-integration@example.invalid");
@@ -73,13 +75,14 @@ async function checkBrowserRequests(expectedPdfHash) {
       const payload = (await sent).postDataJSON();
       created.push(payload.requestId);
       assert.equal(payload.communicationsConsent, consent);
+      assert.equal(payload.sourcePath, path);
       const link = form.locator(".form-message a[download]");
       await link.waitFor();
       await download(await link.getAttribute("href"), expectedPdfHash);
       assert.equal((await contact(payload.requestId)).communicationsConsent, consent);
       await page.close();
     }
-    record("Formulaire réel Chromium : téléchargement après saisie sans consentement, puis avec consentement explicite ; les deux choix sont persistés correctement.");
+    record("Formulaire réel Chromium accueil/catalogue, ordinateur/mobile, sombre/clair : téléchargement du PDF et persistance des deux choix de consentement facultatif (8 cas).");
   } finally { await browser.close(); }
 }
 

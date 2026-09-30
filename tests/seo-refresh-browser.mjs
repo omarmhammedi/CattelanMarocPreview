@@ -117,7 +117,7 @@ async function verifyContent(browser) {
       assert.equal(data.titleCount, 1, `${path}: one document title`);
       assert(data.title && !titles.has(data.title), `${path}: unique document title`);
       titles.add(data.title);
-      assert.equal(data.h1.length, path === '/' ? 2 : 1, `${path}: current responsive heading composition`);
+      assert.equal(data.h1.length, 1, `${path}: one semantic H1 for every viewport`);
       assert.equal(data.canonical.length, 1, `${path}: canonical`);
       const canonical = new URL(data.canonical[0]);
       canonicalOrigin ||= canonical.origin;
@@ -159,6 +159,7 @@ async function verifyContent(browser) {
         assert.equal(typed('FurnitureStore').length, 1, `${path}: showroom schema`);
         const store = typed('FurnitureStore')[0];
         assert(store.address && store.telephone && store.geo && store.openingHoursSpecification, `${path}: existing published store information`);
+        assert.equal(store.address.addressCountry, 'MA');
         assert.equal('priceRange' in store, false);
       }
       report.pages.push({path, htmlBytes: Buffer.byteLength(html), ...data});

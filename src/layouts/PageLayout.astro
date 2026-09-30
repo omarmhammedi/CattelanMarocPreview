@@ -57,7 +57,7 @@ const navigation = site.navigation || [];
       </nav>
       <div class="page-footer-contact">
         <p>{site.city}</p>
-        {site.whatsappUrl && <a href={site.whatsappUrl} target="_blank" rel="noopener noreferrer">{site.labels.contact} <span aria-hidden="true">↗</span></a>}
+        {site.whatsappUrl && <a href={site.whatsappUrl} target="_blank" rel="noopener noreferrer">{site.labels.contact} · WhatsApp <span aria-hidden="true">↗</span></a>}
         {site.phone && <a href={`tel:${site.phone.replace(/[^+\d]/g, '')}`}>{site.phone}</a>}
         {site.publicEmail && <a class="public-email" href={`mailto:${site.publicEmail}`}>{site.publicEmail}</a>}
       </div>

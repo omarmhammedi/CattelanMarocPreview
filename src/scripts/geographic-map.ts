@@ -31,11 +31,24 @@ function initializeGeographicMaps() {
     const pan = wrapper.querySelector<HTMLButtonElement>('[data-map-pan]');
     const streetLayer = wrapper.querySelector<SVGGElement>('[data-map-street-labels]');
     const markerElement = wrapper.querySelector<SVGGElement>('[data-showroom-marker]');
-    const initial = parseRectangle(wrapper.dataset.initialView);
+    const desktopInitial = parseRectangle(wrapper.dataset.initialView);
+    const mobileInitial = parseRectangle(wrapper.dataset.mobileView);
+    const mobileLayout = matchMedia('(max-width: 820px)');
     const bounds = parseRectangle(wrapper.dataset.bounds);
     const marker = wrapper.dataset.pin?.trim().split(/\s+/).map(Number);
-    if (!viewport || !svg || !controls || !zoomIn || !zoomOut || !reset || !pan || !initial || !bounds) return;
+    if (!viewport || !svg || !controls || !zoomIn || !zoomOut || !reset || !pan || !desktopInitial || !bounds) return;
 
+    let initial = mobileInitial && mobileLayout.matches ? mobileInitial : desktopInitial;
+    let cameraChanged = false;
+    const updateLabelLayout = () => {
+      if (!mobileInitial) return;
+      wrapper.classList.toggle('geographic-map-mobile', mobileLayout.matches);
+      const label = markerElement?.querySelector('.map-store-label');
+      label?.setAttribute('x', mobileLayout.matches ? '0' : '22');
+      label?.setAttribute('y', mobileLayout.matches ? '-80' : '-48');
+      label?.setAttribute('text-anchor', mobileLayout.matches ? 'middle' : 'start');
+    };
+    updateLabelLayout();
     const controller = new AbortController();
     const options = { signal: controller.signal };
     let zoom = initialZoom;
@@ -176,6 +189,7 @@ function initializeGeographicMaps() {
           Math.abs(centerX - initial.x - initial.width / 2) < 1 && Math.abs(centerY - initial.y - initial.height / 2) < 1) {
         [centerX, centerY] = marker;
       }
+      cameraChanged = true;
       zoom = clamp(zoom * factor, minimumZoom, maximumZoom);
       renderCamera();
     };
@@ -190,6 +204,7 @@ function initializeGeographicMaps() {
       // Keep the geographic point under the cursor still as the scale changes.
       centerX += offsetX * (1 - zoom / nextZoom);
       centerY += offsetY * (1 - zoom / nextZoom);
+      cameraChanged = true;
       zoom = nextZoom;
       renderCamera();
     };
@@ -217,6 +232,7 @@ function initializeGeographicMaps() {
       if (Math.abs(nextX - centerX) < 1e-8 && Math.abs(nextY - centerY) < 1e-8) return;
       event.preventDefault();
       finishDrag();
+      cameraChanged = true;
       centerX = nextX; centerY = nextY;
       renderCamera();
     }, { ...options, passive: false });
@@ -259,6 +275,7 @@ function initializeGeographicMaps() {
 
     const recenter = () => {
       finishDrag();
+      cameraChanged = false;
       zoom = initialZoom;
       centerX = initial.x + initial.width / 2;
       centerY = initial.y + initial.height / 2;
@@ -295,6 +312,7 @@ function initializeGeographicMaps() {
         case 'Home': recenter(); break;
         default: return;
       }
+      if (event.key.startsWith('Arrow')) cameraChanged = true;
       event.preventDefault();
       renderCamera();
     }, options);
@@ -312,6 +330,7 @@ function initializeGeographicMaps() {
     viewport.addEventListener('pointermove', event => {
       if (event.pointerType !== 'touch') pointer = { x: event.clientX, y: event.clientY };
       if (!drag || event.pointerId !== drag.pointerId) return;
+      cameraChanged = true;
       centerX = drag.centerX - (event.clientX - drag.x) * view.width / viewport.clientWidth;
       centerY = drag.centerY - (event.clientY - drag.y) * view.height / viewport.clientHeight;
       renderCamera();
@@ -326,7 +345,25 @@ function initializeGeographicMaps() {
     viewport.addEventListener('lostpointercapture', endPointer, options);
     window.addEventListener('blur', () => { finishDrag(); endGesture(); touching = false; }, options);
 
-    const resized = () => { finishDrag(); render(); };
+    const resized = () => {
+      finishDrag();
+      if (mobileInitial) {
+        const nextInitial = mobileLayout.matches ? mobileInitial : desktopInitial;
+        if (initial !== nextInitial) {
+          initial = nextInitial;
+          // A fresh map adopts the composition for this viewport. A visitor's
+          // chosen center and zoom survive resizing; reset uses the new frame.
+          if (!cameraChanged) {
+            zoom = initialZoom;
+            centerX = initial.x + initial.width / 2;
+            centerY = initial.y + initial.height / 2;
+          }
+          updateLabelLayout();
+        }
+      }
+      render();
+    };
+    if (mobileInitial) mobileLayout.addEventListener('change', resized, options);
     const observer = typeof ResizeObserver === 'undefined' ? undefined : new ResizeObserver(resized);
     if (observer) observer.observe(viewport);
     else window.addEventListener('resize', resized, options);

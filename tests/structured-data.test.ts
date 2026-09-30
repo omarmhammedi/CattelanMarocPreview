@@ -81,7 +81,7 @@ test('published French showroom hours are converted without inventing hours for 
 test('FurnitureStore reflects only current CMS values and current showroom picture', () => {
   const graph = furnitureStoreGraph(site, {slug: 'home', hero_image: '/media/table.jpg', showroom_image: '/media/showroom.jpg'}, origin)!;
   assert.equal(graph['@type'], 'FurnitureStore');
-  assert.deepEqual(graph.address, {'@type': 'PostalAddress', streetAddress: '8–10 Avenue Mohamed Sijilmassi', addressLocality: 'Casablanca', postalCode: '20250', addressCountry: 'Maroc'});
+  assert.deepEqual(graph.address, {'@type': 'PostalAddress', streetAddress: '8–10 Avenue Mohamed Sijilmassi', addressLocality: 'Casablanca', postalCode: '20250', addressCountry: 'MA'});
   assert.equal(graph.image, origin + '/media/showroom.jpg');
   assert.equal(graph.hasMap, site.mapUrl);
   assert.equal(graph.url, origin + '/showroom-casablanca/');
@@ -99,6 +99,25 @@ test('new or unfamiliar CMS address is retained without stale locality or postco
   const graph = furnitureStoreGraph({...site, address: 'Adresse à confirmer'}, {}, origin)!;
   assert.deepEqual(graph.address, {'@type': 'PostalAddress', streetAddress: 'Adresse à confirmer'});
   assert.equal(furnitureStoreGraph({...site, name: ''}, {}, origin), undefined);
+  assert.equal((furnitureStoreGraph({...site, address: '8 Avenue Exemple, Casablanca 20250, Morocco'}, {}, origin)?.address as any).addressCountry, 'MA');
+  assert.equal((furnitureStoreGraph({...site, address: '8 Avenue Exemple, Autreville 12345, FR'}, {}, origin)?.address as any).addressCountry, 'FR');
+});
+
+test('store social identities use configured web profiles, survive projection and disappear when cleared', () => {
+  const current = {...site, settings: {social: {
+    instagram: 'https://www.instagram.com/showroom-example/', facebook: 'https://www.facebook.com/showroom-example/',
+    github: 'https://www.instagram.com/showroom-example/', twitter: '@unknown', linkedin: 'javascript:alert(1)', youtube: 'https://private:secret@example.test/',
+  }}};
+  const home = page('/', {content: {collection: 'pages', id: 'p1', slug: 'home'}});
+  const entry = {slug: 'home'};
+  const expected = ['https://www.instagram.com/showroom-example/', 'https://www.facebook.com/showroom-example/'];
+  assert.deepEqual(furnitureStoreGraph(current, entry, origin)?.sameAs, expected);
+  const projected = schemaProjection(home, current, entry);
+  assert.deepEqual(furnitureStoreGraph(projected.site!, projected.entry!, origin)?.sameAs, expected);
+  assert.equal('settings' in projected.site!, false);
+  for (const social of [undefined, {}, {instagram: ''}]) {
+    assert.equal('sameAs' in furnitureStoreGraph({...site, settings: {social}}, entry, origin)!, false);
+  }
 });
 
 test('Product describes actual model images and dimensions without fictitious sales data', () => {

@@ -24,7 +24,13 @@ function initializeHome() {
   const track = collections?.querySelector<HTMLElement>('.track');
   const invitation = home.querySelector<HTMLElement>('#showroom .say h2');
   const scenes = [...home.querySelectorAll<HTMLElement>('[data-scene]')];
-  const mobileImages = [...home.querySelectorAll<HTMLImageElement>('.m .mimg img')];
+  const mobileImages = [...home.querySelectorAll<HTMLImageElement>('[data-mobile-frame] > img')];
+  const familyRail = collections?.querySelector<HTMLElement>('.family-rail');
+  const synchronizeLayout = () => {
+    if (familyRail) familyRail.tabIndex = desktop() ? -1 : 0;
+    if (!desktop()) home.querySelectorAll<HTMLElement>('[inert]').forEach(element => { element.inert = false; });
+    else mobileImages.forEach(image => image.style.removeProperty('transform'));
+  };
   const frames: Record<string, (element: HTMLElement, progress: number, entering: number) => void> = {
     hero(element, progress) {
       const grow = ease(clamp(progress / .55));
@@ -126,6 +132,7 @@ function initializeHome() {
   function refresh() {
     if (resizeFrame !== undefined) cancelAnimationFrame(resizeFrame);
     resizeFrame = requestAnimationFrame(() => {
+      synchronizeLayout();
       measure();
       current = target = window.scrollY;
       render(current);
@@ -161,7 +168,7 @@ function initializeHome() {
   const stops: Record<string, number> = { accueil: 0, italie: .1, collections: .02, showroom: .62, plan: 0, catalogue: .62, journal: 0 };
   const navigateScene = (id: string, smooth: boolean) => {
     if (!(id in stops)) return false;
-    const element = document.getElementById(desktop() ? id : `m-${id}`) || document.getElementById(id);
+    const element = document.getElementById(id);
     if (!element) return false;
     let y = element.getBoundingClientRect().top + window.scrollY;
     if (desktop() && !motion.matches && element.dataset.scene) y += (element.offsetHeight - window.innerHeight) * stops[id];
@@ -188,6 +195,7 @@ function initializeHome() {
   const resizeObserver = new ResizeObserver(refresh);
   if (heroWords) resizeObserver.observe(heroWords);
   setMotionPreference();
+  synchronizeLayout();
   measure();
   render(current);
   if (window.location.hash) navigateScene(window.location.hash.slice(1).replace(/^m-/, ''), false);

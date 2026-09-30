@@ -16,7 +16,7 @@ await mkdir(output, { recursive: true });
 const results = [], errors = [], attemptedWrites = [];
 let failure = null;
 const desktopMap = '#plan [data-geographic-map]';
-const mobileMap = '#m-plan [data-geographic-map]';
+const mobileMap = '#plan [data-geographic-map]';
 const browser = await launcher.launch({ headless: true, ...(engine === 'chromium' ? { args: ['--no-sandbox', '--disable-dev-shm-usage'] } : {}) });
 
 async function contextFor(viewport, extra = {}) {

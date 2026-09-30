@@ -66,7 +66,7 @@
 .model-finish-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 3vw; list-style: none; margin: 0; padding: 0; }
 .model-finish-group[open] .model-finish-list { padding-block: 8px 35px; }
 .model-finish { min-width: 0; }
-.model-finish-image { aspect-ratio: 1.25; margin-bottom: 16px; background: var(--bg3); }
+.model-finish-image { display: block; aspect-ratio: 1.25; margin-bottom: 16px; background: var(--bg3); }
 .model-finish-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .model-finish p { margin: 0; font-size: 15px; font-weight: 300; line-height: 1.6; }
 .model-finish-code { display: block; margin-top: 6px; color: var(--faint); font-size: 11px; line-height: 1.6; letter-spacing: .06em; }

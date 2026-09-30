@@ -33,7 +33,7 @@ for (const [engine, launcher] of Object.entries({ chromium, webkit })) {
       assert.equal(response.status(), 200);
       await page.evaluate(() => document.fonts.ready);
       await page.waitForTimeout(250);
-      const plan = page.locator(width > 820 ? '#plan' : '#m-plan');
+      const plan = page.locator('#plan');
       await plan.evaluate(section => scrollTo({ top: section.getBoundingClientRect().top + scrollY - (innerWidth <= 820 ? document.querySelector('header').offsetHeight : 0), behavior: 'instant' }));
       await page.waitForTimeout(1200);
       const map = plan.locator('[data-geographic-map]');
@@ -103,7 +103,7 @@ for (const [engine, launcher] of Object.entries({ chromium, webkit })) {
     if (engine === 'chromium') for (const width of [1440, 390]) {
       const context = await browser.newContext({ viewport: { width, height: 900 }, javaScriptEnabled: false });
       const page = await context.newPage(); await page.goto(base);
-      const plan = page.locator(width > 820 ? '#plan' : '#m-plan');
+      const plan = page.locator('#plan');
       assert.equal(await plan.locator('[data-map-controls]').isVisible(), false);
       assert.equal(await plan.locator('[data-showroom-marker]').count(), 1);
       assert.equal(await plan.getByRole('link', { name: 'Itinéraire', exact: true }).count(), 1);
