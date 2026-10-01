@@ -93,7 +93,7 @@ Le plugin natif `contact-requests` reçoit les deux autres demandes du site :
 
 Les demandes sont stockées en privé dans le plugin avec l’état « CRM à connecter » ; aucun CRM externe n’est appelé. L’administration les présente dans **Rendez-vous et projets**, avec suppression et export CSV. Le formulaire garde le piège anti-robot `website`, la vérification d’origine et une limite de 10 demandes par heure et par adresse IP. Une nouvelle tentative avec le même identifiant renvoie la demande déjà enregistrée.
 
-Si le secret `REQUESTS_NOTIFY_TO` contient une adresse (par exemple contact@cattelanitalia.ma) et que l’envoi d’e-mails est actif (`cattelan-client`), chaque nouvelle demande est aussi envoyée à cette adresse ; l’état de l’alerte apparaît dans la liste. Le définir comme secret Cloudflare (`npx wrangler secret put REQUESTS_NOTIFY_TO --env cattelan-client`) : le contrôle de déploiement n’autorise pas de nouvelle variable publique.
+Lorsque l’envoi d’e-mails est actif (`cattelan-client`), chaque nouvelle demande est aussi envoyée par e-mail ; l’état de l’alerte apparaît dans la liste. L’adresse se règle dans EmDash, Plugins › Rendez-vous et projets › Paramètres, champ « Adresse des alertes » (par défaut omar@kreedns.com). À défaut d’adresse enregistrée, le secret Cloudflare `REQUESTS_NOTIFY_TO` sert de repli, puis l’adresse par défaut.
 
 Le CRM retenu (probablement SendPulse) sera branché ensuite : il reprendra les demandes « CRM à connecter » des deux plugins, avec leurs étiquettes (source, page, modèle, ville). La page Confidentialité décrit maintenant les trois formulaires ; la durée de conservation et la déclaration CNDP restent à compléter.
 

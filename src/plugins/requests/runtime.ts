@@ -4,7 +4,7 @@ import type { PluginContext, StorageCollection } from "emdash";
 import { validateRequestOrigin } from "../catalogue/core.ts";
 import { pruneRates, rateLimit } from "../rate-limit.ts";
 import { purgeExpired } from "../retention.ts";
-import { InputError, casablancaToday, notificationEmail, persistRequest, requestsToCsv, validateRequest, type StoredRequest } from "./core.ts";
+import { InputError, casablancaToday, notificationEmail, persistRequest, requestsToCsv, validateRequest, type StoredRequest, DEFAULT_NOTIFY_TO, notifyAddress } from "./core.ts";
 
 const PLUGIN_ID = "contact-requests";
 
@@ -14,8 +14,7 @@ function requests(ctx: PluginContext): StorageCollection<StoredRequest> {
 function settings() {
   const values = env as unknown as { CATALOGUE_TOKEN_SECRET?: string; EMDASH_SITE_URL?: string; REQUESTS_NOTIFY_TO?: string };
   if (!values.CATALOGUE_TOKEN_SECRET || values.CATALOGUE_TOKEN_SECRET.length < 32) throw new Error("Rate-limit secret unavailable");
-  const notifyTo = values.REQUESTS_NOTIFY_TO?.trim();
-  return { secret: values.CATALOGUE_TOKEN_SECRET, siteUrl: values.EMDASH_SITE_URL, notifyTo: notifyTo && /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/u.test(notifyTo) ? notifyTo : null };
+  return { secret: values.CATALOGUE_TOKEN_SECRET, siteUrl: values.EMDASH_SITE_URL, notifySecret: values.REQUESTS_NOTIFY_TO };
 }
 function queryString(input: unknown, name: string, max = 4096): string | undefined {
   const value = input && typeof input === "object" ? (input as Record<string, unknown>)[name] : undefined;
@@ -23,8 +22,9 @@ function queryString(input: unknown, name: string, max = 4096): string | undefin
 }
 
 /** The showroom learns about a request at once; a failure leaves the request saved and marked. */
-async function notify(ctx: PluginContext, request: StoredRequest, to: string | null) {
-  if (!to || !ctx.email) return;
+async function notify(ctx: PluginContext, request: StoredRequest, notifySecret: string | undefined) {
+  if (!ctx.email) return;
+  const to = notifyAddress(await ctx.kv.get("settings:notifyTo"), notifySecret);
   const store = requests(ctx);
   let status: StoredRequest["notifyStatus"] = "sent";
   try { await ctx.email.send(notificationEmail(request, to)); } catch { status = "failed"; }
@@ -44,6 +44,9 @@ export function createPlugin() {
     admin: {
       entry: "/src/plugins/requests/admin.tsx",
       pages: [{ path: "/requests", label: "Rendez-vous et projets", icon: "calendar" }],
+      settingsSchema: {
+        notifyTo: { type: "email", label: "Adresse des alertes", description: `Reçoit un e-mail pour chaque rendez-vous ou demande professionnelle. Par défaut : ${DEFAULT_NOTIFY_TO}.`, default: DEFAULT_NOTIFY_TO },
+      },
     },
     hooks: {
       "plugin:activate": async (_event, ctx) => { await ctx.cron?.schedule("requests-cleanup", { schedule: "0 * * * *" }); },
@@ -57,7 +60,7 @@ export function createPlugin() {
         request: { body: "json", maxBytes: 8192, headers: ["origin", "referer"] },
         handler: async (ctx) => {
           try {
-            const { secret, siteUrl, notifyTo } = settings();
+            const { secret, siteUrl, notifySecret } = settings();
             validateRequestOrigin(ctx.request.headers.get("origin"), ctx.request.url, siteUrl, {
               development: import.meta.env.DEV, referer: ctx.request.headers.get("referer"),
             });
@@ -67,7 +70,7 @@ export function createPlugin() {
               return { ok: false, code: "RATE_LIMITED", message: "Trop de demandes. Veuillez réessayer plus tard." };
             }
             const { request, created } = await persistRequest(requests(ctx), input);
-            if (created) await notify(ctx, request, notifyTo);
+            if (created) await notify(ctx, request, notifySecret);
             return { ok: true, kind: request.kind };
           } catch (error) {
             if (error instanceof InputError) return { ok: false, code: error.code, message: error.message };

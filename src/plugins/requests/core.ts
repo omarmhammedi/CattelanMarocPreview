@@ -5,6 +5,18 @@ export { CITIES, InputError };
 export const PROJECT_TYPES = ["Appartement", "Villa", "Bureaux", "Hôtel", "Restaurant", "Boutique", "Autre"] as const;
 export const PERIODS = { matin: "Matin", "apres-midi": "Après-midi" } as const;
 const MAX_DAYS_AHEAD = 180;
+/** Used until an address is saved in EmDash (Plugins › Rendez-vous et projets › Paramètres). */
+export const DEFAULT_NOTIFY_TO = "omar@kreedns.com";
+const EMAIL = /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/u;
+
+/** The EmDash setting wins, then the REQUESTS_NOTIFY_TO secret, then the default; invalid values are skipped. */
+export function notifyAddress(setting: unknown, secret: string | undefined): string {
+  for (const value of [setting, secret]) {
+    const address = typeof value === "string" ? value.trim() : "";
+    if (address && EMAIL.test(address)) return address;
+  }
+  return DEFAULT_NOTIFY_TO;
+}
 
 type Common = { requestId: string; name: string; whatsapp: string; message: string; sourcePath: string; model: string | null };
 export type AppointmentInput = Common & { kind: "rendez-vous"; day: string; period: keyof typeof PERIODS };

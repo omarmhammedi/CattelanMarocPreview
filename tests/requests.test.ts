@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { casablancaToday, notificationEmail, persistRequest, requestsToCsv, validateRequest, type StoredRequest } from '../src/plugins/requests/core.ts';
+import { DEFAULT_NOTIFY_TO, casablancaToday, notificationEmail, notifyAddress, persistRequest, requestsToCsv, validateRequest, type StoredRequest } from '../src/plugins/requests/core.ts';
 
 const id = '3f2b8c1e-4a5d-4e6f-9a7b-1c2d3e4f5a6b';
 const appointment = { kind: 'rendez-vous', requestId: id, name: ' Salma  Benali ', whatsapp: '+212 600-000 001', day: '2026-10-05', period: 'matin', message: 'Voir Skorpio.\nMerci', sourcePath: '/modeles/skorpio/', model: 'skorpio', website: '' };
@@ -79,4 +79,11 @@ test('notification and export carry the request without formula injection', asyn
 
 test('uses the Casablanca calendar date', () => {
   assert.equal(casablancaToday(new Date('2026-10-01T23:30:00Z')), '2026-10-02');
+});
+
+test('alerts go to the EmDash setting, then the secret, then the default', () => {
+  assert.equal(notifyAddress(' showroom@cattelanitalia.ma ', 'secret@x.ma'), 'showroom@cattelanitalia.ma');
+  assert.equal(notifyAddress('', 'secret@x.ma'), 'secret@x.ma');
+  assert.equal(notifyAddress('pas-une-adresse', undefined), DEFAULT_NOTIFY_TO);
+  assert.equal(notifyAddress(null, undefined), 'omar@kreedns.com');
 });
