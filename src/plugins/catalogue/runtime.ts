@@ -9,6 +9,7 @@ import {
 
 import { catalogueEmail, dispatchCatalogueEmail } from "./email.ts";
 import { rateLimit } from "../rate-limit.ts";
+import { purgeExpired } from "../retention.ts";
 
 const PLUGIN_ID = "catalogue-leads";
 const PREFIX = `/_emdash/api/plugins/${PLUGIN_ID}`;
@@ -109,7 +110,7 @@ export function createPlugin() {
         await ctx.cron?.schedule("catalogue-crm", { schedule: "*/5 * * * *" });
       },
       "plugin:deactivate": async (_event, ctx) => { await ctx.cron?.cancel("catalogue-crm"); },
-      cron: async (event, ctx) => { if (event.name === "catalogue-crm") await processPending(ctx); },
+      cron: async (event, ctx) => { if (event.name === "catalogue-crm") { await processPending(ctx); await purgeExpired(leads(ctx)); } },
     },
     routes: {
       request: definePluginRoute({

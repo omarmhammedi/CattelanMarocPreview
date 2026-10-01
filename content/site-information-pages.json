@@ -94,12 +94,12 @@
         "eyebrow": "Informations légales",
         "intro": "Éditeur, hébergeur et propriété des contenus de ce site.",
         "sections": [
-          { "section_key": "publisher", "heading": "Éditeur du site", "text": "Racha Home\n8-10 avenue Mohamed Sijilmassi, 20250 Casablanca, Maroc\nTéléphone : +212 771 105 490\nE-mail : contact@cattelanitalia.ma" },
-          { "section_key": "registration", "heading": "Immatriculation", "text": "Forme juridique, capital, registre du commerce (RC) et identifiant commun de l’entreprise (ICE) : à compléter." },
-          { "section_key": "director", "heading": "Directeur de la publication", "text": "À compléter." },
+          {"section_key": "publisher", "heading": "Éditeur du site", "text": "Racha Home, société à responsabilité limitée au capital de 100 000 dirhams\nSiège social : Résidence Marrakchia I, rue du Lieutenant Lamure, boulevard Mohammed VI, Marrakech-Médina, Maroc\nShowroom : 8-10 avenue du Docteur Mohamed Sijilmassi, Triangle d’Or, 20250 Casablanca, Maroc\nTéléphone : +212 771 105 490\nE-mail : contact@cattelanitalia.ma"},
+          {"section_key": "registration", "heading": "Immatriculation", "text": "Registre du commerce de Marrakech n° 76831\nIdentifiant commun de l’entreprise (ICE) : 001761428000059"},
+          {"section_key": "director", "heading": "Directeur de la publication", "text": "Le gérant de Racha Home."},
           { "section_key": "host", "heading": "Hébergement", "text": "Cloudflare, Inc.\n101 Townsend Street, San Francisco, CA 94107, États-Unis" },
           { "section_key": "brand", "heading": "Marques et contenus", "text": "Cattelan Italia et son logo sont des marques de Cattelan Italia S.p.A. Les textes, photographies et documents de ce site ne peuvent être reproduits sans autorisation." },
-          { "section_key": "privacy", "heading": "Données personnelles", "text": "L’utilisation de vos coordonnées est décrite dans la politique de confidentialité.", "cta_label": "Confidentialité", "cta_href": "/confidentialite/" }
+          {"section_key": "privacy", "heading": "Données personnelles", "text": "Les coordonnées laissées dans les formulaires sont traitées par Racha Home conformément à la loi n° 09-08. Leur usage, leur durée de conservation et vos droits sont décrits dans la politique de confidentialité.", "cta_label": "Confidentialité", "cta_href": "/confidentialite/"}
         ],
         "seo_title": "Mentions légales · Cattelan Italia Maroc",
         "meta_description": "Éditeur, hébergeur et propriété des contenus du site Cattelan Italia Maroc."

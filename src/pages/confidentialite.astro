@@ -3,25 +3,39 @@ import PageLayout from '../layouts/PageLayout.astro';
 import {getSite} from '../lib/content';
 const site=await getSite();
 const emailEnabled=import.meta.env.CATTELAN_EMAIL_ENABLED;
+// Receipt number issued by the CNDP once the declaration is filed (docs/cndp-declaration.md).
+const cndpReceipt='';
 ---
 <PageLayout title="Confidentialité" description="Les coordonnées recueillies par les formulaires de Cattelan Italia Maroc, leur usage, leur conservation et vos droits." site={site}>
-<section class="page-intro page-gutter"><p class="kick">Données personnelles</p><h1>Confidentialité</h1><p class="page-lead">Cette page explique quelles coordonnées nous recueillons, pourquoi et comment exercer vos droits.</p>
+<section class="page-intro page-gutter"><p class="kick">Données personnelles</p><h1>Confidentialité</h1><p class="page-lead">Cette page explique quelles coordonnées nous recueillons, pourquoi, combien de temps nous les gardons et comment exercer vos droits.</p>
 <div class="page-prose">
 <h2>Responsable du traitement</h2>
-<p>Racha Home, 8-10 avenue Mohamed Sijilmassi, 20250 Casablanca, Maroc. Contact : <a href="mailto:contact@cattelanitalia.ma">contact@cattelanitalia.ma</a>.</p>
+<p>Racha Home, société à responsabilité limitée, registre du commerce de Marrakech n° 76831, siège social Résidence Marrakchia I, rue du Lieutenant Lamure, boulevard Mohammed VI, Marrakech-Médina, Maroc. Showroom : 8-10 avenue du Docteur Mohamed Sijilmassi, 20250 Casablanca. Contact : <a href="mailto:contact@cattelanitalia.ma">contact@cattelanitalia.ma</a>.</p>
 <h2>Ce que nous recueillons et pourquoi</h2>
 <ul>
 <li><strong>Recevoir le catalogue</strong> : nom, WhatsApp, e-mail et ville, pour vous donner accès au catalogue{emailEnabled ? ' et vous l’envoyer par e-mail' : ''}. Les nouveautés et invitations ne vous sont envoyées que si vous cochez la case prévue.</li>
 <li><strong>Prendre rendez-vous</strong> : nom, WhatsApp, jour et moment souhaités, message facultatif, pour organiser votre visite au showroom.</li>
 <li><strong>Demande professionnelle</strong> : nom, société, WhatsApp, e-mail, type de projet, ville et message facultatif, pour répondre à votre projet.</li>
 </ul>
-<p>Nous enregistrons aussi la page d’origine de la demande et, le cas échéant, le modèle consulté. Ces données ne sont ni vendues ni cédées.</p>
-<h2>Où elles sont conservées</h2>
-<p>Les demandes sont enregistrées sur l’hébergement du site (Cloudflare).{emailEnabled ? ' Le catalogue est envoyé par notre prestataire d’e-mails Resend.' : ''} Elles seront transmises à notre outil de gestion de la relation client lorsqu’il sera raccordé ; cette page sera alors complétée.</p>
-<p>Durée de conservation : à compléter.</p>
+<p>Nous enregistrons aussi la page d’origine de la demande et, le cas échéant, le modèle consulté. Ces données sont traitées avec votre consentement, donné en envoyant le formulaire. Elles ne sont ni vendues ni cédées.</p>
+<h2>Qui y a accès</h2>
+<p>L’équipe de Racha Home qui vous répond. Nos prestataires techniques les traitent pour notre compte : Cloudflare pour l’hébergement du site{emailEnabled ? ' et Resend pour l’envoi des e-mails' : ''}. Elles seront transmises à notre outil de gestion de la relation client lorsqu’il sera raccordé ; cette page sera alors complétée.</p>
+<h2>Transfert hors du Maroc</h2>
+<p>{emailEnabled ? 'Ces prestataires peuvent' : 'Ce prestataire peut'} traiter les données dans d’autres pays, notamment aux États-Unis. Ce transfert figure dans notre déclaration auprès de la CNDP.</p>
+<h2>Durée de conservation</h2>
+<ul>
+<li>Demandes de catalogue, de rendez-vous et demandes professionnelles : trois ans à compter de leur envoi, puis suppression automatique.</li>
+<li>Nouveautés et invitations : jusqu’au retrait de votre accord, dans la limite de ces trois ans.</li>
+<li>Si votre demande aboutit à une commande, les documents commerciaux et comptables sont conservés pendant la durée prévue par la loi.</li>
+<li>Protection contre les envois abusifs : une empreinte chiffrée de votre adresse IP, effacée sous trois heures. L’adresse elle-même n’est pas enregistrée.</li>
+</ul>
+<h2>Cookies</h2>
+<p>Ce site n’utilise ni cookie publicitaire ni outil de mesure d’audience. Votre choix entre l’affichage clair et sombre est mémorisé dans votre navigateur.</p>
 <h2>Vos droits</h2>
-<p>Conformément à la loi n° 09-08, vous pouvez accéder à vos données, les faire rectifier ou vous opposer à leur traitement en écrivant à <a href="mailto:contact@cattelanitalia.ma">contact@cattelanitalia.ma</a>. Déclaration auprès de la CNDP : à compléter.</p>
+<p>Conformément à la loi n° 09-08, vous pouvez accéder à vos données, les faire rectifier ou supprimer, et vous opposer à leur traitement, notamment à l’envoi de nouveautés, sans frais. Écrivez à <a href="mailto:contact@cattelanitalia.ma">contact@cattelanitalia.ma</a> ou à notre siège social. Vous pouvez aussi saisir la Commission nationale de contrôle de la protection des données à caractère personnel (<a href="https://www.cndp.ma" target="_blank" rel="noopener noreferrer">CNDP</a>).</p>
+<p>Le traitement des données issues de ce site fait l’objet d’une déclaration auprès de la CNDP{cndpReceipt ? `, récépissé n° ${cndpReceipt}` : ', en cours d’enregistrement'}.</p>
 <h2>Carte et liens externes</h2>
 <p>Sur la page showroom, Google Maps se charge lorsque vous cliquez sur « Afficher la carte interactive » ; votre navigateur se connecte alors à Google. Les boutons d’itinéraire ouvrent Google Maps et les boutons WhatsApp ouvrent WhatsApp.</p>
+<p class="page-note">Mise à jour : 1er octobre 2026.</p>
 </div></section>
 </PageLayout>

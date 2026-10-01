@@ -3,6 +3,7 @@ import { definePlugin, definePluginRoute, pluginResponse } from "emdash";
 import type { PluginContext, StorageCollection } from "emdash";
 import { validateRequestOrigin } from "../catalogue/core.ts";
 import { pruneRates, rateLimit } from "../rate-limit.ts";
+import { purgeExpired } from "../retention.ts";
 import { InputError, casablancaToday, notificationEmail, persistRequest, requestsToCsv, validateRequest, type StoredRequest } from "./core.ts";
 
 const PLUGIN_ID = "contact-requests";
@@ -47,7 +48,7 @@ export function createPlugin() {
     hooks: {
       "plugin:activate": async (_event, ctx) => { await ctx.cron?.schedule("requests-cleanup", { schedule: "0 * * * *" }); },
       "plugin:deactivate": async (_event, ctx) => { await ctx.cron?.cancel("requests-cleanup"); },
-      cron: async (event, ctx) => { if (event.name === "requests-cleanup") await pruneRates(ctx); },
+      cron: async (event, ctx) => { if (event.name === "requests-cleanup") { await pruneRates(ctx); await purgeExpired(requests(ctx)); } },
     },
     routes: {
       submit: definePluginRoute({

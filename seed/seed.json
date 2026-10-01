@@ -5633,17 +5633,17 @@
             {
               "section_key": "publisher",
               "heading": "Éditeur du site",
-              "text": "Racha Home\n8-10 avenue Mohamed Sijilmassi, 20250 Casablanca, Maroc\nTéléphone : +212 771 105 490\nE-mail : contact@cattelanitalia.ma"
+              "text": "Racha Home, société à responsabilité limitée au capital de 100 000 dirhams\nSiège social : Résidence Marrakchia I, rue du Lieutenant Lamure, boulevard Mohammed VI, Marrakech-Médina, Maroc\nShowroom : 8-10 avenue du Docteur Mohamed Sijilmassi, Triangle d’Or, 20250 Casablanca, Maroc\nTéléphone : +212 771 105 490\nE-mail : contact@cattelanitalia.ma"
             },
             {
               "section_key": "registration",
               "heading": "Immatriculation",
-              "text": "Forme juridique, capital, registre du commerce (RC) et identifiant commun de l’entreprise (ICE) : à compléter."
+              "text": "Registre du commerce de Marrakech n° 76831\nIdentifiant commun de l’entreprise (ICE) : 001761428000059"
             },
             {
               "section_key": "director",
               "heading": "Directeur de la publication",
-              "text": "À compléter."
+              "text": "Le gérant de Racha Home."
             },
             {
               "section_key": "host",
@@ -5658,7 +5658,7 @@
             {
               "section_key": "privacy",
               "heading": "Données personnelles",
-              "text": "L’utilisation de vos coordonnées est décrite dans la politique de confidentialité.",
+              "text": "Les coordonnées laissées dans les formulaires sont traitées par Racha Home conformément à la loi n° 09-08. Leur usage, leur durée de conservation et vos droits sont décrits dans la politique de confidentialité.",
               "cta_label": "Confidentialité",
               "cta_href": "/confidentialite/"
             }
