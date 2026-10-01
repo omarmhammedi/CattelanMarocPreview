@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "source": "Page titles from the site plan (SEO, Page titles). 'known' lists the values this project wrote before (seed, migrations 0010-0016); only those are replaced, in the seo_title field and in the native SEO panel.",
+  "entries": [
+    { "collection": "pages", "slug": "home", "known": ["Cattelan Italia Maroc | Mobilier italien à Casablanca"], "after": "Cattelan Italia Maroc · Showroom de mobilier italien à Casablanca" },
+    { "collection": "pages", "slug": "showroom-casablanca", "known": ["Showroom à Casablanca | Cattelan Italia Maroc"], "after": "Showroom Cattelan Italia à Casablanca, Triangle d’Or" },
+    { "collection": "families", "slug": "tables", "known": ["Tables de salle à manger | Cattelan Italia Maroc", "Tables italiennes à Casablanca | Cattelan Italia"], "after": "Tables Cattelan Italia à Casablanca · Cattelan Italia Maroc" },
+    { "collection": "families", "slug": "chaises-tabourets", "known": ["Chaises et tabourets | Cattelan Italia Maroc", "Chaises et tabourets à Casablanca | Cattelan Italia"], "after": "Chaises et tabourets Cattelan Italia à Casablanca · Cattelan Italia Maroc" },
+    { "collection": "families", "slug": "canapes-fauteuils", "known": ["Canapés et fauteuils | Cattelan Italia Maroc", "Canapés et fauteuils à Casablanca | Cattelan Italia"], "after": "Canapés et fauteuils Cattelan Italia à Casablanca · Cattelan Italia Maroc" },
+    { "collection": "families", "slug": "buffets-bibliotheques", "known": ["Buffets et bibliothèques | Cattelan Italia Maroc", "Buffets et bibliothèques à Casablanca | Cattelan Italia"], "after": "Buffets et bibliothèques Cattelan Italia à Casablanca · Cattelan Italia Maroc" },
+    { "collection": "families", "slug": "luminaires", "known": ["Luminaires design | Cattelan Italia Maroc", "Luminaires italiens à Casablanca | Cattelan Italia"], "after": "Luminaires Cattelan Italia à Casablanca · Cattelan Italia Maroc" },
+    { "collection": "families", "slug": "mobilier-exterieur", "known": ["Mobilier extérieur | Cattelan Italia Maroc", "Mobilier extérieur couvert | Cattelan Italia Maroc"], "after": "Mobilier extérieur Cattelan Italia à Casablanca · Cattelan Italia Maroc" },
+    { "collection": "families", "slug": "tables-basses", "known": ["Tables basses | Cattelan Italia Maroc"], "after": "Tables basses Cattelan Italia à Casablanca · Cattelan Italia Maroc" },
+    { "collection": "families", "slug": "consoles-miroirs", "known": ["Consoles et miroirs | Cattelan Italia Maroc"], "after": "Consoles et miroirs Cattelan Italia à Casablanca · Cattelan Italia Maroc" }
+  ]
+}

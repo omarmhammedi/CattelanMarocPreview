@@ -22,6 +22,7 @@ Cible : le Worker `cattelan-maroc-preview` du compte Cloudflare « Cattelan@clie
    node scripts/migrations/0016-new-families.mjs
    node scripts/migrations/0017-cndp-receipt.mjs
    node scripts/migrations/0018-collection-additions.mjs
+   node scripts/migrations/0019-seo-titles.mjs
    ```
    Chaque script est additif, sauvegarde l’état avant écriture dans `.wrangler/migrations/` et ne change rien à une seconde exécution. Un script qui s’arrête sur une valeur inattendue a protégé une modification d’éditeur : lire le message, ne pas forcer.
 6. Dans EmDash, Plugins › Rendez-vous et projets › Paramètres : vérifier « Adresse des alertes » (omar@kreedns.com par défaut).
