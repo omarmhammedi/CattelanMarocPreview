@@ -24,8 +24,9 @@ Cible : le Worker `cattelan-maroc-preview` du compte Cloudflare « Cattelan@clie
    node scripts/migrations/0018-collection-additions.mjs
    node scripts/migrations/0019-seo-titles.mjs
    node scripts/migrations/0020-social-profiles.mjs
+   node scripts/migrations/0021-copy-v2.mjs
    ```
-   Chaque script est additif, sauvegarde l’état avant écriture dans `.wrangler/migrations/` et ne change rien à une seconde exécution. Un script qui s’arrête sur une valeur inattendue a protégé une modification d’éditeur : lire le message, ne pas forcer.
+   Chaque script est additif, sauvegarde l’état avant écriture dans `.wrangler/migrations/` et ne change rien à une seconde exécution. Un script qui s’arrête sur une valeur inattendue a protégé une modification d’éditeur : lire le message, ne pas forcer. Pour 0021, la liste `kept` de l’aperçu nomme les textes modifiés par un éditeur, qui seront conservés : la montrer au propriétaire.
 6. Dans EmDash, Plugins › Rendez-vous et projets › Paramètres : vérifier « Adresse des alertes » (omar@kreedns.com par défaut).
 7. Vérifier en ligne (HTTP 200, images chargées) : `/`, `/collections/`, `/collections/tables/`, `/collections/tables-basses/`, `/collections/consoles-miroirs/`, `/modeles/craig/`, `/modeles/botero-argile/`, `/sur-mesure/`, `/professionnels/`, `/showroom-casablanca/`, `/faq/`, `/a-propos/`, `/votre-projet/`, `/mentions-legales/`, `/confidentialite/`, `/catalogue/`. Envoyer une demande de rendez-vous de test et la supprimer ensuite depuis l’administration.
 8. Fermer la session CMS (`npx emdash logout`) et rendre compte : version déployée, sortie de chaque migration, pages vérifiées.

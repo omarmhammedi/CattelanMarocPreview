@@ -84,7 +84,7 @@ try {
       }
       record(`${routes.length} public routes inspected at ${viewport.width}×${viewport.height}, ${mode}`);
       await open(page, '/catalogue/');
-      assert(await page.getByRole('heading', { name: 'Poursuivons votre découverte' }).count(), 'Catalogue CMS section appears');
+      assert(await page.getByRole('heading', { name: 'Un conseiller reste à votre disposition' }).count(), 'Catalogue CMS section appears');
       const form = page.locator('[data-catalogue-form]');
       assert.equal(await form.locator('[name="communicationsConsent"]').isChecked(), false);
       assert.equal(await form.locator('[name="communicationsConsent"]').getAttribute('required'), null);
@@ -106,7 +106,7 @@ try {
       await form.locator('[name="email"]').fill('');
       await page.evaluate(() => document.activeElement?.blur());
       await page.screenshot({ path: `${screenshots}/catalogue-${viewport.width}-${mode}.jpg`, type: 'jpeg', quality: 82 });
-      await page.getByRole('heading', { name: 'Poursuivons votre découverte' }).evaluate(heading => {
+      await page.getByRole('heading', { name: 'Un conseiller reste à votre disposition' }).evaluate(heading => {
         scrollTo(0, heading.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight - 30);
       });
       await page.waitForTimeout(1300);
