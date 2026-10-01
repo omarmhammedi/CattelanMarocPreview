@@ -1,25 +1,29 @@
 {
   "version": 1,
-  "source": "Photos from the Cattelan Italia digital kits, logos removed by the client and enlarged ×2 with Real-ESRNet (a model that does not add texture). Descriptions only state what the photos show; dimensions, finishes and technical sheets will be added from the official sheets.",
+  "source": "Photos from the Cattelan Italia digital kits, logos removed by the client and enlarged ×2 with Real-ESRNet (a model that does not add texture). Descriptions, dimensions and finishes come from the Cattelan Italia product sheets (fiches produit) supplied by the client; the sheets are published as the models' technical sheets.",
   "mediaDir": "content/media/new-families",
   "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
   "models": [
     {
       "slug": "arena",
       "title": "Arena",
-      "description": "Une table basse ronde posée sur un fût central, présentée seule ou en composition avec un plateau en verre. Une base pour organiser le centre du salon.",
+      "description": "Une table basse ronde au plateau en bois laqué Brushed Bronze ou Brushed Grey, sur une base en acier noir. Les versions Bond et Double Bond lui associent un ou deux plateaux en verre pivotants.",
       "paragraphs": [
-        "Arena repose sur un fût central qui laisse le plateau rond dégagé. Sur les photos, le plateau en métal patiné s’associe à un second plateau en verre teinté, placé à une autre hauteur.",
-        "Plusieurs tables peuvent se superposer en partie, pour composer une surface adaptée à la taille du canapé. Les dimensions et les finitions disponibles se vérifient avec le showroom sur la fiche technique."
+        "Arena pose un plateau rond en bois laqué sur une base en acier gaufré noir. La finition Brushed, bronze ou grise, est brossée : ses nuances et son brossage varient d’une pièce à l’autre, signe d’une fabrication artisanale.",
+        "Dans les versions Bond et Double Bond, une ou deux petites tables à plateau en verre biseauté, fumé ou bronze, pivotent au-dessus du plateau principal. La composition s’étend alors de 158 à 256 cm."
       ],
       "image": {
         "file": "arena_01.jpg",
-        "alt": "Arena, table basse ronde en métal patiné associée à un plateau en verre teinté"
+        "alt": "Arena, plateau Brushed Bronze et plateau en verre fumé"
       },
       "gallery": [
         {
+          "file": "arena_fiche.jpg",
+          "alt": "Arena, photographie sur fond blanc"
+        },
+        {
           "file": "arena_03.jpg",
-          "alt": "Arena devant un canapé gris, plateau rond en métal patiné"
+          "alt": "Arena devant un canapé gris, plateau rond Brushed Bronze"
         },
         {
           "file": "arena_04.jpg",
@@ -27,7 +31,7 @@
         },
         {
           "file": "arena_05.jpg",
-          "alt": "Arena, plateaux en métal et en verre teinté superposés"
+          "alt": "Arena, plateaux Brushed Bronze et en verre teinté superposés"
         },
         {
           "file": "arena_06.jpg",
@@ -41,21 +45,86 @@
           "file": "arena_09.jpg",
           "alt": "Arena en composition avec un plateau en verre teinté"
         }
-      ]
+      ],
+      "dimensions": [
+        [
+          "Arena",
+          "Ø 120 × 29 h"
+        ],
+        [
+          "Arena Bond",
+          "120 × 158 à 188 × 37 h, plateau en verre Ø 90"
+        ],
+        [
+          "Arena Double Bond",
+          "120 × 196 à 256 × 37 h, deux plateaux en verre Ø 90"
+        ]
+      ],
+      "finishes": [
+        {
+          "group": "base",
+          "material": "metals",
+          "name": "GFM73 gaufré noir",
+          "code": "GFM73",
+          "file": "sw-arena-000.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "bois",
+          "name": "brushed bronze",
+          "code": "",
+          "file": "sw-arena-001.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "bois",
+          "name": "brushed grey",
+          "code": "",
+          "file": "sw-arena-002.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "verre",
+          "name": "bronze biseauté",
+          "code": "",
+          "file": "sw-arena-003.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "verre",
+          "name": "fumé biseauté",
+          "code": "",
+          "file": "sw-arena-004.jpg"
+        }
+      ],
+      "drawings": [
+        {
+          "file": "arena-dimensions.png",
+          "label": "Dimensions en cm, d’après la fiche produit"
+        }
+      ],
+      "technical_sheet": {
+        "file": "arena-fiche-technique.pdf",
+        "filename": "cattelan-arena-fiche-technique.pdf"
+      }
     },
     {
       "slug": "albert-keramik",
       "title": "Albert Keramik",
-      "description": "Des tables basses à plateau en céramique sur une base conique, en forme de galet ou de cercle. À composer par deux ou trois devant le canapé.",
+      "description": "Une table basse à plateau en céramique, ronde ou en forme de galet, sur une base conique en acier laqué. Seize décors de marbre et trois hauteurs à composer.",
       "paragraphs": [
-        "Albert Keramik associe un plateau en céramique à une base conique en métal. Les plateaux prennent la forme d’un galet ou d’un cercle et se placent à des hauteurs différentes.",
-        "La céramique reprend le dessin d’une pierre ou d’un marbre, comme sur les versions aux veines blanches et vertes présentées ici. Les décors, formes et dimensions se choisissent avec le showroom."
+        "Albert Keramik pose un plateau en céramique sur une base conique en acier laqué gaufré titane, bronze ou pearl. Le plateau est rond, de 59, 100 ou 118 cm, ou en forme de galet.",
+        "La céramique reprend le dessin des marbres, du Golden Calacatta au Portoro et au Taj Mahal : seize décors au choix. Les hauteurs de 28 à 54 cm permettent d’associer deux ou trois tables."
       ],
       "image": {
         "file": "albert_keramik_10.jpg",
         "alt": "Albert Keramik, trois tables basses rondes à plateau céramique aux veines vertes"
       },
       "gallery": [
+        {
+          "file": "albert_keramik_fiche.jpg",
+          "alt": "Albert Keramik, photographie sur fond blanc"
+        },
         {
           "file": "albert_keramik_02.jpg",
           "alt": "Albert Keramik, deux tables en forme de galet devant un canapé"
@@ -80,21 +149,192 @@
           "file": "albert_keramik_12.jpg",
           "alt": "Albert Keramik vue de dessus, plateaux céramique aux veines vertes"
         }
-      ]
+      ],
+      "dimensions": [
+        [
+          "Ronde Ø 59",
+          "hauteur 34, 44 ou 54"
+        ],
+        [
+          "Ronde Ø 100",
+          "hauteur 28, 38 ou 48"
+        ],
+        [
+          "Ronde Ø 118",
+          "hauteur 28, 38 ou 48"
+        ],
+        [
+          "Galet 90 × 90",
+          "hauteur 28, 38 ou 48"
+        ],
+        [
+          "Galet 118 × 78",
+          "hauteur 28, 38 ou 48"
+        ]
+      ],
+      "finishes": [
+        {
+          "group": "base",
+          "material": "metals",
+          "name": "GFM11 gaufré titane",
+          "code": "GFM11",
+          "file": "sw-albert_keramik-000.jpg"
+        },
+        {
+          "group": "base",
+          "material": "metals",
+          "name": "GFM18 gaufré bronze",
+          "code": "GFM18",
+          "file": "sw-albert_keramik-001.jpg"
+        },
+        {
+          "group": "base",
+          "material": "metals",
+          "name": "GFM70 gaufré pearl",
+          "code": "GFM70",
+          "file": "sw-albert_keramik-002.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "céramique KS",
+          "name": "KS23 Luxor",
+          "code": "KS23",
+          "file": "sw-albert_keramik-003.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "céramique Marmi",
+          "name": "KM05 Golden Calacatta opaque",
+          "code": "KM05",
+          "file": "sw-albert_keramik-004.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "céramique Marmi",
+          "name": "KM06 Golden Calacatta brillant",
+          "code": "KM06",
+          "file": "sw-albert_keramik-005.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "céramique Marmi",
+          "name": "KM07 Portoro opaque",
+          "code": "KM07",
+          "file": "sw-albert_keramik-006.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "céramique Marmi",
+          "name": "KM08 Portoro brillant",
+          "code": "KM08",
+          "file": "sw-albert_keramik-007.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "céramique Marmi",
+          "name": "KM12 Breccia",
+          "code": "KM12",
+          "file": "sw-albert_keramik-008.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "céramique Marmi",
+          "name": "KM14 Corcovado",
+          "code": "KM14",
+          "file": "sw-albert_keramik-009.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "céramique Marmi",
+          "name": "KM16 Kaindy",
+          "code": "KM16",
+          "file": "sw-albert_keramik-010.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "céramique Marmi",
+          "name": "KM18 Borghini Calacatta opaque",
+          "code": "KM18",
+          "file": "sw-albert_keramik-011.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "céramique Marmi",
+          "name": "KM19 Borghini Calacatta brillant",
+          "code": "KM19",
+          "file": "sw-albert_keramik-012.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "céramique Marmi",
+          "name": "KM21 Colosseo",
+          "code": "KM21",
+          "file": "sw-albert_keramik-013.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "céramique Marmi",
+          "name": "KM22 Andromeda",
+          "code": "KM22",
+          "file": "sw-albert_keramik-014.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "céramique Marmi",
+          "name": "KM24 Invisible opaque",
+          "code": "KM24",
+          "file": "sw-albert_keramik-015.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "céramique Marmi",
+          "name": "KM26 Taj Mahal",
+          "code": "KM26",
+          "file": "sw-albert_keramik-016.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "céramique Marmi",
+          "name": "KM27 Giava",
+          "code": "KM27",
+          "file": "sw-albert_keramik-017.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "céramique Marmi",
+          "name": "KM28 Darwin",
+          "code": "KM28",
+          "file": "sw-albert_keramik-018.jpg"
+        }
+      ],
+      "drawings": [
+        {
+          "file": "albert-keramik-dimensions.png",
+          "label": "Dimensions en cm, d’après la fiche produit"
+        }
+      ],
+      "technical_sheet": {
+        "file": "albert-keramik-fiche-technique.pdf",
+        "filename": "cattelan-albert-keramik-fiche-technique.pdf"
+      }
     },
     {
       "slug": "adrian-wood",
       "title": "Adrian Wood",
-      "description": "Des tables basses à plateau en bois en forme de galet, posées sur une base conique. Deux hauteurs qui se superposent pour animer le salon.",
+      "description": "Une table basse au plateau en bois biseauté en forme de galet, sur une base conique en acier. Noyer Canaletto et rouvre brûlé se répondent sur le même plateau.",
       "paragraphs": [
-        "Adrian Wood réunit des plateaux en bois aux contours arrondis, posés sur une base conique en métal. Les tables se glissent l’une sous l’autre pour former une composition souple.",
-        "Le veinage du bois donne son caractère à chaque plateau. Les essences, dimensions et finitions se choisissent avec le showroom."
+        "Adrian Wood associe deux essences sur un même plateau : noyer Canaletto avec des détails en rouvre brûlé, ou rouvre brûlé avec des détails en noyer. Les bords du plateau sont biseautés.",
+        "La base conique en acier laqué gaufré est titane ou bronze. Trois formes et trois hauteurs, 28, 38 et 48 cm, permettent de composer plusieurs tables."
       ],
       "image": {
         "file": "adrian_wood_01.jpg",
         "alt": "Adrian Wood, tables basses en bois en forme de galet dans un salon"
       },
       "gallery": [
+        {
+          "file": "adrian_wood_fiche.jpg",
+          "alt": "Adrian Wood, photographie sur fond blanc"
+        },
         {
           "file": "adrian_wood_02.jpg",
           "alt": "Adrian Wood vue de dessus, deux plateaux en bois superposés"
@@ -107,35 +347,148 @@
           "file": "adrian_wood_05.jpg",
           "alt": "Détail du veinage d’un plateau Adrian Wood"
         }
-      ]
+      ],
+      "dimensions": [
+        [
+          "Galet 90 × 90",
+          "hauteur 28, 38 ou 48"
+        ],
+        [
+          "Galet 118 × 78",
+          "hauteur 28, 38 ou 48"
+        ],
+        [
+          "Ovale 180 × 90",
+          "hauteur 28, 38 ou 48"
+        ]
+      ],
+      "finishes": [
+        {
+          "group": "base",
+          "material": "metals",
+          "name": "GFM11 gaufré titane",
+          "code": "GFM11",
+          "file": "sw-adrian_wood-000.jpg"
+        },
+        {
+          "group": "base",
+          "material": "metals",
+          "name": "GFM18 gaufré bronze",
+          "code": "GFM18",
+          "file": "sw-adrian_wood-001.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "bois",
+          "name": "NC noyer Canaletto",
+          "code": "NC",
+          "file": "sw-adrian_wood-002.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "bois",
+          "name": "RB rouvre brûlé",
+          "code": "RB",
+          "file": "sw-adrian_wood-003.jpg"
+        }
+      ],
+      "drawings": [
+        {
+          "file": "adrian-wood-dimensions.png",
+          "label": "Dimensions en cm, d’après la fiche produit"
+        }
+      ],
+      "technical_sheet": {
+        "file": "adrian-wood-fiche-technique.pdf",
+        "filename": "cattelan-adrian-wood-fiche-technique.pdf"
+      }
     },
     {
       "slug": "dodo",
       "title": "Dodo",
-      "description": "Des tables d’appoint en verre aux reflets profonds, posées sur un piètement en métal. Une touche de couleur à côté du canapé.",
+      "description": "Une table basse en verre artistique décoré, fumé, vert paon ou aubergine, sur une base en métal bronze. Deux formats à placer près du canapé.",
       "paragraphs": [
-        "Dodo associe un corps en verre texturé à un piètement en métal. Sur la photo, le verre vert se décline en deux hauteurs placées côte à côte.",
-        "Les teintes du verre et les dimensions disponibles se vérifient avec le showroom."
+        "Dodo est un cylindre en verre artistique au décor en relief, posé sur une base en métal laqué gaufré bronze.",
+        "Le verre existe en fumé, verde Pavone et Melanzana. Deux formats : 30 cm de diamètre pour 53 cm de haut, ou 41,5 cm pour 44 cm."
       ],
       "image": {
         "file": "dodo_01.jpg",
-        "alt": "Dodo, deux tables d’appoint en verre vert près d’un canapé"
+        "alt": "Dodo, deux tables basses en verre vert près d’un canapé"
       },
-      "gallery": []
+      "gallery": [
+        {
+          "file": "dodo_fiche.jpg",
+          "alt": "Dodo, photographie sur fond blanc"
+        }
+      ],
+      "dimensions": [
+        [
+          "Dodo A",
+          "Ø 30 × 53 h"
+        ],
+        [
+          "Dodo B",
+          "Ø 41,5 × 44 h"
+        ]
+      ],
+      "finishes": [
+        {
+          "group": "base",
+          "material": "metals",
+          "name": "GFM18 gaufré bronze",
+          "code": "GFM18",
+          "file": "sw-dodo-000.jpg"
+        },
+        {
+          "group": "structure",
+          "material": "verre artistique",
+          "name": "fumé",
+          "code": "",
+          "file": "sw-dodo-001.jpg"
+        },
+        {
+          "group": "structure",
+          "material": "verre artistique",
+          "name": "melanzana",
+          "code": "",
+          "file": "sw-dodo-002.jpg"
+        },
+        {
+          "group": "structure",
+          "material": "verre artistique",
+          "name": "verde pavone",
+          "code": "",
+          "file": "sw-dodo-003.jpg"
+        }
+      ],
+      "drawings": [
+        {
+          "file": "dodo-dimensions.png",
+          "label": "Dimensions en cm, d’après la fiche produit"
+        }
+      ],
+      "technical_sheet": {
+        "file": "dodo-fiche-technique.pdf",
+        "filename": "cattelan-dodo-fiche-technique.pdf"
+      }
     },
     {
       "slug": "westin",
       "title": "Westin",
-      "description": "Une console à piètement en lames croisées, avec un plateau en verre ou en bois. Une silhouette graphique pour une entrée ou un mur de salon.",
+      "description": "Une console au piètement en acier croisé, avec un plateau en verre ou en bois massif au bord irrégulier. Sept finitions pour la base.",
       "paragraphs": [
-        "Westin repose sur des lames de métal qui se croisent sous le plateau. Le plateau existe en verre, qui laisse voir le piètement, ou en bois massif aux bords naturels.",
-        "Placée sous un miroir, la console compose une entrée complète. Les dimensions et les finitions se choisissent avec le showroom."
+        "Westin repose sur des lames d’acier qui se croisent sous le plateau. La base existe en sept finitions, du titane au noir, dont Brushed Bronze et Brushed Grey.",
+        "Le plateau est en verre clair ou extra-clair de 12 mm, ou en bois massif au bord irrégulier : noyer Canaletto, rouvre brûlé ou chêne naturel. La console se fixe au mur."
       ],
       "image": {
         "file": "westin_07.jpg",
         "alt": "Westin, console à plateau en bois sous un miroir carré"
       },
       "gallery": [
+        {
+          "file": "westin_fiche.jpg",
+          "alt": "Westin, photographie sur fond blanc"
+        },
         {
           "file": "westin_01.jpg",
           "alt": "Westin, console à plateau en verre devant un mur gris"
@@ -164,21 +517,131 @@
           "file": "westin_11.jpg",
           "alt": "Détail du plateau en bois de Westin"
         }
-      ]
+      ],
+      "dimensions": [
+        [
+          "Plateau en verre",
+          "160, 180 ou 200 × 50 × 74 h"
+        ],
+        [
+          "Plateau en bois",
+          "160 ou 200 × 45 × 76 h, épaisseur 4"
+        ]
+      ],
+      "finishes": [
+        {
+          "group": "base",
+          "material": "metals",
+          "name": "brushed bronze",
+          "code": "",
+          "file": "sw-westin-000.jpg"
+        },
+        {
+          "group": "base",
+          "material": "metals",
+          "name": "brushed grey",
+          "code": "",
+          "file": "sw-westin-001.jpg"
+        },
+        {
+          "group": "base",
+          "material": "metals",
+          "name": "GFM11 gaufré titane",
+          "code": "GFM11",
+          "file": "sw-westin-002.jpg"
+        },
+        {
+          "group": "base",
+          "material": "metals",
+          "name": "GFM18 gaufré bronze",
+          "code": "GFM18",
+          "file": "sw-westin-003.jpg"
+        },
+        {
+          "group": "base",
+          "material": "metals",
+          "name": "GFM69 gaufré graphite",
+          "code": "GFM69",
+          "file": "sw-westin-004.jpg"
+        },
+        {
+          "group": "base",
+          "material": "metals",
+          "name": "GFM70 gaufré pearl",
+          "code": "GFM70",
+          "file": "sw-westin-005.jpg"
+        },
+        {
+          "group": "base",
+          "material": "metals",
+          "name": "GFM73 gaufré noir",
+          "code": "GFM73",
+          "file": "sw-westin-006.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "bois",
+          "name": "NC noyer Canaletto",
+          "code": "NC",
+          "file": "sw-westin-007.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "bois",
+          "name": "RB rouvre brûlé",
+          "code": "RB",
+          "file": "sw-westin-008.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "bois",
+          "name": "RN chêne naturel",
+          "code": "RN",
+          "file": "sw-westin-009.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "verre",
+          "name": "clair",
+          "code": "",
+          "file": "sw-westin-010.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "verre",
+          "name": "transparent extra-clair",
+          "code": "",
+          "file": "sw-westin-011.jpg"
+        }
+      ],
+      "drawings": [
+        {
+          "file": "westin-dimensions.png",
+          "label": "Dimensions en cm, d’après la fiche produit"
+        }
+      ],
+      "technical_sheet": {
+        "file": "westin-fiche-technique.pdf",
+        "filename": "cattelan-westin-fiche-technique.pdf"
+      }
     },
     {
       "slug": "nettuno",
       "title": "Nettuno",
-      "description": "Une console à base ondulée en métal dégradé, sous un plateau en verre. Une pièce sculpturale pour une entrée ou un salon.",
+      "description": "Une console à base ondulée en acier, sous un plateau en verre extra-clair ou en verre cuit MIST. Trois longueurs et deux hauteurs.",
       "paragraphs": [
-        "Nettuno doit sa forme à une base ondulée, dont la teinte passe du doré au bronze foncé. Le plateau en verre laisse voir tout le mouvement de la base.",
-        "Associée à un miroir, elle compose une entrée. Les dimensions et les finitions se choisissent avec le showroom."
+        "Nettuno doit sa forme à une base ondulée en acier gaufré titane ou bronze, Oxybrass ou Oxygrey. Le plateau en verre de 12 mm repose sur la base.",
+        "Le verre est extra-clair, ou cuit (MIST) pour une surface texturée. La console existe en 130, 160 et 180 cm de long, en 72 ou 92 cm de haut, et se fixe au mur."
       ],
       "image": {
         "file": "nettuno_05.jpg",
         "alt": "Nettuno, base ondulée dorée vue à travers le plateau en verre"
       },
       "gallery": [
+        {
+          "file": "nettuno_fiche.jpg",
+          "alt": "Nettuno, photographie sur fond blanc"
+        },
         {
           "file": "nettuno_01.jpg",
           "alt": "Nettuno devant un mur en lattes de bois, sous deux miroirs"
@@ -203,53 +666,275 @@
           "file": "nettuno_07.jpg",
           "alt": "Nettuno vue de face, base ondulée et plateau en verre"
         }
-      ]
+      ],
+      "dimensions": [
+        [
+          "Base de 67",
+          "130 ou 160 × 40, hauteur 72 ou 92"
+        ],
+        [
+          "Base de 105",
+          "180 × 40, hauteur 72 ou 92"
+        ]
+      ],
+      "finishes": [
+        {
+          "group": "base",
+          "material": "metals",
+          "name": "GFM11 gaufré titane",
+          "code": "GFM11",
+          "file": "sw-nettuno-000.jpg"
+        },
+        {
+          "group": "base",
+          "material": "metals",
+          "name": "GFM18 gaufré bronze",
+          "code": "GFM18",
+          "file": "sw-nettuno-001.jpg"
+        },
+        {
+          "group": "base",
+          "material": "metals",
+          "name": "oxybrass",
+          "code": "",
+          "file": "sw-nettuno-002.jpg"
+        },
+        {
+          "group": "base",
+          "material": "metals",
+          "name": "oxygrey",
+          "code": "",
+          "file": "sw-nettuno-003.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "verre",
+          "name": "transparent extra-clair",
+          "code": "",
+          "file": "sw-nettuno-004.jpg"
+        },
+        {
+          "group": "plateau",
+          "material": "verre",
+          "name": "verre cuit (MIST)",
+          "code": "",
+          "file": "sw-nettuno-005.jpg"
+        }
+      ],
+      "drawings": [
+        {
+          "file": "nettuno-dimensions.png",
+          "label": "Dimensions en cm, d’après la fiche produit"
+        }
+      ],
+      "technical_sheet": {
+        "file": "nettuno-fiche-technique.pdf",
+        "filename": "cattelan-nettuno-fiche-technique.pdf"
+      }
+    },
+    {
+      "slug": "rado-keramik",
+      "title": "Rado Keramik",
+      "description": "Une console tout en céramique, plateau et base, aux décors de marbre. Sa base est façonnée selon un procédé breveté.",
+      "paragraphs": [
+        "Rado Keramik est entièrement en céramique Marmi, du plateau à la base. Cinq décors : Portoro, Borghini Calacatta, Colosseo, Invisible et Taj Mahal.",
+        "La base est façonnée selon un procédé exclusif breveté ; ses légères irrégularités de forme et de teinte font partie de la pièce. Deux longueurs, 127 et 157 cm. La console se fixe au mur."
+      ],
+      "image": {
+        "file": "rado_keramik_fiche.jpg",
+        "alt": "Rado Keramik, console en céramique au décor travertin"
+      },
+      "gallery": [],
+      "dimensions": [
+        [
+          "Rado Keramik 127",
+          "127 × 38 × 73 h"
+        ],
+        [
+          "Rado Keramik 157",
+          "157 × 38 × 73 h"
+        ]
+      ],
+      "finishes": [
+        {
+          "group": "Plateau et base",
+          "material": "céramique Marmi",
+          "name": "KM07 Portoro opaque",
+          "code": "KM07",
+          "file": "sw-rado_keramik-000.jpg"
+        },
+        {
+          "group": "Plateau et base",
+          "material": "céramique Marmi",
+          "name": "KM18 Borghini Calacatta opaque",
+          "code": "KM18",
+          "file": "sw-rado_keramik-001.jpg"
+        },
+        {
+          "group": "Plateau et base",
+          "material": "céramique Marmi",
+          "name": "KM21 Colosseo",
+          "code": "KM21",
+          "file": "sw-rado_keramik-002.jpg"
+        },
+        {
+          "group": "Plateau et base",
+          "material": "céramique Marmi",
+          "name": "KM24 Invisible opaque",
+          "code": "KM24",
+          "file": "sw-rado_keramik-003.jpg"
+        },
+        {
+          "group": "Plateau et base",
+          "material": "céramique Marmi",
+          "name": "KM26 Taj Mahal",
+          "code": "KM26",
+          "file": "sw-rado_keramik-004.jpg"
+        }
+      ],
+      "drawings": [
+        {
+          "file": "rado-keramik-dimensions.png",
+          "label": "Dimensions en cm, d’après la fiche produit"
+        }
+      ],
+      "technical_sheet": {
+        "file": "rado-keramik-fiche-technique.pdf",
+        "filename": "cattelan-rado-keramik-fiche-technique.pdf"
+      }
     },
     {
       "slug": "cosmos",
       "title": "Cosmos",
-      "description": "Un miroir aux bords ondulés qui déforment légèrement les reflets. Une pièce qui anime un mur d’entrée ou de salon.",
+      "description": "Un miroir mural rond en verre miroité fumé ou bronze, dont la bordure courbe déforme les reflets. Deux diamètres.",
       "paragraphs": [
-        "Cosmos joue avec la lumière : son contour ondulé courbe les reflets de la pièce. Il se place seul ou au-dessus d’une console.",
-        "Les formats et les finitions du miroir se vérifient avec le showroom."
+        "Cosmos est un miroir mural en verre miroité. Autour d’une surface centrale en forme de galet, la bordure courbe déforme les reflets de la pièce.",
+        "Il existe en verre miroité fumé ou bronze, en 120 ou 157 cm de diamètre. Ses supports permettent un montage horizontal ou vertical."
       ],
       "image": {
         "file": "cosmos_05.jpg",
-        "alt": "Cosmos, miroir aux bords ondulés au-dessus d’objets en céramique"
+        "alt": "Cosmos, miroir rond à la bordure courbe au-dessus d’objets en céramique"
       },
       "gallery": [
         {
+          "file": "cosmos_fiche.jpg",
+          "alt": "Cosmos, photographie sur fond blanc"
+        },
+        {
           "file": "cosmos_04.jpg",
-          "alt": "Détail du bord ondulé du miroir Cosmos"
+          "alt": "Détail de la bordure courbe du miroir Cosmos"
         }
-      ]
+      ],
+      "dimensions": [
+        [
+          "Cosmos 120",
+          "Ø 120, épaisseur 11"
+        ],
+        [
+          "Cosmos 157",
+          "Ø 157, épaisseur 11"
+        ]
+      ],
+      "finishes": [
+        {
+          "group": "",
+          "material": "verre",
+          "name": "miroité bronze",
+          "code": "",
+          "file": "sw-cosmos-000.jpg"
+        },
+        {
+          "group": "",
+          "material": "verre",
+          "name": "miroité fumé",
+          "code": "",
+          "file": "sw-cosmos-001.jpg"
+        }
+      ],
+      "drawings": [
+        {
+          "file": "cosmos-dimensions.png",
+          "label": "Dimensions en cm, d’après la fiche produit"
+        }
+      ],
+      "technical_sheet": {
+        "file": "cosmos-fiche-technique.pdf",
+        "filename": "cattelan-cosmos-fiche-technique.pdf"
+      }
     },
     {
       "slug": "glenn",
       "title": "Glenn",
-      "description": "Un miroir aux angles arrondis et au cadre en métal brillant, au mur ou posé au sol. Une présence lumineuse pour l’entrée ou la chambre.",
+      "description": "Un miroir tout en verre aux bords courbés, pour le mur ou le sol. Verre miroité, fumé ou bronze.",
       "paragraphs": [
-        "Glenn associe un miroir aux angles adoucis à un cadre en métal brillant qui reflète la pièce. Il existe en format carré pour le mur et en grand format à poser au sol.",
-        "Les formats et les finitions du cadre se choisissent avec le showroom."
+        "Glenn est entièrement en verre miroité. Ses bords se courbent et font glisser la lumière sur le pourtour du miroir.",
+        "Il existe en carré de 120 cm ou en rectangle de 80 × 190 cm, à poser au sol ou à fixer au mur, horizontalement ou verticalement. Verre miroité, fumé ou bronze."
       ],
       "image": {
         "file": "glenn_02.jpg",
-        "alt": "Glenn, miroir carré au cadre doré au-dessus d’une console"
+        "alt": "Glenn, miroir carré en verre miroité bronze au-dessus d’une console"
       },
       "gallery": [
         {
+          "file": "glenn_fiche.jpg",
+          "alt": "Glenn, photographie sur fond blanc"
+        },
+        {
           "file": "glenn_03.jpg",
-          "alt": "Glenn, miroir carré au cadre argenté au-dessus d’un meuble"
+          "alt": "Glenn en verre miroité au-dessus d’un meuble sombre"
         },
         {
           "file": "glenn_04.jpg",
-          "alt": "Détail du cadre métallique de Glenn"
+          "alt": "Détail du bord courbé du miroir Glenn"
         },
         {
           "file": "glenn_05.jpg",
-          "alt": "Deux miroirs Glenn grand format posés au sol"
+          "alt": "Deux miroirs Glenn rectangulaires posés au sol"
         }
-      ]
+      ],
+      "dimensions": [
+        [
+          "Carré",
+          "120 × 120, épaisseur 8"
+        ],
+        [
+          "Rectangle",
+          "80 × 190, épaisseur 8"
+        ]
+      ],
+      "finishes": [
+        {
+          "group": "",
+          "material": "verre",
+          "name": "miroité bronze",
+          "code": "",
+          "file": "sw-glenn-000.jpg"
+        },
+        {
+          "group": "",
+          "material": "verre",
+          "name": "miroité fumé",
+          "code": "",
+          "file": "sw-glenn-001.jpg"
+        },
+        {
+          "group": "",
+          "material": "verre",
+          "name": "miroité",
+          "code": "",
+          "file": "sw-glenn-002.jpg"
+        }
+      ],
+      "drawings": [
+        {
+          "file": "glenn-dimensions.png",
+          "label": "Dimensions en cm, d’après la fiche produit"
+        }
+      ],
+      "technical_sheet": {
+        "file": "glenn-fiche-technique.pdf",
+        "filename": "cattelan-glenn-fiche-technique.pdf"
+      }
     }
   ],
   "families": [
@@ -309,6 +994,7 @@
       "models": [
         "westin",
         "nettuno",
+        "rado-keramik",
         "cosmos",
         "glenn"
       ],

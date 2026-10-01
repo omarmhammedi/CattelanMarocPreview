@@ -1,6 +1,7 @@
 /**
  * Site plan, new families: Tables basses and Consoles & miroirs, with their models and
- * photos (content/new-families.json, files in content/media/new-families). Native APIs
+ * photos, dimensions, finishes and product sheets (content/new-families.json, files in
+ * content/media/new-families). Native APIs
  * only; additive. An entry that already exists is kept as it is, so a re-run changes nothing.
  *
  *   EMDASH_BASE_URL=http://localhost:4331 EMDASH_AUTH_FILE=.wrangler/cms-sync-session.json node scripts/migrations/0016-new-families.mjs [--apply]
@@ -23,9 +24,9 @@ export function validateManifest(manifest) {
   assert(manifest.mediaDir && manifest.availability_note);
   const models = new Set();
   const files = [];
-  const picture = (value, label) => {
-    assert(value?.file && /^[a-z0-9_]+\.jpg$/u.test(value.file), `${label}: a .jpg file name is required.`);
-    assert(value.alt?.trim() && value.alt.length <= 200, `${label}: alt text is required.`);
+  const picture = (value, label, { alt = true } = {}) => {
+    assert(value?.file && /^[a-z0-9_-]+\.(?:jpg|png)$/u.test(value.file), `${label}: a .jpg or .png file name is required.`);
+    if (alt) assert(value.alt?.trim() && value.alt.length <= 200, `${label}: alt text is required.`);
     files.push(value.file);
   };
   for (const model of manifest.models) {
@@ -35,6 +36,12 @@ export function validateManifest(manifest) {
     assert(model.paragraphs.length > 0, `${model.slug}: at least one paragraph.`);
     picture(model.image, model.slug);
     model.gallery.forEach((item, index) => picture(item, `${model.slug} gallery ${index + 1}`));
+    for (const [label, value] of model.dimensions) assert(label && value, `${model.slug}: empty dimension.`);
+    // The finish name doubles as the swatch alt text.
+    for (const finish of model.finishes) { assert(finish.material && finish.name, `${model.slug}: incomplete finish.`); picture(finish, `${model.slug} ${finish.name}`, { alt: false }); }
+    for (const drawing of model.drawings) picture(drawing, `${model.slug} drawing`, { alt: false });
+    assert(/^[a-z0-9-]+\.pdf$/u.test(model.technical_sheet.file), `${model.slug}: a PDF technical sheet is required.`);
+    files.push(model.technical_sheet.file);
   }
   const families = new Set();
   for (const family of manifest.families) {
@@ -49,13 +56,21 @@ export function validateManifest(manifest) {
   return { ...manifest, files: [...new Set(files)] };
 }
 
+function mimeOf(bytes) {
+  if (bytes[0] === 0xff && bytes[1] === 0xd8) return 'image/jpeg';
+  if (bytes.subarray(0, 4).toString('latin1') === '\x89PNG') return 'image/png';
+  if (bytes.subarray(0, 5).toString('latin1') === '%PDF-') return 'application/pdf';
+  return null;
+}
+
 export async function loadManifest() {
   const manifest = validateManifest(JSON.parse(await readFile(join(root, 'content/new-families.json'), 'utf8')));
   const assets = {};
   for (const file of manifest.files) {
     const bytes = await readFile(join(root, manifest.mediaDir, file));
-    assert(bytes.length > 0 && bytes.length <= maxBytes && bytes[0] === 0xff && bytes[1] === 0xd8, `${file}: a JPEG of 4 MB at most is required.`);
-    assets[file] = { bytes, sha256: createHash('sha256').update(bytes).digest('hex') };
+    const mimeType = mimeOf(bytes);
+    assert(bytes.length > 0 && bytes.length <= maxBytes && mimeType === { jpg: 'image/jpeg', png: 'image/png', pdf: 'application/pdf' }[file.split('.').pop()], `${file}: a JPEG, PNG or PDF of 4 MB at most, matching its extension, is required.`);
+    assets[file] = { bytes, mimeType, sha256: createHash('sha256').update(bytes).digest('hex') };
   }
   return { ...manifest, assets };
 }
@@ -73,7 +88,7 @@ export async function planNewFamilies(api, manifest) {
     const schema = (await api(`/_emdash/api/schema/collections/${collection}?includeFields=true`)).item;
     const fields = new Map(schema.fields.map(field => [field.slug, field]));
     const expected = collection === 'models'
-      ? { title: 'string', description: 'text', image: 'image', gallery: 'repeater', content: 'portableText', availability_note: 'text' }
+      ? { title: 'string', description: 'text', image: 'image', gallery: 'repeater', content: 'portableText', dimensions: 'repeater', drawings: 'repeater', finishes: 'repeater', technical_sheet: 'file', technical_sheet_label: 'string', availability_note: 'text' }
       : { title: 'string', short_title: 'string', card_text: 'text', intro: 'text', image: 'image', image_caption: 'string', content: 'portableText', sort_order: 'integer', models: 'reference', seo_title: 'string', meta_description: 'text' };
     for (const [slug, type] of Object.entries(expected)) assert.equal(fields.get(slug)?.type, type, `${collection}.${slug} must be a ${type} field.`);
   }
@@ -93,18 +108,26 @@ export async function applyNewFamilies(api, manifest, plan, { beforeWrite, log =
   assert.equal(typeof beforeWrite, 'function', 'A private backup writer is required before any mutation.');
   await beforeWrite({ plan: { ...plan, createModels: plan.createModels.map(model => model.slug), createFamilies: plan.createFamilies.map(family => family.slug) } });
   const uploaded = new Map();
-  const media = async ({ file, alt }) => {
+  const upload = async (file, filename = file) => {
     if (!uploaded.has(file)) {
-      const { bytes } = manifest.assets[file];
+      const { bytes, mimeType } = manifest.assets[file];
       const form = new FormData();
-      form.set('file', new File([bytes], file, { type: 'image/jpeg' }));
+      form.set('file', new File([bytes], filename, { type: mimeType }));
       form.set('deduplicate', 'true');
       const { item } = await api('/_emdash/api/media', { method: 'POST', form });
-      assert(item?.id && item.storageKey && item.size === bytes.length && item.mimeType === 'image/jpeg', `${file}: the upload did not return the image.`);
+      assert(item?.id && item.storageKey && item.size === bytes.length && item.mimeType === mimeType, `${file}: the upload did not return the file.`);
       uploaded.set(file, item);
     }
-    const item = uploaded.get(file);
+    return uploaded.get(file);
+  };
+  const media = async ({ file, alt }) => {
+    const item = await upload(file);
     return { provider: 'local', id: item.id, filename: item.filename, mimeType: item.mimeType, width: item.width, height: item.height, alt, meta: { storageKey: item.storageKey } };
+  };
+  const document = async ({ file, filename }) => {
+    const item = await upload(file, filename);
+    // Native 0.41 drops a top-level file size; keep it in provider metadata, as migration 0003 does.
+    return { provider: 'local', id: item.id, filename: item.filename, mimeType: item.mimeType, meta: { storageKey: item.storageKey, size: item.size } };
   };
   const publish = async (collection, data) => {
     const created = await api(`/_emdash/api/content/${collection}`, { method: 'POST', data });
@@ -120,9 +143,14 @@ export async function applyNewFamilies(api, manifest, plan, { beforeWrite, log =
       image: await media(model.image),
       gallery: await Promise.all(model.gallery.map(async item => ({ image: await media(item), caption: '' }))),
       content: portableText(model.slug, model.paragraphs),
+      dimensions: model.dimensions.map(([label, value]) => ({ label, value: `${value} cm` })),
+      drawings: await Promise.all(model.drawings.map(async (drawing, index) => ({ label: drawing.label, row: 1, column: index, image: await media({ file: drawing.file, alt: `${model.title} — dimensions` }) }))),
+      finishes: await Promise.all(model.finishes.map(async finish => ({ group: finish.group, material_group: '', material: finish.material, name: finish.name, code: finish.code, image: await media({ file: finish.file, alt: finish.name }) }))),
+      technical_sheet: await document(model.technical_sheet),
+      technical_sheet_label: 'Télécharger la fiche technique',
       availability_note: manifest.availability_note,
     } });
-    log(`models/${model.slug} created and published (${1 + model.gallery.length} photos)`);
+    log(`models/${model.slug} created and published (${1 + model.gallery.length} photos, ${model.finishes.length} finishes)`);
   }
   for (const family of plan.createFamilies) {
     await publish('families', {

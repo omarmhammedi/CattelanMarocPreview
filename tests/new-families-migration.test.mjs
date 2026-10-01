@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { applyNewFamilies, loadManifest, planNewFamilies, portableText, validateManifest } from '../scripts/migrations/0016-new-families.mjs';
 
-const modelFields = { title: 'string', description: 'text', image: 'image', gallery: 'repeater', content: 'portableText', availability_note: 'text' };
+const modelFields = { title: 'string', description: 'text', image: 'image', gallery: 'repeater', content: 'portableText', dimensions: 'repeater', drawings: 'repeater', finishes: 'repeater', technical_sheet: 'file', technical_sheet_label: 'string', availability_note: 'text' };
 const familyFields = { title: 'string', short_title: 'string', card_text: 'text', intro: 'text', image: 'image', image_caption: 'string', content: 'portableText', sort_order: 'integer', models: 'reference', seo_title: 'string', meta_description: 'text' };
 
 function fakeCms({ models = [], families = [] } = {}) {
@@ -17,7 +17,7 @@ function fakeCms({ models = [], families = [] } = {}) {
     if (schema) return { item: { fields: Object.entries(fields[schema[1]]).map(([slug, type]) => ({ slug, type })) } };
     if (path === '/_emdash/api/media' && method === 'POST') {
       const file = form.get('file');
-      const item = { id: `media-${state.media.length}`, storageKey: `k${state.media.length}.jpg`, filename: file.name, mimeType: file.type, size: file.size, width: 2400, height: 1470 };
+      const item = { id: `media-${state.media.length}`, storageKey: `k${state.media.length}`, filename: file.name, mimeType: file.type, size: file.size, width: 2400, height: 1470 };
       state.media.push(item);
       return { item };
     }
@@ -43,12 +43,13 @@ test('the manifest holds the two families, their models and an existing photo fo
   const manifest = await loadManifest();
   assert.deepEqual(manifest.families.map(family => [family.slug, family.models]), [
     ['tables-basses', ['arena', 'albert-keramik', 'adrian-wood', 'dodo']],
-    ['consoles-miroirs', ['westin', 'nettuno', 'cosmos', 'glenn']],
+    ['consoles-miroirs', ['westin', 'nettuno', 'rado-keramik', 'cosmos', 'glenn']],
   ]);
-  for (const file of manifest.files) assert(manifest.assets[file].bytes.length > 50_000, `${file}: missing or too small`);
+  for (const file of manifest.files) assert(manifest.assets[file].bytes.length > (file.startsWith('sw-') ? 5_000 : 20_000), `${file}: missing or too small`);
+  for (const model of manifest.models) assert(model.dimensions.length && model.finishes.length && model.technical_sheet.file, `${model.slug}: sheet data`);
   const texts = [...manifest.models.flatMap(model => [model.description, ...model.paragraphs]), ...manifest.families.flatMap(family => [family.intro, family.card_text, ...family.sections.flat()])];
   for (const text of texts) assert.doesNotMatch(text, /prix|promotion|remise|!|officiel/iu, `luxury codes: ${text}`);
-  assert.throws(() => validateManifest({ ...manifest, families: [{ ...manifest.families[0], models: ['rado-keramik'] }] }), /unknown model/u);
+  assert.throws(() => validateManifest({ ...manifest, families: [{ ...manifest.families[0], models: ['lumen'] }] }), /unknown model/u);
 });
 
 test('creates and publishes the models, then the families with their selection in order', async () => {
@@ -58,12 +59,18 @@ test('creates and publishes the models, then the families with their selection i
   await applyNewFamilies(api, manifest, await planNewFamilies(api, manifest), { beforeWrite: value => backups.push(value) });
   assert.equal(backups.length, 1);
   assert(state.entries.models.every(item => item.status === 'published') && state.entries.families.every(item => item.status === 'published'));
-  assert.equal(state.entries.models.length, 8);
+  assert.equal(state.entries.models.length, 9);
   assert.deepEqual(state.references['tables-basses'].models, ['models-arena', 'models-albert-keramik', 'models-adrian-wood', 'models-dodo']);
   assert.equal(state.media.length, manifest.files.length, 'each photo is uploaded once');
   const arena = state.entries.models.find(item => item.slug === 'arena').data;
   assert.equal(arena.image.alt, manifest.models[0].image.alt);
-  assert.equal(arena.gallery.length, 6);
+  assert.equal(arena.gallery.length, 7);
+  assert.deepEqual(arena.dimensions[0], { label: 'Arena', value: 'Ø 120 × 29 h cm' });
+  assert.deepEqual(arena.finishes[0], { group: 'base', material_group: '', material: 'metals', name: 'GFM73 gaufré noir', code: 'GFM73', image: arena.finishes[0].image });
+  assert.equal(arena.finishes[0].image.alt, 'GFM73 gaufré noir');
+  assert.equal(arena.technical_sheet.mimeType, 'application/pdf');
+  assert.equal(arena.technical_sheet.filename, 'cattelan-arena-fiche-technique.pdf');
+  assert.equal(arena.drawings[0].image.mimeType, 'image/png');
   assert.equal(arena.content[0].children[0].text, manifest.models[0].paragraphs[0]);
   const second = await planNewFamilies(api, manifest);
   assert.deepEqual([second.createModels, second.createFamilies], [[], []]);
