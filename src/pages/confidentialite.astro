@@ -19,18 +19,20 @@ const cndpReceipt=site.cndpReceipt;
 </ul>
 <p>Nous enregistrons aussi la page d’origine de la demande et, le cas échéant, le modèle consulté. Ces données sont traitées avec votre consentement, donné en envoyant le formulaire. Elles ne sont ni vendues ni cédées.</p>
 <h2>Qui y a accès</h2>
-<p>L’équipe de Racha Home qui vous répond. Nos prestataires techniques les traitent pour notre compte : Cloudflare pour l’hébergement du site{emailEnabled ? ' et Resend pour l’envoi des e-mails' : ''}. Elles seront transmises à notre outil de gestion de la relation client lorsqu’il sera raccordé ; cette page sera alors complétée.</p>
+<p>L’équipe de Racha Home qui vous répond. Nos prestataires techniques les traitent pour notre compte : Cloudflare pour l’hébergement du site{site.analyticsToken ? ' et la mesure d’audience' : ''}{emailEnabled ? ' et Resend pour l’envoi des e-mails' : ''}. Elles seront transmises à notre outil de gestion de la relation client lorsqu’il sera raccordé ; cette page sera alors complétée.</p>
 <h2>Transfert hors du Maroc</h2>
 <p>{emailEnabled ? 'Ces prestataires peuvent' : 'Ce prestataire peut'} traiter les données dans d’autres pays, notamment aux États-Unis. Ce transfert figure dans notre déclaration auprès de la CNDP.</p>
 <h2>Durée de conservation</h2>
 <ul>
-<li>Demandes de catalogue, de rendez-vous et demandes professionnelles : trois ans à compter de leur envoi, puis suppression automatique.</li>
+<li>Demandes de catalogue, de rendez-vous, de projet et demandes d’architectes : trois ans à compter de leur envoi, puis suppression automatique.</li>
 <li>Nouveautés et invitations : jusqu’au retrait de votre accord, dans la limite de ces trois ans.</li>
 <li>Si votre demande aboutit à une commande, les documents commerciaux et comptables sont conservés pendant la durée prévue par la loi.</li>
 <li>Protection contre les envois abusifs : une empreinte chiffrée de votre adresse IP, effacée sous trois heures. L’adresse elle-même n’est pas enregistrée.</li>
 </ul>
-<h2>Cookies</h2>
-<p>Ce site n’utilise ni cookie publicitaire ni outil de mesure d’audience. Votre choix entre l’affichage clair et sombre est mémorisé dans votre navigateur.</p>
+<h2>Cookies et mesure d’audience</h2>
+{site.analyticsToken
+  ? <p>Ce site n’utilise aucun cookie. Il mesure sa fréquentation avec Cloudflare Web Analytics, qui ne dépose pas de cookie, ne crée pas d’identifiant et ne suit pas votre navigation d’un site à l’autre : seules des statistiques globales sont produites (pages vues, provenance, type d’appareil). Votre choix entre l’affichage clair et sombre est mémorisé dans votre navigateur.</p>
+  : <p>Ce site n’utilise ni cookie publicitaire ni outil de mesure d’audience. Votre choix entre l’affichage clair et sombre est mémorisé dans votre navigateur.</p>}
 <h2>Vos droits</h2>
 <p>Conformément à la loi n° 09-08, vous pouvez accéder à vos données, les faire rectifier ou supprimer, et vous opposer à leur traitement, notamment à l’envoi de nouveautés, sans frais. Écrivez à <a href="mailto:contact@cattelanitalia.ma">contact@cattelanitalia.ma</a> ou à notre siège social. Vous pouvez aussi saisir la Commission nationale de contrôle de la protection des données à caractère personnel (<a href="https://www.cndp.ma" target="_blank" rel="noopener noreferrer">CNDP</a>).</p>
 <p>Le traitement des données issues de ce site fait l’objet d’une déclaration auprès de la CNDP{cndpReceipt ? `, récépissé n° ${cndpReceipt}` : ', en cours d’enregistrement'}.</p>

@@ -345,3 +345,14 @@ Les fiches modèles n’ont pas de champ titre SEO : leur titre est composé par
 `scripts/migrations/0021-copy-v2.mjs` (aperçu par défaut, `--apply`, sauvegarde privée, sans effet à la seconde exécution) remplace les textes génériques par des textes concrets, tirés des fiches produit et de la FAQ (`content/copy-v2.json`) : accueil, collections, showroom, catalogue, journal, À propos, les huit familles (titre, accroche, introduction, repères pratiques, description) et les descriptions des onze premiers modèles. Quatre familles sont renommées, sans changer d’adresse : Tables et salles à manger, Tables basses et d’appoint, Canapés, salons et fauteuils, Luminaires et lustres. Le showroom reçoit une section `contact_note` si elle manque.
 
 Un champ, un texte de section ou un corps de texte n’est remplacé que s’il vaut encore une version écrite par ce projet : le seed ou n’importe quel manifeste de `content/` (dont la version 0012 du showroom). Un texte d’éditeur est conservé et signalé dans `kept`.
+
+## Migration 0022 : lancement V2 (architectes, parcours, villes, mesure d’audience)
+
+`scripts/migrations/0022-v2-launch.mjs` (`content/v2-launch.json`, mêmes règles que 0021) :
+
+- La page Professionnels devient « Architectes & projets » (adresse `/professionnels/` inchangée) ; le libellé du menu change seulement s’il vaut encore « Professionnels ». Nouvelles sections : Comment commander, Recevoir vos clients, Conditions professionnelles. Le formulaire demande le cabinet, la ville, le type de projet, l’étape, l’échéance et les modèles envisagés.
+- Votre projet s’ouvre sur trois parcours (une pièce ; une pièce entière ou toute la maison ; avec un architecte), suivis des étapes de commande, d’un bouton WhatsApp « Envoyez une photo de votre pièce » et d’un formulaire court (parcours, ville).
+- FAQ : villes desservies, choix à distance, fichiers 3D, rendez-vous clients des architectes.
+- Configuration du site reçoit le champ « Jeton Cloudflare Web Analytics » : vide, aucune mesure ; rempli, le site charge la balise Cloudflare sans cookie et la page Confidentialité le mentionne.
+
+Chaque demande est marquée « architecte » (formulaire Architectes & projets) ou « particulier » (rendez-vous, Votre projet), avec sa ville, dans l’administration, l’alerte e-mail et l’export CSV. Le code ajoute aussi « Sur commande, fabriqué en Italie » et « Fichiers 2D et 3D sur demande » sur chaque fiche modèle, et les quatre villes dans les données structurées (`areaServed`) et `llms.txt`.

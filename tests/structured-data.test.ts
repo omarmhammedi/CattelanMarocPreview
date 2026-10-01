@@ -257,7 +257,10 @@ test('simultaneous published and draft requests cannot share metadata', async ()
 test('the address form of the plan keeps street, district, postcode and city', () => {
   const graph = furnitureStoreGraph({...site, address: '8-10 avenue du Docteur Mohamed Sijilmassi, Triangle d’Or, 20250 Casablanca, Maroc'}, {}, origin)!;
   assert.deepEqual(graph.address, {'@type': 'PostalAddress', streetAddress: '8-10 avenue du Docteur Mohamed Sijilmassi, Triangle d’Or', addressLocality: 'Casablanca', postalCode: '20250', addressCountry: 'MA'});
-  assert.deepEqual(graph.areaServed, {'@type': 'Country', name: 'Maroc'});
+  assert.deepEqual(graph.areaServed, [
+    {'@type': 'City', name: 'Casablanca'}, {'@type': 'City', name: 'Rabat'}, {'@type': 'City', name: 'Marrakech'},
+    {'@type': 'City', name: 'Tanger'}, {'@type': 'Country', name: 'Maroc'},
+  ]);
 });
 
 test('Organization describes the site from its CMS identity only', () => {

@@ -111,6 +111,8 @@ export async function getSite(){
   return {name:String(settings.title || ''),tagline:String(settings.tagline || ''),city:d.city,location:String(d.brand_location || ''),
     logoLight:picture(d.logo_light || settings.logo),logoDark:picture(d.logo_dark || settings.logo),phone:d.contact_phone,whatsappUrl:d.whatsapp_url,whatsappHref:d.whatsapp_url,navigation:menu?.items || [],
     address:d.address,hours:d.hours,mapUrl:d.map_url,mapEmbedUrl:d.map_embed_url,mapNote:d.map_note,publicEmail:d.public_email,cndpReceipt:String(d.cndp_receipt || '').trim(),
+    // Cloudflare Web Analytics site token (32 hex characters); the beacon loads only when it is set.
+    analyticsToken:/^[0-9a-f]{32}$/iu.test(String(d.analytics_token || '').trim()) ? String(d.analytics_token).trim() : '',
     showroomLatitude:d.showroom_latitude,showroomLongitude:d.showroom_longitude,
     footerText:d.footer_text,footerNote:d.footer_text,previewNotice:d.preview_notice,modelNotice:d.model_notice,
     placeholderNotice:d.placeholder_notice,settings,

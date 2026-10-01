@@ -37,14 +37,14 @@ export function validateManifest(manifest) {
       if (limits[field]) assert(value.length <= limits[field], `${entry.slug}.${field}: ${value.length} > ${limits[field]} characters.`);
     }
     for (const [key, section] of Object.entries(entry.sections || {})) {
-      assert(section.text || section.heading, `${entry.slug}.${key}: empty section.`);
+      assert(section.text || section.heading || section.cta_label, `${entry.slug}.${key}: empty section.`);
     }
   }
   return manifest;
 }
 
-export async function loadManifest() {
-  return validateManifest(JSON.parse(await readFile(join(root, 'content', manifestFile), 'utf8')));
+export async function loadManifest(file = manifestFile) {
+  return validateManifest(JSON.parse(await readFile(join(root, 'content', file), 'utf8')));
 }
 
 export const textOf = blocks => (Array.isArray(blocks) ? blocks : [])
@@ -73,7 +73,7 @@ export function collectKnown(sources) {
       if (value.some(item => item?._type === 'block')) return;
       for (const item of value) {
         if (item && typeof item === 'object' && typeof item.section_key === 'string') {
-          for (const field of ['heading', 'text']) if (typeof item[field] === 'string') add(target.sections, `${item.section_key}.${field}`, item[field]);
+          for (const field of ['heading', 'text', 'cta_label']) if (typeof item[field] === 'string') add(target.sections, `${item.section_key}.${field}`, item[field]);
         } else visitItem(target, item, depth + 1);
       }
       return;
@@ -138,12 +138,15 @@ export function itemChange(item, entry, known) {
     for (const [key, update] of Object.entries(entry.sections)) {
       let section = sections.find(item => item.section_key === key);
       if (!section) {
-        section = { section_key: key, heading: update.heading || '', text: update.text || '', cta_label: '', cta_href: '' };
-        sections.push(section);
+        section = { section_key: key, heading: update.heading || '', text: update.text || '', cta_label: update.cta_label || '', cta_href: update.cta_href || '' };
+        // A new section goes before or after the one it names, when that one exists; else at the end.
+        const before = update.before ? sections.findIndex(item => item.section_key === update.before) : -1;
+        const after = update.after ? sections.findIndex(item => item.section_key === update.after) : -1;
+        sections.splice(before >= 0 ? before : after >= 0 ? after + 1 : sections.length, 0, section);
         changed.push(`sections.${key} (added)`);
         continue;
       }
-      for (const field of ['heading', 'text']) {
+      for (const field of ['heading', 'text', 'cta_label']) {
         if (update[field] === undefined || section[field] === update[field]) continue;
         const current = section[field] ?? '';
         if (current === '' || versions.sections.get(`${key}.${field}`)?.has(current)) { section[field] = update[field]; changed.push(`sections.${key}.${field}`); }
@@ -156,10 +159,10 @@ export function itemChange(item, entry, known) {
   return { data, nativeTitle, changed, kept };
 }
 
-export async function loadSources() {
+export async function loadSources(exclude = manifestFile) {
   const sources = [JSON.parse(await readFile(join(root, 'seed/seed.json'), 'utf8')).content];
   for (const name of (await readdir(join(root, 'content'))).sort()) {
-    if (!name.endsWith('.json') || name === manifestFile) continue;
+    if (!name.endsWith('.json') || name === exclude) continue;
     sources.push(JSON.parse(await readFile(join(root, 'content', name), 'utf8')));
   }
   return sources;

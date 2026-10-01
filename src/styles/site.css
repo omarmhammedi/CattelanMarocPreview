@@ -59,7 +59,9 @@ button, input { font-family: inherit; }
 .hd.solid { background: var(--hdbg); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
 .hd .logo img { width: max(110px, calc(var(--u) * 9)); height: auto; }
 .hd nav { display: flex; align-items: center; margin-inline: auto; gap: max(18px, calc(var(--u) * 2.3)); font-size: max(11px, calc(var(--u) * 0.8)); letter-spacing: 0.16em; text-transform: uppercase; }
-.hd nav a:not(.btn) { position: relative; padding: 6px 0; }
+.hd nav a:not(.btn) { position: relative; padding: 6px 0; white-space: nowrap; }
+/* Same as the inner-page header: tighter spacing below 1440 px keeps the menu on one line until the fold. */
+@media (max-width: 1440px) { .hd nav { gap: max(15px, calc(var(--u) * 1.55)); } }
 .hd nav a:not(.btn)::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 1px; background: var(--ink); transition: right .35s ease; }
 .hd nav a:not(.btn):hover::after { right: 0; }
 .hd .btn { height: 40px; padding: 0 16px; }

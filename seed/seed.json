@@ -984,6 +984,12 @@
           "validation": {
             "relation": "site_catalogue"
           }
+        },
+        {
+          "type": "string",
+          "required": false,
+          "slug": "analytics_token",
+          "label": "Jeton Cloudflare Web Analytics"
         }
       ],
       "urlPattern": "/",
@@ -26787,34 +26793,55 @@
         "status": "published",
         "locale": "fr",
         "data": {
-          "title": "Professionnels",
+          "title": "Architectes & projets",
           "route_key": "professionnels",
           "eyebrow": "Architectes et décorateurs",
-          "intro": "Architectes, décorateurs d’intérieur et maîtres d’ouvrage : le showroom de Casablanca accompagne vos projets résidentiels, hôteliers et commerciaux avec tout le catalogue Cattelan Italia.",
+          "intro": "Architectes d’intérieur et décorateurs : tout le catalogue Cattelan Italia se commande aux dimensions et finitions de votre projet, avec les fiches techniques, les échantillons et un conseiller dédié, à Casablanca, Rabat, Marrakech, Tanger et partout au Maroc.",
           "sections": [
             {
               "section_key": "projects",
               "heading": "Les projets accompagnés",
-              "text": "Appartements, villas, bureaux de direction, hôtels, restaurants et boutiques."
+              "text": "Appartements, villas, bureaux de direction, hôtels, restaurants et boutiques, à Casablanca, Rabat, Marrakech, Tanger et dans tout le Maroc."
+            },
+            {
+              "section_key": "order",
+              "heading": "Comment commander",
+              "text": "Envoyez la liste des modèles, avec dimensions et finitions : le showroom établit un devis détaillé. La commande est validée par un acompte de 50 %, fabriquée en Italie en 10 à 12 semaines, puis livrée et installée.",
+              "cta_label": "",
+              "cta_href": ""
             },
             {
               "section_key": "catalogue",
-              "heading": "Le catalogue complet et ses échantillons",
-              "text": "Tous les modèles du catalogue se commandent et se personnalisent. Les échantillons de matières sont consultables au showroom, avec vos clients si vous le souhaitez."
+              "heading": "Finitions et échantillons",
+              "text": "Dix-neuf céramiques, les bois, les laques, les métaux et près de quatre cents tissus et cuirs : tous les échantillons sont au showroom. Tout le catalogue se commande, y compris les modèles non exposés."
             },
             {
               "section_key": "files",
-              "heading": "Documents techniques",
-              "text": "Fiches techniques, fichiers 2D et 3D et images haute définition sur demande, selon les modèles."
+              "heading": "Fiches techniques et fichiers 3D",
+              "text": "Chaque fiche modèle du site donne les dimensions, les finitions et la fiche technique en PDF. Les fichiers 2D et 3D et les images haute définition sont envoyés sur demande, selon les modèles."
+            },
+            {
+              "section_key": "clients",
+              "heading": "Recevoir vos clients",
+              "text": "Réservez un créneau : le showroom accueille vos rendez-vous clients, avec les pièces exposées et les échantillons, pour valider les finitions ensemble.",
+              "cta_label": "",
+              "cta_href": ""
             },
             {
               "section_key": "follow_up",
               "heading": "Un interlocuteur pour tout le projet",
-              "text": "Un conseiller suit le projet du devis détaillé à l’installation : commande, fabrication en Italie et livraison partout au Maroc."
+              "text": "Un conseiller suit le projet du devis à l’installation : commande, fabrication en Italie, livraison et pose partout au Maroc."
+            },
+            {
+              "section_key": "terms",
+              "heading": "Conditions professionnelles",
+              "text": "Les conditions réservées aux architectes et décorateurs sont communiquées sur demande par un conseiller.",
+              "cta_label": "",
+              "cta_href": ""
             }
           ],
-          "seo_title": "Architectes et professionnels · Cattelan Italia Maroc",
-          "meta_description": "Projets résidentiels, hôteliers et commerciaux : catalogue complet Cattelan Italia, échantillons, documents techniques et suivi jusqu’à l’installation, au showroom de Casablanca."
+          "seo_title": "Architectes et décorateurs · Cattelan Italia Maroc, Casablanca",
+          "meta_description": "Architectes et décorateurs : catalogue Cattelan Italia sur commande, fiches techniques, fichiers 3D sur demande, échantillons, rendez-vous clients au showroom."
         }
       },
       {
@@ -26862,7 +26889,7 @@
           "title": "Votre projet",
           "route_key": "votre-projet",
           "eyebrow": "Commander",
-          "intro": "Du premier conseil à l’installation, un conseiller suit votre projet. Comptez 10 à 12 semaines entre la validation de la commande et la livraison.",
+          "intro": "Trois façons de commencer, selon votre projet. Dans tous les cas, chaque pièce est fabriquée en Italie en 10 à 12 semaines, puis livrée et installée partout au Maroc.",
           "sections": [
             {
               "section_key": "step_1",
@@ -26901,7 +26928,93 @@
             }
           ],
           "seo_title": "Commander du mobilier Cattelan Italia au Maroc",
-          "meta_description": "Conseil, devis détaillé, acompte de 50 %, fabrication en Italie en 10 à 12 semaines, livraison et installation partout au Maroc."
+          "meta_description": "Une pièce, toute la maison ou avec un architecte : conseil, devis, fabrication en Italie en 10 à 12 semaines, livraison et installation partout au Maroc.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "copy-v2-votre-projet-h0",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-votre-projet-h0s",
+                  "text": "Une pièce",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "copy-v2-votre-projet-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-votre-projet-p0s",
+                  "text": "Une table, un canapé, un luminaire : le conseiller vous aide à choisir les dimensions et les finitions, échantillons en main, puis établit le devis et suit la commande.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "copy-v2-votre-projet-h1",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-votre-projet-h1s",
+                  "text": "Une pièce entière ou toute la maison",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "copy-v2-votre-projet-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-votre-projet-p1s",
+                  "text": "Les conseillers du showroom composent l’ensemble, salon, salle à manger ou chambre, du choix des pièces à l’installation. Apportez les plans ou les mesures, et quelques photos.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "copy-v2-votre-projet-h2",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-votre-projet-h2s",
+                  "text": "Avec un architecte",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "copy-v2-votre-projet-p2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-votre-projet-p2s",
+                  "text": "Votre architecte travaille directement avec le showroom : fiches techniques, échantillons et rendez-vous communs. Vous n’avez pas d’architecte ? Demandez au showroom une mise en relation.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
         }
       },
       {
@@ -26989,12 +27102,19 @@
             {
               "section_key": "faq_delivery_2",
               "heading": "Livrez-vous partout au Maroc ?",
-              "text": "Oui, sur l’ensemble du territoire marocain."
+              "text": "Oui, partout au Maroc, notamment à Casablanca, Rabat, Marrakech et Tanger. L’installation est incluse."
             },
             {
               "section_key": "faq_delivery_3",
               "heading": "La livraison et l’installation sont-elles incluses ?",
               "text": "L’installation est incluse. La livraison est offerte à Casablanca ; pour les autres villes, les frais dépendent de la destination."
+            },
+            {
+              "section_key": "faq_delivery_4",
+              "heading": "J’habite Rabat, Marrakech ou Tanger : comment choisir ?",
+              "text": "Le choix peut se faire à distance : photos des échantillons, fiches techniques et devis sur WhatsApp. Vous pouvez aussi passer au showroom de Casablanca pour voir les pièces et les matières avant de valider.",
+              "cta_label": "",
+              "cta_href": ""
             },
             {
               "section_key": "group",
@@ -27018,8 +27138,22 @@
               "section_key": "faq_pro_1",
               "heading": "Accompagnez-vous les projets résidentiels, hôteliers et commerciaux ?",
               "text": "Oui : appartements, villas, bureaux de direction, espaces professionnels, hôtels, restaurants et établissements commerciaux.",
-              "cta_label": "Espace professionnels",
+              "cta_label": "Architectes & projets",
               "cta_href": "/professionnels/"
+            },
+            {
+              "section_key": "faq_pro_2",
+              "heading": "Fournissez-vous les fichiers 3D des modèles ?",
+              "text": "Oui, sur demande et selon les modèles : fichiers 2D et 3D, fiches techniques et images haute définition. Chaque fiche modèle du site propose la fiche technique en PDF.",
+              "cta_label": "",
+              "cta_href": ""
+            },
+            {
+              "section_key": "faq_pro_3",
+              "heading": "Puis-je recevoir mes clients au showroom ?",
+              "text": "Oui. Réservez un créneau : vos clients voient les pièces exposées et les échantillons, et vous validez les finitions ensemble.",
+              "cta_label": "",
+              "cta_href": ""
             },
             {
               "section_key": "group",
@@ -27176,7 +27310,7 @@
         },
         {
           "type": "custom",
-          "label": "Professionnels",
+          "label": "Architectes & projets",
           "url": "/professionnels/"
         },
         {

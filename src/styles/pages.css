@@ -12,6 +12,8 @@
 .page-desktop-nav { display: flex; align-items: center; gap: 30px; }
 .page-menu-list { list-style: none; margin: 0; padding: 0; }
 .page-desktop-nav > .page-menu-list { display: flex; align-items: center; gap: 30px; }
+/* Below 1440 px the five sections and the header tools need tighter spacing to stay on one line until the fold. */
+@media (max-width: 1440px) { .page-desktop-nav, .page-desktop-nav > .page-menu-list { gap: 20px; } }
 .page-menu-list > li { position: relative; }
 .page-menu-list summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; cursor: pointer; list-style: none; font-size: 11px; text-transform: uppercase; letter-spacing: .15em; line-height: 1.5; }
 .page-menu-list summary::-webkit-details-marker { display: none; }
@@ -22,7 +24,7 @@
 .page-desktop-nav .page-menu-submenu { position: absolute; z-index: 30; top: calc(100% + 12px); min-width: 220px; }
 .page-desktop-nav .page-menu-submenu .page-menu-submenu { position: static; margin-top: 12px; min-width: 0; }
 .page-desktop-nav a, .page-header-cta, .page-footer nav a { font-size: 11px; text-transform: uppercase; letter-spacing: .15em; line-height: 1.5; }
-.page-desktop-nav a { position: relative; padding-block: 8px; }
+.page-desktop-nav a { position: relative; padding-block: 8px; white-space: nowrap; }
 .page-desktop-nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 1px; background: var(--ink); transition: width .3s ease; }
 .page-desktop-nav a:hover::after, .page-desktop-nav a[aria-current]::after { width: 100%; }
 .page-header-tools { display: flex; align-items: center; }

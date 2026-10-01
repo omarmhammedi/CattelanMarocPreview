@@ -3,6 +3,7 @@ export const privacyPurposes = {
   catalogue: 'vous donner accès au catalogue',
   'rendez-vous': 'organiser votre rendez-vous',
   pro: 'répondre à votre projet',
+  projet: 'préparer votre projet avec un conseiller',
 } as const;
 
 export function privacyNotice(form: keyof typeof privacyPurposes, email: string, cndpReceipt = ''): string {

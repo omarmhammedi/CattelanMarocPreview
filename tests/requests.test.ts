@@ -1,10 +1,11 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { DEFAULT_NOTIFY_TO, casablancaToday, notificationEmail, notifyAddress, persistRequest, requestsToCsv, validateRequest, type StoredRequest } from '../src/plugins/requests/core.ts';
+import { DEFAULT_NOTIFY_TO, audience, casablancaToday, describe, notificationEmail, notifyAddress, persistRequest, requestsToCsv, validateRequest, type StoredRequest } from '../src/plugins/requests/core.ts';
 
 const id = '3f2b8c1e-4a5d-4e6f-9a7b-1c2d3e4f5a6b';
 const appointment = { kind: 'rendez-vous', requestId: id, name: ' Salma  Benali ', whatsapp: '+212 600-000 001', day: '2026-10-05', period: 'matin', message: 'Voir Skorpio.\nMerci', sourcePath: '/modeles/skorpio/', model: 'skorpio', website: '' };
-const pro = { kind: 'pro', requestId: id, name: 'Karim', company: 'Atelier K', whatsapp: '0600000002', email: 'K@Example.com', projectType: 'Hôtel', city: 'Marrakech', sourcePath: '/professionnels/' };
+const pro = { kind: 'pro', requestId: id, name: 'Karim', company: 'Atelier K', whatsapp: '0600000002', email: 'K@Example.com', projectType: 'Hôtel', city: 'Marrakech', stage: 'Avant-projet', deadline: '3 à 6 mois', models: 'Butterfly Keramik, Craig', sourcePath: '/professionnels/' };
+const project = { kind: 'projet', requestId: id, name: 'Nadia', whatsapp: '0600000003', city: 'Rabat', route: 'ensemble', sourcePath: '/votre-projet/' };
 
 function memoryStore<T>() {
   const rows = new Map<string, { value: T; revision: string }>();
@@ -21,7 +22,8 @@ function memoryStore<T>() {
 
 test('accepts an appointment and normalises its fields', () => {
   const input = validateRequest(appointment, '2026-10-01');
-  assert.deepEqual(input, { requestId: id, name: 'Salma Benali', whatsapp: '+212 600-000 001', message: 'Voir Skorpio.\nMerci', sourcePath: '/modeles/skorpio/', model: 'skorpio', kind: 'rendez-vous', day: '2026-10-05', period: 'matin' });
+  assert.deepEqual(input, { requestId: id, name: 'Salma Benali', whatsapp: '+212 600-000 001', message: 'Voir Skorpio.\nMerci', sourcePath: '/modeles/skorpio/', model: 'skorpio', kind: 'rendez-vous', day: '2026-10-05', period: 'matin', city: null });
+  assert.equal(validateRequest({ ...appointment, city: 'Tanger' }, '2026-10-01').kind === 'rendez-vous' && validateRequest({ ...appointment, city: 'Tanger' }, '2026-10-01').city, 'Tanger');
 });
 
 test('accepts a professional request with its project type and city', () => {
@@ -29,6 +31,16 @@ test('accepts a professional request with its project type and city', () => {
   assert.equal(input.kind, 'pro');
   assert.equal(input.kind === 'pro' && input.email, 'k@example.com');
   assert.equal(input.model, null);
+  assert.equal(input.kind === 'pro' && `${input.stage} · ${input.deadline} · ${input.models}`, 'Avant-projet · 3 à 6 mois · Butterfly Keramik, Craig');
+});
+
+test('accepts a private project with its route and city; every request is tagged', () => {
+  const input = validateRequest(project, '2026-10-01');
+  assert.equal(input.kind === 'projet' && `${input.route} ${input.city}`, 'ensemble Rabat');
+  assert.equal(audience(input), 'particulier');
+  assert.equal(audience(validateRequest(pro, '2026-10-01')), 'architecte');
+  assert.equal(audience(validateRequest(appointment, '2026-10-01')), 'particulier');
+  assert.deepEqual(describe(input).slice(0, 1), [['Public', 'particulier']]);
 });
 
 test('refuses incomplete or invalid requests with a field code', () => {
@@ -51,6 +63,12 @@ test('refuses incomplete or invalid requests with a field code', () => {
   assert.equal(code({ city: 'Paris' }, pro), 'INVALID_CITY');
   assert.equal(code({ email: 'non' }, pro), 'INVALID_EMAIL');
   assert.equal(code({ company: '' }, pro), 'INVALID_COMPANY');
+  assert.equal(code({ stage: '' }, pro), 'INVALID_STAGE');
+  assert.equal(code({ deadline: 'Demain' }, pro), 'INVALID_DEADLINE');
+  assert.equal(code({ models: 'x'.repeat(301) }, pro), 'INVALID_MODELS');
+  assert.equal(code({ city: 'Paris' }), 'INVALID_CITY');
+  assert.equal(code({ route: 'autre' }, project), 'INVALID_ROUTE');
+  assert.equal(code({ city: '' }, project), 'INVALID_CITY');
   assert.equal(validateRequest({ ...appointment, model: '../x' }, '2026-10-01').model, null);
 });
 
@@ -70,11 +88,17 @@ test('notification and export carry the request without formula injection', asyn
   const store = memoryStore<StoredRequest>();
   const { request } = await persistRequest(store, validateRequest({ ...pro, name: '=HYPERLINK("x")', message: '<b>Hôtel</b>' }, '2026-10-01'), Date.UTC(2026, 9, 1));
   const email = notificationEmail(request, 'contact@cattelanitalia.ma');
-  assert.equal(email.subject, 'Demande professionnelle — Atelier K');
-  assert(email.text.includes('Type de projet : Hôtel') && email.html.includes('&lt;b&gt;Hôtel&lt;/b&gt;'));
+  assert.equal(email.subject, 'Architecte (Marrakech) — Atelier K');
+  assert(email.text.includes('Type de projet : Hôtel') && email.text.includes('Échéance : 3 à 6 mois') && email.html.includes('&lt;b&gt;Hôtel&lt;/b&gt;'));
   const csv = requestsToCsv([request]);
   assert(csv.includes(`"'=HYPERLINK(""x"")"`));
-  assert(csv.includes('"Professionnel"') && csv.includes('"Marrakech"'));
+  assert(csv.includes('"Architecte";"architecte"') && csv.includes('"Marrakech"') && csv.includes('"Avant-projet"'));
+  // A professional request saved before the Architectes & projets form still exports.
+  const { stage: _s, deadline: _d, models: _m, ...older } = request as StoredRequest & { stage?: string; deadline?: string; models?: string };
+  assert(requestsToCsv([older as StoredRequest]).includes('"Atelier K"'));
+  const { request: privateProject } = await persistRequest(store, validateRequest({ ...project, requestId: '4f2b8c1e-4a5d-4e6f-9a7b-1c2d3e4f5a6b' }, '2026-10-01'));
+  assert.equal(notificationEmail(privateProject, 'x@y.ma').subject, 'Projet particulier (Rabat) — Nadia');
+  assert(requestsToCsv([privateProject]).includes('"Une pièce entière ou toute la maison"'));
 });
 
 test('uses the Casablanca calendar date', () => {

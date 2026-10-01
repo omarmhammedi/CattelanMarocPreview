@@ -45,6 +45,7 @@ rememberRenderedSeo(page, site, entry?.data);
 <title>{resolvedTitle}</title>
 <EmDashHead page={page}/>
 {favicon && <link rel="icon" href={favicon}/>}
+{site.analyticsToken && !isPreview && <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({token: site.analyticsToken})}></script>}
 <PreviewViewport />
 <meta name="color-scheme" content="dark light"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>

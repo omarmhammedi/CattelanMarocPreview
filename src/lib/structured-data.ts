@@ -179,6 +179,10 @@ function coordinate(value: unknown, limit: number): number | undefined {
   return Number.isFinite(number) && Math.abs(number) <= limit ? number : undefined;
 }
 
+/** Cities served first (SEO strategy v2), then the whole country. Also stated in the FAQ and llms.txt. */
+export const SERVED_CITIES = ['Casablanca', 'Rabat', 'Marrakech', 'Tanger'] as const;
+const SERVED_AREAS = [...SERVED_CITIES.map(name => ({'@type': 'City', name})), {'@type': 'Country', name: 'Maroc'}];
+
 export function furnitureStoreGraph(site: Data, entry: Data, origin: string): Graph | undefined {
   if (!text(site.name)) return undefined;
   const address = postalAddress(site.address);
@@ -202,8 +206,8 @@ export function furnitureStoreGraph(site: Data, entry: Data, origin: string): Gr
     ...(map && {hasMap: map}), ...(hours && {openingHoursSpecification: hours}),
     ...(image && {image}), ...(logo && {logo}),
     ...(profiles.length && {sameAs: profiles}),
-    // Delivery covers the whole country (project FAQ, Livraison).
-    areaServed: {'@type': 'Country', name: 'Maroc'},
+    // Delivery covers the whole country (project FAQ, Livraison); the four cities are the strategy's priorities.
+    areaServed: SERVED_AREAS,
   };
 }
 

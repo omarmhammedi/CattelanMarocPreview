@@ -3,6 +3,7 @@ import { imageAttributes } from '../lib/images';
 import '../styles/models.css';
 import {PortableText} from 'emdash/ui';
 import SiteActions from './SiteActions.astro';
+import { filesWhatsappMessage, whatsappHref } from '../lib/actions';
 import {finishGroupLabel, finishHasSeparateCode, finishNameLabel} from '../lib/model-labels';
 
 interface Picture {
@@ -63,7 +64,8 @@ const {model, site, families = [], advisorHref} = Astro.props;
 const family = families.find(item => item.title && item.href);
 const collectionLabel = site.labels?.collections || 'Collections';
 // Terms stated in the project FAQ (Personnalisation, Livraison); they apply to every catalogue model.
-const services = ['Personnalisable', 'Délai 10 à 12 semaines', 'Livraison partout au Maroc, offerte à Casablanca', 'Installation incluse'];
+const services = ['Sur commande, fabriqué en Italie', 'Délai 10 à 12 semaines', 'Personnalisable', 'Livraison partout au Maroc, offerte à Casablanca', 'Installation incluse'];
+const filesHref = whatsappHref(site.whatsappUrl, filesWhatsappMessage(model.title));
 const advisorLabel = `Être conseillé sur ${model.title}`;
 const sourceUrl = model.source_url || model.officialUrl;
 const modelNotice = String(site.modelNotice || '').trim();
@@ -71,6 +73,7 @@ const gallery = (model.gallery || []).filter(picture => picture?.src);
 const dimensions = (model.dimensions || []).filter(item => item.value || item.seats || item.largeSeats);
 const drawings = (model.drawings || []).filter(item => item.image?.src).sort((a, b) =>
   (Number(a.row) || 0) - (Number(b.row) || 0) || (Number(a.column) || 0) - (Number(b.column) || 0));
+const hasTechnical = dimensions.length > 0 || drawings.length > 0 || Boolean(model.technicalSheet?.src);
 const finishGroups = new Map<string, {label: string; finishes: Finish[]}>();
 // Match the two/three/four-column grid, including the width of a contained
 // image within its 1.25-ratio frame. Keep DPR 2 detail at normal desktop widths;
@@ -107,6 +110,7 @@ for (const finish of model.finishes || []) {
         {model.year && <dl class="model-year"><div><dt>Année</dt><dd>{model.year}</dd></div></dl>}
         {model.availabilityNote && <p class="page-note model-availability">{model.availabilityNote}</p>}
         <SiteActions order={['appointment', 'advisor']} advisorHref={advisorHref} advisorLabel={advisorLabel} model={model.slug} />
+        {filesHref && !hasTechnical && <a class="text-link model-files-request" href={filesHref} target="_blank" rel="noopener noreferrer">Fichiers 2D et 3D sur demande <span class="model-file-format">WhatsApp</span><span aria-hidden="true">↗</span></a>}
       </div>
       {model.image?.src && <figure class="model-hero-figure">
         <div class="page-image model-hero-image"><img {...imageAttributes(model.image, '(max-width: 850px) 100vw, 54vw', 1600)} alt={model.image.alt || model.title} fetchpriority="high" /></div>
@@ -136,7 +140,7 @@ for (const finish of model.finishes || []) {
     </div>
   </section>}
 
-  {(dimensions.length > 0 || drawings.length > 0 || model.technicalSheet?.src) && <section class="page-gutter model-technical" aria-labelledby="model-technical-heading">
+  {hasTechnical && <section class="page-gutter model-technical" aria-labelledby="model-technical-heading">
     <div class="section-heading" data-page-reveal><h2 id="model-technical-heading">{dimensions.length > 0 || drawings.length > 0 ? 'Dimensions' : 'Fiche technique'}</h2></div>
     {dimensions.length > 0 && <dl class="model-dimensions">
       {dimensions.map(dimension => <div class="model-dimension" data-page-reveal>
@@ -156,6 +160,7 @@ for (const finish of model.finishes || []) {
       </figure>)}</div>
     </div>}
     {model.technicalSheet?.src && <a class="text-link model-technical-download" href={model.technicalSheet.src} download={model.technicalSheet.filename || true}>{model.technicalSheetLabel || 'Télécharger la fiche technique'} <span class="model-file-format">PDF</span><span aria-hidden="true">↓</span></a>}
+    {filesHref && <a class="text-link model-files-request" href={filesHref} target="_blank" rel="noopener noreferrer">Fichiers 2D et 3D sur demande <span class="model-file-format">WhatsApp</span><span aria-hidden="true">↗</span></a>}
   </section>}
 
   {finishGroups.size > 0 && <section class="page-gutter model-finishes" aria-labelledby="model-finishes-heading">
