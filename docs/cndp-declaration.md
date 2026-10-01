@@ -8,7 +8,7 @@ Préparé le 1er octobre 2026 pour Racha Home. Ce document rassemble les répons
 2. Vérifier d’abord si une procédure simplifiée existe pour la « gestion des clients et prospects » ; si oui, l’utiliser, sinon remplir une déclaration normale avec les réponses ci-dessous.
 3. Les données étant hébergées hors du Maroc (Cloudflare, États-Unis), joindre la demande d’autorisation de transfert à l’étranger proposée par la CNDP, ou indiquer que le transfert repose sur le consentement exprès des personnes (formulaire du site).
 4. Signer par le gérant et envoyer. Conserver le récépissé.
-5. Une fois le numéro de récépissé reçu, l’inscrire dans `src/pages/confidentialite.astro` (constante `cndpReceipt`) : la page affichera « récépissé n° … » au lieu de « en cours d’enregistrement ».
+5. Une fois le numéro de récépissé reçu, le saisir dans EmDash, Configuration du site, champ « Récépissé CNDP », puis publier. Il apparaît alors sur la page Confidentialité et dans la mention placée sous chaque formulaire.
 
 ## Réponses au formulaire
 
@@ -29,7 +29,7 @@ Préparé le 1er octobre 2026 pour Racha Home. Ce document rassemble les répons
 | Sous-traitants | Cloudflare, Inc. (hébergement du site et stockage des demandes, États-Unis) ; Resend (envoi des e-mails, États-Unis), si l’envoi par e-mail est activé ; plus tard l’outil de gestion client (SendPulse envisagé) |
 | Transfert à l’étranger | Oui, vers les États-Unis, par les sous-traitants ci-dessus |
 | Durée de conservation | Trois ans à compter de l’envoi de la demande, puis suppression automatique ; documents de commande selon les obligations légales de conservation ; empreinte chiffrée de l’adresse IP (anti-abus) effacée sous trois heures |
-| Information des personnes | Page « Confidentialité » du site, accessible depuis chaque page et liée aux formulaires |
+| Information des personnes | Mention sous chaque formulaire (responsable, finalité, durée, droits, numéro de récépissé) et page « Confidentialité » accessible depuis chaque page |
 | Droits (accès, rectification, opposition) | Par e-mail à contact@cattelanitalia.ma ou par courrier au siège social |
 | Sécurité | Site en HTTPS ; demandes stockées dans l’hébergement Cloudflare, accessibles seulement aux comptes administrateurs authentifiés ; export CSV réservé aux administrateurs ; adresse IP jamais enregistrée en clair ; limitation du nombre d’envois |
 | Interconnexion | Aucune pour l’instant ; transmission future à l’outil de gestion client, à déclarer en modification |

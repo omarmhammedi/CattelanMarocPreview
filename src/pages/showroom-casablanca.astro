@@ -51,7 +51,7 @@ const questions = page.sections?.filter((section: any) => section.key?.startsWit
   <section class="page-cta page-gutter showroom-appointment" id="rendez-vous" aria-labelledby="rendez-vous-heading" data-page-reveal>
     <h2 id="rendez-vous-heading">{actions.appointment.label}</h2>
     <p>Visite libre ou sur rendez-vous. Indiquez le jour qui vous convient ; un conseiller vous confirme le rendez-vous sur WhatsApp.</p>
-    <RequestForm id="appointment" kind="rendez-vous" />
+    <RequestForm id="appointment" kind="rendez-vous" site={site} />
     <div class="showroom-appointment-actions"><SiteActions order={['advisor', 'catalogue']} advisorHref={whatsappHref(site.whatsappUrl, generalWhatsappMessage)} /></div>
   </section>
 </PageLayout>

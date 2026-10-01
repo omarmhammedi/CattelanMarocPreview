@@ -770,6 +770,12 @@
           "type": "string"
         },
         {
+          "slug": "cndp_receipt",
+          "label": "Récépissé CNDP",
+          "type": "string",
+          "required": false
+        },
+        {
           "slug": "address",
           "label": "Adresse vérifiée",
           "type": "text"

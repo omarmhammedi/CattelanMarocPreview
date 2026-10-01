@@ -11,6 +11,6 @@ if (!page) return new Response('Page introuvable', { status: 404 });
   <Fragment slot="form">
     <h2>Demande professionnelle</h2>
     <p>Présentez votre projet ; un conseiller vous recontacte.</p>
-    <RequestForm id="pro-request" kind="pro" />
+    <RequestForm id="pro-request" kind="pro" site={site} />
   </Fragment>
 </ServicePage>

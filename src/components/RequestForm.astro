@@ -1,7 +1,10 @@
 ---
 import { CITIES, PERIODS, PROJECT_TYPES, casablancaToday } from '../plugins/requests/core';
-interface Props { id: string; kind: 'rendez-vous' | 'pro'; }
+import { getSite } from '../lib/content';
+import { privacyNotice } from '../lib/privacy';
+interface Props { id: string; kind: 'rendez-vous' | 'pro'; site?: { publicEmail?: string; cndpReceipt?: string }; }
 const { id, kind } = Astro.props;
+const site = Astro.props.site ?? await getSite();
 const today = casablancaToday();
 const success = kind === 'rendez-vous'
   ? 'Votre demande est enregistrée. Un conseiller vous confirme le rendez-vous sur WhatsApp.'
@@ -24,7 +27,7 @@ const field = (name: string) => ({ id: `${id}-${name}`, name, 'aria-describedby'
     <div class="request-message"><label for={`${id}-message`}>Message (facultatif)</label><textarea {...field('message')} rows="3" maxlength="1000"></textarea><span class="field-error" id={`${id}-message-error`} data-field-error="message" hidden></span></div>
   </div>
   <div class="form-trap" aria-hidden="true"><label for={`${id}-website`}>Site web</label><input id={`${id}-website`} name="website" tabindex="-1" autocomplete="off" /></div>
-  <p class="request-privacy">Vos coordonnées servent uniquement à traiter cette demande. <a href="/confidentialite/">Confidentialité</a></p>
+  <p class="request-privacy">{privacyNotice(kind, site.publicEmail || 'contact@cattelanitalia.ma', site.cndpReceipt)} <a href="/confidentialite/">Confidentialité</a></p>
   <button class="btn solid" type="submit">Envoyer la demande</button>
   <div class="request-result" role="status" aria-live="polite" tabindex="-1"></div>
 </form>
@@ -100,8 +103,8 @@ const field = (name: string) => ({ id: `${id}-${name}`, name, 'aria-describedby'
   .request-choice input:focus-visible + span { outline: 2px solid var(--ink); outline-offset: 2px; }
   .request-form .field-error { display: block; margin-top: 8px; font-size: 12px; line-height: 1.5; color: var(--ink); }
   .request-form .field-error[hidden] { display: none; }
-  .request-privacy { margin: 26px 0 0; font-size: 12px; line-height: 1.6; color: var(--faint); }
-  .request-privacy a { text-decoration: underline; text-underline-offset: 3px; }
+  .request-form .request-privacy { margin: 26px 0 0; font-size: 12px; line-height: 1.6; color: var(--faint); }
+  .request-form .request-privacy a { text-decoration: underline; text-underline-offset: 3px; }
   .request-form button { margin-top: 20px; }
   .request-form button:disabled { opacity: .5; cursor: wait; }
   .request-result { font-size: 17px; font-weight: 300; line-height: 1.7; }
