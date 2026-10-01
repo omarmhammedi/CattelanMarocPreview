@@ -2,8 +2,10 @@
 import { imageAttributes } from '../lib/images';
 import EditorialSection from '../components/EditorialSection.astro';
 import ShowroomMap from '../components/ShowroomMap.astro';
+import SiteActions from '../components/SiteActions.astro';
 import PageLayout from '../layouts/PageLayout.astro';
 import { PortableText } from 'emdash/ui';
+import { actions, generalWhatsappMessage, whatsappHref } from '../lib/actions';
 import { getPage, getSite } from '../lib/content';
 
 const [page, site] = await Promise.all([Astro.props.preloaded || getPage('showroom'), getSite()]);
@@ -45,5 +47,9 @@ const questions = page.sections?.filter((section: any) => section.key?.startsWit
     <div class="section-heading"><h2>Questions fréquentes</h2></div>
     <div>{questions.map((question: any) => questionHeading(question) ? <details data-page-reveal><summary>{questionHeading(question)}<span aria-hidden="true">+</span></summary><EditorialSection section={question} showHeading={false} /></details> : <EditorialSection section={question} showHeading={false} />)}</div>
   </section>}
-  <section class="page-cta page-gutter" data-page-reveal><a class="btn" href="/catalogue/">{site.labels.catalogue}<span aria-hidden="true">↗</span></a></section>
+  <section class="page-cta page-gutter showroom-appointment" id="rendez-vous" aria-labelledby="rendez-vous-heading" data-page-reveal>
+    <h2 id="rendez-vous-heading">{actions.appointment.label}</h2>
+    <p>Visite libre ou sur rendez-vous.</p>
+    <SiteActions order={['advisor', 'catalogue']} advisorHref={whatsappHref(site.whatsappUrl, generalWhatsappMessage)} />
+  </section>
 </PageLayout>

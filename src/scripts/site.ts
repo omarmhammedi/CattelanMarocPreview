@@ -23,7 +23,8 @@ function initializeSite() {
       toggle.focus();
     }
   }, options);
-  window.addEventListener('resize', () => { if (window.innerWidth > 820) setMenu(false); }, options);
+  // Matches the width at which the header menu folds into its panel (site.css).
+  window.addEventListener('resize', () => { if (window.innerWidth > 1240) setMenu(false); }, options);
 
   disposeSite = () => controller.abort();
 }

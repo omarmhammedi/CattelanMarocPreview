@@ -4,7 +4,9 @@ import '../styles/pages.css';
 import SeoHead from '../components/SeoHead.astro';
 import PageMenu from '../components/PageMenu.astro';
 import Brand from '../components/Brand.astro';
+import HeaderActions from '../components/HeaderActions.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
+import { generalWhatsappMessage, isCatalogueLink, whatsappHref } from '../lib/actions';
 import type { BreadcrumbItem } from 'emdash';
 
 interface Props {
@@ -14,11 +16,15 @@ interface Props {
   image?: any;
   entry?: any;
   breadcrumbs?: BreadcrumbItem[];
+  whatsappMessage?: string;
 }
 
-const { title, description, site, image, entry, breadcrumbs } = Astro.props;
+const { title, description, site, image, entry, breadcrumbs, whatsappMessage = generalWhatsappMessage } = Astro.props;
 const path = Astro.url.pathname;
 const navigation = site.navigation || [];
+// The catalogue has its own text link beside the appointment button.
+const headerNavigation = navigation.filter((item: any) => !isCatalogueLink(item.url));
+const advisorHref = whatsappHref(site.whatsappUrl, whatsappMessage);
 ---
 <!doctype html>
 <html lang="fr" data-mode="dark">
@@ -31,15 +37,17 @@ const navigation = site.navigation || [];
   <body class="inner-page">
     <a class="skip-link" href="#main-content">Aller au contenu</a>
     <header class="page-header">
-      <Brand site={site} />
+      <Brand site={site} showLocation={false} />
       <nav class="page-desktop-nav" aria-label="Navigation principale">
-        <PageMenu items={navigation} path={path} />
+        <PageMenu items={headerNavigation} path={path} />
       </nav>
-      <div class="page-header-tools">
+      <div class="page-header-tools header-tools">
+        <HeaderActions advisorHref={advisorHref} path={path} />
         <details class="page-mobile-menu">
           <summary aria-label="Ouvrir le menu"><span></span><span></span></summary>
           <nav aria-label="Navigation mobile">
-            <PageMenu items={navigation} path={path} />
+            <PageMenu items={headerNavigation} path={path} />
+            <HeaderActions variant="menu" path={path} />
           </nav>
         </details>
         <ThemeToggle />

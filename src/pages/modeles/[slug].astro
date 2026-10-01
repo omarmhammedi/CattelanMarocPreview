@@ -1,12 +1,14 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import ModelDetail from '../../components/ModelDetail.astro';
+import { modelWhatsappMessage, whatsappHref } from '../../lib/actions';
 import { getModel, getModelFamilies, getSite } from '../../lib/content';
 
 const [model,site]=await Promise.all([Astro.props.preloaded || getModel(Astro.params.slug || ''),getSite()]);
 if(!model)return new Response('Modèle introuvable',{status:404});
 const families=await getModelFamilies(model.slug);
+const whatsappMessage=modelWhatsappMessage(model.title,new URL(model.href,site.settings?.url || Astro.url.origin).href);
 ---
-<PageLayout title={model.seoTitle || model.title} description={model.description} site={site} image={model.image} entry={model.entry} breadcrumbs={[{name:site.labels.collections || 'Collections',url:'/collections/'},...(families[0]?[{name:families[0].title,url:families[0].href}]:[]),{name:model.title,url:model.href}]}>
-  <ModelDetail model={model} site={site} families={families}/>
+<PageLayout title={model.seoTitle || model.title} description={model.description} site={site} image={model.image} entry={model.entry} whatsappMessage={whatsappMessage} breadcrumbs={[{name:site.labels.collections || 'Collections',url:'/collections/'},...(families[0]?[{name:families[0].title,url:families[0].href}]:[]),{name:model.title,url:model.href}]}>
+  <ModelDetail model={model} site={site} families={families} advisorHref={whatsappHref(site.whatsappUrl,whatsappMessage)}/>
 </PageLayout>

@@ -2,6 +2,7 @@
 import { imageAttributes } from '../lib/images';
 import '../styles/models.css';
 import {PortableText} from 'emdash/ui';
+import SiteActions from './SiteActions.astro';
 import {finishGroupLabel, finishHasSeparateCode, finishNameLabel} from '../lib/model-labels';
 
 interface Picture {
@@ -54,13 +55,15 @@ interface Props {
   };
   site: any;
   families?: {title: string; href: string}[];
+  advisorHref?: string | null;
 }
 
-const {model, site, families = []} = Astro.props;
+const {model, site, families = [], advisorHref} = Astro.props;
 const family = families.find(item => item.title && item.href);
 const collectionLabel = site.labels?.collections || 'Collections';
-const contactLabel = site.labels?.contact || 'Coordonnées du showroom';
-const catalogueLabel = site.labels?.catalogue || 'Découvrir le catalogue';
+// Terms stated in the project FAQ (Personnalisation, Livraison); they apply to every catalogue model.
+const services = ['Personnalisable', 'Délai 10 à 12 semaines', 'Livraison partout au Maroc, offerte à Casablanca', 'Installation incluse'];
+const advisorLabel = `Être conseillé sur ${model.title}`;
 const sourceUrl = model.source_url || model.officialUrl;
 const modelNotice = String(site.modelNotice || '').trim();
 const gallery = (model.gallery || []).filter(picture => picture?.src);
@@ -97,10 +100,11 @@ for (const finish of model.finishes || []) {
       <div class="model-hero-copy">
         <p class="kick">{site.name}</p>
         <h1 {...model.entry?.edit?.title}>{model.title}</h1>
+        <ul class="model-services" aria-label="Services">{services.map(service => <li>{service}</li>)}</ul>
         {model.description && <p class="page-lead" {...model.entry?.edit?.description}>{model.description}</p>}
         {model.year && <dl class="model-year"><div><dt>Année</dt><dd>{model.year}</dd></div></dl>}
         {model.availabilityNote && <p class="page-note model-availability">{model.availabilityNote}</p>}
-        <a class="text-link model-contact-link" href="/showroom-casablanca/#showroom-contact">{contactLabel}<span aria-hidden="true">↗</span></a>
+        <SiteActions order={['appointment', 'advisor']} advisorHref={advisorHref} advisorLabel={advisorLabel} />
       </div>
       {model.image?.src && <figure class="model-hero-figure">
         <div class="page-image model-hero-image"><img {...imageAttributes(model.image, '(max-width: 850px) 100vw, 54vw', 1600)} alt={model.image.alt || model.title} fetchpriority="high" /></div>
@@ -171,7 +175,7 @@ for (const finish of model.finishes || []) {
   {sourceUrl && <aside class="page-gutter model-source"><a class="text-link" href={sourceUrl} target="_blank" rel="noopener noreferrer">Voir la fiche Cattelan Italia<span aria-hidden="true">↗</span></a></aside>}
 
   <section class="page-cta page-gutter model-project" data-page-reveal>
-    <div class="row"><a class="btn" href="/showroom-casablanca/#showroom-contact">{contactLabel}</a><a class="text-link" href="/catalogue/">{catalogueLabel}<span aria-hidden="true">↗</span></a></div>
+    <SiteActions order={['appointment', 'advisor']} advisorHref={advisorHref} advisorLabel={advisorLabel} />
     {modelNotice && modelNotice !== model.availabilityNote?.trim() && <p class="page-note model-site-notice">{modelNotice}</p>}
   </section>
 </article>

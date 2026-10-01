@@ -153,7 +153,7 @@ async function verifyContent(browser) {
       }
       assert.deepEqual([...selection].sort(), [...expectedSelections.get(entry.slug)].sort(), `${path}: existing model selection retained.`);
       const ctas = await nodes(page, html, '.page-cta a', 'href');
-      assert(ctas.includes('/catalogue/') && ctas.includes('/showroom-casablanca/#showroom-contact'), `${path}: catalogue and showroom next steps.`);
+      assert(ctas.includes('/showroom-casablanca/#rendez-vous') && ctas.some(href => /^https:\/\/wa\.me\/\d+\?text=/u.test(href)), `${path}: appointment and advisor next steps.`);
       for (const href of await nodes(page, html, 'a[href]', 'href')) {
         const target = new URL(href, new URL(path, base));
         if (target.origin === base.origin) localLinks.add(target.href);

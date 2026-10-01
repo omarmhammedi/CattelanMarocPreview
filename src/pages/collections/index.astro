@@ -1,6 +1,7 @@
 ---
 import { coverSizes, imageAttributes } from '../../lib/images';
 import EditorialSection from '../../components/EditorialSection.astro';
+import SiteActions from '../../components/SiteActions.astro';
 import PageLayout from '../../layouts/PageLayout.astro';
 import { PortableText } from 'emdash/ui';
 import { getPage, getFamilies, getSite } from '../../lib/content';
@@ -31,6 +32,6 @@ if (!page) return new Response('Page introuvable', { status: 404 });
     {page.sections?.map((section: any) => <EditorialSection section={section} />)}
   </section>}
   <section class="page-cta page-gutter" data-page-reveal>
-    <a class="btn" href="/catalogue/">{site.labels.catalogue}<span aria-hidden="true">↗</span></a>
+    <SiteActions order={['appointment', 'catalogue']} />
   </section>
 </PageLayout>

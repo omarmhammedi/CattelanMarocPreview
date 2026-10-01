@@ -16,7 +16,10 @@
 .model-year dt { color: var(--faint); }
 .model-year dd { margin: 0; }
 .model-availability { margin: 24px 0 0; }
-.model-contact-link { margin-top: 28px; }
+.model-services { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; max-width: 560px; margin: 0 0 32px; padding: 0; list-style: none; }
+.model-services li { padding-block: 12px; border-top: 1px solid var(--hair); font-size: 14px; font-weight: 300; line-height: 1.6; }
+.model-services li:nth-last-child(-n + 2) { border-bottom: 1px solid var(--hair); }
+.model-hero-copy .site-actions { margin-top: 34px; }
 .model-hero-figure { min-width: 0; margin: 0; }
 .model-hero-image { aspect-ratio: 4 / 3; }
 .model-detail .model-hero-image img { object-fit: contain; }
@@ -91,6 +94,8 @@
 }
 @media (max-width: 500px) {
   .model-breadcrumb { margin-bottom: 30px; }
+  .model-services { grid-template-columns: 1fr; }
+  .model-services li:nth-last-child(2) { border-bottom: 0; }
   .model-detail .model-detail-hero h1 { font-size: clamp(36px, 10vw, 50px); }
   .model-hero-image { aspect-ratio: 4 / 3; }
   .model-gallery-thumbnails { gap: 10px; }

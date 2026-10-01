@@ -12,6 +12,8 @@ Chaque fiche peut afficher une photo principale, une présentation française or
 
 La migration 0003 conserve les textes existants des cartes. La migration 0004 remplace ensuite uniquement les descriptions et corps provisoires connus par des textes spécifiques, sans écraser les modifications personnalisées. Le contenu commercial intégral de la marque n'est pas reproduit. Aucun prix, stock marocain, délai, disponibilité en magasin ou designer non identifié n'est ajouté. Les modèles Outdoor restent réservés aux espaces extérieurs couverts, protégés des intempéries.
 
+Depuis le 1er octobre 2026, le gabarit affiche sous le titre de chaque fiche les conditions communes au catalogue issues de la FAQ du projet (personnalisation, délai de 10 à 12 semaines, livraison, installation), puis les actions « Prendre rendez-vous » et « Être conseillé sur [modèle] ». Ces textes ne sont pas des champs du modèle ; voir le [modèle éditorial](content-map.md).
+
 Les configurateurs interactifs, vidéos et contenus sociaux restent sur le site officiel. Les différentes matières et dimensions ne signifient pas que toutes leurs combinaisons sont proposées ; le PDF technique et le showroom permettent de confirmer une configuration.
 
 ## Contrat éditorial

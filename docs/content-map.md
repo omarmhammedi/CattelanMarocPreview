@@ -40,7 +40,7 @@ Les familles sont `tables`, `chaises-tabourets`, `canapes-fauteuils`, `buffets-b
 | `posts.content` | Article | Contenu obligatoire | Les cinq articles possèdent leurs sections et paragraphes complets |
 | `posts.cta_*` | Fin d’article | Masquer le bouton incomplet | Vérifier destination locale et invitation |
 | `site_content.logo_light`, `logo_dark` | En-tête et pied de page | Utiliser le logo natif s’il existe, puis le nom du site | Vérifier les deux apparences et la navigation mobile |
-| `site_content.brand_location` | Libellé sous le logo de l’accueil et des pages intérieures, pieds de page et couverture décorative du catalogue | Masquer la ligne ; aucun repli sur la ville du showroom | Champ facultatif initialisé à « Maroc » ; modification et effacement suivent le brouillon et la publication natifs |
+| `site_content.brand_location` | Libellé sous le logo des pieds de page et couverture décorative du catalogue ; l’en-tête n’affiche que le logo | Masquer la ligne ; aucun repli sur la ville du showroom | Champ facultatif initialisé à « Maroc » ; modification et effacement suivent le brouillon et la publication natifs |
 | `site_content.city` | Ville dans les informations pratiques du showroom et le contact du pied de page intérieur | Aucun libellé de marque de secours | Reste indépendant de `brand_location` ; retirer Casablanca du logo ne modifie pas la localisation du magasin |
 | `site_content.address`, `hours`, `contact_phone`, `map_url` | Informations pratiques de la page showroom et des pieds de page ; lien d’itinéraire des cartes | Masquer chaque donnée absente ; téléphone en lien `tel:` | Seed vide ; coordonnées approuvées fournies par la migration 0005 |
 | `site_content.map_embed_url` | Carte interactive de la page showroom, ouverte sur demande | Masquer le bouton de carte si vide ou URL refusée ; conserver l’itinéraire s’il existe | URL seule `https://www.google.com/maps/embed?pb=…`, jamais le code `<iframe>` |
@@ -253,3 +253,26 @@ Les champs SEO natifs restent prioritaires. Les images de partage deviennent abs
 L'indexation reste désactivée sur la préproduction. Le catalogue de démonstration, la confidentialité provisoire et les éléments nécessaires au lancement commercial restent explicitement signalés.
 
 Les 27 publications 0011 ont été vérifiées dans la copie Cloudflare le 29 septembre 2026. Les tests d'effacement et de publication décrits ci-dessus ont été exécutés sur une base jetable distincte. Les contrôles publics de métadonnées, de présentation Chromium/WebKit et d'interaction ont réussi après optimisation des lectures SEO. La dernière version, partageant aussi les lectures du formulaire catalogue, passe le contrôle des 28 routes et huit cas de rendu du formulaire, sans nouvelle réponse 503 dans ces suites. Le [rapport de réalisation](test-results-seo-refresh.md) conserve les preuves des erreurs 1102 observées auparavant et distingue ces résultats de la capacité d'hébergement restant à confirmer avant lancement définitif. Aucun champ inverse de relation n'a été ajouté aux modèles.
+
+## En-tête, trois actions et services des fiches modèles — 1er octobre 2026
+
+Cette étape applique le début du plan de changements du site. Elle modifie uniquement les gabarits : aucun contenu EmDash, schéma ou menu n’est migré.
+
+L’en-tête de l’accueil et des pages intérieures affiche le logo seul, relié à l’accueil. Le menu reste le menu natif `primary`, mais son entrée `/catalogue/` en est sortie : elle devient le lien texte « Catalogue », placé avant l’icône WhatsApp et le bouton « Prendre rendez-vous ». Les entrées Sur-mesure et Professionnels du plan s’ajoutent dans l’administration lorsque leurs pages existent. Jusqu’à 1 240 px de large, le menu passe dans son panneau ; le lien Catalogue et le bouton restent dans la barre. Sous 820 px, ils rejoignent le panneau et seule l’icône WhatsApp reste dans la barre.
+
+Les trois actions sont définies dans `src/lib/actions.ts`, dans l’ordre d’importance du plan : « Prendre rendez-vous » (`/showroom-casablanca/#rendez-vous`), « Échanger avec un conseiller » (WhatsApp) et « Recevoir le catalogue » (`/catalogue/`). Ce ne sont pas des champs CMS. Dans un groupe, la première action est un bouton plein, la deuxième un bouton à contour, la troisième un lien texte.
+
+`site_content.whatsapp_url` reste le lien de conversation, sans message. Chaque page y ajoute le texte prérempli du plan : le message général, ou, sur une fiche, le nom du modèle suivi de l’adresse de la page, calculée avec l’origine canonique du site. Un lien vide ou qui n’est pas un lien WhatsApp HTTPS masque cette action ; aucun lien n’est déduit du téléphone.
+
+| Page | Actions |
+| --- | --- |
+| En-tête | Catalogue, icône WhatsApp, Prendre rendez-vous |
+| Accueil, scène d’ouverture | Prendre rendez-vous, Recevoir le catalogue |
+| Collections, fin de page | Prendre rendez-vous, Recevoir le catalogue |
+| Familles, fin de page | Prendre rendez-vous, Échanger avec un conseiller |
+| Fiches modèles, sous la présentation et en fin de page | Prendre rendez-vous, Être conseillé sur [modèle] |
+| Showroom, section `#rendez-vous` en fin de page | Échanger avec un conseiller, Recevoir le catalogue |
+
+La section `#rendez-vous` accueillera le formulaire de rendez-vous ; elle indique pour l’instant « Visite libre ou sur rendez-vous ». Sous leur titre, les fiches modèles affichent les quatre conditions communes au catalogue issues de la FAQ du projet (Personnalisation, Livraison) : personnalisable, délai de 10 à 12 semaines, livraison partout au Maroc et offerte à Casablanca, installation incluse. Ce bloc est écrit dans le gabarit et s’applique à toutes les fiches.
+
+`contact_label` et `catalogue_label` ne pilotent plus ces boutons. Ils restent utilisés par le pied de page, la page showroom et le formulaire catalogue, qui conservent leurs liens actuels jusqu’aux étapes suivantes du plan, comme les fins d’articles du Journal.

@@ -2,10 +2,13 @@
 import '../styles/site.css';
 import { PortableText } from 'emdash/ui';
 import CatalogueForm from './CatalogueForm.astro';
+import HeaderActions from './HeaderActions.astro';
+import SiteActions from './SiteActions.astro';
 import ThemeToggle from './ThemeToggle.astro';
 import NativeNav, { type NavigationItem } from './NativeNav.astro';
 import GeographicMap from './GeographicMap.astro';
 import GeographicMapSymbols from './GeographicMapSymbols.astro';
+import { generalWhatsappMessage, isCatalogueLink, whatsappHref } from '../lib/actions';
 import { imageAttributes } from '../lib/images';
 
 type Editable = { edit?: Record<string, Record<string, string>> };
@@ -34,7 +37,7 @@ interface Props {
     labels: {
       collections: string; showroom: string; journal: string; catalogue: string;
       allArticles: string; discover: string; visit: string; appointment: string;
-      download: string; scroll: string; readArticle: string; contact: string;
+      scroll: string; readArticle: string; contact: string;
     };
   };
   catalogue: { entry?: Editable; id: string; title: string; edition: string; cover: Picture; isPlaceholder?: boolean; downloadLabel: string } | null;
@@ -43,6 +46,8 @@ const { home, families, posts, site, catalogue } = Astro.props;
 const labels = site.labels;
 const homeEdit = home.entry?.edit;
 const siteEdit = site.entry?.edit;
+const headerNavigation = site.navigation.filter(item => !isCatalogueLink(item.url));
+const advisorHref = whatsappHref(site.whatsappHref, generalWhatsappMessage);
 const featuredPost = posts[0];
 const otherPosts = posts.slice(1, 5);
 const hasCta = (section: CopySection) => !!(section.ctaLabel && section.ctaHref);
@@ -99,15 +104,19 @@ const brandLines = explicitBrandLines.length > 1 ? explicitBrandLines : [brandWo
 </svg>
 <a class="skip-link" href="#main-content">Aller au contenu</a>
 <header class="hd" id="hd">
-  <a class="logo" href="/#accueil" data-go="accueil" aria-label={`${site.name}, accueil`}>{site.logoDark ? <img class="lg-w" {...imageAttributes(site.logoDark, '180px', 512)} alt={site.logoDark.alt}/> : <span class="brand-name lg-w">{site.name}</span>}{site.logoLight ? <img class="lg-r" {...imageAttributes(site.logoLight, '180px', 512)} alt={site.logoLight.alt}/> : <span class="brand-name lg-r">{site.name}</span>}{site.location && <span class:list={["loc", {"loc-long": site.location.length > 8}]}>{site.location}</span>}</a>
+  <a class="logo" href="/#accueil" data-go="accueil" aria-label={`${site.name}, accueil`}>{site.logoDark ? <img class="lg-w" {...imageAttributes(site.logoDark, '180px', 512)} alt={site.logoDark.alt}/> : <span class="brand-name lg-w">{site.name}</span>}{site.logoLight ? <img class="lg-r" {...imageAttributes(site.logoLight, '180px', 512)} alt={site.logoLight.alt}/> : <span class="brand-name lg-r">{site.name}</span>}</a>
   <nav aria-label="Navigation principale">
-    <NativeNav items={site.navigation} variant="header" />
+    <NativeNav items={headerNavigation} />
   </nav>
-  <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation">Menu</button>
-  <ThemeToggle />
+  <div class="header-tools">
+    <HeaderActions advisorHref={advisorHref} />
+    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation">Menu</button>
+    <ThemeToggle />
+  </div>
 </header>
 <nav id="mobile-navigation" class="mobile-navigation" aria-label="Navigation mobile" hidden>
-  <NativeNav items={site.navigation} variant="mobile" />
+  <NativeNav items={headerNavigation} />
+  <HeaderActions variant="menu" />
 </nav>
 
 <main id="main-content" class="home">
@@ -117,7 +126,7 @@ const brandLines = explicitBrandLines.length > 1 ? explicitBrandLines : [brandWo
     <div class="pin">
       <div class="words"><div>{home.eyebrow && <p class="kick"><svg aria-hidden="true"><use href="#step"/></svg>{home.eyebrow}</p>}<h1 {...homeEdit?.title}>{home.title}</h1></div><div class="side">{site.tagline && <p class="kick">{site.tagline}</p>}<span class="hint">{labels.scroll} ↓</span></div></div>
       {home.heroImage && <div class="ph card" data-mobile-frame {...homeEdit?.hero_image}><img {...imageAttributes(home.heroImage, heroImageSizes)} alt={home.heroImage.alt} fetchpriority="high" style="object-position: center 55%;"/><div class="veil"></div></div>}
-      <div class:list={["over", {onphoto: !!home.heroImage}]}><div>{home.eyebrow && <p class="kick"><svg aria-hidden="true"><use href="#step"/></svg>{home.eyebrow}</p>}{home.intro && <p class="hero-intro" {...homeEdit?.intro}>{home.intro}</p>}<div class="row"><a class="btn solid" href="/catalogue/" {...siteEdit?.catalogue_label}>{labels.download}</a><a class="btn" href="/showroom-casablanca/">{labels.visit}</a></div></div></div>
+      <div class:list={["over", {onphoto: !!home.heroImage}]}><div>{home.eyebrow && <p class="kick"><svg aria-hidden="true"><use href="#step"/></svg>{home.eyebrow}</p>}{home.intro && <p class="hero-intro" {...homeEdit?.intro}>{home.intro}</p>}<SiteActions order={['appointment', 'catalogue']} /></div></div>
     </div>
   </section>
   {home.brand.present !== false && <section class:list={['scene', {'without-visual': !(home.brand.image || home.brand.detailImage)}]} id="italie" data-scene={(home.brand.image || home.brand.detailImage) ? 'italie' : undefined} style="--a: 0; --o: 0;">
@@ -162,7 +171,7 @@ const brandLines = explicitBrandLines.length > 1 ? explicitBrandLines : [brandWo
 <footer class="ft">
   <svg class="fan deco" viewBox="0 0 200 104" aria-hidden="true"><use href="#fan"/></svg><div class="brand">{site.logoDark ? <img class="lg-w" {...imageAttributes(site.logoDark, '180px', 512)} alt={site.logoDark.alt}/> : <span class="brand-name lg-w">{site.name}</span>}{site.logoLight ? <img class="lg-r" {...imageAttributes(site.logoLight, '180px', 512)} alt={site.logoLight.alt}/> : <span class="brand-name lg-r">{site.name}</span>}{site.location && <span class="loc">{site.location}</span>}{site.tagline && <p>{site.tagline}</p>}</div>
   <div><h4>{labels.showroom}</h4><ul>{site.address && <li>{site.address}</li>}{site.hours && <li>{site.hours}</li>}{site.phone && <li><a href={`tel:${site.phone.replace(/[^+\d]/g, '')}`}>{site.phone}</a></li>}{site.whatsappHref && <li><a href={site.whatsappHref} target="_blank" rel="noopener noreferrer">{labels.appointment} · WhatsApp</a></li>}{site.publicEmail && <li><a href={`mailto:${site.publicEmail}`}>{site.publicEmail}</a></li>}<li><a href="/showroom-casablanca/">{labels.visit}</a></li></ul></div>
-  <div><h4>Explorer</h4><ul>{site.navigation.map(item => <li><NativeNav items={[item]} variant="footer" /></li>)}<li><a href="/confidentialite/">Confidentialité</a></li></ul></div>
+  <div><h4>Explorer</h4><ul>{site.navigation.map(item => <li><NativeNav items={[item]} /></li>)}<li><a href="/confidentialite/">Confidentialité</a></li></ul></div>
   <div class="base"><span>{site.name}</span>{site.footerNote && <span {...siteEdit?.footer_text}>{site.footerNote}</span>}{site.previewNotice && <p class="preview-notice" {...siteEdit?.preview_notice}>{site.previewNotice}</p>}</div>
 </footer>
 <script>
