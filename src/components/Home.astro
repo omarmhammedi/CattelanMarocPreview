@@ -65,6 +65,8 @@ const familyFrames: Record<string, { ratio: number; position: number }> = {
   "buffets-bibliotheques": { ratio: .5624, position: 55 },
   luminaires: { ratio: .889, position: 55 },
   "mobilier-exterieur": { ratio: .5624, position: 55 },
+  "tables-basses": { ratio: .5624, position: 60 },
+  "consoles-miroirs": { ratio: .5624, position: 50 },
 };
 const familyFrame = (href: string) => familyFrames[href.split('/').filter(Boolean).at(-1) || ''] || { ratio: .889, position: 55 };
 // Match responsive branches, accounting for the pixels enlarged by object-fit: cover.

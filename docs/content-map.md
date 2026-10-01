@@ -9,15 +9,15 @@ La configuration Astro déclare explicitement `defaultLocale: 'fr'` et `locales:
 | Collection | Entrées initiales | Chemins publics | Contenu |
 | --- | ---: | --- | --- |
 | `pages` | 11 | `/`, `/collections/`, `/showroom-casablanca/`, `/catalogue/`, `/journal/`, `/sur-mesure/`, `/professionnels/`, `/a-propos/`, `/votre-projet/`, `/faq/`, `/mentions-legales/` | Titre, introduction, images et sections éditoriales |
-| `families` | 6 | `/collections/{slug}/` | Présentation courte, texte enrichi, sélection de modèles, article associé |
-| `models` | 11 | `/modeles/{slug}/` et cartes des familles | Fiche du modèle exact, galerie, dimensions, plans, finitions et PDF technique public |
+| `families` | 8 | `/collections/{slug}/` | Présentation courte, texte enrichi, sélection de modèles, article associé |
+| `models` | 19 | `/modeles/{slug}/` et cartes des familles | Fiche du modèle exact, galerie, dimensions, plans, finitions et PDF technique public |
 | `posts` | 5 | `/journal/{slug}/` | Articles complets en Portable Text, extrait, image, rubrique, sources, CTA |
 | `catalogues` | 1 | Formulaire et téléchargement | Édition, couverture, mention de démonstration, référence du PDF privé |
 | `site_content` | 1 | Partagé sur tout le site | Logos, contacts, coordonnées, boutons, pied de page, textes du formulaire et catalogue actif |
 
 Les clés stables des pages sont `home`, `collections`, `showroom`, `catalogue`, `journal`, `sur-mesure`, `professionnels`, `a-propos`, `votre-projet`, `faq`, `mentions-legales`. Leurs slugs sont respectivement `home`, `collections`, `showroom-casablanca`, `catalogue`, `journal`, `sur-mesure`, `professionnels`, `a-propos`, `votre-projet`, `faq`, `mentions-legales`. Le rendu résout l’accueil à `/` et traite `/home/` comme son alias. Une prévisualisation signée doit conserver son contexte EmDash lorsqu’elle résout cette route.
 
-Les familles sont `tables`, `chaises-tabourets`, `canapes-fauteuils`, `buffets-bibliotheques`, `luminaires`, `mobilier-exterieur`.
+Les familles sont `tables`, `chaises-tabourets`, `canapes-fauteuils`, `buffets-bibliotheques`, `luminaires`, `mobilier-exterieur`, `tables-basses`, `consoles-miroirs`.
 
 ## Champs et surfaces
 
@@ -31,7 +31,7 @@ Les familles sont `tables`, `chaises-tabourets`, `canapes-fauteuils`, `buffets-b
 | `sections.display_heading` | Titre court des grandes compositions | Utiliser `heading` | Tester les deux lignes et le retour à la ligne sur mobile |
 | `pages.brand_image`, `brand_detail_image`, `brand_caption` | Séquence « Dessiné en Italie » | Masquer l’image ou légende absente | Vérifier recadrage, lecture et animation |
 | `pages.showroom_image`, `showroom_invitation` | Séquence showroom de l’accueil | Masquer les champs absents | Ne pas légender une ambiance comme une photographie du magasin |
-| `families.short_title`, `card_text`, `image`, `sort_order` | Cartes de l’accueil et des collections | Titre obligatoire, image facultative | Le rail calcule sa longueur sur les six familles, sans nombre fixé en CSS |
+| `families.short_title`, `card_text`, `image`, `sort_order` | Cartes de l’accueil et des collections | Titre obligatoire, image facultative | Le rail calcule sa longueur sur le nombre de familles, sans nombre fixé en CSS |
 | `families.content` | Page de famille | Masquer le corps vide | L’éditeur Portable Text pilote les paragraphes |
 | `families.models` | Cartes de modèles | Masquer la sélection | Respecter l’ordre de la relation enregistré par l’éditeur |
 | `families.related_post` | Article associé | Masquer le lien | Un article en brouillon ne fuit pas sur le site public |
@@ -307,3 +307,11 @@ Sur la page FAQ, une section `group` ouvre un groupe et chaque section `faq_*` e
 `scripts/migrations/0015-site-information-pages.mjs` s’exécute comme la 0014 (aperçu par défaut, `--apply`, sauvegarde privée, sans effet à la seconde exécution). Il ajoute les quatre clés de route et les quatre pages, porte la limite des sections de page de 20 à 40 (la FAQ en compte 26), puis met à jour, uniquement depuis leur valeur attendue : l’adresse au format du plan (« 8-10 avenue du Docteur Mohamed Sijilmassi, Triangle d’Or, 20250 Casablanca, Maroc »), le téléphone « +212 771 105 490 », l’e-mail public contact@cattelanitalia.ma et le paragraphe de livraison du showroom, qui reprend désormais les conditions de la FAQ. Une valeur déjà modifiée par un éditeur est conservée et signalée. Appliquer la 0014 avant la 0015.
 
 Le pied de page relie À propos, Votre projet, Professionnels, FAQ, Confidentialité et Mentions légales. Les logos officiels rouge et blanc fournis par le propriétaire remplacent les fichiers de `public/images` utilisés par l’import local ; sur le site en ligne, les logos se changent dans **Configuration du site**.
+
+## Migration 0016 : Tables basses, Consoles & miroirs
+
+`scripts/migrations/0016-new-families.mjs` s’exécute comme la 0014 (aperçu par défaut, `--apply`, sauvegarde privée, sans effet à la seconde exécution). À partir de `content/new-families.json`, il téléverse les photos de `content/media/new-families` par l’API média native, crée et publie huit modèles (Arena, Albert Keramik, Adrian Wood, Dodo, Westin, Nettuno, Cosmos, Glenn), puis les familles `tables-basses` (ordre 7) et `consoles-miroirs` (ordre 8) avec leur sélection. Une entrée qui existe déjà est conservée telle quelle et reste liée à sa famille.
+
+Les photos viennent des kits numériques Cattelan Italia ; le propriétaire a retiré les logos. Elles ont été agrandies ×2 avec Real-ESRNet, un modèle qui n’invente pas de texture (Real-ESRGAN ajoutait un quadrillage sur le bronze brossé). Les textes ne décrivent que ce que montrent les photos.
+
+À compléter depuis les fiches officielles : dimensions, finitions, fiches techniques, lien vers la fiche Cattelan Italia et année. Rado Keramik attend ses photos ; Dodo (une photo) et Cosmos (deux) gagneraient à en avoir davantage.

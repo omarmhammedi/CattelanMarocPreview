@@ -169,12 +169,14 @@ try {
   assert(Number(await page.locator('#italie').evaluate(el => el.style.getPropertyValue('--a'))) > .95);
   await seek('#collections', 1);
   const rail = await page.locator('#collections').evaluate(el => ({ progress: Number(el.style.getPropertyValue('--h')), cards: el.querySelectorAll('.cc:not(.cta)').length }));
-  assert(rail.progress > .95 && rail.cards === 6);
+  // One card per published family, as listed on the collections page.
+  const familyCount = await page.evaluate(async () => new DOMParser().parseFromString(await (await fetch('/collections/')).text(), 'text/html').querySelectorAll('.family-tile').length);
+  assert(rail.progress > .95 && familyCount >= 6 && rail.cards === familyCount);
   await seek('#showroom', .7);
   assert(Number(await page.locator('#showroom').evaluate(el => el.style.getPropertyValue('--r'))) > .95);
   await seek('#catalogue', .6);
   assert(Number(await page.locator('#catalogue').evaluate(el => el.style.getPropertyValue('--c'))) > .95);
-  record('Desktop hero, brand reveal, six-family rail, showroom transition, catalogue animation and cross-page themes');
+  record('Desktop hero, brand reveal, family rail, showroom transition, catalogue animation and cross-page themes');
   await context.close();
 
   const reduced = await contextFor({ width: 1440, height: 900 }, 'light', 'reduce');

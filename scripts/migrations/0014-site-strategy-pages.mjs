@@ -116,11 +116,11 @@ export async function authenticatedApi(origin, allowed = allowedPaths) {
     assert(credential?.accessToken && Date.parse(credential.expiresAt) > Date.now(), 'Log in with the native emdash CLI for this exact origin first.');
     headers = { Authorization: `Bearer ${credential.accessToken}` };
   }
-  return async (path, { method = 'GET', data } = {}) => {
+  return async (path, { method = 'GET', data, form } = {}) => {
     assert(allowed.test(path), `Refused path ${path}.`);
     const response = await fetch(new URL(path, origin), { method, redirect: 'error', signal: AbortSignal.timeout(90_000),
       headers: { ...headers, Origin: origin.origin, 'X-EmDash-Request': '1', ...(data === undefined ? {} : { 'Content-Type': 'application/json' }) },
-      ...(data === undefined ? {} : { body: JSON.stringify(data) }) });
+      ...(form ? { body: form } : data === undefined ? {} : { body: JSON.stringify(data) }) });
     const body = await response.json().catch(() => ({}));
     assert(response.ok && body.success !== false, `${method} ${path}: HTTP ${response.status} ${body.error?.message || ''}`);
     return body.data;

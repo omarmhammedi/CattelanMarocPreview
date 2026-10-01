@@ -1,0 +1,319 @@
+{
+  "version": 1,
+  "source": "Photos from the Cattelan Italia digital kits, logos removed by the client and enlarged ×2 with Real-ESRNet (a model that does not add texture). Descriptions only state what the photos show; dimensions, finishes and technical sheets will be added from the official sheets.",
+  "mediaDir": "content/media/new-families",
+  "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+  "models": [
+    {
+      "slug": "arena",
+      "title": "Arena",
+      "description": "Une table basse ronde posée sur un fût central, présentée seule ou en composition avec un plateau en verre. Une base pour organiser le centre du salon.",
+      "paragraphs": [
+        "Arena repose sur un fût central qui laisse le plateau rond dégagé. Sur les photos, le plateau en métal patiné s’associe à un second plateau en verre teinté, placé à une autre hauteur.",
+        "Plusieurs tables peuvent se superposer en partie, pour composer une surface adaptée à la taille du canapé. Les dimensions et les finitions disponibles se vérifient avec le showroom sur la fiche technique."
+      ],
+      "image": {
+        "file": "arena_01.jpg",
+        "alt": "Arena, table basse ronde en métal patiné associée à un plateau en verre teinté"
+      },
+      "gallery": [
+        {
+          "file": "arena_03.jpg",
+          "alt": "Arena devant un canapé gris, plateau rond en métal patiné"
+        },
+        {
+          "file": "arena_04.jpg",
+          "alt": "Arena vue de dessus, plateau rond et objet doré"
+        },
+        {
+          "file": "arena_05.jpg",
+          "alt": "Arena, plateaux en métal et en verre teinté superposés"
+        },
+        {
+          "file": "arena_06.jpg",
+          "alt": "Détail du fût d’Arena sous le plateau en verre"
+        },
+        {
+          "file": "arena_08.jpg",
+          "alt": "Arena vue de dessus avec deux petites tables d’appoint"
+        },
+        {
+          "file": "arena_09.jpg",
+          "alt": "Arena en composition avec un plateau en verre teinté"
+        }
+      ]
+    },
+    {
+      "slug": "albert-keramik",
+      "title": "Albert Keramik",
+      "description": "Des tables basses à plateau en céramique sur une base conique, en forme de galet ou de cercle. À composer par deux ou trois devant le canapé.",
+      "paragraphs": [
+        "Albert Keramik associe un plateau en céramique à une base conique en métal. Les plateaux prennent la forme d’un galet ou d’un cercle et se placent à des hauteurs différentes.",
+        "La céramique reprend le dessin d’une pierre ou d’un marbre, comme sur les versions aux veines blanches et vertes présentées ici. Les décors, formes et dimensions se choisissent avec le showroom."
+      ],
+      "image": {
+        "file": "albert_keramik_10.jpg",
+        "alt": "Albert Keramik, trois tables basses rondes à plateau céramique aux veines vertes"
+      },
+      "gallery": [
+        {
+          "file": "albert_keramik_02.jpg",
+          "alt": "Albert Keramik, deux tables en forme de galet devant un canapé"
+        },
+        {
+          "file": "albert_keramik_03.jpg",
+          "alt": "Albert Keramik vue de dessus, plateaux céramique aux veines claires"
+        },
+        {
+          "file": "albert_keramik_04.jpg",
+          "alt": "Albert Keramik, tables rondes en céramique claire devant un canapé"
+        },
+        {
+          "file": "albert_keramik_06.jpg",
+          "alt": "Albert Keramik, plateaux en bois et en céramique superposés"
+        },
+        {
+          "file": "albert_keramik_07.jpg",
+          "alt": "Détail d’un plateau Albert Keramik en céramique veinée"
+        },
+        {
+          "file": "albert_keramik_12.jpg",
+          "alt": "Albert Keramik vue de dessus, plateaux céramique aux veines vertes"
+        }
+      ]
+    },
+    {
+      "slug": "adrian-wood",
+      "title": "Adrian Wood",
+      "description": "Des tables basses à plateau en bois en forme de galet, posées sur une base conique. Deux hauteurs qui se superposent pour animer le salon.",
+      "paragraphs": [
+        "Adrian Wood réunit des plateaux en bois aux contours arrondis, posés sur une base conique en métal. Les tables se glissent l’une sous l’autre pour former une composition souple.",
+        "Le veinage du bois donne son caractère à chaque plateau. Les essences, dimensions et finitions se choisissent avec le showroom."
+      ],
+      "image": {
+        "file": "adrian_wood_01.jpg",
+        "alt": "Adrian Wood, tables basses en bois en forme de galet dans un salon"
+      },
+      "gallery": [
+        {
+          "file": "adrian_wood_02.jpg",
+          "alt": "Adrian Wood vue de dessus, deux plateaux en bois superposés"
+        },
+        {
+          "file": "adrian_wood_04.jpg",
+          "alt": "Adrian Wood dans un salon ouvert sur le jardin"
+        },
+        {
+          "file": "adrian_wood_05.jpg",
+          "alt": "Détail du veinage d’un plateau Adrian Wood"
+        }
+      ]
+    },
+    {
+      "slug": "dodo",
+      "title": "Dodo",
+      "description": "Des tables d’appoint en verre aux reflets profonds, posées sur un piètement en métal. Une touche de couleur à côté du canapé.",
+      "paragraphs": [
+        "Dodo associe un corps en verre texturé à un piètement en métal. Sur la photo, le verre vert se décline en deux hauteurs placées côte à côte.",
+        "Les teintes du verre et les dimensions disponibles se vérifient avec le showroom."
+      ],
+      "image": {
+        "file": "dodo_01.jpg",
+        "alt": "Dodo, deux tables d’appoint en verre vert près d’un canapé"
+      },
+      "gallery": []
+    },
+    {
+      "slug": "westin",
+      "title": "Westin",
+      "description": "Une console à piètement en lames croisées, avec un plateau en verre ou en bois. Une silhouette graphique pour une entrée ou un mur de salon.",
+      "paragraphs": [
+        "Westin repose sur des lames de métal qui se croisent sous le plateau. Le plateau existe en verre, qui laisse voir le piètement, ou en bois massif aux bords naturels.",
+        "Placée sous un miroir, la console compose une entrée complète. Les dimensions et les finitions se choisissent avec le showroom."
+      ],
+      "image": {
+        "file": "westin_07.jpg",
+        "alt": "Westin, console à plateau en bois sous un miroir carré"
+      },
+      "gallery": [
+        {
+          "file": "westin_01.jpg",
+          "alt": "Westin, console à plateau en verre devant un mur gris"
+        },
+        {
+          "file": "westin_02.jpg",
+          "alt": "Westin sous un miroir, plateau en verre"
+        },
+        {
+          "file": "westin_03.jpg",
+          "alt": "Détail du piètement de Westin en lames croisées"
+        },
+        {
+          "file": "westin_04.jpg",
+          "alt": "Westin à plateau sombre sous un miroir à facettes"
+        },
+        {
+          "file": "westin_06.jpg",
+          "alt": "Westin à plateau en bois sous un miroir arrondi"
+        },
+        {
+          "file": "westin_09.jpg",
+          "alt": "Westin à plateau en bois dans une entrée claire"
+        },
+        {
+          "file": "westin_11.jpg",
+          "alt": "Détail du plateau en bois de Westin"
+        }
+      ]
+    },
+    {
+      "slug": "nettuno",
+      "title": "Nettuno",
+      "description": "Une console à base ondulée en métal dégradé, sous un plateau en verre. Une pièce sculpturale pour une entrée ou un salon.",
+      "paragraphs": [
+        "Nettuno doit sa forme à une base ondulée, dont la teinte passe du doré au bronze foncé. Le plateau en verre laisse voir tout le mouvement de la base.",
+        "Associée à un miroir, elle compose une entrée. Les dimensions et les finitions se choisissent avec le showroom."
+      ],
+      "image": {
+        "file": "nettuno_05.jpg",
+        "alt": "Nettuno, base ondulée dorée vue à travers le plateau en verre"
+      },
+      "gallery": [
+        {
+          "file": "nettuno_01.jpg",
+          "alt": "Nettuno devant un mur en lattes de bois, sous deux miroirs"
+        },
+        {
+          "file": "nettuno_02.jpg",
+          "alt": "Détail du plateau en verre de Nettuno"
+        },
+        {
+          "file": "nettuno_03.jpg",
+          "alt": "Nettuno sous un miroir ovale sombre, mur clair"
+        },
+        {
+          "file": "nettuno_04.jpg",
+          "alt": "Nettuno sous un miroir rond, plateau en verre"
+        },
+        {
+          "file": "nettuno_06.jpg",
+          "alt": "Le plateau en verre de Nettuno et le reflet du miroir"
+        },
+        {
+          "file": "nettuno_07.jpg",
+          "alt": "Nettuno vue de face, base ondulée et plateau en verre"
+        }
+      ]
+    },
+    {
+      "slug": "cosmos",
+      "title": "Cosmos",
+      "description": "Un miroir aux bords ondulés qui déforment légèrement les reflets. Une pièce qui anime un mur d’entrée ou de salon.",
+      "paragraphs": [
+        "Cosmos joue avec la lumière : son contour ondulé courbe les reflets de la pièce. Il se place seul ou au-dessus d’une console.",
+        "Les formats et les finitions du miroir se vérifient avec le showroom."
+      ],
+      "image": {
+        "file": "cosmos_05.jpg",
+        "alt": "Cosmos, miroir aux bords ondulés au-dessus d’objets en céramique"
+      },
+      "gallery": [
+        {
+          "file": "cosmos_04.jpg",
+          "alt": "Détail du bord ondulé du miroir Cosmos"
+        }
+      ]
+    },
+    {
+      "slug": "glenn",
+      "title": "Glenn",
+      "description": "Un miroir aux angles arrondis et au cadre en métal brillant, au mur ou posé au sol. Une présence lumineuse pour l’entrée ou la chambre.",
+      "paragraphs": [
+        "Glenn associe un miroir aux angles adoucis à un cadre en métal brillant qui reflète la pièce. Il existe en format carré pour le mur et en grand format à poser au sol.",
+        "Les formats et les finitions du cadre se choisissent avec le showroom."
+      ],
+      "image": {
+        "file": "glenn_02.jpg",
+        "alt": "Glenn, miroir carré au cadre doré au-dessus d’une console"
+      },
+      "gallery": [
+        {
+          "file": "glenn_03.jpg",
+          "alt": "Glenn, miroir carré au cadre argenté au-dessus d’un meuble"
+        },
+        {
+          "file": "glenn_04.jpg",
+          "alt": "Détail du cadre métallique de Glenn"
+        },
+        {
+          "file": "glenn_05.jpg",
+          "alt": "Deux miroirs Glenn grand format posés au sol"
+        }
+      ]
+    }
+  ],
+  "families": [
+    {
+      "slug": "tables-basses",
+      "title": "Les tables basses Cattelan Italia",
+      "short_title": "Tables basses",
+      "card_text": "Bois, céramique, métal ou verre : des tables à composer devant le canapé.",
+      "intro": "La table basse occupe le centre du salon. Elle reçoit les livres, les objets et les plateaux du quotidien. Découvrez des modèles à associer par deux ou trois, en jouant sur les hauteurs et les matières.",
+      "image": {
+        "file": "arena_07.jpg",
+        "alt": "Table basse ronde Arena devant un canapé, dans un salon"
+      },
+      "image_caption": "Arena dans un salon.",
+      "sections": [
+        [
+          "Composer à plusieurs hauteurs",
+          "Deux ou trois plateaux superposés en partie donnent plus de surface qu’une seule table, sans alourdir la pièce. Choisissez la composition selon la longueur du canapé et les passages autour."
+        ],
+        [
+          "Accorder les matières",
+          "Le bois, la céramique, le métal et le verre ne renvoient pas la lumière de la même façon. Comparez les échantillons au showroom avec le sol et les tissus de votre salon."
+        ]
+      ],
+      "sort_order": 7,
+      "models": [
+        "arena",
+        "albert-keramik",
+        "adrian-wood",
+        "dodo"
+      ],
+      "seo_title": "Tables basses | Cattelan Italia Maroc",
+      "meta_description": "Découvrez les tables basses Cattelan Italia en bois, céramique, métal ou verre. Comparez les modèles et les matières au showroom de Casablanca."
+    },
+    {
+      "slug": "consoles-miroirs",
+      "title": "Les consoles et miroirs Cattelan Italia",
+      "short_title": "Consoles & miroirs",
+      "card_text": "Une console et un miroir suffisent à composer une entrée.",
+      "intro": "L’entrée donne le ton de la maison. Une console et un miroir y forment un ensemble : un plateau pour poser les clés et quelques objets, un reflet qui agrandit l’espace. Découvrez des modèles à associer.",
+      "image": {
+        "file": "nettuno_07.jpg",
+        "alt": "Console Nettuno à base ondulée sous un miroir"
+      },
+      "image_caption": "Nettuno sous un miroir.",
+      "sections": [
+        [
+          "Associer la console et le miroir",
+          "Le miroir se choisit avec la console : sa largeur, sa forme et sa hauteur d’accrochage. Une forme arrondie adoucit une console graphique, un cadre métallique répond à une base en métal."
+        ],
+        [
+          "Penser à la lumière",
+          "Un miroir placé face à une fenêtre renvoie la lumière du jour dans la pièce. Vérifiez aussi la profondeur de la console pour garder le passage libre."
+        ]
+      ],
+      "sort_order": 8,
+      "models": [
+        "westin",
+        "nettuno",
+        "cosmos",
+        "glenn"
+      ],
+      "seo_title": "Consoles et miroirs | Cattelan Italia Maroc",
+      "meta_description": "Découvrez les consoles et miroirs Cattelan Italia pour l’entrée et le salon. Comparez les formes et les finitions au showroom de Casablanca."
+    }
+  ]
+}
