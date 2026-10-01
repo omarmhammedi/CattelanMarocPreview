@@ -11,7 +11,7 @@ Préparé le 1er octobre 2026 pour Racha Home. Ce document réunit tout ce qu’
 | Accès au nom de domaine cattelanitalia.ma | Adresse définitive du site | Avant la mise en ligne |
 | Photos du showroom | Pages Showroom, Accueil et À propos | Shooting du 9 octobre |
 | Liste des pièces exposées, pièce par pièce | Mention « Exposé au showroom de Casablanca » sur les fiches | Le 9 octobre, pendant le shooting |
-| Photos et fiches produit de Botero et Ohay | Compléter les pages Tables et Luminaires | Dès que possible |
+| Photos d’ambiance d’Ohay (la fiche produit est reçue) | Compléter la page Luminaires | Dès que possible |
 | Photos sans logo pour les six articles du Journal | Articles éditoriaux prévus | Dès que possible |
 | Catalogues PDF officiels | Remplacer le catalogue de démonstration | Avant la mise en ligne |
 | Adresse e-mail du showroom pour les alertes | Recevoir chaque demande de rendez-vous ou de projet | Avant la mise en ligne |
@@ -21,13 +21,13 @@ Préparé le 1er octobre 2026 pour Racha Home. Ce document réunit tout ce qu’
 
 ## Détail des demandes
 
-**Licence de marque et logo de revendeur.** Le site utilise le nom Cattelan Italia, son logo, ses photographies et ses fiches produit. Ce sont des marques et des contenus protégés de Cattelan Italia S.p.A. Le formulaire de licence se demande à info@cattelanitalia.com ; une fois signé, la marque fournit le logo de revendeur monomarque. Sans cet accord écrit, la marque peut demander le retrait du site, des photos ou du nom de domaine, et le site ne peut pas se présenter comme revendeur officiel.
+**Licence de marque et logo de revendeur.** Une lettre de demande est prête (document séparé « Demande de licence »), à signer et envoyer. Le site utilise le nom Cattelan Italia, son logo, ses photographies et ses fiches produit. Ce sont des marques et des contenus protégés de Cattelan Italia S.p.A. Le formulaire de licence se demande à info@cattelanitalia.com ; une fois signé, la marque fournit le logo de revendeur monomarque. Sans cet accord écrit, la marque peut demander le retrait du site, des photos ou du nom de domaine, et le site ne peut pas se présenter comme revendeur officiel.
 
 **Nom de domaine.** Accès au compte du registrar de cattelanitalia.ma (ou transfert convenu) pour faire pointer le domaine vers le site.
 
 **Shooting du 9 octobre.** Prévoir des vues larges de chaque espace (entrée, salon, salle à manger, chambre), la façade et l’enseigne, l’espace des échantillons, et quelques détails de matières. Le même jour, noter le nom exact de chaque modèle exposé et la pièce où il se trouve : cette liste active la mention « Exposé au showroom de Casablanca » sur les fiches concernées.
 
-**Botero et Ohay.** Comme pour les autres modèles : photos sans logo et fiche produit PDF de chacun.
+**Ohay.** La fiche produit est reçue ; il manque des photos d’ambiance sans logo, comme pour les autres modèles.
 
 **Journal.** Photos sans logo pour les six articles prévus :
 
