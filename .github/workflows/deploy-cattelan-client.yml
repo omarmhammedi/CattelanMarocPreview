@@ -1,0 +1,51 @@
+# Deploys the preview site to the Cattelan client Cloudflare account
+# (Cattelan@client.kreedns.com's Account, Worker cattelan-maroc-preview)
+# on every push to feat/site-strategy, or by hand from the Actions tab.
+# Needs one repository secret: CLOUDFLARE_API_TOKEN (account API token
+# owned by the Cattelan account: Workers Scripts Edit + Account Settings Read).
+name: Deploy cattelan-client
+
+on:
+  push:
+    branches: [feat/site-strategy]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-cattelan-client
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      CLOUDFLARE_ENV: cattelan-client
+      RAYON_NUM_THREADS: "1"
+      NODE_OPTIONS: --max-old-space-size=2048
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
+      - name: Check Cloudflare target
+        run: node scripts/check-cloudflare-target.mjs --env cattelan-client
+
+      - name: Deploy
+        # --keep-vars keeps variables set in the dashboard (e.g. GOOGLE_SITE_VERIFICATION)
+        run: npx wrangler deploy --config dist/server/wrangler.json --keep-vars
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
