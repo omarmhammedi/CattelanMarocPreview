@@ -11154,13 +11154,577 @@
         "file": "aladdin-fiche-technique.pdf",
         "filename": "cattelan-aladdin-fiche-technique.pdf"
       }
+    },
+    {
+      "slug": "botero-argile",
+      "title": "Botero Argile",
+      "description": "Une table ronde tout en argile spatulée, de la base galbée au plateau, en Cairo, Oslo ou Marrakech. De 140 à 180 cm de diamètre.",
+      "paragraphs": [
+        "Botero Argile repose sur une base galbée en polymère spatulé en argile ; le plateau en MDF reçoit la même finition. Trois teintes : Cairo, Oslo et Marrakech.",
+        "Une plaque en acier laqué gaufré noir stabilise la base. Le plateau rond mesure 140, 160 ou 180 cm de diamètre."
+      ],
+      "image": {
+        "file": "botero_argile_01.jpg",
+        "alt": "Botero Argile, table ronde en argile spatulée"
+      },
+      "gallery": [
+        {
+          "file": "botero_argile_fiche.jpg",
+          "alt": "Botero Argile, photographie sur fond blanc"
+        }
+      ],
+      "dimensions": [
+        [
+          "Ø 140, 160 ou 180",
+          "hauteur 74"
+        ]
+      ],
+      "finishes": [
+        {
+          "group": "structure",
+          "material_group": "",
+          "material": "Argile",
+          "name": "AR09 Oslo",
+          "code": "AR09",
+          "file": "sw-botero_argile-000.jpg"
+        },
+        {
+          "group": "structure",
+          "material_group": "",
+          "material": "Argile",
+          "name": "AR05 Cairo",
+          "code": "AR05",
+          "file": "sw-botero_argile-001.jpg"
+        },
+        {
+          "group": "structure",
+          "material_group": "",
+          "material": "Argile",
+          "name": "AR11 Marrakech",
+          "code": "AR11",
+          "file": "sw-botero_argile-002.jpg"
+        }
+      ],
+      "drawings": [
+        {
+          "file": "botero-argile-dimensions-1.png",
+          "label": "Dimensions en cm, d’après la fiche produit"
+        }
+      ],
+      "technical_sheet": {
+        "file": "botero-argile-fiche-technique.pdf",
+        "filename": "cattelan-botero-argile-fiche-technique.pdf"
+      }
+    },
+    {
+      "slug": "botero-wood-round",
+      "title": "Botero Wood Round",
+      "description": "La table Botero avec un plateau rond en noyer Canaletto ou rouvre brûlé, sur sa base galbée en argile spatulée.",
+      "paragraphs": [
+        "La base de Botero, en polymère spatulé en argile Cairo, Oslo ou Marrakech, porte ici un plateau en bois : noyer Canaletto ou rouvre brûlé.",
+        "Le plateau rond mesure 140, 160 ou 180 cm de diamètre. Un plateau central pivotant est proposé en option."
+      ],
+      "image": {
+        "file": "botero_wood_round_01.jpg",
+        "alt": "Botero Wood Round, table ronde en bois sur base en argile"
+      },
+      "gallery": [
+        {
+          "file": "botero_wood_round_fiche.jpg",
+          "alt": "Botero Wood Round, photographie sur fond blanc"
+        }
+      ],
+      "dimensions": [
+        [
+          "Ø 140, 160 ou 180",
+          "hauteur 75"
+        ]
+      ],
+      "finishes": [
+        {
+          "group": "base",
+          "material_group": "",
+          "material": "Argile",
+          "name": "AR09 Oslo",
+          "code": "AR09",
+          "file": "sw-botero_wood_round-000.jpg"
+        },
+        {
+          "group": "base",
+          "material_group": "",
+          "material": "Argile",
+          "name": "AR05 Cairo",
+          "code": "AR05",
+          "file": "sw-botero_wood_round-001.jpg"
+        },
+        {
+          "group": "base",
+          "material_group": "",
+          "material": "Argile",
+          "name": "AR11 Marrakech",
+          "code": "AR11",
+          "file": "sw-botero_wood_round-002.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "bois",
+          "name": "NC noyer canaletto",
+          "code": "NC",
+          "file": "sw-botero_wood_round-003.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "bois",
+          "name": "RB rouvre brulé",
+          "code": "RB",
+          "file": "sw-botero_wood_round-004.jpg"
+        }
+      ],
+      "drawings": [
+        {
+          "file": "botero-wood-round-dimensions-1.png",
+          "label": "Dimensions en cm, d’après la fiche produit"
+        }
+      ],
+      "technical_sheet": {
+        "file": "botero-wood-round-fiche-technique.pdf",
+        "filename": "cattelan-botero-wood-round-fiche-technique.pdf"
+      }
+    },
+    {
+      "slug": "botero-keramik-round",
+      "title": "Botero Keramik Round",
+      "description": "La table Botero avec un plateau rond en céramique aux décors de marbre, sur sa base galbée en argile spatulée. De 100 à 158 cm.",
+      "paragraphs": [
+        "Botero Keramik Round associe la base galbée en argile spatulée, Cairo, Oslo ou Marrakech, à un plateau en céramique en seize décors. La plaque de fond est titane, bronze ou noir gaufré.",
+        "Le plateau rond mesure 100 ou 118 cm, ou 140 et 158 cm de diamètre. Un plateau central pivotant est proposé en option."
+      ],
+      "image": {
+        "file": "botero_keramik_round_01.jpg",
+        "alt": "Botero Keramik Round, table ronde à plateau en céramique"
+      },
+      "gallery": [
+        {
+          "file": "botero_keramik_round_fiche.jpg",
+          "alt": "Botero Keramik Round, photographie sur fond blanc"
+        }
+      ],
+      "dimensions": [
+        [
+          "Ø 100 ou 118",
+          "hauteur 73"
+        ],
+        [
+          "Ø 140 ou 158",
+          "hauteur 73,5"
+        ]
+      ],
+      "finishes": [
+        {
+          "group": "ballast",
+          "material_group": "",
+          "material": "metals",
+          "name": "GFM11 gaufré titane",
+          "code": "GFM11",
+          "file": "sw-botero_keramik_round-000.jpg"
+        },
+        {
+          "group": "ballast",
+          "material_group": "",
+          "material": "metals",
+          "name": "GFM18 gaufré bronze",
+          "code": "GFM18",
+          "file": "sw-botero_keramik_round-001.jpg"
+        },
+        {
+          "group": "ballast",
+          "material_group": "",
+          "material": "metals",
+          "name": "GFM73 gaufré noir",
+          "code": "GFM73",
+          "file": "sw-botero_keramik_round-002.jpg"
+        },
+        {
+          "group": "base",
+          "material_group": "",
+          "material": "Argile",
+          "name": "AR09 Oslo",
+          "code": "AR09",
+          "file": "sw-botero_keramik_round-003.jpg"
+        },
+        {
+          "group": "base",
+          "material_group": "",
+          "material": "Argile",
+          "name": "AR05 Cairo",
+          "code": "AR05",
+          "file": "sw-botero_keramik_round-004.jpg"
+        },
+        {
+          "group": "base",
+          "material_group": "",
+          "material": "Argile",
+          "name": "AR11 Marrakech",
+          "code": "AR11",
+          "file": "sw-botero_keramik_round-005.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "céramique KS",
+          "name": "KS23 Luxor",
+          "code": "KS23",
+          "file": "sw-botero_keramik_round-006.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM02 Alabastro",
+          "code": "KM02",
+          "file": "sw-botero_keramik_round-007.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM05 Golden Calacatta opaque",
+          "code": "KM05",
+          "file": "sw-botero_keramik_round-008.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM06 Golden Calacatta brillant",
+          "code": "KM06",
+          "file": "sw-botero_keramik_round-009.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM07 Portoro opaque",
+          "code": "KM07",
+          "file": "sw-botero_keramik_round-010.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM08 Portoro brillant",
+          "code": "KM08",
+          "file": "sw-botero_keramik_round-011.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM11 Makalu",
+          "code": "KM11",
+          "file": "sw-botero_keramik_round-012.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM12 Breccia",
+          "code": "KM12",
+          "file": "sw-botero_keramik_round-013.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM18 Borghini Calacatta opaque",
+          "code": "KM18",
+          "file": "sw-botero_keramik_round-014.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM21 Colosseo",
+          "code": "KM21",
+          "file": "sw-botero_keramik_round-015.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM22 Andromeda",
+          "code": "KM22",
+          "file": "sw-botero_keramik_round-016.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM24 Invisible opaque",
+          "code": "KM24",
+          "file": "sw-botero_keramik_round-017.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM26 Taj Mahal",
+          "code": "KM26",
+          "file": "sw-botero_keramik_round-018.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM27 Giava",
+          "code": "KM27",
+          "file": "sw-botero_keramik_round-019.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM28 Darwin",
+          "code": "KM28",
+          "file": "sw-botero_keramik_round-020.jpg"
+        }
+      ],
+      "drawings": [
+        {
+          "file": "botero-keramik-round-dimensions-1.png",
+          "label": "Dimensions en cm, d’après la fiche produit"
+        }
+      ],
+      "technical_sheet": {
+        "file": "botero-keramik-round-fiche-technique.pdf",
+        "filename": "cattelan-botero-keramik-round-fiche-technique.pdf"
+      }
+    },
+    {
+      "slug": "botero-ker-wood-round",
+      "title": "Botero Ker-Wood Round",
+      "description": "La table Botero au plateau en bois serti d’un disque en céramique, sur sa base galbée en argile spatulée. Version T à disque pivotant.",
+      "paragraphs": [
+        "Le plateau de Botero Ker-Wood Round, en noyer Canaletto ou rouvre brûlé, est serti d’un disque central en céramique, en seize décors. Les inserts sont en chrome noir.",
+        "Il mesure 160 ou 180 cm de diamètre. Dans la version T, le disque en céramique pivote pour faire circuler les plats."
+      ],
+      "image": {
+        "file": "botero_ker_wood_round_01.jpg",
+        "alt": "Botero Ker-Wood Round, table ronde en bois et céramique"
+      },
+      "gallery": [
+        {
+          "file": "botero_ker_wood_round_fiche.jpg",
+          "alt": "Botero Ker-Wood Round, photographie sur fond blanc"
+        }
+      ],
+      "dimensions": [
+        [
+          "Ø 160",
+          "disque en céramique Ø 99, hauteur 75"
+        ],
+        [
+          "Ø 180",
+          "disque en céramique Ø 118, hauteur 75"
+        ],
+        [
+          "Version T",
+          "disque pivotant Ø 78 (table Ø 160) ou Ø 98 (table Ø 180)"
+        ]
+      ],
+      "finishes": [
+        {
+          "group": "base",
+          "material_group": "",
+          "material": "Argile",
+          "name": "AR09 Oslo",
+          "code": "AR09",
+          "file": "sw-botero_ker_wood_round-000.jpg"
+        },
+        {
+          "group": "base",
+          "material_group": "",
+          "material": "Argile",
+          "name": "AR05 Cairo",
+          "code": "AR05",
+          "file": "sw-botero_ker_wood_round-001.jpg"
+        },
+        {
+          "group": "base",
+          "material_group": "",
+          "material": "Argile",
+          "name": "AR11 Marrakech",
+          "code": "AR11",
+          "file": "sw-botero_ker_wood_round-002.jpg"
+        },
+        {
+          "group": "pièces",
+          "material_group": "",
+          "material": "céramique KS",
+          "name": "KS23 Luxor",
+          "code": "KS23",
+          "file": "sw-botero_ker_wood_round-003.jpg"
+        },
+        {
+          "group": "pièces",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM02 Alabastro",
+          "code": "KM02",
+          "file": "sw-botero_ker_wood_round-004.jpg"
+        },
+        {
+          "group": "pièces",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM05 Golden Calacatta opaque",
+          "code": "KM05",
+          "file": "sw-botero_ker_wood_round-005.jpg"
+        },
+        {
+          "group": "pièces",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM06 Golden Calacatta brillant",
+          "code": "KM06",
+          "file": "sw-botero_ker_wood_round-006.jpg"
+        },
+        {
+          "group": "pièces",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM07 Portoro opaque",
+          "code": "KM07",
+          "file": "sw-botero_ker_wood_round-007.jpg"
+        },
+        {
+          "group": "pièces",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM08 Portoro brillant",
+          "code": "KM08",
+          "file": "sw-botero_ker_wood_round-008.jpg"
+        },
+        {
+          "group": "pièces",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM09 Sahara Noir brillant",
+          "code": "KM09",
+          "file": "sw-botero_ker_wood_round-009.jpg"
+        },
+        {
+          "group": "pièces",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM11 Makalu",
+          "code": "KM11",
+          "file": "sw-botero_ker_wood_round-010.jpg"
+        },
+        {
+          "group": "pièces",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM12 Breccia",
+          "code": "KM12",
+          "file": "sw-botero_ker_wood_round-011.jpg"
+        },
+        {
+          "group": "pièces",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM18 Borghini Calacatta opaque",
+          "code": "KM18",
+          "file": "sw-botero_ker_wood_round-012.jpg"
+        },
+        {
+          "group": "pièces",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM21 Colosseo",
+          "code": "KM21",
+          "file": "sw-botero_ker_wood_round-013.jpg"
+        },
+        {
+          "group": "pièces",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM22 Andromeda",
+          "code": "KM22",
+          "file": "sw-botero_ker_wood_round-014.jpg"
+        },
+        {
+          "group": "pièces",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM24 Invisible opaque",
+          "code": "KM24",
+          "file": "sw-botero_ker_wood_round-015.jpg"
+        },
+        {
+          "group": "pièces",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM26 Taj Mahal",
+          "code": "KM26",
+          "file": "sw-botero_ker_wood_round-016.jpg"
+        },
+        {
+          "group": "pièces",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM27 Giava",
+          "code": "KM27",
+          "file": "sw-botero_ker_wood_round-017.jpg"
+        },
+        {
+          "group": "pièces",
+          "material_group": "",
+          "material": "céramique Marmi",
+          "name": "KM28 Darwin",
+          "code": "KM28",
+          "file": "sw-botero_ker_wood_round-018.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "bois",
+          "name": "NC noyer canaletto",
+          "code": "NC",
+          "file": "sw-botero_ker_wood_round-019.jpg"
+        },
+        {
+          "group": "plateau",
+          "material_group": "",
+          "material": "bois",
+          "name": "RB rouvre brulé",
+          "code": "RB",
+          "file": "sw-botero_ker_wood_round-020.jpg"
+        }
+      ],
+      "drawings": [
+        {
+          "file": "botero-ker-wood-round-dimensions-1.png",
+          "label": "Dimensions en cm, d’après la fiche produit"
+        }
+      ],
+      "technical_sheet": {
+        "file": "botero-ker-wood-round-fiche-technique.pdf",
+        "filename": "cattelan-botero-ker-wood-round-fiche-technique.pdf"
+      }
     }
   ],
   "additions": {
     "tables": [
       "butterfly",
       "butterfly-keramik",
-      "tyron-keramik"
+      "tyron-keramik",
+      "botero-argile",
+      "botero-wood-round",
+      "botero-keramik-round",
+      "botero-ker-wood-round"
     ],
     "chaises-tabourets": [
       "miranda-ml",

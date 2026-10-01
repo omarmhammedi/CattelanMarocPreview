@@ -320,16 +320,16 @@ Descriptions, dimensions et finitions viennent des fiches produit Cattelan Itali
 
 `scripts/migrations/0017-cndp-receipt.mjs` (aperçu par défaut, `--apply`, sans effet à la seconde exécution) ajoute à Configuration du site le champ texte facultatif `cndp_receipt` (« Récépissé CNDP »). Sous chacun des trois formulaires (catalogue, rendez-vous, professionnels), une mention conforme à la loi n° 09-08 nomme Racha Home, la finalité, la durée de conservation de trois ans et les droits, avec l’e-mail public. Lorsque le champ est rempli, la mention et la page Confidentialité ajoutent « déclaré à la CNDP sous le n° … » ; vide, la page indique que la déclaration est en cours d’enregistrement et les formulaires ne mentionnent pas la CNDP. La phrase `form_privacy` du formulaire catalogue reste modifiable dans EmDash. Les demandes et contacts de plus de trois ans sont supprimés automatiquement par les tâches planifiées des deux plugins. Le dossier de déclaration est dans [cndp-declaration.md](cndp-declaration.md).
 
-## Migration 0018 : quinze modèles dans les familles existantes
+## Migration 0018 : dix-neuf modèles dans les familles existantes
 
-`scripts/migrations/0018-collection-additions.mjs` s’exécute comme la 0016 (aperçu par défaut, `--apply`, sauvegarde privée, sans effet à la seconde exécution). À partir de `content/collection-additions.json` et des fichiers de `content/media/collection-additions`, il crée et publie quinze modèles, avec photos, dimensions, dessins, finitions et fiche produit en PDF, puis les ajoute à la suite de la sélection actuelle de leur famille :
+`scripts/migrations/0018-collection-additions.mjs` s’exécute comme la 0016 (aperçu par défaut, `--apply`, sauvegarde privée, sans effet à la seconde exécution). À partir de `content/collection-additions.json` et des fichiers de `content/media/collection-additions`, il crée et publie dix-neuf modèles, avec photos, dimensions, dessins, finitions et fiche produit en PDF, puis les ajoute à la suite de la sélection actuelle de leur famille :
 
 | Famille | Modèles ajoutés |
 | --- | --- |
-| Tables | Butterfly, Butterfly Keramik, Tyron Keramik |
+| Tables | Butterfly, Butterfly Keramik, Tyron Keramik, Botero Argile, Botero Wood Round, Botero Keramik Round, Botero Ker-Wood Round |
 | Chaises et tabourets | Miranda ML, Zuleika |
 | Canapés et fauteuils | Craig, Douglas, Mykonos, Sinatra |
 | Buffets et bibliothèques | Kayak, Amsterdam, Nautilus |
 | Luminaires | Paris, Cloudine, Aladdin |
 
-Un modèle déjà créé par un éditeur est conservé et n’est pas lié deux fois ; l’ordre et le contenu des familles ne changent pas. Les nuanciers des fiches (1 271, dont près de 300 par canapé) sont rangés comme ceux des modèles existants : « Tissu Canapé » pour les catégories T10 à T90, « Cuir Canapé » pour glove, magnifica, nabuk et perfetto, « Cuir Chaise/Lit » pour le cuir mince et le similicuir. Les canapés étant composables, leurs dimensions sont données par les dessins de la fiche. Les nuanciers, les photos des fiches et la photo principale de chaque modèle sont agrandis avec Real-ESRNet ; les autres photos de galerie restent à leur taille d’origine. Botero et Ohay attendent leurs photos et leurs fiches. Appliquer après la 0016, dont il réutilise le code d’écriture.
+Un modèle déjà créé par un éditeur est conservé et n’est pas lié deux fois ; l’ordre et le contenu des familles ne changent pas. Les nuanciers des fiches (1 321, dont près de 300 par canapé) sont rangés comme ceux des modèles existants : « Tissu Canapé » pour les catégories T10 à T90, « Cuir Canapé » pour glove, magnifica, nabuk et perfetto, « Cuir Chaise/Lit » pour le cuir mince et le similicuir. Les canapés étant composables, leurs dimensions sont données par les dessins de la fiche. Les nuanciers, les photos des fiches et la photo principale de chaque modèle sont agrandis avec Real-ESRNet ; les autres photos de galerie restent à leur taille d’origine. Les quatre Botero n’ont qu’une photo d’ambiance chacun. Ohay attend des photos et une fiche produit lisible : celle reçue est vide. Appliquer après la 0016, dont il réutilise le code d’écriture.

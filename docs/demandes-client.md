@@ -11,7 +11,7 @@ Préparé le 1er octobre 2026 pour Racha Home. Ce document réunit tout ce qu’
 | Accès au nom de domaine cattelanitalia.ma | Adresse définitive du site | Avant la mise en ligne |
 | Photos du showroom | Pages Showroom, Accueil et À propos | Shooting du 9 octobre |
 | Liste des pièces exposées, pièce par pièce | Mention « Exposé au showroom de Casablanca » sur les fiches | Le 9 octobre, pendant le shooting |
-| Photos d’ambiance d’Ohay (la fiche produit est reçue) | Compléter la page Luminaires | Dès que possible |
+| Photos d’ambiance d’Ohay et sa fiche produit (le PDF reçu est vide) | Compléter la page Luminaires | Dès que possible |
 | Photos sans logo pour les six articles du Journal | Articles éditoriaux prévus | Dès que possible |
 | Catalogues PDF officiels | Remplacer le catalogue de démonstration | Avant la mise en ligne |
 | Adresse e-mail du showroom pour les alertes | Recevoir chaque demande de rendez-vous ou de projet | Avant la mise en ligne |
@@ -27,7 +27,7 @@ Préparé le 1er octobre 2026 pour Racha Home. Ce document réunit tout ce qu’
 
 **Shooting du 9 octobre.** Prévoir des vues larges de chaque espace (entrée, salon, salle à manger, chambre), la façade et l’enseigne, l’espace des échantillons, et quelques détails de matières. Le même jour, noter le nom exact de chaque modèle exposé et la pièce où il se trouve : cette liste active la mention « Exposé au showroom de Casablanca » sur les fiches concernées.
 
-**Ohay.** La fiche produit est reçue ; il manque des photos d’ambiance sans logo, comme pour les autres modèles.
+**Ohay.** Le PDF de la fiche produit reçu ne contient que l’en-tête et le pied de page : il faut le télécharger à nouveau. Il manque aussi des photos d’ambiance sans logo, comme pour les autres modèles.
 
 **Journal.** Photos sans logo pour les six articles prévus :
 

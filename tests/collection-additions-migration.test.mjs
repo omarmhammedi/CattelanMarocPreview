@@ -33,10 +33,10 @@ function fakeCms({ models = [] } = {}) {
   return { api, state };
 }
 
-test('the manifest places fifteen models, each with photos, finishes and a sheet', async () => {
+test('the manifest places nineteen models, each with photos, finishes and a sheet', async () => {
   const manifest = await loadManifest();
-  assert.equal(manifest.models.length, 15);
-  assert.deepEqual(manifest.additions.tables, ['butterfly', 'butterfly-keramik', 'tyron-keramik']);
+  assert.equal(manifest.models.length, 19);
+  assert.deepEqual(manifest.additions.tables, ['butterfly', 'butterfly-keramik', 'tyron-keramik', 'botero-argile', 'botero-wood-round', 'botero-keramik-round', 'botero-ker-wood-round']);
   for (const model of manifest.models) assert(model.finishes.length && model.drawings.length && model.gallery.length, model.slug);
   for (const text of manifest.models.flatMap(model => [model.description, ...model.paragraphs])) assert.doesNotMatch(text, /prix|promotion|remise|!/iu, text);
   const sofa = manifest.models.find(model => model.slug === 'craig');
@@ -49,7 +49,8 @@ test('creates the models and appends them after each family’s current selectio
   const manifest = await loadManifest();
   const { api, state } = fakeCms();
   await applyAdditions(api, manifest, await planAdditions(api, manifest), { beforeWrite: () => {} });
-  assert.deepEqual(state.links['families-tables'], ['models-skorpio', 'models-napoleon-keramik', 'models-butterfly', 'models-butterfly-keramik', 'models-tyron-keramik']);
+  assert.deepEqual(state.links['families-tables'].slice(0, 5), ['models-skorpio', 'models-napoleon-keramik', 'models-butterfly', 'models-butterfly-keramik', 'models-tyron-keramik']);
+  assert.equal(state.links['families-tables'].length, 9);
   assert.equal(state.links['families-luminaires'].length, 4);
   assert(state.families.every(item => item.status === 'published'));
   const second = await planAdditions(api, manifest);
