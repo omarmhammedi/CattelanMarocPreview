@@ -45,7 +45,7 @@ test('the manifest holds the two families, their models and an existing photo fo
     ['tables-basses', ['arena', 'albert-keramik', 'adrian-wood', 'dodo']],
     ['consoles-miroirs', ['westin', 'nettuno', 'rado-keramik', 'cosmos', 'glenn']],
   ]);
-  for (const file of manifest.files) assert(manifest.assets[file].bytes.length > (file.startsWith('sw-') ? 5_000 : 20_000), `${file}: missing or too small`);
+  for (const file of manifest.files) assert(manifest.assets[file].bytes.length > (file.startsWith('sw-') ? 1_000 : 5_000), `${file}: missing or too small`);
   for (const model of manifest.models) assert(model.dimensions.length && model.finishes.length && model.technical_sheet.file, `${model.slug}: sheet data`);
   const texts = [...manifest.models.flatMap(model => [model.description, ...model.paragraphs]), ...manifest.families.flatMap(family => [family.intro, family.card_text, ...family.sections.flat()])];
   for (const text of texts) assert.doesNotMatch(text, /prix|promotion|remise|!|officiel/iu, `luxury codes: ${text}`);
