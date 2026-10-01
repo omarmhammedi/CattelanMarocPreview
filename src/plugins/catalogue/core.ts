@@ -4,11 +4,21 @@ export const EMAIL_DOWNLOAD_LIFETIME_MS = 24 * 60 * 60_000;
 export const LEASE_MS = 60_000;
 export const CONSENT_VERSION = "catalogue-fr-v1";
 
+export const CITIES = ["Casablanca", "Rabat", "Marrakech", "Tanger", "Autre"] as const;
+
+/** 8 to 15 digits with the usual separators; the number is kept as typed. */
+export function isWhatsappNumber(value: string): boolean {
+  const digits = value.replace(/\D/gu, "").length;
+  return /^\+?[\d\s().-]+$/u.test(value) && digits >= 8 && digits <= 15;
+}
+
 export type RequestInput = {
   requestId: string;
   catalogueId: string;
   name: string;
   email: string;
+  whatsapp: string;
+  city: typeof CITIES[number];
   communicationsConsent: boolean;
   sourcePath: string;
 };
@@ -18,7 +28,10 @@ export type Catalogue = {
   title: string;
   placeholder: boolean;
 };
-export type Lead = RequestInput & {
+export type Lead = Omit<RequestInput, "whatsapp" | "city"> & {
+  // Absent on requests made before these fields existed.
+  whatsapp?: string;
+  city?: typeof CITIES[number];
   emailStatus?: "pending" | "processing" | "sent" | "failed";
   emailAttempts?: number;
   emailNextAttemptAt?: number;
@@ -101,6 +114,10 @@ export function validateInput(value: unknown): RequestInput {
   if (!/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/u.test(email)) {
     throw new InputError("INVALID_EMAIL", "Indiquez une adresse e-mail valide.");
   }
+  const whatsapp = text("whatsapp", 30, "INVALID_WHATSAPP", "Indiquez un numéro WhatsApp valide.").replace(/\s+/gu, " ");
+  if (!isWhatsappNumber(whatsapp)) throw new InputError("INVALID_WHATSAPP", "Indiquez un numéro WhatsApp valide.");
+  const city = text("city", 40, "INVALID_CITY", "Choisissez votre ville.");
+  if (!(CITIES as readonly string[]).includes(city)) throw new InputError("INVALID_CITY", "Choisissez votre ville.");
   if (data.communicationsConsent !== undefined && typeof data.communicationsConsent !== "boolean") {
     throw new InputError("INVALID_CONSENT", "Veuillez vérifier votre choix de communication.");
   }
@@ -108,7 +125,7 @@ export function validateInput(value: unknown): RequestInput {
   if (!sourcePath.startsWith("/") || sourcePath.startsWith("//") || /[?#]/u.test(sourcePath)) {
     throw new InputError("INVALID_SOURCE", "Rechargez la page avant de réessayer.");
   }
-  return { requestId, catalogueId, name, email, sourcePath, communicationsConsent: data.communicationsConsent === true };
+  return { requestId, catalogueId, name, email, whatsapp, city: city as RequestInput["city"], sourcePath, communicationsConsent: data.communicationsConsent === true };
 }
 
 /** Lead and outbox state are one value: a crash cannot leave a lead without its pending event. */
@@ -117,7 +134,8 @@ export async function persistRequest(store: AtomicStore<Lead>, input: RequestInp
     const existing = await store.getVersioned(input.requestId);
     if (existing) {
       const lead = existing.value;
-      if (lead.email !== input.email || lead.name !== input.name || lead.catalogueId !== input.catalogueId || lead.communicationsConsent !== input.communicationsConsent) {
+      if (lead.email !== input.email || lead.name !== input.name || lead.catalogueId !== input.catalogueId || lead.communicationsConsent !== input.communicationsConsent
+        || lead.whatsapp !== input.whatsapp || lead.city !== input.city) {
         throw new InputError("REQUEST_CONFLICT", "Les informations ont changé. Rechargez le formulaire.");
       }
       return lead;
@@ -227,7 +245,7 @@ export function csvCell(value: unknown): string {
 
 export function leadsToCsv(leads: Lead[]): string {
   return "\uFEFF" + [
-    ["Demande", "Date UTC", "Nom", "E-mail", "Communications facultatives", "Version du consentement", "Catalogue", "Source", "État CRM"],
-    ...leads.map((lead) => [lead.requestId, new Date(lead.createdAt).toISOString(), lead.name, lead.email, lead.communicationsConsent ? "oui" : "non", lead.consentVersion, lead.catalogue.title, lead.sourcePath, lead.crmStatus]),
+    ["Demande", "Date UTC", "Nom", "E-mail", "WhatsApp", "Ville", "Communications facultatives", "Version du consentement", "Catalogue", "Source", "État CRM"],
+    ...leads.map((lead) => [lead.requestId, new Date(lead.createdAt).toISOString(), lead.name, lead.email, lead.whatsapp ?? "", lead.city ?? "", lead.communicationsConsent ? "oui" : "non", lead.consentVersion, lead.catalogue.title, lead.sourcePath, lead.crmStatus]),
   ].map((row) => row.map(csvCell).join(";")).join("\r\n");
 }

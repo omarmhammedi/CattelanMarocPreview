@@ -59,6 +59,10 @@
 .page-cta p:not(.kick) { max-width: 700px; color: var(--muted); font-size: clamp(18px, 2vw, 28px); line-height: 1.6; font-weight: 300; }
 .page-cta .row { gap: 30px; align-items: center; }
 .showroom-appointment { scroll-margin-top: max(64px, calc(var(--u) * 6.2)); }
+.showroom-appointment-actions { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--hair); }
+.page-form-section { padding-block: clamp(58px, 7vw, 110px); border-top: 1px solid var(--hair); scroll-margin-top: max(64px, calc(var(--u) * 6.2)); }
+.page-form-section > h2 { margin: 0 0 16px; font-size: clamp(28px, 2.7vw, 40px); font-weight: 300; letter-spacing: -.02em; }
+.page-form-section > p { margin: 0 0 36px; max-width: 700px; color: var(--muted); font-size: 17px; line-height: 1.7; font-weight: 300; }
 .page-cta .btn { gap: 30px; }
 .page-full-figure { margin: 0; }
 .page-hero-figure { margin-bottom: clamp(55px, 7vw, 100px); }

@@ -94,6 +94,8 @@ try {
       assert.equal(await form.locator('[name="name"]').getAttribute('aria-invalid'), 'true');
       assert(await form.locator('[name="name"]').evaluate(input => input === document.activeElement));
       await form.locator('[name="name"]').fill('Browser test');
+      await form.locator('[name="whatsapp"]').fill('+212 600 000 005');
+      await form.locator('[name="city"]').selectOption('Casablanca');
       await form.locator('[name="email"]').fill('invalid');
       await form.locator('button[type="submit"]').click();
       assert(await form.locator('[data-field-error="email"]').isVisible(), 'Invalid email has an inline error');

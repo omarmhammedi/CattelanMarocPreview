@@ -4,7 +4,7 @@ import { apiFetch, parseApiResponse } from "emdash/plugin-utils";
 
 const BASE = "/_emdash/api/plugins/catalogue-leads";
 type Contact = {
-  requestId: string; name: string; email: string; createdAt: number;
+  requestId: string; name: string; email: string; whatsapp?: string; city?: string; createdAt: number;
   communicationsConsent: boolean; catalogueTitle: string; placeholder: boolean;
   crmStatus: string; crmAttempts: number; emailStatus?: string;
 };
@@ -152,10 +152,11 @@ function ContactsPage() {
     {message && <p role="status" style={{ marginBottom: 12 }}>{message}</p>}
     <div style={{ overflowX: "auto" }}>
       <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", fontSize: 14 }}>
-        <thead><tr>{["Date", "Nom", "E-mail", "Catalogue", "Communications", "Envoi catalogue", "CRM", "Action"].map((heading) => <th key={heading} style={{ padding: 12, borderBottom: "1px solid #777" }}>{heading}</th>)}</tr></thead>
+        <thead><tr>{["Date", "Nom", "E-mail", "WhatsApp", "Ville", "Catalogue", "Communications", "Envoi catalogue", "CRM", "Action"].map((heading) => <th key={heading} style={{ padding: 12, borderBottom: "1px solid #777" }}>{heading}</th>)}</tr></thead>
         <tbody>{contacts.map((contact) => <tr key={contact.requestId}>
           <td style={{ padding: 12 }}>{new Date(contact.createdAt).toLocaleString("fr-FR", { timeZone: "Africa/Casablanca" })}</td>
           <td style={{ padding: 12 }}>{contact.name}</td><td style={{ padding: 12 }}>{contact.email}</td>
+          <td style={{ padding: 12 }}>{contact.whatsapp ?? "—"}</td><td style={{ padding: 12 }}>{contact.city ?? "—"}</td>
           <td style={{ padding: 12 }}>{contact.catalogueTitle}{contact.placeholder ? " (démonstration)" : ""}</td>
           <td style={{ padding: 12 }}>{contact.communicationsConsent ? "Acceptées" : "Non demandées"}</td>
           <td style={{ padding: 12 }}>{contact.emailStatus ? (stateLabel[contact.emailStatus] ?? contact.emailStatus) : "Non demandé"}</td>

@@ -4,12 +4,15 @@ interface Props {
   order: ActionKey[];
   advisorHref?: string | null;
   advisorLabel?: string;
+  model?: string;
 }
-const { order, advisorHref, advisorLabel = actions.advisor.label } = Astro.props;
+const { order, advisorHref, advisorLabel = actions.advisor.label, model } = Astro.props;
+// The booking form records the model the visitor came from.
+const appointmentHref = model ? actions.appointment.href.replace('#', `?modele=${encodeURIComponent(model)}#`) : actions.appointment.href;
 type Link = { key: ActionKey; label: string; href: string; external: boolean };
 const links = order.flatMap((key): Link[] => key === 'advisor'
   ? advisorHref ? [{ key, label: advisorLabel, href: advisorHref, external: true }] : []
-  : [{ key, label: actions[key].label, href: actions[key].href, external: false }]);
+  : [{ key, label: actions[key].label, href: key === 'appointment' ? appointmentHref : actions[key].href, external: false }]);
 // The first action carries the weight; later ones step down to an outline, then a text link.
 const styles = ['btn solid', 'btn', 'text-link'];
 ---

@@ -3,6 +3,7 @@ import { imageAttributes } from '../lib/images';
 import EditorialSection from '../components/EditorialSection.astro';
 import ShowroomMap from '../components/ShowroomMap.astro';
 import SiteActions from '../components/SiteActions.astro';
+import RequestForm from '../components/RequestForm.astro';
 import PageLayout from '../layouts/PageLayout.astro';
 import { PortableText } from 'emdash/ui';
 import { actions, generalWhatsappMessage, whatsappHref } from '../lib/actions';
@@ -49,7 +50,8 @@ const questions = page.sections?.filter((section: any) => section.key?.startsWit
   </section>}
   <section class="page-cta page-gutter showroom-appointment" id="rendez-vous" aria-labelledby="rendez-vous-heading" data-page-reveal>
     <h2 id="rendez-vous-heading">{actions.appointment.label}</h2>
-    <p>Visite libre ou sur rendez-vous.</p>
-    <SiteActions order={['advisor', 'catalogue']} advisorHref={whatsappHref(site.whatsappUrl, generalWhatsappMessage)} />
+    <p>Visite libre ou sur rendez-vous. Indiquez le jour qui vous convient ; un conseiller vous confirme le rendez-vous sur WhatsApp.</p>
+    <RequestForm id="appointment" kind="rendez-vous" />
+    <div class="showroom-appointment-actions"><SiteActions order={['advisor', 'catalogue']} advisorHref={whatsappHref(site.whatsappUrl, generalWhatsappMessage)} /></div>
   </section>
 </PageLayout>

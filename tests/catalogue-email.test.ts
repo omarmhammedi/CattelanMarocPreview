@@ -14,14 +14,15 @@ class Store implements AtomicStore<Lead> {
 const secret = 'catalogue-test-secret-more-than-thirty-two-characters';
 async function setup(enabled = true) {
   const store = new Store();
-  const lead = await persistRequest(store, { requestId: crypto.randomUUID(), name: '<Salma & Test>', email: 'test@example.test', catalogueId: 'preview', communicationsConsent: false, sourcePath: '/catalogue/' }, { id: 'preview', key: 'catalogues/demo.pdf', title: 'Preview <PDF>', placeholder: true }, 1000, enabled);
-  return { store, lead };
+  const input = { requestId: crypto.randomUUID(), name: '<Salma & Test>', email: 'test@example.test', whatsapp: '+212 600 000 007', city: 'Casablanca' as const, catalogueId: 'preview', communicationsConsent: false, sourcePath: '/catalogue/' };
+  const lead = await persistRequest(store, input, { id: 'preview', key: 'catalogues/demo.pdf', title: 'Preview <PDF>', placeholder: true }, 1000, enabled);
+  return { store, lead, input };
 }
 
 test('new requests opt into a transactional outbox without changing marketing consent', async () => {
-  const { store, lead } = await setup();
+  const { store, lead, input } = await setup();
   assert.equal(lead.emailStatus, 'pending'); assert.equal(lead.communicationsConsent, false);
-  await persistRequest(store, lead, lead.catalogue, 2000, true);
+  await persistRequest(store, input, lead.catalogue, 2000, true);
   assert.equal(store.row?.value.createdAt, 1000);
 });
 

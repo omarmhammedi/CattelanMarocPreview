@@ -37,7 +37,7 @@ async function api(path, options = {}) {
   assert(response.ok && envelope.success, `API failed (${response.status})`);
   return envelope.data;
 }
-const input = () => ({ requestId: crypto.randomUUID(), catalogueId: "demonstration", name: "Test catalogue local", email: "catalogue-integration@example.invalid", communicationsConsent: false, website: "", sourcePath: "/catalogue/" });
+const input = () => ({ requestId: crypto.randomUUID(), catalogueId: "demonstration", name: "Test catalogue local", email: "catalogue-integration@example.invalid", whatsapp: "+212600000004", city: "Casablanca", communicationsConsent: false, website: "", sourcePath: "/catalogue/" });
 async function submit(data = input()) {
   created.push(data.requestId);
   return { input: data, result: await api(`${prefix}/request`, { method: "POST", body: data }) };
@@ -69,6 +69,8 @@ async function checkBrowserRequests(expectedPdfHash) {
       assert.equal(await form.locator('[name="communicationsConsent"]').isChecked(), false, "Consent must begin unchecked.");
       await form.locator('[name="name"]').fill("Test catalogue local");
       await form.locator('[name="email"]').fill("catalogue-integration@example.invalid");
+      await form.locator('[name="whatsapp"]').fill("+212600000004");
+      await form.locator('[name="city"]').selectOption("Casablanca");
       if (consent) await form.locator('[name="communicationsConsent"]').check();
       const sent = page.waitForRequest((request) => new URL(request.url()).pathname === `${prefix}/request` && request.method() === "POST");
       await form.locator('button[type="submit"]').click();

@@ -7,7 +7,7 @@ import {
 } from "../src/plugins/catalogue/core.ts";
 
 const catalogue: Catalogue = { id: "edition-test", title: "Catalogue de démonstration", key: "catalogues/cattelan-demonstration.pdf", placeholder: true };
-const rawInput = () => ({ requestId: crypto.randomUUID(), catalogueId: "edition-test", name: "  Salma   Test ", email: "SALMA@example.test", communicationsConsent: false, website: "", sourcePath: "/catalogue/" });
+const rawInput = () => ({ requestId: crypto.randomUUID(), catalogueId: "edition-test", name: "  Salma   Test ", email: "SALMA@example.test", whatsapp: "+212 600 000 003", city: "Rabat", communicationsConsent: false, website: "", sourcePath: "/catalogue/" });
 
 test("accepts the configured HTTPS origin behind the Codespaces HTTP proxy", () => {
   const publicOrigin = "https://preview-example-4321.app.github.dev";
@@ -81,6 +81,8 @@ test("normalizes name and email without opting a visitor into communications", (
   assert.equal(value.name, "Salma Test");
   assert.equal(value.email, "salma@example.test");
   assert.equal(value.communicationsConsent, false);
+  assert.equal(value.whatsapp, "+212 600 000 003");
+  assert.equal(value.city, "Rabat");
   const omitted = rawInput() as Record<string, unknown>; delete omitted.communicationsConsent;
   assert.equal(validateInput(omitted).communicationsConsent, false);
 });
@@ -90,6 +92,7 @@ test("rejects bots, oversized values, control characters and coerced consent", (
     { website: "https://spam.test" }, { name: "x".repeat(121) },
     { name: "Name\r\nHeader" }, { email: "invalid" }, { communicationsConsent: "true" },
     { sourcePath: "//untrusted.test" }, { sourcePath: "/?email=private" }, { requestId: "untrusted" },
+    { whatsapp: "123" }, { whatsapp: undefined }, { city: "Paris" }, { city: undefined },
   ]) assert.throws(() => validateInput({ ...rawInput(), ...change }), InputError);
 });
 

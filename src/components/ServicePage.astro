@@ -32,6 +32,7 @@ const editorial = variant === 'faq' ? sections.filter((section: any) => section.
     {page.body?.length > 0 && <div class="page-prose"><PortableText value={page.body} /></div>}
     {editorial.map((section: any) => <EditorialSection section={section} />)}
   </section>}
+  {Astro.slots.has('form') && <section class="page-gutter page-form-section" id="demande"><slot name="form" /></section>}
   {order.length > 0 && <section class="page-cta page-gutter" data-page-reveal>
     <SiteActions order={order} advisorHref={whatsappHref(site.whatsappUrl, whatsappMessage)} />
   </section>}

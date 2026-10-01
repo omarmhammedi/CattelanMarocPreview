@@ -2,7 +2,26 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import {getSite} from '../lib/content';
 const site=await getSite();
+const emailEnabled=import.meta.env.CATTELAN_EMAIL_ENABLED;
 ---
-<PageLayout title="Confidentialité de la prévisualisation" description="Informations sur les données de test du formulaire catalogue et le chargement de Google Maps dans la version de travail Cattelan Italia Maroc." site={site}>
-<section class="page-intro page-gutter"><p class="kick">Version de travail</p><h1>Confidentialité</h1><p class="page-lead">Ce site est en cours de développement. Pour tester le formulaire, utilisez uniquement une adresse e-mail que vous contrôlez.</p><div class="page-prose"><p>Les coordonnées saisies sont enregistrées pour traiter votre demande de catalogue. {import.meta.env.CATTELAN_EMAIL_ENABLED ? "Le catalogue est envoyé à votre adresse par notre prestataire d’envoi Resend. Cet e-mail est lié à votre demande et ne vous inscrit pas à des communications commerciales." : "Aucun e-mail n’est envoyé depuis cet environnement."} Aucun CRM externe n’est connecté.</p><p>Sur la page showroom, Google Maps se charge lorsque vous cliquez sur « Afficher la carte interactive ». Votre navigateur se connecte alors à Google. Les boutons d’itinéraire ouvrent aussi Google Maps.</p><p>La politique définitive, avec l’identité du responsable, les modalités d’exercice des droits et la durée de conservation, sera finalisée avant la collecte de demandes réelles.</p></div></section>
+<PageLayout title="Confidentialité" description="Les coordonnées recueillies par les formulaires de Cattelan Italia Maroc, leur usage, leur conservation et vos droits." site={site}>
+<section class="page-intro page-gutter"><p class="kick">Données personnelles</p><h1>Confidentialité</h1><p class="page-lead">Cette page explique quelles coordonnées nous recueillons, pourquoi et comment exercer vos droits.</p>
+<div class="page-prose">
+<h2>Responsable du traitement</h2>
+<p>Racha Home, 8-10 avenue Mohamed Sijilmassi, 20250 Casablanca, Maroc. Contact : <a href="mailto:contact@cattelanitalia.ma">contact@cattelanitalia.ma</a>.</p>
+<h2>Ce que nous recueillons et pourquoi</h2>
+<ul>
+<li><strong>Recevoir le catalogue</strong> : nom, WhatsApp, e-mail et ville, pour vous donner accès au catalogue{emailEnabled ? ' et vous l’envoyer par e-mail' : ''}. Les nouveautés et invitations ne vous sont envoyées que si vous cochez la case prévue.</li>
+<li><strong>Prendre rendez-vous</strong> : nom, WhatsApp, jour et moment souhaités, message facultatif, pour organiser votre visite au showroom.</li>
+<li><strong>Demande professionnelle</strong> : nom, société, WhatsApp, e-mail, type de projet, ville et message facultatif, pour répondre à votre projet.</li>
+</ul>
+<p>Nous enregistrons aussi la page d’origine de la demande et, le cas échéant, le modèle consulté. Ces données ne sont ni vendues ni cédées.</p>
+<h2>Où elles sont conservées</h2>
+<p>Les demandes sont enregistrées sur l’hébergement du site (Cloudflare).{emailEnabled ? ' Le catalogue est envoyé par notre prestataire d’e-mails Resend.' : ''} Elles seront transmises à notre outil de gestion de la relation client lorsqu’il sera raccordé ; cette page sera alors complétée.</p>
+<p>Durée de conservation : à compléter.</p>
+<h2>Vos droits</h2>
+<p>Conformément à la loi n° 09-08, vous pouvez accéder à vos données, les faire rectifier ou vous opposer à leur traitement en écrivant à <a href="mailto:contact@cattelanitalia.ma">contact@cattelanitalia.ma</a>. Déclaration auprès de la CNDP : à compléter.</p>
+<h2>Carte et liens externes</h2>
+<p>Sur la page showroom, Google Maps se charge lorsque vous cliquez sur « Afficher la carte interactive » ; votre navigateur se connecte alors à Google. Les boutons d’itinéraire ouvrent Google Maps et les boutons WhatsApp ouvrent WhatsApp.</p>
+</div></section>
 </PageLayout>

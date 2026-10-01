@@ -81,3 +81,19 @@ Une prise en charge atomique empêche deux workers de traiter simultanément un 
 `node --experimental-strip-types --test tests/catalogue.test.ts` couvre la validation, les accès concurrents, l’idempotence, les défaillances de stockage/CRM, les baux, l’expiration et l’altération des liens, et la sécurité CSV. Les vérifications HTTP locales doivent en complément prouver le refus des routes privées anonymes, l’accès au PDF après enregistrement réel, le refus d’un faux jeton, ainsi que la lecture de l’édition publiée après modification du CMS.
 
 Sources officielles vérifiées pour l’implémentation : [plugin natif](https://docs.emdashcms.com/plugins/creating-native-plugins/your-first-native-plugin/), [stockage conditionnel](https://docs.emdashcms.com/plugins/creating-plugins/storage/), [routes et limites](https://docs.emdashcms.com/plugins/creating-plugins/api-routes/), [administration React](https://docs.emdashcms.com/plugins/creating-native-plugins/react-admin/). Les signatures ont également été contrôlées dans le package `emdash@0.41.0` installé.
+
+## Champs WhatsApp et Ville, rendez-vous et demandes professionnelles — 1er octobre 2026
+
+Le formulaire catalogue demande désormais, comme prévu par le plan : nom, WhatsApp, e-mail et ville (Casablanca, Rabat, Marrakech, Tanger, Autre). Les demandes enregistrées avant ce changement restent valides sans ces deux champs. L’export CSV et la liste **Contacts catalogue** ajoutent les colonnes WhatsApp et Ville.
+
+Le plugin natif `contact-requests` reçoit les deux autres demandes du site :
+
+- **Prendre rendez-vous**, dans la section `#rendez-vous` du showroom : nom, WhatsApp, jour souhaité (à partir du jour même à Casablanca, 180 jours au plus), matin ou après-midi, message facultatif. Depuis une fiche, le lien ajoute `?modele=<slug>` : la demande enregistre le modèle et la page d’origine.
+- **Demande professionnelle**, sur `/professionnels/` : nom, société, WhatsApp, e-mail, type de projet, ville, message facultatif.
+
+Les demandes sont stockées en privé dans le plugin avec l’état « CRM à connecter » ; aucun CRM externe n’est appelé. L’administration les présente dans **Rendez-vous et projets**, avec suppression et export CSV. Le formulaire garde le piège anti-robot `website`, la vérification d’origine et une limite de 10 demandes par heure et par adresse IP. Une nouvelle tentative avec le même identifiant renvoie la demande déjà enregistrée.
+
+Si le secret `REQUESTS_NOTIFY_TO` contient une adresse (par exemple contact@cattelanitalia.ma) et que l’envoi d’e-mails est actif (`cattelan-client`), chaque nouvelle demande est aussi envoyée à cette adresse ; l’état de l’alerte apparaît dans la liste. Le définir comme secret Cloudflare (`npx wrangler secret put REQUESTS_NOTIFY_TO --env cattelan-client`) : le contrôle de déploiement n’autorise pas de nouvelle variable publique.
+
+Le CRM retenu (probablement SendPulse) sera branché ensuite : il reprendra les demandes « CRM à connecter » des deux plugins, avec leurs étiquettes (source, page, modèle, ville). La page Confidentialité décrit maintenant les trois formulaires ; la durée de conservation et la déclaration CNDP restent à compléter.
+

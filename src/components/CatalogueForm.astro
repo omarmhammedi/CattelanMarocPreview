@@ -1,5 +1,6 @@
 ---
 import { getSite, getCatalogue } from '../lib/content';
+import { CITIES } from '../plugins/catalogue/core';
 interface Props {
   id: string; catalogueId?: string; labels?: Record<string, string>; compact?: boolean;
   site?: {form: Record<string, string>; labels: {contact?: string}};
@@ -20,7 +21,9 @@ const contactLabel = site.labels.contact || 'Coordonnées du showroom';
   <noscript><p>Activez JavaScript pour télécharger le catalogue, ou <a href="/showroom-casablanca/#showroom-contact">contactez le showroom</a>.</p><style>.catalogue-form button[type=submit]{display:none}</style></noscript>
   <div class="catalogue-fields">
     <div><label for={`${id}-name`}>{labels.name}</label><input id={`${id}-name`} name="name" autocomplete="name" required minlength="2" maxlength="120" aria-describedby={`${id}-name-error`} /><span class="field-error" id={`${id}-name-error`} data-field-error="name" hidden></span></div>
+    <div><label for={`${id}-whatsapp`}>WhatsApp</label><input id={`${id}-whatsapp`} name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" required maxlength="30" placeholder="+212 6…" aria-describedby={`${id}-whatsapp-error`} /><span class="field-error" id={`${id}-whatsapp-error`} data-field-error="whatsapp" hidden></span></div>
     <div><label for={`${id}-email`}>{labels.email}</label><input id={`${id}-email`} name="email" type="email" autocomplete="email" required maxlength="254" aria-describedby={`${id}-email-error`} /><span class="field-error" id={`${id}-email-error`} data-field-error="email" hidden></span></div>
+    <div><label for={`${id}-city`}>Ville</label><select id={`${id}-city`} name="city" required aria-describedby={`${id}-city-error`}><option value="">Choisir</option>{CITIES.map(city => <option>{city}</option>)}</select><span class="field-error" id={`${id}-city-error`} data-field-error="city" hidden></span></div>
   </div>
   <div class="form-trap" aria-hidden="true"><label for={`${id}-website`}>Site web</label><input id={`${id}-website`} name="website" tabindex="-1" autocomplete="off" /></div>
   <label class="form-consent"><input type="checkbox" name="communicationsConsent" value="yes" /><span>{labels.consent}</span></label>
@@ -38,13 +41,15 @@ const contactLabel = site.labels.contact || 'Coordonnées du showroom';
     form.noValidate = true;
     const nameInput = form.elements.namedItem('name') as HTMLInputElement;
     const emailInput = form.elements.namedItem('email') as HTMLInputElement;
+    const whatsappInput = form.elements.namedItem('whatsapp') as HTMLInputElement;
+    const cityInput = form.elements.namedItem('city') as unknown as HTMLInputElement;
     const setFieldError = (field: HTMLInputElement, text: string) => {
       const error = form.querySelector<HTMLElement>(`[data-field-error="${field.name}"]`)!;
       error.textContent = text;
       error.hidden = !text;
       field.setAttribute('aria-invalid', String(Boolean(text)));
     };
-    [nameInput, emailInput].forEach(field => field.addEventListener('input', () => setFieldError(field, '')));
+    [nameInput, emailInput, whatsappInput, cityInput].forEach(field => field.addEventListener('input', () => setFieldError(field, '')));
     form.addEventListener('submit', async event => {
       event.preventDefault();
       const name = nameInput.value.trim();
@@ -53,7 +58,14 @@ const contactLabel = site.labels.contact || 'Coordonnées du showroom';
       const invalidEmail = email.length > 254 || /[\u0000-\u001f\u007f]/u.test(email) || !/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/u.test(email);
       setFieldError(nameInput, invalidName ? (form.dataset.nameError || 'Indiquez votre nom.') : '');
       setFieldError(emailInput, invalidEmail ? (form.dataset.emailError || 'Vérifiez votre adresse e-mail.') : '');
-      if (invalidName || invalidEmail) { (invalidName ? nameInput : emailInput).focus(); return; }
+      const whatsapp = whatsappInput.value.trim();
+      const digits = whatsapp.replace(/\D/gu, '').length;
+      const invalidWhatsapp = !/^\+?[\d\s().-]+$/u.test(whatsapp) || digits < 8 || digits > 15;
+      const invalidCity = !cityInput.value;
+      setFieldError(whatsappInput, invalidWhatsapp ? 'Indiquez un numéro WhatsApp valide.' : '');
+      setFieldError(cityInput, invalidCity ? 'Choisissez votre ville.' : '');
+      const firstInvalid = [[invalidName, nameInput], [invalidWhatsapp, whatsappInput], [invalidEmail, emailInput], [invalidCity, cityInput]].find(([invalid]) => invalid);
+      if (firstInvalid) { (firstInvalid[1] as HTMLElement).focus(); return; }
       const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
       if (button.disabled) return;
       const message = form.querySelector<HTMLElement>('.form-message')!;
@@ -66,7 +78,7 @@ const contactLabel = site.labels.contact || 'Coordonnées du showroom';
         message.focus();
       };
       const data = new FormData(form);
-      const payload = { name, email, communicationsConsent: data.get('communicationsConsent') === 'yes', website: String(data.get('website') || ''), catalogueId: form.dataset.catalogueId, sourcePath: location.pathname };
+      const payload = { name, email, whatsapp, city: cityInput.value, communicationsConsent: data.get('communicationsConsent') === 'yes', website: String(data.get('website') || ''), catalogueId: form.dataset.catalogueId, sourcePath: location.pathname };
       const nextFingerprint = JSON.stringify(payload);
       if (fingerprint && fingerprint !== nextFingerprint) requestId = crypto.randomUUID();
       fingerprint = nextFingerprint;
@@ -79,10 +91,10 @@ const contactLabel = site.labels.contact || 'Coordonnées du showroom';
         const result = envelope.data;
         if (!response.ok || !envelope.success) throw new Error('request_failed');
         if (!result?.ok || !result.downloadUrl) {
-          if (result?.code === 'INVALID_NAME' || result?.code === 'INVALID_EMAIL') {
-            const isName = result.code === 'INVALID_NAME';
-            const field = isName ? nameInput : emailInput;
-            setFieldError(field, (isName ? form.dataset.nameError : form.dataset.emailError) || result.message || form.dataset.error || '');
+          const fields: Record<string, [HTMLInputElement, string | undefined]> = { INVALID_NAME: [nameInput, form.dataset.nameError], INVALID_EMAIL: [emailInput, form.dataset.emailError], INVALID_WHATSAPP: [whatsappInput, undefined], INVALID_CITY: [cityInput, undefined] };
+          if (result?.code && fields[result.code]) {
+            const [field, label] = fields[result.code];
+            setFieldError(field, label || result.message || form.dataset.error || '');
             message.textContent = '';
             field.focus();
           } else showFailure(catalogueFailureMessage(result, {unavailable: form.dataset.unavailable, error: form.dataset.error}));
@@ -113,9 +125,10 @@ const contactLabel = site.labels.contact || 'Coordonnées du showroom';
 .catalogue-form{width:100%;margin-top:0}
 .catalogue-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*2)}
 .catalogue-fields label{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.catalogue-fields input{height:48px;border:0;border-bottom:1px solid rgba(var(--ink-rgb),.35);border-radius:0;background:transparent;color:var(--ink);font-size:max(16px,calc(var(--u)*1.3));font-weight:300;min-width:0;width:100%;padding:0}
-.catalogue-fields input:focus{outline:none;border-bottom-color:var(--ink)}
-.catalogue-fields input[aria-invalid="true"]{border-bottom-color:var(--ink);border-bottom-width:2px}
+.catalogue-fields :is(input,select){height:48px;border:0;border-bottom:1px solid rgba(var(--ink-rgb),.35);border-radius:0;background:transparent;color:var(--ink);font-size:max(16px,calc(var(--u)*1.3));font-weight:300;min-width:0;width:100%;padding:0}
+.catalogue-fields :is(input,select):focus{outline:none;border-bottom-color:var(--ink)}
+.catalogue-fields [aria-invalid="true"]{border-bottom-color:var(--ink);border-bottom-width:2px}
+.catalogue-fields select option{color:#0E2028}
 .field-error{display:block;margin-top:8px;font-size:12px;line-height:1.5;color:var(--ink)}
 .field-error[hidden]{display:none}
 .form-consent{display:flex;align-items:flex-start;gap:10px;font-size:12px;line-height:1.6;color:var(--muted);margin:22px 0 10px;cursor:pointer}

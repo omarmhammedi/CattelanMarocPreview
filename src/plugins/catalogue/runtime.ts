@@ -8,6 +8,7 @@ import {
 } from "./core.ts";
 
 import { catalogueEmail, dispatchCatalogueEmail } from "./email.ts";
+import { rateLimit } from "../rate-limit.ts";
 
 const PLUGIN_ID = "catalogue-leads";
 const PREFIX = `/_emdash/api/plugins/${PLUGIN_ID}`;
@@ -43,7 +44,7 @@ function queryString(input: unknown, name: string, max = 512): string | undefine
 }
 function publicLead(lead: Lead) {
   return {
-    requestId: lead.requestId, name: lead.name, email: lead.email,
+    requestId: lead.requestId, name: lead.name, email: lead.email, whatsapp: lead.whatsapp, city: lead.city,
     createdAt: lead.createdAt, communicationsConsent: lead.communicationsConsent,
     consentVersion: lead.consentVersion, sourcePath: lead.sourcePath,
     catalogueTitle: lead.catalogue.title, placeholder: lead.catalogue.placeholder,
@@ -66,24 +67,6 @@ async function publishedCatalogue(id: string): Promise<Catalogue> {
     title: typeof data.title === "string" ? data.title : "Catalogue Cattelan Italia",
     placeholder: data.is_placeholder === true || data.is_placeholder === 1,
   };
-}
-
-async function rateLimit(ctx: PluginContext, identity: string, secret: string, limit = 30): Promise<boolean> {
-  const now = Date.now();
-  const hour = Math.floor(now / 3_600_000);
-  const hash = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(`${secret}:${identity}:${hour}`));
-  const id = Array.from(new Uint8Array(hash), (n) => n.toString(16).padStart(2, "0")).join("");
-  const store = ctx.storage.rates as StorageCollection<{ count: number; expiresAt: number }>;
-  for (let attempt = 0; attempt < 5; attempt++) {
-    const current = await store.getVersioned(id);
-    if ((current?.value.count ?? 0) >= limit) return false;
-    const write = await store.compareAndSet(id, current?.revision ?? null, {
-      count: (current?.value.count ?? 0) + 1,
-      expiresAt: (hour + 2) * 3_600_000,
-    });
-    if (write.applied) return true;
-  }
-  return false;
 }
 
 export async function processPending(ctx: PluginContext) {

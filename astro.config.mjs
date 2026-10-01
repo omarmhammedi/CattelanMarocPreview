@@ -4,6 +4,7 @@ import react from '@astrojs/react';
 import emdash from 'emdash/astro';
 import { d1, r2 } from '@emdash-cms/cloudflare';
 import { cataloguePlugin } from './src/plugins/catalogue/index.ts';
+import { requestsPlugin } from './src/plugins/requests/index.ts';
 import { siteSeoPlugin } from './src/plugins/seo/index.ts';
 import { resendEmailPlugin } from './src/plugins/email/index.ts';
 
@@ -36,7 +37,7 @@ export default defineConfig({
     emdash({
       database: d1({ binding: 'DB', session: 'disabled' }),
       storage: r2({ binding: 'MEDIA' }),
-      plugins: [cataloguePlugin(), siteSeoPlugin(),
+      plugins: [cataloguePlugin(), requestsPlugin(), siteSeoPlugin(),
         ...(process.env.CLOUDFLARE_ENV === 'cattelan-client' ? [resendEmailPlugin()] : []),
       ],
     }),
