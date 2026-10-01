@@ -16,10 +16,12 @@ import { authenticatedApi } from './0014-site-strategy-pages.mjs';
 
 const root = fileURLToPath(new URL('../../', import.meta.url));
 export const migration = '0016-new-families';
-const maxBytes = 4 * 1024 * 1024;
+// The sofa product sheets reach 5 MB; EmDash accepts far larger uploads.
+const maxBytes = 8 * 1024 * 1024;
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/u;
 
-export function validateManifest(manifest) {
+/** Validates the models of a manifest; returns their slugs and the files they need. */
+export function validateModels(manifest) {
   assert.equal(manifest.version, 1);
   assert(manifest.mediaDir && manifest.availability_note);
   const models = new Set();
@@ -43,6 +45,11 @@ export function validateManifest(manifest) {
     assert(/^[a-z0-9-]+\.pdf$/u.test(model.technical_sheet.file), `${model.slug}: a PDF technical sheet is required.`);
     files.push(model.technical_sheet.file);
   }
+  return { models, files, picture };
+}
+
+export function validateManifest(manifest) {
+  const { models, files, picture } = validateModels(manifest);
   const families = new Set();
   for (const family of manifest.families) {
     assert(slugPattern.test(family.slug) && !families.has(family.slug), `${family.slug}: invalid or repeated slug.`);
@@ -64,12 +71,16 @@ function mimeOf(bytes) {
 }
 
 export async function loadManifest() {
-  const manifest = validateManifest(JSON.parse(await readFile(join(root, 'content/new-families.json'), 'utf8')));
+  return loadAssets(validateManifest(JSON.parse(await readFile(join(root, 'content/new-families.json'), 'utf8'))));
+}
+
+/** Reads every file a validated manifest names, checking its type against its extension. */
+export async function loadAssets(manifest) {
   const assets = {};
   for (const file of manifest.files) {
     const bytes = await readFile(join(root, manifest.mediaDir, file));
     const mimeType = mimeOf(bytes);
-    assert(bytes.length > 0 && bytes.length <= maxBytes && mimeType === { jpg: 'image/jpeg', png: 'image/png', pdf: 'application/pdf' }[file.split('.').pop()], `${file}: a JPEG, PNG or PDF of 4 MB at most, matching its extension, is required.`);
+    assert(bytes.length > 0 && bytes.length <= maxBytes && mimeType === { jpg: 'image/jpeg', png: 'image/png', pdf: 'application/pdf' }[file.split('.').pop()], `${file}: a JPEG, PNG or PDF of 8 MB at most, matching its extension, is required.`);
     assets[file] = { bytes, mimeType, sha256: createHash('sha256').update(bytes).digest('hex') };
   }
   return { ...manifest, assets };
@@ -107,6 +118,36 @@ export async function planNewFamilies(api, manifest) {
 export async function applyNewFamilies(api, manifest, plan, { beforeWrite, log = () => {} }) {
   assert.equal(typeof beforeWrite, 'function', 'A private backup writer is required before any mutation.');
   await beforeWrite({ plan: { ...plan, createModels: plan.createModels.map(model => model.slug), createFamilies: plan.createFamilies.map(family => family.slug) } });
+  const { media, publish, createModel } = writers(api, manifest);
+  const ids = { ...plan.modelIds };
+  for (const model of plan.createModels) {
+    ids[model.slug] = await createModel(model);
+    log(`models/${model.slug} created and published (${1 + model.gallery.length} photos, ${model.finishes.length} finishes)`);
+  }
+  for (const family of plan.createFamilies) {
+    await publish('families', {
+      slug: family.slug,
+      data: {
+        title: family.title, short_title: family.short_title, card_text: family.card_text, intro: family.intro,
+        image: await media(family.image), image_caption: family.image_caption,
+        content: portableText(family.slug, family.sections.map(([, text]) => text), family.sections.map(([heading]) => heading)),
+        sort_order: family.sort_order, seo_title: family.seo_title, meta_description: family.meta_description,
+      },
+      references: { models: family.models.map(slug => { assert(ids[slug], `${family.slug}: model ${slug} is missing.`); return ids[slug]; }) },
+    });
+    log(`families/${family.slug} created and published with ${family.models.length} models`);
+  }
+}
+
+/** One upload at a time: a sofa has close to 300 swatches. */
+async function inSeries(items, fn) {
+  const results = [];
+  for (const [index, item] of items.entries()) results.push(await fn(item, index));
+  return results;
+}
+
+/** Uploads (each file once) and publishes entries through the native API. */
+export function writers(api, manifest) {
   const uploaded = new Map();
   const upload = async (file, filename = file) => {
     if (!uploaded.has(file)) {
@@ -135,36 +176,20 @@ export async function applyNewFamilies(api, manifest, plan, { beforeWrite, log =
     await api(`/_emdash/api/content/${collection}/${encodeURIComponent(created.item.id)}/publish`, { method: 'POST', data: { _rev: draft._rev } });
     return created.item.id;
   };
-  const ids = { ...plan.modelIds };
-  for (const model of plan.createModels) {
-    ids[model.slug] = await publish('models', { slug: model.slug, data: {
-      title: model.title,
-      description: model.description,
-      image: await media(model.image),
-      gallery: await Promise.all(model.gallery.map(async item => ({ image: await media(item), caption: '' }))),
-      content: portableText(model.slug, model.paragraphs),
-      dimensions: model.dimensions.map(([label, value]) => ({ label, value: `${value} cm` })),
-      drawings: await Promise.all(model.drawings.map(async (drawing, index) => ({ label: drawing.label, row: 1, column: index, image: await media({ file: drawing.file, alt: `${model.title} — dimensions` }) }))),
-      finishes: await Promise.all(model.finishes.map(async finish => ({ group: finish.group, material_group: '', material: finish.material, name: finish.name, code: finish.code, image: await media({ file: finish.file, alt: finish.name }) }))),
-      technical_sheet: await document(model.technical_sheet),
-      technical_sheet_label: 'Télécharger la fiche technique',
-      availability_note: manifest.availability_note,
-    } });
-    log(`models/${model.slug} created and published (${1 + model.gallery.length} photos, ${model.finishes.length} finishes)`);
-  }
-  for (const family of plan.createFamilies) {
-    await publish('families', {
-      slug: family.slug,
-      data: {
-        title: family.title, short_title: family.short_title, card_text: family.card_text, intro: family.intro,
-        image: await media(family.image), image_caption: family.image_caption,
-        content: portableText(family.slug, family.sections.map(([, text]) => text), family.sections.map(([heading]) => heading)),
-        sort_order: family.sort_order, seo_title: family.seo_title, meta_description: family.meta_description,
-      },
-      references: { models: family.models.map(slug => { assert(ids[slug], `${family.slug}: model ${slug} is missing.`); return ids[slug]; }) },
-    });
-    log(`families/${family.slug} created and published with ${family.models.length} models`);
-  }
+  const createModel = async model => publish('models', { slug: model.slug, data: {
+    title: model.title,
+    description: model.description,
+    image: await media(model.image),
+    gallery: await inSeries(model.gallery, async item => ({ image: await media(item), caption: '' })),
+    content: portableText(model.slug, model.paragraphs),
+    dimensions: model.dimensions.map(([label, value]) => ({ label, value: `${value} cm` })),
+    drawings: await inSeries(model.drawings, async (drawing, index) => ({ label: drawing.label, row: 1, column: index, image: await media({ file: drawing.file, alt: `${model.title} — dimensions` }) })),
+    finishes: await inSeries(model.finishes, async finish => ({ group: finish.group, material_group: finish.material_group || '', material: finish.material, name: finish.name, code: finish.code, image: await media({ file: finish.file, alt: finish.name }) })),
+    technical_sheet: await document(model.technical_sheet),
+    technical_sheet_label: 'Télécharger la fiche technique',
+    availability_note: manifest.availability_note,
+  } });
+  return { media, document, publish, createModel };
 }
 
 const allowedPaths = /^\/_emdash\/api\/(?:content\/(?:models|families)|schema\/collections\/(?:models|families)|media)(?:[/?]|$)/u;
