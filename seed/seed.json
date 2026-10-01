@@ -1176,6 +1176,2030 @@
           "official_url": "https://www.cattelanitalia.com/fr/products/92839EB8-BAD8-4D0F-B0C6-C02BF107C361?c=21",
           "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
         }
+      },
+      {
+        "id": "model-arena",
+        "slug": "arena",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Arena",
+          "description": "Une table basse ronde au plateau en bois laqué Brushed Bronze ou Brushed Grey, sur une base en acier noir. Les versions Bond et Double Bond lui associent un ou deux plateaux en verre pivotants.",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/arena_01.jpg",
+              "filename": "arena_01.jpg",
+              "alt": "Arena, plateau Brushed Bronze et plateau en verre fumé"
+            }
+          },
+          "gallery": [
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/arena_fiche.jpg",
+                  "filename": "arena_fiche.jpg",
+                  "alt": "Arena, photographie sur fond blanc"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/arena_03.jpg",
+                  "filename": "arena_03.jpg",
+                  "alt": "Arena devant un canapé gris, plateau rond Brushed Bronze"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/arena_04.jpg",
+                  "filename": "arena_04.jpg",
+                  "alt": "Arena vue de dessus, plateau rond et objet doré"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/arena_05.jpg",
+                  "filename": "arena_05.jpg",
+                  "alt": "Arena, plateaux Brushed Bronze et en verre teinté superposés"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/arena_06.jpg",
+                  "filename": "arena_06.jpg",
+                  "alt": "Détail du fût d’Arena sous le plateau en verre"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/arena_08.jpg",
+                  "filename": "arena_08.jpg",
+                  "alt": "Arena vue de dessus avec deux petites tables d’appoint"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/arena_09.jpg",
+                  "filename": "arena_09.jpg",
+                  "alt": "Arena en composition avec un plateau en verre teinté"
+                }
+              },
+              "caption": ""
+            }
+          ],
+          "content": [
+            {
+              "_type": "block",
+              "_key": "arena-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "arena-p0s",
+                  "text": "Arena pose un plateau rond en bois laqué sur une base en acier gaufré noir. La finition Brushed, bronze ou grise, est brossée : ses nuances et son brossage varient d’une pièce à l’autre, signe d’une fabrication artisanale.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "arena-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "arena-p1s",
+                  "text": "Dans les versions Bond et Double Bond, une ou deux petites tables à plateau en verre biseauté, fumé ou bronze, pivotent au-dessus du plateau principal. La composition s’étend alors de 158 à 256 cm.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            {
+              "label": "Arena",
+              "value": "Ø 120 × 29 h cm"
+            },
+            {
+              "label": "Arena Bond",
+              "value": "120 × 158 à 188 × 37 h, plateau en verre Ø 90 cm"
+            },
+            {
+              "label": "Arena Double Bond",
+              "value": "120 × 196 à 256 × 37 h, deux plateaux en verre Ø 90 cm"
+            }
+          ],
+          "drawings": [
+            {
+              "label": "Dimensions en cm, d’après la fiche produit",
+              "row": 1,
+              "column": 0,
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/arena-dimensions.png",
+                  "filename": "arena-dimensions.png",
+                  "alt": "Arena — dimensions"
+                }
+              }
+            }
+          ],
+          "finishes": [
+            {
+              "group": "base",
+              "material_group": "",
+              "material": "metals",
+              "name": "GFM73 gaufré noir",
+              "code": "GFM73",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-arena-000.jpg",
+                  "filename": "sw-arena-000.jpg",
+                  "alt": "GFM73 gaufré noir"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "bois",
+              "name": "brushed bronze",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-arena-001.jpg",
+                  "filename": "sw-arena-001.jpg",
+                  "alt": "brushed bronze"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "bois",
+              "name": "brushed grey",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-arena-002.jpg",
+                  "filename": "sw-arena-002.jpg",
+                  "alt": "brushed grey"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "verre",
+              "name": "bronze biseauté",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-arena-003.jpg",
+                  "filename": "sw-arena-003.jpg",
+                  "alt": "bronze biseauté"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "verre",
+              "name": "fumé biseauté",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-arena-004.jpg",
+                  "filename": "sw-arena-004.jpg",
+                  "alt": "fumé biseauté"
+                }
+              }
+            }
+          ],
+          "technical_sheet": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/arena-fiche-technique.pdf",
+              "filename": "cattelan-arena-fiche-technique.pdf",
+              "alt": "Arena — fiche technique",
+              "mimeType": "application/pdf"
+            }
+          },
+          "technical_sheet_label": "Télécharger la fiche technique"
+        }
+      },
+      {
+        "id": "model-albert-keramik",
+        "slug": "albert-keramik",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Albert Keramik",
+          "description": "Une table basse à plateau en céramique, ronde ou en forme de galet, sur une base conique en acier laqué. Seize décors de marbre et trois hauteurs à composer.",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/albert_keramik_10.jpg",
+              "filename": "albert_keramik_10.jpg",
+              "alt": "Albert Keramik, trois tables basses rondes à plateau céramique aux veines vertes"
+            }
+          },
+          "gallery": [
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/albert_keramik_fiche.jpg",
+                  "filename": "albert_keramik_fiche.jpg",
+                  "alt": "Albert Keramik, photographie sur fond blanc"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/albert_keramik_02.jpg",
+                  "filename": "albert_keramik_02.jpg",
+                  "alt": "Albert Keramik, deux tables en forme de galet devant un canapé"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/albert_keramik_03.jpg",
+                  "filename": "albert_keramik_03.jpg",
+                  "alt": "Albert Keramik vue de dessus, plateaux céramique aux veines claires"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/albert_keramik_04.jpg",
+                  "filename": "albert_keramik_04.jpg",
+                  "alt": "Albert Keramik, tables rondes en céramique claire devant un canapé"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/albert_keramik_06.jpg",
+                  "filename": "albert_keramik_06.jpg",
+                  "alt": "Albert Keramik, plateaux en bois et en céramique superposés"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/albert_keramik_07.jpg",
+                  "filename": "albert_keramik_07.jpg",
+                  "alt": "Détail d’un plateau Albert Keramik en céramique veinée"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/albert_keramik_12.jpg",
+                  "filename": "albert_keramik_12.jpg",
+                  "alt": "Albert Keramik vue de dessus, plateaux céramique aux veines vertes"
+                }
+              },
+              "caption": ""
+            }
+          ],
+          "content": [
+            {
+              "_type": "block",
+              "_key": "albert-keramik-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "albert-keramik-p0s",
+                  "text": "Albert Keramik pose un plateau en céramique sur une base conique en acier laqué gaufré titane, bronze ou pearl. Le plateau est rond, de 59, 100 ou 118 cm, ou en forme de galet.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "albert-keramik-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "albert-keramik-p1s",
+                  "text": "La céramique reprend le dessin des marbres, du Golden Calacatta au Portoro et au Taj Mahal : seize décors au choix. Les hauteurs de 28 à 54 cm permettent d’associer deux ou trois tables.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            {
+              "label": "Ronde Ø 59",
+              "value": "hauteur 34, 44 ou 54 cm"
+            },
+            {
+              "label": "Ronde Ø 100",
+              "value": "hauteur 28, 38 ou 48 cm"
+            },
+            {
+              "label": "Ronde Ø 118",
+              "value": "hauteur 28, 38 ou 48 cm"
+            },
+            {
+              "label": "Galet 90 × 90",
+              "value": "hauteur 28, 38 ou 48 cm"
+            },
+            {
+              "label": "Galet 118 × 78",
+              "value": "hauteur 28, 38 ou 48 cm"
+            }
+          ],
+          "drawings": [
+            {
+              "label": "Dimensions en cm, d’après la fiche produit",
+              "row": 1,
+              "column": 0,
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/albert-keramik-dimensions.png",
+                  "filename": "albert-keramik-dimensions.png",
+                  "alt": "Albert Keramik — dimensions"
+                }
+              }
+            }
+          ],
+          "finishes": [
+            {
+              "group": "base",
+              "material_group": "",
+              "material": "metals",
+              "name": "GFM11 gaufré titane",
+              "code": "GFM11",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-000.jpg",
+                  "filename": "sw-albert_keramik-000.jpg",
+                  "alt": "GFM11 gaufré titane"
+                }
+              }
+            },
+            {
+              "group": "base",
+              "material_group": "",
+              "material": "metals",
+              "name": "GFM18 gaufré bronze",
+              "code": "GFM18",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-001.jpg",
+                  "filename": "sw-albert_keramik-001.jpg",
+                  "alt": "GFM18 gaufré bronze"
+                }
+              }
+            },
+            {
+              "group": "base",
+              "material_group": "",
+              "material": "metals",
+              "name": "GFM70 gaufré pearl",
+              "code": "GFM70",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-002.jpg",
+                  "filename": "sw-albert_keramik-002.jpg",
+                  "alt": "GFM70 gaufré pearl"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "céramique KS",
+              "name": "KS23 Luxor",
+              "code": "KS23",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-003.jpg",
+                  "filename": "sw-albert_keramik-003.jpg",
+                  "alt": "KS23 Luxor"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM05 Golden Calacatta opaque",
+              "code": "KM05",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-004.jpg",
+                  "filename": "sw-albert_keramik-004.jpg",
+                  "alt": "KM05 Golden Calacatta opaque"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM06 Golden Calacatta brillant",
+              "code": "KM06",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-005.jpg",
+                  "filename": "sw-albert_keramik-005.jpg",
+                  "alt": "KM06 Golden Calacatta brillant"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM07 Portoro opaque",
+              "code": "KM07",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-006.jpg",
+                  "filename": "sw-albert_keramik-006.jpg",
+                  "alt": "KM07 Portoro opaque"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM08 Portoro brillant",
+              "code": "KM08",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-007.jpg",
+                  "filename": "sw-albert_keramik-007.jpg",
+                  "alt": "KM08 Portoro brillant"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM12 Breccia",
+              "code": "KM12",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-008.jpg",
+                  "filename": "sw-albert_keramik-008.jpg",
+                  "alt": "KM12 Breccia"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM14 Corcovado",
+              "code": "KM14",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-009.jpg",
+                  "filename": "sw-albert_keramik-009.jpg",
+                  "alt": "KM14 Corcovado"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM16 Kaindy",
+              "code": "KM16",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-010.jpg",
+                  "filename": "sw-albert_keramik-010.jpg",
+                  "alt": "KM16 Kaindy"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM18 Borghini Calacatta opaque",
+              "code": "KM18",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-011.jpg",
+                  "filename": "sw-albert_keramik-011.jpg",
+                  "alt": "KM18 Borghini Calacatta opaque"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM19 Borghini Calacatta brillant",
+              "code": "KM19",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-012.jpg",
+                  "filename": "sw-albert_keramik-012.jpg",
+                  "alt": "KM19 Borghini Calacatta brillant"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM21 Colosseo",
+              "code": "KM21",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-013.jpg",
+                  "filename": "sw-albert_keramik-013.jpg",
+                  "alt": "KM21 Colosseo"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM22 Andromeda",
+              "code": "KM22",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-014.jpg",
+                  "filename": "sw-albert_keramik-014.jpg",
+                  "alt": "KM22 Andromeda"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM24 Invisible opaque",
+              "code": "KM24",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-015.jpg",
+                  "filename": "sw-albert_keramik-015.jpg",
+                  "alt": "KM24 Invisible opaque"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM26 Taj Mahal",
+              "code": "KM26",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-016.jpg",
+                  "filename": "sw-albert_keramik-016.jpg",
+                  "alt": "KM26 Taj Mahal"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM27 Giava",
+              "code": "KM27",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-017.jpg",
+                  "filename": "sw-albert_keramik-017.jpg",
+                  "alt": "KM27 Giava"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM28 Darwin",
+              "code": "KM28",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-albert_keramik-018.jpg",
+                  "filename": "sw-albert_keramik-018.jpg",
+                  "alt": "KM28 Darwin"
+                }
+              }
+            }
+          ],
+          "technical_sheet": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/albert-keramik-fiche-technique.pdf",
+              "filename": "cattelan-albert-keramik-fiche-technique.pdf",
+              "alt": "Albert Keramik — fiche technique",
+              "mimeType": "application/pdf"
+            }
+          },
+          "technical_sheet_label": "Télécharger la fiche technique"
+        }
+      },
+      {
+        "id": "model-adrian-wood",
+        "slug": "adrian-wood",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Adrian Wood",
+          "description": "Une table basse au plateau en bois biseauté en forme de galet, sur une base conique en acier. Noyer Canaletto et rouvre brûlé se répondent sur le même plateau.",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/adrian_wood_01.jpg",
+              "filename": "adrian_wood_01.jpg",
+              "alt": "Adrian Wood, tables basses en bois en forme de galet dans un salon"
+            }
+          },
+          "gallery": [
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/adrian_wood_fiche.jpg",
+                  "filename": "adrian_wood_fiche.jpg",
+                  "alt": "Adrian Wood, photographie sur fond blanc"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/adrian_wood_02.jpg",
+                  "filename": "adrian_wood_02.jpg",
+                  "alt": "Adrian Wood vue de dessus, deux plateaux en bois superposés"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/adrian_wood_04.jpg",
+                  "filename": "adrian_wood_04.jpg",
+                  "alt": "Adrian Wood dans un salon ouvert sur le jardin"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/adrian_wood_05.jpg",
+                  "filename": "adrian_wood_05.jpg",
+                  "alt": "Détail du veinage d’un plateau Adrian Wood"
+                }
+              },
+              "caption": ""
+            }
+          ],
+          "content": [
+            {
+              "_type": "block",
+              "_key": "adrian-wood-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "adrian-wood-p0s",
+                  "text": "Adrian Wood associe deux essences sur un même plateau : noyer Canaletto avec des détails en rouvre brûlé, ou rouvre brûlé avec des détails en noyer. Les bords du plateau sont biseautés.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "adrian-wood-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "adrian-wood-p1s",
+                  "text": "La base conique en acier laqué gaufré est titane ou bronze. Trois formes et trois hauteurs, 28, 38 et 48 cm, permettent de composer plusieurs tables.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            {
+              "label": "Galet 90 × 90",
+              "value": "hauteur 28, 38 ou 48 cm"
+            },
+            {
+              "label": "Galet 118 × 78",
+              "value": "hauteur 28, 38 ou 48 cm"
+            },
+            {
+              "label": "Ovale 180 × 90",
+              "value": "hauteur 28, 38 ou 48 cm"
+            }
+          ],
+          "drawings": [
+            {
+              "label": "Dimensions en cm, d’après la fiche produit",
+              "row": 1,
+              "column": 0,
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/adrian-wood-dimensions.png",
+                  "filename": "adrian-wood-dimensions.png",
+                  "alt": "Adrian Wood — dimensions"
+                }
+              }
+            }
+          ],
+          "finishes": [
+            {
+              "group": "base",
+              "material_group": "",
+              "material": "metals",
+              "name": "GFM11 gaufré titane",
+              "code": "GFM11",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-adrian_wood-000.jpg",
+                  "filename": "sw-adrian_wood-000.jpg",
+                  "alt": "GFM11 gaufré titane"
+                }
+              }
+            },
+            {
+              "group": "base",
+              "material_group": "",
+              "material": "metals",
+              "name": "GFM18 gaufré bronze",
+              "code": "GFM18",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-adrian_wood-001.jpg",
+                  "filename": "sw-adrian_wood-001.jpg",
+                  "alt": "GFM18 gaufré bronze"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "bois",
+              "name": "NC noyer Canaletto",
+              "code": "NC",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-adrian_wood-002.jpg",
+                  "filename": "sw-adrian_wood-002.jpg",
+                  "alt": "NC noyer Canaletto"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "bois",
+              "name": "RB rouvre brûlé",
+              "code": "RB",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-adrian_wood-003.jpg",
+                  "filename": "sw-adrian_wood-003.jpg",
+                  "alt": "RB rouvre brûlé"
+                }
+              }
+            }
+          ],
+          "technical_sheet": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/adrian-wood-fiche-technique.pdf",
+              "filename": "cattelan-adrian-wood-fiche-technique.pdf",
+              "alt": "Adrian Wood — fiche technique",
+              "mimeType": "application/pdf"
+            }
+          },
+          "technical_sheet_label": "Télécharger la fiche technique"
+        }
+      },
+      {
+        "id": "model-dodo",
+        "slug": "dodo",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Dodo",
+          "description": "Une table basse en verre artistique décoré, fumé, vert paon ou aubergine, sur une base en métal bronze. Deux formats à placer près du canapé.",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/dodo_01.jpg",
+              "filename": "dodo_01.jpg",
+              "alt": "Dodo, deux tables basses en verre vert près d’un canapé"
+            }
+          },
+          "gallery": [
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/dodo_fiche.jpg",
+                  "filename": "dodo_fiche.jpg",
+                  "alt": "Dodo, photographie sur fond blanc"
+                }
+              },
+              "caption": ""
+            }
+          ],
+          "content": [
+            {
+              "_type": "block",
+              "_key": "dodo-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "dodo-p0s",
+                  "text": "Dodo est un cylindre en verre artistique au décor en relief, posé sur une base en métal laqué gaufré bronze.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "dodo-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "dodo-p1s",
+                  "text": "Le verre existe en fumé, verde Pavone et Melanzana. Deux formats : 30 cm de diamètre pour 53 cm de haut, ou 41,5 cm pour 44 cm.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            {
+              "label": "Dodo A",
+              "value": "Ø 30 × 53 h cm"
+            },
+            {
+              "label": "Dodo B",
+              "value": "Ø 41,5 × 44 h cm"
+            }
+          ],
+          "drawings": [
+            {
+              "label": "Dimensions en cm, d’après la fiche produit",
+              "row": 1,
+              "column": 0,
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/dodo-dimensions.png",
+                  "filename": "dodo-dimensions.png",
+                  "alt": "Dodo — dimensions"
+                }
+              }
+            }
+          ],
+          "finishes": [
+            {
+              "group": "base",
+              "material_group": "",
+              "material": "metals",
+              "name": "GFM18 gaufré bronze",
+              "code": "GFM18",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-dodo-000.jpg",
+                  "filename": "sw-dodo-000.jpg",
+                  "alt": "GFM18 gaufré bronze"
+                }
+              }
+            },
+            {
+              "group": "structure",
+              "material_group": "",
+              "material": "verre artistique",
+              "name": "fumé",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-dodo-001.jpg",
+                  "filename": "sw-dodo-001.jpg",
+                  "alt": "fumé"
+                }
+              }
+            },
+            {
+              "group": "structure",
+              "material_group": "",
+              "material": "verre artistique",
+              "name": "melanzana",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-dodo-002.jpg",
+                  "filename": "sw-dodo-002.jpg",
+                  "alt": "melanzana"
+                }
+              }
+            },
+            {
+              "group": "structure",
+              "material_group": "",
+              "material": "verre artistique",
+              "name": "verde pavone",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-dodo-003.jpg",
+                  "filename": "sw-dodo-003.jpg",
+                  "alt": "verde pavone"
+                }
+              }
+            }
+          ],
+          "technical_sheet": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/dodo-fiche-technique.pdf",
+              "filename": "cattelan-dodo-fiche-technique.pdf",
+              "alt": "Dodo — fiche technique",
+              "mimeType": "application/pdf"
+            }
+          },
+          "technical_sheet_label": "Télécharger la fiche technique"
+        }
+      },
+      {
+        "id": "model-westin",
+        "slug": "westin",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Westin",
+          "description": "Une console au piètement en acier croisé, avec un plateau en verre ou en bois massif au bord irrégulier. Sept finitions pour la base.",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/westin_07.jpg",
+              "filename": "westin_07.jpg",
+              "alt": "Westin, console à plateau en bois sous un miroir carré"
+            }
+          },
+          "gallery": [
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/westin_fiche.jpg",
+                  "filename": "westin_fiche.jpg",
+                  "alt": "Westin, photographie sur fond blanc"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/westin_01.jpg",
+                  "filename": "westin_01.jpg",
+                  "alt": "Westin, console à plateau en verre devant un mur gris"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/westin_02.jpg",
+                  "filename": "westin_02.jpg",
+                  "alt": "Westin sous un miroir, plateau en verre"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/westin_03.jpg",
+                  "filename": "westin_03.jpg",
+                  "alt": "Détail du piètement de Westin en lames croisées"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/westin_04.jpg",
+                  "filename": "westin_04.jpg",
+                  "alt": "Westin à plateau sombre sous un miroir à facettes"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/westin_06.jpg",
+                  "filename": "westin_06.jpg",
+                  "alt": "Westin à plateau en bois sous un miroir arrondi"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/westin_09.jpg",
+                  "filename": "westin_09.jpg",
+                  "alt": "Westin à plateau en bois dans une entrée claire"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/westin_11.jpg",
+                  "filename": "westin_11.jpg",
+                  "alt": "Détail du plateau en bois de Westin"
+                }
+              },
+              "caption": ""
+            }
+          ],
+          "content": [
+            {
+              "_type": "block",
+              "_key": "westin-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "westin-p0s",
+                  "text": "Westin repose sur des lames d’acier qui se croisent sous le plateau. La base existe en sept finitions, du titane au noir, dont Brushed Bronze et Brushed Grey.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "westin-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "westin-p1s",
+                  "text": "Le plateau est en verre clair ou extra-clair de 12 mm, ou en bois massif au bord irrégulier : noyer Canaletto, rouvre brûlé ou chêne naturel. La console se fixe au mur.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            {
+              "label": "Plateau en verre",
+              "value": "160, 180 ou 200 × 50 × 74 h cm"
+            },
+            {
+              "label": "Plateau en bois",
+              "value": "160 ou 200 × 45 × 76 h, épaisseur 4 cm"
+            }
+          ],
+          "drawings": [
+            {
+              "label": "Dimensions en cm, d’après la fiche produit",
+              "row": 1,
+              "column": 0,
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/westin-dimensions.png",
+                  "filename": "westin-dimensions.png",
+                  "alt": "Westin — dimensions"
+                }
+              }
+            }
+          ],
+          "finishes": [
+            {
+              "group": "base",
+              "material_group": "",
+              "material": "metals",
+              "name": "brushed bronze",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-westin-000.jpg",
+                  "filename": "sw-westin-000.jpg",
+                  "alt": "brushed bronze"
+                }
+              }
+            },
+            {
+              "group": "base",
+              "material_group": "",
+              "material": "metals",
+              "name": "brushed grey",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-westin-001.jpg",
+                  "filename": "sw-westin-001.jpg",
+                  "alt": "brushed grey"
+                }
+              }
+            },
+            {
+              "group": "base",
+              "material_group": "",
+              "material": "metals",
+              "name": "GFM11 gaufré titane",
+              "code": "GFM11",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-westin-002.jpg",
+                  "filename": "sw-westin-002.jpg",
+                  "alt": "GFM11 gaufré titane"
+                }
+              }
+            },
+            {
+              "group": "base",
+              "material_group": "",
+              "material": "metals",
+              "name": "GFM18 gaufré bronze",
+              "code": "GFM18",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-westin-003.jpg",
+                  "filename": "sw-westin-003.jpg",
+                  "alt": "GFM18 gaufré bronze"
+                }
+              }
+            },
+            {
+              "group": "base",
+              "material_group": "",
+              "material": "metals",
+              "name": "GFM69 gaufré graphite",
+              "code": "GFM69",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-westin-004.jpg",
+                  "filename": "sw-westin-004.jpg",
+                  "alt": "GFM69 gaufré graphite"
+                }
+              }
+            },
+            {
+              "group": "base",
+              "material_group": "",
+              "material": "metals",
+              "name": "GFM70 gaufré pearl",
+              "code": "GFM70",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-westin-005.jpg",
+                  "filename": "sw-westin-005.jpg",
+                  "alt": "GFM70 gaufré pearl"
+                }
+              }
+            },
+            {
+              "group": "base",
+              "material_group": "",
+              "material": "metals",
+              "name": "GFM73 gaufré noir",
+              "code": "GFM73",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-westin-006.jpg",
+                  "filename": "sw-westin-006.jpg",
+                  "alt": "GFM73 gaufré noir"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "bois",
+              "name": "NC noyer Canaletto",
+              "code": "NC",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-westin-007.jpg",
+                  "filename": "sw-westin-007.jpg",
+                  "alt": "NC noyer Canaletto"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "bois",
+              "name": "RB rouvre brûlé",
+              "code": "RB",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-westin-008.jpg",
+                  "filename": "sw-westin-008.jpg",
+                  "alt": "RB rouvre brûlé"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "bois",
+              "name": "RN chêne naturel",
+              "code": "RN",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-westin-009.jpg",
+                  "filename": "sw-westin-009.jpg",
+                  "alt": "RN chêne naturel"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "verre",
+              "name": "clair",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-westin-010.jpg",
+                  "filename": "sw-westin-010.jpg",
+                  "alt": "clair"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "verre",
+              "name": "transparent extra-clair",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-westin-011.jpg",
+                  "filename": "sw-westin-011.jpg",
+                  "alt": "transparent extra-clair"
+                }
+              }
+            }
+          ],
+          "technical_sheet": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/westin-fiche-technique.pdf",
+              "filename": "cattelan-westin-fiche-technique.pdf",
+              "alt": "Westin — fiche technique",
+              "mimeType": "application/pdf"
+            }
+          },
+          "technical_sheet_label": "Télécharger la fiche technique"
+        }
+      },
+      {
+        "id": "model-nettuno",
+        "slug": "nettuno",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Nettuno",
+          "description": "Une console à base ondulée en acier, sous un plateau en verre extra-clair ou en verre cuit MIST. Trois longueurs et deux hauteurs.",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/nettuno_05.jpg",
+              "filename": "nettuno_05.jpg",
+              "alt": "Nettuno, base ondulée dorée vue à travers le plateau en verre"
+            }
+          },
+          "gallery": [
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/nettuno_fiche.jpg",
+                  "filename": "nettuno_fiche.jpg",
+                  "alt": "Nettuno, photographie sur fond blanc"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/nettuno_01.jpg",
+                  "filename": "nettuno_01.jpg",
+                  "alt": "Nettuno devant un mur en lattes de bois, sous deux miroirs"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/nettuno_02.jpg",
+                  "filename": "nettuno_02.jpg",
+                  "alt": "Détail du plateau en verre de Nettuno"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/nettuno_03.jpg",
+                  "filename": "nettuno_03.jpg",
+                  "alt": "Nettuno sous un miroir ovale sombre, mur clair"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/nettuno_04.jpg",
+                  "filename": "nettuno_04.jpg",
+                  "alt": "Nettuno sous un miroir rond, plateau en verre"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/nettuno_06.jpg",
+                  "filename": "nettuno_06.jpg",
+                  "alt": "Le plateau en verre de Nettuno et le reflet du miroir"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/nettuno_07.jpg",
+                  "filename": "nettuno_07.jpg",
+                  "alt": "Nettuno vue de face, base ondulée et plateau en verre"
+                }
+              },
+              "caption": ""
+            }
+          ],
+          "content": [
+            {
+              "_type": "block",
+              "_key": "nettuno-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "nettuno-p0s",
+                  "text": "Nettuno doit sa forme à une base ondulée en acier gaufré titane ou bronze, Oxybrass ou Oxygrey. Le plateau en verre de 12 mm repose sur la base.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "nettuno-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "nettuno-p1s",
+                  "text": "Le verre est extra-clair, ou cuit (MIST) pour une surface texturée. La console existe en 130, 160 et 180 cm de long, en 72 ou 92 cm de haut, et se fixe au mur.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            {
+              "label": "Base de 67",
+              "value": "130 ou 160 × 40, hauteur 72 ou 92 cm"
+            },
+            {
+              "label": "Base de 105",
+              "value": "180 × 40, hauteur 72 ou 92 cm"
+            }
+          ],
+          "drawings": [
+            {
+              "label": "Dimensions en cm, d’après la fiche produit",
+              "row": 1,
+              "column": 0,
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/nettuno-dimensions.png",
+                  "filename": "nettuno-dimensions.png",
+                  "alt": "Nettuno — dimensions"
+                }
+              }
+            }
+          ],
+          "finishes": [
+            {
+              "group": "base",
+              "material_group": "",
+              "material": "metals",
+              "name": "GFM11 gaufré titane",
+              "code": "GFM11",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-nettuno-000.jpg",
+                  "filename": "sw-nettuno-000.jpg",
+                  "alt": "GFM11 gaufré titane"
+                }
+              }
+            },
+            {
+              "group": "base",
+              "material_group": "",
+              "material": "metals",
+              "name": "GFM18 gaufré bronze",
+              "code": "GFM18",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-nettuno-001.jpg",
+                  "filename": "sw-nettuno-001.jpg",
+                  "alt": "GFM18 gaufré bronze"
+                }
+              }
+            },
+            {
+              "group": "base",
+              "material_group": "",
+              "material": "metals",
+              "name": "oxybrass",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-nettuno-002.jpg",
+                  "filename": "sw-nettuno-002.jpg",
+                  "alt": "oxybrass"
+                }
+              }
+            },
+            {
+              "group": "base",
+              "material_group": "",
+              "material": "metals",
+              "name": "oxygrey",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-nettuno-003.jpg",
+                  "filename": "sw-nettuno-003.jpg",
+                  "alt": "oxygrey"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "verre",
+              "name": "transparent extra-clair",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-nettuno-004.jpg",
+                  "filename": "sw-nettuno-004.jpg",
+                  "alt": "transparent extra-clair"
+                }
+              }
+            },
+            {
+              "group": "plateau",
+              "material_group": "",
+              "material": "verre",
+              "name": "verre cuit (MIST)",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-nettuno-005.jpg",
+                  "filename": "sw-nettuno-005.jpg",
+                  "alt": "verre cuit (MIST)"
+                }
+              }
+            }
+          ],
+          "technical_sheet": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/nettuno-fiche-technique.pdf",
+              "filename": "cattelan-nettuno-fiche-technique.pdf",
+              "alt": "Nettuno — fiche technique",
+              "mimeType": "application/pdf"
+            }
+          },
+          "technical_sheet_label": "Télécharger la fiche technique"
+        }
+      },
+      {
+        "id": "model-rado-keramik",
+        "slug": "rado-keramik",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Rado Keramik",
+          "description": "Une console tout en céramique, plateau et base, aux décors de marbre. Sa base est façonnée selon un procédé breveté.",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/rado_keramik_fiche.jpg",
+              "filename": "rado_keramik_fiche.jpg",
+              "alt": "Rado Keramik, console en céramique claire"
+            }
+          },
+          "gallery": [],
+          "content": [
+            {
+              "_type": "block",
+              "_key": "rado-keramik-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "rado-keramik-p0s",
+                  "text": "Rado Keramik est entièrement en céramique Marmi, du plateau à la base. Cinq décors : Portoro, Borghini Calacatta, Colosseo, Invisible et Taj Mahal.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "rado-keramik-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "rado-keramik-p1s",
+                  "text": "La base est façonnée selon un procédé exclusif breveté ; ses légères irrégularités de forme et de teinte font partie de la pièce. Deux longueurs, 127 et 157 cm. La console se fixe au mur.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            {
+              "label": "Rado Keramik 127",
+              "value": "127 × 38 × 73 h cm"
+            },
+            {
+              "label": "Rado Keramik 157",
+              "value": "157 × 38 × 73 h cm"
+            }
+          ],
+          "drawings": [
+            {
+              "label": "Dimensions en cm, d’après la fiche produit",
+              "row": 1,
+              "column": 0,
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/rado-keramik-dimensions.png",
+                  "filename": "rado-keramik-dimensions.png",
+                  "alt": "Rado Keramik — dimensions"
+                }
+              }
+            }
+          ],
+          "finishes": [
+            {
+              "group": "Plateau et base",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM07 Portoro opaque",
+              "code": "KM07",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-rado_keramik-000.jpg",
+                  "filename": "sw-rado_keramik-000.jpg",
+                  "alt": "KM07 Portoro opaque"
+                }
+              }
+            },
+            {
+              "group": "Plateau et base",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM18 Borghini Calacatta opaque",
+              "code": "KM18",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-rado_keramik-001.jpg",
+                  "filename": "sw-rado_keramik-001.jpg",
+                  "alt": "KM18 Borghini Calacatta opaque"
+                }
+              }
+            },
+            {
+              "group": "Plateau et base",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM21 Colosseo",
+              "code": "KM21",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-rado_keramik-002.jpg",
+                  "filename": "sw-rado_keramik-002.jpg",
+                  "alt": "KM21 Colosseo"
+                }
+              }
+            },
+            {
+              "group": "Plateau et base",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM24 Invisible opaque",
+              "code": "KM24",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-rado_keramik-003.jpg",
+                  "filename": "sw-rado_keramik-003.jpg",
+                  "alt": "KM24 Invisible opaque"
+                }
+              }
+            },
+            {
+              "group": "Plateau et base",
+              "material_group": "",
+              "material": "céramique Marmi",
+              "name": "KM26 Taj Mahal",
+              "code": "KM26",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-rado_keramik-004.jpg",
+                  "filename": "sw-rado_keramik-004.jpg",
+                  "alt": "KM26 Taj Mahal"
+                }
+              }
+            }
+          ],
+          "technical_sheet": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/rado-keramik-fiche-technique.pdf",
+              "filename": "cattelan-rado-keramik-fiche-technique.pdf",
+              "alt": "Rado Keramik — fiche technique",
+              "mimeType": "application/pdf"
+            }
+          },
+          "technical_sheet_label": "Télécharger la fiche technique"
+        }
+      },
+      {
+        "id": "model-cosmos",
+        "slug": "cosmos",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Cosmos",
+          "description": "Un miroir mural rond en verre miroité fumé ou bronze, dont la bordure courbe déforme les reflets. Deux diamètres.",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/cosmos_05.jpg",
+              "filename": "cosmos_05.jpg",
+              "alt": "Cosmos, miroir rond à la bordure courbe au-dessus d’objets en céramique"
+            }
+          },
+          "gallery": [
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/cosmos_fiche.jpg",
+                  "filename": "cosmos_fiche.jpg",
+                  "alt": "Cosmos, photographie sur fond blanc"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/cosmos_04.jpg",
+                  "filename": "cosmos_04.jpg",
+                  "alt": "Détail de la bordure courbe du miroir Cosmos"
+                }
+              },
+              "caption": ""
+            }
+          ],
+          "content": [
+            {
+              "_type": "block",
+              "_key": "cosmos-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "cosmos-p0s",
+                  "text": "Cosmos est un miroir mural en verre miroité. Autour d’une surface centrale en forme de galet, la bordure courbe déforme les reflets de la pièce.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "cosmos-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "cosmos-p1s",
+                  "text": "Il existe en verre miroité fumé ou bronze, en 120 ou 157 cm de diamètre. Ses supports permettent un montage horizontal ou vertical.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            {
+              "label": "Cosmos 120",
+              "value": "Ø 120, épaisseur 11 cm"
+            },
+            {
+              "label": "Cosmos 157",
+              "value": "Ø 157, épaisseur 11 cm"
+            }
+          ],
+          "drawings": [
+            {
+              "label": "Dimensions en cm, d’après la fiche produit",
+              "row": 1,
+              "column": 0,
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/cosmos-dimensions.png",
+                  "filename": "cosmos-dimensions.png",
+                  "alt": "Cosmos — dimensions"
+                }
+              }
+            }
+          ],
+          "finishes": [
+            {
+              "group": "",
+              "material_group": "",
+              "material": "verre",
+              "name": "miroité bronze",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-cosmos-000.jpg",
+                  "filename": "sw-cosmos-000.jpg",
+                  "alt": "miroité bronze"
+                }
+              }
+            },
+            {
+              "group": "",
+              "material_group": "",
+              "material": "verre",
+              "name": "miroité fumé",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-cosmos-001.jpg",
+                  "filename": "sw-cosmos-001.jpg",
+                  "alt": "miroité fumé"
+                }
+              }
+            }
+          ],
+          "technical_sheet": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/cosmos-fiche-technique.pdf",
+              "filename": "cattelan-cosmos-fiche-technique.pdf",
+              "alt": "Cosmos — fiche technique",
+              "mimeType": "application/pdf"
+            }
+          },
+          "technical_sheet_label": "Télécharger la fiche technique"
+        }
+      },
+      {
+        "id": "model-glenn",
+        "slug": "glenn",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Glenn",
+          "description": "Un miroir tout en verre aux bords courbés, pour le mur ou le sol. Verre miroité, fumé ou bronze.",
+          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/glenn_02.jpg",
+              "filename": "glenn_02.jpg",
+              "alt": "Glenn, miroir carré en verre miroité bronze au-dessus d’une console"
+            }
+          },
+          "gallery": [
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/glenn_fiche.jpg",
+                  "filename": "glenn_fiche.jpg",
+                  "alt": "Glenn, photographie sur fond blanc"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/glenn_03.jpg",
+                  "filename": "glenn_03.jpg",
+                  "alt": "Glenn en verre miroité au-dessus d’un meuble sombre"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/glenn_04.jpg",
+                  "filename": "glenn_04.jpg",
+                  "alt": "Détail du bord courbé du miroir Glenn"
+                }
+              },
+              "caption": ""
+            },
+            {
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/glenn_05.jpg",
+                  "filename": "glenn_05.jpg",
+                  "alt": "Deux miroirs Glenn rectangulaires posés au sol"
+                }
+              },
+              "caption": ""
+            }
+          ],
+          "content": [
+            {
+              "_type": "block",
+              "_key": "glenn-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "glenn-p0s",
+                  "text": "Glenn est entièrement en verre miroité. Ses bords se courbent et font glisser la lumière sur le pourtour du miroir.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "glenn-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "glenn-p1s",
+                  "text": "Il existe en carré de 120 cm ou en rectangle de 80 × 190 cm, à poser au sol ou à fixer au mur, horizontalement ou verticalement. Verre miroité, fumé ou bronze.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "dimensions": [
+            {
+              "label": "Carré",
+              "value": "120 × 120, épaisseur 8 cm"
+            },
+            {
+              "label": "Rectangle",
+              "value": "80 × 190, épaisseur 8 cm"
+            }
+          ],
+          "drawings": [
+            {
+              "label": "Dimensions en cm, d’après la fiche produit",
+              "row": 1,
+              "column": 0,
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/glenn-dimensions.png",
+                  "filename": "glenn-dimensions.png",
+                  "alt": "Glenn — dimensions"
+                }
+              }
+            }
+          ],
+          "finishes": [
+            {
+              "group": "",
+              "material_group": "",
+              "material": "verre",
+              "name": "miroité bronze",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-glenn-000.jpg",
+                  "filename": "sw-glenn-000.jpg",
+                  "alt": "miroité bronze"
+                }
+              }
+            },
+            {
+              "group": "",
+              "material_group": "",
+              "material": "verre",
+              "name": "miroité fumé",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-glenn-001.jpg",
+                  "filename": "sw-glenn-001.jpg",
+                  "alt": "miroité fumé"
+                }
+              }
+            },
+            {
+              "group": "",
+              "material_group": "",
+              "material": "verre",
+              "name": "miroité",
+              "code": "",
+              "image": {
+                "$media": {
+                  "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/sw-glenn-002.jpg",
+                  "filename": "sw-glenn-002.jpg",
+                  "alt": "miroité"
+                }
+              }
+            }
+          ],
+          "technical_sheet": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/glenn-fiche-technique.pdf",
+              "filename": "cattelan-glenn-fiche-technique.pdf",
+              "alt": "Glenn — fiche technique",
+              "mimeType": "application/pdf"
+            }
+          },
+          "technical_sheet_label": "Télécharger la fiche technique"
+        }
       }
     ],
     "posts": [
@@ -2871,6 +4895,181 @@
           "related_post": [],
           "seo_title": "Mobilier extérieur | Cattelan Italia Maroc",
           "meta_description": "Explorez le mobilier extérieur Cattelan Italia. Découvrez une sélection de modèles et vérifiez les conditions d’usage adaptées à votre espace."
+        }
+      },
+      {
+        "id": "family-tables-basses",
+        "slug": "tables-basses",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Les tables basses Cattelan Italia",
+          "short_title": "Tables basses",
+          "card_text": "Bois, céramique, métal ou verre : des tables à composer devant le canapé.",
+          "intro": "La table basse occupe le centre du salon. Elle reçoit les livres, les objets et les plateaux du quotidien. Découvrez des modèles à associer par deux ou trois, en jouant sur les hauteurs et les matières.",
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/arena_07.jpg",
+              "filename": "arena_07.jpg",
+              "alt": "Table basse ronde Arena devant un canapé, dans un salon"
+            }
+          },
+          "image_caption": "Arena dans un salon.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "tables-basses-h0",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "tables-basses-h0s",
+                  "text": "Composer à plusieurs hauteurs",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "tables-basses-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "tables-basses-p0s",
+                  "text": "Deux ou trois plateaux superposés en partie donnent plus de surface qu’une seule table, sans alourdir la pièce. Choisissez la composition selon la longueur du canapé et les passages autour.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "tables-basses-h1",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "tables-basses-h1s",
+                  "text": "Accorder les matières",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "tables-basses-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "tables-basses-p1s",
+                  "text": "Le bois, la céramique, le métal et le verre ne renvoient pas la lumière de la même façon. Comparez les échantillons au showroom avec le sol et les tissus de votre salon.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "sort_order": 7,
+          "models": [
+            "$ref:model-arena",
+            "$ref:model-albert-keramik",
+            "$ref:model-adrian-wood",
+            "$ref:model-dodo"
+          ],
+          "seo_title": "Tables basses | Cattelan Italia Maroc",
+          "meta_description": "Découvrez les tables basses Cattelan Italia en bois, céramique, métal ou verre. Comparez les modèles et les matières au showroom de Casablanca."
+        }
+      },
+      {
+        "id": "family-consoles-miroirs",
+        "slug": "consoles-miroirs",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Les consoles et miroirs Cattelan Italia",
+          "short_title": "Consoles & miroirs",
+          "card_text": "Une console et un miroir suffisent à composer une entrée.",
+          "intro": "L’entrée donne le ton de la maison. Une console et un miroir y forment un ensemble : un plateau pour poser les clés et quelques objets, un reflet qui agrandit l’espace. Découvrez des modèles à associer.",
+          "image": {
+            "$media": {
+              "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/nettuno_07.jpg",
+              "filename": "nettuno_07.jpg",
+              "alt": "Console Nettuno à base ondulée sous un miroir"
+            }
+          },
+          "image_caption": "Nettuno sous un miroir.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "consoles-miroirs-h0",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "consoles-miroirs-h0s",
+                  "text": "Associer la console et le miroir",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "consoles-miroirs-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "consoles-miroirs-p0s",
+                  "text": "Le miroir se choisit avec la console : sa largeur, sa forme et sa hauteur d’accrochage. Une forme arrondie adoucit une console graphique, un cadre métallique répond à une base en métal.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "consoles-miroirs-h1",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "consoles-miroirs-h1s",
+                  "text": "Penser à la lumière",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "consoles-miroirs-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "consoles-miroirs-p1s",
+                  "text": "Un miroir placé face à une fenêtre renvoie la lumière du jour dans la pièce. Vérifiez aussi la profondeur de la console pour garder le passage libre.",
+                  "marks": []
+                }
+              ]
+            }
+          ],
+          "sort_order": 8,
+          "models": [
+            "$ref:model-westin",
+            "$ref:model-nettuno",
+            "$ref:model-rado-keramik",
+            "$ref:model-cosmos",
+            "$ref:model-glenn"
+          ],
+          "seo_title": "Consoles et miroirs | Cattelan Italia Maroc",
+          "meta_description": "Découvrez les consoles et miroirs Cattelan Italia pour l’entrée et le salon. Comparez les formes et les finitions au showroom de Casablanca."
         }
       }
     ],

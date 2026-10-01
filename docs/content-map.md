@@ -310,7 +310,7 @@ Le pied de page relie À propos, Votre projet, Professionnels, FAQ, Confidential
 
 ## Migration 0016 : Tables basses, Consoles & miroirs
 
-`scripts/migrations/0016-new-families.mjs` s’exécute comme la 0014 (aperçu par défaut, `--apply`, sauvegarde privée, sans effet à la seconde exécution). À partir de `content/new-families.json`, il téléverse les photos de `content/media/new-families` par l’API média native, crée et publie neuf modèles (Arena, Albert Keramik, Adrian Wood, Dodo, Westin, Nettuno, Rado Keramik, Cosmos, Glenn), avec leurs dimensions, finitions, dessin et fiche produit en PDF,, puis les familles `tables-basses` (ordre 7) et `consoles-miroirs` (ordre 8) avec leur sélection. Une entrée qui existe déjà est conservée telle quelle et reste liée à sa famille.
+`scripts/migrations/0016-new-families.mjs` s’exécute comme la 0014 (aperçu par défaut, `--apply`, sauvegarde privée, sans effet à la seconde exécution). À partir de `content/new-families.json`, il téléverse les photos de `content/media/new-families` par l’API média native, crée et publie neuf modèles (Arena, Albert Keramik, Adrian Wood, Dodo, Westin, Nettuno, Rado Keramik, Cosmos, Glenn), avec leurs dimensions, finitions, dessin et fiche produit en PDF, puis les familles `tables-basses` (ordre 7) et `consoles-miroirs` (ordre 8) avec leur sélection. Une entrée qui existe déjà est conservée telle quelle et reste liée à sa famille.
 
 Les photos viennent des kits numériques Cattelan Italia ; le propriétaire a retiré les logos. Elles ont été agrandies ×2 avec Real-ESRNet, un modèle qui n’invente pas de texture (Real-ESRGAN ajoutait un quadrillage sur le bronze brossé). Les textes ne décrivent que ce que montrent les photos.
 

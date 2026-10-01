@@ -39,7 +39,7 @@ for (const [collection, entries] of Object.entries(seed.content)) {
 assert.equal(seed.content.pages.length, 11);
 const routeKeys = seed.collections.find((item) => item.slug === 'pages').fields.find((field) => field.slug === 'route_key').validation.options;
 for (const page of seed.content.pages) assert(routeKeys.includes(page.data.route_key), `${page.slug}: unknown route key`);
-assert.equal(seed.content.families.length, 6);
+assert.equal(seed.content.families.length, 8);
 assert.equal(seed.content.posts.length, 5);
 assert.equal(seed.content.site_content.length, 1, 'Only one global configuration is supported');
 assert(!seed.collections.find((item) => item.slug === 'posts').fields.some((field) => field.slug === 'category'), 'Journal rubrics must use the native taxonomy only');
