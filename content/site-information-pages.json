@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "sources": {
+    "faq": "FAQ – Cattelan Italia Maroc (document du projet), réponses condensées selon les règles de ton du plan",
+    "cancellation": "Info about Cattelan.pdf — une commande validée n’est ni échangeable ni remboursable",
+    "about": "Profil officiel de l’entreprise (fondée en 1979 par Giorgio et Silvia Cattelan) et FAQ",
+    "legal": "Éditeur confirmé par le propriétaire le 1er octobre 2026 : Racha Home, 8-10 Av. Mohamed Sijilmassi, Casablanca 20250",
+    "contact": "Nom, adresse, téléphone et e-mail confirmés par le propriétaire le 1er octobre 2026 (forme du plan, section SEO)",
+    "wording": "« représentant officiel » de la FAQ n’est pas repris tant que l’autorisation écrite de la marque n’est pas signée"
+  },
+  "routeKeys": ["a-propos", "votre-projet", "faq", "mentions-legales"],
+  "pages": [
+    {
+      "slug": "a-propos",
+      "data": {
+        "title": "À propos",
+        "route_key": "a-propos",
+        "eyebrow": "Cattelan Italia Maroc",
+        "intro": "Cattelan Italia Maroc, showroom monomarque Cattelan Italia au Triangle d’Or, Casablanca.",
+        "sections": [
+          { "section_key": "brand", "heading": "Cattelan Italia", "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, la marque conçoit et fabrique son mobilier en Italie. Tables, chaises, canapés, bibliothèques, buffets, luminaires et accessoires composent ses collections." },
+          { "section_key": "milan", "heading": "Les nouvelles collections", "text": "Chaque année, Cattelan Italia présente ses nouveautés au Salon du Meuble de Milan." },
+          { "section_key": "showroom", "heading": "Le showroom de Casablanca", "text": "Le showroom présente une large sélection de modèles et l’ensemble des matériaux, finitions et revêtements de la marque. Tout le catalogue peut y être commandé et personnalisé." },
+          { "section_key": "advice", "heading": "Conseil et projets complets", "text": "L’équipe vous conseille sur le mobilier, les matières, les finitions et l’agencement, pour une pièce ou un intérieur complet." }
+        ],
+        "seo_title": "À propos · Cattelan Italia Maroc",
+        "meta_description": "Cattelan Italia Maroc, showroom monomarque Cattelan Italia au Triangle d’Or, Casablanca. Mobilier conçu et fabriqué en Italie depuis 1979."
+      }
+    },
+    {
+      "slug": "votre-projet",
+      "data": {
+        "title": "Votre projet",
+        "route_key": "votre-projet",
+        "eyebrow": "Commander",
+        "intro": "Du premier conseil à l’installation, un conseiller suit votre projet. Comptez 10 à 12 semaines entre la validation de la commande et la livraison.",
+        "sections": [
+          { "section_key": "step_1", "heading": "01 · Conseil", "text": "Nous choisissons ensemble les modèles, les dimensions, les matières et les finitions adaptés à votre projet." },
+          { "section_key": "step_2", "heading": "02 · Devis détaillé", "text": "Vous recevez un devis détaillé de votre sélection." },
+          { "section_key": "step_3", "heading": "03 · Validation et acompte", "text": "La commande est validée par un acompte de 50 % du montant total. Le solde est réglé avant la livraison." },
+          { "section_key": "step_4", "heading": "04 · Fabrication en Italie", "text": "Chaque pièce est fabriquée en Italie selon vos choix, en 10 à 12 semaines. Une pièce personnalisée suit le même délai." },
+          { "section_key": "step_5", "heading": "05 · Livraison et installation", "text": "Nous livrons partout au Maroc, notamment à Casablanca, Rabat, Marrakech et Tanger. La livraison est offerte à Casablanca ; pour les autres villes, les frais dépendent de la destination. L’installation est incluse." },
+          { "section_key": "payment", "heading": "Moyens de paiement", "text": "Carte bancaire, virement bancaire ou chèque." },
+          { "section_key": "cancellation", "heading": "Commande validée", "text": "Une commande validée ne peut être ni échangée ni remboursée." }
+        ],
+        "seo_title": "Commander du mobilier Cattelan Italia au Maroc",
+        "meta_description": "Conseil, devis détaillé, acompte de 50 %, fabrication en Italie en 10 à 12 semaines, livraison et installation partout au Maroc."
+      }
+    },
+    {
+      "slug": "faq",
+      "data": {
+        "title": "Questions fréquentes",
+        "route_key": "faq",
+        "eyebrow": "FAQ",
+        "intro": "Collections, personnalisation, commande, livraison et showroom : les réponses aux questions les plus courantes.",
+        "sections": [
+          { "section_key": "group", "heading": "Produits et collections" },
+          { "section_key": "faq_products_1", "heading": "Les produits sont-ils authentiques et fabriqués en Italie ?", "text": "Oui. Tous les produits sont authentiques, conçus et fabriqués en Italie." },
+          { "section_key": "faq_products_2", "heading": "Puis-je commander un modèle qui n’est pas exposé au showroom ?", "text": "Oui. Tout le catalogue Cattelan Italia peut être commandé et personnalisé, même les modèles qui ne sont pas exposés. Le showroom présente une large sélection et l’ensemble des matériaux, finitions et revêtements." },
+          { "section_key": "faq_products_3", "heading": "Proposez-vous les nouvelles collections ?", "text": "Oui. Cattelan Italia présente ses nouveautés chaque année au Salon du Meuble de Milan : tables, chaises, salons, bibliothèques, buffets, luminaires et accessoires. Nous les intégrons régulièrement." },
+          { "section_key": "group", "heading": "Personnalisation" },
+          { "section_key": "faq_custom_1", "heading": "Quels produits peuvent être personnalisés ?", "text": "La grande majorité des collections. Selon le modèle, vous choisissez les dimensions, les matériaux, les finitions, les essences de bois, les céramiques, les marbres, les métaux et les revêtements en tissu ou en cuir." },
+          { "section_key": "faq_custom_2", "heading": "Puis-je voir les matériaux avant de commander ?", "text": "Oui. L’ensemble des matériaux et finitions de la marque est présenté au showroom, en échantillons ou sur les pièces exposées." },
+          { "section_key": "faq_custom_3", "heading": "Une commande personnalisée prend-elle plus de temps ?", "text": "Non. Le délai reste de 10 à 12 semaines à compter de la validation de la commande, le temps de la fabrication en Italie." },
+          { "section_key": "group", "heading": "Commande et paiement" },
+          { "section_key": "faq_order_1", "heading": "Quelles sont les étapes d’une commande ?", "text": "Un conseil pour choisir modèles, dimensions, matériaux et finitions, puis un devis détaillé. Une fois le devis validé, la commande part en fabrication en Italie. Nous suivons la commande jusqu’à la livraison et l’installation." },
+          { "section_key": "faq_order_2", "heading": "Quels moyens de paiement acceptez-vous ?", "text": "Carte bancaire, virement bancaire et chèque." },
+          { "section_key": "faq_order_3", "heading": "Un acompte est-il demandé ?", "text": "Oui. Un acompte de 50 % du montant total valide la commande et lance la fabrication. Le solde est réglé avant la livraison." },
+          { "section_key": "faq_order_4", "heading": "Puis-je annuler ou échanger une commande ?", "text": "Une commande validée ne peut être ni échangée ni remboursée." },
+          { "section_key": "group", "heading": "Livraison" },
+          { "section_key": "faq_delivery_1", "heading": "Quel est le délai de livraison ?", "text": "10 à 12 semaines au maximum à compter de la validation de la commande, selon les articles. Nous vous tenons informé de l’avancement." },
+          { "section_key": "faq_delivery_2", "heading": "Livrez-vous partout au Maroc ?", "text": "Oui, sur l’ensemble du territoire marocain." },
+          { "section_key": "faq_delivery_3", "heading": "La livraison et l’installation sont-elles incluses ?", "text": "L’installation est incluse. La livraison est offerte à Casablanca ; pour les autres villes, les frais dépendent de la destination." },
+          { "section_key": "group", "heading": "Showroom" },
+          { "section_key": "faq_showroom_1", "heading": "Faut-il prendre rendez-vous ?", "text": "Non. Le showroom est ouvert le lundi de 12 h à 19 h 30 et du mardi au samedi de 9 h à 19 h 30. Vous pouvez aussi convenir d’un rendez-vous." },
+          { "section_key": "faq_showroom_2", "heading": "Accompagnez-vous les projets complets ?", "text": "Oui. L’équipe vous conseille sur le mobilier, les matériaux, les finitions et l’agencement, pour une pièce ou un intérieur complet." },
+          { "section_key": "group", "heading": "Architectes et professionnels" },
+          { "section_key": "faq_pro_1", "heading": "Accompagnez-vous les projets résidentiels, hôteliers et commerciaux ?", "text": "Oui : appartements, villas, bureaux de direction, espaces professionnels, hôtels, restaurants et établissements commerciaux.", "cta_label": "Espace professionnels", "cta_href": "/professionnels/" },
+          { "section_key": "group", "heading": "Informations pratiques" },
+          { "section_key": "faq_practical_1", "heading": "Où se situe le showroom ?", "text": "Au Triangle d’Or : 8-10 avenue du Docteur Mohamed Sijilmassi, 20250 Casablanca." },
+          { "section_key": "faq_practical_2", "heading": "Un parking est-il disponible ?", "text": "Le showroom n’a pas de parking privé. Un service de voiturier est à votre disposition, et des places de stationnement se trouvent à proximité." },
+          { "section_key": "faq_practical_3", "heading": "Comment vous contacter ?", "text": "Par téléphone ou WhatsApp au +212 771 105 490, ou par e-mail à contact@cattelanitalia.ma." }
+        ],
+        "seo_title": "Questions fréquentes · Cattelan Italia Maroc",
+        "meta_description": "Personnalisation, délais de 10 à 12 semaines, acompte, livraison partout au Maroc, installation incluse et showroom de Casablanca : les réponses."
+      }
+    },
+    {
+      "slug": "mentions-legales",
+      "data": {
+        "title": "Mentions légales",
+        "route_key": "mentions-legales",
+        "eyebrow": "Informations légales",
+        "intro": "Éditeur, hébergeur et propriété des contenus de ce site.",
+        "sections": [
+          { "section_key": "publisher", "heading": "Éditeur du site", "text": "Racha Home\n8-10 avenue Mohamed Sijilmassi, 20250 Casablanca, Maroc\nTéléphone : +212 771 105 490\nE-mail : contact@cattelanitalia.ma" },
+          { "section_key": "registration", "heading": "Immatriculation", "text": "Forme juridique, capital, registre du commerce (RC) et identifiant commun de l’entreprise (ICE) : à compléter." },
+          { "section_key": "director", "heading": "Directeur de la publication", "text": "À compléter." },
+          { "section_key": "host", "heading": "Hébergement", "text": "Cloudflare, Inc.\n101 Townsend Street, San Francisco, CA 94107, États-Unis" },
+          { "section_key": "brand", "heading": "Marques et contenus", "text": "Cattelan Italia et son logo sont des marques de Cattelan Italia S.p.A. Les textes, photographies et documents de ce site ne peuvent être reproduits sans autorisation." },
+          { "section_key": "privacy", "heading": "Données personnelles", "text": "L’utilisation de vos coordonnées est décrite dans la politique de confidentialité.", "cta_label": "Confidentialité", "cta_href": "/confidentialite/" }
+        ],
+        "seo_title": "Mentions légales · Cattelan Italia Maroc",
+        "meta_description": "Éditeur, hébergeur et propriété des contenus du site Cattelan Italia Maroc."
+      }
+    }
+  ],
+  "globalUpdates": [
+    { "field": "address", "before": ["8–10 Avenue Mohamed Sijilmassi, Casablanca 20250, Maroc"], "after": "8-10 avenue du Docteur Mohamed Sijilmassi, Triangle d’Or, 20250 Casablanca, Maroc" },
+    { "field": "contact_phone", "before": ["+212 7 71 10 54 90"], "after": "+212 771 105 490" },
+    { "field": "public_email", "before": ["", null], "after": "contact@cattelanitalia.ma" }
+  ],
+  "showroomBlock": {
+    "key": "seo-followup-showroom-6",
+    "before": "La livraison couvre tout le Maroc, notamment Casablanca, Rabat, Marrakech et Tanger. Pour connaître les frais et les délais de livraison, contactez l’équipe en précisant votre ville et le modèle choisi.",
+    "after": "La livraison couvre tout le Maroc, notamment Casablanca, Rabat, Marrakech et Tanger. Elle est offerte à Casablanca ; pour les autres villes, les frais dépendent de la destination. L’installation est incluse et le délai est de 10 à 12 semaines."
+  }
+}

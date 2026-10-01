@@ -151,6 +151,7 @@
 .showroom-map + .text-link { margin-top: 20px; }
 .page-faq { display: grid; grid-template-columns: 1fr 1.5fr; gap: 10vw; padding-block: 80px 110px; border-top: 1px solid var(--hair); }
 .page-faq details { border-top: 1px solid var(--hair); }
+.page-faq-group + .page-faq-group { padding-top: 0; border-top: 0; }
 .page-faq details:last-child { border-bottom: 1px solid var(--hair); }
 .page-faq summary { display: flex; justify-content: space-between; align-items: center; gap: 30px; padding-block: 26px; cursor: pointer; list-style: none; font-size: 20px; font-weight: 300; line-height: 1.5; }
 .page-faq summary::-webkit-details-marker { display: none; }
@@ -190,7 +191,7 @@
 .page-footer-contact > p { font-weight: 300; font-size: 25px; margin: 0 0 5px; }
 .page-footer-contact > a { font-size: 12px; text-transform: uppercase; letter-spacing: .1em; line-height: 1.6; }
 .page-footer-contact > span { color: var(--muted); font-size: 14px; line-height: 1.7; white-space: pre-line; }
-.page-footer-links { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+.page-footer .page-footer-links { flex-direction: row; flex-wrap: wrap; gap: 8px 24px; }
 .page-footer-bottom { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--hair); padding-top: 25px; color: var(--faint); font-size: 11px; line-height: 1.5; }
 .will-reveal { opacity: 0; transform: translateY(35px); transition: opacity 1.1s ease, transform 1.1s cubic-bezier(.2,.7,.2,1); }
 .will-reveal.is-visible { opacity: 1; transform: translateY(0); }

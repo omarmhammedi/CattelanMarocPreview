@@ -35,6 +35,9 @@ export function schemaProjection(page: PublicPageContext, site?: Data, entry?: D
     gallery: (entry.gallery || []).map((item: Data) => ({image: mediaSource(item.image)})),
     dimensions: (entry.dimensions || []).map((item: Data) => ({label: text(item.label), value: text(item.value)})),
   }};
+  if (page.content?.collection === 'pages' && page.content.slug === 'faq') return {entry: {
+    sections: (entry.sections || []).map((item: Data) => ({section_key: text(item.section_key), heading: text(item.heading), display_heading: text(item.display_heading), text: text(item.text)})),
+  }};
   if (page.content?.collection !== 'pages' || !['home', 'showroom-casablanca'].includes(page.content.slug || '') || !site) return {};
   const isHome = page.content.slug === 'home';
   const section = (entry.sections || []).find((item: Data) => item.section_key === 'showroom');
@@ -142,10 +145,13 @@ function postalAddress(value: unknown): Graph | undefined {
   const address = text(value);
   if (!address) return undefined;
   const parts = address.split(',').map(part => part.trim());
-  const locality = parts.length === 3 && parts[1].match(/^(.+?)\s+(\d{5})$/);
-  if (locality && parts[0] && parts[2]) return {
-    '@type': 'PostalAddress', streetAddress: parts[0], addressLocality: locality[1],
-    postalCode: locality[2], addressCountry: /^(?:maroc|morocco|ma)$/i.test(parts[2]) ? 'MA' : parts[2],
+  // "street[, district], City 20250, Country" or "street[, district], 20250 City, Country"
+  const place = parts.length >= 3 ? parts[parts.length - 2] : '';
+  const locality = /^(?<city>\D+?)\s+(?<code>\d{5})$/u.exec(place)?.groups || /^(?<code>\d{5})\s+(?<city>\D+)$/u.exec(place)?.groups;
+  const country = parts[parts.length - 1];
+  if (locality && parts.slice(0, -2).every(Boolean) && country) return {
+    '@type': 'PostalAddress', streetAddress: parts.slice(0, -2).join(', '), addressLocality: locality.city,
+    postalCode: locality.code, addressCountry: /^(?:maroc|morocco|ma)$/i.test(country) ? 'MA' : country,
   };
   // An unfamiliar format keeps the full published address instead of
   // silently retaining old city, postcode or country values.
@@ -196,7 +202,35 @@ export function furnitureStoreGraph(site: Data, entry: Data, origin: string): Gr
     ...(map && {hasMap: map}), ...(hours && {openingHoursSpecification: hours}),
     ...(image && {image}), ...(logo && {logo}),
     ...(profiles.length && {sameAs: profiles}),
+    // Delivery covers the whole country (project FAQ, Livraison).
+    areaServed: {'@type': 'Country', name: 'Maroc'},
   };
+}
+
+export function organizationGraph(site: Data, origin: string): Graph | undefined {
+  if (!text(site.name)) return undefined;
+  const logo = absoluteWebUrl(mediaSource(site.logoLight || site.logoDark), origin);
+  const profiles = socialProfiles(site);
+  return {
+    '@context': 'https://schema.org', '@type': 'Organization',
+    '@id': new URL('/#organization', origin).href, name: text(site.name), url: new URL('/', origin).href,
+    ...(logo && {logo}), ...(text(site.phone) && {telephone: text(site.phone)}),
+    ...(text(site.publicEmail) && {email: text(site.publicEmail)}),
+    ...(profiles.length && {sameAs: profiles}),
+  };
+}
+
+/** Questions are the `faq_*` sections of the FAQ page, with a visible question and answer. */
+export function faqGraph(entry: Data, page: PublicPageContext): Graph | undefined {
+  const origin = page.siteUrl || page.url;
+  const url = absoluteWebUrl(page.canonical, origin);
+  const questions = (Array.isArray(entry.sections) ? entry.sections : []).flatMap((section: Data) => {
+    const name = text(section.display_heading) || text(section.heading);
+    const answer = text(section.text);
+    return String(section.section_key || '').startsWith('faq_') && name && answer
+      ? [{'@type': 'Question', name, acceptedAnswer: {'@type': 'Answer', text: answer}}] : [];
+  });
+  return url && questions.length ? {'@context': 'https://schema.org', '@type': 'FAQPage', '@id': `${url}#faq`, url, mainEntity: questions} : undefined;
 }
 
 export function productGraph(entry: Data, page: PublicPageContext): Graph | undefined {
@@ -249,5 +283,7 @@ export function structuredDataContributions(page: PublicPageContext, site?: Data
   if (page.content?.collection === 'pages' && ['home', 'showroom-casablanca'].includes(page.content.slug || '') && site && entry) {
     add('showroom', furnitureStoreGraph(site, {...entry, slug: page.content.slug}, page.siteUrl || page.url));
   }
+  if (page.content?.collection === 'pages' && page.content.slug === 'home' && site) add('organization', organizationGraph(site, page.siteUrl || page.url));
+  if (page.content?.collection === 'pages' && page.content.slug === 'faq' && entry) add('faq', faqGraph(entry, page));
   return contributions;
 }

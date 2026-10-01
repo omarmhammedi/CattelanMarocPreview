@@ -25,8 +25,8 @@ export function validateManifest(manifest) {
     assert(page.data.seo_title.length <= 90 && page.data.meta_description.length <= 180, `${page.slug}: SEO text too long.`);
     for (const section of page.data.sections) assert(section.section_key && (section.text || section.heading), `${page.slug}: empty section.`);
   }
-  for (const item of manifest.menu) assert(manifest.pages.some(page => `/${page.slug}/` === item.url), `${item.url}: menu item without its page.`);
-  assert.equal(manifest.modelField.type, 'boolean');
+  for (const item of manifest.menu || []) assert(manifest.pages.some(page => `/${page.slug}/` === item.url), `${item.url}: menu item without its page.`);
+  if (manifest.modelField) assert.equal(manifest.modelField.type, 'boolean');
   return manifest;
 }
 
@@ -40,19 +40,19 @@ export async function planSiteStrategy(api, manifest) {
   const routeField = pagesSchema.fields.find(field => field.slug === 'route_key');
   assert(routeField?.type === 'select', 'pages.route_key must be a select field.');
   const options = routeField.validation?.options || [];
-  const existingFlag = modelsSchema.fields.find(field => field.slug === manifest.modelField.slug);
-  assert(!existingFlag || existingFlag.type === 'boolean', `models.${manifest.modelField.slug} exists with another type.`);
+  const existingFlag = manifest.modelField && modelsSchema.fields.find(field => field.slug === manifest.modelField.slug);
+  assert(!existingFlag || existingFlag.type === 'boolean', `models.${manifest.modelField?.slug} exists with another type.`);
   const list = await api('/_emdash/api/content/pages?limit=100');
   const slugs = new Set((list.items || []).map(item => item.slug));
   const menu = await api('/_emdash/api/menus/primary');
   return {
     routeField,
     missingRoutes: manifest.routeKeys.filter(key => !options.includes(key)),
-    addField: existingFlag ? null : manifest.modelField,
+    addField: existingFlag || !manifest.modelField ? null : manifest.modelField,
     createPages: manifest.pages.filter(page => !slugs.has(page.slug)),
     keptPages: manifest.pages.filter(page => slugs.has(page.slug)).map(page => page.slug),
     menu,
-    missingMenu: manifest.menu.filter(item => !menu.items.some(existing => existing.customUrl === item.url)),
+    missingMenu: (manifest.menu || []).filter(item => !menu.items.some(existing => existing.customUrl === item.url)),
   };
 }
 
@@ -100,7 +100,9 @@ export async function applySiteStrategy(api, plan, { beforeWrite, log = () => {}
   }
 }
 
-async function authenticatedApi(origin) {
+const allowedPaths = /^\/_emdash\/api\/(?:content\/pages|schema\/collections\/(?:pages|models)|menus\/primary)(?:[/?]|$)/u;
+
+export async function authenticatedApi(origin, allowed = allowedPaths) {
   let headers;
   if (process.env.EMDASH_AUTH_FILE) {
     assert(['localhost', '127.0.0.1'].includes(origin.hostname), 'Session files are for a local server; use the native CLI login for a remote CMS.');
@@ -115,7 +117,7 @@ async function authenticatedApi(origin) {
     headers = { Authorization: `Bearer ${credential.accessToken}` };
   }
   return async (path, { method = 'GET', data } = {}) => {
-    assert(/^\/_emdash\/api\/(?:content\/pages|schema\/collections\/(?:pages|models)|menus\/primary)(?:[/?]|$)/u.test(path), `Refused path ${path}.`);
+    assert(allowed.test(path), `Refused path ${path}.`);
     const response = await fetch(new URL(path, origin), { method, redirect: 'error', signal: AbortSignal.timeout(90_000),
       headers: { ...headers, Origin: origin.origin, 'X-EmDash-Request': '1', ...(data === undefined ? {} : { 'Content-Type': 'application/json' }) },
       ...(data === undefined ? {} : { body: JSON.stringify(data) }) });

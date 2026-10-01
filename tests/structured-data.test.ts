@@ -3,7 +3,7 @@ import test from 'node:test';
 import { runWithContext } from 'emdash';
 import { createPublicPageContext, generateBaseSeoContributions, resolvePageMetadata } from 'emdash/page';
 import {
-  absoluteWebUrl, articleGraph, breadcrumbGraph, fallbackFavicon, furnitureStoreGraph,
+  absoluteWebUrl, articleGraph, breadcrumbGraph, faqGraph, fallbackFavicon, furnitureStoreGraph, organizationGraph,
   openingHours, pageBreadcrumbs, productGraph, schemaProjection, socialImage, structuredDataContributions,
 } from '../src/lib/structured-data.ts';
 import { rememberRenderedSeo, renderedSeo } from '../src/lib/seo-render-context.ts';
@@ -160,7 +160,7 @@ test('schema is scoped to its real page and disappears when its CMS entry is una
   assert.deepEqual(structuredDataContributions(model), []);
   assert.deepEqual(structuredDataContributions(model, site, {title: 'Greta'}).map(item => item.kind === 'jsonld' ? item.id : ''), ['product']);
   const home = page('/', {content: {collection: 'pages', id: 'p1', slug: 'home'}, breadcrumbs: []});
-  assert.deepEqual(structuredDataContributions(home, site, {title: 'Accueil'}).map(item => item.kind === 'jsonld' ? item.id : ''), ['showroom']);
+  assert.deepEqual(structuredDataContributions(home, site, {title: 'Accueil'}).map(item => item.kind === 'jsonld' ? item.id : ''), ['showroom', 'organization']);
   assert.deepEqual(structuredDataContributions(page('/collections/'), site, {title: 'Collections'}), []);
 });
 
@@ -174,7 +174,7 @@ test('a signed global-settings preview describes the rendered home with draft si
   });
   const graphs = structuredDataContributions(preview, {...site, phone: '+212 500 000 001', showroomLatitude: 33.6},
     {title: 'Accueil', showroom_image: '/media/showroom.jpg'});
-  assert.equal(graphs.length, 1);
+  assert.deepEqual(graphs.map(item => item.kind === 'jsonld' ? item.id : ''), ['showroom', 'organization']);
   const graph = graphs[0].kind === 'jsonld' ? graphs[0].graph as Record<string, any> : {};
   assert.equal(graph['@type'], 'FurnitureStore');
   assert.equal(graph.telephone, '+212 500 000 001');
@@ -252,4 +252,35 @@ test('simultaneous published and draft requests cannot share metadata', async ()
     }),
   ]);
   runWithContext({editMode: false}, () => assert.deepEqual(renderedSeo(model), {}));
+});
+
+test('the address form of the plan keeps street, district, postcode and city', () => {
+  const graph = furnitureStoreGraph({...site, address: '8-10 avenue du Docteur Mohamed Sijilmassi, Triangle d’Or, 20250 Casablanca, Maroc'}, {}, origin)!;
+  assert.deepEqual(graph.address, {'@type': 'PostalAddress', streetAddress: '8-10 avenue du Docteur Mohamed Sijilmassi, Triangle d’Or', addressLocality: 'Casablanca', postalCode: '20250', addressCountry: 'MA'});
+  assert.deepEqual(graph.areaServed, {'@type': 'Country', name: 'Maroc'});
+});
+
+test('Organization describes the site from its CMS identity only', () => {
+  const graph = organizationGraph({...site, publicEmail: 'contact@cattelanitalia.ma'}, origin)!;
+  assert.equal(graph['@type'], 'Organization');
+  assert.equal(graph.url, origin + '/');
+  assert.equal(graph.email, 'contact@cattelanitalia.ma');
+  assert.equal(graph.logo, origin + '/media/logo.png');
+  assert.equal('email' in organizationGraph(site, origin)!, false);
+  assert.equal(organizationGraph({...site, name: ''}, origin), undefined);
+});
+
+test('FAQPage lists only complete faq_* sections of the FAQ page', () => {
+  const faq = page('/faq/', {content: {collection: 'pages', id: 'p9', slug: 'faq'}});
+  const entry = {sections: [
+    {section_key: 'group', heading: 'Livraison'},
+    {section_key: 'faq_1', heading: 'Livrez-vous partout au Maroc ?', text: 'Oui.'},
+    {section_key: 'faq_2', heading: 'Question sans réponse'},
+  ]};
+  const graph = faqGraph(entry, faq)!;
+  assert.deepEqual(graph.mainEntity, [{'@type': 'Question', name: 'Livrez-vous partout au Maroc ?', acceptedAnswer: {'@type': 'Answer', text: 'Oui.'}}]);
+  assert.equal(faqGraph({sections: []}, faq), undefined);
+  const projected = schemaProjection(faq, site, {...entry, private: 'x'});
+  assert.deepEqual(structuredDataContributions(faq, projected.site, projected.entry).map(item => item.kind === 'jsonld' ? item.id : ''), ['faq']);
+  assert.equal('private' in (projected.entry || {}), false);
 });

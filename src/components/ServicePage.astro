@@ -5,9 +5,17 @@ import SiteActions from './SiteActions.astro';
 import PageLayout from '../layouts/PageLayout.astro';
 import { PortableText } from 'emdash/ui';
 import { generalWhatsappMessage, whatsappHref, type ActionKey } from '../lib/actions';
-interface Props { page: any; site: any; order: ActionKey[]; whatsappMessage?: string; }
-const { page, site, order, whatsappMessage = generalWhatsappMessage } = Astro.props;
-const sections = (page.sections || []).filter((section: any) => section.heading || section.displayHeading || section.text || section.image || (section.ctaLabel && section.ctaHref));
+interface Props { page: any; site: any; order: ActionKey[]; whatsappMessage?: string; variant?: 'sections' | 'faq'; }
+const { page, site, order, whatsappMessage = generalWhatsappMessage, variant = 'sections' } = Astro.props;
+const heading = (section: any) => String(section.displayHeading || section.heading || '').trim();
+const sections = (page.sections || []).filter((section: any) => heading(section) || section.text || section.image || (section.ctaLabel && section.ctaHref));
+// FAQ: a `group` section opens a group; each following `faq_*` section is one question.
+const groups = variant === 'faq' ? sections.reduce((list: {title: string; questions: any[]}[], section: any) => {
+  if (section.key === 'group') list.push({ title: heading(section), questions: [] });
+  else if (section.key?.startsWith('faq_')) (list.at(-1) || list[list.push({ title: '', questions: [] }) - 1]).questions.push(section);
+  return list;
+}, []).filter((group: any) => group.questions.length) : [];
+const editorial = variant === 'faq' ? sections.filter((section: any) => section.key !== 'group' && !section.key?.startsWith('faq_')) : sections;
 ---
 <PageLayout title={page.seoTitle || page.title} description={page.description} site={site} image={page.image} entry={page.entry} whatsappMessage={whatsappMessage}>
   <section class="page-intro page-gutter">
@@ -16,11 +24,15 @@ const sections = (page.sections || []).filter((section: any) => section.heading 
     {page.intro && <p class="page-lead" {...page.entry?.edit?.intro}>{page.intro}</p>}
   </section>
   {page.image && <figure class="page-gutter page-full-figure page-hero-figure" data-page-reveal><div class="page-image"><img {...imageAttributes(page.image, '100vw', 1600)} alt={page.image.alt || ''} fetchpriority="high" /></div></figure>}
-  {(page.body?.length > 0 || sections.length > 0) && <section class="page-gutter page-editorial-section">
+  {groups.map((group: any) => <section class="page-faq page-faq-group page-gutter">
+    <div class="section-heading">{group.title && <h2>{group.title}</h2>}</div>
+    <div>{group.questions.map((question: any) => heading(question) ? <details data-page-reveal><summary>{heading(question)}<span aria-hidden="true">+</span></summary><EditorialSection section={question} showHeading={false} /></details> : <EditorialSection section={question} showHeading={false} />)}</div>
+  </section>)}
+  {(page.body?.length > 0 || editorial.length > 0) && <section class="page-gutter page-editorial-section">
     {page.body?.length > 0 && <div class="page-prose"><PortableText value={page.body} /></div>}
-    {sections.map((section: any) => <EditorialSection section={section} />)}
+    {editorial.map((section: any) => <EditorialSection section={section} />)}
   </section>}
-  <section class="page-cta page-gutter" data-page-reveal>
+  {order.length > 0 && <section class="page-cta page-gutter" data-page-reveal>
     <SiteActions order={order} advisorHref={whatsappHref(site.whatsappUrl, whatsappMessage)} />
-  </section>
+  </section>}
 </PageLayout>

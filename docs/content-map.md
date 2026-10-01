@@ -8,14 +8,14 @@ La configuration Astro déclare explicitement `defaultLocale: 'fr'` et `locales:
 
 | Collection | Entrées initiales | Chemins publics | Contenu |
 | --- | ---: | --- | --- |
-| `pages` | 7 | `/`, `/collections/`, `/showroom-casablanca/`, `/catalogue/`, `/journal/`, `/sur-mesure/`, `/professionnels/` | Titre, introduction, images et sections éditoriales |
+| `pages` | 11 | `/`, `/collections/`, `/showroom-casablanca/`, `/catalogue/`, `/journal/`, `/sur-mesure/`, `/professionnels/`, `/a-propos/`, `/votre-projet/`, `/faq/`, `/mentions-legales/` | Titre, introduction, images et sections éditoriales |
 | `families` | 6 | `/collections/{slug}/` | Présentation courte, texte enrichi, sélection de modèles, article associé |
 | `models` | 11 | `/modeles/{slug}/` et cartes des familles | Fiche du modèle exact, galerie, dimensions, plans, finitions et PDF technique public |
 | `posts` | 5 | `/journal/{slug}/` | Articles complets en Portable Text, extrait, image, rubrique, sources, CTA |
 | `catalogues` | 1 | Formulaire et téléchargement | Édition, couverture, mention de démonstration, référence du PDF privé |
 | `site_content` | 1 | Partagé sur tout le site | Logos, contacts, coordonnées, boutons, pied de page, textes du formulaire et catalogue actif |
 
-Les clés stables des pages sont `home`, `collections`, `showroom`, `catalogue`, `journal`, `sur-mesure`, `professionnels`. Leurs slugs sont respectivement `home`, `collections`, `showroom-casablanca`, `catalogue`, `journal`, `sur-mesure`, `professionnels`. Le rendu résout l’accueil à `/` et traite `/home/` comme son alias. Une prévisualisation signée doit conserver son contexte EmDash lorsqu’elle résout cette route.
+Les clés stables des pages sont `home`, `collections`, `showroom`, `catalogue`, `journal`, `sur-mesure`, `professionnels`, `a-propos`, `votre-projet`, `faq`, `mentions-legales`. Leurs slugs sont respectivement `home`, `collections`, `showroom-casablanca`, `catalogue`, `journal`, `sur-mesure`, `professionnels`, `a-propos`, `votre-projet`, `faq`, `mentions-legales`. Le rendu résout l’accueil à `/` et traite `/home/` comme son alias. Une prévisualisation signée doit conserver son contexte EmDash lorsqu’elle résout cette route.
 
 Les familles sont `tables`, `chaises-tabourets`, `canapes-fauteuils`, `buffets-bibliotheques`, `luminaires`, `mobilier-exterieur`.
 
@@ -297,3 +297,13 @@ Appliquer la migration en même temps que le déploiement du code : avant elle, 
 Quand `models.on_display` est coché, la fiche affiche « Exposé au showroom de Casablanca » sous le titre. Le champ est vide par défaut : ne le cocher qu’après confirmation de la liste des pièces exposées.
 
 Le pied de page reprend le nom, l’adresse et les horaires de `site_content`, ajoute « Service voiturier », le téléphone, l’e-mail public s’il est renseigné et l’action « Échanger avec un conseiller ». Ses liens d’information sont Professionnels et Confidentialité ; À propos, Votre projet, FAQ et Mentions légales s’ajouteront avec leurs pages. Un lien déjà présent dans le menu n’est pas répété. La mention de version de travail reste jusqu’au lancement.
+
+## Migration 0015 : À propos, Votre projet, FAQ et Mentions légales
+
+Le [manifeste](../content/site-information-pages.json) reprend la FAQ du projet (19 questions en 7 groupes, condensées selon les règles de ton du plan), la règle d’annulation du questionnaire de lancement, le profil de la marque et l’éditeur Racha Home confirmé par le propriétaire. La FAQ n’écrit pas « représentant officiel » tant que l’autorisation écrite de la marque n’est pas signée. Les mentions légales signalent « à compléter » pour la forme juridique, le capital, le RC, l’ICE et le directeur de la publication ; ces textes se modifient ensuite dans EmDash.
+
+Sur la page FAQ, une section `group` ouvre un groupe et chaque section `faq_*` est une question en accordéon (titre = question, texte = réponse). Les mêmes sections alimentent le balisage `FAQPage`. L’accueil ajoute un balisage `Organization`, et le magasin indique le Maroc comme zone desservie. `/llms.txt` résume le showroom à partir de `site_content`, les services et la commande d’après la FAQ, et liste les pages principales ; il reste `noindex` tant que `SITE_INDEXABLE` est faux.
+
+`scripts/migrations/0015-site-information-pages.mjs` s’exécute comme la 0014 (aperçu par défaut, `--apply`, sauvegarde privée, sans effet à la seconde exécution). Il ajoute les quatre clés de route et les quatre pages, porte la limite des sections de page de 20 à 40 (la FAQ en compte 26), puis met à jour, uniquement depuis leur valeur attendue : l’adresse au format du plan (« 8-10 avenue du Docteur Mohamed Sijilmassi, Triangle d’Or, 20250 Casablanca, Maroc »), le téléphone « +212 771 105 490 », l’e-mail public contact@cattelanitalia.ma et le paragraphe de livraison du showroom, qui reprend désormais les conditions de la FAQ. Une valeur déjà modifiée par un éditeur est conservée et signalée. Appliquer la 0014 avant la 0015.
+
+Le pied de page relie À propos, Votre projet, Professionnels, FAQ, Confidentialité et Mentions légales. Les logos officiels rouge et blanc fournis par le propriétaire remplacent les fichiers de `public/images` utilisés par l’import local ; sur le site en ligne, les logos se changent dans **Configuration du site**.

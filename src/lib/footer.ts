@@ -1,7 +1,11 @@
-/** The plan's footer links that have a page today; À propos, Votre projet, FAQ and Mentions légales join when theirs exist. */
+/** The footer's information links, in the plan's order. */
 const footerLinks = [
+  { label: 'À propos', href: '/a-propos/' },
+  { label: 'Votre projet', href: '/votre-projet/' },
   { label: 'Professionnels', href: '/professionnels/' },
+  { label: 'FAQ', href: '/faq/' },
   { label: 'Confidentialité', href: '/confidentialite/' },
+  { label: 'Mentions légales', href: '/mentions-legales/' },
 ];
 
 /** Leaves out the links the main menu already lists in the same footer. */
