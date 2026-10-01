@@ -8,7 +8,8 @@ import ThemeToggle from './ThemeToggle.astro';
 import NativeNav, { type NavigationItem } from './NativeNav.astro';
 import GeographicMap from './GeographicMap.astro';
 import GeographicMapSymbols from './GeographicMapSymbols.astro';
-import { generalWhatsappMessage, isCatalogueLink, whatsappHref } from '../lib/actions';
+import { actions, generalWhatsappMessage, isCatalogueLink, whatsappHref } from '../lib/actions';
+import { secondaryLinks, valetService } from '../lib/footer';
 import { imageAttributes } from '../lib/images';
 
 type Editable = { edit?: Record<string, Record<string, string>> };
@@ -36,7 +37,7 @@ interface Props {
     form: Record<string, string>;
     labels: {
       collections: string; showroom: string; journal: string; catalogue: string;
-      allArticles: string; discover: string; visit: string; appointment: string;
+      allArticles: string; discover: string; visit: string;
       scroll: string; readArticle: string; contact: string;
     };
   };
@@ -170,8 +171,8 @@ const brandLines = explicitBrandLines.length > 1 ? explicitBrandLines : [brandWo
 </main>
 <footer class="ft">
   <svg class="fan deco" viewBox="0 0 200 104" aria-hidden="true"><use href="#fan"/></svg><div class="brand">{site.logoDark ? <img class="lg-w" {...imageAttributes(site.logoDark, '180px', 512)} alt={site.logoDark.alt}/> : <span class="brand-name lg-w">{site.name}</span>}{site.logoLight ? <img class="lg-r" {...imageAttributes(site.logoLight, '180px', 512)} alt={site.logoLight.alt}/> : <span class="brand-name lg-r">{site.name}</span>}{site.location && <span class="loc">{site.location}</span>}{site.tagline && <p>{site.tagline}</p>}</div>
-  <div><h4>{labels.showroom}</h4><ul>{site.address && <li>{site.address}</li>}{site.hours && <li>{site.hours}</li>}{site.phone && <li><a href={`tel:${site.phone.replace(/[^+\d]/g, '')}`}>{site.phone}</a></li>}{site.whatsappHref && <li><a href={site.whatsappHref} target="_blank" rel="noopener noreferrer">{labels.appointment} · WhatsApp</a></li>}{site.publicEmail && <li><a href={`mailto:${site.publicEmail}`}>{site.publicEmail}</a></li>}<li><a href="/showroom-casablanca/">{labels.visit}</a></li></ul></div>
-  <div><h4>Explorer</h4><ul>{site.navigation.map(item => <li><NativeNav items={[item]} /></li>)}<li><a href="/confidentialite/">Confidentialité</a></li></ul></div>
+  <div><h4>{labels.showroom}</h4><ul><li>{site.name}</li>{site.address && <li>{site.address}</li>}{site.hours && <li>{site.hours}</li>}<li>{valetService}</li>{site.phone && <li><a href={`tel:${site.phone.replace(/[^+\d]/g, '')}`}>{site.phone}</a></li>}{advisorHref && <li><a href={advisorHref} target="_blank" rel="noopener noreferrer" data-action="advisor">{actions.advisor.label} <span aria-hidden="true">↗</span></a></li>}{site.publicEmail && <li><a href={`mailto:${site.publicEmail}`}>{site.publicEmail}</a></li>}<li><a href="/showroom-casablanca/">{labels.visit}</a></li></ul></div>
+  <div><h4>Explorer</h4><ul>{site.navigation.map(item => <li><NativeNav items={[item]} /></li>)}{secondaryLinks(site.navigation).map(link => <li><a href={link.href}>{link.label}</a></li>)}</ul></div>
   <div class="base"><span>{site.name}</span>{site.footerNote && <span {...siteEdit?.footer_text}>{site.footerNote}</span>}{site.previewNotice && <p class="preview-notice" {...siteEdit?.preview_notice}>{site.previewNotice}</p>}</div>
 </footer>
 <script>

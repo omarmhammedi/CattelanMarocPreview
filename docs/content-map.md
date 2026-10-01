@@ -8,14 +8,14 @@ La configuration Astro déclare explicitement `defaultLocale: 'fr'` et `locales:
 
 | Collection | Entrées initiales | Chemins publics | Contenu |
 | --- | ---: | --- | --- |
-| `pages` | 5 | `/`, `/collections/`, `/showroom-casablanca/`, `/catalogue/`, `/journal/` | Titre, introduction, images et sections éditoriales |
+| `pages` | 7 | `/`, `/collections/`, `/showroom-casablanca/`, `/catalogue/`, `/journal/`, `/sur-mesure/`, `/professionnels/` | Titre, introduction, images et sections éditoriales |
 | `families` | 6 | `/collections/{slug}/` | Présentation courte, texte enrichi, sélection de modèles, article associé |
 | `models` | 11 | `/modeles/{slug}/` et cartes des familles | Fiche du modèle exact, galerie, dimensions, plans, finitions et PDF technique public |
 | `posts` | 5 | `/journal/{slug}/` | Articles complets en Portable Text, extrait, image, rubrique, sources, CTA |
 | `catalogues` | 1 | Formulaire et téléchargement | Édition, couverture, mention de démonstration, référence du PDF privé |
 | `site_content` | 1 | Partagé sur tout le site | Logos, contacts, coordonnées, boutons, pied de page, textes du formulaire et catalogue actif |
 
-Les clés stables des pages sont `home`, `collections`, `showroom`, `catalogue`, `journal`. Leurs slugs sont respectivement `home`, `collections`, `showroom-casablanca`, `catalogue`, `journal`. Le rendu résout l’accueil à `/` et traite `/home/` comme son alias. Une prévisualisation signée doit conserver son contexte EmDash lorsqu’elle résout cette route.
+Les clés stables des pages sont `home`, `collections`, `showroom`, `catalogue`, `journal`, `sur-mesure`, `professionnels`. Leurs slugs sont respectivement `home`, `collections`, `showroom-casablanca`, `catalogue`, `journal`, `sur-mesure`, `professionnels`. Le rendu résout l’accueil à `/` et traite `/home/` comme son alias. Une prévisualisation signée doit conserver son contexte EmDash lorsqu’elle résout cette route.
 
 Les familles sont `tables`, `chaises-tabourets`, `canapes-fauteuils`, `buffets-bibliotheques`, `luminaires`, `mobilier-exterieur`.
 
@@ -276,3 +276,24 @@ Les trois actions sont définies dans `src/lib/actions.ts`, dans l’ordre d’i
 La section `#rendez-vous` accueillera le formulaire de rendez-vous ; elle indique pour l’instant « Visite libre ou sur rendez-vous ». Sous leur titre, les fiches modèles affichent les quatre conditions communes au catalogue issues de la FAQ du projet (Personnalisation, Livraison) : personnalisable, délai de 10 à 12 semaines, livraison partout au Maroc et offerte à Casablanca, installation incluse. Ce bloc est écrit dans le gabarit et s’applique à toutes les fiches.
 
 `contact_label` et `catalogue_label` ne pilotent plus ces boutons. Ils restent utilisés par le pied de page, la page showroom et le formulaire catalogue, qui conservent leurs liens actuels jusqu’aux étapes suivantes du plan, comme les fins d’articles du Journal.
+
+## Migration 0014 : Sur-mesure, Professionnels, pied de page et pièces exposées
+
+Le [manifeste](../content/site-strategy-pages.json) décrit deux nouvelles pages, rédigées à partir des faits que le plan attribue à la FAQ du projet. `/sur-mesure/` présente ce qui se personnalise (dimensions, essences de bois, céramiques, marbres, métaux, tissus, cuirs), les échantillons au showroom, l’absence de délai supplémentaire et l’article sur les finitions. `/professionnels/` présente les projets accompagnés (appartements, villas, bureaux de direction, hôtels, restaurants, boutiques), le catalogue et ses échantillons, les documents techniques et le suivi jusqu’à l’installation. Leur fin de page propose les actions du site ; sur Professionnels, le message WhatsApp prérempli est celui du plan pour les projets professionnels.
+
+Deux points restent à confirmer avant la mise en ligne : la disponibilité des fichiers 2D/3D auprès du compte revendeur, et le formulaire de demande professionnelle, qui attend le choix du CRM. Les deux pages restent entièrement éditables dans EmDash ; leurs sections suivent le contrat général des `pages.sections`.
+
+`scripts/migrations/0014-site-strategy-pages.mjs` ajoute, uniquement s’ils manquent : les clés `sur-mesure` et `professionnels` de `pages.route_key`, le champ booléen facultatif `models.on_display`, les deux pages publiées, et les entrées Sur-mesure (après Collections) et Professionnels (après Showroom) du menu `primary`. Une page ou une entrée de menu déjà présente n’est jamais remplacée. Sans `--apply`, le script affiche seulement son plan ; avec `--apply`, il enregistre d’abord une sauvegarde privée sous `.wrangler/migrations/`. Une seconde exécution ne change rien.
+
+```sh
+# Copie locale jetable
+EMDASH_BASE_URL=http://localhost:4331 EMDASH_AUTH_FILE=.wrangler/cms-sync-session.json node scripts/migrations/0014-site-strategy-pages.mjs
+# CMS Cloudflare, après connexion de la CLI EmDash native à cette origine
+EMDASH_BASE_URL=https://cattelan-maroc-preview.cattelan.workers.dev node scripts/migrations/0014-site-strategy-pages.mjs --apply
+```
+
+Appliquer la migration en même temps que le déploiement du code : avant elle, les deux routes répondent 404 et le pied de page pointe vers Professionnels. Le seed contient directement ces pages, ce menu et ce champ pour les nouvelles installations.
+
+Quand `models.on_display` est coché, la fiche affiche « Exposé au showroom de Casablanca » sous le titre. Le champ est vide par défaut : ne le cocher qu’après confirmation de la liste des pièces exposées.
+
+Le pied de page reprend le nom, l’adresse et les horaires de `site_content`, ajoute « Service voiturier », le téléphone, l’e-mail public s’il est renseigné et l’action « Échanger avec un conseiller ». Ses liens d’information sont Professionnels et Confidentialité ; À propos, Votre projet, FAQ et Mentions légales s’ajouteront avec leurs pages. Un lien déjà présent dans le menu n’est pas répété. La mention de version de travail reste jusqu’au lancement.

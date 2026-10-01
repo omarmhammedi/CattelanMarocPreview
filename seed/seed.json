@@ -48,7 +48,9 @@
               "collections",
               "showroom",
               "catalogue",
-              "journal"
+              "journal",
+              "sur-mesure",
+              "professionnels"
             ]
           }
         },
@@ -525,6 +527,16 @@
           "label": "Source vérifiée le",
           "type": "datetime",
           "required": false
+        },
+        {
+          "slug": "on_display",
+          "label": "Exposé au showroom de Casablanca",
+          "type": "boolean",
+          "required": false,
+          "defaultValue": false,
+          "options": {
+            "helpText": "Cocher uniquement lorsque la liste des pièces exposées confirme ce modèle. La mention s’affiche alors sur la fiche."
+          }
         }
       ],
       "urlPattern": "/modeles/{slug}/"
@@ -3101,6 +3113,80 @@
           "seo_title": "Journal mobilier et design | Cattelan Italia Maroc",
           "meta_description": "Matières, proportions et associations : découvrez nos conseils pour choisir votre mobilier et préparer votre projet avec Cattelan Italia au Maroc."
         }
+      },
+      {
+        "id": "page-sur-mesure",
+        "slug": "sur-mesure",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Sur-mesure et matières",
+          "route_key": "sur-mesure",
+          "eyebrow": "Personnalisation",
+          "intro": "Chaque modèle du catalogue Cattelan Italia peut être commandé et personnalisé. Dimensions, matières et finitions se choisissent avec un conseiller, au showroom de Casablanca.",
+          "sections": [
+            {
+              "section_key": "options",
+              "heading": "Ce qui se personnalise",
+              "text": "Les dimensions.\nLes matières et leurs finitions : essences de bois, céramiques, marbres, métaux, tissus et cuirs."
+            },
+            {
+              "section_key": "samples",
+              "heading": "Tous les échantillons au showroom",
+              "text": "Les échantillons de matières sont présentés au showroom du Triangle d’Or. Vous les comparez sur place, avec un conseiller."
+            },
+            {
+              "section_key": "lead_time",
+              "heading": "Sans délai supplémentaire",
+              "text": "Une pièce personnalisée suit le délai habituel : 10 à 12 semaines de fabrication en Italie. La livraison et l’installation sont comprises dans le projet."
+            },
+            {
+              "section_key": "materials",
+              "heading": "Choisir une finition",
+              "text": "Céramique, verre ou bois : chaque matière a son usage et son entretien.",
+              "cta_label": "Lire l’article",
+              "cta_href": "/journal/ceramique-verre-bois-choisir-finition-meuble/"
+            }
+          ],
+          "seo_title": "Mobilier Cattelan Italia sur mesure à Casablanca · Cattelan Italia Maroc",
+          "meta_description": "Dimensions, bois, céramiques, marbres, métaux, tissus et cuirs : tout le catalogue Cattelan Italia se personnalise. Échantillons au showroom de Casablanca."
+        }
+      },
+      {
+        "id": "page-professionnels",
+        "slug": "professionnels",
+        "status": "published",
+        "locale": "fr",
+        "data": {
+          "title": "Professionnels",
+          "route_key": "professionnels",
+          "eyebrow": "Architectes et décorateurs",
+          "intro": "Architectes, décorateurs d’intérieur et maîtres d’ouvrage : le showroom de Casablanca accompagne vos projets résidentiels, hôteliers et commerciaux avec tout le catalogue Cattelan Italia.",
+          "sections": [
+            {
+              "section_key": "projects",
+              "heading": "Les projets accompagnés",
+              "text": "Appartements, villas, bureaux de direction, hôtels, restaurants et boutiques."
+            },
+            {
+              "section_key": "catalogue",
+              "heading": "Le catalogue complet et ses échantillons",
+              "text": "Tous les modèles du catalogue se commandent et se personnalisent. Les échantillons de matières sont consultables au showroom, avec vos clients si vous le souhaitez."
+            },
+            {
+              "section_key": "files",
+              "heading": "Documents techniques",
+              "text": "Fiches techniques, fichiers 2D et 3D et images haute définition sur demande, selon les modèles."
+            },
+            {
+              "section_key": "follow_up",
+              "heading": "Un interlocuteur pour tout le projet",
+              "text": "Un conseiller suit le projet du devis détaillé à l’installation : commande, fabrication en Italie et livraison partout au Maroc."
+            }
+          ],
+          "seo_title": "Architectes et professionnels · Cattelan Italia Maroc",
+          "meta_description": "Projets résidentiels, hôteliers et commerciaux : catalogue complet Cattelan Italia, échantillons, documents techniques et suivi jusqu’à l’installation, au showroom de Casablanca."
+        }
       }
     ],
     "site_content": [
@@ -3175,8 +3261,18 @@
         },
         {
           "type": "custom",
+          "label": "Sur-mesure",
+          "url": "/sur-mesure/"
+        },
+        {
+          "type": "custom",
           "label": "Showroom",
           "url": "/showroom-casablanca/"
+        },
+        {
+          "type": "custom",
+          "label": "Professionnels",
+          "url": "/professionnels/"
         },
         {
           "type": "custom",

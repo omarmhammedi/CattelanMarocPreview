@@ -1,0 +1,26 @@
+---
+import { imageAttributes } from '../lib/images';
+import EditorialSection from './EditorialSection.astro';
+import SiteActions from './SiteActions.astro';
+import PageLayout from '../layouts/PageLayout.astro';
+import { PortableText } from 'emdash/ui';
+import { generalWhatsappMessage, whatsappHref, type ActionKey } from '../lib/actions';
+interface Props { page: any; site: any; order: ActionKey[]; whatsappMessage?: string; }
+const { page, site, order, whatsappMessage = generalWhatsappMessage } = Astro.props;
+const sections = (page.sections || []).filter((section: any) => section.heading || section.displayHeading || section.text || section.image || (section.ctaLabel && section.ctaHref));
+---
+<PageLayout title={page.seoTitle || page.title} description={page.description} site={site} image={page.image} entry={page.entry} whatsappMessage={whatsappMessage}>
+  <section class="page-intro page-gutter">
+    {page.eyebrow && <p class="kick">{page.eyebrow}</p>}
+    <h1 {...page.entry?.edit?.title}>{page.title}</h1>
+    {page.intro && <p class="page-lead" {...page.entry?.edit?.intro}>{page.intro}</p>}
+  </section>
+  {page.image && <figure class="page-gutter page-full-figure page-hero-figure" data-page-reveal><div class="page-image"><img {...imageAttributes(page.image, '100vw', 1600)} alt={page.image.alt || ''} fetchpriority="high" /></div></figure>}
+  {(page.body?.length > 0 || sections.length > 0) && <section class="page-gutter page-editorial-section">
+    {page.body?.length > 0 && <div class="page-prose"><PortableText value={page.body} /></div>}
+    {sections.map((section: any) => <EditorialSection section={section} />)}
+  </section>}
+  <section class="page-cta page-gutter" data-page-reveal>
+    <SiteActions order={order} advisorHref={whatsappHref(site.whatsappUrl, whatsappMessage)} />
+  </section>
+</PageLayout>

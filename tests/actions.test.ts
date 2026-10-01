@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { actions, generalWhatsappMessage, isCatalogueLink, modelWhatsappMessage, whatsappHref } from '../src/lib/actions.ts';
+import { actions, generalWhatsappMessage, isCatalogueLink, modelWhatsappMessage, professionalWhatsappMessage, whatsappHref } from '../src/lib/actions.ts';
 
 test('keeps the three actions, their order and their destinations', () => {
   assert.deepEqual(Object.keys(actions), ['appointment', 'advisor', 'catalogue']);
@@ -14,6 +14,7 @@ test('keeps the three actions, their order and their destinations', () => {
 
 test('writes the pre-filled messages of the plan', () => {
   assert.equal(generalWhatsappMessage, 'Bonjour, je souhaite des informations sur Cattelan Italia Maroc.');
+  assert.equal(professionalWhatsappMessage, 'Bonjour, je travaille sur un projet professionnel et souhaite échanger avec un conseiller.');
   assert.equal(modelWhatsappMessage('Skorpio', 'https://cattelanitalia.ma/modeles/skorpio/'),
     'Bonjour, je souhaite être conseillé sur le modèle Skorpio (cattelanitalia.ma/modeles/skorpio/).');
   assert.equal(modelWhatsappMessage('Greta Outdoor', 'https://cattelan-maroc-preview.cattelan.workers.dev/modeles/greta-outdoor/'),

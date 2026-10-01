@@ -50,6 +50,7 @@ interface Props {
     source_url?: string;
     officialUrl?: string;
     availabilityNote?: string;
+    onDisplay?: boolean;
     entry?: any;
     href?: string;
   };
@@ -100,6 +101,7 @@ for (const finish of model.finishes || []) {
       <div class="model-hero-copy">
         <p class="kick">{site.name}</p>
         <h1 {...model.entry?.edit?.title}>{model.title}</h1>
+        {model.onDisplay && <p class="model-on-display" {...model.entry?.edit?.on_display}>Exposé au showroom de Casablanca</p>}
         <ul class="model-services" aria-label="Services">{services.map(service => <li>{service}</li>)}</ul>
         {model.description && <p class="page-lead" {...model.entry?.edit?.description}>{model.description}</p>}
         {model.year && <dl class="model-year"><div><dt>Année</dt><dd>{model.year}</dd></div></dl>}

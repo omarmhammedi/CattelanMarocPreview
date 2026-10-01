@@ -7,6 +7,7 @@ export const actions = {
 export type ActionKey = keyof typeof actions;
 
 export const generalWhatsappMessage = 'Bonjour, je souhaite des informations sur Cattelan Italia Maroc.';
+export const professionalWhatsappMessage = 'Bonjour, je travaille sur un projet professionnel et souhaite échanger avec un conseiller.';
 
 export function modelWhatsappMessage(model: string, pageUrl: string): string {
   return `Bonjour, je souhaite être conseillé sur le modèle ${model} (${pageUrl.replace(/^https?:\/\//u, '')}).`;

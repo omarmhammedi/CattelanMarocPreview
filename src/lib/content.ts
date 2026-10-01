@@ -84,7 +84,7 @@ export function modelModel(entry:Entry) {
   const d=entry.data;
   const p=base(Object.assign(entry,{_collection:'models'}));
   return {...p,href:`/modeles/${p.slug}/`,description:String(d.description || ''),
-    imageCaption:String(d.image_caption || ''),availabilityNote:String(d.availability_note || ''),
+    imageCaption:String(d.image_caption || ''),availabilityNote:String(d.availability_note || ''),onDisplay:d.on_display===true || d.on_display===1,
     year:d.release_year || null,officialUrl:String(d.source_url || d.official_url || ''),
     gallery:(d.gallery || []).flatMap((item:Data)=>{const image=picture(item.image);return image?[{...image,caption:String(item.caption || '')}]:[];}),
     dimensions:(d.dimensions || []).map((item:Data)=>({label:String(item.label || ''),value:String(item.value || ''),seats:item.seats,largeSeats:item.large_seats})),
@@ -114,6 +114,6 @@ export async function getSite(){
     showroomLatitude:d.showroom_latitude,showroomLongitude:d.showroom_longitude,
     footerText:d.footer_text,footerNote:d.footer_text,previewNotice:d.preview_notice,modelNotice:d.model_notice,
     placeholderNotice:d.placeholder_notice,settings,
-    labels:{collections:d.collections_label,showroom:d.showroom_label,journal:d.journal_label,catalogue:d.catalogue_label,contact:d.contact_label,allArticles:d.journal_label,readArticle:d.read_article_label,discover:d.discover_label,visit:d.showroom_label,appointment:d.contact_label,scroll:d.scroll_label || 'Défiler'},
+    labels:{collections:d.collections_label,showroom:d.showroom_label,journal:d.journal_label,catalogue:d.catalogue_label,contact:d.contact_label,allArticles:d.journal_label,readArticle:d.read_article_label,discover:d.discover_label,visit:d.showroom_label,scroll:d.scroll_label || 'Défiler'},
     form:{name:d.form_name_label,email:d.form_email_label,nameError:d.form_name_error,emailError:d.form_email_error,submit:d.catalogue_label,consent:d.form_opt_in_label,note:d.form_hint,privacy:d.form_privacy,pending:d.form_pending,error:d.form_error,successTitle:d.form_success_title,successText:d.form_success_text,unavailable:d.form_unavailable},entry:e};
 }
