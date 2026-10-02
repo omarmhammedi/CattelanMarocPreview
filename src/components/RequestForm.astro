@@ -108,10 +108,10 @@ const field = (name: string) => ({ id: `${id}-${name}`, name, 'aria-describedby'
   .request-message, .request-wide { grid-column: 1 / -1; }
   .request-choice { margin: 0; padding: 0; border: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
   .request-choice legend { float: left; width: 100%; }
-  .request-choice .field-hint { flex-basis: 100%; font-size: 12px; line-height: 1.5; color: var(--faint); }
+  .request-choice .field-hint { flex-basis: 100%; margin-top: 2px; font-size: 12px; line-height: 1.5; color: var(--faint); }
   .request-choice label { position: relative; cursor: pointer; }
   .request-choice input { position: absolute; opacity: 0; }
-  .request-choice span { display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border: 1px solid var(--hair); font-size: 14px; color: var(--muted); }
+  .request-choice label span { display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border: 1px solid var(--hair); font-size: 14px; color: var(--muted); }
   .request-choice input:checked + span { border-color: var(--ink); color: var(--ink); background: rgba(var(--ink-rgb), .08); }
   .request-choice input:focus-visible + span { outline: 2px solid var(--ink); outline-offset: 2px; }
   .request-form .field-error { display: block; margin-top: 8px; font-size: 12px; line-height: 1.5; color: var(--ink); }
