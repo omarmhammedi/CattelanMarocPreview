@@ -10,8 +10,7 @@ const photoHref = whatsappHref(site.whatsappUrl, roomPhotoWhatsappMessage);
 ---
 <ServicePage page={page} site={site} order={['appointment', 'advisor']}>
   <Fragment slot="form">
-    <h2>Votre projet en quelques lignes</h2>
-    <p>Indiquez votre parcours et votre ville : un conseiller vous écrit sur WhatsApp. Une photo de la pièce et ses mesures l’aident à vous répondre précisément.</p>
+    <h2>Demande de conseil</h2>
     {photoHref && <p><a class="btn" href={photoHref} target="_blank" rel="noopener noreferrer">Envoyer une photo de la pièce <span aria-hidden="true">↗</span></a></p>}
     <RequestForm id="project-request" kind="projet" site={site} />
   </Fragment>

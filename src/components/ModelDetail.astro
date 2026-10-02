@@ -65,10 +65,13 @@ const {model, site, families = [], advisorHref} = Astro.props;
 const family = families.find(item => item.title && item.href);
 const collectionLabel = site.labels?.collections || 'Collections';
 // Terms stated in the project FAQ (Personnalisation, Livraison); they apply to every catalogue model.
-const services = ['Sur commande, fabriqué en Italie en 10 à 12 semaines', 'Livraison et installation partout au Maroc, livraison offerte à Casablanca'];
+const services = ['Fabrication sur commande en Italie.', 'Livraison et installation au Maroc.', 'Livraison offerte à Casablanca.'];
 const filesHref = whatsappHref(site.whatsappUrl, filesWhatsappMessage(model.title));
-const advisorLabel = 'Demander un devis sur WhatsApp';
-const modelNotice = String(site.modelNotice || '').trim();
+const advisorLabel = 'Demander un devis';
+const advisorName = `Demander un devis pour ${model.title} via WhatsApp`;
+// Sofas are sold in modules: their drawings show module sizes.
+const drawingsNote = family?.slug === 'canapes-fauteuils' && !/lounge/i.test(model.slug || '') && model.slug !== 'ruby' ? 'Dimensions des modules (cm)' : 'Dimensions en cm, d’après la fiche technique Cattelan Italia.';
+const hasSeating = (model.dimensions || []).some(item => item.seats || item.largeSeats);
 const gallery = (model.gallery || []).filter(picture => picture?.src);
 const dimensions = (model.dimensions || []).filter(item => item.value || item.seats || item.largeSeats);
 const drawings = (model.drawings || []).filter(item => item.image?.src).sort((a, b) =>
@@ -88,7 +91,7 @@ function finishImageSizes(image: Picture) {
 for (const finish of model.finishes || []) {
   if (!finish.name && !finish.code && !finish.image?.src) continue;
   const key = JSON.stringify([finish.group || '', finish.materialGroup || '', finish.material || '']);
-  const group = finishGroups.get(key) || {label: finishGroupLabel(finish), finishes: []};
+  const group = finishGroups.get(key) || {label: finishGroupLabel(finish, model.slug), finishes: []};
   group.finishes.push(finish);
   finishGroups.set(key, group);
 }
@@ -109,9 +112,8 @@ for (const finish of model.finishes || []) {
         {model.onDisplay && <p class="model-on-display" {...model.entry?.edit?.on_display}>Exposé au showroom de Casablanca</p>}
         {model.description && <p class="page-lead" {...model.entry?.edit?.description}>{model.description}</p>}
         {model.year && <dl class="model-year"><div><dt>Année</dt><dd>{model.year}</dd></div></dl>}
-        {model.availabilityNote && <p class="page-note model-availability">{model.availabilityNote}</p>}
-        <SiteActions order={['appointment', 'advisor']} advisorHref={advisorHref} advisorLabel={advisorLabel} model={model.slug} />
-        <p class="model-services">{services.join(' · ')}</p>
+        <SiteActions order={['appointment', 'advisor']} advisorHref={advisorHref} advisorLabel={advisorLabel} advisorName={advisorName} model={model.slug} />
+        <p class="model-services">{services.join(' ')}</p>
         {filesHref && !hasTechnical && <a class="text-link model-files-request" href={filesHref} target="_blank" rel="noopener noreferrer">Demander les fichiers 2D et 3D<span aria-hidden="true">↗</span></a>}
       </div>
       {model.image?.src && <figure class="model-hero-figure">
@@ -121,8 +123,7 @@ for (const finish of model.finishes || []) {
     </div>
   </section>
 
-  {model.body && model.body.length > 0 && <section class="page-gutter model-story" aria-labelledby="model-story-heading" data-page-reveal>
-    <h2 class="kick" id="model-story-heading">Le modèle</h2>
+  {model.body && model.body.length > 0 && <section class="page-gutter model-story" aria-label={`${model.title} : description`} data-page-reveal>
     <div class="page-prose"><PortableText value={model.body} /></div>
   </section>}
 
@@ -146,21 +147,22 @@ for (const finish of model.finishes || []) {
     <div class="section-heading" data-page-reveal><h2 id="model-technical-heading">{dimensions.length > 0 || drawings.length > 0 ? 'Dimensions' : 'Fiche technique'}</h2></div>
     {dimensions.length > 0 && <dl class="model-dimensions">
       {dimensions.map(dimension => <div class="model-dimension" data-page-reveal>
-        <dt>{dimension.label || 'Dimensions'}</dt>
+        {dimension.label && <dt>{dimension.label}</dt>}
         {dimension.value && <dd class="model-dimension-value">{dimension.value}</dd>}
         {(!!dimension.seats || !!dimension.largeSeats) && <dd class="model-seating">
-          {!!dimension.seats && <span>{dimension.seats} {dimension.seats === 1 ? 'place' : 'places'} · chaises standard</span>}
-          {!!dimension.largeSeats && <span>{dimension.largeSeats} {dimension.largeSeats === 1 ? 'place' : 'places'} · grandes chaises</span>}
+          {!!dimension.seats && <span>{dimension.seats} {dimension.seats === 1 ? 'place' : 'places'}{!!dimension.largeSeats && dimension.largeSeats !== dimension.seats ? ` (${dimension.largeSeats} avec de grandes chaises)` : ''}</span>}
+          {!dimension.seats && !!dimension.largeSeats && <span>{dimension.largeSeats} {dimension.largeSeats === 1 ? 'place' : 'places'} avec de grandes chaises</span>}
         </dd>}
       </div>)}
     </dl>}
+    {hasSeating && <p class="page-note model-seating-note">Capacité indicative selon la largeur et la disposition des chaises.</p>}
     {drawings.length > 0 && <div class="model-drawings">
       <h3>Plans et détails</h3>
       <div class="model-drawings-grid">{drawings.map(drawing => <figure data-page-reveal>
         <div class="model-dimension-drawing"><img src={drawing.image.src} alt={drawing.image.alt || `${model.title} — ${drawing.label || 'dessin technique'}`} width={drawing.image.width} height={drawing.image.height} loading="lazy" /></div>
         {drawing.label && !genericDrawingLabel(drawing.label) && <figcaption class="page-note">{drawing.label}</figcaption>}
       </figure>)}</div>
-      <p class="page-note model-drawings-note">Dimensions en cm, d’après la fiche technique Cattelan Italia.</p>
+      <p class="page-note model-drawings-note">{drawingsNote}</p>
     </div>}
     {model.technicalSheet?.src && <a class="text-link model-technical-download" href={model.technicalSheet.src} download={model.technicalSheet.filename || true}>{model.technicalSheetLabel || 'Télécharger la fiche technique'} <span class="model-file-format">PDF</span><span aria-hidden="true">↓</span></a>}
     {filesHref && <a class="text-link model-files-request" href={filesHref} target="_blank" rel="noopener noreferrer">Demander les fichiers 2D et 3D<span aria-hidden="true">↗</span></a>}
@@ -183,7 +185,6 @@ for (const finish of model.finishes || []) {
   </section>}
 
   <section class="page-cta page-gutter model-project" data-page-reveal>
-    <SiteActions order={['appointment', 'advisor']} advisorHref={advisorHref} advisorLabel={advisorLabel} model={model.slug} />
-    {modelNotice && modelNotice !== model.availabilityNote?.trim() && <p class="page-note model-site-notice">{modelNotice}</p>}
+    <SiteActions order={['appointment', 'advisor']} advisorHref={advisorHref} advisorLabel={advisorLabel} advisorName={advisorName} model={model.slug} />
   </section>
 </article>

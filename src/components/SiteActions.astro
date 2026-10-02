@@ -1,12 +1,15 @@
 ---
 import { actions, type ActionKey } from '../lib/actions';
+import WhatsappIcon from './WhatsappIcon.astro';
 interface Props {
   order: ActionKey[];
   advisorHref?: string | null;
   advisorLabel?: string;
+  /** Accessible name of the WhatsApp link; the visible label leaves the channel to the icon. */
+  advisorName?: string;
   model?: string;
 }
-const { order, advisorHref, advisorLabel = actions.advisor.label, model } = Astro.props;
+const { order, advisorHref, advisorLabel = actions.advisor.label, advisorName = `${advisorLabel} sur ${actions.advisor.channel}`, model } = Astro.props;
 // The booking form records the model the visitor came from.
 const appointmentHref = model ? actions.appointment.href.replace('#', `?modele=${encodeURIComponent(model)}#`) : actions.appointment.href;
 type Link = { key: ActionKey; label: string; href: string; external: boolean };
@@ -17,5 +20,5 @@ const links = order.flatMap((key): Link[] => key === 'advisor'
 const styles = ['btn solid', 'btn', 'text-link'];
 ---
 {links.length > 0 && <div class="row site-actions">
-  {links.map((link, index) => <a class={styles[index]} href={link.href} data-action={link.key} target={link.external ? '_blank' : undefined} rel={link.external ? 'noopener noreferrer' : undefined}>{link.label}{link.external && <span aria-hidden="true">↗</span>}</a>)}
+  {links.map((link, index) => <a class={styles[index]} href={link.href} data-action={link.key} aria-label={link.key === 'advisor' ? advisorName : undefined} target={link.external ? '_blank' : undefined} rel={link.external ? 'noopener noreferrer' : undefined}>{link.key === 'advisor' && <WhatsappIcon />}{link.label}{link.external && <span aria-hidden="true">↗</span>}</a>)}
 </div>}

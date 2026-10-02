@@ -6,7 +6,7 @@ test('keeps the three actions, their order and their destinations', () => {
   assert.deepEqual(Object.keys(actions), ['appointment', 'advisor', 'catalogue']);
   assert.equal(actions.appointment.label, 'Prendre rendez-vous');
   assert.equal(actions.appointment.href, '/showroom-casablanca/#rendez-vous');
-  assert.equal(actions.advisor.label, 'Écrire sur WhatsApp');
+  assert.equal(actions.advisor.label, 'Nous écrire');
   assert.equal(actions.catalogue.label, 'Recevoir le catalogue');
   assert.equal(actions.catalogue.href, '/catalogue/');
   for (const action of Object.values(actions)) assert.doesNotMatch(action.label, /prix/iu);
@@ -16,9 +16,9 @@ test('writes the pre-filled messages of the plan', () => {
   assert.equal(generalWhatsappMessage, 'Bonjour, je souhaite des informations sur Cattelan Italia Maroc.');
   assert.equal(professionalWhatsappMessage, 'Bonjour, je travaille sur un projet professionnel et souhaite échanger avec un conseiller.');
   assert.equal(modelWhatsappMessage('Skorpio', 'https://cattelanitalia.ma/modeles/skorpio/'),
-    'Bonjour, je souhaite être conseillé sur le modèle Skorpio (cattelanitalia.ma/modeles/skorpio/).');
+    'Bonjour, je souhaite un devis pour le modèle Skorpio : https://cattelanitalia.ma/modeles/skorpio/');
   assert.equal(modelWhatsappMessage('Greta Outdoor', 'https://cattelan-maroc-preview.cattelan.workers.dev/modeles/greta-outdoor/'),
-    'Bonjour, je souhaite être conseillé sur le modèle Greta Outdoor (cattelan-maroc-preview.cattelan.workers.dev/modeles/greta-outdoor/).');
+    'Bonjour, je souhaite un devis pour le modèle Greta Outdoor : https://cattelan-maroc-preview.cattelan.workers.dev/modeles/greta-outdoor/');
 });
 
 test('adds the message to the WhatsApp link stored in the CMS', () => {

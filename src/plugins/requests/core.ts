@@ -6,8 +6,10 @@ export const PROJECT_TYPES = ["Appartement", "Villa", "Bureaux", "Hôtel", "Rest
 export const PERIODS = { matin: "Matin", "apres-midi": "Après-midi" } as const;
 export const STAGES = ["Esquisse", "Avant-projet", "Choix du mobilier", "Chantier en cours"] as const;
 export const DEADLINES = ["Moins de 3 mois", "3 à 6 mois", "6 à 12 mois", "Plus de 12 mois"] as const;
-/** The three routes of the Votre projet page. */
+/** Project types of the Votre projet page; "architecte" remains for requests sent before working with an architect became a separate choice. */
 export const ROUTES = { piece: "Un meuble", ensemble: "Une pièce ou toute la maison", architecte: "Avec un architecte" } as const;
+export const PROJECT_ROUTES = ["piece", "ensemble"] as const;
+export const ARCHITECT_LABEL = "Avec un architecte";
 /** Every request is tagged for the CRM: architects use the professional form, everyone else is a private client. */
 export const audience = (request: { kind: string }) => request.kind === "pro" ? "architecte" : "particulier";
 const MAX_DAYS_AHEAD = 180;
@@ -32,7 +34,7 @@ export type ProInput = Common & {
   // Requests saved before the Architectes & projets form have no stage, deadline or models.
   stage?: typeof STAGES[number]; deadline?: typeof DEADLINES[number]; models?: string;
 };
-export type ProjectInput = Common & { kind: "projet"; city: City; route: keyof typeof ROUTES };
+export type ProjectInput = Common & { kind: "projet"; city: City; route: keyof typeof ROUTES; architect?: true };
 export type RequestInput = AppointmentInput | ProInput | ProjectInput;
 export type StoredRequest = RequestInput & {
   schemaVersion: 1;
@@ -98,8 +100,9 @@ export function validateRequest(value: unknown, today: string): RequestInput {
     return { ...common, kind: "pro", company, email, projectType, city: where, stage, deadline, models };
   }
   if (data.kind === "projet") {
-    const route = choice("route", Object.keys(ROUTES) as (keyof typeof ROUTES)[], "INVALID_ROUTE", "Choisissez votre parcours.")!;
-    return { ...common, kind: "projet", city: city()!, route };
+    const route = choice("route", Object.keys(ROUTES) as (keyof typeof ROUTES)[], "INVALID_ROUTE", "Choisissez le type de projet.")!;
+    if (data.architect !== undefined && data.architect !== "" && data.architect !== "oui") throw new InputError("INVALID_ROUTE", "Choisissez le type de projet.");
+    return { ...common, kind: "projet", city: city()!, route, ...(data.architect === "oui" ? { architect: true as const } : {}) };
   }
   throw new InputError("INVALID_INPUT", "Veuillez compléter le formulaire.");
 }
@@ -124,7 +127,7 @@ export function describe(request: RequestInput): [string, string][] {
   if (request.kind === "rendez-vous") {
     rows.push(["Jour souhaité", request.day], ["Moment", PERIODS[request.period]]);
     if (request.city) rows.push(["Ville", request.city]);
-  } else if (request.kind === "projet") rows.push(["Parcours", ROUTES[request.route]], ["Ville", request.city]);
+  } else if (request.kind === "projet") rows.push(["Type de projet", projectLabel(request)], ["Ville", request.city]);
   else {
     rows.push(["Cabinet", request.company], ["E-mail", request.email], ["Type de projet", request.projectType], ["Ville", request.city]);
     if (request.stage) rows.push(["Étape", request.stage]);
@@ -150,6 +153,8 @@ export function notificationEmail(request: StoredRequest, to: string) {
   };
 }
 
+const projectLabel = (r: ProjectInput) => r.architect ? `${ROUTES[r.route]} · ${ARCHITECT_LABEL.toLowerCase()}` : ROUTES[r.route];
+
 export const KIND_LABELS = { "rendez-vous": "Rendez-vous", pro: "Architecte", projet: "Projet particulier" } as const;
 
 export function requestsToCsv(requests: StoredRequest[]): string {
@@ -158,7 +163,7 @@ export function requestsToCsv(requests: StoredRequest[]): string {
     r.requestId, new Date(r.createdAt).toISOString(), KIND_LABELS[r.kind], audience(r), r.name, r.whatsapp,
     r.kind === "pro" ? r.email : "", r.kind === "pro" ? r.company : "", r.kind === "pro" ? r.projectType : "",
     r.kind === "pro" ? r.stage ?? "" : "", r.kind === "pro" ? r.deadline ?? "" : "", r.kind === "pro" ? r.models ?? "" : "",
-    r.kind === "projet" ? ROUTES[r.route] : "", r.city ?? "",
+    r.kind === "projet" ? projectLabel(r) : "", r.city ?? "",
     r.kind === "rendez-vous" ? r.day : "", r.kind === "rendez-vous" ? PERIODS[r.period] : "", r.model || "", r.sourcePath, r.message, r.crmStatus,
   ])].map(row => row.map(csvCell).join(";")).join("\r\n");
 }

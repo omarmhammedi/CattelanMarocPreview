@@ -23,7 +23,7 @@ const questions = page.sections?.filter((section: any) => section.key?.startsWit
     {page.eyebrow && <p class="kick">{page.eyebrow}</p>}
     <h1 {...page.entry?.edit?.title}>{page.title}</h1>
     {page.intro && <p class="page-lead" {...page.entry?.edit?.intro}>{page.intro}</p>}
-    {site.whatsappUrl && <a class="text-link intro-link" href={site.whatsappUrl} target="_blank" rel="noopener noreferrer">{actions.advisor.label}<span aria-hidden="true">↗</span></a>}
+    {site.whatsappUrl && <a class="text-link intro-link" href={site.whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label={`${actions.advisor.label} sur ${actions.advisor.channel}`}>{actions.advisor.label}<span aria-hidden="true">↗</span></a>}
   </section>
   <section class="showroom-information page-gutter">
     <div class="showroom-editorial">
@@ -41,7 +41,7 @@ const questions = page.sections?.filter((section: any) => section.key?.startsWit
       </dl>
       {contactNotes.map((section: any) => <EditorialSection section={section} />)}
       <ShowroomMap embedUrl={site.mapEmbedUrl} mapUrl={site.mapUrl} name={site.name} address={site.address} />
-      {site.whatsappUrl && <a class="text-link" href={site.whatsappUrl} target="_blank" rel="noopener noreferrer">{actions.advisor.label}<span aria-hidden="true">↗</span></a>}
+      {site.whatsappUrl && <a class="text-link" href={site.whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label={`${actions.advisor.label} sur ${actions.advisor.channel}`}>{actions.advisor.label}<span aria-hidden="true">↗</span></a>}
     </aside>
   </section>
   {questions.length > 0 && <section class="page-faq page-gutter">
@@ -49,8 +49,8 @@ const questions = page.sections?.filter((section: any) => section.key?.startsWit
     <div>{questions.map((question: any) => questionHeading(question) ? <details data-page-reveal><summary>{questionHeading(question)}<span aria-hidden="true">+</span></summary><EditorialSection section={question} showHeading={false} /></details> : <EditorialSection section={question} showHeading={false} />)}</div>
   </section>}
   <section class="page-cta page-gutter showroom-appointment" id="rendez-vous" aria-labelledby="rendez-vous-heading" data-page-reveal>
-    <h2 id="rendez-vous-heading">Un conseiller pour votre visite</h2>
-    <p>Choisissez un jour et un moment : votre conseiller vous confirme l’heure sur WhatsApp et prépare les modèles et les échantillons que vous voulez voir.</p>
+    <h2 id="rendez-vous-heading">Rendez-vous</h2>
+    <p>Nous vous confirmerons l’horaire sur WhatsApp.</p>
     <RequestForm id="appointment" kind="rendez-vous" site={site} />
     <div class="showroom-appointment-actions"><SiteActions order={['advisor', 'catalogue']} advisorHref={whatsappHref(site.whatsappUrl, generalWhatsappMessage)} /></div>
   </section>

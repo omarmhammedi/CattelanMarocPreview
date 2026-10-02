@@ -1,7 +1,7 @@
 /** The site's only calls to action, in order of importance. */
 export const actions = {
   appointment: { label: 'Prendre rendez-vous', href: '/showroom-casablanca/#rendez-vous' },
-  advisor: { label: 'Écrire sur WhatsApp' },
+  advisor: { label: 'Nous écrire', channel: 'WhatsApp' },
   catalogue: { label: 'Recevoir le catalogue', href: '/catalogue/' },
 } as const;
 export type ActionKey = keyof typeof actions;
@@ -16,7 +16,7 @@ export function filesWhatsappMessage(model: string): string {
 }
 
 export function modelWhatsappMessage(model: string, pageUrl: string): string {
-  return `Bonjour, je souhaite être conseillé sur le modèle ${model} (${pageUrl.replace(/^https?:\/\//u, '')}).`;
+  return `Bonjour, je souhaite un devis pour le modèle ${model} : ${pageUrl}`;
 }
 
 /** The CMS stores the bare chat link; each page adds its own message. Anything but a WhatsApp chat link is refused. */

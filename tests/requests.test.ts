@@ -43,6 +43,14 @@ test('accepts a private project with its route and city; every request is tagged
   assert.deepEqual(describe(input).slice(0, 1), [['Public', 'particulier']]);
 });
 
+test('working with an architect is a separate choice from the project type', () => {
+  const input = validateRequest({ ...project, route: 'piece', architect: 'oui' }, '2026-10-01');
+  assert.equal(input.kind === 'projet' && input.architect, true);
+  assert(describe(input).some(([label, value]) => label === 'Type de projet' && value === 'Un meuble · avec un architecte'));
+  assert.equal('architect' in validateRequest(project, '2026-10-01'), false);
+  assert.throws(() => validateRequest({ ...project, architect: 'peut-être' }, '2026-10-01'));
+});
+
 test('refuses incomplete or invalid requests with a field code', () => {
   const code = (change: Record<string, unknown>, base: Record<string, unknown> = appointment) => {
     try { validateRequest({ ...base, ...change }, '2026-10-01'); return 'accepted'; } catch (error) { return (error as { code: string }).code; }

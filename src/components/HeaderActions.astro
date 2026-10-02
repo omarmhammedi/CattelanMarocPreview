@@ -3,7 +3,7 @@ import { actions } from '../lib/actions';
 interface Props { advisorHref?: string | null; path?: string; variant?: 'bar' | 'menu'; }
 const { advisorHref, path = '', variant = 'bar' } = Astro.props;
 const onCatalogue = path.startsWith(actions.catalogue.href) ? 'page' : undefined;
-const advisorName = `${actions.advisor.label} sur WhatsApp`;
+const advisorName = `${actions.advisor.label} sur ${actions.advisor.channel}`;
 ---
 {variant === 'bar' ? <>
   <a class="header-catalogue" href={actions.catalogue.href} aria-current={onCatalogue}>Catalogue</a>

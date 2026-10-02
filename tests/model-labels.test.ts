@@ -10,6 +10,20 @@ test('explains the observed metal and upholstery categories without implying ano
   assert.equal(finishGroupLabel({group: 'assise/dossier', material: 'Tissu outdoor'}), 'Assise et dossier — tissu Outdoor');
 });
 
+test('names parts as the editorial audit asks, per model where needed', () => {
+  assert.equal(finishGroupLabel({group: 'assise', materialGroup: 'Tissu Chaise/Lit', material: 'micro-nubuck'}), 'Revêtement — micro-nubuck');
+  assert.equal(finishGroupLabel({group: 'revêtement', materialGroup: 'Tissu Chaise/Lit', material: 'micro-nubuck'}), 'Revêtement — micro-nubuck');
+  assert.equal(finishGroupLabel({group: 'pieds', material: 'metals'}), 'Piètement — métal');
+  assert.equal(finishGroupLabel({group: 'ballast', material: 'metals'}, 'nautilus'), 'Lest — métal');
+  assert.equal(finishGroupLabel({group: 'ballast', material: 'metals'}, 'botero-keramik-round'), 'Plaque stabilisatrice — métal');
+  assert.equal(finishGroupLabel({group: 'pièces', material: 'céramique KS'}, 'botero-ker-wood-round'), 'Disque central — céramique KS');
+  assert.equal(finishGroupLabel({group: 'pièces', material: 'bois'}, 'amsterdam'), 'Inserts — bois');
+  assert.equal(finishGroupLabel({group: 'structure', material: 'Argile'}, 'botero-argile'), 'Plateau et piètement — finition Argile');
+  assert.equal(finishGroupLabel({group: 'base', material: 'Argile'}, 'botero-wood-round'), 'Piètement — finition Argile');
+  assert.equal(finishGroupLabel({material: 'verre'}, 'cosmos'), 'Verre miroité');
+  assert.equal(finishGroupLabel({group: 'top', material: 'verre'}, 'amsterdam'), 'Plateau — verre');
+});
+
 test('does not discard editorial or future unknown material categories', () => {
   assert.equal(finishGroupLabel({group: 'Panneau spécial', materialGroup: 'Nuancier nouveau', material: 'Finition personnalisée'}), 'Panneau spécial — Nuancier nouveau — Finition personnalisée');
   assert.equal(finishGroupLabel({group: 'assise', materialGroup: 'Tissu Canapé', material: 'T99'}), 'Assise — Tissu Canapé — T99');

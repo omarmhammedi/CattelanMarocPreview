@@ -1,5 +1,5 @@
 ---
-import { CITIES, DEADLINES, PERIODS, PROJECT_TYPES, ROUTES, STAGES, casablancaToday } from '../plugins/requests/core';
+import { ARCHITECT_LABEL, CITIES, DEADLINES, PERIODS, PROJECT_ROUTES, PROJECT_TYPES, ROUTES, STAGES, casablancaToday } from '../plugins/requests/core';
 import { getSite } from '../lib/content';
 import { privacyNotice } from '../lib/privacy';
 interface Props { id: string; kind: 'rendez-vous' | 'pro' | 'projet'; site?: { publicEmail?: string; cndpReceipt?: string }; }
@@ -7,7 +7,7 @@ const { id, kind } = Astro.props;
 const site = Astro.props.site ?? await getSite();
 const today = casablancaToday();
 const success = kind === 'rendez-vous'
-  ? 'Votre demande est enregistrée. Un conseiller vous confirme le rendez-vous sur WhatsApp.'
+  ? 'Demande reçue. Nous vous confirmerons l’horaire sur WhatsApp.'
   : kind === 'projet'
     ? 'Votre demande est enregistrée. Un conseiller vous écrit sur WhatsApp ; vous pourrez lui envoyer des photos de la pièce.'
     : 'Votre demande est enregistrée. Un conseiller vous recontacte sur WhatsApp ou par e-mail.';
@@ -22,14 +22,15 @@ const field = (name: string) => ({ id: `${id}-${name}`, name, 'aria-describedby'
   <noscript><p>Activez JavaScript pour envoyer ce formulaire, ou écrivez-nous sur WhatsApp au +212 771 105 490.</p><style>.request-form button[type=submit]{display:none}</style></noscript>
   <div class="request-fields">
     <div><label for={`${id}-name`}>Nom</label><input {...field('name')} autocomplete="name" required minlength="2" maxlength="120" /><span class="field-error" id={`${id}-name-error`} data-field-error="name" hidden></span></div>
-    {kind === 'projet' && <fieldset class="request-choice request-wide" aria-describedby={`${id}-route-error`}><legend>Votre parcours</legend>
-      {Object.entries(ROUTES).map(([value, label], index) => <label><input type="radio" name="route" value={value} required checked={index === 0} /><span>{label}</span></label>)}
+    {kind === 'projet' && <fieldset class="request-choice request-wide" aria-describedby={`${id}-route-error`}><legend>Type de projet</legend>
+      {PROJECT_ROUTES.map((value, index) => <label><input type="radio" name="route" value={value} required checked={index === 0} /><span>{ROUTES[value]}</span></label>)}
+      <label class="request-option"><input type="checkbox" name="architect" value="oui" /><span>{ARCHITECT_LABEL}</span></label>
       <span class="field-error" id={`${id}-route-error`} data-field-error="route" hidden></span></fieldset>}
-    {kind === 'pro' && <div><label for={`${id}-company`}>Cabinet</label><input {...field('company')} autocomplete="organization" required minlength="2" maxlength="120" /><span class="field-error" id={`${id}-company-error`} data-field-error="company" hidden></span></div>}
-    <div><label for={`${id}-whatsapp`}>WhatsApp</label><input {...field('whatsapp')} type="tel" autocomplete="tel" inputmode="tel" required maxlength="30" placeholder="+212 6…" /><span class="field-error" id={`${id}-whatsapp-error`} data-field-error="whatsapp" hidden></span></div>
+    {kind === 'pro' && <div><label for={`${id}-company`}>Cabinet ou société</label><input {...field('company')} autocomplete="organization" required minlength="2" maxlength="120" /><span class="field-error" id={`${id}-company-error`} data-field-error="company" hidden></span></div>}
+    <div><label for={`${id}-whatsapp`}>Numéro WhatsApp</label><input {...field('whatsapp')} type="tel" autocomplete="tel" inputmode="tel" required maxlength="30" placeholder="+212 6…" /><span class="field-error" id={`${id}-whatsapp-error`} data-field-error="whatsapp" hidden></span></div>
     {kind === 'pro' && <div><label for={`${id}-email`}>E-mail</label><input {...field('email')} type="email" autocomplete="email" required maxlength="254" /><span class="field-error" id={`${id}-email-error`} data-field-error="email" hidden></span></div>}
     {kind === 'rendez-vous' && <div><label for={`${id}-day`}>Jour souhaité</label><input {...field('day')} type="date" min={today} required /><span class="field-error" id={`${id}-day-error`} data-field-error="day" hidden></span></div>}
-    {kind === 'rendez-vous' && <fieldset class="request-choice" aria-describedby={`${id}-period-error`}><legend>Moment</legend>
+    {kind === 'rendez-vous' && <fieldset class="request-choice" aria-describedby={`${id}-period-error`}><legend>Moment souhaité</legend>
       {Object.entries(PERIODS).map(([value, label], index) => <label><input type="radio" name="period" value={value} required checked={index === 0} /><span>{label}</span></label>)}
       <span class="field-hint">Le lundi, le showroom ouvre à 12 h.</span>
       <span class="field-error" id={`${id}-period-error`} data-field-error="period" hidden></span></fieldset>}

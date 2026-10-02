@@ -5,7 +5,7 @@ const familyTypes: Record<string, string> = {
 };
 // Where the family name is not specific enough.
 const modelTypes: Record<string, string> = {
-  'ruby-lounge': 'Fauteuil', airport: 'Bibliothèque', nautilus: 'Bibliothèque', chelsea: 'Buffet', kayak: 'Bahut', amsterdam: 'Bahut',
+  'ruby-lounge': 'Fauteuil', airport: 'Bibliothèque', nautilus: 'Bibliothèque', chelsea: 'Buffet', kayak: 'Buffet', amsterdam: 'Buffet',
   cosmos: 'Miroir', glenn: 'Miroir', paris: 'Suspension', cloudine: 'Suspension', aladdin: 'Suspension',
   'napoleon-keramik-outdoor': 'Table d’extérieur', 'greta-outdoor': 'Chaise d’extérieur',
 };

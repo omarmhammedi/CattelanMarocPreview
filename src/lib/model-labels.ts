@@ -10,14 +10,24 @@ const parts: Record<string, string> = {
   base: 'Piètement', plateau: 'Plateau', 'Plateau et base': 'Plateau et base',
   structure: 'Structure', conteneur: 'Caisson', 'étagères': 'Étagères',
   pièces: 'Pièces', 'assise/dossier': 'Assise et dossier', assise: 'Assise', revêtement: 'Revêtement',
+  pieds: 'Piètement', top: 'Plateau', portes: 'Portes', ballast: 'Lest', diffuseur: 'Diffuseur',
+};
+
+/** Parts whose name depends on the model, from the editorial audit of October 2026. */
+const modelParts: Record<string, Record<string, string>> = {
+  'botero-keramik-round': {ballast: 'Plaque stabilisatrice'},
+  'botero-ker-wood-round': {pièces: 'Disque central'},
+  amsterdam: {pièces: 'Inserts'},
+  'botero-argile': {structure: 'Plateau et piètement'},
 };
 
 /** Presentation only: preserve the imported values and leave unfamiliar categories intact. */
-export function finishGroupLabel(finish: FinishLabel): string {
+export function finishGroupLabel(finish: FinishLabel, model = ''): string {
   const group = finish.group?.trim() || '';
   const category = finish.materialGroup?.trim() || '';
   const material = finish.material?.trim() || '';
-  let materialLabel = material === 'metals' ? 'métal' : material === 'Tissu outdoor' ? 'tissu Outdoor' : material;
+  let materialLabel = material === 'metals' ? 'métal' : material === 'Tissu outdoor' ? 'tissu Outdoor' : material === 'Argile' ? 'finition Argile' : material;
+  if (!group && !category && material === 'verre') return 'Verre miroité';
   let knownCategory = false;
   if (category === 'Tissu Canapé' && /^T[1-9]0$/.test(material)) {
     materialLabel = `tissu ${material}`;
@@ -28,11 +38,11 @@ export function finishGroupLabel(finish: FinishLabel): string {
   } else if (category === 'Cuir Chaise/Lit' && ['cuir mince', 'cuir mince glove', 'simili cuir'].includes(material)) {
     materialLabel = material === 'simili cuir' ? 'similicuir' : material;
     knownCategory = true;
-  } else if (category === 'Tissu Chaise/Lit' && ['Tissu chaises/lits', 'micro nubuck'].includes(material)) {
+  } else if (category === 'Tissu Chaise/Lit' && ['Tissu chaises/lits', 'micro nubuck', 'micro-nubuck'].includes(material)) {
     materialLabel = material === 'Tissu chaises/lits' ? 'tissu' : material;
     knownCategory = true;
   }
-  const part = group === 'assise' && knownCategory ? 'Revêtement' : parts[group] || group;
+  const part = modelParts[model]?.[group] || (group === 'assise' && knownCategory ? 'Revêtement' : parts[group] || group);
   return [...new Set([part, knownCategory ? '' : category, materialLabel].filter(Boolean))].join(' — ');
 }
 
