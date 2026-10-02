@@ -11,6 +11,7 @@
 import assert from 'node:assert/strict';
 import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { authenticatedApi } from './0014-site-strategy-pages.mjs';
 import { portableText } from './0016-new-families.mjs';
@@ -98,8 +99,26 @@ export function collectKnown(sources) {
     for (const [key, item] of Object.entries(value)) if (key !== 'data') walk(item, collections.includes(key) ? key : own);
   };
   for (const source of sources) walk(source, null);
+  // Every string and every line this project ever wrote, wherever it sits in a manifest or an earlier seed:
+  // a text whose lines all appear here was written by this project, not by an editor.
+  const all = new Set();
+  const collect = value => {
+    if (typeof value === 'string') { all.add(value.trim()); for (const line of value.split('\n')) all.add(line.trim()); return; }
+    if (!value || typeof value !== 'object') return;
+    if (Array.isArray(value) && value.some(item => item?._type === 'block')) { for (const line of textOf(value).split('\n')) all.add(line.trim()); return; }
+    for (const item of Object.values(value)) collect(item);
+  };
+  sources.forEach(collect);
+  all.delete('');
+  known.all = all;
   return known;
 }
+
+/** True when every line of a text was written by this project. */
+export const ours = (known, text) => {
+  const lines = String(text ?? '').split('\n').map(line => line.trim()).filter(Boolean);
+  return lines.length > 0 && lines.every(line => known.all?.has(line));
+};
 
 const knownFor = (known, collection, slug) => {
   const exact = known.get(`${collection}/${slug}`), loose = known.get(`*/${slug}`);
@@ -121,18 +140,18 @@ export function itemChange(item, entry, known) {
       const current = textOf(data.content);
       const target = bodyOf(entry.slug, value);
       if (current === textOf(target)) continue;
-      if (current === '' || versions.fields.get('content')?.has(current)) { data.content = target; changed.push('content'); }
+      if (current === '' || versions.fields.get('content')?.has(current) || ours(known, current)) { data.content = target; changed.push('content'); }
       else kept.push('content');
       continue;
     }
     const current = data[field] ?? null;
     if (current === value) continue;
-    if (current === null || current === '' || versions.fields.get(field)?.has(current)) { data[field] = value; changed.push(field); }
+    if (current === null || current === '' || versions.fields.get(field)?.has(current) || ours(known, current)) { data[field] = value; changed.push(field); }
     else kept.push(field);
   }
   if (entry.fields?.seo_title) {
     const native = item.seo?.title ?? null;
-    if (native && native !== entry.fields.seo_title && (versions.fields.get('seo_title')?.has(native))) nativeTitle = entry.fields.seo_title;
+    if (native && native !== entry.fields.seo_title && (versions.fields.get('seo_title')?.has(native) || ours(known, native))) nativeTitle = entry.fields.seo_title;
   }
   if (entry.sections) {
     const sections = (data.sections || []).map(section => ({ ...section }));
@@ -150,7 +169,7 @@ export function itemChange(item, entry, known) {
       for (const field of ['heading', 'text', 'cta_label']) {
         if (update[field] === undefined || section[field] === update[field]) continue;
         const current = section[field] ?? '';
-        if (current === '' || versions.sections.get(`${key}.${field}`)?.has(current)) { section[field] = update[field]; changed.push(`sections.${key}.${field}`); }
+        if (current === '' || versions.sections.get(`${key}.${field}`)?.has(current) || ours(known, current)) { section[field] = update[field]; changed.push(`sections.${key}.${field}`); }
         else kept.push(`sections.${key}.${field}`);
       }
     }
@@ -160,8 +179,16 @@ export function itemChange(item, entry, known) {
   return { data, nativeTitle, changed, kept };
 }
 
+/** Every committed version of the seed: texts this project wrote and later replaced. */
+function seedHistory() {
+  try {
+    const revisions = execFileSync('git', ['log', '--format=%H', '--', 'seed/seed.json'], { cwd: root, encoding: 'utf8' }).split('\n').filter(Boolean);
+    return revisions.map(rev => JSON.parse(execFileSync('git', ['show', `${rev}:seed/seed.json`], { cwd: root, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 })).content);
+  } catch { return []; }
+}
+
 export async function loadSources(exclude = manifestFile) {
-  const sources = [JSON.parse(await readFile(join(root, 'seed/seed.json'), 'utf8')).content];
+  const sources = [JSON.parse(await readFile(join(root, 'seed/seed.json'), 'utf8')).content, ...seedHistory()];
   for (const name of (await readdir(join(root, 'content'))).sort()) {
     if (!name.endsWith('.json') || name === exclude) continue;
     sources.push(JSON.parse(await readFile(join(root, 'content', name), 'utf8')));

@@ -54,3 +54,11 @@ test('bodies are stable portable text', () => {
   assert.deepEqual(bodyOf('tables', pairs), bodyOf('tables', pairs));
   assert.equal(textOf(bodyOf('tables', pairs)).split('\n').length, pairs.length * 2);
 });
+
+test('a text whose every line this project wrote counts as ours; an edited line does not', async () => {
+  const { ours } = await import('../scripts/migrations/0021-copy-v2.mjs');
+  const local = collectKnown([{ notes: { a: 'Première phrase écrite par le projet.', b: 'Seconde phrase, ailleurs.' } }]);
+  assert.equal(ours(local, 'Première phrase écrite par le projet.\nSeconde phrase, ailleurs.'), true);
+  assert.equal(ours(local, 'Première phrase écrite par le projet.\nUne phrase de la cliente.'), false);
+  assert.equal(ours(local, ''), false);
+});
