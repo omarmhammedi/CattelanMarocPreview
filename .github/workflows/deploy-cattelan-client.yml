@@ -22,7 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      CLOUDFLARE_ENV: cattelan-client
       RAYON_NUM_THREADS: "1"
       NODE_OPTIONS: --max-old-space-size=2048
     steps:
@@ -39,6 +38,9 @@ jobs:
       - name: Build
         run: npm run build
         env:
+          # Only the build needs the environment name (same as npm run deploy:client).
+          # Do not set it on the deploy step: wrangler would add it to the Worker name.
+          CLOUDFLARE_ENV: cattelan-client
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
 
       - name: Check Cloudflare target
