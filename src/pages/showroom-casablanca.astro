@@ -49,7 +49,7 @@ const questions = page.sections?.filter((section: any) => section.key?.startsWit
     <div>{questions.map((question: any) => questionHeading(question) ? <details data-page-reveal><summary>{questionHeading(question)}<span aria-hidden="true">+</span></summary><EditorialSection section={question} showHeading={false} /></details> : <EditorialSection section={question} showHeading={false} />)}</div>
   </section>}
   <section class="page-cta page-gutter showroom-appointment" id="rendez-vous" aria-labelledby="rendez-vous-heading" data-page-reveal>
-    <h2 id="rendez-vous-heading">Réserver un conseiller</h2>
+    <h2 id="rendez-vous-heading">Un conseiller pour votre visite</h2>
     <p>Choisissez un jour et un moment : votre conseiller vous confirme l’heure sur WhatsApp et prépare les modèles et les échantillons que vous voulez voir.</p>
     <RequestForm id="appointment" kind="rendez-vous" site={site} />
     <div class="showroom-appointment-actions"><SiteActions order={['advisor', 'catalogue']} advisorHref={whatsappHref(site.whatsappUrl, generalWhatsappMessage)} /></div>

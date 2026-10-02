@@ -9,7 +9,7 @@ if (!page) return new Response('Page introuvable', { status: 404 });
 ---
 <ServicePage page={page} site={site} order={['appointment', 'advisor', 'catalogue']} whatsappMessage={professionalWhatsappMessage}>
   <Fragment slot="form">
-    <h2>Présenter un projet</h2>
+    <h2>Votre projet en quelques lignes</h2>
     <p>Le type de projet, la ville, l’étape et l’échéance suffisent pour commencer. Un conseiller vous répond avec les fiches techniques et les finitions des modèles concernés.</p>
     <RequestForm id="pro-request" kind="pro" site={site} />
   </Fragment>

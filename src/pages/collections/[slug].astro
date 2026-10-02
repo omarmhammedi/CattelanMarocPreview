@@ -33,7 +33,7 @@ if (!family) return new Response('Collection introuvable', { status: 404 });
     <a href={`/journal/${family.relatedPost.slug}/`}><h2>{family.relatedPost.title}</h2><span class="text-link">{site.labels.readArticle} <span aria-hidden="true">↗</span></span></a>
   </section>}
   <section class="page-cta page-gutter" data-page-reveal>
-    <h2 class="page-cta-heading">Les voir au showroom</h2>
+    <h2 class="page-cta-heading">Au showroom de Casablanca</h2>
     <SiteActions order={['appointment', 'advisor']} advisorHref={whatsappHref(site.whatsappUrl, generalWhatsappMessage)} />
   </section>
 </PageLayout>
