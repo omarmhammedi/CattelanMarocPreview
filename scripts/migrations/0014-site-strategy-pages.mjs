@@ -118,9 +118,17 @@ export async function authenticatedApi(origin, allowed = allowedPaths) {
   }
   return async (path, { method = 'GET', data, form } = {}) => {
     assert(allowed.test(path), `Refused path ${path}.`);
-    const response = await fetch(new URL(path, origin), { method, redirect: 'error', signal: AbortSignal.timeout(90_000),
+    const send = () => fetch(new URL(path, origin), { method, redirect: 'error', signal: AbortSignal.timeout(90_000),
       headers: { ...headers, Origin: origin.origin, 'X-EmDash-Request': '1', ...(data === undefined ? {} : { 'Content-Type': 'application/json' }) },
       ...(form ? { body: form } : data === undefined ? {} : { body: JSON.stringify(data) }) });
+    let response = await send();
+    // A heavy admin read or an image upload can exceed the Worker's CPU limit (HTTP 503). Reads are safe to repeat,
+    // and so are media uploads, which deduplicate by content hash; other writes never are.
+    const repeatable = method === 'GET' || (method === 'POST' && path === '/_emdash/api/media' && form?.get?.('deduplicate') === 'true');
+    for (let attempt = 1; repeatable && response.status === 503 && attempt <= 6; attempt++) {
+      await new Promise(resolve => setTimeout(resolve, 1500 * attempt));
+      response = await send();
+    }
     const body = await response.json().catch(() => ({}));
     assert(response.ok && body.success !== false, `${method} ${path}: HTTP ${response.status} ${body.error?.message || ''}`);
     return body.data;
