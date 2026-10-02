@@ -5,6 +5,7 @@ import {PortableText} from 'emdash/ui';
 import SiteActions from './SiteActions.astro';
 import { filesWhatsappMessage, whatsappHref } from '../lib/actions';
 import {finishGroupLabel, finishHasSeparateCode, finishNameLabel} from '../lib/model-labels';
+import { modelType } from '../lib/model-seo';
 
 interface Picture {
   src: string;
@@ -56,7 +57,7 @@ interface Props {
     href?: string;
   };
   site: any;
-  families?: {title: string; href: string}[];
+  families?: {title: string; href: string; slug?: string; shortTitle?: string}[];
   advisorHref?: string | null;
 }
 
@@ -64,16 +65,17 @@ const {model, site, families = [], advisorHref} = Astro.props;
 const family = families.find(item => item.title && item.href);
 const collectionLabel = site.labels?.collections || 'Collections';
 // Terms stated in the project FAQ (Personnalisation, Livraison); they apply to every catalogue model.
-const services = ['Sur commande, fabriqué en Italie', 'Délai 10 à 12 semaines', 'Personnalisable', 'Livraison partout au Maroc, offerte à Casablanca', 'Installation incluse'];
+const services = ['Sur commande, fabriqué en Italie en 10 à 12 semaines', 'Livraison et installation partout au Maroc, livraison offerte à Casablanca'];
 const filesHref = whatsappHref(site.whatsappUrl, filesWhatsappMessage(model.title));
-const advisorLabel = `Être conseillé sur ${model.title}`;
-const sourceUrl = model.source_url || model.officialUrl;
+const advisorLabel = 'Demander un devis sur WhatsApp';
 const modelNotice = String(site.modelNotice || '').trim();
 const gallery = (model.gallery || []).filter(picture => picture?.src);
 const dimensions = (model.dimensions || []).filter(item => item.value || item.seats || item.largeSeats);
 const drawings = (model.drawings || []).filter(item => item.image?.src).sort((a, b) =>
   (Number(a.row) || 0) - (Number(b.row) || 0) || (Number(a.column) || 0) - (Number(b.column) || 0));
 const hasTechnical = dimensions.length > 0 || drawings.length > 0 || Boolean(model.technicalSheet?.src);
+// Captions that only restate the source ("Dimensions en cm, d’après la fiche produit (1/5)", "Airport — plan 2") are shown once below the drawings.
+const genericDrawingLabel = (label: string) => /^Dimensions en cm/i.test(label) || label.startsWith(`${model.title} — plan `) || label.startsWith(`${model.title} — dessin technique`);
 const finishGroups = new Map<string, {label: string; finishes: Finish[]}>();
 // Match the two/three/four-column grid, including the width of a contained
 // image within its 1.25-ratio frame. Keep DPR 2 detail at normal desktop widths;
@@ -96,21 +98,21 @@ for (const finish of model.finishes || []) {
     <nav class="model-breadcrumb" aria-label="Fil d’Ariane">
       <ol>
         <li><a href="/collections/">{collectionLabel}</a></li>
-        {family && <li><a href={family.href}>{family.title}</a></li>}
+        {family && <li><a href={family.href}>{family.shortTitle || family.title}</a></li>}
         <li aria-current="page">{model.title}</li>
       </ol>
     </nav>
     <div class:list={['model-hero-grid', {'model-hero-with-image': !!model.image?.src}]}>
       <div class="model-hero-copy">
-        <p class="kick">{site.name}</p>
+        <p class="kick">{modelType(model.slug || '', family?.slug)} · Cattelan Italia</p>
         <h1 {...model.entry?.edit?.title}>{model.title}</h1>
         {model.onDisplay && <p class="model-on-display" {...model.entry?.edit?.on_display}>Exposé au showroom de Casablanca</p>}
-        <ul class="model-services" aria-label="Services">{services.map(service => <li>{service}</li>)}</ul>
         {model.description && <p class="page-lead" {...model.entry?.edit?.description}>{model.description}</p>}
         {model.year && <dl class="model-year"><div><dt>Année</dt><dd>{model.year}</dd></div></dl>}
         {model.availabilityNote && <p class="page-note model-availability">{model.availabilityNote}</p>}
         <SiteActions order={['appointment', 'advisor']} advisorHref={advisorHref} advisorLabel={advisorLabel} model={model.slug} />
-        {filesHref && !hasTechnical && <a class="text-link model-files-request" href={filesHref} target="_blank" rel="noopener noreferrer">Fichiers 2D et 3D sur demande <span class="model-file-format">WhatsApp</span><span aria-hidden="true">↗</span></a>}
+        <p class="model-services">{services.join(' · ')}</p>
+        {filesHref && !hasTechnical && <a class="text-link model-files-request" href={filesHref} target="_blank" rel="noopener noreferrer">Demander les fichiers 2D et 3D<span aria-hidden="true">↗</span></a>}
       </div>
       {model.image?.src && <figure class="model-hero-figure">
         <div class="page-image model-hero-image"><img {...imageAttributes(model.image, '(max-width: 850px) 100vw, 54vw', 1600)} alt={model.image.alt || model.title} fetchpriority="high" /></div>
@@ -156,11 +158,12 @@ for (const finish of model.finishes || []) {
       <h3>Plans et détails</h3>
       <div class="model-drawings-grid">{drawings.map(drawing => <figure data-page-reveal>
         <div class="model-dimension-drawing"><img src={drawing.image.src} alt={drawing.image.alt || `${model.title} — ${drawing.label || 'dessin technique'}`} width={drawing.image.width} height={drawing.image.height} loading="lazy" /></div>
-        {drawing.label && <figcaption class="page-note">{drawing.label}</figcaption>}
+        {drawing.label && !genericDrawingLabel(drawing.label) && <figcaption class="page-note">{drawing.label}</figcaption>}
       </figure>)}</div>
+      <p class="page-note model-drawings-note">Dimensions en cm, d’après la fiche technique Cattelan Italia.</p>
     </div>}
     {model.technicalSheet?.src && <a class="text-link model-technical-download" href={model.technicalSheet.src} download={model.technicalSheet.filename || true}>{model.technicalSheetLabel || 'Télécharger la fiche technique'} <span class="model-file-format">PDF</span><span aria-hidden="true">↓</span></a>}
-    {filesHref && <a class="text-link model-files-request" href={filesHref} target="_blank" rel="noopener noreferrer">Fichiers 2D et 3D sur demande <span class="model-file-format">WhatsApp</span><span aria-hidden="true">↗</span></a>}
+    {filesHref && <a class="text-link model-files-request" href={filesHref} target="_blank" rel="noopener noreferrer">Demander les fichiers 2D et 3D<span aria-hidden="true">↗</span></a>}
   </section>}
 
   {finishGroups.size > 0 && <section class="page-gutter model-finishes" aria-labelledby="model-finishes-heading">
@@ -178,8 +181,6 @@ for (const finish of model.finishes || []) {
       </ul>
     </details>)}
   </section>}
-
-  {sourceUrl && <aside class="page-gutter model-source"><a class="text-link" href={sourceUrl} target="_blank" rel="noopener noreferrer">Voir la fiche Cattelan Italia<span aria-hidden="true">↗</span></a></aside>}
 
   <section class="page-cta page-gutter model-project" data-page-reveal>
     <SiteActions order={['appointment', 'advisor']} advisorHref={advisorHref} advisorLabel={advisorLabel} model={model.slug} />

@@ -1,7 +1,7 @@
 /** The site's only calls to action, in order of importance. */
 export const actions = {
   appointment: { label: 'Prendre rendez-vous', href: '/showroom-casablanca/#rendez-vous' },
-  advisor: { label: 'Échanger avec un conseiller' },
+  advisor: { label: 'Écrire sur WhatsApp' },
   catalogue: { label: 'Recevoir le catalogue', href: '/catalogue/' },
 } as const;
 export type ActionKey = keyof typeof actions;

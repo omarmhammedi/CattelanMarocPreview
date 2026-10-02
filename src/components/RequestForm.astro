@@ -31,6 +31,7 @@ const field = (name: string) => ({ id: `${id}-${name}`, name, 'aria-describedby'
     {kind === 'rendez-vous' && <div><label for={`${id}-day`}>Jour souhaité</label><input {...field('day')} type="date" min={today} required /><span class="field-error" id={`${id}-day-error`} data-field-error="day" hidden></span></div>}
     {kind === 'rendez-vous' && <fieldset class="request-choice" aria-describedby={`${id}-period-error`}><legend>Moment</legend>
       {Object.entries(PERIODS).map(([value, label], index) => <label><input type="radio" name="period" value={value} required checked={index === 0} /><span>{label}</span></label>)}
+      <span class="field-hint">Le lundi, le showroom ouvre à 12 h.</span>
       <span class="field-error" id={`${id}-period-error`} data-field-error="period" hidden></span></fieldset>}
     {selects.map(item => <div><label for={`${id}-${item.name}`}>{item.label}</label><select {...field(item.name)} required={item.required}><option value="">Choisir</option>{item.options.map(value => <option>{value}</option>)}</select><span class="field-error" id={`${id}-${item.name}-error`} data-field-error={item.name} hidden></span></div>)}
     {kind === 'pro' && <div class="request-wide"><label for={`${id}-models`}>Modèles envisagés (facultatif)</label><input {...field('models')} maxlength="300" placeholder="Butterfly Keramik, Craig…" /><span class="field-error" id={`${id}-models-error`} data-field-error="models" hidden></span></div>}
@@ -107,6 +108,7 @@ const field = (name: string) => ({ id: `${id}-${name}`, name, 'aria-describedby'
   .request-message, .request-wide { grid-column: 1 / -1; }
   .request-choice { margin: 0; padding: 0; border: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
   .request-choice legend { float: left; width: 100%; }
+  .request-choice .field-hint { flex-basis: 100%; font-size: 12px; line-height: 1.5; color: var(--faint); }
   .request-choice label { position: relative; cursor: pointer; }
   .request-choice input { position: absolute; opacity: 0; }
   .request-choice span { display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border: 1px solid var(--hair); font-size: 14px; color: var(--muted); }

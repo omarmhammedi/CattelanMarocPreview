@@ -7,7 +7,7 @@ export const PERIODS = { matin: "Matin", "apres-midi": "Après-midi" } as const;
 export const STAGES = ["Esquisse", "Avant-projet", "Choix du mobilier", "Chantier en cours"] as const;
 export const DEADLINES = ["Moins de 3 mois", "3 à 6 mois", "6 à 12 mois", "Plus de 12 mois"] as const;
 /** The three routes of the Votre projet page. */
-export const ROUTES = { piece: "Une pièce", ensemble: "Une pièce entière ou toute la maison", architecte: "Avec un architecte" } as const;
+export const ROUTES = { piece: "Un meuble", ensemble: "Une pièce ou toute la maison", architecte: "Avec un architecte" } as const;
 /** Every request is tagged for the CRM: architects use the professional form, everyone else is a private client. */
 export const audience = (request: { kind: string }) => request.kind === "pro" ? "architecte" : "particulier";
 const MAX_DAYS_AHEAD = 180;

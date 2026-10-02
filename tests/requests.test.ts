@@ -98,7 +98,7 @@ test('notification and export carry the request without formula injection', asyn
   assert(requestsToCsv([older as StoredRequest]).includes('"Atelier K"'));
   const { request: privateProject } = await persistRequest(store, validateRequest({ ...project, requestId: '4f2b8c1e-4a5d-4e6f-9a7b-1c2d3e4f5a6b' }, '2026-10-01'));
   assert.equal(notificationEmail(privateProject, 'x@y.ma').subject, 'Projet particulier (Rabat) — Nadia');
-  assert(requestsToCsv([privateProject]).includes('"Une pièce entière ou toute la maison"'));
+  assert(requestsToCsv([privateProject]).includes('"Une pièce ou toute la maison"'));
 });
 
 test('uses the Casablanca calendar date', () => {

@@ -1,0 +1,2941 @@
+{
+ "version": 1,
+ "migration": "0023-copy-v3",
+ "entries": [
+  {
+   "collection": "pages",
+   "slug": "home",
+   "set": {
+    "title": "Le premier showroom Cattelan Italia du Maroc",
+    "eyebrow": "Triangle d’Or · Casablanca",
+    "intro": "400 m² au Triangle d’Or pour voir les pièces et toucher les finitions. Tout le catalogue se commande ici, à vos formats.",
+    "brand_caption": "Skorpio : piètement en acier, plateau en verre.",
+    "showroom_invitation": "Entrez sans rendez-vous.",
+    "meta_description": "Le premier showroom Cattelan Italia du Maroc, au Triangle d’Or : tables, canapés, chaises et luminaires sur commande, livrés et installés partout au Maroc."
+   },
+   "sections": {
+    "brand": {
+     "display_heading": "",
+     "heading": "La table, d’abord.",
+     "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, la maison est installée à Carrè, près de Vicence. Ses tables en restent la signature : un piètement sculpté en acier sous un plateau en verre, en céramique ou en bois. Autour d’elles, elle dessine les chaises, les canapés, les rangements et les luminaires."
+    },
+    "collections": {
+     "display_heading": "",
+     "heading": "Huit familles, des tables aux luminaires.",
+     "text": "Près de quarante modèles, chacun avec ses formats, ses finitions et sa fiche technique en PDF.",
+     "cta_label": "Voir les collections"
+    },
+    "showroom": {
+     "display_heading": "",
+     "heading": "Deux niveaux, au Triangle d’Or.",
+     "text": "Sur 400 m², des salons, des salles à manger et des chambres composés comme chez vous, et les échantillons à comparer côte à côte : céramiques, bois, laques, tissus, cuirs. Avec un rendez-vous, un conseiller vous attend avec les modèles qui vous intéressent. Service de voiturier."
+    },
+    "catalogue": {
+     "display_heading": "",
+     "heading": "Repérez vos modèles avant de venir.",
+     "text": "Toutes les familles et leurs finitions, en PDF, envoyé aussi par e-mail : à garder, ou à transmettre à votre architecte.",
+     "cta_label": "Recevoir le catalogue"
+    },
+    "journal": {
+     "display_heading": "",
+     "heading": "Choisir avec des mesures.",
+     "text": "60 cm par convive, 90 cm de passage, 40 cm jusqu’à la table basse : les mesures à connaître avant de choisir."
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "collections",
+   "set": {
+    "intro": "Près de quarante modèles en huit familles, chacun avec ses formats, ses finitions et sa fiche technique. Exposés ou non, tous se commandent depuis Casablanca."
+   },
+   "replace": [
+    [
+     "Ambiance de salle à manger — visuel provisoire",
+     "Salle à manger Cattelan Italia : table au plateau veiné et chaises claires devant une baie vitrée"
+    ]
+   ],
+   "sections": {
+    "contact": {
+     "heading": "Une pièce a retenu votre attention ?",
+     "text": "Envoyez son nom sur WhatsApp : nous vous disons si elle est exposée, dans quelles finitions elle existe, et nous préparons le devis.",
+     "cta_label": "Écrire sur WhatsApp",
+     "cta_href": "https://wa.me/212771105490"
+    },
+    "professional": {
+     "cta_label": "Voir l’offre architectes",
+     "cta_href": "/professionnels/"
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "showroom-casablanca",
+   "replace": [
+    [
+     "Ouvert en septembre 2026, le showroom présente sur deux niveaux des salles à manger, des salons et des chambres composés comme dans une maison : tables, chaises, canapés, tables basses, buffets, bibliothèques, luminaires et miroirs. Et une large sélection d’échantillons : céramiques, bois, laques, métaux, tissus et cuirs.",
+     "Les pièces sont composées comme dans une maison : une table avec ses chaises et sa suspension, un canapé avec sa table basse. C’est là que l’on juge une hauteur d’assise, la profondeur d’un canapé ou le reflet d’un plateau en verre, ce qu’une photo ne montre pas. Et une large sélection d’échantillons : céramiques, bois, laques, métaux, tissus et cuirs."
+    ]
+   ],
+   "removeBlocks": [
+    "Livraison dans tout le Maroc"
+   ],
+   "sections": {
+    "visit": {
+     "text": "Apportez les dimensions de la pièce et quelques photos : votre conseiller compare avec vous formats et finitions, échantillons en main."
+    },
+    "cities": {
+     "text": "Le choix peut commencer à distance : photos des échantillons, fiches techniques et devis sur WhatsApp. La commande se valide ensuite à distance, ou au showroom si vous passez à Casablanca."
+    },
+    "contact_note": {
+     "remove": true
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "sur-mesure",
+   "set": {
+    "title": "Votre format, vos finitions",
+    "eyebrow": "Sur mesure",
+    "intro": "Chaque modèle existe en plusieurs formats et se commande dans les finitions de votre choix : la longueur d’une table, le décor de son plateau, la laque de son piètement, le revêtement d’un canapé. Sans délai supplémentaire."
+   },
+   "sections": {
+    "options": {
+     "text": "Le format : Napoleon Keramik de 200 à 320 cm, Tyron Keramik rectangulaire, biscuit ou boomerang, Botero de 100 à 180 cm de diamètre.\nLe plateau : 19 céramiques Marmi, du Calacatta au Portoro ; verre clair, extra-clair ou cuit ; noyer Canaletto ou chêne brûlé.\nLe piètement : laques gaufrées titane, bronze, graphite, pearl ou noir, ou Brushed Bronze et Brushed Grey, brossés à la main.\nLe revêtement : tissus de T10 à T90, cuirs Glove, Magnifica, Nabuk et Perfetto, micro-nubuck et similicuir."
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "votre-projet",
+   "set": {
+    "title": "Comment se passe une commande",
+    "eyebrow": "Votre projet",
+    "intro": "Un meuble, une pièce entière ou toute la maison, seul ou avec votre architecte : voici comment nous travaillons, du premier échange à l’installation."
+   },
+   "replace": [
+    [
+     "Une table, un canapé, un luminaire : le conseiller vous aide à choisir les dimensions et les finitions, échantillons en main, puis établit le devis et suit la commande.",
+     "Une table, un canapé, un luminaire : votre conseiller vous aide à choisir le format et les finitions, échantillons en main, puis prépare le devis et suit la commande."
+    ],
+    [
+     "Les conseillers du showroom composent l’ensemble, salon, salle à manger ou chambre, du choix des pièces à l’installation. Apportez les plans ou les mesures, et quelques photos.",
+     "Nous composons l’ensemble, salon, salle à manger ou chambre, du choix des meubles à l’installation. Apportez les plans ou les mesures, et quelques photos."
+    ],
+    [
+     "Demandez au showroom une mise en relation.",
+     "Nous pouvons vous mettre en relation."
+    ]
+   ],
+   "replaceExact": [
+    [
+     "Une pièce",
+     "Un meuble"
+    ],
+    [
+     "Une pièce entière ou toute la maison",
+     "Une pièce ou toute la maison"
+    ]
+   ],
+   "sections": {
+    "step_1": {
+     "text": "Avec votre conseiller, au showroom ou sur WhatsApp : modèles, formats, matières et finitions."
+    },
+    "cancellation": {
+     "heading": "Échange et remboursement"
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "professionnels",
+   "set": {
+    "title": "Vous prescrivez. Nous livrons et installons.",
+    "intro": "Tout le catalogue Cattelan Italia aux formats et finitions de votre projet, avec les fiches techniques, les fichiers 2D et 3D, les échantillons et un conseiller qui suit la commande jusqu’à la pose."
+   },
+   "sectionsOrder": [
+    "files",
+    "catalogue",
+    "clients",
+    "terms",
+    "follow_up",
+    "order",
+    "projects"
+   ]
+  },
+  {
+   "collection": "pages",
+   "slug": "a-propos",
+   "set": {
+    "title": "Qui nous sommes",
+    "intro": "Cattelan Italia Maroc est le showroom monomarque Cattelan Italia de Casablanca, ouvert en septembre 2026 au Triangle d’Or par Racha Home."
+   },
+   "sections": {
+    "showroom": {
+     "heading": "Pourquoi un showroom",
+     "text": "Une table de trois mètres ou un canapé d’angle ne se choisissent pas sur une photo. Sur 400 m², les pièces sont composées comme chez vous, échantillons à côté, pour décider avec les vraies proportions et les vraies couleurs. Tout le catalogue s’y commande, livré et installé partout au Maroc."
+    },
+    "advice": {
+     "text": "Pour un meuble, votre conseiller vous aide à fixer le format et les finitions, échantillons en main. Pour une maison entière, nous composons l’ensemble à partir de vos plans, jusqu’à l’installation, et nous travaillons aussi avec votre architecte."
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "catalogue",
+   "set": {
+    "title": "Le catalogue Cattelan Italia en PDF",
+    "intro": "Toutes les familles, des tables aux luminaires, avec leurs formats et leurs finitions : de quoi repérer vos modèles avant la visite, ou les envoyer à votre architecte.",
+    "seo_title": "Catalogue Cattelan Italia en PDF · Cattelan Italia Maroc"
+   },
+   "sections": {
+    "contact": {
+     "heading": "Une question sur un modèle ?",
+     "text": "Formats, finitions, délai, devis : écrivez-nous sur WhatsApp.",
+     "cta_label": "Écrire sur WhatsApp",
+     "cta_href": "https://wa.me/212771105490"
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "journal",
+   "sections": {
+    "catalogue": {
+     "heading": "Le catalogue, pour comparer chez vous.",
+     "text": "Toutes les familles et leurs finitions en PDF, à parcourir avant votre visite.",
+     "cta_label": "Recevoir le catalogue",
+     "cta_href": "/catalogue/"
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "faq",
+   "sections": {
+    "faq_order_price": {
+     "add_after": "faq_order_1",
+     "heading": "Pourquoi les prix ne sont-ils pas affichés ?",
+     "text": "Parce que chaque pièce se configure : le prix dépend du format et des finitions choisis. Envoyez le nom du modèle sur WhatsApp, nous vous répondons avec un devis."
+    },
+    "faq_showroom_1": {
+     "text": "Non. Le showroom est ouvert le lundi de 12 h à 19 h 30 et du mardi au samedi de 9 h à 19 h 30. Avec un rendez-vous, un conseiller vous attend avec les modèles et les échantillons qui vous intéressent."
+    },
+    "faq_showroom_2": {
+     "text": "Oui. Pour une pièce entière ou toute la maison, nous composons l’ensemble à partir de vos plans, du choix des meubles à l’installation."
+    },
+    "faq_custom_2": {
+     "text": "Oui. Une large sélection d’échantillons est au showroom : céramiques, bois, laques, métaux, tissus et cuirs, en plus des finitions visibles sur les meubles exposés."
+    }
+   }
+  },
+  {
+   "collection": "families",
+   "slug": "tables",
+   "set": {
+    "intro": "Neuf tables, du plateau en verre de Skorpio à la base en argile de Botero : rondes, carrées, rectangulaires ou aux angles adoucis, jusqu’à 14 personnes.",
+    "meta_description": "Tables Cattelan Italia en verre, céramique, bois ou argile, de 100 à 320 cm : Skorpio, Napoleon Keramik, Botero, Butterfly. Showroom à Casablanca.",
+    "image_caption": ""
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ]
+  },
+  {
+   "collection": "families",
+   "slug": "chaises-tabourets",
+   "set": {
+    "intro": "Quatre chaises à accorder à votre table : Rhonda au dossier plissé, Greta aux accoudoirs prolongés, Miranda ML enveloppante, Zuleika tout en cuir. Rhonda et Greta existent aussi en tabouret, sur commande.",
+    "card_text": "Quatre chaises en cuir, tissu ou micro-nubuck ; Rhonda et Greta existent aussi en tabouret.",
+    "image_caption": ""
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ]
+  },
+  {
+   "collection": "families",
+   "slug": "canapes-fauteuils",
+   "set": {
+    "intro": "Quatre canapés à composer, droits ou d’angle : Craig aux coussins de plumes, Douglas sur pieds hauts, Mykonos aux formes arrondies, Sinatra aux dossiers réglables. Et Ruby, 200 cm de frêne apparent, avec son fauteuil Ruby Lounge.",
+    "card_text": "Quatre canapés composables, Ruby et son fauteuil, près de 300 tissus et cuirs.",
+    "image_caption": ""
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ],
+    [
+     "Les cuirs existent en glove, magnifica, nabuk et perfetto.",
+     "Les cuirs se choisissent dans les gammes Glove, Magnifica, Nabuk et Perfetto."
+    ]
+   ]
+  },
+  {
+   "collection": "families",
+   "slug": "tables-basses",
+   "set": {
+    "intro": "Quatre tables basses, à poser seules ou à composer : Arena en bois Brushed, Albert Keramik en céramique, Adrian Wood en deux essences, Dodo en verre artistique. De 28 à 54 cm de haut."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ],
+    [
+     "deux ou trois tables superposées en partie donnent plus de surface qu’une seule.",
+     "deux ou trois tables de hauteurs différentes, rapprochées, donnent plus de surface qu’une seule."
+    ]
+   ]
+  },
+  {
+   "collection": "families",
+   "slug": "buffets-bibliotheques",
+   "set": {
+    "intro": "Trois bahuts et deux bibliothèques : les façades à facettes de Chelsea et de Kayak, les portes Oxybrass d’Amsterdam, et les étagères d’Airport et de Nautilus, à fixer au mur.",
+    "card_text": "Bahuts de 137,5 à 294 cm, bibliothèques de 26 à 29 cm de profondeur.",
+    "image_caption": ""
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ]
+  },
+  {
+   "collection": "families",
+   "slug": "consoles-miroirs",
+   "set": {
+    "intro": "Trois consoles et deux miroirs pour une entrée ou un mur de salon : Westin sur lames d’acier croisées, Nettuno sur base ondulée, Rado Keramik tout en céramique ; Cosmos et Glenn, aux bords courbés.",
+    "card_text": "Consoles de 38 à 50 cm de profondeur et miroirs aux bords courbés, pour composer une entrée.",
+    "short_title": "Consoles et miroirs"
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ]
+  },
+  {
+   "collection": "families",
+   "slug": "luminaires",
+   "set": {
+    "intro": "Quatre luminaires : les suspensions Paris, Aladdin et Cloudine en verre artistique, seules ou en grappe jusqu’à 12, et Bloom, en suspension ou en lampadaire.",
+    "card_text": "Suspensions en verre artistique, seules ou en grappe ; Bloom aussi en lampadaire.",
+    "meta_description": "Suspensions Paris, Aladdin et Cloudine en verre artistique, et Bloom en suspension ou en lampadaire. Showroom Cattelan Italia à Casablanca.",
+    "image_caption": ""
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ]
+  },
+  {
+   "collection": "families",
+   "slug": "mobilier-exterieur",
+   "set": {
+    "intro": "Deux modèles pour une terrasse ou une véranda couverte : la table Napoleon Keramik Outdoor, tout en céramique, et la chaise Greta Outdoor, en acier inoxydable 304.",
+    "card_text": "Une table en céramique et sa chaise, pour terrasses et vérandas couvertes.",
+    "image_caption": ""
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "adrian-wood",
+   "set": {
+    "description": "Deux essences sur un même plateau en galet biseauté, noyer Canaletto et chêne brûlé, sur une base conique en acier. Trois formes, trois hauteurs."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "airport",
+   "set": {
+    "description": "Fixée au mur ou au plafond, elle longe un mur, tourne un angle ou sépare deux espaces. Étagères de 60 à 310 cm, 29 cm de profondeur, caissons et bureau."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ],
+   "setJson": {
+    "dimensions": [
+     {
+      "label": "Étagère",
+      "value": "60, 110, 160, 210, 260 ou 310 × 29 cm"
+     },
+     {
+      "label": "Caisson Box",
+      "value": "110 ou 160 × 29 cm, hauteur 36 cm"
+     },
+     {
+      "label": "Bureau",
+      "value": "110 × 60 cm"
+     }
+    ]
+   }
+  },
+  {
+   "collection": "models",
+   "slug": "aladdin",
+   "set": {
+    "description": "Un globe en verre artistique décoré, fumé-Bianco ou « Balloton » fumé, éclairé par LED. Seul ou par deux à six au-dessus d’une table."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "albert-keramik",
+   "set": {
+    "description": "16 décors de marbre en céramique sur une base conique en acier : ronde ou en galet, en trois hauteurs à composer par deux ou trois."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "amsterdam",
+   "set": {
+    "description": "Des portes laquées Oxybrass rythmées d’inserts en chêne brûlé, sous un plateau en verre miroité bronze. Deux, trois ou quatre portes, jusqu’à 294 cm."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "arena",
+   "set": {
+    "description": "Un plateau rond en bois Brushed, brossé à la main, que les versions Bond et Double Bond complètent d’un ou deux plateaux en verre pivotants."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "bloom",
+   "set": {
+    "description": "Des diffuseurs en verre borosilicate sur des branches gris fer : en suspension de 150 cm, horizontale ou verticale, ou en lampadaire de 178 cm."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ],
+   "setJson": {
+    "dimensions": [
+     {
+      "label": "Suspension verticale (V, LV)",
+      "value": "150 × 46 cm, hauteur 90 cm"
+     },
+     {
+      "label": "Suspension horizontale (O, LO)",
+      "value": "150 × 86 cm, hauteur 46 cm"
+     },
+     {
+      "label": "Lampadaire",
+      "value": "57 × 45 cm, hauteur 178 cm"
+     },
+     {
+      "label": "Platine de plafond (S2/4)",
+      "value": "Ø 25 cm"
+     }
+    ]
+   }
+  },
+  {
+   "collection": "models",
+   "slug": "botero-argile",
+   "set": {
+    "description": "Tout en argile spatulée, de la base galbée au plateau, en Cairo, Oslo ou Marrakech. Ronde, de 140 à 180 cm de diamètre."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "botero-ker-wood-round",
+   "set": {
+    "description": "Un plateau en bois serti d’un disque en céramique ; en version T, le disque pivote pour faire circuler les plats. 160 ou 180 cm de diamètre."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "botero-keramik-round",
+   "set": {
+    "description": "La base galbée en argile de Botero sous un plateau rond en céramique, en 16 décors de marbre. De 100 à 158 cm de diamètre."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "botero-wood-round",
+   "set": {
+    "description": "La base galbée en argile de Botero sous un plateau rond en noyer Canaletto ou chêne brûlé. 140, 160 ou 180 cm de diamètre."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "butterfly",
+   "set": {
+    "description": "Une lame d’acier pliée et croisée comme un ruban, visible sous un plateau en verre de 15 mm. 240 ou 300 cm, droite ou aux angles adoucis."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "butterfly-keramik",
+   "set": {
+    "description": "Le ruban d’acier de Butterfly sous un plateau en céramique, en 19 décors de marbre. 240 ou 300 cm de long."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "chelsea",
+   "set": {
+    "description": "Des façades polygonales laquées titane, Paprika ou Mint, sous un plateau en verre miroir bronze ou en céramique. Huit formats, de 137,5 à 248 cm."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ],
+   "setJson": {
+    "dimensions": [
+     {
+      "label": "Longueur 137,5 cm",
+      "value": "137,5 × 46 cm, hauteur 75 cm"
+     },
+     {
+      "label": "Longueur 193 cm",
+      "value": "193 × 46 cm, hauteur 50, 75 ou 100 cm"
+     },
+     {
+      "label": "Longueur 248 cm",
+      "value": "248 × 46 cm, hauteur 50 ou 75 cm"
+     },
+     {
+      "label": "Version B, sur piètement",
+      "value": "193 ou 248 × 46 cm, hauteur 65 cm"
+     }
+    ]
+   }
+  },
+  {
+   "collection": "models",
+   "slug": "cloudine",
+   "set": {
+    "description": "Des diffuseurs en verre Iride ou fumé suspendus à des câbles souples, seuls ou en grappe de deux à 12."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "cosmos",
+   "set": {
+    "description": "Une bordure courbe qui déforme les reflets autour d’un miroir en galet. Verre miroité fumé ou bronze, 120 ou 157 cm de diamètre."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "craig",
+   "set": {
+    "description": "Des coussins de dossier garnis de plumes sur une structure en bois. Droit ou d’angle, en tissu déhoussable ou en cuir, près de 300 revêtements."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "dodo",
+   "set": {
+    "description": "Un cylindre en verre artistique au décor en relief, fumé, Verde Pavone ou Melanzana, sur une base bronze. Deux formats, à poser au bout du canapé."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "douglas",
+   "set": {
+    "description": "Des pieds en métal, en deux hauteurs, qui décollent le canapé du sol. Droit ou d’angle, coussins de dossier en plumes, tissu déhoussable ou cuir."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "glenn",
+   "set": {
+    "description": "Tout en verre miroité, aux bords courbés qui font glisser la lumière. À poser au sol ou à fixer au mur, 120 × 120 ou 80 × 190 cm."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "greta",
+   "set": {
+    "description": "Un dossier rembourré qui se prolonge en accoudoirs, fendu à l’arrière, sur de fins pieds en acier. Tissu, cuir, micro-nubuck ou similicuir."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ],
+   "setJson": {
+    "dimensions": [
+     {
+      "label": "Chaise",
+      "value": "62 × 62 cm, hauteur 78 cm"
+     }
+    ]
+   }
+  },
+  {
+   "collection": "models",
+   "slug": "greta-outdoor",
+   "set": {
+    "description": "La chaise Greta en acier inoxydable 304 laqué et tissu Outdoor, en 20 coloris, pour une terrasse ou une véranda couverte."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ],
+   "setJson": {
+    "dimensions": [
+     {
+      "label": "Chaise",
+      "value": "62 × 62 cm, hauteur 78 cm"
+     }
+    ]
+   }
+  },
+  {
+   "collection": "models",
+   "slug": "kayak",
+   "set": {
+    "description": "Des portes taillées en facettes, laquées titane ou en finition Brushed brossée à la main. Deux ou trois portes, 147 ou 220 cm."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "miranda-ml",
+   "set": {
+    "description": "Une coque enveloppante sur un fin piètement en acier, assise à 47 cm. Tissu, micro-nubuck, cuir mince ou similicuir, plus de 100 teintes."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "mykonos",
+   "set": {
+    "description": "Des éléments aux formes arrondies, à assembler droit ou d’angle. En tissu déhoussable ou en cuir, près de 300 revêtements."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "napoleon-keramik",
+   "set": {
+    "description": "Plateau et base tout en céramique, la base en deux volumes arrondis. Cinq décors de marbre, de 200 à 320 cm, jusqu’à 14 personnes."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ],
+   "setJson": {
+    "dimensions": [
+     {
+      "label": "Rectangulaire 240 × 120",
+      "value": "hauteur 75 cm",
+      "seats": 10,
+      "large_seats": 8
+     },
+     {
+      "label": "Rectangulaire 300 × 120",
+      "value": "hauteur 75 cm",
+      "seats": 12,
+      "large_seats": 10
+     },
+     {
+      "label": "Angles adoucis 200 × 120",
+      "value": "hauteur 74 cm",
+      "seats": 8,
+      "large_seats": 6
+     },
+     {
+      "label": "Angles adoucis 240 × 120",
+      "value": "hauteur 75 cm",
+      "seats": 10,
+      "large_seats": 8
+     },
+     {
+      "label": "Angles adoucis 300 × 120",
+      "value": "hauteur 75 cm",
+      "seats": 12,
+      "large_seats": 10
+     },
+     {
+      "label": "Angles adoucis 320 × 138",
+      "value": "hauteur 75 cm",
+      "seats": 14,
+      "large_seats": 12
+     },
+     {
+      "label": "Biscuit 220 × 120",
+      "value": "hauteur 74 cm",
+      "seats": 8,
+      "large_seats": 8
+     },
+     {
+      "label": "Biscuit 300 × 150",
+      "value": "hauteur 75 cm",
+      "seats": 14,
+      "large_seats": 12
+     },
+     {
+      "label": "Ovale 300 × 150",
+      "value": "hauteur 75 cm",
+      "seats": 14,
+      "large_seats": 12
+     },
+     {
+      "label": "Polygonale 300 × 130",
+      "value": "hauteur 75 cm",
+      "seats": 12,
+      "large_seats": 10
+     }
+    ]
+   }
+  },
+  {
+   "collection": "models",
+   "slug": "napoleon-keramik-outdoor",
+   "set": {
+    "description": "Napoleon Keramik pour une terrasse ou une véranda couverte : plateau et base en céramique, cinq décors de marbre, jusqu’à 320 cm."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ],
+   "setJson": {
+    "dimensions": [
+     {
+      "label": "Rectangulaire 240 × 120",
+      "value": "hauteur 75 cm"
+     },
+     {
+      "label": "Rectangulaire 300 × 120",
+      "value": "hauteur 75 cm"
+     },
+     {
+      "label": "Angles adoucis 200 × 120",
+      "value": "hauteur 74 cm"
+     },
+     {
+      "label": "Angles adoucis 240 × 120",
+      "value": "hauteur 75 cm"
+     },
+     {
+      "label": "Angles adoucis 300 × 120",
+      "value": "hauteur 75 cm"
+     },
+     {
+      "label": "Angles adoucis 320 × 138",
+      "value": "hauteur 75 cm"
+     },
+     {
+      "label": "Biscuit 220 × 120",
+      "value": "hauteur 74 cm"
+     },
+     {
+      "label": "Biscuit 300 × 150",
+      "value": "hauteur 75 cm"
+     },
+     {
+      "label": "Ovale 300 × 150",
+      "value": "hauteur 75 cm"
+     },
+     {
+      "label": "Polygonale 300 × 130",
+      "value": "hauteur 75 cm"
+     }
+    ]
+   }
+  },
+  {
+   "collection": "models",
+   "slug": "nautilus",
+   "set": {
+    "description": "Des modules en acier gaufré de 100 × 100 cm à aligner ou à empiler, sur 26 cm de profondeur. Titane, bronze, graphite ou pearl."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "nettuno",
+   "set": {
+    "description": "Une base en acier ondulée comme une vague, sous un plateau en verre de 12 mm, extra-clair ou MIST. 130, 160 ou 180 cm, deux hauteurs."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "paris",
+   "set": {
+    "description": "Un globe en verre artistique décoré fumé-Bianco, éclairé par LED, de 25 ou 33 cm de diamètre. Seul ou par deux à six."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "rado-keramik",
+   "set": {
+    "description": "Tout en céramique, base comprise, façonnée selon un procédé breveté. 38 cm de profondeur seulement, pour une entrée étroite ; 127 ou 157 cm."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "rhonda",
+   "set": {
+    "description": "Un dossier lisse à l’extérieur et plissé à l’intérieur, qui se referme en accoudoirs. Pieds chromés ou laqués, plus de 100 revêtements."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ],
+   "setJson": {
+    "dimensions": [
+     {
+      "label": "Chaise",
+      "value": "63 × 60 cm, hauteur 79 cm"
+     }
+    ]
+   }
+  },
+  {
+   "collection": "models",
+   "slug": "ruby",
+   "set": {
+    "description": "Une structure apparente en frêne teinté noyer Canaletto ou chêne brûlé, et des coussins généreux. 200 cm, avec son fauteuil Ruby Lounge."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ],
+   "setJson": {
+    "dimensions": [
+     {
+      "label": "Canapé",
+      "value": "200 × 92 cm, hauteur 76 cm"
+     },
+     {
+      "label": "Fauteuil Ruby Lounge",
+      "value": "81 × 92 cm, hauteur 76 cm"
+     }
+    ]
+   }
+  },
+  {
+   "collection": "models",
+   "slug": "ruby-lounge",
+   "set": {
+    "description": "Le fauteuil bas de Ruby : structure apparente en frêne, dossier arrondi, coutures visibles. 81 cm de large, avec le canapé ou seul."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ],
+   "setJson": {
+    "dimensions": [
+     {
+      "label": "Fauteuil",
+      "value": "81 × 92 cm, hauteur 76 cm"
+     }
+    ]
+   }
+  },
+  {
+   "collection": "models",
+   "slug": "sinatra",
+   "set": {
+    "description": "Des dossiers qui se règlent grâce à un mécanisme intégré. Droit ou d’angle, en tissu déhoussable, plus de 200 teintes."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "skorpio",
+   "set": {
+    "description": "Des lignes d’acier obliques, visibles à travers le plateau en verre. Carrée jusqu’à 200 × 200 cm pour 12, ou rectangulaire ; sept finitions de piètement."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ],
+   "setJson": {
+    "dimensions": [
+     {
+      "label": "Carrée 150 × 150",
+      "value": "hauteur 74 cm",
+      "seats": 8,
+      "large_seats": 8
+     },
+     {
+      "label": "Carrée 200 × 200",
+      "value": "hauteur 74 cm",
+      "seats": 12,
+      "large_seats": 8
+     },
+     {
+      "label": "Rectangulaire 160 × 90",
+      "value": "hauteur 74 cm",
+      "seats": 6,
+      "large_seats": 6
+     },
+     {
+      "label": "Rectangulaire 182 × 90",
+      "value": "hauteur 74 cm",
+      "seats": 8,
+      "large_seats": 6
+     },
+     {
+      "label": "Rectangulaire 200 × 100",
+      "value": "hauteur 74 cm",
+      "seats": 8,
+      "large_seats": 6
+     },
+     {
+      "label": "Rectangulaire 200 × 106",
+      "value": "hauteur 74 cm",
+      "seats": 8,
+      "large_seats": 6
+     },
+     {
+      "label": "Rectangulaire 240 × 100",
+      "value": "hauteur 74 cm",
+      "seats": 10,
+      "large_seats": 8
+     },
+     {
+      "label": "Rectangulaire 240 × 120",
+      "value": "hauteur 74 cm",
+      "seats": 10,
+      "large_seats": 8
+     },
+     {
+      "label": "Rectangulaire 300 × 100",
+      "value": "hauteur 74 cm",
+      "seats": 12,
+      "large_seats": 10
+     },
+     {
+      "label": "Rectangulaire 300 × 120",
+      "value": "hauteur 74 cm",
+      "seats": 12,
+      "large_seats": 10
+     },
+     {
+      "label": "Angles adoucis 200 × 120",
+      "value": "hauteur 74 cm",
+      "seats": 8,
+      "large_seats": 6
+     },
+     {
+      "label": "Angles adoucis 240 × 120",
+      "value": "hauteur 74 cm",
+      "seats": 10,
+      "large_seats": 8
+     },
+     {
+      "label": "Angles adoucis 300 × 120",
+      "value": "hauteur 74 cm",
+      "seats": 12,
+      "large_seats": 10
+     },
+     {
+      "label": "Angles adoucis 300 × 130",
+      "value": "hauteur 74 cm",
+      "seats": 12,
+      "large_seats": 10
+     }
+    ]
+   }
+  },
+  {
+   "collection": "models",
+   "slug": "tyron-keramik",
+   "set": {
+    "description": "Un piètement en X en acier sous un plateau en céramique, en 19 décors de marbre. Rectangulaire, adoucie, biscuit ou boomerang, jusqu’à 300 cm."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "westin",
+   "set": {
+    "description": "Des lames d’acier croisées sous un plateau en verre, ou en bois massif au bord naturel. Sept finitions pour la base, de 160 à 200 cm."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "zuleika",
+   "set": {
+    "description": "Tout en cuir, coutures et profils ton sur ton, sur une structure en acier. Assise à 46 cm, 21 teintes."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "replaceExact": [
+    [
+     "RB rouvre brulé",
+     "Chêne brûlé"
+    ],
+    [
+     "RB rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "NC noyer canaletto",
+     "Noyer Canaletto"
+    ],
+    [
+     "brushed bronze",
+     "Brushed Bronze"
+    ],
+    [
+     "brushed grey",
+     "Brushed Grey"
+    ]
+   ]
+  },
+  {
+   "collection": "posts",
+   "slug": "choisir-forme-proportions-table-salle-a-manger",
+   "set": {
+    "image_caption": "",
+    "cta_text": "Les neuf tables, avec leurs formats, le nombre de places et leur fiche technique."
+   }
+  },
+  {
+   "collection": "posts",
+   "slug": "associer-table-chaises-salle-a-manger",
+   "set": {
+    "image_caption": "",
+    "cta_text": "Rhonda, Greta, Miranda ML et Zuleika : dimensions, revêtements et fiches techniques.",
+    "cta_label": "Voir les chaises"
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "dropSources": [
+    "Skorpio"
+   ]
+  },
+  {
+   "collection": "posts",
+   "slug": "ceramique-verre-bois-choisir-finition-meuble",
+   "set": {
+    "image_caption": "",
+    "title": "Céramique, verre ou bois : quel plateau choisir ?",
+    "seo_title": "Céramique, verre ou bois : choisir un plateau · Cattelan Italia Maroc",
+    "cta_text": "Les neuf tables en verre, céramique, bois ou argile, avec toutes leurs finitions."
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ]
+   ],
+   "dropSources": [
+    "Ruby Lounge"
+   ]
+  },
+  {
+   "collection": "posts",
+   "slug": "composer-salon-canape-fauteuil",
+   "set": {
+    "image_caption": ""
+   },
+   "replace": [
+    [
+     "rouvre brûlé",
+     "chêne brûlé"
+    ],
+    [
+     "rouvre brulé",
+     "chêne brûlé"
+    ],
+    [
+     "Rouvre brûlé",
+     "Chêne brûlé"
+    ],
+    [
+     "micro nubuck",
+     "micro-nubuck"
+    ],
+    [
+     "Micro nubuck",
+     "Micro-nubuck"
+    ],
+    [
+     "Chacun a son caractère. ",
+     ""
+    ],
+    [
+     "Les cuirs existent en glove, magnifica, nabuk et perfetto : plus de trente teintes à eux quatre. Au total, près de quatre cents revêtements au choix",
+     "Les cuirs se choisissent dans les gammes Glove, Magnifica, Nabuk et Perfetto : plus de trente teintes à elles quatre. Au total, près de 300 revêtements au choix"
+    ]
+   ]
+  },
+  {
+   "collection": "posts",
+   "slug": "choisir-buffet-bibliotheque-salon",
+   "set": {
+    "image_caption": ""
+   }
+  },
+  {
+   "collection": "site_content",
+   "slug": "global",
+   "set": {
+    "footer_text": "Showroom monomarque Cattelan Italia de 400 m² au Triangle d’Or, Casablanca. Tout le catalogue sur commande, livré et installé partout au Maroc.",
+    "brand_location": "",
+    "catalogue_label": "Recevoir le catalogue",
+    "discover_label": "Voir les modèles"
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "catalogue",
+   "replace": [
+    [
+     "Ambiance de salle à manger — visuel provisoire",
+     "Salle à manger Cattelan Italia : table au plateau veiné et chaises claires devant une baie vitrée"
+    ]
+   ]
+  }
+ ],
+ "menu": [
+  [
+   "Sur-mesure",
+   "Sur mesure"
+  ],
+  [
+   "Architectes & projets",
+   "Architectes"
+  ]
+ ],
+ "settings": {
+  "tagline": ""
+ },
+ "taxonomies": {
+  "category": {
+   "conseils-damenagement": "Mesures",
+   "associations-et-matieres": "Associations",
+   "matieres-et-finitions": "Matières"
+  }
+ },
+ "references": {
+  "families/luminaires": {
+   "related_post": []
+  }
+ },
+ "applied": "2026-10-02, through the EmDash admin session in the browser; every item verified live afterwards."
+}

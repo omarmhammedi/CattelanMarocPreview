@@ -6,7 +6,7 @@ test('keeps the three actions, their order and their destinations', () => {
   assert.deepEqual(Object.keys(actions), ['appointment', 'advisor', 'catalogue']);
   assert.equal(actions.appointment.label, 'Prendre rendez-vous');
   assert.equal(actions.appointment.href, '/showroom-casablanca/#rendez-vous');
-  assert.equal(actions.advisor.label, 'Échanger avec un conseiller');
+  assert.equal(actions.advisor.label, 'Écrire sur WhatsApp');
   assert.equal(actions.catalogue.label, 'Recevoir le catalogue');
   assert.equal(actions.catalogue.href, '/catalogue/');
   for (const action of Object.values(actions)) assert.doesNotMatch(action.label, /prix/iu);

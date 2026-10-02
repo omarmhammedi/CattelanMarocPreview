@@ -94,6 +94,8 @@ button, input { font-family: inherit; }
 #accueil .over.on { pointer-events: auto; }
 #accueil .over .hero-intro { margin: 16px 0 0; font-size: calc(var(--u) * 2.4); font-weight: 200; line-height: 1.2; max-width: 22em; text-wrap: balance; }
 #accueil .over .row { margin-top: 28px; }
+/* The eyebrow already sits above the H1; on the photo it would be a second copy. Phones hide the first one instead. */
+#accueil .over .kick { display: none; }
 #accueil .hint { font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted); }
 
 /* 2 dessiné */
@@ -403,6 +405,7 @@ html:not(.motion-ready) .rv { transform: none; }
   #accueil .words h1 { margin: 0; max-width: none; font-size: clamp(30px, 8.6vw, 44px); font-weight: 200; line-height: 1.12; letter-spacing: -.01em; text-transform: none; text-wrap: wrap; }
   #accueil .card { height: 380px; }
   #accueil .over { pointer-events: auto; }
+  #accueil .over .kick { display: flex; }
   #accueil .over .hero-intro { margin: 0; max-width: 34em; font-size: 15px; font-weight: 300; line-height: 1.7; color: var(--muted); text-wrap: wrap; }
   #accueil .over .row { margin: 0; }
   #italie h2, #collections .intro h2, #showroom .info h2, #catalogue h2, #journal h2 { font-size: clamp(40px, 12vw, 68px); }
