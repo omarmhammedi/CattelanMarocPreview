@@ -18,7 +18,7 @@ import { portableText } from './0016-new-families.mjs';
 const root = fileURLToPath(new URL('../../', import.meta.url));
 export const migration = '0021-copy-v2';
 const manifestFile = 'copy-v2.json';
-const collections = ['pages', 'families', 'models'];
+const collections = ['pages', 'families', 'models', 'posts'];
 const limits = { title: 120, short_title: 60, seo_title: 90, meta_description: 160, card_text: 200 };
 
 export function validateManifest(manifest) {
@@ -30,7 +30,8 @@ export function validateManifest(manifest) {
     seen.add(`${entry.collection}/${entry.slug}`);
     for (const [field, value] of Object.entries(entry.fields || {})) {
       if (field === 'content') {
-        assert(Array.isArray(value) && value.every(pair => pair.length === 2 && pair.every(Boolean)), `${entry.slug}: content is [heading, text] pairs.`);
+        // An empty heading continues the previous section with another paragraph.
+        assert(Array.isArray(value) && value.length && value[0][0] && value.every(pair => pair.length === 2 && typeof pair[0] === 'string' && pair[1]), `${entry.slug}: content is [heading, text] pairs.`);
         continue;
       }
       assert(typeof value === 'string' && value.trim() === value && value, `${entry.slug}.${field}: empty text.`);
@@ -200,7 +201,7 @@ export async function applyCopy(api, plan, known, { beforeWrite, log = () => {} 
   }
 }
 
-const allowedPaths = /^\/_emdash\/api\/content\/(?:pages|families|models)(?:[/?]|$)/u;
+const allowedPaths = /^\/_emdash\/api\/content\/(?:pages|families|models|posts)(?:[/?]|$)/u;
 
 async function main() {
   const flags = process.argv.slice(2);

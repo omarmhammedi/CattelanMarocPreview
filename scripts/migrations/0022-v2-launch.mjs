@@ -72,7 +72,7 @@ export async function applyLaunch(api, plan, known, { beforeWrite, log = () => {
   }
 }
 
-const allowedPaths = /^\/_emdash\/api\/(?:content\/(?:pages|families|models|site_content)|schema\/collections\/site_content|menus\/primary)(?:[/?]|$)/u;
+const allowedPaths = /^\/_emdash\/api\/(?:content\/(?:pages|families|models|posts|site_content)|schema\/collections\/site_content|menus\/primary)(?:[/?]|$)/u;
 
 async function main() {
   const flags = process.argv.slice(2);

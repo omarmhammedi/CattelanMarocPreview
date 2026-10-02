@@ -24531,186 +24531,158 @@
         "locale": "fr",
         "data": {
           "title": "Comment choisir la forme et les proportions de sa table de salle à manger ?",
-          "excerpt": "La bonne table se choisit autant pour sa silhouette que pour la place qu’elle laisse autour d’elle. Quelques repères pour comparer les formes et se projeter.",
+          "excerpt": "60 cm par convive, 90 cm de passage, et le piètement qui décide où l’on s’assoit : les mesures qui permettent de choisir la forme et la taille d’une table avant de la voir.",
           "content": [
             {
               "_type": "block",
-              "_key": "b0",
+              "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-h0",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Partir de la pièce et de ses usages",
+                  "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-h0s",
+                  "text": "Partir des mesures de la pièce",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b1",
+              "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-p0",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Une table attire souvent l’attention dès l’entrée dans une salle à manger. Pourtant, son dessin ne suffit pas à déterminer si elle trouvera sa place. Avant de comparer les modèles, observez les trajets quotidiens : de la cuisine au salon, vers une baie vitrée ou devant un buffet. La table et les chaises doivent permettre de conserver ces passages.",
+                  "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-p0s",
+                  "text": "Mesurez la pièce, puis retirez 90 cm de chaque côté où l’on s’assoit : c’est la place qu’il faut pour reculer une chaise et passer derrière quelqu’un d’assis. Dans une salle à manger de 4 × 3,5 m, il reste environ 220 × 170 cm : une table de 200 à 220 cm sur 100 à 120 cm y trouve sa place.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b2",
+              "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-p1",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Distinguez ensuite vos repas habituels des occasions où vous recevez davantage de monde. Cette réflexion évite de dimensionner toute la pièce pour une situation exceptionnelle. Notez aussi les usages complémentaires : travailler ponctuellement, dessiner avec les enfants ou partager un long repas. Pensez également aux portes de placards, aux tiroirs et aux autres éléments qui doivent pouvoir s’ouvrir lorsque les sièges sont occupés. Leur position peut modifier votre implantation préférée.",
+                  "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-p1s",
+                  "text": "Comptez ensuite 60 cm de plateau par convive, 65 à 70 cm avec des chaises à accoudoirs. Une table de 240 cm reçoit huit à dix personnes, une table de 300 cm dix à douze. Dimensionnez pour vos repas habituels plus deux couverts, pas pour la plus grande réception de l’année.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b3",
+              "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-h2",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Comparer les formes dans leur contexte",
+                  "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-h2s",
+                  "text": "Ronde, carrée, rectangulaire ou adoucie",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b4",
+              "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-p2",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Une table rectangulaire peut accompagner la longueur d’une pièce et organiser clairement un espace repas ouvert sur le salon. Une table ronde crée une composition centrée, intéressante lorsque l’on souhaite disposer les sièges autour d’un même point. Ces orientations restent à vérifier sur votre plan : une forme ronde n’occupe pas automatiquement moins de place.",
+                  "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-p2s",
+                  "text": "La table ronde met tout le monde face à face : 140 cm pour six personnes, 180 cm pour huit à dix, comme Botero. Au-delà, on ne se parle plus d’un bord à l’autre. La table carrée a le même avantage dans une pièce carrée : Skorpio existe en 150 × 150 cm pour huit personnes et en 200 × 200 cm pour douze.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b5",
+              "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-p3",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Une silhouette ovale peut être envisagée lorsque l’on recherche un plateau allongé avec des extrémités courbes. Pour comparer, dessinez plusieurs propositions à la même échelle, avec les chaises. Vous verrez mieux les passages disponibles qu’en regardant uniquement les dimensions du plateau.",
+                  "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-p3s",
+                  "text": "Pour plus de dix convives, le rectangle s’impose. Les angles adoucis, ovales ou en biscuit, comme sur Napoleon Keramik et Tyron Keramik, facilitent le passage et ajoutent une place en bout de table : Napoleon Keramik en ovale de 300 × 150 cm reçoit quatorze personnes.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b6",
+              "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-h4",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Regarder aussi sous le plateau",
+                  "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-h4s",
+                  "text": "Regarder sous le plateau",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b7",
+              "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-p4",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Le piètement participe fortement à la présence d’une table. Il intervient également dans la façon dont les chaises se placent et dont les convives s’installent. Une base centrale n’offre pas nécessairement le même dégagement sur tout son pourtour ; des pieds placés aux angles peuvent aussi influencer la position des assises.",
+                  "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-p4s",
+                  "text": "Le piètement décide où l’on peut s’asseoir. Une base centrale, comme celles de Napoleon Keramik ou de Botero, ne gêne aucun genou : on peut ajouter une chaise sans se cogner à un pied. Sur Butterfly, la base en ruban d’acier mesure 160 cm sous un plateau de 240 cm : il reste 40 cm à chaque extrémité pour s’asseoir en bout de table.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b8",
+              "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-p5",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "La famille Skorpio de Cattelan Italia réunit notamment des plateaux en verre, en bois ou en céramique, ainsi que des versions rondes. Comparez chaque configuration avec les chaises envisagées, plutôt que de raisonner uniquement à partir du nom de la collection.",
+                  "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-p5s",
+                  "text": "Vérifiez aussi la hauteur : les tables Cattelan Italia mesurent 74 à 75 cm, pour des chaises dont l’assise est à 46 ou 47 cm, comme Miranda ML et Zuleika.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b9",
+              "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-h6",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Évaluer l’ensemble et tester son implantation",
+                  "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-h6s",
+                  "text": "Tester l’implantation avant de commander",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b10",
+              "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-p6",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Deux tables de dimensions proches peuvent produire des impressions différentes. La couleur du plateau, son épaisseur apparente, le dessin de la base et les chaises modifient la lecture de l’ensemble. Une table très expressive peut devenir le point de départ de la décoration ; une silhouette plus discrète laisse davantage de place aux autres éléments.",
-                  "marks": []
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "b11",
-              "style": "normal",
-              "markDefs": [],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "s0",
-                  "text": "Placez les images des modèles à côté de celles du sol, du buffet et du luminaire. Ce rapprochement aide à repérer une accumulation de motifs ou, au contraire, un ensemble trop uniforme pour l’ambiance recherchée.",
-                  "marks": []
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "b12",
-              "style": "normal",
-              "markDefs": [],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "s0",
-                  "text": "Matérialisez le plateau au sol avec du papier ou du ruban adapté au revêtement. Positionnez quelques chaises, reculez-les comme pendant un repas et parcourez la pièce. Photographiez cette implantation depuis plusieurs points de vue. Ce petit exercice transforme une préférence visuelle en choix concret, plus facile à comparer avec les dimensions de la configuration retenue.",
+                  "_key": "copy-v2-choisir-forme-proportions-table-salle-a-manger-p6s",
+                  "text": "Tracez le contour du plateau au sol avec du ruban de masquage et posez-y vos chaises actuelles : en deux jours, vous saurez si les passages suffisent. Envoyez une photo de ce tracé et les mesures de la pièce au showroom sur WhatsApp : le conseiller vous propose les formats qui conviennent.",
                   "marks": []
                 }
               ]
@@ -24756,186 +24728,144 @@
         "locale": "fr",
         "data": {
           "title": "Comment associer une table et des chaises sans tout assortir ?",
-          "excerpt": "Une salle à manger cohérente peut réunir des formes et des matières différentes. L’essentiel est de choisir les liens qui donneront une unité à l’ensemble.",
+          "excerpt": "Une seule pièce forte, une finition en commun, et des chaises qui passent sous le plateau : trois règles pour associer une table et des chaises sans tout assortir.",
           "content": [
             {
               "_type": "block",
-              "_key": "b0",
+              "_key": "copy-v2-associer-table-chaises-salle-a-manger-h0",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Choisir une intention pour l’ensemble",
+                  "_key": "copy-v2-associer-table-chaises-salle-a-manger-h0s",
+                  "text": "Une seule pièce forte",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b1",
+              "_key": "copy-v2-associer-table-chaises-salle-a-manger-p0",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Composer une salle à manger commence souvent par un coup de cœur pour une table ou une chaise. Gardez cette première préférence comme point de départ. Chercher simultanément à faire de chaque meuble la pièce maîtresse peut compliquer les choix et multiplier les effets visuels.",
+                  "_key": "copy-v2-associer-table-chaises-salle-a-manger-p0s",
+                  "text": "Choisissez ce qui portera le regard : la table ou les chaises. Sous un piètement très dessiné, comme le X de Tyron Keramik ou la base en argile de Botero, des chaises aux lignes simples laissent la table parler. Autour d’une table plus sobre, des chaises comme Rhonda, au dossier plissé à l’intérieur, peuvent devenir le sujet.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b2",
-              "style": "normal",
-              "markDefs": [],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "s0",
-                  "text": "Si la table possède un plateau très dessiné ou un piètement expressif, commencez par des chaises dont la silhouette vous semble lisible autour d’elle. À l’inverse, une table sobre peut accueillir des assises plus présentes. Il s’agit de choisir où l’on souhaite porter le regard, puis d’organiser les autres éléments autour de cette intention.",
-                  "marks": []
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "b3",
-              "style": "normal",
-              "markDefs": [],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "s0",
-                  "text": "Si vous souhaitez mélanger plusieurs chaises, choisissez ce qui restera commun : le modèle avec deux coloris, une famille de teintes ou une hauteur de dossier proche. Varier un élément à la fois facilite la composition. Photographiez ensuite vos propositions avec le buffet et le luminaire : l’association doit trouver sa place dans toute la pièce, au-delà du seul duo table et chaises.",
-                  "marks": []
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "b4",
+              "_key": "copy-v2-associer-table-chaises-salle-a-manger-h1",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Créer un lien sans répéter toutes les finitions",
+                  "_key": "copy-v2-associer-table-chaises-salle-a-manger-h1s",
+                  "text": "Une finition en commun",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b5",
+              "_key": "copy-v2-associer-table-chaises-salle-a-manger-p1",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Table et chaises n’ont pas besoin de partager exactement la même matière ou la même couleur. Un rapprochement peut venir d’une nuance commune, d’une courbe ou d’un détail de piètement. Sélectionnez le lien que vous souhaitez conserver avant d’ajouter des contrastes.",
+                  "_key": "copy-v2-associer-table-chaises-salle-a-manger-p1s",
+                  "text": "Inutile de tout assortir : une finition partagée suffit à relier l’ensemble. La plus simple est la laque du métal. Titane, bronze, graphite et noir gaufrés existent à la fois sur la base de Tyron Keramik et sur la structure de Greta ; Rhonda reçoit les mêmes laques ou un chrome. Le même bronze sous la table et sur les pieds des chaises crée l’unité, quels que soient le plateau et le revêtement.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b6",
+              "_key": "copy-v2-associer-table-chaises-salle-a-manger-p2",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Par exemple, des pieds de chaises foncés peuvent rappeler une base de table sombre, tandis qu’un revêtement clair apporte une autre tonalité. Avec un plateau marqué par des veines, observez les couleurs secondaires du motif : l’une d’elles peut guider le choix des assises. Comparez les échantillons ensemble lorsque cela est possible, car des photographies prises séparément ne montrent pas toujours les mêmes nuances.",
+                  "_key": "copy-v2-associer-table-chaises-salle-a-manger-p2s",
+                  "text": "Le lien peut aussi passer par la couleur : un cuir de chaise dans le ton d’une céramique Portoro, ou d’un noyer Canaletto. Comparez les échantillons ensemble au showroom, à la lumière du jour.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b7",
+              "_key": "copy-v2-associer-table-chaises-salle-a-manger-h3",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Observer le dialogue entre les silhouettes",
+                  "_key": "copy-v2-associer-table-chaises-salle-a-manger-h3s",
+                  "text": "Les mesures qui comptent",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b8",
+              "_key": "copy-v2-associer-table-chaises-salle-a-manger-p3",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Les courbes d’un dossier, la hauteur des assises et l’épaisseur du plateau composent une silhouette collective. Regardez donc les meubles ensemble, de face et de côté. Une chaise appréciée isolément peut paraître très enveloppante une fois répétée autour de la table.",
+                  "_key": "copy-v2-associer-table-chaises-salle-a-manger-p3s",
+                  "text": "Une chaise à accoudoirs occupe 62 à 64 cm de large : Greta 62 cm, Rhonda 63 cm, Zuleika 64 cm. Comptez 65 à 70 cm par place au lieu de 60, ou réservez les accoudoirs aux bouts de table. Vérifiez sur la fiche technique que les accoudoirs passent sous le plateau : sinon, les chaises restent écartées de la table et occupent la pièce.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b9",
+              "_key": "copy-v2-associer-table-chaises-salle-a-manger-p4",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "La collection Rhonda de Cattelan Italia permet d’explorer cette question : ses chaises à accoudoirs présentent des lignes arrondies, notamment avec des pieds métalliques ou des pieds en bois sur Rhonda Wood. Ces variations offrent plusieurs pistes d’association autour d’une même forme d’assise.",
+                  "_key": "copy-v2-associer-table-chaises-salle-a-manger-p4s",
+                  "text": "L’assise se place 27 à 29 cm sous le plateau : 46 ou 47 cm pour une table de 74 à 75 cm.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b10",
+              "_key": "copy-v2-associer-table-chaises-salle-a-manger-h5",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Vérifier la compatibilité au quotidien",
+                  "_key": "copy-v2-associer-table-chaises-salle-a-manger-h5s",
+                  "text": "Le revêtement selon l’usage",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b11",
+              "_key": "copy-v2-associer-table-chaises-salle-a-manger-p5",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "L’accord visuel doit aussi fonctionner pendant un repas. Vérifiez la hauteur de l’assise par rapport au plateau, l’espace pour les jambes et la possibilité de rapprocher la chaise de la table. Les accoudoirs méritent une attention particulière : leur hauteur et leur forme peuvent empêcher de glisser complètement l’assise sous le plateau.",
-                  "marks": []
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "b12",
-              "style": "normal",
-              "markDefs": [],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "s0",
-                  "text": "Tenez également compte du nombre de chaises prévu et du piètement de la table. Dessiner l’ensemble à l’échelle, puis tester une installation avec les sièges disponibles chez vous, permet de préciser les points à vérifier avant une commande. Une fois assis, assurez-vous que chacun peut se rapprocher du plateau et se lever sans déplacer toute la composition.",
+                  "_key": "copy-v2-associer-table-chaises-salle-a-manger-p5s",
+                  "text": "Le cuir et le similicuir s’essuient d’un geste : c’est le choix d’une salle à manger avec des enfants. Le tissu et le micro nubuck sont plus doux et plus chauds au toucher. Rhonda existe en plus de cent teintes, entre cuir mince, similicuir, tissu et micro nubuck.",
                   "marks": []
                 }
               ]
@@ -24981,172 +24911,130 @@
         "locale": "fr",
         "data": {
           "title": "Céramique, verre ou bois : comment choisir la finition d’un meuble ?",
-          "excerpt": "Une même forme change de présence selon sa finition. Pour choisir, observez ce que la matière apporte à la pièce et vérifiez les caractéristiques de la version qui vous intéresse.",
+          "excerpt": "La céramique ne craint ni la chaleur ni les taches, le verre montre le piètement, le bois vit avec la lumière. Ce que chaque matière demande au quotidien, et comment la choisir.",
           "content": [
             {
               "_type": "block",
-              "_key": "b0",
+              "_key": "copy-v2-ceramique-verre-bois-choisir-finition-meuble-h0",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Regarder le meuble dans son environnement",
+                  "_key": "copy-v2-ceramique-verre-bois-choisir-finition-meuble-h0s",
+                  "text": "La céramique : l’aspect du marbre, sans ses contraintes",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b1",
+              "_key": "copy-v2-ceramique-verre-bois-choisir-finition-meuble-p0",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Le choix d’un plateau ou d’une façade se fait rarement sur une couleur seule. Le sol, les murs et les meubles déjà présents influencent la manière dont une finition sera perçue. Avant de comparer les options, rassemblez quelques photographies de votre pièce prises en journée et le soir. Elles permettront de repérer les couleurs dominantes et les éléments que vous souhaitez mettre en valeur.",
+                  "_key": "copy-v2-ceramique-verre-bois-choisir-finition-meuble-p0s",
+                  "text": "Les céramiques Marmi reproduisent dix-neuf marbres, du Calacatta blanc veiné au Portoro noir et or. Contrairement au marbre, elles ne craignent ni le citron ni le vin, ni un plat chaud posé directement : c’est la matière d’une table de repas quotidiens. Sur Napoleon Keramik et Rado Keramik, la céramique habille aussi la base. Elle supporte même une terrasse couverte, avec Napoleon Keramik Outdoor.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b2",
-              "style": "normal",
-              "markDefs": [],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "s0",
-                  "text": "Observez aussi la quantité de motifs déjà présente. Un sol fortement veiné, un tapis dessiné et un plateau expressif peuvent cohabiter, mais leur association mérite d’être regardée dans son ensemble. À l’inverse, une pièce aux surfaces unies peut accueillir une matière plus graphique comme point d’attention.",
-                  "marks": []
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "b3",
+              "_key": "copy-v2-ceramique-verre-bois-choisir-finition-meuble-h1",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Identifier la matière derrière son apparence",
+                  "_key": "copy-v2-ceramique-verre-bois-choisir-finition-meuble-h1s",
+                  "text": "Le verre : laisser voir le piètement",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b4",
+              "_key": "copy-v2-ceramique-verre-bois-choisir-finition-meuble-p1",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Une apparence marbrée ne désigne pas nécessairement du marbre naturel. Dans les collections Cattelan Italia, les dénominations des variantes permettent de distinguer notamment les plateaux en céramique, en bois, en verre ou en marbre. La famille Skorpio illustre cette diversité. Vérifiez donc le nom complet du modèle et sa fiche, au-delà de la photographie qui vous a attiré.",
+                  "_key": "copy-v2-ceramique-verre-bois-choisir-finition-meuble-p1s",
+                  "text": "Un plateau en verre allège la pièce et montre le dessin de la base, comme les lignes obliques de Skorpio ou le ruban d’acier de Butterfly. Il fait 12 mm d’épaisseur sur les consoles Westin et Nettuno, 15 mm sur les tables Butterfly. Le verre extra-clair n’a pas le reflet vert du verre clair. Le verre cuit MIST a une surface texturée, plus discrète sous les traces de doigts : un plateau lisse demande un coup de chiffon plus souvent.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b5",
+              "_key": "copy-v2-ceramique-verre-bois-choisir-finition-meuble-p2",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Les brochures de la marque présentent également CrystalArt, un décor imprimé sur verre, et Brushed, une finition travaillée par brossage manuel. Ces termes décrivent des solutions différentes. Les identifier aide à formuler une demande précise et à comparer des options qui ne se résument pas à une teinte.",
+                  "_key": "copy-v2-ceramique-verre-bois-choisir-finition-meuble-p2s",
+                  "text": "Le verre miroité, fumé ou bronze, sert de plateau aux buffets Chelsea et Amsterdam et compose les miroirs Cosmos et Glenn.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b6",
+              "_key": "copy-v2-ceramique-verre-bois-choisir-finition-meuble-h3",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Comparer le dessin et les reflets",
+                  "_key": "copy-v2-ceramique-verre-bois-choisir-finition-meuble-h3s",
+                  "text": "Le bois : une matière qui varie",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b7",
+              "_key": "copy-v2-ceramique-verre-bois-choisir-finition-meuble-p3",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Commencez par le dessin de la surface : préférez-vous une texture discrète, un veinage marqué ou une transparence qui laisse voir le piètement ? Regardez ensuite la teinte à côté des autres matériaux de la pièce. Une association réussie peut reposer sur un rappel de couleur, sans répéter partout la même finition.",
+                  "_key": "copy-v2-ceramique-verre-bois-choisir-finition-meuble-p3s",
+                  "text": "Noyer Canaletto, brun chaud, ou rouvre brûlé, presque noir : ce sont les deux bois des tables Botero Wood et des tables basses Adrian Wood. Le bois se protège d’un dessous de plat et d’un sous-verre. Les finitions Brushed, bronze ou grise, sont brossées à la main : deux pièces n’ont jamais exactement les mêmes nuances.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b8",
-              "style": "normal",
-              "markDefs": [],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "s0",
-                  "text": "Les reflets comptent également. Examinez les photographies sous plusieurs angles et, lorsqu’un échantillon est accessible, observez-le sous différents éclairages. Un gros plan renseigne sur un détail ; une vue d’ensemble permet de comprendre sa place dans le meuble. Gardez toutefois à l’esprit que l’écran et l’éclairage de la prise de vue peuvent modifier la perception des couleurs.",
-                  "marks": []
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "b9",
+              "_key": "copy-v2-ceramique-verre-bois-choisir-finition-meuble-h4",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Relier le choix à votre usage",
+                  "_key": "copy-v2-ceramique-verre-bois-choisir-finition-meuble-h4s",
+                  "text": "Choisir sur place, avec votre intérieur",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b10",
+              "_key": "copy-v2-ceramique-verre-bois-choisir-finition-meuble-p4",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Une table de repas, un bureau et un buffet ne sont pas sollicités de la même façon. Notez ce que vous poserez sur la surface et les usages fréquents avant de demander les recommandations du fabricant. L’entretien, les précautions et les propriétés doivent être vérifiés pour la finition exacte ; le seul nom d’une matière ne suffit pas à les déduire.",
-                  "marks": []
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "b11",
-              "style": "normal",
-              "markDefs": [],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "s0",
-                  "text": "Pour avancer, retenez deux ou trois options et notez ce qui vous plaît dans chacune. Conservez la référence du modèle, le nom de la finition et une photographie de votre intérieur. Vous disposerez d’une base claire pour échanger avec le showroom de Casablanca et préciser votre sélection.",
+                  "_key": "copy-v2-ceramique-verre-bois-choisir-finition-meuble-p4s",
+                  "text": "Une finition se juge à côté de votre sol et à la lumière de votre pièce. Apportez au showroom une photo prise en journée, un échantillon de rideau ou de carrelage : le conseiller place les échantillons à côté, et vous voyez tout de suite ce qui fonctionne.",
                   "marks": []
                 }
               ]
@@ -25196,200 +25084,116 @@
         "locale": "fr",
         "data": {
           "title": "Composer un salon avec un canapé et un fauteuil",
-          "excerpt": "Un canapé et un fauteuil peuvent partager les mêmes lignes ou jouer sur leurs différences. Le point de départ reste votre façon de vivre le salon.",
+          "excerpt": "Mesurer avant de choisir, droit ou composable, continuité ou contraste, tissu ou cuir : comment composer un salon avec un canapé et un fauteuil Cattelan Italia.",
           "content": [
             {
               "_type": "block",
-              "_key": "b0",
+              "_key": "copy-v2-composer-salon-canape-fauteuil-h0",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Partir des moments vécus dans le salon",
+                  "_key": "copy-v2-composer-salon-canape-fauteuil-h0s",
+                  "text": "Mesurer avant de choisir",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b1",
+              "_key": "copy-v2-composer-salon-canape-fauteuil-p0",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Conversation, soirée en famille ou lecture : avant de choisir les assises, demandez-vous quelle place ces activités occupent chez vous. Le canapé accueille souvent plusieurs personnes ; le fauteuil crée une assise distincte, orientée vers la conversation ou vers un autre point de la pièce.",
+                  "_key": "copy-v2-composer-salon-canape-fauteuil-p0s",
+                  "text": "Laissez 80 à 90 cm de passage autour du salon et 40 à 45 cm entre le canapé et la table basse : assez pour poser un verre sans se lever, et pour passer les jambes. Dessinez le plan avec les portes, les fenêtres et l’arrivée de la télévision : c’est ce plan qui décide de la longueur du canapé.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b2",
-              "style": "normal",
-              "markDefs": [],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "s0",
-                  "text": "Dessinez une implantation avec les meubles à conserver. Repérez les portes, les fenêtres et les trajets habituels. Un fauteuil séduisant sur une photo doit trouver une place où l’on a envie de s’installer, sans devoir le déplacer à chaque passage.",
-                  "marks": []
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "b3",
+              "_key": "copy-v2-composer-salon-canape-fauteuil-h1",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Choisir entre continuité et contraste",
+                  "_key": "copy-v2-composer-salon-canape-fauteuil-h1s",
+                  "text": "Droit, d’angle ou composable",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b4",
+              "_key": "copy-v2-composer-salon-canape-fauteuil-p1",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Associer des modèles d’une même famille est une manière de créer une continuité visuelle. Chez Cattelan Italia, le canapé Ruby et le fauteuil Ruby Lounge partagent une structure en bois apparente et des lignes enveloppantes. Leur dessin commun permet de les envisager ensemble, tout en conservant à chaque assise son rôle dans la composition.",
+                  "_key": "copy-v2-composer-salon-canape-fauteuil-p1s",
+                  "text": "Craig, Douglas, Mykonos et Sinatra se composent en éléments : droit, d’angle ou en grande composition. Chacun a son caractère. Craig a des coussins de dossier garnis de plumes ; Douglas repose sur des pieds en métal, en deux hauteurs, qui allègent le volume et dégagent le sol ; Mykonos a des formes arrondies ; Sinatra, des dossiers réglables. Ruby est un canapé droit de 200 cm, à structure apparente en frêne.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b5",
-              "style": "normal",
-              "markDefs": [],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "s0",
-                  "text": "Vous pouvez également rapprocher deux modèles différents. Choisissez alors un élément commun : une courbe, une teinte ou une matière. Ce fil conducteur aide à construire l’ensemble. Un contraste se lit mieux lorsqu’il porte sur un choix précis, plutôt que sur toutes les caractéristiques à la fois.",
-                  "marks": []
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "b6",
+              "_key": "copy-v2-composer-salon-canape-fauteuil-h2",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Évaluer les volumes dans leur ensemble",
+                  "_key": "copy-v2-composer-salon-canape-fauteuil-h2s",
+                  "text": "Continuité ou contraste",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b7",
+              "_key": "copy-v2-composer-salon-canape-fauteuil-p2",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "La largeur ne suffit pas à comprendre la place d’une assise. Regardez aussi sa profondeur, la hauteur de son dossier et la présence de ses accoudoirs. Un canapé aux volumes généreux peut gagner à être accompagné d’un fauteuil qui laisse davantage voir le sol. À l’inverse, deux silhouettes affirmées peuvent devenir le centre de la pièce.",
+                  "_key": "copy-v2-composer-salon-canape-fauteuil-p2s",
+                  "text": "Le fauteuil peut prolonger le canapé : Ruby Lounge, 81 cm de large, reprend la structure en frêne de Ruby. Il peut aussi s’en distinguer, dans un autre revêtement ou une autre couleur, pour créer un coin lecture. Orientez-le vers le canapé plutôt que vers la télévision : c’est la position de la conversation.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b8",
-              "style": "normal",
-              "markDefs": [],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "s0",
-                  "text": "Reportez les dimensions envisagées sur votre plan, puis matérialisez leur emprise au sol avec du papier. Observez la composition depuis l’entrée et depuis les autres pièces. Cette vérification permet de juger les passages et les perspectives avant de vous attacher à une configuration.",
-                  "marks": []
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "b9",
+              "_key": "copy-v2-composer-salon-canape-fauteuil-h3",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Relier les matières à votre intérieur",
+                  "_key": "copy-v2-composer-salon-canape-fauteuil-h3s",
+                  "text": "Tissu ou cuir",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b10",
+              "_key": "copy-v2-composer-salon-canape-fauteuil-p3",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Le choix du revêtement prend du sens lorsqu’on le rapproche du sol, des rideaux et de la table basse. Commencez par les éléments qui resteront dans la pièce. Un bois déjà présent peut guider une finition ; la couleur d’un tapis peut suggérer une tonalité pour le fauteuil. Il n’est pas nécessaire de retrouver exactement la même nuance partout.",
-                  "marks": []
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "b11",
-              "style": "normal",
-              "markDefs": [],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "s0",
-                  "text": "Gardez aussi une place pour les questions pratiques. Demandez les consignes d’entretien du revêtement envisagé et vérifiez si la housse est amovible. Ces caractéristiques varient selon les modèles : elles doivent être examinées avec autant d’attention que la couleur ou la texture.",
-                  "marks": []
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "b12",
-              "style": "normal",
-              "markDefs": [],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "s0",
-                  "text": "Rassemblez un plan, quelques photos du salon et des ambiances qui vous plaisent. Notez ce qui vous attire : le dessin du dossier, la présence du bois ou la relation entre les assises.",
-                  "marks": []
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "b13",
-              "style": "normal",
-              "markDefs": [],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "s0",
-                  "text": "Explorez ensuite les canapés et fauteuils Cattelan Italia pour retenir quelques pistes. Si vous souhaitez découvrir un modèle au showroom de Casablanca, contactez l’équipe pour vérifier les pièces exposées. Vous pourrez ainsi poursuivre votre choix en tenant compte du confort recherché.",
+                  "_key": "copy-v2-composer-salon-canape-fauteuil-p3s",
+                  "text": "Les tissus sont classés de T10 à T90 ; en version tissu, les housses de Craig, Douglas, Mykonos et Sinatra se retirent pour le nettoyage. Les cuirs existent en glove, magnifica, nabuk et perfetto : plus de trente teintes à eux quatre. Au total, près de quatre cents revêtements sont au showroom : apportez une photo de votre sol et de vos rideaux pour comparer.",
                   "marks": []
                 }
               ]
@@ -25435,200 +25239,144 @@
         "locale": "fr",
         "data": {
           "title": "Buffet ou bibliothèque : quel rangement choisir pour le salon ?",
-          "excerpt": "Le bon rangement dépend autant de ce que vous souhaitez montrer que de ce que vous préférez garder à l’abri des regards. Voici comment orienter votre choix.",
+          "excerpt": "45 à 55 cm de profondeur pour un buffet, 26 à 29 cm pour une bibliothèque, 90 cm devant les portes : les mesures et les modèles pour choisir un rangement de salon.",
           "content": [
             {
               "_type": "block",
-              "_key": "b0",
+              "_key": "copy-v2-choisir-buffet-bibliotheque-salon-h0",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Commencer par ce que vous avez à ranger",
+                  "_key": "copy-v2-choisir-buffet-bibliotheque-salon-h0s",
+                  "text": "Fermé ou ouvert",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b1",
+              "_key": "copy-v2-choisir-buffet-bibliotheque-salon-p0",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Livres, vaisselle, documents et souvenirs ne demandent pas tous le même rangement. Rassemblez vos objets par usage et distinguez ceux que vous utilisez régulièrement de ceux que vous souhaitez exposer. Cette sélection donne une première direction avant de comparer les meubles.",
+                  "_key": "copy-v2-choisir-buffet-bibliotheque-salon-p0s",
+                  "text": "Un buffet garde à l’abri la vaisselle, les nappes et ce que l’on ne veut pas voir ; une bibliothèque montre les livres et les objets. Faites deux listes avant de choisir : ce qui doit disparaître, et ce que vous voulez exposer. Si la première est la plus longue, c’est un buffet.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b2",
-              "style": "normal",
-              "markDefs": [],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "s0",
-                  "text": "Évitez de choisir une capacité uniquement à partir de la taille extérieure du meuble. La hauteur des étagères, la profondeur utile et la répartition des compartiments peuvent changer la manière de l’utiliser. Prenez les mesures des objets les plus encombrants pour vérifier qu’ils trouveront réellement leur place.",
-                  "marks": []
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "b3",
+              "_key": "copy-v2-choisir-buffet-bibliotheque-salon-h1",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Le buffet pour regrouper et dissimuler",
+                  "_key": "copy-v2-choisir-buffet-bibliotheque-salon-h1s",
+                  "text": "Le buffet : les mesures",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b4",
+              "_key": "copy-v2-choisir-buffet-bibliotheque-salon-p1",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Un buffet permet de réunir des objets derrière des portes tout en conservant une surface disponible au-dessus. Il peut convenir si vous souhaitez ranger la vaisselle près de la salle à manger, ou rassembler des affaires du quotidien dans le salon. Le plateau accueille ensuite quelques éléments choisis, selon l’usage et les indications du fabricant.",
+                  "_key": "copy-v2-choisir-buffet-bibliotheque-salon-p1s",
+                  "text": "Un buffet de salle à manger mesure 45 à 55 cm de profondeur : Chelsea et Amsterdam 46 cm, Kayak 53 cm. Laissez 90 cm devant pour ouvrir les portes et se baisser. Chelsea existe en trois hauteurs, 50, 75 et 100 cm, et de 137,5 à 248 cm de long ; Amsterdam en deux, trois ou quatre portes, jusqu’à 294 cm ; Kayak en deux ou trois portes, 147 ou 220 cm.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b5",
+              "_key": "copy-v2-choisir-buffet-bibliotheque-salon-p2",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Dans les collections Cattelan Italia, Chelsea se distingue par un dessin polygonal et des étagères intérieures en verre. Son plateau existe en verre miroir ou en céramique selon la version. Cet exemple montre comment un rangement fermé peut participer au décor par sa forme, sans dépendre uniquement des objets posés dessus.",
+                  "_key": "copy-v2-choisir-buffet-bibliotheque-salon-p2s",
+                  "text": "À l’intérieur, des étagères en verre ; Kayak et Amsterdam peuvent recevoir un tiroir intérieur pour les couverts. Le plateau en verre miroité bronze de Chelsea ou d’Amsterdam reflète la lumière d’une suspension au-dessus.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b6",
+              "_key": "copy-v2-choisir-buffet-bibliotheque-salon-h3",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "La bibliothèque pour donner une place aux objets visibles",
+                  "_key": "copy-v2-choisir-buffet-bibliotheque-salon-h3s",
+                  "text": "La bibliothèque : peu profonde",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b7",
+              "_key": "copy-v2-choisir-buffet-bibliotheque-salon-p3",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Une bibliothèque ouverte permet de composer avec les livres et les objets. Leur disposition devient une partie du décor : des ouvrages regroupés, un objet isolé et une étagère moins remplie produisent des effets différents. Avant de retenir cette solution, demandez-vous si vous aimez faire évoluer cette présentation ou si vous préférez un rangement plus discret.",
+                  "_key": "copy-v2-choisir-buffet-bibliotheque-salon-p3s",
+                  "text": "Une bibliothèque n’a pas besoin de la profondeur d’un buffet : la plupart des livres font 15 à 24 cm. Nautilus mesure 26 cm de profondeur, Airport 29 cm : elles prennent peu de place devant un mur.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b8",
+              "_key": "copy-v2-choisir-buffet-bibliotheque-salon-p4",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Airport, dessinée par Giorgio Cattelan, est une bibliothèque composée d’éléments, avec fixation au mur ou au plafond. Ses étagères et ses conteneurs offrent différentes possibilités de composition. Le choix d’une configuration demande donc d’examiner les dimensions de la pièce et les conditions de fixation propres au projet.",
+                  "_key": "copy-v2-choisir-buffet-bibliotheque-salon-p4s",
+                  "text": "Nautilus se compose de modules en acier de 100 × 100 cm, juxtaposés ou superposés jusqu’à 200 cm de haut ; elle se fixe au mur ou reçoit un lest. Airport se fixe au mur ou au plafond, de 60 à 310 cm de long : elle peut séparer un salon d’une salle à manger sans fermer la pièce.",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b9",
+              "_key": "copy-v2-choisir-buffet-bibliotheque-salon-h5",
               "style": "h2",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Trouver la bonne place dans le salon",
+                  "_key": "copy-v2-choisir-buffet-bibliotheque-salon-h5s",
+                  "text": "Le bon mur",
                   "marks": []
                 }
               ]
             },
             {
               "_type": "block",
-              "_key": "b10",
+              "_key": "copy-v2-choisir-buffet-bibliotheque-salon-p5",
               "style": "normal",
               "markDefs": [],
               "children": [
                 {
                   "_type": "span",
-                  "_key": "s0",
-                  "text": "Un buffet bas laisse une place au mur pour un tableau. Une bibliothèque plus haute attire le regard vers les étagères. Comparez ces effets avec les éléments présents : fenêtres, canapé et meubles à conserver. Le rangement participe ainsi à la composition générale du salon.",
-                  "marks": []
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "b11",
-              "style": "normal",
-              "markDefs": [],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "s0",
-                  "text": "Sur le plan, prévoyez l’ouverture des portes et des tiroirs, ainsi que la place pour les utiliser. Repérez également les prises et les interrupteurs. Ces vérifications évitent de retenir une implantation qui compliquerait un geste quotidien.",
-                  "marks": []
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "b12",
-              "style": "normal",
-              "markDefs": [],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "s0",
-                  "text": "Buffet et bibliothèque peuvent se compléter lorsque la pièce et vos besoins le justifient. Le premier accueille ce que vous préférez dissimuler ; la seconde compose un décor visible. Une tonalité ou une finition commune peut les relier, tout en préservant leurs fonctions distinctes.",
-                  "marks": []
-                }
-              ]
-            },
-            {
-              "_type": "block",
-              "_key": "b13",
-              "style": "normal",
-              "markDefs": [],
-              "children": [
-                {
-                  "_type": "span",
-                  "_key": "s0",
-                  "text": "Préparez ensuite des photos du salon et les dimensions disponibles. Consultez les collections pour comparer les silhouettes. Contactez le showroom de Casablanca pour vous renseigner sur les modèles retenus et vérifier lesquels sont exposés avant votre visite.",
+                  "_key": "copy-v2-choisir-buffet-bibliotheque-salon-p5s",
+                  "text": "Placez le buffet près de la table, là où l’on sert : sur le mur le plus long de la salle à manger, sous un miroir ou un tableau. La bibliothèque trouve sa place dans le salon, sur un mur sans passage, ou comme séparation entre deux espaces.",
                   "marks": []
                 }
               ]
@@ -26758,27 +26506,27 @@
           "title": "Sur-mesure et matières",
           "route_key": "sur-mesure",
           "eyebrow": "Personnalisation",
-          "intro": "Chaque modèle du catalogue Cattelan Italia peut être commandé et personnalisé. Dimensions, matières et finitions se choisissent avec un conseiller, au showroom de Casablanca.",
+          "intro": "Tout le catalogue Cattelan Italia se commande à vos mesures et dans vos matières : la longueur d’une table, le décor de son plateau, la laque de son piètement, le revêtement d’un canapé. Fabriqué en Italie en 10 à 12 semaines, sans délai supplémentaire.",
           "sections": [
             {
               "section_key": "options",
               "heading": "Ce qui se personnalise",
-              "text": "Les dimensions.\nLes matières et leurs finitions : essences de bois, céramiques, marbres, métaux, tissus et cuirs."
+              "text": "Les dimensions, dans les formats prévus par chaque modèle : Napoleon Keramik va de 200 à 320 cm, Tyron Keramik existe en rectangle, biscuit ou boomerang, Botero de 100 à 180 cm de diamètre.\nLe plateau : dix-neuf céramiques Marmi, du Calacatta au Portoro ; verre clair, extra-clair ou cuit ; noyer Canaletto ou rouvre brûlé.\nLe piètement : laques gaufrées titane, bronze, graphite, pearl ou noir, et finitions Brushed brossées à la main.\nLes assises : tissus classés de T10 à T90, cuirs glove, magnifica, nabuk et perfetto, micro nubuck et similicuir."
             },
             {
               "section_key": "samples",
               "heading": "Tous les échantillons au showroom",
-              "text": "Les échantillons de matières sont présentés au showroom du Triangle d’Or. Vous les comparez sur place, avec un conseiller."
+              "text": "Céramiques, bois, laques, métaux, verres et près de quatre cents tissus et cuirs sont au showroom du Triangle d’Or. Apportez une photo de votre sol, un échantillon de rideau ou la teinte de vos murs : une finition se choisit à côté de ce qui existe déjà chez vous, pas seule."
             },
             {
               "section_key": "lead_time",
               "heading": "Sans délai supplémentaire",
-              "text": "Une pièce personnalisée suit le délai habituel : 10 à 12 semaines de fabrication en Italie. La livraison et l’installation sont comprises dans le projet."
+              "text": "Une pièce sur mesure suit le délai habituel : 10 à 12 semaines de fabrication en Italie à partir de la validation de la commande et de l’acompte de 50 %. L’installation est incluse, et la livraison est offerte à Casablanca."
             },
             {
               "section_key": "materials",
               "heading": "Choisir une finition",
-              "text": "Céramique, verre ou bois : chaque matière a son usage et son entretien.",
+              "text": "La céramique pour un plateau qui ne craint ni la chaleur ni les taches, le verre pour laisser voir le piètement, le bois pour la chaleur de son grain. L’article du Journal compare leurs usages et leur entretien.",
               "cta_label": "Lire l’article",
               "cta_href": "/journal/ceramique-verre-bois-choisir-finition-meuble/"
             }
@@ -26858,12 +26606,12 @@
             {
               "section_key": "brand",
               "heading": "Cattelan Italia",
-              "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, la marque conçoit et fabrique son mobilier en Italie. Tables, chaises, canapés, bibliothèques, buffets, luminaires et accessoires composent ses collections."
+              "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, la maison dessine et fabrique en Italie des tables, des chaises, des canapés, des rangements et des luminaires. Ses tables en sont la pièce centrale : plateaux en céramique, en verre ou en bois sur des piètements sculptés en acier, comme ceux de Skorpio, Butterfly ou Tyron Keramik."
             },
             {
               "section_key": "milan",
               "heading": "Les nouvelles collections",
-              "text": "Chaque année, Cattelan Italia présente ses nouveautés au Salon du Meuble de Milan."
+              "text": "Chaque année, Cattelan Italia présente ses nouveautés au Salon du Meuble de Milan. Toutes se commandent depuis Casablanca, même avant d’être exposées au showroom."
             },
             {
               "section_key": "showroom",
@@ -26873,7 +26621,7 @@
             {
               "section_key": "advice",
               "heading": "Conseil et projets complets",
-              "text": "L’équipe vous conseille sur le mobilier, les matières, les finitions et l’agencement, pour une pièce ou un intérieur complet."
+              "text": "Pour une pièce, le conseiller vous aide à fixer les dimensions et les finitions, échantillons en main. Pour une maison entière, l’équipe compose l’ensemble, salon, salle à manger, chambre, à partir de vos plans, jusqu’à l’installation. Elle travaille aussi directement avec votre architecte."
             }
           ],
           "seo_title": "À propos · Cattelan Italia Maroc",

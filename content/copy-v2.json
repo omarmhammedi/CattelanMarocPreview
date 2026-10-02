@@ -3,82 +3,149 @@
   "source": "SEO strategy v2 (1 October 2026) and copy audit: every claim comes from the product sheets, the FAQ or the site's own data. Sizes and spacing advice are common furnishing rules of thumb.",
   "entries": [
     {
-      "collection": "pages", "slug": "home",
+      "collection": "pages",
+      "slug": "home",
       "fields": {
         "intro": "Le showroom monomarque Cattelan Italia du Triangle d’Or. Tout le catalogue se commande à vos dimensions et finitions, fabriqué en Italie en 10 à 12 semaines, livré et installé partout au Maroc.",
         "meta_description": "Showroom Cattelan Italia à Casablanca : tables, canapés, chaises, luminaires sur commande, fabriqués en Italie, livrés et installés partout au Maroc."
       },
       "sections": {
-        "brand": { "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, la maison dessine et fabrique en Italie des tables, des assises, des rangements et des luminaires, en verre, céramique, bois, métal et cuir." },
-        "collections": { "text": "Huit familles, des tables aux luminaires, et près de quarante modèles présentés avec leurs dimensions, leurs finitions et leur fiche technique." },
-        "showroom": { "text": "400 m² au Triangle d’Or, des pièces exposées pour le salon et la salle à manger, et tous les échantillons de la marque. Visite libre du lundi au samedi ou sur rendez-vous, service de voiturier." },
-        "catalogue": { "text": "Le catalogue en PDF, pour repérer les modèles avant votre visite ou les partager avec votre architecte." },
-        "journal": { "text": "Des repères pour choisir : forme et taille d’une table, chaises, finitions, salon, rangements." }
+        "brand": {
+          "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, la maison dessine et fabrique en Italie des tables, des assises, des rangements et des luminaires, en verre, céramique, bois, métal et cuir."
+        },
+        "collections": {
+          "text": "Huit familles, des tables aux luminaires, et près de quarante modèles présentés avec leurs dimensions, leurs finitions et leur fiche technique."
+        },
+        "showroom": {
+          "text": "400 m² au Triangle d’Or, des pièces exposées pour le salon et la salle à manger, et tous les échantillons de la marque. Visite libre du lundi au samedi ou sur rendez-vous, service de voiturier."
+        },
+        "catalogue": {
+          "text": "Le catalogue en PDF, pour repérer les modèles avant votre visite ou les partager avec votre architecte."
+        },
+        "journal": {
+          "text": "Des repères pour choisir : forme et taille d’une table, chaises, finitions, salon, rangements."
+        }
       }
     },
     {
-      "collection": "pages", "slug": "showroom-casablanca",
+      "collection": "pages",
+      "slug": "showroom-casablanca",
       "fields": {
         "intro": "Au Triangle d’Or, 400 m² consacrés à Cattelan Italia : des pièces exposées pour le salon et la salle à manger, et tous les échantillons de la marque pour choisir vos finitions sur place.",
         "meta_description": "Showroom Cattelan Italia de 400 m² au Triangle d’Or, Casablanca : pièces exposées, tous les échantillons, visite libre ou sur rendez-vous, voiturier.",
         "content": [
-          ["Ce que vous trouvez au showroom", "Une sélection de tables, chaises, canapés, rangements et luminaires, présentés ensemble comme dans une maison. Et l’ensemble des échantillons de la marque : dix-neuf céramiques, les bois, les laques et les métaux, près de quatre cents tissus et cuirs."],
-          ["Recevoir vos clients", "Architectes et décorateurs, le showroom accueille vos rendez-vous : vos clients voient les pièces, touchent les matières et valident les finitions avec vous."],
-          ["Livraison dans tout le Maroc", "Livraison et installation partout au Maroc, notamment à Rabat, Marrakech et Tanger. La livraison est offerte à Casablanca ; ailleurs, les frais dépendent de la destination et figurent sur le devis."]
+          [
+            "Ce que vous trouvez au showroom",
+            "Une sélection de tables, chaises, canapés, rangements et luminaires, présentés ensemble comme dans une maison. Et l’ensemble des échantillons de la marque : dix-neuf céramiques, les bois, les laques et les métaux, près de quatre cents tissus et cuirs."
+          ],
+          [
+            "Recevoir vos clients",
+            "Architectes et décorateurs, le showroom accueille vos rendez-vous : vos clients voient les pièces, touchent les matières et valident les finitions avec vous."
+          ],
+          [
+            "Livraison dans tout le Maroc",
+            "Livraison et installation partout au Maroc, notamment à Rabat, Marrakech et Tanger. La livraison est offerte à Casablanca ; ailleurs, les frais dépendent de la destination et figurent sur le devis."
+          ]
         ]
       },
       "sections": {
-        "visit": { "heading": "Préparer votre visite", "text": "Apportez les dimensions de la pièce et quelques photos : le conseiller compare avec vous tailles et finitions, échantillons en main. La visite est libre aux heures d’ouverture ; un rendez-vous réserve un conseiller pour vous." },
-        "cities": { "heading": "Un projet à Rabat, Marrakech ou Tanger", "text": "Le choix peut commencer à distance : photos des échantillons, fiches techniques et devis sur WhatsApp. Vous confirmez ensuite au showroom si vous passez à Casablanca, ou directement à distance." },
-        "contact_note": { "text": "Pour savoir si un modèle est exposé, ou pour un devis, écrivez-nous sur WhatsApp en indiquant son nom." },
-        "faq_1": { "heading": "Tous les modèles sont-ils exposés ?", "text": "Non. Le showroom présente une sélection, mais tout le catalogue se commande. La mention « Exposé au showroom de Casablanca » figure sur la fiche des modèles présents." },
-        "faq_2": { "heading": "Comment obtenir un devis et un délai ?", "text": "Le prix dépend des dimensions et des finitions : il figure dans un devis détaillé, établi après un échange avec un conseiller. Le délai est de 10 à 12 semaines après validation de la commande." },
-        "faq_3": { "heading": "Peut-on préparer son choix avant de venir ?", "text": "Oui. Envoyez sur WhatsApp les modèles repérés sur le site ou dans le catalogue : le conseiller vous les montre, avec leurs échantillons, à votre arrivée." },
-        "faq_4": { "heading": "Livrez-vous hors de Casablanca ?", "text": "Oui, partout au Maroc, avec installation. La livraison est offerte à Casablanca ; ailleurs, les frais dépendent de la destination et figurent sur le devis." }
+        "visit": {
+          "heading": "Préparer votre visite",
+          "text": "Apportez les dimensions de la pièce et quelques photos : le conseiller compare avec vous tailles et finitions, échantillons en main. La visite est libre aux heures d’ouverture ; un rendez-vous réserve un conseiller pour vous."
+        },
+        "cities": {
+          "heading": "Un projet à Rabat, Marrakech ou Tanger",
+          "text": "Le choix peut commencer à distance : photos des échantillons, fiches techniques et devis sur WhatsApp. Vous confirmez ensuite au showroom si vous passez à Casablanca, ou directement à distance."
+        },
+        "contact_note": {
+          "text": "Pour savoir si un modèle est exposé, ou pour un devis, écrivez-nous sur WhatsApp en indiquant son nom."
+        },
+        "faq_1": {
+          "heading": "Tous les modèles sont-ils exposés ?",
+          "text": "Non. Le showroom présente une sélection, mais tout le catalogue se commande. La mention « Exposé au showroom de Casablanca » figure sur la fiche des modèles présents."
+        },
+        "faq_2": {
+          "heading": "Comment obtenir un devis et un délai ?",
+          "text": "Le prix dépend des dimensions et des finitions : il figure dans un devis détaillé, établi après un échange avec un conseiller. Le délai est de 10 à 12 semaines après validation de la commande."
+        },
+        "faq_3": {
+          "heading": "Peut-on préparer son choix avant de venir ?",
+          "text": "Oui. Envoyez sur WhatsApp les modèles repérés sur le site ou dans le catalogue : le conseiller vous les montre, avec leurs échantillons, à votre arrivée."
+        },
+        "faq_4": {
+          "heading": "Livrez-vous hors de Casablanca ?",
+          "text": "Oui, partout au Maroc, avec installation. La livraison est offerte à Casablanca ; ailleurs, les frais dépendent de la destination et figurent sur le devis."
+        }
       }
     },
     {
-      "collection": "pages", "slug": "collections",
+      "collection": "pages",
+      "slug": "collections",
       "fields": {
         "intro": "Huit familles et près de quarante modèles, chacun avec ses dimensions, ses finitions et sa fiche technique. Tout se commande sur mesure, fabriqué en Italie en 10 à 12 semaines, livré et installé partout au Maroc.",
         "meta_description": "Tables, salons, chaises, tables basses, rangements, consoles, luminaires et mobilier extérieur Cattelan Italia, sur commande, livrés partout au Maroc."
       },
       "sections": {
-        "contact": { "text": "Envoyez son nom sur WhatsApp : un conseiller vous dit si elle est exposée, quelles finitions sont possibles et dans quel délai." },
-        "professional": { "heading": "Architectes et décorateurs", "text": "Fiches techniques, échantillons et fichiers 2D et 3D sur demande, selon les modèles. Le showroom peut accueillir vos rendez-vous clients." }
+        "contact": {
+          "text": "Envoyez son nom sur WhatsApp : un conseiller vous dit si elle est exposée, quelles finitions sont possibles et dans quel délai."
+        },
+        "professional": {
+          "heading": "Architectes et décorateurs",
+          "text": "Fiches techniques, échantillons et fichiers 2D et 3D sur demande, selon les modèles. Le showroom peut accueillir vos rendez-vous clients."
+        }
       }
     },
     {
-      "collection": "pages", "slug": "catalogue",
+      "collection": "pages",
+      "slug": "catalogue",
       "fields": {
         "title": "Recevoir le catalogue Cattelan Italia",
         "intro": "Le catalogue Cattelan Italia en PDF, toutes les familles en images. Indiquez votre nom, votre WhatsApp, votre e-mail et votre ville pour le recevoir.",
         "meta_description": "Recevez le catalogue Cattelan Italia en PDF : toutes les collections, à parcourir avant votre visite au showroom de Casablanca."
       },
       "sections": {
-        "contact": { "heading": "Un conseiller reste à votre disposition", "text": "Pour un modèle, une finition ou un délai, écrivez au showroom sur WhatsApp." }
+        "contact": {
+          "heading": "Un conseiller reste à votre disposition",
+          "text": "Pour un modèle, une finition ou un délai, écrivez au showroom sur WhatsApp."
+        }
       }
     },
     {
-      "collection": "pages", "slug": "journal",
+      "collection": "pages",
+      "slug": "journal",
       "fields": {
         "intro": "Des repères pour choisir : forme et taille d’une table, association avec les chaises, finitions, composition d’un salon, rangements. Rédigés par le showroom de Casablanca."
       },
       "sections": {
-        "catalogue": { "text": "Le catalogue PDF présente toutes les familles : demandez-le pour repérer les modèles avant votre visite." }
+        "catalogue": {
+          "text": "Le catalogue PDF présente toutes les familles : demandez-le pour repérer les modèles avant votre visite."
+        }
       }
     },
     {
-      "collection": "pages", "slug": "a-propos",
+      "collection": "pages",
+      "slug": "a-propos",
       "fields": {
         "intro": "Le showroom monomarque Cattelan Italia du Triangle d’Or, à Casablanca : 400 m², tout le catalogue sur commande, livré et installé partout au Maroc."
       },
       "sections": {
-        "showroom": { "text": "Sur 400 m², le showroom présente une sélection de modèles et l’ensemble des matériaux, finitions et revêtements de la marque. Tout le catalogue peut y être commandé et personnalisé." }
+        "showroom": {
+          "text": "Sur 400 m², le showroom présente une sélection de modèles et l’ensemble des matériaux, finitions et revêtements de la marque. Tout le catalogue peut y être commandé et personnalisé."
+        },
+        "brand": {
+          "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, la maison dessine et fabrique en Italie des tables, des chaises, des canapés, des rangements et des luminaires. Ses tables en sont la pièce centrale : plateaux en céramique, en verre ou en bois sur des piètements sculptés en acier, comme ceux de Skorpio, Butterfly ou Tyron Keramik."
+        },
+        "milan": {
+          "text": "Chaque année, Cattelan Italia présente ses nouveautés au Salon du Meuble de Milan. Toutes se commandent depuis Casablanca, même avant d’être exposées au showroom."
+        },
+        "advice": {
+          "text": "Pour une pièce, le conseiller vous aide à fixer les dimensions et les finitions, échantillons en main. Pour une maison entière, l’équipe compose l’ensemble, salon, salle à manger, chambre, à partir de vos plans, jusqu’à l’installation. Elle travaille aussi directement avec votre architecte."
+        }
       }
     },
     {
-      "collection": "families", "slug": "tables",
+      "collection": "families",
+      "slug": "tables",
       "fields": {
         "title": "Les tables et salles à manger Cattelan Italia",
         "short_title": "Tables et salles à manger",
@@ -87,13 +154,20 @@
         "intro": "Neuf tables, du plateau en verre de Skorpio à la base en argile de Botero, rondes, rectangulaires ou aux angles adoucis. Chacune se commande à vos dimensions et finitions, fabriquée en Italie en 10 à 12 semaines, livrée et installée partout au Maroc depuis notre showroom de Casablanca.",
         "meta_description": "Tables Cattelan Italia en céramique, verre, bois ou argile, rondes ou jusqu’à 320 cm. Sur commande, livrées et installées partout au Maroc.",
         "content": [
-          ["Combien de places", "Comptez 60 cm de plateau par convive. Une table ronde de 140 cm reçoit six personnes, une table de 180 cm huit à dix. En rectangle, 240 cm accueillent huit à dix personnes et 300 cm dix à douze. Gardez 90 cm de passage derrière les chaises occupées."],
-          ["Céramique, verre ou bois", "La céramique résiste à la chaleur et aux taches et reproduit les marbres, du Calacatta au Portoro, en dix-neuf décors. Le verre laisse voir le piètement. Le bois existe en noyer Canaletto et en rouvre brûlé. Tous les échantillons sont au showroom."]
+          [
+            "Combien de places",
+            "Comptez 60 cm de plateau par convive. Une table ronde de 140 cm reçoit six personnes, une table de 180 cm huit à dix. En rectangle, 240 cm accueillent huit à dix personnes et 300 cm dix à douze. Gardez 90 cm de passage derrière les chaises occupées."
+          ],
+          [
+            "Céramique, verre ou bois",
+            "La céramique résiste à la chaleur et aux taches et reproduit les marbres, du Calacatta au Portoro, en dix-neuf décors. Le verre laisse voir le piètement. Le bois existe en noyer Canaletto et en rouvre brûlé. Tous les échantillons sont au showroom."
+          ]
         ]
       }
     },
     {
-      "collection": "families", "slug": "tables-basses",
+      "collection": "families",
+      "slug": "tables-basses",
       "fields": {
         "title": "Les tables basses et d’appoint Cattelan Italia",
         "short_title": "Tables basses et d’appoint",
@@ -102,13 +176,20 @@
         "intro": "Quatre modèles à associer devant le canapé : Arena en bois laqué Brushed, Albert Keramik en céramique, Adrian Wood en noyer et rouvre, Dodo en verre artistique. Hauteurs de 28 à 54 cm, sur commande en 10 à 12 semaines, livraison et installation partout au Maroc.",
         "meta_description": "Tables basses et d’appoint Cattelan Italia en céramique, bois, métal ou verre, de 28 à 54 cm de haut. Sur commande, livrées partout au Maroc.",
         "content": [
-          ["La bonne hauteur", "Une table basse se place à la hauteur de l’assise ou juste en dessous, à 40 ou 45 cm du canapé. Albert Keramik et Adrian Wood existent en plusieurs hauteurs, de 28 à 54 cm : deux ou trois tables superposées en partie donnent plus de surface qu’une seule."],
-          ["La bonne taille", "Visez environ les deux tiers de la longueur du canapé. Devant un canapé d’angle, une composition de plateaux ronds suit mieux la forme qu’un seul rectangle."]
+          [
+            "La bonne hauteur",
+            "Une table basse se place à la hauteur de l’assise ou juste en dessous, à 40 ou 45 cm du canapé. Albert Keramik et Adrian Wood existent en plusieurs hauteurs, de 28 à 54 cm : deux ou trois tables superposées en partie donnent plus de surface qu’une seule."
+          ],
+          [
+            "La bonne taille",
+            "Visez environ les deux tiers de la longueur du canapé. Devant un canapé d’angle, une composition de plateaux ronds suit mieux la forme qu’un seul rectangle."
+          ]
         ]
       }
     },
     {
-      "collection": "families", "slug": "canapes-fauteuils",
+      "collection": "families",
+      "slug": "canapes-fauteuils",
       "fields": {
         "title": "Les canapés, salons et fauteuils Cattelan Italia",
         "short_title": "Canapés, salons et fauteuils",
@@ -117,37 +198,58 @@
         "intro": "Craig, Douglas, Mykonos et Sinatra se composent droits ou d’angle ; Ruby, canapé de 200 cm à structure en frêne, s’accompagne du fauteuil Ruby Lounge. Près de 300 tissus et cuirs, à voir au showroom de Casablanca. Sur commande en 10 à 12 semaines, livraison et installation partout au Maroc.",
         "meta_description": "Canapés, salons et fauteuils Cattelan Italia, droits ou composables, en près de 300 tissus et cuirs. Sur commande, livrés partout au Maroc.",
         "content": [
-          ["Composer le salon", "Mesurez la pièce avant de choisir les modules : gardez 80 à 90 cm de passage autour du salon et 40 à 45 cm entre le canapé et la table basse. Le conseiller établit avec vous la composition à partir de ces mesures."],
-          ["Tissu ou cuir", "Les tissus sont rangés en catégories, de T10 à T90 ; leurs housses se retirent sur Craig, Douglas, Mykonos et Sinatra. Les cuirs existent en glove, magnifica, nabuk et perfetto. Apportez au showroom un échantillon de votre sol ou de vos rideaux pour comparer."]
+          [
+            "Composer le salon",
+            "Mesurez la pièce avant de choisir les modules : gardez 80 à 90 cm de passage autour du salon et 40 à 45 cm entre le canapé et la table basse. Le conseiller établit avec vous la composition à partir de ces mesures."
+          ],
+          [
+            "Tissu ou cuir",
+            "Les tissus sont rangés en catégories, de T10 à T90 ; leurs housses se retirent sur Craig, Douglas, Mykonos et Sinatra. Les cuirs existent en glove, magnifica, nabuk et perfetto. Apportez au showroom un échantillon de votre sol ou de vos rideaux pour comparer."
+          ]
         ]
       }
     },
     {
-      "collection": "families", "slug": "chaises-tabourets",
+      "collection": "families",
+      "slug": "chaises-tabourets",
       "fields": {
         "card_text": "Des chaises en cuir, tissu ou micro nubuck, à accorder à la table.",
         "intro": "Rhonda, Greta, Miranda ML et Zuleika : des chaises en cuir, tissu, micro nubuck ou similicuir, à accorder à votre table. Plus de cent teintes de revêtement selon les modèles, sur commande en 10 à 12 semaines, livraison et installation partout au Maroc.",
         "meta_description": "Chaises de salle à manger Cattelan Italia en cuir, tissu ou micro nubuck, plus de cent teintes. Sur commande, livrées et installées partout au Maroc.",
         "content": [
-          ["Hauteur et confort", "Une assise à 46 ou 47 cm, comme celles de Miranda ML et de Zuleika, convient aux tables de 74 à 75 cm. Avec des accoudoirs, vérifiez qu’ils passent sous le plateau. Comptez 60 cm de largeur par chaise autour de la table."],
-          ["Le revêtement", "Le cuir et le similicuir s’essuient facilement ; le tissu et le micro nubuck sont plus doux au toucher. Comparez les échantillons au showroom avec la finition de votre table."]
+          [
+            "Hauteur et confort",
+            "Une assise à 46 ou 47 cm, comme celles de Miranda ML et de Zuleika, convient aux tables de 74 à 75 cm. Avec des accoudoirs, vérifiez qu’ils passent sous le plateau. Comptez 60 cm de largeur par chaise autour de la table."
+          ],
+          [
+            "Le revêtement",
+            "Le cuir et le similicuir s’essuient facilement ; le tissu et le micro nubuck sont plus doux au toucher. Comparez les échantillons au showroom avec la finition de votre table."
+          ]
         ]
       }
     },
     {
-      "collection": "families", "slug": "buffets-bibliotheques",
+      "collection": "families",
+      "slug": "buffets-bibliotheques",
       "fields": {
         "card_text": "Bahuts, buffets et bibliothèques modulables, en bois laqué, verre ou acier.",
         "intro": "Buffets et bahuts Chelsea, Kayak et Amsterdam, bibliothèques Airport et Nautilus : du verre miroité au bois laqué et à l’acier. Sur commande en 10 à 12 semaines, livraison et installation partout au Maroc depuis notre showroom de Casablanca.",
         "meta_description": "Buffets, bahuts et bibliothèques Cattelan Italia en bois laqué, verre miroité ou acier. Sur commande, livrés et installés partout au Maroc.",
         "content": [
-          ["Profondeur et passage", "Un buffet de salle à manger mesure 45 à 55 cm de profondeur : Chelsea et Amsterdam 46 cm, Kayak 53 cm. Laissez 90 cm devant les portes ouvertes."],
-          ["Fermé ou ouvert", "Un bahut à portes garde la vaisselle à l’abri ; une bibliothèque ouverte expose livres et objets. Nautilus, profonde de 26 cm, se compose par modules de 100 cm, juxtaposés ou superposés, et se fixe au mur ou reçoit un lest."]
+          [
+            "Profondeur et passage",
+            "Un buffet de salle à manger mesure 45 à 55 cm de profondeur : Chelsea et Amsterdam 46 cm, Kayak 53 cm. Laissez 90 cm devant les portes ouvertes."
+          ],
+          [
+            "Fermé ou ouvert",
+            "Un bahut à portes garde la vaisselle à l’abri ; une bibliothèque ouverte expose livres et objets. Nautilus, profonde de 26 cm, se compose par modules de 100 cm, juxtaposés ou superposés, et se fixe au mur ou reçoit un lest."
+          ]
         ]
       }
     },
     {
-      "collection": "families", "slug": "luminaires",
+      "collection": "families",
+      "slug": "luminaires",
       "fields": {
         "title": "Les luminaires et lustres Cattelan Italia",
         "short_title": "Luminaires et lustres",
@@ -156,44 +258,312 @@
         "intro": "Suspensions et lustres en verre : Paris, Cloudine et Aladdin en verre artistique, Bloom en branches métalliques. Seuls ou en composition de deux à douze, sur commande en 10 à 12 semaines, livraison et installation partout au Maroc.",
         "meta_description": "Luminaires et lustres Cattelan Italia : suspensions en verre, seules ou en composition. Sur commande, livrés et installés partout au Maroc.",
         "content": [
-          ["Au-dessus de la table", "Accrochez la suspension à 70 ou 80 cm au-dessus du plateau. Sa largeur, ou celle de la composition, fait environ la moitié de la longueur de la table. Le câble de Paris et d’Aladdin descend jusqu’à 250 cm, celui de Cloudine jusqu’à 300 cm."],
-          ["Dans le salon", "Une grappe de Cloudine ou un lustre Bloom donne un point central à la pièce. Vérifiez la hauteur sous plafond et l’emplacement de l’arrivée électrique avant de choisir la composition."]
+          [
+            "Au-dessus de la table",
+            "Accrochez la suspension à 70 ou 80 cm au-dessus du plateau. Sa largeur, ou celle de la composition, fait environ la moitié de la longueur de la table. Le câble de Paris et d’Aladdin descend jusqu’à 250 cm, celui de Cloudine jusqu’à 300 cm."
+          ],
+          [
+            "Dans le salon",
+            "Une grappe de Cloudine ou un lustre Bloom donne un point central à la pièce. Vérifiez la hauteur sous plafond et l’emplacement de l’arrivée électrique avant de choisir la composition."
+          ]
         ]
       }
     },
     {
-      "collection": "families", "slug": "consoles-miroirs",
+      "collection": "families",
+      "slug": "consoles-miroirs",
       "fields": {
         "intro": "Consoles Westin, Nettuno et Rado Keramik, miroirs Cosmos et Glenn : de quoi composer une entrée ou un mur de salon. Sur commande en 10 à 12 semaines, livraison et installation partout au Maroc depuis notre showroom de Casablanca.",
         "meta_description": "Consoles et miroirs Cattelan Italia pour l’entrée et le salon, en céramique, verre, bois ou acier. Sur commande, livrés et installés partout au Maroc.",
         "content": [
-          ["Associer console et miroir", "Choisissez un miroir un peu moins large que la console et accrochez-le 15 à 25 cm au-dessus du plateau. Une forme ronde, comme Cosmos, adoucit une console graphique comme Westin."],
-          ["La profondeur", "Ces consoles mesurent 38 à 50 cm de profondeur et se fixent au mur. Dans une entrée étroite, Rado Keramik, profonde de 38 cm, garde le passage libre."]
+          [
+            "Associer console et miroir",
+            "Choisissez un miroir un peu moins large que la console et accrochez-le 15 à 25 cm au-dessus du plateau. Une forme ronde, comme Cosmos, adoucit une console graphique comme Westin."
+          ],
+          [
+            "La profondeur",
+            "Ces consoles mesurent 38 à 50 cm de profondeur et se fixent au mur. Dans une entrée étroite, Rado Keramik, profonde de 38 cm, garde le passage libre."
+          ]
         ]
       }
     },
     {
-      "collection": "families", "slug": "mobilier-exterieur",
+      "collection": "families",
+      "slug": "mobilier-exterieur",
       "fields": {
         "card_text": "Table et chaise pour terrasses et vérandas couvertes.",
         "intro": "Napoleon Keramik Outdoor et Greta Outdoor : une table en céramique et une chaise rembourrée pour les terrasses et vérandas couvertes. Sur commande en 10 à 12 semaines, livraison et installation partout au Maroc.",
         "meta_description": "Mobilier extérieur Cattelan Italia pour terrasses et vérandas couvertes : table en céramique, chaise rembourrée. Livrés partout au Maroc.",
         "content": [
-          ["Pour quels espaces", "Ces deux modèles sont conçus pour des espaces extérieurs couverts, à l’abri de la pluie et du soleil direct. Précisez au conseiller l’exposition de votre terrasse."],
-          ["Les formats", "La table Napoleon Keramik Outdoor existe en cinq décors de céramique, rectangulaire, ovale ou aux angles adoucis, de 200 à 320 cm de long. La chaise Greta Outdoor reçoit un tissu Outdoor, en vingt coloris."]
+          [
+            "Pour quels espaces",
+            "Ces deux modèles sont conçus pour des espaces extérieurs couverts, à l’abri de la pluie et du soleil direct. Précisez au conseiller l’exposition de votre terrasse."
+          ],
+          [
+            "Les formats",
+            "La table Napoleon Keramik Outdoor existe en cinq décors de céramique, rectangulaire, ovale ou aux angles adoucis, de 200 à 320 cm de long. La chaise Greta Outdoor reçoit un tissu Outdoor, en vingt coloris."
+          ]
         ]
       }
     },
-    { "collection": "models", "slug": "skorpio", "fields": { "description": "Une table au piètement en acier à lignes obliques, sous un plateau en verre qui le laisse voir. Carrée jusqu’à 200 × 200 cm pour douze personnes ou rectangulaire, avec sept finitions de base." } },
-    { "collection": "models", "slug": "napoleon-keramik", "fields": { "description": "Une table tout en céramique, plateau et base arrondie, en cinq décors de marbre dont Taj Mahal et Portoro. Rectangulaire, ovale ou aux angles adoucis, de 200 à 320 cm, jusqu’à quatorze personnes." } },
-    { "collection": "models", "slug": "rhonda", "fields": { "description": "Une chaise à accoudoirs au dossier enveloppant, lisse à l’extérieur et plissé à l’intérieur. Pieds en métal chromé ou laqué ; revêtement en tissu, micro nubuck, cuir mince ou similicuir, plus de cent teintes." } },
-    { "collection": "models", "slug": "greta", "fields": { "description": "Une chaise au dossier rembourré qui se prolonge en accoudoirs, sur de fins pieds en acier. Cinq laques pour la structure ; tissu, cuir, micro nubuck ou similicuir pour l’assise." } },
-    { "collection": "models", "slug": "ruby", "fields": { "description": "Un canapé de 200 cm à structure apparente en frêne, teinté noyer Canaletto ou rouvre brûlé, aux coussins généreux. Il se complète du fauteuil Ruby Lounge." } },
-    { "collection": "models", "slug": "ruby-lounge", "fields": { "description": "Le fauteuil bas de la famille Ruby, 81 cm de large, à structure apparente en frêne et dossier arrondi. À associer au canapé Ruby ou à placer seul." } },
-    { "collection": "models", "slug": "chelsea", "fields": { "description": "Un buffet aux façades polygonales en bois laqué titane, paprika ou mint, avec un plateau en verre miroir bronze ou en céramique. De 137,5 à 248 cm de long et de 50 à 100 cm de haut." } },
-    { "collection": "models", "slug": "airport", "fields": { "description": "Une bibliothèque modulaire fixée au mur ou au plafond, pour longer un mur, former un angle ou séparer une pièce. Longueurs de 60 à 310 cm, profondeur 29 cm, en acier et bois." } },
-    { "collection": "models", "slug": "bloom", "fields": { "description": "Un luminaire aux branches métalliques et diffuseurs en verre borosilicate, en suspension horizontale ou verticale de 150 cm, ou en lampadaire de 178 cm de haut." } },
-    { "collection": "models", "slug": "napoleon-keramik-outdoor", "fields": { "description": "La table Napoleon en céramique pour terrasses et vérandas couvertes : plateau et base en cinq décors de marbre, jusqu’à 320 cm de long." } },
-    { "collection": "models", "slug": "greta-outdoor", "fields": { "description": "La chaise Greta pour terrasses couvertes : structure en acier inoxydable 304 laqué, assise rembourrée en tissu Outdoor." } }
+    {
+      "collection": "models",
+      "slug": "skorpio",
+      "fields": {
+        "description": "Une table au piètement en acier à lignes obliques, sous un plateau en verre qui le laisse voir. Carrée jusqu’à 200 × 200 cm pour douze personnes ou rectangulaire, avec sept finitions de base."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "napoleon-keramik",
+      "fields": {
+        "description": "Une table tout en céramique, plateau et base arrondie, en cinq décors de marbre dont Taj Mahal et Portoro. Rectangulaire, ovale ou aux angles adoucis, de 200 à 320 cm, jusqu’à quatorze personnes."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "rhonda",
+      "fields": {
+        "description": "Une chaise à accoudoirs au dossier enveloppant, lisse à l’extérieur et plissé à l’intérieur. Pieds en métal chromé ou laqué ; revêtement en tissu, micro nubuck, cuir mince ou similicuir, plus de cent teintes."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "greta",
+      "fields": {
+        "description": "Une chaise au dossier rembourré qui se prolonge en accoudoirs, sur de fins pieds en acier. Cinq laques pour la structure ; tissu, cuir, micro nubuck ou similicuir pour l’assise."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "ruby",
+      "fields": {
+        "description": "Un canapé de 200 cm à structure apparente en frêne, teinté noyer Canaletto ou rouvre brûlé, aux coussins généreux. Il se complète du fauteuil Ruby Lounge."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "ruby-lounge",
+      "fields": {
+        "description": "Le fauteuil bas de la famille Ruby, 81 cm de large, à structure apparente en frêne et dossier arrondi. À associer au canapé Ruby ou à placer seul."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "chelsea",
+      "fields": {
+        "description": "Un buffet aux façades polygonales en bois laqué titane, paprika ou mint, avec un plateau en verre miroir bronze ou en céramique. De 137,5 à 248 cm de long et de 50 à 100 cm de haut."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "airport",
+      "fields": {
+        "description": "Une bibliothèque modulaire fixée au mur ou au plafond, pour longer un mur, former un angle ou séparer une pièce. Longueurs de 60 à 310 cm, profondeur 29 cm, en acier et bois."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "bloom",
+      "fields": {
+        "description": "Un luminaire aux branches métalliques et diffuseurs en verre borosilicate, en suspension horizontale ou verticale de 150 cm, ou en lampadaire de 178 cm de haut."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "napoleon-keramik-outdoor",
+      "fields": {
+        "description": "La table Napoleon en céramique pour terrasses et vérandas couvertes : plateau et base en cinq décors de marbre, jusqu’à 320 cm de long."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "greta-outdoor",
+      "fields": {
+        "description": "La chaise Greta pour terrasses couvertes : structure en acier inoxydable 304 laqué, assise rembourrée en tissu Outdoor."
+      }
+    },
+    {
+      "collection": "pages",
+      "slug": "sur-mesure",
+      "fields": {
+        "intro": "Tout le catalogue Cattelan Italia se commande à vos mesures et dans vos matières : la longueur d’une table, le décor de son plateau, la laque de son piètement, le revêtement d’un canapé. Fabriqué en Italie en 10 à 12 semaines, sans délai supplémentaire."
+      },
+      "sections": {
+        "options": {
+          "heading": "Ce qui se personnalise",
+          "text": "Les dimensions, dans les formats prévus par chaque modèle : Napoleon Keramik va de 200 à 320 cm, Tyron Keramik existe en rectangle, biscuit ou boomerang, Botero de 100 à 180 cm de diamètre.\nLe plateau : dix-neuf céramiques Marmi, du Calacatta au Portoro ; verre clair, extra-clair ou cuit ; noyer Canaletto ou rouvre brûlé.\nLe piètement : laques gaufrées titane, bronze, graphite, pearl ou noir, et finitions Brushed brossées à la main.\nLes assises : tissus classés de T10 à T90, cuirs glove, magnifica, nabuk et perfetto, micro nubuck et similicuir."
+        },
+        "samples": {
+          "heading": "Tous les échantillons au showroom",
+          "text": "Céramiques, bois, laques, métaux, verres et près de quatre cents tissus et cuirs sont au showroom du Triangle d’Or. Apportez une photo de votre sol, un échantillon de rideau ou la teinte de vos murs : une finition se choisit à côté de ce qui existe déjà chez vous, pas seule."
+        },
+        "lead_time": {
+          "heading": "Sans délai supplémentaire",
+          "text": "Une pièce sur mesure suit le délai habituel : 10 à 12 semaines de fabrication en Italie à partir de la validation de la commande et de l’acompte de 50 %. L’installation est incluse, et la livraison est offerte à Casablanca."
+        },
+        "materials": {
+          "heading": "Choisir une finition",
+          "text": "La céramique pour un plateau qui ne craint ni la chaleur ni les taches, le verre pour laisser voir le piètement, le bois pour la chaleur de son grain. L’article du Journal compare leurs usages et leur entretien."
+        }
+      }
+    },
+    {
+      "collection": "posts",
+      "slug": "choisir-forme-proportions-table-salle-a-manger",
+      "fields": {
+        "excerpt": "60 cm par convive, 90 cm de passage, et le piètement qui décide où l’on s’assoit : les mesures qui permettent de choisir la forme et la taille d’une table avant de la voir.",
+        "content": [
+          [
+            "Partir des mesures de la pièce",
+            "Mesurez la pièce, puis retirez 90 cm de chaque côté où l’on s’assoit : c’est la place qu’il faut pour reculer une chaise et passer derrière quelqu’un d’assis. Dans une salle à manger de 4 × 3,5 m, il reste environ 220 × 170 cm : une table de 200 à 220 cm sur 100 à 120 cm y trouve sa place."
+          ],
+          [
+            "",
+            "Comptez ensuite 60 cm de plateau par convive, 65 à 70 cm avec des chaises à accoudoirs. Une table de 240 cm reçoit huit à dix personnes, une table de 300 cm dix à douze. Dimensionnez pour vos repas habituels plus deux couverts, pas pour la plus grande réception de l’année."
+          ],
+          [
+            "Ronde, carrée, rectangulaire ou adoucie",
+            "La table ronde met tout le monde face à face : 140 cm pour six personnes, 180 cm pour huit à dix, comme Botero. Au-delà, on ne se parle plus d’un bord à l’autre. La table carrée a le même avantage dans une pièce carrée : Skorpio existe en 150 × 150 cm pour huit personnes et en 200 × 200 cm pour douze."
+          ],
+          [
+            "",
+            "Pour plus de dix convives, le rectangle s’impose. Les angles adoucis, ovales ou en biscuit, comme sur Napoleon Keramik et Tyron Keramik, facilitent le passage et ajoutent une place en bout de table : Napoleon Keramik en ovale de 300 × 150 cm reçoit quatorze personnes."
+          ],
+          [
+            "Regarder sous le plateau",
+            "Le piètement décide où l’on peut s’asseoir. Une base centrale, comme celles de Napoleon Keramik ou de Botero, ne gêne aucun genou : on peut ajouter une chaise sans se cogner à un pied. Sur Butterfly, la base en ruban d’acier mesure 160 cm sous un plateau de 240 cm : il reste 40 cm à chaque extrémité pour s’asseoir en bout de table."
+          ],
+          [
+            "",
+            "Vérifiez aussi la hauteur : les tables Cattelan Italia mesurent 74 à 75 cm, pour des chaises dont l’assise est à 46 ou 47 cm, comme Miranda ML et Zuleika."
+          ],
+          [
+            "Tester l’implantation avant de commander",
+            "Tracez le contour du plateau au sol avec du ruban de masquage et posez-y vos chaises actuelles : en deux jours, vous saurez si les passages suffisent. Envoyez une photo de ce tracé et les mesures de la pièce au showroom sur WhatsApp : le conseiller vous propose les formats qui conviennent."
+          ]
+        ]
+      }
+    },
+    {
+      "collection": "posts",
+      "slug": "associer-table-chaises-salle-a-manger",
+      "fields": {
+        "excerpt": "Une seule pièce forte, une finition en commun, et des chaises qui passent sous le plateau : trois règles pour associer une table et des chaises sans tout assortir.",
+        "content": [
+          [
+            "Une seule pièce forte",
+            "Choisissez ce qui portera le regard : la table ou les chaises. Sous un piètement très dessiné, comme le X de Tyron Keramik ou la base en argile de Botero, des chaises aux lignes simples laissent la table parler. Autour d’une table plus sobre, des chaises comme Rhonda, au dossier plissé à l’intérieur, peuvent devenir le sujet."
+          ],
+          [
+            "Une finition en commun",
+            "Inutile de tout assortir : une finition partagée suffit à relier l’ensemble. La plus simple est la laque du métal. Titane, bronze, graphite et noir gaufrés existent à la fois sur la base de Tyron Keramik et sur la structure de Greta ; Rhonda reçoit les mêmes laques ou un chrome. Le même bronze sous la table et sur les pieds des chaises crée l’unité, quels que soient le plateau et le revêtement."
+          ],
+          [
+            "",
+            "Le lien peut aussi passer par la couleur : un cuir de chaise dans le ton d’une céramique Portoro, ou d’un noyer Canaletto. Comparez les échantillons ensemble au showroom, à la lumière du jour."
+          ],
+          [
+            "Les mesures qui comptent",
+            "Une chaise à accoudoirs occupe 62 à 64 cm de large : Greta 62 cm, Rhonda 63 cm, Zuleika 64 cm. Comptez 65 à 70 cm par place au lieu de 60, ou réservez les accoudoirs aux bouts de table. Vérifiez sur la fiche technique que les accoudoirs passent sous le plateau : sinon, les chaises restent écartées de la table et occupent la pièce."
+          ],
+          [
+            "",
+            "L’assise se place 27 à 29 cm sous le plateau : 46 ou 47 cm pour une table de 74 à 75 cm."
+          ],
+          [
+            "Le revêtement selon l’usage",
+            "Le cuir et le similicuir s’essuient d’un geste : c’est le choix d’une salle à manger avec des enfants. Le tissu et le micro nubuck sont plus doux et plus chauds au toucher. Rhonda existe en plus de cent teintes, entre cuir mince, similicuir, tissu et micro nubuck."
+          ]
+        ]
+      }
+    },
+    {
+      "collection": "posts",
+      "slug": "ceramique-verre-bois-choisir-finition-meuble",
+      "fields": {
+        "excerpt": "La céramique ne craint ni la chaleur ni les taches, le verre montre le piètement, le bois vit avec la lumière. Ce que chaque matière demande au quotidien, et comment la choisir.",
+        "content": [
+          [
+            "La céramique : l’aspect du marbre, sans ses contraintes",
+            "Les céramiques Marmi reproduisent dix-neuf marbres, du Calacatta blanc veiné au Portoro noir et or. Contrairement au marbre, elles ne craignent ni le citron ni le vin, ni un plat chaud posé directement : c’est la matière d’une table de repas quotidiens. Sur Napoleon Keramik et Rado Keramik, la céramique habille aussi la base. Elle supporte même une terrasse couverte, avec Napoleon Keramik Outdoor."
+          ],
+          [
+            "Le verre : laisser voir le piètement",
+            "Un plateau en verre allège la pièce et montre le dessin de la base, comme les lignes obliques de Skorpio ou le ruban d’acier de Butterfly. Il fait 12 mm d’épaisseur sur les consoles Westin et Nettuno, 15 mm sur les tables Butterfly. Le verre extra-clair n’a pas le reflet vert du verre clair. Le verre cuit MIST a une surface texturée, plus discrète sous les traces de doigts : un plateau lisse demande un coup de chiffon plus souvent."
+          ],
+          [
+            "",
+            "Le verre miroité, fumé ou bronze, sert de plateau aux buffets Chelsea et Amsterdam et compose les miroirs Cosmos et Glenn."
+          ],
+          [
+            "Le bois : une matière qui varie",
+            "Noyer Canaletto, brun chaud, ou rouvre brûlé, presque noir : ce sont les deux bois des tables Botero Wood et des tables basses Adrian Wood. Le bois se protège d’un dessous de plat et d’un sous-verre. Les finitions Brushed, bronze ou grise, sont brossées à la main : deux pièces n’ont jamais exactement les mêmes nuances."
+          ],
+          [
+            "Choisir sur place, avec votre intérieur",
+            "Une finition se juge à côté de votre sol et à la lumière de votre pièce. Apportez au showroom une photo prise en journée, un échantillon de rideau ou de carrelage : le conseiller place les échantillons à côté, et vous voyez tout de suite ce qui fonctionne."
+          ]
+        ]
+      }
+    },
+    {
+      "collection": "posts",
+      "slug": "composer-salon-canape-fauteuil",
+      "fields": {
+        "excerpt": "Mesurer avant de choisir, droit ou composable, continuité ou contraste, tissu ou cuir : comment composer un salon avec un canapé et un fauteuil Cattelan Italia.",
+        "content": [
+          [
+            "Mesurer avant de choisir",
+            "Laissez 80 à 90 cm de passage autour du salon et 40 à 45 cm entre le canapé et la table basse : assez pour poser un verre sans se lever, et pour passer les jambes. Dessinez le plan avec les portes, les fenêtres et l’arrivée de la télévision : c’est ce plan qui décide de la longueur du canapé."
+          ],
+          [
+            "Droit, d’angle ou composable",
+            "Craig, Douglas, Mykonos et Sinatra se composent en éléments : droit, d’angle ou en grande composition. Chacun a son caractère. Craig a des coussins de dossier garnis de plumes ; Douglas repose sur des pieds en métal, en deux hauteurs, qui allègent le volume et dégagent le sol ; Mykonos a des formes arrondies ; Sinatra, des dossiers réglables. Ruby est un canapé droit de 200 cm, à structure apparente en frêne."
+          ],
+          [
+            "Continuité ou contraste",
+            "Le fauteuil peut prolonger le canapé : Ruby Lounge, 81 cm de large, reprend la structure en frêne de Ruby. Il peut aussi s’en distinguer, dans un autre revêtement ou une autre couleur, pour créer un coin lecture. Orientez-le vers le canapé plutôt que vers la télévision : c’est la position de la conversation."
+          ],
+          [
+            "Tissu ou cuir",
+            "Les tissus sont classés de T10 à T90 ; en version tissu, les housses de Craig, Douglas, Mykonos et Sinatra se retirent pour le nettoyage. Les cuirs existent en glove, magnifica, nabuk et perfetto : plus de trente teintes à eux quatre. Au total, près de quatre cents revêtements sont au showroom : apportez une photo de votre sol et de vos rideaux pour comparer."
+          ]
+        ]
+      }
+    },
+    {
+      "collection": "posts",
+      "slug": "choisir-buffet-bibliotheque-salon",
+      "fields": {
+        "excerpt": "45 à 55 cm de profondeur pour un buffet, 26 à 29 cm pour une bibliothèque, 90 cm devant les portes : les mesures et les modèles pour choisir un rangement de salon.",
+        "content": [
+          [
+            "Fermé ou ouvert",
+            "Un buffet garde à l’abri la vaisselle, les nappes et ce que l’on ne veut pas voir ; une bibliothèque montre les livres et les objets. Faites deux listes avant de choisir : ce qui doit disparaître, et ce que vous voulez exposer. Si la première est la plus longue, c’est un buffet."
+          ],
+          [
+            "Le buffet : les mesures",
+            "Un buffet de salle à manger mesure 45 à 55 cm de profondeur : Chelsea et Amsterdam 46 cm, Kayak 53 cm. Laissez 90 cm devant pour ouvrir les portes et se baisser. Chelsea existe en trois hauteurs, 50, 75 et 100 cm, et de 137,5 à 248 cm de long ; Amsterdam en deux, trois ou quatre portes, jusqu’à 294 cm ; Kayak en deux ou trois portes, 147 ou 220 cm."
+          ],
+          [
+            "",
+            "À l’intérieur, des étagères en verre ; Kayak et Amsterdam peuvent recevoir un tiroir intérieur pour les couverts. Le plateau en verre miroité bronze de Chelsea ou d’Amsterdam reflète la lumière d’une suspension au-dessus."
+          ],
+          [
+            "La bibliothèque : peu profonde",
+            "Une bibliothèque n’a pas besoin de la profondeur d’un buffet : la plupart des livres font 15 à 24 cm. Nautilus mesure 26 cm de profondeur, Airport 29 cm : elles prennent peu de place devant un mur."
+          ],
+          [
+            "",
+            "Nautilus se compose de modules en acier de 100 × 100 cm, juxtaposés ou superposés jusqu’à 200 cm de haut ; elle se fixe au mur ou reçoit un lest. Airport se fixe au mur ou au plafond, de 60 à 310 cm de long : elle peut séparer un salon d’une salle à manger sans fermer la pièce."
+          ],
+          [
+            "Le bon mur",
+            "Placez le buffet près de la table, là où l’on sert : sur le mur le plus long de la salle à manger, sous un miroir ou un tableau. La bibliothèque trouve sa place dans le salon, sur un mur sans passage, ou comme séparation entre deux espaces."
+          ]
+        ]
+      }
+    }
   ]
 }
