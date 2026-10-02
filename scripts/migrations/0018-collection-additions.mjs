@@ -11,7 +11,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { authenticatedApi } from './0014-site-strategy-pages.mjs';
-import { loadAssets, planNewFamilies, validateModels, writers } from './0016-new-families.mjs';
+import { loadAssets, mediaCache, planNewFamilies, validateModels, writers } from './0016-new-families.mjs';
 
 const root = fileURLToPath(new URL('../../', import.meta.url));
 export const migration = '0018-collection-additions';
@@ -49,7 +49,7 @@ export async function planAdditions(api, manifest) {
 export async function applyAdditions(api, manifest, plan, { beforeWrite, log = () => {} }) {
   assert.equal(typeof beforeWrite, 'function', 'A private backup writer is required before any mutation.');
   await beforeWrite({ plan: { ...plan, createModels: plan.createModels.map(model => model.slug) } });
-  const { createModel } = writers(api, manifest);
+  const { createModel } = writers(api, manifest, await mediaCache(api));
   const ids = { ...plan.modelIds };
   for (const model of plan.createModels) {
     ids[model.slug] = await createModel(model);

@@ -10,7 +10,7 @@
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
-import { join } from 'node:path';
+import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { authenticatedApi } from './0014-site-strategy-pages.mjs';
 
@@ -118,7 +118,7 @@ export async function planNewFamilies(api, manifest) {
 export async function applyNewFamilies(api, manifest, plan, { beforeWrite, log = () => {} }) {
   assert.equal(typeof beforeWrite, 'function', 'A private backup writer is required before any mutation.');
   await beforeWrite({ plan: { ...plan, createModels: plan.createModels.map(model => model.slug), createFamilies: plan.createFamilies.map(family => family.slug) } });
-  const { media, publish, createModel } = writers(api, manifest);
+  const { media, publish, createModel } = writers(api, manifest, await mediaCache(api));
   const ids = { ...plan.modelIds };
   for (const model of plan.createModels) {
     ids[model.slug] = await createModel(model);
@@ -139,6 +139,15 @@ export async function applyNewFamilies(api, manifest, plan, { beforeWrite, log =
   }
 }
 
+/** Private record of uploads accepted by a real CMS (never in tests, whose fake API has no origin). */
+export async function mediaCache(api) {
+  if (!api.origin) return null;
+  const file = join(root, '.wrangler/migrations/media-cache.json');
+  await mkdir(dirname(file), { recursive: true, mode: 0o700 });
+  const items = await readFile(file, 'utf8').then(JSON.parse).catch(() => ({}));
+  return { items, save: () => writeFile(file, JSON.stringify(items), { mode: 0o600 }) };
+}
+
 /** One upload at a time: a sofa has close to 300 swatches. */
 async function inSeries(items, fn) {
   const results = [];
@@ -147,9 +156,12 @@ async function inSeries(items, fn) {
 }
 
 /** Uploads (each file once) and publishes entries through the native API. */
-export function writers(api, manifest) {
+export function writers(api, manifest, cache = null) {
   const uploaded = new Map();
+  // Uploads already accepted by this CMS, kept between runs so a restart does not send them again.
+  const key = file => `${api.origin || ''}|${manifest.mediaDir}/${file}|${manifest.assets[file].bytes.length}`;
   const upload = async (file, filename = file) => {
+    if (!uploaded.has(file) && cache?.items[key(file)]) uploaded.set(file, cache.items[key(file)]);
     if (!uploaded.has(file)) {
       const { bytes, mimeType } = manifest.assets[file];
       const form = new FormData();
@@ -158,6 +170,7 @@ export function writers(api, manifest) {
       const { item } = await api('/_emdash/api/media', { method: 'POST', form });
       assert(item?.id && item.storageKey && item.size === bytes.length && item.mimeType === mimeType, `${file}: the upload did not return the file.`);
       uploaded.set(file, item);
+      if (cache) { cache.items[key(file)] = item; await cache.save(); }
     }
     return uploaded.get(file);
   };

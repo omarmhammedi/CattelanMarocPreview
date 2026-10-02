@@ -1066,7 +1066,37 @@
           "title": "Skorpio",
           "description": "Une table au piètement en acier à lignes obliques, sous un plateau en verre qui le laisse voir. Carrée jusqu’à 200 × 200 cm pour douze personnes ou rectangulaire, avec sept finitions de base.",
           "official_url": "https://cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "copy-v2-skorpio-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-skorpio-p0s",
+                  "text": "Skorpio pose un plateau en verre sur un piètement en acier aux lignes obliques, visible à travers le plateau. Carrée, de 150 × 150 cm pour huit personnes à 200 × 200 cm pour douze, ou rectangulaire, de 160 × 90 à 300 × 130 cm.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "copy-v2-skorpio-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-skorpio-p1s",
+                  "text": "La base existe en cinq laques gaufrées, titane, bronze, graphite, pearl ou noir, et en Brushed Bronze ou Brushed Grey, brossés à la main. Le verre est clair, extra-clair, biseauté ou cuit (MIST), en 15 mm, ou 12 mm sur les petits formats. Skorpio se commande aussi avec un plateau en bois, en céramique ou en Crystalart.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
         }
       },
       {
@@ -1078,7 +1108,37 @@
           "title": "Napoleon Keramik",
           "description": "Une table tout en céramique, plateau et base arrondie, en cinq décors de marbre dont Taj Mahal et Portoro. Rectangulaire, ovale ou aux angles adoucis, de 200 à 320 cm, jusqu’à quatorze personnes.",
           "official_url": "https://cattelanitalia.com/fr/products/DD24EC9D-FA00-4C0D-A989-9ADD6E56BFD0",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "copy-v2-napoleon-keramik-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-napoleon-keramik-p0s",
+                  "text": "Napoleon Keramik est entièrement en céramique : le plateau et la base, formée de deux volumes arrondis séparés par un creux vertical. Rectangulaire, ovale, biscuit, polygonale ou aux angles adoucis, de 200 à 320 cm, elle reçoit jusqu’à quatorze personnes.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "copy-v2-napoleon-keramik-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-napoleon-keramik-p1s",
+                  "text": "Cinq décors Marmi : Portoro, Borghini Calacatta, Colosseo, Invisible et Taj Mahal. Le façonnage de la base donne à chaque pièce de légères variations de teinte et de forme.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
         }
       },
       {
@@ -1090,7 +1150,37 @@
           "title": "Rhonda",
           "description": "Une chaise à accoudoirs au dossier enveloppant, lisse à l’extérieur et plissé à l’intérieur. Pieds en métal chromé ou laqué ; revêtement en tissu, micro nubuck, cuir mince ou similicuir, plus de cent teintes.",
           "official_url": "https://cattelanitalia.com/fr/products/41ED48AE-E379-4863-8E3C-28EE1D985390",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "copy-v2-rhonda-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-rhonda-p0s",
+                  "text": "Rhonda est une chaise à accoudoirs de 63 × 60 cm, 79 cm de haut. Son dossier enveloppant est lisse à l’extérieur et plissé à l’intérieur.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "copy-v2-rhonda-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-rhonda-p1s",
+                  "text": "Pieds chromés ou laqués titane, bronze, graphite, pearl ou noir. Revêtement en tissu, micro nubuck, cuir mince ou similicuir, plus de cent teintes ; il n’est pas déhoussable. Rhonda existe aussi en versions bois, cantilever, pivotante, à roulettes, lounge et tabouret.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
         }
       },
       {
@@ -1102,7 +1192,37 @@
           "title": "Greta",
           "description": "Une chaise au dossier rembourré qui se prolonge en accoudoirs, sur de fins pieds en acier. Cinq laques pour la structure ; tissu, cuir, micro nubuck ou similicuir pour l’assise.",
           "official_url": "https://cattelanitalia.com/fr/products/A73FA6B3-0BA9-4F13-ADB6-FBAFC6E39BBF",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "copy-v2-greta-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-greta-p0s",
+                  "text": "Greta mesure 62 × 62 cm, 78 cm de haut. Son dossier rembourré se prolonge en accoudoirs ; à l’arrière, une fente verticale sépare deux volumes.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "copy-v2-greta-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-greta-p1s",
+                  "text": "Structure en acier laqué titane, bronze, graphite, pearl ou noir. Revêtement en tissu, cuir, micro nubuck ou similicuir, non déhoussable. Greta existe aussi en versions bois, lounge, tabouret et Outdoor.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
         }
       },
       {
@@ -1114,7 +1234,37 @@
           "title": "Ruby",
           "description": "Un canapé de 200 cm à structure apparente en frêne, teinté noyer Canaletto ou rouvre brûlé, aux coussins généreux. Il se complète du fauteuil Ruby Lounge.",
           "official_url": "https://cattelanitalia.com/en/products/75C6DB4B-1A99-400D-AEE7-9D5797651F05?c=5",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "copy-v2-ruby-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-ruby-p0s",
+                  "text": "Ruby est un canapé de 200 × 92 cm, 76 cm de haut, à structure apparente en frêne teinté noyer Canaletto ou rouvre brûlé. Ossature en bois, garniture en mousse, coussins généreux.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "copy-v2-ruby-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-ruby-p1s",
+                  "text": "Revêtement en tissu ou en cuir, non déhoussable. Le fauteuil Ruby Lounge, 81 cm de large, reprend la même structure.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
         }
       },
       {
@@ -1126,7 +1276,37 @@
           "title": "Ruby Lounge",
           "description": "Le fauteuil bas de la famille Ruby, 81 cm de large, à structure apparente en frêne et dossier arrondi. À associer au canapé Ruby ou à placer seul.",
           "official_url": "https://cattelanitalia.com/fr/products/3BFE3570-1D83-4026-A81F-F0913AEE75BD",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "copy-v2-ruby-lounge-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-ruby-lounge-p0s",
+                  "text": "Ruby Lounge est un fauteuil bas de 81 × 92 cm, 76 cm de haut, à structure apparente en frêne teinté noyer Canaletto ou rouvre brûlé, au dossier arrondi et aux coutures visibles.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "copy-v2-ruby-lounge-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-ruby-lounge-p1s",
+                  "text": "Revêtement en tissu, micro nubuck ou cuir mince, non déhoussable. À associer au canapé Ruby, ou à placer seul dans un coin lecture.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
         }
       },
       {
@@ -1138,7 +1318,37 @@
           "title": "Chelsea",
           "description": "Un buffet aux façades polygonales en bois laqué titane, paprika ou mint, avec un plateau en verre miroir bronze ou en céramique. De 137,5 à 248 cm de long et de 50 à 100 cm de haut.",
           "official_url": "https://cattelanitalia.com/fr/products/B7E158FA-BF2D-484D-9F9A-0C3D14138E8E",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "copy-v2-chelsea-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-chelsea-p0s",
+                  "text": "Chelsea est un buffet aux façades polygonales, en bois laqué titane, Paprika ou Mint. Son plateau, en verre miroir bronze ou en céramique Colosseo ou Taj Mahal, s’inscrit dans un rebord incliné.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "copy-v2-chelsea-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-chelsea-p1s",
+                  "text": "Huit formats, de 137,5 à 248 cm de long et de 50 à 100 cm de haut, pour 46 cm de profondeur. Étagères intérieures en verre clair. Les versions B ajoutent un piètement en acier chromé ou graphite.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
         }
       },
       {
@@ -1150,7 +1360,37 @@
           "title": "Airport",
           "description": "Une bibliothèque modulaire fixée au mur ou au plafond, pour longer un mur, former un angle ou séparer une pièce. Longueurs de 60 à 310 cm, profondeur 29 cm, en acier et bois.",
           "official_url": "https://www.cattelanitalia.com/fr/products/0BD758C3-F539-4263-BA05-CEB859A760A4",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "copy-v2-airport-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-airport-p0s",
+                  "text": "Airport est une bibliothèque modulaire fixée au mur ou au plafond : elle longe un mur, forme un angle ou sépare deux espaces. Étagères de 60 à 310 cm, 29 cm de profondeur, caissons Box et module bureau.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "copy-v2-airport-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-airport-p1s",
+                  "text": "Montants en acier titane, bronze, graphite, blanc ou noir ; étagères et caissons en graphite, blanc, noyer Canaletto, rouvre brûlé, Brushed Bronze ou Brushed Grey. Envoyez les mesures du mur : le showroom vous propose une composition.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
         }
       },
       {
@@ -1162,7 +1402,37 @@
           "title": "Bloom",
           "description": "Un luminaire aux branches métalliques et diffuseurs en verre borosilicate, en suspension horizontale ou verticale de 150 cm, ou en lampadaire de 178 cm de haut.",
           "official_url": "https://www.cattelanitalia.com/fr/products/D19C292D-87C6-429C-845C-AB448E928B3A?c=5",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "copy-v2-bloom-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-bloom-p0s",
+                  "text": "Bloom porte des diffuseurs en verre borosilicate sur des branches métalliques gris fer, avec des raccords en laiton brossé. En suspension horizontale ou verticale de 150 cm, ou en lampadaire de 178 cm.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "copy-v2-bloom-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-bloom-p1s",
+                  "text": "Les ampoules fournies ne sont pas à intensité variable ; une télécommande avec variateur est proposée en option pour les suspensions.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
         }
       },
       {
@@ -1174,7 +1444,37 @@
           "title": "Napoleon Keramik Outdoor",
           "description": "La table Napoleon en céramique pour terrasses et vérandas couvertes : plateau et base en cinq décors de marbre, jusqu’à 320 cm de long.",
           "official_url": "https://www.cattelanitalia.com/fr/products/0C0E3429-09CC-4873-917D-A92A63F45D60?c=8",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "copy-v2-napoleon-keramik-outdoor-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-napoleon-keramik-outdoor-p0s",
+                  "text": "La table Napoleon Keramik, plateau et base en céramique, pour un patio ou une véranda couverts. De 200 à 320 cm, rectangulaire, ovale, biscuit, polygonale ou aux angles adoucis.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "copy-v2-napoleon-keramik-outdoor-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-napoleon-keramik-outdoor-p1s",
+                  "text": "Cinq décors Marmi : Portoro, Borghini Calacatta, Colosseo, Invisible et Taj Mahal. Usage extérieur couvert uniquement : la table doit rester à l’abri de la pluie et du soleil direct.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
         }
       },
       {
@@ -1186,7 +1486,37 @@
           "title": "Greta Outdoor",
           "description": "La chaise Greta pour terrasses couvertes : structure en acier inoxydable 304 laqué, assise rembourrée en tissu Outdoor.",
           "official_url": "https://www.cattelanitalia.com/fr/products/92839EB8-BAD8-4D0F-B0C6-C02BF107C361?c=21",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés."
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "copy-v2-greta-outdoor-p0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-greta-outdoor-p0s",
+                  "text": "Greta Outdoor reprend la forme de Greta, 62 × 62 cm, 78 cm de haut, sur une structure en acier inoxydable 304 laqué titane, bronze, graphite, pearl ou noir.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "copy-v2-greta-outdoor-p1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "copy-v2-greta-outdoor-p1s",
+                  "text": "Revêtement en tissu Outdoor, vingt coloris, non déhoussable. Usage extérieur couvert uniquement.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
         }
       },
       {
@@ -1197,7 +1527,7 @@
         "data": {
           "title": "Arena",
           "description": "Une table basse ronde au plateau en bois laqué Brushed Bronze ou Brushed Grey, sur une base en acier noir. Les versions Bond et Double Bond lui associent un ou deux plateaux en verre pivotants.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/arena_01.jpg",
@@ -1426,7 +1756,7 @@
         "data": {
           "title": "Albert Keramik",
           "description": "Une table basse à plateau en céramique, ronde ou en forme de galet, sur une base conique en acier laqué. Seize décors de marbre et trois hauteurs à composer.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/albert_keramik_10.jpg",
@@ -1859,7 +2189,7 @@
         "data": {
           "title": "Adrian Wood",
           "description": "Une table basse au plateau en bois biseauté en forme de galet, sur une base conique en acier. Noyer Canaletto et rouvre brûlé se répondent sur le même plateau.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/adrian_wood_01.jpg",
@@ -2044,7 +2374,7 @@
         "data": {
           "title": "Dodo",
           "description": "Une table basse en verre artistique décoré, fumé, vert paon ou aubergine, sur une base en métal bronze. Deux formats à placer près du canapé.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/dodo_01.jpg",
@@ -2195,7 +2525,7 @@
         "data": {
           "title": "Westin",
           "description": "Une console au piètement en acier croisé, avec un plateau en verre ou en bois massif au bord irrégulier. Sept finitions pour la base.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/westin_07.jpg",
@@ -2528,7 +2858,7 @@
         "data": {
           "title": "Nettuno",
           "description": "Une console à base ondulée en acier, sous un plateau en verre extra-clair ou en verre cuit MIST. Trois longueurs et deux hauteurs.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/nettuno_05.jpg",
@@ -2767,7 +3097,7 @@
         "data": {
           "title": "Rado Keramik",
           "description": "Une console tout en céramique, plateau et base, aux décors de marbre. Sa base est façonnée selon un procédé breveté.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/rado_keramik_fiche.jpg",
@@ -2921,7 +3251,7 @@
         "data": {
           "title": "Cosmos",
           "description": "Un miroir mural rond en verre miroité fumé ou bronze, dont la bordure courbe déforme les reflets. Deux diamètres.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/cosmos_05.jpg",
@@ -3054,7 +3384,7 @@
         "data": {
           "title": "Glenn",
           "description": "Un miroir tout en verre aux bords courbés, pour le mur ou le sol. Verre miroité, fumé ou bronze.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/c47cddc8f9e15da4eb6f6aaa02fa19986e63ec77/content/media/new-families/glenn_02.jpg",
@@ -3221,7 +3551,7 @@
         "data": {
           "title": "Butterfly",
           "description": "Une table au piètement en acier dessiné comme un ruban qui se croise, sous un plateau en verre de 15 mm. Rectangulaire ou aux angles adoucis, de 240 à 300 cm.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/butterfly_01.jpg",
@@ -3498,7 +3828,7 @@
         "data": {
           "title": "Butterfly Keramik",
           "description": "La table Butterfly avec un plateau en céramique aux décors de marbre. Base en ruban d’acier, plateau de 240 ou 300 cm.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/butterfly_keramik_01.jpg",
@@ -3975,7 +4305,7 @@
         "data": {
           "title": "Tyron Keramik",
           "description": "Une table au piètement en X en acier, sous un plateau en céramique aux décors de marbre. Rectangulaire, aux angles adoucis, biscuit ou boomerang.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/tyron_keramik_14.jpg",
@@ -4470,7 +4800,7 @@
         "data": {
           "title": "Miranda ML",
           "description": "Une chaise enveloppante sur piètement en acier fin, en tissu, micro nubuck, cuir mince ou similicuir.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/miranda_ml_01.jpg",
@@ -6263,7 +6593,7 @@
         "data": {
           "title": "Zuleika",
           "description": "Une chaise en cuir aux lignes enveloppantes, sur structure en acier. Coutures et profils ton sur ton.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/zuleika_01.jpg",
@@ -6688,7 +7018,7 @@
         "data": {
           "title": "Craig",
           "description": "Un canapé droit ou composable aux coussins de dossier en plumes, en tissu ou en cuir. Déhoussable en version tissu.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/craig_01.jpg",
@@ -10862,7 +11192,7 @@
         "data": {
           "title": "Douglas",
           "description": "Un canapé droit ou composable sur pieds en métal, à deux hauteurs. En tissu ou en cuir, déhoussable en version tissu.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/douglas_01.jpg",
@@ -15070,7 +15400,7 @@
         "data": {
           "title": "Mykonos",
           "description": "Un canapé droit ou composable aux formes arrondies, en tissu ou en cuir. Déhoussable en version tissu.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/mykonos_04.jpg",
@@ -19170,7 +19500,7 @@
         "data": {
           "title": "Sinatra",
           "description": "Un canapé droit ou composable aux dossiers réglables, en tissu déhoussable.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/sinatra_04.jpg",
@@ -22326,7 +22656,7 @@
         "data": {
           "title": "Kayak",
           "description": "Un bahut à deux ou trois portes aux façades en facettes, en bois laqué titane, Brushed Bronze ou Brushed Grey.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/kayak_03.jpg",
@@ -22591,7 +22921,7 @@
         "data": {
           "title": "Amsterdam",
           "description": "Un bahut de deux à quatre portes laquées Oxybrass, avec inserts en chêne brûlé et plateau en verre miroité bronze.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/amsterdam_01.jpg",
@@ -22756,7 +23086,7 @@
         "data": {
           "title": "Nautilus",
           "description": "Une bibliothèque modulable en acier gaufré, à juxtaposer ou superposer. Titane, bronze, graphite ou pearl.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/nautilus_04.jpg",
@@ -23003,7 +23333,7 @@
         "data": {
           "title": "Paris",
           "description": "Une suspension en verre artistique décoré fumé-Bianco, à éclairage LED. Seule ou en composition.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/paris_01.jpg",
@@ -23172,7 +23502,7 @@
         "data": {
           "title": "Cloudine",
           "description": "Une suspension aux diffuseurs en verre Iride ou fumé, seule ou en grappe de deux à douze.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/cloudine_01.jpg",
@@ -23315,7 +23645,7 @@
         "data": {
           "title": "Aladdin",
           "description": "Une suspension en verre artistique décoré, fumé-Bianco ou « Balloton » fumé, à éclairage LED.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/aladdin_01.jpg",
@@ -23454,7 +23784,7 @@
         "data": {
           "title": "Botero Argile",
           "description": "Une table ronde tout en argile spatulée, de la base galbée au plateau, en Cairo, Oslo ou Marrakech. De 140 à 180 cm de diamètre.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/botero_argile_01.jpg",
@@ -23587,7 +23917,7 @@
         "data": {
           "title": "Botero Wood Round",
           "description": "La table Botero avec un plateau rond en noyer Canaletto ou rouvre brûlé, sur sa base galbée en argile spatulée.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/botero_wood_round_01.jpg",
@@ -23748,7 +24078,7 @@
         "data": {
           "title": "Botero Keramik Round",
           "description": "La table Botero avec un plateau rond en céramique aux décors de marbre, sur sa base galbée en argile spatulée. De 100 à 158 cm.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/botero_keramik_round_01.jpg",
@@ -24137,7 +24467,7 @@
         "data": {
           "title": "Botero Ker-Wood Round",
           "description": "La table Botero au plateau en bois serti d’un disque en céramique, sur sa base galbée en argile spatulée. Version T à disque pivotant.",
-          "availability_note": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/3873f65ec26ec1555a1dc2cc3fb1edb15216fd6e/content/media/collection-additions/botero_ker_wood_round_01.jpg",
@@ -24703,11 +25033,11 @@
               "url": "https://cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8"
             }
           ],
-          "cta_text": "Découvrez les collections dans le catalogue, puis contactez le showroom de Casablanca pour connaître la disponibilité de la configuration qui vous intéresse.",
+          "cta_text": "Le catalogue PDF présente toutes les tables et leurs formats : demandez-le pour comparer chez vous, mètre en main.",
           "cta_label": "Recevoir le catalogue",
           "cta_href": "/catalogue/",
           "seo_title": "Choisir sa table de salle à manger | Cattelan Italia Maroc",
-          "meta_description": "Table ronde ou rectangulaire : apprenez à comparer les formes, les proportions et les piètements pour composer une salle à manger adaptée à votre intérieur."
+          "meta_description": "Table ronde, carrée ou rectangulaire : 60 cm par convive, 90 cm de passage, le choix du piètement. Les mesures pour choisir sa table."
         },
         "taxonomies": {
           "category": [
@@ -24886,11 +25216,11 @@
               "url": "https://cattelanitalia.com/fr/products/41ED48AE-E379-4863-8E3C-28EE1D985390"
             }
           ],
-          "cta_text": "Explorez les tables et les assises Cattelan Italia dans le catalogue pour préparer les associations de votre projet.",
+          "cta_text": "Le catalogue réunit les tables et les chaises : de quoi tester les associations avant de comparer les échantillons au showroom.",
           "cta_label": "Recevoir le catalogue",
           "cta_href": "/catalogue/",
           "seo_title": "Associer table et chaises | Cattelan Italia Maroc",
-          "meta_description": "Formes, couleurs, matières et proportions : découvrez comment associer une table et des chaises pour créer une salle à manger cohérente et personnelle."
+          "meta_description": "Une pièce forte, une finition en commun, 62 à 64 cm par chaise à accoudoirs : associer une table et des chaises sans tout assortir."
         },
         "taxonomies": {
           "category": [
@@ -25059,11 +25389,11 @@
               "url": "https://cattelanitalia.com/fr/catalogues"
             }
           ],
-          "cta_text": "Découvrez les ambiances du catalogue et repérez les modèles dont vous souhaitez explorer les finitions.",
+          "cta_text": "Le catalogue montre chaque modèle dans plusieurs finitions : repérez celles à voir en échantillon au showroom.",
           "cta_label": "Recevoir le catalogue",
           "cta_href": "/catalogue/",
           "seo_title": "Céramique, verre ou bois | Cattelan Italia Maroc",
-          "meta_description": "Comparez le dessin, la teinte et les effets de matière pour choisir une finition de meuble en accord avec votre intérieur et votre usage."
+          "meta_description": "Céramique, verre ou bois : résistance, entretien et rendu de chaque matière pour choisir la finition d’une table, d’une console ou d’un buffet."
         },
         "taxonomies": {
           "category": [
@@ -25193,7 +25523,7 @@
                 {
                   "_type": "span",
                   "_key": "copy-v2-composer-salon-canape-fauteuil-p3s",
-                  "text": "Les tissus sont classés de T10 à T90 ; en version tissu, les housses de Craig, Douglas, Mykonos et Sinatra se retirent pour le nettoyage. Les cuirs existent en glove, magnifica, nabuk et perfetto : plus de trente teintes à eux quatre. Au total, près de quatre cents revêtements sont au showroom : apportez une photo de votre sol et de vos rideaux pour comparer.",
+                  "text": "Les tissus sont classés de T10 à T90 ; en version tissu, les housses de Craig, Douglas, Mykonos et Sinatra se retirent pour le nettoyage. Les cuirs existent en glove, magnifica, nabuk et perfetto : plus de trente teintes à eux quatre. Au total, près de quatre cents revêtements au choix ; apportez au showroom une photo de votre sol et de vos rideaux pour comparer.",
                   "marks": []
                 }
               ]
@@ -25214,11 +25544,11 @@
               "url": "https://cattelanitalia.com/en/products/75C6DB4B-1A99-400D-AEE7-9D5797651F05?c=5"
             }
           ],
-          "cta_text": "Découvrez les lignes et les matières des collections pour préparer votre sélection.",
+          "cta_text": "Craig, Douglas, Mykonos, Sinatra et Ruby : comparez leurs formes et leurs revêtements sur leurs fiches.",
           "cta_label": "Explorer les canapés et fauteuils",
           "cta_href": "/collections/canapes-fauteuils/",
           "seo_title": "Associer canapé et fauteuil | Cattelan Italia Maroc",
-          "meta_description": "Disposition, proportions et matières : quelques repères pour associer un canapé et un fauteuil et composer un salon adapté à votre quotidien."
+          "meta_description": "Passages, distance à la table basse, canapé droit ou composable, tissu ou cuir : composer un salon avec un canapé et un fauteuil."
         },
         "taxonomies": {
           "category": [
@@ -25401,11 +25731,11 @@
               "url": "https://www.cattelanitalia.com/fr/products/0BD758C3-F539-4263-BA05-CEB859A760A4"
             }
           ],
-          "cta_text": "Comparez les silhouettes et les compositions de rangement proposées par Cattelan Italia.",
+          "cta_text": "Chelsea, Kayak, Amsterdam, Airport et Nautilus : dimensions, finitions et fiche technique sur chaque modèle.",
           "cta_label": "Découvrir les buffets et bibliothèques",
           "cta_href": "/collections/buffets-bibliotheques/",
           "seo_title": "Buffet ou bibliothèque pour le salon ? | Cattelan Italia Maroc",
-          "meta_description": "Rangement fermé ou étagères ouvertes : choisissez un buffet ou une bibliothèque selon vos objets, vos habitudes et la place disponible dans le salon."
+          "meta_description": "Buffet de 45 à 55 cm de profondeur ou bibliothèque de 26 à 29 cm : les mesures et les modèles pour choisir un rangement de salon."
         },
         "taxonomies": {
           "category": [
@@ -25516,7 +25846,7 @@
                 {
                   "_type": "span",
                   "_key": "copy-v2-tables-p1s",
-                  "text": "La céramique résiste à la chaleur et aux taches et reproduit les marbres, du Calacatta au Portoro, en dix-neuf décors. Le verre laisse voir le piètement. Le bois existe en noyer Canaletto et en rouvre brûlé. Tous les échantillons sont au showroom.",
+                  "text": "La céramique résiste à la chaleur et aux taches et reproduit les marbres, du Calacatta au Portoro, en dix-neuf décors. Le verre laisse voir le piètement. Le bois existe en noyer Canaletto et en rouvre brûlé. Comparez-les en échantillons au showroom.",
                   "marks": []
                 }
               ]
@@ -25637,7 +25967,7 @@
           "title": "Les canapés, salons et fauteuils Cattelan Italia",
           "short_title": "Canapés, salons et fauteuils",
           "card_text": "Canapés droits ou composables et fauteuils, en près de 300 tissus et cuirs.",
-          "intro": "Craig, Douglas, Mykonos et Sinatra se composent droits ou d’angle ; Ruby, canapé de 200 cm à structure en frêne, s’accompagne du fauteuil Ruby Lounge. Près de 300 tissus et cuirs, à voir au showroom de Casablanca. Sur commande en 10 à 12 semaines, livraison et installation partout au Maroc.",
+          "intro": "Craig, Douglas, Mykonos et Sinatra se composent droits ou d’angle ; Ruby, canapé de 200 cm à structure en frêne, s’accompagne du fauteuil Ruby Lounge. Près de 300 tissus et cuirs au choix, et une sélection d’échantillons au showroom de Casablanca. Sur commande en 10 à 12 semaines, livraison et installation partout au Maroc.",
           "image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/salon-angle.jpg",
@@ -26176,7 +26506,7 @@
           "sections": [
             {
               "section_key": "brand",
-              "heading": "Le design italien dans les détails",
+              "heading": "Une maison italienne depuis 1979",
               "display_heading": "Dessiné en Italie.",
               "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, la maison dessine et fabrique en Italie des tables, des assises, des rangements et des luminaires, en verre, céramique, bois, métal et cuir.",
               "cta_label": "",
@@ -26184,7 +26514,7 @@
             },
             {
               "section_key": "collections",
-              "heading": "Des pièces pour composer votre intérieur",
+              "heading": "Huit familles, près de quarante modèles",
               "display_heading": "Les collections",
               "text": "Huit familles, des tables aux luminaires, et près de quarante modèles présentés avec leurs dimensions, leurs finitions et leur fiche technique.",
               "cta_label": "Explorer les collections",
@@ -26192,15 +26522,15 @@
             },
             {
               "section_key": "showroom",
-              "heading": "Votre point de rencontre à Casablanca",
+              "heading": "400 m² sur deux niveaux, au Triangle d’Or",
               "display_heading": "À Casablanca",
-              "text": "400 m² au Triangle d’Or, des pièces exposées pour le salon et la salle à manger, et tous les échantillons de la marque. Visite libre du lundi au samedi ou sur rendez-vous, service de voiturier.",
+              "text": "Ouvert en septembre 2026 : salons, salles à manger et chambres mis en scène sur deux niveaux, et une large sélection d’échantillons. Visite libre du lundi au samedi ou sur rendez-vous, service de voiturier.",
               "cta_label": "Découvrir le showroom",
               "cta_href": "/showroom-casablanca/"
             },
             {
               "section_key": "catalogue",
-              "heading": "Prenez le temps de choisir",
+              "heading": "Le catalogue en PDF",
               "display_heading": "Le catalogue",
               "text": "Le catalogue en PDF, pour repérer les modèles avant votre visite ou les partager avec votre architecte.",
               "cta_label": "Recevoir le catalogue",
@@ -26208,7 +26538,7 @@
             },
             {
               "section_key": "journal",
-              "heading": "Des idées pour avancer dans votre projet",
+              "heading": "Choisir avec des mesures",
               "display_heading": "Le Journal",
               "text": "Des repères pour choisir : forme et taille d’une table, chaises, finitions, salon, rangements.",
               "cta_label": "Lire le Journal",
@@ -26241,7 +26571,7 @@
               "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
             }
           },
-          "brand_caption": "Formes, matières et savoir-faire italien",
+          "brand_caption": "Cattelan Italia, fabriqué en Italie depuis 1979.",
           "showroom_image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/salon-nuit.jpg",
@@ -26250,7 +26580,7 @@
               "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
             }
           },
-          "showroom_invitation": "Contactez notre équipe pour préparer votre visite."
+          "showroom_invitation": "Visite libre du lundi au samedi ; un rendez-vous vous réserve un conseiller."
         }
       },
       {
@@ -26301,7 +26631,7 @@
           "title": "Le showroom Cattelan Italia à Casablanca",
           "route_key": "showroom",
           "eyebrow": "Cattelan Italia · Casablanca",
-          "intro": "Au Triangle d’Or, 400 m² consacrés à Cattelan Italia : des pièces exposées pour le salon et la salle à manger, et tous les échantillons de la marque pour choisir vos finitions sur place.",
+          "intro": "Au Triangle d’Or, 400 m² sur deux niveaux consacrés à Cattelan Italia : salons, salles à manger et chambres mis en scène, et une large sélection d’échantillons pour choisir vos finitions sur place.",
           "content": [
             {
               "_type": "block",
@@ -26326,7 +26656,7 @@
                 {
                   "_type": "span",
                   "_key": "copy-v2-showroom-casablanca-p0s",
-                  "text": "Une sélection de tables, chaises, canapés, rangements et luminaires, présentés ensemble comme dans une maison. Et l’ensemble des échantillons de la marque : dix-neuf céramiques, les bois, les laques et les métaux, près de quatre cents tissus et cuirs.",
+                  "text": "Ouvert en septembre 2026, le showroom présente sur deux niveaux des salles à manger, des salons et des chambres composés comme dans une maison : tables, chaises, canapés, tables basses, buffets, bibliothèques, luminaires et miroirs. Et une large sélection d’échantillons : céramiques, bois, laques, métaux, tissus et cuirs.",
                   "marks": []
                 }
               ]
@@ -26430,7 +26760,7 @@
             }
           ],
           "seo_title": "Showroom Cattelan Italia à Casablanca, Triangle d’Or",
-          "meta_description": "Showroom Cattelan Italia de 400 m² au Triangle d’Or, Casablanca : pièces exposées, tous les échantillons, visite libre ou sur rendez-vous, voiturier.",
+          "meta_description": "Showroom Cattelan Italia de 400 m² sur deux niveaux, Triangle d’Or, Casablanca : salons, salles à manger, chambres, échantillons, voiturier.",
           "hero_image": {
             "$media": {
               "url": "https://raw.githubusercontent.com/omarmhammedi/CattelanMarocPreview/fa61f4a01c46a19e9f597773ce4f8ee00849fc70/version-a/img/salon-nuit.jpg",
@@ -26487,7 +26817,7 @@
           "sections": [
             {
               "section_key": "catalogue",
-              "heading": "Des idées à votre sélection",
+              "heading": "Le catalogue en PDF",
               "text": "Le catalogue PDF présente toutes les familles : demandez-le pour repérer les modèles avant votre visite.",
               "cta_label": "Recevoir le catalogue",
               "cta_href": "/catalogue/"
@@ -26515,8 +26845,8 @@
             },
             {
               "section_key": "samples",
-              "heading": "Tous les échantillons au showroom",
-              "text": "Céramiques, bois, laques, métaux, verres et près de quatre cents tissus et cuirs sont au showroom du Triangle d’Or. Apportez une photo de votre sol, un échantillon de rideau ou la teinte de vos murs : une finition se choisit à côté de ce qui existe déjà chez vous, pas seule."
+              "heading": "Les échantillons au showroom",
+              "text": "Céramiques, bois, laques, métaux, verres, tissus et cuirs : une large sélection d’échantillons est au showroom du Triangle d’Or. Apportez une photo de votre sol, un échantillon de rideau ou la teinte de vos murs : une finition se choisit à côté de ce qui existe déjà chez vous, pas seule."
             },
             {
               "section_key": "lead_time",
@@ -26561,7 +26891,7 @@
             {
               "section_key": "catalogue",
               "heading": "Finitions et échantillons",
-              "text": "Dix-neuf céramiques, les bois, les laques, les métaux et près de quatre cents tissus et cuirs : tous les échantillons sont au showroom. Tout le catalogue se commande, y compris les modèles non exposés."
+              "text": "Céramiques, bois, laques, métaux, tissus et cuirs : une large sélection d’échantillons est au showroom. Tout le catalogue se commande, y compris les modèles non exposés."
             },
             {
               "section_key": "files",
@@ -26601,7 +26931,7 @@
           "title": "À propos",
           "route_key": "a-propos",
           "eyebrow": "Cattelan Italia Maroc",
-          "intro": "Le showroom monomarque Cattelan Italia du Triangle d’Or, à Casablanca : 400 m², tout le catalogue sur commande, livré et installé partout au Maroc.",
+          "intro": "Le showroom monomarque Cattelan Italia du Triangle d’Or, à Casablanca, ouvert en septembre 2026 : 400 m² sur deux niveaux, tout le catalogue sur commande, livré et installé partout au Maroc.",
           "sections": [
             {
               "section_key": "brand",
@@ -26616,7 +26946,7 @@
             {
               "section_key": "showroom",
               "heading": "Le showroom de Casablanca",
-              "text": "Sur 400 m², le showroom présente une sélection de modèles et l’ensemble des matériaux, finitions et revêtements de la marque. Tout le catalogue peut y être commandé et personnalisé."
+              "text": "Ouvert en septembre 2026 au Triangle d’Or, le showroom occupe 400 m² sur deux niveaux : salons, salles à manger et chambres mis en scène, et une large sélection de matériaux et de finitions. Tout le catalogue peut y être commandé et personnalisé."
             },
             {
               "section_key": "advice",
@@ -26647,7 +26977,7 @@
             {
               "section_key": "step_2",
               "heading": "02 · Devis détaillé",
-              "text": "Vous recevez un devis détaillé de votre sélection."
+              "text": "Le devis détaille chaque pièce : dimensions, finitions, revêtement, livraison et installation."
             },
             {
               "section_key": "step_3",
@@ -26788,12 +27118,12 @@
             {
               "section_key": "faq_products_2",
               "heading": "Puis-je commander un modèle qui n’est pas exposé au showroom ?",
-              "text": "Oui. Tout le catalogue Cattelan Italia peut être commandé et personnalisé, même les modèles qui ne sont pas exposés. Le showroom présente une large sélection et l’ensemble des matériaux, finitions et revêtements."
+              "text": "Oui. Tout le catalogue Cattelan Italia peut être commandé et personnalisé, même les modèles qui ne sont pas exposés."
             },
             {
               "section_key": "faq_products_3",
               "heading": "Proposez-vous les nouvelles collections ?",
-              "text": "Oui. Cattelan Italia présente ses nouveautés chaque année au Salon du Meuble de Milan : tables, chaises, salons, bibliothèques, buffets, luminaires et accessoires. Nous les intégrons régulièrement."
+              "text": "Oui. Cattelan Italia présente ses nouveautés chaque année au Salon du Meuble de Milan. Toutes se commandent depuis Casablanca, même avant d’être exposées."
             },
             {
               "section_key": "group",
@@ -26807,7 +27137,7 @@
             {
               "section_key": "faq_custom_2",
               "heading": "Puis-je voir les matériaux avant de commander ?",
-              "text": "Oui. L’ensemble des matériaux et finitions de la marque est présenté au showroom, en échantillons ou sur les pièces exposées."
+              "text": "Oui. Une large sélection d’échantillons est au showroom : céramiques, bois, laques, métaux, tissus et cuirs, en plus des finitions visibles sur les pièces exposées."
             },
             {
               "section_key": "faq_custom_3",
@@ -26876,7 +27206,7 @@
             {
               "section_key": "faq_showroom_2",
               "heading": "Accompagnez-vous les projets complets ?",
-              "text": "Oui. L’équipe vous conseille sur le mobilier, les matériaux, les finitions et l’agencement, pour une pièce ou un intérieur complet."
+              "text": "Oui. Pour une pièce entière ou toute la maison, l’équipe compose l’ensemble à partir de vos plans, du choix des pièces à l’installation."
             },
             {
               "section_key": "group",
@@ -27008,14 +27338,14 @@
               "caption": "Visuel provisoire issu de la maquette. À remplacer ou confirmer avant publication."
             }
           },
-          "footer_text": "Cattelan Italia au Maroc. Découvrez les collections et poursuivez votre projet avec notre showroom de Casablanca.",
+          "footer_text": "Showroom Cattelan Italia de 400 m² au Triangle d’Or, Casablanca. Tout le catalogue sur commande, fabriqué en Italie, livré et installé partout au Maroc.",
           "catalogue_label": "Recevoir le catalogue",
           "contact_label": "Contacter le showroom",
           "collections_label": "Collections",
           "showroom_label": "Showroom",
           "journal_label": "Journal",
           "read_article_label": "Lire l’article",
-          "model_notice": "Cette sélection présente des modèles de la marque. Contactez notre showroom de Casablanca pour connaître les possibilités de commande et vérifier les modèles exposés.",
+          "model_notice": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
           "preview_notice": "Cette prévisualisation présente la direction de design. Les textes et les images sont provisoires : l’objectif est de valider le design avant de finaliser le contenu.",
           "form_name_label": "Nom",
           "form_email_label": "Adresse email",
@@ -27027,7 +27357,7 @@
           "form_email_error": "Vérifiez votre adresse email.",
           "form_error": "Votre demande n’a pas pu aboutir. Réessayez ou contactez-nous sur WhatsApp.",
           "form_success_title": "Votre catalogue est prêt",
-          "form_success_text": "Merci pour votre intérêt. Vous pouvez maintenant télécharger le catalogue et poursuivre votre découverte à votre rythme.",
+          "form_success_text": "Téléchargez-le ci-dessous. Pour une question sur un modèle, une finition ou un délai, écrivez au showroom sur WhatsApp.",
           "form_unavailable": "Le catalogue est momentanément indisponible. Contactez notre équipe sur WhatsApp pour poursuivre votre demande.",
           "placeholder_notice": "Document de démonstration utilisé pour tester le téléchargement. Le catalogue définitif sera ajouté ultérieurement.",
           "active_catalogue": "$ref:catalogue-demonstration",

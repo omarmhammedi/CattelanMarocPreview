@@ -7,23 +7,30 @@
       "slug": "home",
       "fields": {
         "intro": "Le showroom monomarque Cattelan Italia du Triangle d’Or. Tout le catalogue se commande à vos dimensions et finitions, fabriqué en Italie en 10 à 12 semaines, livré et installé partout au Maroc.",
-        "meta_description": "Showroom Cattelan Italia à Casablanca : tables, canapés, chaises, luminaires sur commande, fabriqués en Italie, livrés et installés partout au Maroc."
+        "meta_description": "Showroom Cattelan Italia à Casablanca : tables, canapés, chaises, luminaires sur commande, fabriqués en Italie, livrés et installés partout au Maroc.",
+        "brand_caption": "Cattelan Italia, fabriqué en Italie depuis 1979.",
+        "showroom_invitation": "Visite libre du lundi au samedi ; un rendez-vous vous réserve un conseiller."
       },
       "sections": {
         "brand": {
-          "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, la maison dessine et fabrique en Italie des tables, des assises, des rangements et des luminaires, en verre, céramique, bois, métal et cuir."
+          "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, la maison dessine et fabrique en Italie des tables, des assises, des rangements et des luminaires, en verre, céramique, bois, métal et cuir.",
+          "heading": "Une maison italienne depuis 1979"
         },
         "collections": {
-          "text": "Huit familles, des tables aux luminaires, et près de quarante modèles présentés avec leurs dimensions, leurs finitions et leur fiche technique."
+          "text": "Huit familles, des tables aux luminaires, et près de quarante modèles présentés avec leurs dimensions, leurs finitions et leur fiche technique.",
+          "heading": "Huit familles, près de quarante modèles"
         },
         "showroom": {
-          "text": "400 m² au Triangle d’Or, des pièces exposées pour le salon et la salle à manger, et tous les échantillons de la marque. Visite libre du lundi au samedi ou sur rendez-vous, service de voiturier."
+          "text": "Ouvert en septembre 2026 : salons, salles à manger et chambres mis en scène sur deux niveaux, et une large sélection d’échantillons. Visite libre du lundi au samedi ou sur rendez-vous, service de voiturier.",
+          "heading": "400 m² sur deux niveaux, au Triangle d’Or"
         },
         "catalogue": {
-          "text": "Le catalogue en PDF, pour repérer les modèles avant votre visite ou les partager avec votre architecte."
+          "text": "Le catalogue en PDF, pour repérer les modèles avant votre visite ou les partager avec votre architecte.",
+          "heading": "Le catalogue en PDF"
         },
         "journal": {
-          "text": "Des repères pour choisir : forme et taille d’une table, chaises, finitions, salon, rangements."
+          "text": "Des repères pour choisir : forme et taille d’une table, chaises, finitions, salon, rangements.",
+          "heading": "Choisir avec des mesures"
         }
       }
     },
@@ -31,12 +38,12 @@
       "collection": "pages",
       "slug": "showroom-casablanca",
       "fields": {
-        "intro": "Au Triangle d’Or, 400 m² consacrés à Cattelan Italia : des pièces exposées pour le salon et la salle à manger, et tous les échantillons de la marque pour choisir vos finitions sur place.",
-        "meta_description": "Showroom Cattelan Italia de 400 m² au Triangle d’Or, Casablanca : pièces exposées, tous les échantillons, visite libre ou sur rendez-vous, voiturier.",
+        "intro": "Au Triangle d’Or, 400 m² sur deux niveaux consacrés à Cattelan Italia : salons, salles à manger et chambres mis en scène, et une large sélection d’échantillons pour choisir vos finitions sur place.",
+        "meta_description": "Showroom Cattelan Italia de 400 m² sur deux niveaux, Triangle d’Or, Casablanca : salons, salles à manger, chambres, échantillons, voiturier.",
         "content": [
           [
             "Ce que vous trouvez au showroom",
-            "Une sélection de tables, chaises, canapés, rangements et luminaires, présentés ensemble comme dans une maison. Et l’ensemble des échantillons de la marque : dix-neuf céramiques, les bois, les laques et les métaux, près de quatre cents tissus et cuirs."
+            "Ouvert en septembre 2026, le showroom présente sur deux niveaux des salles à manger, des salons et des chambres composés comme dans une maison : tables, chaises, canapés, tables basses, buffets, bibliothèques, luminaires et miroirs. Et une large sélection d’échantillons : céramiques, bois, laques, métaux, tissus et cuirs."
           ],
           [
             "Recevoir vos clients",
@@ -118,7 +125,8 @@
       },
       "sections": {
         "catalogue": {
-          "text": "Le catalogue PDF présente toutes les familles : demandez-le pour repérer les modèles avant votre visite."
+          "text": "Le catalogue PDF présente toutes les familles : demandez-le pour repérer les modèles avant votre visite.",
+          "heading": "Le catalogue en PDF"
         }
       }
     },
@@ -126,11 +134,11 @@
       "collection": "pages",
       "slug": "a-propos",
       "fields": {
-        "intro": "Le showroom monomarque Cattelan Italia du Triangle d’Or, à Casablanca : 400 m², tout le catalogue sur commande, livré et installé partout au Maroc."
+        "intro": "Le showroom monomarque Cattelan Italia du Triangle d’Or, à Casablanca, ouvert en septembre 2026 : 400 m² sur deux niveaux, tout le catalogue sur commande, livré et installé partout au Maroc."
       },
       "sections": {
         "showroom": {
-          "text": "Sur 400 m², le showroom présente une sélection de modèles et l’ensemble des matériaux, finitions et revêtements de la marque. Tout le catalogue peut y être commandé et personnalisé."
+          "text": "Ouvert en septembre 2026 au Triangle d’Or, le showroom occupe 400 m² sur deux niveaux : salons, salles à manger et chambres mis en scène, et une large sélection de matériaux et de finitions. Tout le catalogue peut y être commandé et personnalisé."
         },
         "brand": {
           "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, la maison dessine et fabrique en Italie des tables, des chaises, des canapés, des rangements et des luminaires. Ses tables en sont la pièce centrale : plateaux en céramique, en verre ou en bois sur des piètements sculptés en acier, comme ceux de Skorpio, Butterfly ou Tyron Keramik."
@@ -160,7 +168,7 @@
           ],
           [
             "Céramique, verre ou bois",
-            "La céramique résiste à la chaleur et aux taches et reproduit les marbres, du Calacatta au Portoro, en dix-neuf décors. Le verre laisse voir le piètement. Le bois existe en noyer Canaletto et en rouvre brûlé. Tous les échantillons sont au showroom."
+            "La céramique résiste à la chaleur et aux taches et reproduit les marbres, du Calacatta au Portoro, en dix-neuf décors. Le verre laisse voir le piètement. Le bois existe en noyer Canaletto et en rouvre brûlé. Comparez-les en échantillons au showroom."
           ]
         ]
       }
@@ -195,7 +203,7 @@
         "short_title": "Canapés, salons et fauteuils",
         "seo_title": "Canapés, salons et fauteuils Cattelan Italia à Casablanca · Cattelan Italia Maroc",
         "card_text": "Canapés droits ou composables et fauteuils, en près de 300 tissus et cuirs.",
-        "intro": "Craig, Douglas, Mykonos et Sinatra se composent droits ou d’angle ; Ruby, canapé de 200 cm à structure en frêne, s’accompagne du fauteuil Ruby Lounge. Près de 300 tissus et cuirs, à voir au showroom de Casablanca. Sur commande en 10 à 12 semaines, livraison et installation partout au Maroc.",
+        "intro": "Craig, Douglas, Mykonos et Sinatra se composent droits ou d’angle ; Ruby, canapé de 200 cm à structure en frêne, s’accompagne du fauteuil Ruby Lounge. Près de 300 tissus et cuirs au choix, et une sélection d’échantillons au showroom de Casablanca. Sur commande en 10 à 12 semaines, livraison et installation partout au Maroc.",
         "meta_description": "Canapés, salons et fauteuils Cattelan Italia, droits ou composables, en près de 300 tissus et cuirs. Sur commande, livrés partout au Maroc.",
         "content": [
           [
@@ -310,77 +318,198 @@
       "collection": "models",
       "slug": "skorpio",
       "fields": {
-        "description": "Une table au piètement en acier à lignes obliques, sous un plateau en verre qui le laisse voir. Carrée jusqu’à 200 × 200 cm pour douze personnes ou rectangulaire, avec sept finitions de base."
+        "description": "Une table au piètement en acier à lignes obliques, sous un plateau en verre qui le laisse voir. Carrée jusqu’à 200 × 200 cm pour douze personnes ou rectangulaire, avec sept finitions de base.",
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+        "content": [
+          [
+            "",
+            "Skorpio pose un plateau en verre sur un piètement en acier aux lignes obliques, visible à travers le plateau. Carrée, de 150 × 150 cm pour huit personnes à 200 × 200 cm pour douze, ou rectangulaire, de 160 × 90 à 300 × 130 cm."
+          ],
+          [
+            "",
+            "La base existe en cinq laques gaufrées, titane, bronze, graphite, pearl ou noir, et en Brushed Bronze ou Brushed Grey, brossés à la main. Le verre est clair, extra-clair, biseauté ou cuit (MIST), en 15 mm, ou 12 mm sur les petits formats. Skorpio se commande aussi avec un plateau en bois, en céramique ou en Crystalart."
+          ]
+        ]
       }
     },
     {
       "collection": "models",
       "slug": "napoleon-keramik",
       "fields": {
-        "description": "Une table tout en céramique, plateau et base arrondie, en cinq décors de marbre dont Taj Mahal et Portoro. Rectangulaire, ovale ou aux angles adoucis, de 200 à 320 cm, jusqu’à quatorze personnes."
+        "description": "Une table tout en céramique, plateau et base arrondie, en cinq décors de marbre dont Taj Mahal et Portoro. Rectangulaire, ovale ou aux angles adoucis, de 200 à 320 cm, jusqu’à quatorze personnes.",
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+        "content": [
+          [
+            "",
+            "Napoleon Keramik est entièrement en céramique : le plateau et la base, formée de deux volumes arrondis séparés par un creux vertical. Rectangulaire, ovale, biscuit, polygonale ou aux angles adoucis, de 200 à 320 cm, elle reçoit jusqu’à quatorze personnes."
+          ],
+          [
+            "",
+            "Cinq décors Marmi : Portoro, Borghini Calacatta, Colosseo, Invisible et Taj Mahal. Le façonnage de la base donne à chaque pièce de légères variations de teinte et de forme."
+          ]
+        ]
       }
     },
     {
       "collection": "models",
       "slug": "rhonda",
       "fields": {
-        "description": "Une chaise à accoudoirs au dossier enveloppant, lisse à l’extérieur et plissé à l’intérieur. Pieds en métal chromé ou laqué ; revêtement en tissu, micro nubuck, cuir mince ou similicuir, plus de cent teintes."
+        "description": "Une chaise à accoudoirs au dossier enveloppant, lisse à l’extérieur et plissé à l’intérieur. Pieds en métal chromé ou laqué ; revêtement en tissu, micro nubuck, cuir mince ou similicuir, plus de cent teintes.",
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+        "content": [
+          [
+            "",
+            "Rhonda est une chaise à accoudoirs de 63 × 60 cm, 79 cm de haut. Son dossier enveloppant est lisse à l’extérieur et plissé à l’intérieur."
+          ],
+          [
+            "",
+            "Pieds chromés ou laqués titane, bronze, graphite, pearl ou noir. Revêtement en tissu, micro nubuck, cuir mince ou similicuir, plus de cent teintes ; il n’est pas déhoussable. Rhonda existe aussi en versions bois, cantilever, pivotante, à roulettes, lounge et tabouret."
+          ]
+        ]
       }
     },
     {
       "collection": "models",
       "slug": "greta",
       "fields": {
-        "description": "Une chaise au dossier rembourré qui se prolonge en accoudoirs, sur de fins pieds en acier. Cinq laques pour la structure ; tissu, cuir, micro nubuck ou similicuir pour l’assise."
+        "description": "Une chaise au dossier rembourré qui se prolonge en accoudoirs, sur de fins pieds en acier. Cinq laques pour la structure ; tissu, cuir, micro nubuck ou similicuir pour l’assise.",
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+        "content": [
+          [
+            "",
+            "Greta mesure 62 × 62 cm, 78 cm de haut. Son dossier rembourré se prolonge en accoudoirs ; à l’arrière, une fente verticale sépare deux volumes."
+          ],
+          [
+            "",
+            "Structure en acier laqué titane, bronze, graphite, pearl ou noir. Revêtement en tissu, cuir, micro nubuck ou similicuir, non déhoussable. Greta existe aussi en versions bois, lounge, tabouret et Outdoor."
+          ]
+        ]
       }
     },
     {
       "collection": "models",
       "slug": "ruby",
       "fields": {
-        "description": "Un canapé de 200 cm à structure apparente en frêne, teinté noyer Canaletto ou rouvre brûlé, aux coussins généreux. Il se complète du fauteuil Ruby Lounge."
+        "description": "Un canapé de 200 cm à structure apparente en frêne, teinté noyer Canaletto ou rouvre brûlé, aux coussins généreux. Il se complète du fauteuil Ruby Lounge.",
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+        "content": [
+          [
+            "",
+            "Ruby est un canapé de 200 × 92 cm, 76 cm de haut, à structure apparente en frêne teinté noyer Canaletto ou rouvre brûlé. Ossature en bois, garniture en mousse, coussins généreux."
+          ],
+          [
+            "",
+            "Revêtement en tissu ou en cuir, non déhoussable. Le fauteuil Ruby Lounge, 81 cm de large, reprend la même structure."
+          ]
+        ]
       }
     },
     {
       "collection": "models",
       "slug": "ruby-lounge",
       "fields": {
-        "description": "Le fauteuil bas de la famille Ruby, 81 cm de large, à structure apparente en frêne et dossier arrondi. À associer au canapé Ruby ou à placer seul."
+        "description": "Le fauteuil bas de la famille Ruby, 81 cm de large, à structure apparente en frêne et dossier arrondi. À associer au canapé Ruby ou à placer seul.",
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+        "content": [
+          [
+            "",
+            "Ruby Lounge est un fauteuil bas de 81 × 92 cm, 76 cm de haut, à structure apparente en frêne teinté noyer Canaletto ou rouvre brûlé, au dossier arrondi et aux coutures visibles."
+          ],
+          [
+            "",
+            "Revêtement en tissu, micro nubuck ou cuir mince, non déhoussable. À associer au canapé Ruby, ou à placer seul dans un coin lecture."
+          ]
+        ]
       }
     },
     {
       "collection": "models",
       "slug": "chelsea",
       "fields": {
-        "description": "Un buffet aux façades polygonales en bois laqué titane, paprika ou mint, avec un plateau en verre miroir bronze ou en céramique. De 137,5 à 248 cm de long et de 50 à 100 cm de haut."
+        "description": "Un buffet aux façades polygonales en bois laqué titane, paprika ou mint, avec un plateau en verre miroir bronze ou en céramique. De 137,5 à 248 cm de long et de 50 à 100 cm de haut.",
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+        "content": [
+          [
+            "",
+            "Chelsea est un buffet aux façades polygonales, en bois laqué titane, Paprika ou Mint. Son plateau, en verre miroir bronze ou en céramique Colosseo ou Taj Mahal, s’inscrit dans un rebord incliné."
+          ],
+          [
+            "",
+            "Huit formats, de 137,5 à 248 cm de long et de 50 à 100 cm de haut, pour 46 cm de profondeur. Étagères intérieures en verre clair. Les versions B ajoutent un piètement en acier chromé ou graphite."
+          ]
+        ]
       }
     },
     {
       "collection": "models",
       "slug": "airport",
       "fields": {
-        "description": "Une bibliothèque modulaire fixée au mur ou au plafond, pour longer un mur, former un angle ou séparer une pièce. Longueurs de 60 à 310 cm, profondeur 29 cm, en acier et bois."
+        "description": "Une bibliothèque modulaire fixée au mur ou au plafond, pour longer un mur, former un angle ou séparer une pièce. Longueurs de 60 à 310 cm, profondeur 29 cm, en acier et bois.",
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+        "content": [
+          [
+            "",
+            "Airport est une bibliothèque modulaire fixée au mur ou au plafond : elle longe un mur, forme un angle ou sépare deux espaces. Étagères de 60 à 310 cm, 29 cm de profondeur, caissons Box et module bureau."
+          ],
+          [
+            "",
+            "Montants en acier titane, bronze, graphite, blanc ou noir ; étagères et caissons en graphite, blanc, noyer Canaletto, rouvre brûlé, Brushed Bronze ou Brushed Grey. Envoyez les mesures du mur : le showroom vous propose une composition."
+          ]
+        ]
       }
     },
     {
       "collection": "models",
       "slug": "bloom",
       "fields": {
-        "description": "Un luminaire aux branches métalliques et diffuseurs en verre borosilicate, en suspension horizontale ou verticale de 150 cm, ou en lampadaire de 178 cm de haut."
+        "description": "Un luminaire aux branches métalliques et diffuseurs en verre borosilicate, en suspension horizontale ou verticale de 150 cm, ou en lampadaire de 178 cm de haut.",
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+        "content": [
+          [
+            "",
+            "Bloom porte des diffuseurs en verre borosilicate sur des branches métalliques gris fer, avec des raccords en laiton brossé. En suspension horizontale ou verticale de 150 cm, ou en lampadaire de 178 cm."
+          ],
+          [
+            "",
+            "Les ampoules fournies ne sont pas à intensité variable ; une télécommande avec variateur est proposée en option pour les suspensions."
+          ]
+        ]
       }
     },
     {
       "collection": "models",
       "slug": "napoleon-keramik-outdoor",
       "fields": {
-        "description": "La table Napoleon en céramique pour terrasses et vérandas couvertes : plateau et base en cinq décors de marbre, jusqu’à 320 cm de long."
+        "description": "La table Napoleon en céramique pour terrasses et vérandas couvertes : plateau et base en cinq décors de marbre, jusqu’à 320 cm de long.",
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+        "content": [
+          [
+            "",
+            "La table Napoleon Keramik, plateau et base en céramique, pour un patio ou une véranda couverts. De 200 à 320 cm, rectangulaire, ovale, biscuit, polygonale ou aux angles adoucis."
+          ],
+          [
+            "",
+            "Cinq décors Marmi : Portoro, Borghini Calacatta, Colosseo, Invisible et Taj Mahal. Usage extérieur couvert uniquement : la table doit rester à l’abri de la pluie et du soleil direct."
+          ]
+        ]
       }
     },
     {
       "collection": "models",
       "slug": "greta-outdoor",
       "fields": {
-        "description": "La chaise Greta pour terrasses couvertes : structure en acier inoxydable 304 laqué, assise rembourrée en tissu Outdoor."
+        "description": "La chaise Greta pour terrasses couvertes : structure en acier inoxydable 304 laqué, assise rembourrée en tissu Outdoor.",
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+        "content": [
+          [
+            "",
+            "Greta Outdoor reprend la forme de Greta, 62 × 62 cm, 78 cm de haut, sur une structure en acier inoxydable 304 laqué titane, bronze, graphite, pearl ou noir."
+          ],
+          [
+            "",
+            "Revêtement en tissu Outdoor, vingt coloris, non déhoussable. Usage extérieur couvert uniquement."
+          ]
+        ]
       }
     },
     {
@@ -395,8 +524,8 @@
           "text": "Les dimensions, dans les formats prévus par chaque modèle : Napoleon Keramik va de 200 à 320 cm, Tyron Keramik existe en rectangle, biscuit ou boomerang, Botero de 100 à 180 cm de diamètre.\nLe plateau : dix-neuf céramiques Marmi, du Calacatta au Portoro ; verre clair, extra-clair ou cuit ; noyer Canaletto ou rouvre brûlé.\nLe piètement : laques gaufrées titane, bronze, graphite, pearl ou noir, et finitions Brushed brossées à la main.\nLes assises : tissus classés de T10 à T90, cuirs glove, magnifica, nabuk et perfetto, micro nubuck et similicuir."
         },
         "samples": {
-          "heading": "Tous les échantillons au showroom",
-          "text": "Céramiques, bois, laques, métaux, verres et près de quatre cents tissus et cuirs sont au showroom du Triangle d’Or. Apportez une photo de votre sol, un échantillon de rideau ou la teinte de vos murs : une finition se choisit à côté de ce qui existe déjà chez vous, pas seule."
+          "heading": "Les échantillons au showroom",
+          "text": "Céramiques, bois, laques, métaux, verres, tissus et cuirs : une large sélection d’échantillons est au showroom du Triangle d’Or. Apportez une photo de votre sol, un échantillon de rideau ou la teinte de vos murs : une finition se choisit à côté de ce qui existe déjà chez vous, pas seule."
         },
         "lead_time": {
           "heading": "Sans délai supplémentaire",
@@ -442,7 +571,9 @@
             "Tester l’implantation avant de commander",
             "Tracez le contour du plateau au sol avec du ruban de masquage et posez-y vos chaises actuelles : en deux jours, vous saurez si les passages suffisent. Envoyez une photo de ce tracé et les mesures de la pièce au showroom sur WhatsApp : le conseiller vous propose les formats qui conviennent."
           ]
-        ]
+        ],
+        "cta_text": "Le catalogue PDF présente toutes les tables et leurs formats : demandez-le pour comparer chez vous, mètre en main.",
+        "meta_description": "Table ronde, carrée ou rectangulaire : 60 cm par convive, 90 cm de passage, le choix du piètement. Les mesures pour choisir sa table."
       }
     },
     {
@@ -475,7 +606,9 @@
             "Le revêtement selon l’usage",
             "Le cuir et le similicuir s’essuient d’un geste : c’est le choix d’une salle à manger avec des enfants. Le tissu et le micro nubuck sont plus doux et plus chauds au toucher. Rhonda existe en plus de cent teintes, entre cuir mince, similicuir, tissu et micro nubuck."
           ]
-        ]
+        ],
+        "cta_text": "Le catalogue réunit les tables et les chaises : de quoi tester les associations avant de comparer les échantillons au showroom.",
+        "meta_description": "Une pièce forte, une finition en commun, 62 à 64 cm par chaise à accoudoirs : associer une table et des chaises sans tout assortir."
       }
     },
     {
@@ -504,7 +637,9 @@
             "Choisir sur place, avec votre intérieur",
             "Une finition se juge à côté de votre sol et à la lumière de votre pièce. Apportez au showroom une photo prise en journée, un échantillon de rideau ou de carrelage : le conseiller place les échantillons à côté, et vous voyez tout de suite ce qui fonctionne."
           ]
-        ]
+        ],
+        "cta_text": "Le catalogue montre chaque modèle dans plusieurs finitions : repérez celles à voir en échantillon au showroom.",
+        "meta_description": "Céramique, verre ou bois : résistance, entretien et rendu de chaque matière pour choisir la finition d’une table, d’une console ou d’un buffet."
       }
     },
     {
@@ -527,9 +662,11 @@
           ],
           [
             "Tissu ou cuir",
-            "Les tissus sont classés de T10 à T90 ; en version tissu, les housses de Craig, Douglas, Mykonos et Sinatra se retirent pour le nettoyage. Les cuirs existent en glove, magnifica, nabuk et perfetto : plus de trente teintes à eux quatre. Au total, près de quatre cents revêtements sont au showroom : apportez une photo de votre sol et de vos rideaux pour comparer."
+            "Les tissus sont classés de T10 à T90 ; en version tissu, les housses de Craig, Douglas, Mykonos et Sinatra se retirent pour le nettoyage. Les cuirs existent en glove, magnifica, nabuk et perfetto : plus de trente teintes à eux quatre. Au total, près de quatre cents revêtements au choix ; apportez au showroom une photo de votre sol et de vos rideaux pour comparer."
           ]
-        ]
+        ],
+        "cta_text": "Craig, Douglas, Mykonos, Sinatra et Ruby : comparez leurs formes et leurs revêtements sur leurs fiches.",
+        "meta_description": "Passages, distance à la table basse, canapé droit ou composable, tissu ou cuir : composer un salon avec un canapé et un fauteuil."
       }
     },
     {
@@ -562,7 +699,214 @@
             "Le bon mur",
             "Placez le buffet près de la table, là où l’on sert : sur le mur le plus long de la salle à manger, sous un miroir ou un tableau. La bibliothèque trouve sa place dans le salon, sur un mur sans passage, ou comme séparation entre deux espaces."
           ]
-        ]
+        ],
+        "cta_text": "Chelsea, Kayak, Amsterdam, Airport et Nautilus : dimensions, finitions et fiche technique sur chaque modèle.",
+        "meta_description": "Buffet de 45 à 55 cm de profondeur ou bibliothèque de 26 à 29 cm : les mesures et les modèles pour choisir un rangement de salon."
+      }
+    },
+    {
+      "collection": "site_content",
+      "slug": "global",
+      "fields": {
+        "footer_text": "Showroom Cattelan Italia de 400 m² au Triangle d’Or, Casablanca. Tout le catalogue sur commande, fabriqué en Italie, livré et installé partout au Maroc.",
+        "model_notice": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom.",
+        "form_success_text": "Téléchargez-le ci-dessous. Pour une question sur un modèle, une finition ou un délai, écrivez au showroom sur WhatsApp."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "arena",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "albert-keramik",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "adrian-wood",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "dodo",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "westin",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "nettuno",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "rado-keramik",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "cosmos",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "glenn",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "butterfly",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "butterfly-keramik",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "tyron-keramik",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "miranda-ml",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "zuleika",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "craig",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "douglas",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "mykonos",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "sinatra",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "kayak",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "amsterdam",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "nautilus",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "paris",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "cloudine",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "aladdin",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "botero-argile",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "botero-wood-round",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "botero-keramik-round",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+      }
+    },
+    {
+      "collection": "models",
+      "slug": "botero-ker-wood-round",
+      "fields": {
+        "availability_note": "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
       }
     }
   ]
