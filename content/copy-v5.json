@@ -1,0 +1,1479 @@
+{
+ "version": 5,
+ "migration": "0024-editorial-audit",
+ "source": "Audit éditorial, révision 3 (3 octobre 2026), entrées compatibles avec les décisions du client.",
+ "entries": [
+  {
+   "collection": "pages",
+   "slug": "home",
+   "rules": [
+    {
+     "id": "HN01",
+     "from": [
+      "Triangle d’Or · Casablanca"
+     ],
+     "to": []
+    },
+    {
+     "id": "H06",
+     "from": [
+      "Le showroom, 400 m² au Triangle d’Or"
+     ],
+     "to": [
+      "Le showroom de Casablanca"
+     ]
+    }
+   ],
+   "sections": {
+    "brand": {
+     "id": "HN03",
+     "expect": {
+      "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, la maison est installée à Carrè, près de Vicence. Elle est d’abord connue pour ses tables : un piètement sculpté en acier sous un plateau en verre, en céramique ou en bois. Autour d’elles, elle dessine les chaises, les canapés, les rangements et les luminaires."
+     },
+     "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, la maison est installée à Carrè, près de Vicence."
+    },
+    "collections": {
+     "id": "H04",
+     "expect": {
+      "heading": "Huit familles de meubles et de luminaires"
+     },
+     "heading": "Mobilier et luminaires"
+    },
+    "catalogue": {
+     "id": "H11",
+     "expect": {
+      "text": "Toutes les familles, leurs formats et leurs finitions."
+     },
+     "text": ""
+    },
+    "journal": {
+     "id": "HN21",
+     "expect": {
+      "cta_label": "Lire le Journal"
+     },
+     "cta_label": "Voir tous les guides"
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "showroom-casablanca",
+   "sections": {
+    "faq_3": {
+     "id": "S04",
+     "expect": {
+      "text": "Oui. Envoyez sur WhatsApp les modèles repérés sur le site ou dans le catalogue : le conseiller vous dit lesquels sont exposés et réunit leurs finitions en échantillons pour votre visite."
+     },
+     "text": "Oui. Envoyez-nous les noms des modèles qui vous intéressent. Nous vous indiquerons lesquels sont exposés."
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "professionnels",
+   "sections": {
+    "files": {
+     "id": "MNEW-04",
+     "expect": {
+      "heading": "Fiches techniques et fichiers 3D",
+      "text": "Chaque fiche modèle du site donne les dimensions, les finitions et la fiche technique en PDF. Les fichiers 2D et 3D et les images haute définition sont envoyés sur demande, selon les modèles."
+     },
+     "heading": "Fiches techniques et fichiers 2D et 3D",
+     "text": "Fichiers 2D et 3D, fiches techniques et images haute définition sur demande, selon les modèles."
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "votre-projet",
+   "rules": [
+    {
+     "id": "MNEW-16",
+     "from": [
+      "Nous composons l’ensemble, salon, salle à manger ou chambre, du choix des meubles à l’installation. Apportez les plans ou les mesures, et quelques photos."
+     ],
+     "to": [
+      "Transmettez vos plans ou les mesures des pièces, ainsi que quelques photos. Nous vous aidons à choisir les meubles et suivons la commande jusqu’à l’installation."
+     ]
+    }
+   ],
+   "sections": {
+    "step_5": {
+     "id": "MNEW-17",
+     "expect": {
+      "text": "Nous livrons partout au Maroc, notamment à Casablanca, Rabat, Marrakech et Tanger. La livraison est offerte à Casablanca ; pour les autres villes, les frais dépendent de la destination. L’installation est incluse."
+     },
+     "text": "Nous livrons partout au Maroc. La livraison est offerte à Casablanca ; dans les autres villes, les frais dépendent de la destination. L’installation est incluse."
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "a-propos",
+   "sections": {
+    "showroom": {
+     "id": "A02",
+     "expect": {},
+     "remove": true
+    },
+    "brand": {
+     "id": "MNEW-25",
+     "expect": {
+      "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, la maison dessine et fabrique en Italie des tables, des chaises, des canapés, des rangements et des luminaires. Ses tables en sont la pièce centrale : plateaux en céramique, en verre ou en bois sur des piètements sculptés en acier, comme ceux de Skorpio, Butterfly ou Tyron Keramik."
+     },
+     "text": "Fondée en 1979 par Giorgio et Silvia Cattelan, la maison dessine et fabrique en Italie des tables, des chaises, des canapés, des rangements et des luminaires. Skorpio, Butterfly et Tyron Keramik se distinguent par leurs piètements en acier : lignes croisées, ruban plié ou forme en X."
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "faq",
+   "sections": {
+    "faq_products_2": {
+     "id": "F03",
+     "expect": {
+      "text": "Oui. Tous les modèles du catalogue Cattelan Italia se commandent, exposés ou non ; les dimensions et finitions proposées dépendent du modèle."
+     },
+     "text": "Oui. Les modèles non exposés peuvent être commandés. Les dimensions et finitions proposées dépendent du modèle."
+    },
+    "faq_showroom_1": {
+     "id": "F04",
+     "expect": {
+      "text": "Non. Le showroom est ouvert le lundi de 12 h à 19 h 30 et du mardi au samedi de 9 h à 19 h 30. Avec un rendez-vous, un conseiller vous est réservé."
+     },
+     "text": "Non. Le showroom est ouvert le lundi de 12 h à 19 h 30 et du mardi au samedi de 9 h à 19 h 30. Vous pouvez aussi réserver un créneau avec un conseiller."
+    },
+    "faq_order_price": {
+     "id": "MNEW-31",
+     "expect": {
+      "text": "Parce que chaque pièce se configure : le prix dépend du format et des finitions choisis. Envoyez le nom du modèle sur WhatsApp, nous vous répondons avec un devis."
+     },
+     "text": "Le prix dépend du modèle, de ses dimensions et de ses finitions. Indiquez vos choix pour obtenir un devis."
+    },
+    "faq_pro_2": {
+     "id": "MNEW-35",
+     "expect": {
+      "text": "Oui, sur demande et selon les modèles : fichiers 2D et 3D, fiches techniques et images haute définition. Chaque fiche modèle du site propose la fiche technique en PDF."
+     },
+     "text": "Oui. Les fichiers 2D et 3D, les fiches techniques et les images haute définition sont disponibles sur demande, selon les modèles."
+    },
+    "faq_pro_3": {
+     "id": "MNEW-36",
+     "expect": {
+      "text": "Oui. Réservez un créneau : vos clients voient les pièces exposées et les échantillons, et vous validez les finitions ensemble."
+     },
+     "text": "Oui, sur rendez-vous."
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "collections",
+   "sections": {
+    "contact": {
+     "id": "C01-03",
+     "expect": {
+      "heading": "Un modèle repéré ?"
+     },
+     "heading": ""
+    },
+    "professional": {
+     "id": "CNEW04",
+     "expect": {
+      "cta_label": "Voir l’offre architectes"
+     },
+     "cta_label": "Voir les services professionnels"
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "journal",
+   "sections": {
+    "catalogue": {
+     "id": "J03",
+     "expect": {
+      "text": "Toutes les familles, leurs formats et leurs finitions."
+     },
+     "text": ""
+    }
+   }
+  },
+  {
+   "collection": "families",
+   "slug": "chaises-tabourets",
+   "rules": [
+    {
+     "id": "HN10",
+     "from": [
+      "Quatre modèles en cuir, tissu ou micro-nubuck ; Rhonda et Greta existent aussi en tabouret."
+     ],
+     "to": [
+      "Rhonda et Greta existent aussi en tabouret."
+     ]
+    },
+    {
+     "id": "C03-04",
+     "from": [
+      "Une assise à 46 ou 47 cm, comme celles de Miranda ML et de Zuleika, convient aux tables de 74 à 75 cm. Avec des accoudoirs, vérifiez qu’ils passent sous le plateau. Comptez 60 cm de largeur par chaise autour de la table."
+     ],
+     "to": [
+      "L’assise de Miranda ML est à 47 cm ; celle de Zuleika, à 46 cm. Vérifiez aussi que les accoudoirs passent sous le plateau et ses traverses."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "families",
+   "slug": "luminaires",
+   "rules": [
+    {
+     "id": "C01-11",
+     "from": [
+      "Suspensions en verre artistique, seules ou en grappe ; Bloom aussi en lampadaire."
+     ],
+     "to": [
+      "Suspensions en verre, seules ou en composition. Bloom existe aussi en lampadaire."
+     ]
+    },
+    {
+     "id": "C06-03",
+     "from": [
+      "Au-dessus de la table"
+     ],
+     "to": [
+      "Hauteur des suspensions"
+     ]
+    },
+    {
+     "id": "C06-04",
+     "from": [
+      "Accrochez la suspension à 70 ou 80 cm au-dessus du plateau. Sa largeur, ou celle de la composition, fait environ la moitié de la longueur de la table. Le câble de Paris et d’Aladdin descend jusqu’à 250 cm, celui de Cloudine jusqu’à 300 cm."
+     ],
+     "to": [
+      "Mesurez la distance entre le plafond et le plateau, puis comparez-la à la hauteur du luminaire et à la longueur du câble : jusqu’à 250 cm pour Paris et Aladdin, 300 cm pour Cloudine. Repérez aussi l’arrivée électrique."
+     ]
+    },
+    {
+     "id": "C06-05",
+     "from": [
+      "Dans le salon"
+     ],
+     "to": []
+    },
+    {
+     "id": "C06-06",
+     "from": [
+      "Au centre du salon, une grappe de Cloudine ou une suspension Bloom remplace le plafonnier. Vérifiez la hauteur sous plafond et l’emplacement de l’arrivée électrique avant de choisir la composition."
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "families",
+   "slug": "mobilier-exterieur",
+   "rules": [
+    {
+     "id": "HN14",
+     "from": [
+      "Une table en céramique et sa chaise, pour terrasses et vérandas couvertes."
+     ],
+     "to": [
+      "Table Napoleon Keramik Outdoor en céramique et chaise Greta Outdoor en acier inoxydable."
+     ]
+    },
+    {
+     "id": "C07-04",
+     "from": [
+      "Ces deux modèles sont conçus pour des espaces extérieurs couverts, à l’abri de la pluie et du soleil direct. Précisez au conseiller l’exposition de votre terrasse."
+     ],
+     "to": [
+      "Ces deux modèles sont destinés aux espaces extérieurs couverts, à l’abri de la pluie et du soleil direct."
+     ]
+    },
+    {
+     "id": "C07-05",
+     "from": [
+      "Formats et revêtements"
+     ],
+     "to": []
+    },
+    {
+     "id": "C07-06",
+     "from": [
+      "La table Napoleon Keramik Outdoor existe en cinq décors de céramique, rectangulaire, ovale ou aux angles adoucis, de 200 à 320 cm de long. La chaise Greta Outdoor reçoit un tissu Outdoor, en vingt coloris."
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "families",
+   "slug": "tables-basses",
+   "rules": [
+    {
+     "id": "C01-12",
+     "from": [
+      "Céramique, noyer et chêne, bois laqué brossé ou verre artistique, à composer par deux ou trois."
+     ],
+     "to": [
+      "Tables en céramique, en bois ou en verre. Les versions Arena Bond et Double Bond ont des plateaux pivotants."
+     ]
+    },
+    {
+     "id": "C08-03",
+     "from": [
+      "Arena dans un salon."
+     ],
+     "to": [
+      "Table basse Arena."
+     ]
+    },
+    {
+     "id": "C08-05",
+     "from": [
+      "Une table basse se place à la hauteur de l’assise ou juste en dessous, à 40 ou 45 cm du canapé. Albert Keramik et Adrian Wood existent chacune en trois hauteurs, entre 28 et 54 cm : deux ou trois tables de hauteurs différentes, rapprochées, donnent plus de surface qu’une seule."
+     ],
+     "to": [
+      "Comparez la hauteur d’une table basse à celle de l’assise du canapé ; pour une table d’appoint, prenez aussi celle de l’accoudoir. Albert Keramik et Adrian Wood existent en trois hauteurs."
+     ]
+    },
+    {
+     "id": "C08-06",
+     "from": [
+      "Taille du plateau"
+     ],
+     "to": [
+      "Dimensions et passage"
+     ]
+    },
+    {
+     "id": "C08-07",
+     "from": [
+      "Visez environ les deux tiers de la longueur du canapé. Devant un canapé d’angle, une composition de plateaux ronds suit mieux la forme qu’un seul rectangle."
+     ],
+     "to": [
+      "Marquez au sol le contour des plateaux dans la disposition prévue. Vérifiez que vous pouvez vous asseoir, vous relever et traverser le salon."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "families",
+   "slug": "consoles-miroirs",
+   "rules": [
+    {
+     "id": "C01-13",
+     "from": [
+      "Consoles de 38 à 50 cm de profondeur et miroirs aux bords courbés, pour composer une entrée."
+     ],
+     "to": [
+      "Consoles de 38 à 50 cm de profondeur. Miroirs Cosmos et Glenn aux bords courbés."
+     ]
+    },
+    {
+     "id": "C09-03",
+     "from": [
+      "Nettuno sous un miroir."
+     ],
+     "to": [
+      "Console Nettuno."
+     ]
+    },
+    {
+     "id": "C09-04",
+     "from": [
+      "Le miroir au-dessus de la console"
+     ],
+     "to": [
+      "Position du miroir"
+     ]
+    },
+    {
+     "id": "C09-05",
+     "from": [
+      "Choisissez un miroir un peu moins large que la console et accrochez-le 15 à 25 cm au-dessus du plateau. Une forme ronde, comme Cosmos, adoucit une console graphique comme Westin."
+     ],
+     "to": [
+      "Découpez un gabarit en papier aux dimensions du miroir et placez-le au mur pour vérifier sa position. Tenez compte des interrupteurs et des objets prévus sur la console."
+     ]
+    },
+    {
+     "id": "C09-07",
+     "from": [
+      "Ces consoles mesurent 38 à 50 cm de profondeur et se fixent au mur. Dans une entrée étroite, Rado Keramik, profonde de 38 cm, laisse le plus de passage."
+     ],
+     "to": [
+      "Ces consoles mesurent de 38 à 50 cm de profondeur et nécessitent une fixation murale. Rado Keramik est la moins profonde des trois, avec 38 cm."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "families",
+   "slug": "tables",
+   "rules": [
+    {
+     "id": "C02-04",
+     "from": [
+      "Comptez 60 cm de plateau par convive. Une table ronde de 140 cm reçoit six personnes, une table de 180 cm huit à dix. En rectangle, 240 cm accueillent huit à dix personnes et 300 cm dix à douze. Gardez 90 cm de passage derrière les chaises occupées."
+     ],
+     "to": [
+      "Prévoyez environ 60 cm de plateau par personne, puis vérifiez la largeur des chaises et la place laissée par le piètement. Mesurez le passage derrière les chaises occupées."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "families",
+   "slug": "canapes-fauteuils",
+   "rules": [
+    {
+     "id": "C04-03",
+     "from": [
+      "Les mesures du salon"
+     ],
+     "to": [
+      "Dimensions et circulation"
+     ]
+    },
+    {
+     "id": "C04-04",
+     "from": [
+      "Mesurez la pièce avant de choisir les modules : gardez 80 à 90 cm de passage autour du salon et 40 à 45 cm entre le canapé et la table basse. Le conseiller établit avec vous la composition à partir de ces mesures."
+     ],
+     "to": [
+      "Reportez sur un plan à l’échelle les modules du canapé, les fauteuils et la table basse. Vérifiez l’ouverture des portes et les passages autour des assises."
+     ]
+    },
+    {
+     "id": "C04-05",
+     "from": [
+      "Les tissus sont rangés en catégories, de T10 à T90 ; leurs housses se retirent sur Craig, Douglas, Mykonos et Sinatra. Les cuirs se choisissent dans les gammes Glove, Magnifica, Nabuk et Perfetto. Apportez au showroom un échantillon de votre sol ou de vos rideaux pour comparer."
+     ],
+     "to": [
+      "Craig, Douglas, Mykonos et Sinatra sont proposés en tissu déhoussable. Pour l’entretien, suivez la notice du revêtement : une housse amovible n’est pas nécessairement lavable en machine."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "families",
+   "slug": "buffets-bibliotheques",
+   "rules": [
+    {
+     "id": "C05-03",
+     "from": [
+      "Un buffet de salle à manger mesure 45 à 55 cm de profondeur : Chelsea et Amsterdam 46 cm, Kayak 53 cm. Laissez 90 cm devant les portes ouvertes."
+     ],
+     "to": [
+      "Chelsea et Amsterdam mesurent 46 cm de profondeur ; Kayak, 53 cm. Vérifiez l’encombrement portes ouvertes et le passage devant le meuble."
+     ]
+    },
+    {
+     "id": "C05-04",
+     "from": [
+      "Fermé ou ouvert"
+     ],
+     "to": []
+    },
+    {
+     "id": "C05-05",
+     "from": [
+      "Un buffet à portes garde la vaisselle à l’abri ; une bibliothèque ouverte expose livres et objets. Nautilus, profonde de 26 cm, se compose par modules de 100 cm, juxtaposés ou superposés, et se fixe au mur ou reçoit un lest."
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "posts",
+   "slug": "choisir-buffet-bibliotheque-salon",
+   "rules": [
+    {
+     "id": "J04",
+     "from": [
+      "Buffet ou bibliothèque : quel rangement choisir pour le salon ?"
+     ],
+     "to": [
+      "Buffet ou bibliothèque pour le salon ?"
+     ]
+    },
+    {
+     "id": "J06",
+     "from": [
+      "Fermé ou ouvert"
+     ],
+     "to": [
+      "Rangement fermé et étagères ouvertes"
+     ]
+    },
+    {
+     "id": "J07",
+     "from": [
+      "Un buffet garde à l’abri la vaisselle, les nappes et ce que l’on ne veut pas voir ; une bibliothèque montre les livres et les objets."
+     ],
+     "to": [
+      "Relevez les dimensions de la vaisselle, des grands livres et des objets à ranger. Comparez-les à la hauteur et à la profondeur utiles des étagères. Pour départager un buffet et une bibliothèque, distinguez ce que vous voulez garder dans un meuble fermé de ce que vous souhaitez exposer."
+     ]
+    },
+    {
+     "id": "J08",
+     "from": [
+      "Le buffet : profondeur et dégagement"
+     ],
+     "to": [
+      "Buffets : dimensions et ouverture des portes"
+     ]
+    },
+    {
+     "id": "J09",
+     "from": [
+      "Un buffet de salle à manger mesure 45 à 55 cm de profondeur : Chelsea et Amsterdam 46 cm, Kayak 53 cm. Laissez 90 cm devant pour ouvrir les portes et se baisser. Chelsea existe en trois hauteurs, 50, 75 et 100 cm, et de 137,5 à 248 cm de long ; Amsterdam en deux, trois ou quatre portes, jusqu’à 294 cm ; Kayak en deux ou trois portes, 147 ou 220 cm."
+     ],
+     "to": [
+      "Chelsea et Amsterdam mesurent 46 cm de profondeur ; Kayak, 53 cm. Prévoyez devant le meuble l’espace nécessaire pour ouvrir complètement les portes et accéder aux étagères tout en conservant le passage."
+     ]
+    },
+    {
+     "id": "J09",
+     "from": [
+      "À l’intérieur, des étagères en verre ; Kayak et Amsterdam peuvent recevoir un tiroir intérieur pour les couverts. Le plateau en verre miroité bronze de Chelsea ou d’Amsterdam reflète la lumière d’une suspension au-dessus."
+     ],
+     "to": [
+      "Chelsea existe en trois hauteurs, 50, 75 et 100 cm, et dans des longueurs de 137,5 à 248 cm. Amsterdam se décline en deux, trois ou quatre portes, jusqu’à 294 cm ; Kayak, en deux ou trois portes, de 147 ou 220 cm. Les étagères sont en verre. Kayak et Amsterdam peuvent recevoir un tiroir intérieur pour les couverts."
+     ]
+    },
+    {
+     "id": "J10",
+     "from": [
+      "La bibliothèque : 26 à 29 cm de profondeur"
+     ],
+     "to": [
+      "Bibliothèques : profondeur et fixation"
+     ]
+    },
+    {
+     "id": "J11",
+     "from": [
+      "Une bibliothèque n’a pas besoin de la profondeur d’un buffet : la plupart des livres font 15 à 24 cm. Nautilus mesure 26 cm de profondeur, Airport 29 cm : elles prennent peu de place devant un mur."
+     ],
+     "to": [
+      "Nautilus mesure 26 cm de profondeur ; Airport, 29 cm. Vérifiez aussi la profondeur utile des étagères pour vos plus grands livres et objets."
+     ]
+    },
+    {
+     "id": "J11",
+     "from": [
+      "Nautilus se compose de modules en acier de 100 × 100 cm, juxtaposés ou superposés jusqu’à 200 cm de haut ; elle se fixe au mur ou reçoit un lest. Airport se fixe au mur ou au plafond, de 60 à 310 cm de long : elle peut séparer un salon d’une salle à manger sans fermer la pièce."
+     ],
+     "to": [
+      "Nautilus se compose de modules en acier de 100 × 100 cm, à juxtaposer ou à superposer. Elle se fixe au mur ou reçoit un lest selon la configuration. Airport propose des fixations au mur ou au plafond et des longueurs de 60 à 310 cm."
+     ]
+    },
+    {
+     "id": "J13",
+     "from": [
+      "Placez le buffet près de la table, là où l’on sert : sur le mur le plus long de la salle à manger, sous un miroir ou un tableau. La bibliothèque trouve sa place dans le salon, sur un mur sans passage, ou comme séparation entre deux espaces."
+     ],
+     "to": [
+      "Un buffet près de la table facilite le service, à condition que ses portes puissent s’ouvrir et que les chaises puissent être reculées. Une bibliothèque peut occuper un mur ou séparer deux espaces, si le modèle et sa fixation permettent cette implantation. Dans les deux cas, vérifiez le passage autour du meuble."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "posts",
+   "slug": "composer-salon-canape-fauteuil",
+   "rules": [
+    {
+     "id": "J17",
+     "from": [
+      "Laissez 80 à 90 cm de passage autour du salon et 40 à 45 cm entre le canapé et la table basse : assez pour poser un verre sans se lever, et pour passer les jambes. Dessinez le plan avec les portes, les fenêtres et l’arrivée de la télévision : c’est ce plan qui décide de la longueur du canapé."
+     ],
+     "to": [
+      "Dessinez le plan avec les portes, les fenêtres et l’emplacement de la télévision si elle fait partie du salon. Reportez la longueur et la profondeur de chaque assise. Pour un premier tracé, les repères de 80 à 90 cm de passage et de 40 à 45 cm entre le canapé et la table basse doivent être adaptés aux meubles choisis. Testez ensuite le recul nécessaire pour vous asseoir, vous relever et parcourir les accès habituels."
+     ]
+    },
+    {
+     "id": "JNEW04",
+     "from": [
+      "Droit, d’angle ou composable"
+     ],
+     "to": [
+      "Canapés droits et compositions modulaires"
+     ]
+    },
+    {
+     "id": "JNEW05",
+     "from": [
+      "Continuité ou contraste"
+     ],
+     "to": [
+      "Fauteuil assorti ou différent"
+     ]
+    },
+    {
+     "id": "J18",
+     "from": [
+      "Le fauteuil peut prolonger le canapé : Ruby Lounge, 81 cm de large, reprend la structure en frêne de Ruby. Il peut aussi s’en distinguer, dans un autre revêtement ou une autre couleur. Tourné vers le canapé, il sert à la conversation ; près d’une fenêtre ou d’une lampe, à la lecture."
+     ],
+     "to": [
+      "Le fauteuil Ruby Lounge mesure 81 cm de large et reprend la structure en frêne du canapé Ruby. Les deux peuvent être associés avec des revêtements ou des couleurs différents."
+     ]
+    },
+    {
+     "id": "J19",
+     "from": [
+      "Les tissus sont classés de T10 à T90 ; en version tissu, les housses de Craig, Douglas, Mykonos et Sinatra se retirent pour le nettoyage. Les cuirs se choisissent dans les gammes Glove, Magnifica, Nabuk et Perfetto. Apportez au showroom une photo de votre sol et de vos rideaux pour comparer."
+     ],
+     "to": [
+      "Craig, Douglas, Mykonos et Sinatra sont proposés en tissu déhoussable. Les gammes de cuir comprennent Glove, Magnifica, Nabuk et Perfetto. Comparez leurs teintes avec un échantillon du sol ou des rideaux. Une photo permet de situer les meubles dans la pièce, mais ne restitue pas les couleurs avec exactitude."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "posts",
+   "slug": "ceramique-verre-bois-choisir-finition-meuble",
+   "rules": [
+    {
+     "id": "J26",
+     "from": [
+      "Un plateau en verre montre le dessin de la base, comme les lignes obliques de Skorpio ou le ruban d’acier de Butterfly. Il fait 12 mm d’épaisseur sur les consoles Westin et Nettuno, 15 mm sur les tables Butterfly. Le verre extra-clair n’a pas le reflet vert du verre clair. Le verre cuit MIST a une surface texturée."
+     ],
+     "to": [
+      "Le verre transparent laisse voir les lignes obliques de Skorpio ou la base en ruban d’acier de Butterfly. Les plateaux en verre de Westin et Nettuno mesurent 12 mm d’épaisseur ; celui de Butterfly, 15 mm. Le verre MIST présente une surface texturée. Le verre miroité est utilisé pour les plateaux de Chelsea et d’Amsterdam, ainsi que pour les miroirs Cosmos et Glenn."
+     ]
+    },
+    {
+     "id": "J26",
+     "from": [
+      "Le verre miroité, fumé ou bronze, sert de plateau aux buffets Chelsea et Amsterdam et compose les miroirs Cosmos et Glenn."
+     ],
+     "to": []
+    },
+    {
+     "id": "J28",
+     "from": [
+      "Noyer Canaletto, brun chaud, ou chêne brûlé, presque noir : ce sont les deux bois des tables Botero Wood et des tables basses Adrian Wood. Le bois se protège d’un dessous de plat et d’un sous-verre. Les finitions Brushed, bronze ou grise, sont brossées à la main : leurs nuances varient d’une pièce à l’autre."
+     ],
+     "to": [
+      "Botero Wood Round est proposé en noyer Canaletto ou en chêne brûlé. Adrian Wood associe les deux essences sur un même plateau. Protégez les plateaux avec des sous-verres et un dessous de plat."
+     ]
+    },
+    {
+     "id": "J30",
+     "from": [
+      "Une finition se juge à côté de votre sol et à la lumière de votre pièce. Apportez au showroom une photo prise en journée, un échantillon de rideau ou de carrelage : le conseiller place les échantillons à côté pour comparer."
+     ],
+     "to": [
+      "Apportez un échantillon de rideau, de peinture ou de carrelage pour comparer les matières côte à côte. Une photo prise en journée aide à comprendre la pièce, mais ne restitue pas les couleurs avec exactitude. Comparez aussi les teintes à la lumière du jour et sous l’éclairage prévu chez vous."
+     ]
+    },
+    {
+     "id": "J31",
+     "from": [
+      "Les neuf tables en verre, céramique, bois ou argile, avec toutes leurs finitions."
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "posts",
+   "slug": "associer-table-chaises-salle-a-manger",
+   "rules": [
+    {
+     "id": "J34",
+     "from": [
+      "Un seul élément très dessiné"
+     ],
+     "to": [
+      "Le dessin de la table et des chaises"
+     ]
+    },
+    {
+     "id": "J35",
+     "from": [
+      "Décidez lequel des deux se remarque : la table ou les chaises. Sous un piètement très dessiné, comme le X de Tyron Keramik ou la base galbée de Botero, prenez des chaises aux lignes simples. Autour d’une table plus sobre, ce sont les chaises qui se remarquent : Rhonda, par exemple, au dossier plissé à l’intérieur."
+     ],
+     "to": [
+      "Des chaises aux lignes simples laissent le piètement de Tyron Keramik ou la base de Botero bien visible. Avec une table plus sobre, le dossier plissé de Rhonda peut attirer davantage le regard."
+     ]
+    },
+    {
+     "id": "J36",
+     "from": [
+      "Inutile de tout assortir : une seule finition en commun suffit. La plus simple est la laque du métal. Titane, bronze, graphite et noir gaufrés existent à la fois sur la base de Tyron Keramik et sur la structure de Greta ; Rhonda reçoit les mêmes laques ou un chrome. Avec le même bronze sous la table et sur les pieds des chaises, le plateau et le revêtement peuvent rester différents."
+     ],
+     "to": [
+      "Une finition commune peut relier la table et les chaises. La laque des pieds est un point de départ lorsque les deux modèles la proposent. Titane, bronze, graphite et noir gaufrés existent à la fois sur la base de Tyron Keramik et sur la structure de Greta ; Rhonda reçoit les mêmes laques ou un chrome."
+     ]
+    },
+    {
+     "id": "J38",
+     "from": [
+      "Largeur des chaises et accoudoirs"
+     ],
+     "to": [
+      "Largeur des chaises et hauteur des accoudoirs"
+     ]
+    },
+    {
+     "id": "J39",
+     "from": [
+      "Une chaise à accoudoirs occupe 62 à 64 cm de large : Greta 62 cm, Rhonda 63 cm, Zuleika 64 cm. Comptez 65 à 70 cm par place au lieu de 60, ou réservez les accoudoirs aux bouts de table. Vérifiez sur la fiche technique que les accoudoirs passent sous le plateau : sinon, les chaises restent écartées de la table et occupent la pièce."
+     ],
+     "to": [
+      "Greta mesure 62 cm de large, Rhonda 63 cm et Zuleika 64 cm. Pour répartir les places, tenez compte de la largeur des chaises et de la position des pieds de la table. Vérifiez également la hauteur des accoudoirs par rapport à l’espace libre sous le plateau et ses éventuelles traverses. Une chaise peut convenir en hauteur d’assise sans pouvoir être entièrement rangée sous la table."
+     ]
+    },
+    {
+     "id": "J39",
+     "from": [
+      "L’assise se place 27 à 29 cm sous le plateau : 46 ou 47 cm pour une table de 74 à 75 cm."
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "posts",
+   "slug": "choisir-forme-proportions-table-salle-a-manger",
+   "rules": [
+    {
+     "id": "J42",
+     "from": [
+      "Quelle forme et quelles dimensions pour une table de salle à manger ?"
+     ],
+     "to": [
+      "Table de salle à manger : quelle forme et quelle taille ?"
+     ]
+    },
+    {
+     "id": "J44",
+     "from": [
+      "90 cm de passage, 60 cm par convive"
+     ],
+     "to": [
+      "Dimensions de la pièce et circulation"
+     ]
+    },
+    {
+     "id": "J45",
+     "from": [
+      "Mesurez la pièce, puis retirez 90 cm de chaque côté où l’on s’assoit : c’est la place qu’il faut pour reculer une chaise et passer derrière quelqu’un d’assis. Dans une salle à manger de 4 × 3,5 m, il reste environ 220 × 170 cm : une table de 200 à 220 cm sur 100 à 120 cm y trouve sa place."
+     ],
+     "to": [
+      "Dans une pièce vide de 4 × 3,5 m, réserver 90 cm sur les quatre côtés laisse un rectangle de 220 × 170 cm. Ce calcul sert à dessiner un premier aménagement ; il faut encore tenir compte des portes, des autres meubles et des chaises choisies. Testez le passage derrière une chaise occupée sur le plan, puis sur place. Le nombre de couverts dépend de la largeur des chaises, de la forme du plateau et du piètement. Prenez vos repas habituels comme point de départ, puis examinez les besoins occasionnels."
+     ]
+    },
+    {
+     "id": "J45",
+     "from": [
+      "Comptez ensuite 60 cm de plateau par convive, 65 à 70 cm avec des chaises à accoudoirs. Une table de 240 cm reçoit huit à dix personnes, une table de 300 cm dix à douze. Dimensionnez pour vos repas habituels plus deux couverts, pas pour la plus grande réception de l’année."
+     ],
+     "to": []
+    },
+    {
+     "id": "J46",
+     "from": [
+      "Ronde, carrée, rectangulaire ou adoucie"
+     ],
+     "to": [
+      "Formes du plateau"
+     ]
+    },
+    {
+     "id": "J47",
+     "from": [
+      "Autour d’une table ronde, chaque convive voit tous les autres : 140 cm pour six personnes, 180 cm pour huit à dix, comme Botero. La table carrée a le même avantage dans une pièce carrée : Skorpio existe en 150 × 150 cm pour huit personnes et en 200 × 200 cm pour douze."
+     ],
+     "to": [
+      "Une table ronde répartit les convives autour du centre ; la distance entre eux augmente avec le diamètre. Une table carrée peut convenir à une pièce aux proportions proches, tandis qu’un rectangle accompagne une pièce allongée. À longueur et largeur égales, un plateau ovale réduit l’encombrement aux angles."
+     ]
+    },
+    {
+     "id": "J47",
+     "from": [
+      "Au-delà de dix convives, il faut un rectangle ou un grand carré. Les angles adoucis, ovales ou en biscuit, comme sur Napoleon Keramik et Tyron Keramik, facilitent le passage autour du plateau : Napoleon Keramik en ovale de 300 × 150 cm reçoit quatorze personnes."
+     ],
+     "to": [
+      "Skorpio existe notamment en formats carrés de 150 × 150 et 200 × 200 cm. Napoleon Keramik propose un plateau ovale de 300 × 150 cm. Pour chaque format, le nombre de places dépend aussi des chaises et du piètement."
+     ]
+    },
+    {
+     "id": "J52",
+     "from": [
+      "Les neuf tables, avec leurs formats, le nombre de places et leur fiche technique."
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "butterfly",
+   "rules": [
+    {
+     "id": "A03-01",
+     "from": [
+      "Une lame d’acier pliée et croisée comme un ruban, visible sous un plateau en verre de 15 mm. 240 ou 300 cm, rectangulaire ou aux angles adoucis."
+     ],
+     "to": [
+      "Une lame d’acier se plie et se croise comme un ruban sous un plateau en verre de 15 mm. Butterfly mesure 240 ou 300 cm de long, avec un plateau rectangulaire ou aux angles adoucis."
+     ]
+    },
+    {
+     "id": "A03-03",
+     "from": [
+      "Butterfly repose sur une base en acier qui se plie et se croise comme un ruban. Elle existe en titane ou bronze gaufré, Brushed Bronze ou Brushed Grey ; la finition Brushed est brossée à la main, ses nuances varient d’une pièce à l’autre."
+     ],
+     "to": [
+      "Les finitions Brushed Bronze et Brushed Grey du piètement sont brossées à la main. Leurs nuances varient d’une pièce à l’autre."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "butterfly-keramik",
+   "rules": [
+    {
+     "id": "A04-01",
+     "from": [
+      "Le ruban d’acier de Butterfly sous un plateau en céramique, en 19 décors. 240 ou 300 cm de long."
+     ],
+     "to": [
+      "Le piètement de Butterfly, en acier plié comme un ruban, porte un plateau en céramique. Le plateau mesure 240 ou 300 cm de long, avec une forme rectangulaire ou des angles adoucis."
+     ]
+    },
+    {
+     "id": "A04-03",
+     "from": [
+      "Butterfly Keramik reprend la base en ruban d’acier de Butterfly, en titane ou bronze gaufré, Brushed Bronze ou Brushed Grey."
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "tyron-keramik",
+   "rules": [
+    {
+     "id": "C02-07",
+     "from": [
+      "Un piètement en X en acier sous un plateau en céramique, en 19 décors. Rectangulaire, aux angles adoucis, biscuit ou boomerang, jusqu’à 300 cm."
+     ],
+     "to": [
+      "Un piètement en X en acier sous un plateau en céramique. Plateaux rectangulaires, aux angles adoucis, ou de forme Biscuit ou Boomerang, jusqu’à 300 cm."
+     ]
+    },
+    {
+     "id": "A05-03",
+     "from": [
+      "Tyron Keramik pose un plateau en céramique sur une base en acier en forme de X. La base existe en titane, bronze, graphite ou noir gaufré, Brushed Bronze ou Brushed Grey."
+     ],
+     "to": [
+      "Le piètement en acier existe en titane, bronze, graphite ou noir gaufré, Brushed Bronze ou Brushed Grey."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "botero-argile",
+   "rules": [
+    {
+     "id": "A06-01",
+     "from": [
+      "Une base galbée et un plateau rond revêtus d’argile spatulée, en Cairo, Oslo ou Marrakech. De 140 à 180 cm de diamètre."
+     ],
+     "to": [
+      "Le plateau rond et le piètement galbé de Botero Argile sont revêtus d’argile appliquée à la spatule, en Cairo, Oslo ou Marrakech. De 140 à 180 cm de diamètre."
+     ]
+    },
+    {
+     "id": "A06-03",
+     "from": [
+      "La base galbée est en polymère, revêtue d’argile appliquée à la spatule ; le plateau en MDF reçoit la même finition, en Cairo, Oslo ou Marrakech."
+     ],
+     "to": [
+      "Le piètement est en polymère et le plateau en MDF."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "botero-wood-round",
+   "rules": [
+    {
+     "id": "A07-01",
+     "from": [
+      "La base galbée de Botero, revêtue d’argile, sous un plateau rond en noyer Canaletto ou chêne brûlé. 140, 160 ou 180 cm de diamètre."
+     ],
+     "to": [
+      "Un plateau rond en noyer Canaletto ou en chêne brûlé repose sur le piètement galbé de Botero, revêtu d’argile. Trois diamètres sont proposés : 140, 160 et 180 cm."
+     ]
+    },
+    {
+     "id": "A07-03",
+     "from": [
+      "La base de Botero, en polymère spatulé en argile Cairo, Oslo ou Marrakech, porte ici un plateau en bois : noyer Canaletto ou chêne brûlé."
+     ],
+     "to": [
+      "Le piètement en polymère reçoit un revêtement d’argile appliqué à la spatule, en Cairo, Oslo ou Marrakech."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "botero-keramik-round",
+   "rules": [
+    {
+     "id": "A08-01",
+     "from": [
+      "La base galbée de Botero, revêtue d’argile, sous un plateau rond en céramique, en 15 décors. De 100 à 158 cm de diamètre."
+     ],
+     "to": [
+      "Un plateau rond en céramique, en 15 décors, repose sur le piètement galbé de Botero, revêtu d’argile. Quatre diamètres, de 100 à 158 cm."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "botero-ker-wood-round",
+   "rules": [
+    {
+     "id": "A09-02",
+     "from": [
+      "Le plateau de Botero Ker-Wood Round, en noyer Canaletto ou chêne brûlé, est serti d’un disque central en céramique, en seize décors. Les inserts sont en chrome noir."
+     ],
+     "to": [
+      "Le plateau est proposé en noyer Canaletto ou en chêne brûlé, avec des inserts en chrome noir. Son disque central en céramique existe en seize décors."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "rhonda",
+   "rules": [
+    {
+     "id": "PAN01",
+     "from": [
+      "Pieds chromés ou laqués titane, bronze, graphite, pearl ou noir. Revêtement en tissu, micro-nubuck, cuir mince ou similicuir, plus de cent teintes ; il n’est pas déhoussable. Rhonda existe aussi en versions bois, cantilever, pivotante, à roulettes, lounge et tabouret."
+     ],
+     "to": [
+      "Le revêtement est proposé en tissu, micro-nubuck, cuir mince ou similicuir. Il n’est pas déhoussable.",
+      "Rhonda existe aussi avec un piètement en bois ou en porte-à-faux. La famille comprend des versions pivotantes, à roulettes, lounge et tabouret."
+     ]
+    },
+    {
+     "id": "PAN04",
+     "from": [
+      "Chaise"
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "greta",
+   "rules": [
+    {
+     "id": "PAN02",
+     "from": [
+      "Structure en acier laqué titane, bronze, graphite, pearl ou noir. Revêtement en tissu, cuir, micro-nubuck ou similicuir, non déhoussable. Greta existe aussi en versions bois, lounge, tabouret et Outdoor."
+     ],
+     "to": [
+      "Le revêtement est proposé en tissu, cuir, micro-nubuck ou similicuir. Il n’est pas déhoussable.",
+      "Greta existe aussi avec un piètement en bois, en versions lounge et tabouret, ainsi que dans une version pour l’extérieur."
+     ]
+    },
+    {
+     "id": "PAN05",
+     "from": [
+      "Chaise"
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "miranda-ml",
+   "rules": [
+    {
+     "id": "B03-03",
+     "from": [
+      "Le piètement en acier est chromé ou laqué gaufré : titane, bronze, graphite, pearl ou noir."
+     ],
+     "to": []
+    },
+    {
+     "id": "PAN03",
+     "from": [
+      "Le revêtement se choisit en tissu, micro-nubuck, cuir mince ou similicuir, parmi plus de cent teintes. Il n’est pas déhoussable."
+     ],
+     "to": [
+      "Le revêtement est proposé en tissu, micro-nubuck, cuir mince ou similicuir. Il n’est pas déhoussable."
+     ]
+    },
+    {
+     "id": "PAN06",
+     "from": [
+      "Chaise"
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "zuleika",
+   "rules": [
+    {
+     "id": "B04-01",
+     "from": [
+      "Habillée de cuir, coutures et profils ton sur ton, sur une structure en acier. Assise à 46 cm."
+     ],
+     "to": [
+      "Habillée de cuir, coutures et profils ton sur ton, sur une structure en acier. Assise à 46 cm, cuir en 21 teintes."
+     ]
+    },
+    {
+     "id": "B04-03",
+     "from": [
+      "Le cuir se choisit parmi vingt et une teintes, du blanc au castor."
+     ],
+     "to": []
+    },
+    {
+     "id": "PAN07",
+     "from": [
+      "Chaise"
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "ruby",
+   "rules": [
+    {
+     "id": "C04-06",
+     "from": [
+      "Une structure apparente en frêne teinté noyer Canaletto ou chêne brûlé, sur 200 cm de long. Le fauteuil Ruby Lounge reprend la même structure."
+     ],
+     "to": [
+      "Un canapé de 200 cm avec une structure apparente en frêne, teintée noyer Canaletto ou chêne brûlé. Le fauteuil Ruby Lounge reprend la même structure."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "douglas",
+   "rules": [
+    {
+     "id": "C04-07",
+     "from": [
+      "Des pieds en métal, en deux hauteurs, qui laissent le sol visible sous le canapé. Droit ou d’angle, coussins de dossier en plumes, tissu déhoussable ou cuir."
+     ],
+     "to": [
+      "Des pieds en métal proposés en deux hauteurs. Compositions droites ou d’angle, coussins de dossier en plumes, tissu déhoussable ou cuir."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "chelsea",
+   "rules": [
+    {
+     "id": "B11-02",
+     "from": [
+      "Des façades polygonales laquées titane, Paprika ou Mint, sous un plateau en verre miroir bronze ou en céramique. Huit formats, de 137,5 à 248 cm."
+     ],
+     "to": [
+      "Un buffet aux façades polygonales, proposé en huit formats de 137,5 à 248 cm."
+     ]
+    },
+    {
+     "id": "PBN02",
+     "from": [
+      "Huit formats, de 137,5 à 248 cm de long et de 50 à 100 cm de haut, pour 46 cm de profondeur. Étagères intérieures en verre clair. Les versions B ajoutent un piètement en acier chromé ou graphite."
+     ],
+     "to": [
+      "Les étagères intérieures sont en verre clair. Les versions B reposent sur un piètement en acier chromé ou graphite."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "airport",
+   "rules": [
+    {
+     "id": "PBN03",
+     "from": [
+      "Montants en acier titane, bronze, graphite, blanc ou noir ; étagères et caissons en graphite, blanc, noyer Canaletto, chêne brûlé, Brushed Bronze ou Brushed Grey. Nous proposons une composition à partir des mesures du mur."
+     ],
+     "to": [
+      "Les montants en acier sont proposés en titane, bronze, graphite, blanc ou noir. Les étagères et caissons existent en graphite, blanc, noyer Canaletto, chêne brûlé, Brushed Bronze ou Brushed Grey. Nous proposons une composition à partir des mesures du mur."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "kayak",
+   "rules": [
+    {
+     "id": "B13-02",
+     "from": [
+      "Des portes taillées en facettes, laquées titane ou en finition Brushed brossée à la main. 147 cm à deux portes ou 220 cm à trois portes."
+     ],
+     "to": [
+      "Un buffet aux portes à facettes, de 147 cm à deux portes ou de 220 cm à trois portes."
+     ]
+    },
+    {
+     "id": "B13-04",
+     "from": [
+      "La structure en bois laqué est titane, Brushed Bronze ou Brushed Grey ; la finition Brushed est brossée à la main."
+     ],
+     "to": [
+      "La structure en bois laqué est proposée en titane, Brushed Bronze ou Brushed Grey. Les finitions Brushed sont brossées à la main."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "amsterdam",
+   "rules": [
+    {
+     "id": "B14-02",
+     "from": [
+      "Des portes laquées Oxybrass à inserts en chêne brûlé, sous un plateau en verre miroité bronze. Deux, trois ou quatre portes, jusqu’à 294 cm."
+     ],
+     "to": [
+      "Ce buffet associe des portes laquées Oxybrass et des inserts en chêne brûlé. Il existe avec deux, trois ou quatre portes, jusqu’à 294 cm de long."
+     ]
+    },
+    {
+     "id": "B14-04",
+     "from": [
+      "La structure est elle aussi laquée Oxybrass ; le plateau est en verre miroité bronze, les pieds en acier gaufré bronze."
+     ],
+     "to": [
+      "La structure est laquée Oxybrass. Le plateau est en verre miroir bronze et les pieds sont en acier à finition gaufrée bronze."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "nautilus",
+   "rules": [
+    {
+     "id": "C05-06",
+     "from": [
+      "Des modules en acier gaufré de 100 × 100 cm à aligner ou à empiler, sur 26 cm de profondeur. Titane, bronze, graphite ou pearl."
+     ],
+     "to": [
+      "Des modules en acier gaufré de 100 × 100 cm, à juxtaposer ou superposer, sur 26 cm de profondeur. Finitions Titane, Bronze, Graphite ou Pearl. Installation avec fixation murale ou lestage selon la configuration."
+     ]
+    },
+    {
+     "id": "PBN05",
+     "from": [
+      "La bibliothèque se fixe au mur, sauf si elle reçoit le lest proposé en option. Profondeur : 26 cm."
+     ],
+     "to": [
+      "La bibliothèque se fixe au mur, sauf si elle reçoit le lest proposé en option."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "paris",
+   "rules": [
+    {
+     "id": "C02-01-2",
+     "from": [
+      "Un globe en verre artistique décoré fumé-Bianco, éclairé par LED, de 25 ou 33 cm de diamètre, en suspension seule ou en composition de deux à six."
+     ],
+     "to": [
+      "Un globe en verre artistique, éclairé par LED, de 25 ou 33 cm de diamètre. En suspension unique ou en composition de deux à six luminaires."
+     ]
+    },
+    {
+     "id": "C02-02-2",
+     "from": [
+      "Elle se fixe au plafond par une platine en acier chromé noir."
+     ],
+     "to": [
+      "Le globe en verre décoré est proposé en finition « Fumé et blanc ». La platine de plafond est en acier chromé noir."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "aladdin",
+   "rules": [
+    {
+     "id": "C06-08",
+     "from": [
+      "Un globe en verre artistique décoré, fumé-Bianco ou « Balloton » fumé, éclairé par LED. En suspension seule ou en composition de deux à six, au-dessus d’une table."
+     ],
+     "to": [
+      "Une suspension à LED en verre artistique, en finition fumé et blanc ou Balloton fumé à losanges en relief. Seule ou en composition de deux à six diffuseurs."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "greta-outdoor",
+   "rules": [
+    {
+     "id": "C06-01-2",
+     "from": [
+      "La chaise Greta en acier inoxydable 304 laqué et tissu Outdoor, en 20 coloris, pour une terrasse ou une véranda couverte."
+     ],
+     "to": [
+      "Une chaise en acier inoxydable 304 laqué gaufré et tissu Outdoor, en 20 coloris, pour les terrasses couvertes."
+     ]
+    },
+    {
+     "id": "C06-02-2",
+     "from": [
+      "Greta Outdoor reprend la forme de Greta, 62 × 62 cm, 78 cm de haut, sur une structure en acier inoxydable 304 laqué titane, bronze, graphite, pearl ou noir."
+     ],
+     "to": []
+    },
+    {
+     "id": "PCN07",
+     "from": [
+      "Revêtement en tissu Outdoor, vingt coloris, non déhoussable. Usage extérieur couvert uniquement."
+     ],
+     "to": [
+      "Le revêtement n’est pas déhoussable. Usage extérieur couvert uniquement."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "napoleon-keramik-outdoor",
+   "rules": [
+    {
+     "id": "PCN06",
+     "from": [
+      "Cinq décors Marmi : Portoro, Borghini Calacatta, Colosseo, Invisible et Taj Mahal. Usage extérieur couvert uniquement : la table doit rester à l’abri de la pluie et du soleil direct."
+     ],
+     "to": [
+      "Usage extérieur couvert uniquement : la table doit rester à l’abri de la pluie et du soleil direct."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "arena",
+   "rules": [
+    {
+     "id": "C08-08",
+     "from": [
+      "Un plateau rond en bois laqué, en finition Brushed brossée à la main ; les versions Bond et Double Bond y ajoutent un ou deux plateaux pivotants en verre."
+     ],
+     "to": [
+      "Un plateau rond en bois laqué, en finition Brushed brossée à la main. Les versions Bond et Double Bond ajoutent un ou deux plateaux pivotants en verre."
+     ]
+    },
+    {
+     "id": "PCN10",
+     "from": [
+      "Dans les versions Bond et Double Bond, une ou deux petites tables à plateau en verre biseauté, fumé ou bronze, pivotent au-dessus du plateau principal. La composition mesure alors de 158 à 188 cm de long avec Bond, de 196 à 256 cm avec Double Bond."
+     ],
+     "to": [
+      "Les plateaux pivotants sont en verre fumé ou bronze, avec des bords biseautés. Avec Bond, la composition mesure de 158 à 188 cm de long ; avec Double Bond, de 196 à 256 cm."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "albert-keramik",
+   "rules": [
+    {
+     "id": "PCN11",
+     "from": [
+      "Un plateau en céramique, rond ou en galet, en 16 décors, sur une base conique en acier. Trois hauteurs par format, à composer par deux ou trois."
+     ],
+     "to": [
+      "Un plateau en céramique, rond ou en galet, en 16 décors, sur une base conique en acier laqué gaufré. Chaque format se décline en trois hauteurs."
+     ]
+    },
+    {
+     "id": "C08-02-2",
+     "from": [
+      "Albert Keramik pose un plateau en céramique sur une base conique en acier laqué gaufré titane, bronze ou pearl. Le plateau est rond, de 59, 100 ou 118 cm, ou en forme de galet."
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "adrian-wood",
+   "rules": [
+    {
+     "id": "CNEW12",
+     "from": [
+      "Deux essences sur un même plateau en galet biseauté, noyer Canaletto et chêne brûlé, sur une base conique en acier. Trois formats, galet ou ovale, en trois hauteurs."
+     ],
+     "to": [
+      "Un plateau biseauté associant noyer Canaletto et chêne brûlé, sur une base conique en acier. Trois formats de plateau, en galet ou ovales, proposés en trois hauteurs."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "dodo",
+   "rules": [
+    {
+     "id": "C10-01",
+     "from": [
+      "Un cylindre en verre artistique au décor en relief, fumé, Verde Pavone ou Melanzana, sur une base bronze. Deux formats, à poser au bout du canapé."
+     ],
+     "to": [
+      "Une table d’appoint cylindrique en verre artistique au décor en relief. Sa base est en métal laqué gaufré bronze."
+     ]
+    },
+    {
+     "id": "C10-01",
+     "from": [
+      "La base est en métal laqué gaufré bronze."
+     ],
+     "to": []
+    },
+    {
+     "id": "PCN17",
+     "from": [
+      "Le verre existe en fumé, Verde Pavone et Melanzana. Deux formats : 30 cm de diamètre pour 53 cm de haut, ou 41,5 cm pour 44 cm."
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "westin",
+   "rules": [
+    {
+     "id": "C11-01",
+     "from": [
+      "Des lames d’acier croisées sous un plateau en verre, ou en bois massif au bord naturel. Sept finitions pour la base, de 160 à 200 cm."
+     ],
+     "to": [
+      "Une console de 160 à 200 cm de long, au piètement formé de lames d’acier croisées. Le plateau est en verre ou en bois à bords irréguliers."
+     ]
+    },
+    {
+     "id": "PCN20",
+     "from": [
+      "Westin repose sur des lames d’acier qui se croisent sous le plateau. La base existe en sept finitions, du titane au noir, dont Brushed Bronze et Brushed Grey."
+     ],
+     "to": []
+    },
+    {
+     "id": "PCN21",
+     "from": [
+      "Le plateau est en verre clair ou extra-clair de 12 mm, ou en bois massif au bord irrégulier : noyer Canaletto, chêne brûlé ou chêne naturel. La console se fixe au mur."
+     ],
+     "to": [
+      "Le plateau en verre clair ou extra-clair mesure 12 mm d’épaisseur. La version en bois existe en noyer Canaletto, chêne brûlé ou chêne naturel, avec des bords irréguliers en bois massif. La fixation au mur est obligatoire."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "nettuno",
+   "rules": [
+    {
+     "id": "CNEW13",
+     "from": [
+      "Une base en acier ondulée comme une vague, sous un plateau en verre de 12 mm, extra-clair ou MIST. 130, 160 ou 180 cm, deux hauteurs."
+     ],
+     "to": [
+      "Une base ondulée en acier sous un plateau en verre de 12 mm, extra-clair ou MIST. Longueurs de 130, 160 ou 180 cm, en deux hauteurs."
+     ]
+    },
+    {
+     "id": "PCN23",
+     "from": [
+      "La base ondulée existe en acier gaufré titane ou bronze, Oxybrass ou Oxygrey."
+     ],
+     "to": [
+      "Le piètement en acier est proposé en finition laquée gaufrée titane ou bronze, ou en finition Oxybrass ou Oxygrey."
+     ]
+    },
+    {
+     "id": "PCN24",
+     "from": [
+      "Le verre est extra-clair, ou cuit (MIST) pour une surface texturée. La console existe en 130, 160 et 180 cm de long, en 72 ou 92 cm de haut, et se fixe au mur."
+     ],
+     "to": [
+      "Le plateau existe en verre extra-clair ou en verre extra-clair texturé (MIST). La fixation au mur est obligatoire."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "rado-keramik",
+   "rules": [
+    {
+     "id": "PCN28",
+     "from": [
+      "La base est façonnée selon un procédé exclusif breveté ; ses légères irrégularités de forme et de teinte font partie de la pièce. La console se fixe au mur."
+     ],
+     "to": [
+      "La base est façonnée selon un procédé breveté. Sa teinte et sa surface peuvent présenter des irrégularités liées à la fabrication. La fixation au mur est obligatoire."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "cosmos",
+   "rules": [
+    {
+     "id": "C09-09",
+     "from": [
+      "Un miroir rond dont la bordure courbe déforme les reflets autour d’une surface centrale en galet. Verre miroité fumé ou bronze, 120 ou 157 cm de diamètre."
+     ],
+     "to": [
+      "Un miroir rond à surface centrale en galet et bordure courbe. Verre miroité fumé ou bronze, en 120 ou 157 cm de diamètre."
+     ]
+    }
+   ]
+  }
+ ]
+}

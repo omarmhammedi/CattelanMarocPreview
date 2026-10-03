@@ -13,7 +13,7 @@ const success = kind === 'rendez-vous'
     : 'Votre demande est enregistrée. Un conseiller vous recontacte sur WhatsApp ou par e-mail.';
 const select = (name: string, label: string, options: readonly string[], required = true) => ({ name, label, options, required });
 const selects = kind === 'pro'
-  ? [select('projectType', 'Type de projet', PROJECT_TYPES), select('city', 'Ville', CITIES), select('stage', 'Étape', STAGES), select('deadline', 'Échéance', DEADLINES)]
+  ? [select('projectType', 'Type de projet', PROJECT_TYPES), select('city', 'Ville', CITIES), select('stage', 'Avancement du projet', STAGES), select('deadline', 'Délai souhaité', DEADLINES)]
   : kind === 'projet' ? [select('city', 'Ville', CITIES)]
   : [select('city', 'Votre ville (facultatif)', CITIES, false)];
 const field = (name: string) => ({ id: `${id}-${name}`, name, 'aria-describedby': `${id}-${name}-error` });
@@ -40,7 +40,7 @@ const field = (name: string) => ({ id: `${id}-${name}`, name, 'aria-describedby'
   </div>
   <div class="form-trap" aria-hidden="true"><label for={`${id}-website`}>Site web</label><input id={`${id}-website`} name="website" tabindex="-1" autocomplete="off" /></div>
   <p class="request-privacy">{privacyNotice(kind, site.publicEmail || 'contact@cattelanitalia.ma', site.cndpReceipt)} <a href="/confidentialite/">Confidentialité</a></p>
-  <button class="btn solid" type="submit">Envoyer la demande</button>
+  <button class="btn solid" type="submit">{kind === 'rendez-vous' ? 'Demander un rendez-vous' : kind === 'projet' ? 'Demander un conseil' : 'Envoyer ma demande'}</button>
   <div class="request-result" role="status" aria-live="polite" tabindex="-1"></div>
 </form>
 <script>

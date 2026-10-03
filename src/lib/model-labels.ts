@@ -25,7 +25,8 @@ const modelParts: Record<string, Record<string, string>> = {
 /** Imported finish names that are English, lowercase or carry a code the swatch already shows. */
 const names: Record<string, string> = {
   'iron grey satiné': 'Gris fer satiné', laiton: 'Laiton brossé', oxybrass: 'Oxybrass', 'mix (fumé/blanc)': 'Fumé et blanc',
-  'NC noyer Canaletto': 'Noyer Canaletto',
+  'NC noyer Canaletto': 'Noyer Canaletto', melanzana: 'Aubergine (Melanzana)', 'verde pavone': 'Vert paon (Verde Pavone)',
+  'verre cuit (MIST)': 'Verre extra-clair texturé (MIST)',
 };
 
 /** Presentation only: preserve the imported values and leave unfamiliar categories intact. */

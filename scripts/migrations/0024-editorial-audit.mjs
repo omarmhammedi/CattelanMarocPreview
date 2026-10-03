@@ -19,7 +19,7 @@ import { authenticatedApi } from './0014-site-strategy-pages.mjs';
 
 export const migration = '0024-editorial-audit';
 const root = fileURLToPath(new URL('../..', import.meta.url));
-const manifestFile = join(root, 'content/copy-v4.json');
+const manifestFile = join(root, process.env.COPY_MANIFEST || 'content/copy-v4.json');
 
 // Identifiers, links and media never hold reader-facing copy.
 const SKIP = new Set(['_key', '_type', 'id', 'src', 'url', 'href', 'cta_href', 'storageKey', 'filename', 'mimeType', 'provider',

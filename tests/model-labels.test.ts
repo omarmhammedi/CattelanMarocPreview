@@ -44,6 +44,8 @@ test('writes imported finish names in French, capitalised, without a repeated co
   assert.equal(finishNameLabel({name: 'oxybrass'}), 'Oxybrass');
   assert.equal(finishNameLabel({name: 'miroité bronze'}), 'Miroité bronze');
   assert.equal(finishNameLabel({name: 'NC noyer Canaletto'}), 'Noyer Canaletto');
+  assert.equal(finishNameLabel({name: 'verde pavone'}), 'Vert paon (Verde Pavone)');
+  assert.equal(finishNameLabel({name: 'verre cuit (MIST)'}), 'Verre extra-clair texturé (MIST)');
   assert.equal(finishNameLabel({name: 'KM05 Golden Calacatta opaque', code: 'KM05'}), 'KM05 Golden Calacatta opaque');
   assert.equal(finishGroupLabel({group: 'pièces', material: 'metals'}, 'bloom'), 'Raccords — métal');
 });

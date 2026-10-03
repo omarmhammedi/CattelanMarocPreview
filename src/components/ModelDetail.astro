@@ -114,7 +114,7 @@ for (const finish of model.finishes || []) {
         {model.year && <dl class="model-year"><div><dt>Année</dt><dd>{model.year}</dd></div></dl>}
         <SiteActions order={['appointment', 'advisor']} advisorHref={advisorHref} advisorLabel={advisorLabel} advisorName={advisorName} model={model.slug} />
         <p class="model-services">{services.join(' ')}</p>
-        <p class="model-services model-quote-note">Le devis détaille dimensions, finitions, livraison et installation. Il peut être établi et validé à distance, sur WhatsApp.</p>
+        <p class="model-services model-quote-note">Le devis précise les dimensions, les finitions, la livraison et l’installation. Vous pouvez le demander et le valider à distance.</p>
         {filesHref && !hasTechnical && <a class="text-link model-files-request" href={filesHref} target="_blank" rel="noopener noreferrer">Demander les fichiers 2D et 3D<span aria-hidden="true">↗</span></a>}
       </div>
       {model.image?.src && <figure class="model-hero-figure">

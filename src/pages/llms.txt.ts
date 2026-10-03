@@ -6,7 +6,7 @@ import { SERVED_CITIES } from '../lib/structured-data';
 // Services and ordering terms come from the project FAQ; contact details stay in the CMS.
 const pages = [
   ['Collections', '/collections/'], ['Sur-mesure et matières', '/sur-mesure/'], ['Showroom de Casablanca', '/showroom-casablanca/'],
-  ['Votre projet', '/votre-projet/'], ['Architectes & projets', '/professionnels/'], ['Questions fréquentes', '/faq/'],
+  ['Commande et livraison', '/votre-projet/'], ['Architectes & projets', '/professionnels/'], ['Questions fréquentes', '/faq/'],
   ['À propos', '/a-propos/'], ['Catalogue', '/catalogue/'], ['Journal', '/journal/'],
 ];
 

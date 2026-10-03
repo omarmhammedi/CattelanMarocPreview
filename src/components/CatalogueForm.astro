@@ -24,11 +24,11 @@ const contactLabel = site.labels.contact || 'Coordonnées du showroom';
     <div><label for={`${id}-name`}>{labels.name}</label><input id={`${id}-name`} name="name" autocomplete="name" required minlength="2" maxlength="120" aria-describedby={`${id}-name-error`} /><span class="field-error" id={`${id}-name-error`} data-field-error="name" hidden></span></div>
     <div><label for={`${id}-whatsapp`}>WhatsApp</label><input id={`${id}-whatsapp`} name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" required maxlength="30" placeholder="+212 6…" aria-describedby={`${id}-whatsapp-error`} /><span class="field-error" id={`${id}-whatsapp-error`} data-field-error="whatsapp" hidden></span></div>
     <div><label for={`${id}-email`}>{labels.email}</label><input id={`${id}-email`} name="email" type="email" autocomplete="email" required maxlength="254" aria-describedby={`${id}-email-error`} /><span class="field-error" id={`${id}-email-error`} data-field-error="email" hidden></span></div>
-    <div><label for={`${id}-city`}>Ville</label><select id={`${id}-city`} name="city" required aria-describedby={`${id}-city-error`}><option value="">Choisir</option>{CITIES.map(city => <option>{city}</option>)}</select><span class="field-error" id={`${id}-city-error`} data-field-error="city" hidden></span></div>
+    <div><label for={`${id}-city`}>Ville</label><select id={`${id}-city`} name="city" required aria-describedby={`${id}-city-error`}><option value="">Choisir une ville</option>{CITIES.map(city => <option>{city}</option>)}</select><span class="field-error" id={`${id}-city-error`} data-field-error="city" hidden></span></div>
   </div>
   <div class="form-trap" aria-hidden="true"><label for={`${id}-website`}>Site web</label><input id={`${id}-website`} name="website" tabindex="-1" autocomplete="off" /></div>
   <label class="form-consent"><input type="checkbox" name="communicationsConsent" value="yes" /><span>{labels.consent}</span></label>
-  <p class="form-note">{import.meta.env.CATTELAN_EMAIL_ENABLED ? 'Le lien s’affiche après l’envoi ; le PDF vous est aussi envoyé par e-mail.' : labels.note}</p>
+  <p class="form-note">{import.meta.env.CATTELAN_EMAIL_ENABLED ? 'Après l’envoi du formulaire, vous pourrez télécharger le catalogue. Vous le recevrez aussi par e-mail.' : labels.note}</p>
   {!import.meta.env.CATTELAN_EMAIL_ENABLED && labels.privacy && <p class="form-privacy">{labels.privacy}</p>}
   <p class="form-legal">{privacyNotice('catalogue', site.publicEmail || 'contact@cattelanitalia.ma', site.cndpReceipt)} <a href="/confidentialite/">Confidentialité</a></p>
   <button class="btn solid" type="submit">{labels.submit} <span aria-hidden="true">↗</span></button>

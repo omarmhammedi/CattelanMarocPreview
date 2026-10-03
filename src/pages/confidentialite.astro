@@ -7,20 +7,20 @@ const emailEnabled=import.meta.env.CATTELAN_EMAIL_ENABLED;
 const cndpReceipt=site.cndpReceipt;
 ---
 <PageLayout title="Confidentialité" description="Les coordonnées recueillies par les formulaires de Cattelan Italia Maroc, leur usage, leur conservation et vos droits." site={site}>
-<section class="page-intro page-gutter"><p class="kick">Données personnelles</p><h1>Confidentialité</h1><p class="page-lead">Cette page explique quelles coordonnées nous recueillons, pourquoi, combien de temps nous les gardons et comment exercer vos droits.</p>
+<section class="page-intro page-gutter"><p class="kick">Données personnelles</p><h1>Confidentialité</h1>
 <div class="page-prose">
 <h2>Responsable du traitement</h2>
 <p>Racha Home, société à responsabilité limitée, registre du commerce de Marrakech n° 76831, siège social Résidence Marrakchia I, rue du Lieutenant Lamure, boulevard Mohammed VI, Marrakech-Médina, Maroc. Showroom : 8-10 avenue du Docteur Mohamed Sijilmassi, 20250 Casablanca. Contact : <a href="mailto:contact@cattelanitalia.ma">contact@cattelanitalia.ma</a>.</p>
 <h2>Ce que nous recueillons et pourquoi</h2>
 <ul>
 <li><strong>Télécharger le catalogue</strong> : nom, WhatsApp, e-mail et ville, pour vous donner accès au catalogue{emailEnabled ? ' et vous l’envoyer par e-mail' : ''}. Les nouveautés et invitations ne vous sont envoyées que si vous cochez la case prévue.</li>
-<li><strong>Prendre rendez-vous</strong> : nom, WhatsApp, jour et moment souhaités, message facultatif, pour organiser votre visite au showroom.</li>
-<li><strong>Demande de conseil</strong> (Votre projet) : nom, WhatsApp, type de projet, ville et message facultatif, pour préparer votre projet avec un conseiller.</li>
+<li><strong>Prendre rendez-vous</strong> : nom, numéro WhatsApp, jour et moment souhaités, ville et message facultatifs, pour organiser votre visite au showroom.</li>
+<li><strong>Demande de conseil</strong> (Commande et livraison) : nom, WhatsApp, type de projet, ville et message facultatif, pour préparer votre projet avec un conseiller.</li>
 <li><strong>Contact professionnel</strong> : nom, cabinet ou société, WhatsApp, e-mail, type de projet, ville, étape, échéance, modèles envisagés et message facultatifs, pour répondre à votre projet.</li>
 </ul>
 <p>Nous enregistrons aussi la page d’origine de la demande et, le cas échéant, le modèle consulté. Ces données sont traitées avec votre consentement, donné en envoyant le formulaire. Elles ne sont ni vendues ni cédées.</p>
 <h2>Qui y a accès</h2>
-<p>L’équipe de Racha Home qui vous répond. Nos prestataires techniques les traitent pour notre compte : Cloudflare pour l’hébergement du site{site.analyticsToken ? ' et la mesure d’audience' : ''}{emailEnabled ? ' et Resend pour l’envoi des e-mails' : ''}. Elles seront transmises à notre outil de gestion de la relation client lorsqu’il sera raccordé ; cette page sera alors complétée.</p>
+<p>L’équipe de Racha Home chargée de votre demande a accès à vos données. Cloudflare les traite pour notre compte pour l’hébergement du site{site.analyticsToken ? ' et la mesure d’audience' : ''}{emailEnabled ? ', et Resend pour l’envoi des e-mails' : ''}.</p>
 <h2>Transfert hors du Maroc</h2>
 <p>{emailEnabled ? 'Ces prestataires peuvent' : 'Ce prestataire peut'} traiter les données dans d’autres pays, notamment aux États-Unis. Ce transfert figure dans notre déclaration auprès de la CNDP.</p>
 <h2>Durée de conservation</h2>

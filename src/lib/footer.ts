@@ -1,7 +1,7 @@
 /** The footer's information links, in the plan's order. */
 const footerLinks = [
   { label: 'À propos', href: '/a-propos/' },
-  { label: 'Votre projet', href: '/votre-projet/' },
+  { label: 'Commande et livraison', href: '/votre-projet/' },
   { label: 'Professionnels', href: '/professionnels/' },
   { label: 'FAQ', href: '/faq/' },
   { label: 'Confidentialité', href: '/confidentialite/' },
