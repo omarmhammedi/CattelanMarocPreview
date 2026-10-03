@@ -16,7 +16,7 @@ export const GET: APIRoute = async ({ url }) => {
   const line = (label: string, value: unknown) => String(value || '').trim() ? [`- ${label} : ${String(value).trim().replace(/\s*\n\s*/gu, ' ; ')}`] : [];
   const text = [
     `# ${site.name}`, '',
-    `> ${site.name}, showroom monomarque Cattelan Italia au Triangle d’Or, Casablanca.`, '',
+    `> ${site.name}, showroom monomarque Cattelan Italia à Casablanca.`, '',
     '## Showroom',
     ...line('Adresse', site.address), ...line('Horaires', site.hours),
     ...line('Téléphone et WhatsApp', site.phone), ...line('E-mail', site.publicEmail),
