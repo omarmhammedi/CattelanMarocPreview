@@ -1,0 +1,1686 @@
+{
+ "version": 4,
+ "migration": "0024-editorial-audit",
+ "source": "Audit éditorial complet, révision 2, et revue copy-editing du 3 octobre 2026 ; hero, noms de familles, Journal et intros conservés (décisions du client).",
+ "entries": [
+  {
+   "collection": "site_content",
+   "slug": "global",
+   "rules": [
+    {
+     "id": "G02",
+     "from": [
+      "Showroom monomarque Cattelan Italia de 400 m² au Triangle d’Or, Casablanca. Tout le catalogue sur commande, livré et installé partout au Maroc."
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "pages",
+   "slug": "home",
+   "rules": [
+    {
+     "id": "home.intro",
+     "from": [
+      "Tables, chaises, canapés, rangements et luminaires de la maison italienne, et tout son catalogue sur commande, fabriqué en Italie."
+     ],
+     "to": [
+      "Tables, chaises, canapés, rangements et luminaires de la maison italienne. Tout le catalogue se commande au showroom et se fabrique en Italie."
+     ]
+    }
+   ],
+   "sections": {
+    "collections": {
+     "id": "home.sections.collections",
+     "expect": {
+      "text": "Près de quarante modèles, chacun avec ses formats, ses finitions et sa fiche technique en PDF."
+     },
+     "text": "39 modèles, chacun avec ses formats, ses finitions et sa fiche technique."
+    },
+    "showroom": {
+     "id": "home.sections.showroom",
+     "expect": {
+      "text": "Sur deux niveaux, les tables sont exposées avec leurs chaises, les canapés avec leurs tables basses, et toutes les finitions de la marque sont là en échantillons. Visite libre du lundi au samedi, sans rendez-vous. Service de voiturier."
+     },
+     "text": "Sur deux niveaux, les tables sont exposées avec leurs chaises et les canapés avec leurs tables basses ; toutes les finitions de la marque sont en échantillons. Visite libre du lundi au samedi. Service de voiturier."
+    },
+    "journal": {
+     "id": "home.sections.journal",
+     "expect": {
+      "text": "Des articles pratiques pour choisir une table, des chaises, un canapé ou un rangement : dimensions, matières et associations, avec les modèles Cattelan Italia."
+     },
+     "text": "Cinq articles pour choisir une table, des chaises, un canapé ou un rangement, avec les dimensions et les matières des modèles Cattelan Italia."
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "collections",
+   "rules": [
+    {
+     "id": "collections.intro",
+     "from": [
+      "Près de quarante modèles en huit familles, chacun avec ses formats, ses finitions et sa fiche technique. Exposés ou non, tous se commandent depuis Casablanca."
+     ],
+     "to": [
+      "39 modèles en huit familles, chacun avec ses formats, ses finitions et sa fiche technique. Exposés ou non, tous se commandent au showroom de Casablanca."
+     ]
+    }
+   ],
+   "sections": {
+    "contact": {
+     "id": "collections.sections.contact",
+     "expect": {
+      "text": "Envoyez son nom sur WhatsApp : nous vous disons s’il est exposé, dans quelles finitions il existe, et nous préparons le devis.",
+      "cta_label": "Écrire sur WhatsApp"
+     },
+     "text": "Envoyez son nom sur WhatsApp. Nous vous disons s’il est exposé et dans quelles finitions il existe, puis nous préparons le devis.",
+     "cta_label": "Nous écrire"
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "catalogue",
+   "rules": [
+    {
+     "id": "catalogue.meta_description",
+     "from": [
+      "Recevez le catalogue Cattelan Italia en PDF : toutes les collections, à parcourir avant votre visite au showroom de Casablanca."
+     ],
+     "to": [
+      "Le catalogue Cattelan Italia en PDF, avec toutes les familles, leurs formats et leurs finitions. Showroom Cattelan Italia à Casablanca."
+     ]
+    }
+   ],
+   "sections": {
+    "contact": {
+     "id": "catalogue.sections.contact",
+     "expect": {
+      "text": "Formats, finitions, délai, devis : écrivez-nous sur WhatsApp.",
+      "cta_label": "Écrire sur WhatsApp"
+     },
+     "text": "Nous répondons sur WhatsApp aux questions de formats, de finitions, de délai et de devis.",
+     "cta_label": "Nous écrire"
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "faq",
+   "rules": [
+    {
+     "id": "faq.intro",
+     "from": [
+      "Personnalisation, délais, acompte, paiement, livraison, échantillons et accès au showroom."
+     ],
+     "to": [
+      "Les réponses sur la personnalisation, la commande, la livraison et le showroom de Casablanca."
+     ]
+    },
+    {
+     "id": "faq.meta_description",
+     "from": [
+      "Personnalisation, délais de 10 à 12 semaines, acompte, livraison partout au Maroc, installation incluse et showroom de Casablanca : les réponses."
+     ],
+     "to": [
+      "Personnalisation, délai de 10 à 12 semaines, acompte de 50 %, livraison partout au Maroc et installation incluse. Les réponses du showroom Cattelan Italia de Casablanca."
+     ]
+    }
+   ],
+   "sections": {
+    "faq_delivery_4": {
+     "id": "faq.sections.faq_delivery_4",
+     "expect": {
+      "text": "Le choix peut se faire à distance : photos des échantillons, fiches techniques et devis sur WhatsApp. Vous pouvez aussi passer au showroom de Casablanca pour voir les pièces et les matières avant de valider."
+     },
+     "text": "Nous envoyons sur WhatsApp les photos des échantillons, les fiches techniques et le devis, et la commande se valide à distance. Vous pouvez aussi passer au showroom de Casablanca pour voir les pièces avant de valider."
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "votre-projet",
+   "rules": [
+    {
+     "id": "V01",
+     "from": [
+      "La commande, étape par étape"
+     ],
+     "to": [
+      "Commande et livraison"
+     ]
+    },
+    {
+     "id": "votre-projet.intro",
+     "from": [
+      "Un meuble, une pièce entière ou toute la maison, seul ou avec votre architecte : les cinq étapes de la commande, du conseil à l’installation, et les conditions de paiement."
+     ],
+     "to": [
+      "Les cinq étapes de la commande, du conseil à l’installation, et les conditions de paiement, pour un meuble comme pour toute la maison."
+     ]
+    },
+    {
+     "id": "votre-projet.content[1]",
+     "from": [
+      "Une table, un canapé, un luminaire : votre conseiller vous aide à choisir le format et les finitions, échantillons en main, puis prépare le devis et suit la commande."
+     ],
+     "to": [
+      "Votre conseiller vous aide à choisir le format et les finitions d’une table, d’un canapé ou d’un luminaire, échantillons en main, puis prépare le devis et suit la commande."
+     ]
+    },
+    {
+     "id": "votre-projet.content[5]",
+     "from": [
+      "Votre architecte travaille directement avec le showroom : fiches techniques, échantillons et rendez-vous communs. Vous n’avez pas d’architecte ? Nous pouvons vous mettre en relation."
+     ],
+     "to": [
+      "Votre architecte travaille directement avec le showroom, qui lui transmet les fiches techniques et les échantillons et vous reçoit ensemble sur rendez-vous."
+     ]
+    },
+    {
+     "id": "votre-projet.meta_description",
+     "from": [
+      "Une pièce, toute la maison ou avec un architecte : conseil, devis, fabrication en Italie en 10 à 12 semaines, livraison et installation partout au Maroc."
+     ],
+     "to": [
+      "Conseil, devis détaillé, acompte de 50 %, fabrication en Italie, livraison 10 à 12 semaines au maximum après la commande et installation incluse partout au Maroc."
+     ]
+    }
+   ],
+   "sections": {
+    "step_1": {
+     "id": "votre-projet.sections.step_1",
+     "expect": {
+      "text": "Avec votre conseiller, au showroom ou sur WhatsApp : modèles, formats, matières et finitions."
+     },
+     "text": "Au showroom ou sur WhatsApp, votre conseiller vous aide à choisir modèles, formats, matières et finitions."
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "a-propos",
+   "sections": {
+    "milan": {
+     "id": "A01",
+     "expect": {
+      "text": "Chaque année, Cattelan Italia présente ses nouveautés au Salon du Meuble de Milan. Toutes se commandent depuis Casablanca, même avant d’être exposées au showroom."
+     },
+     "text": "Chaque année, Cattelan Italia présente ses nouveautés au Salon du Meuble de Milan."
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "professionnels",
+   "rules": [
+    {
+     "id": "professionnels.intro",
+     "from": [
+      "Tout le catalogue Cattelan Italia aux formats et finitions de votre projet, avec les fiches techniques, les fichiers 2D et 3D, les échantillons et un conseiller qui suit la commande jusqu’à la pose."
+     ],
+     "to": [
+      "Le catalogue Cattelan Italia aux formats et finitions de vos projets, avec les fiches techniques, les fichiers 2D et 3D sur demande et les échantillons au showroom."
+     ]
+    }
+   ],
+   "sections": {
+    "catalogue": {
+     "id": "professionnels.sections.catalogue",
+     "expect": {
+      "text": "Céramiques, bois, laques, métaux, tissus et cuirs : toutes les finitions de la marque sont au showroom, en échantillons ou sur les meubles exposés. Tout le catalogue se commande, y compris les modèles non exposés."
+     },
+     "text": "Toutes les finitions de la marque sont au showroom, en échantillons ou sur les meubles exposés : céramiques, bois, laques, métaux, tissus et cuirs. Les modèles non exposés se commandent aussi."
+    },
+    "clients": {
+     "id": "professionnels.sections.clients",
+     "expect": {
+      "heading": "Vos rendez-vous clients",
+      "text": "Réservez un créneau : le showroom accueille vos rendez-vous clients, avec les pièces exposées et les échantillons, pour valider les finitions ensemble."
+     },
+     "heading": "Rendez-vous clients au showroom",
+     "text": "Le showroom reçoit vos clients sur rendez-vous, avec les pièces exposées et les échantillons, pour valider les finitions ensemble."
+    },
+    "follow_up": {
+     "id": "P02",
+     "expect": {
+      "heading": "Un seul conseiller, du devis à la pose",
+      "text": "Un conseiller suit le projet du devis à l’installation : commande, fabrication en Italie, livraison et pose partout au Maroc."
+     },
+     "heading": "Suivi de commande",
+     "text": "Un même interlocuteur suit la commande, la fabrication en Italie, la livraison et la pose, partout au Maroc."
+    },
+    "order": {
+     "id": "P02",
+     "expect": {
+      "heading": "De la liste au devis",
+      "text": "Envoyez la liste des modèles, avec dimensions et finitions : le showroom établit un devis détaillé. La commande est validée par un acompte de 50 %, fabriquée en Italie en 10 à 12 semaines, puis livrée et installée."
+     },
+     "heading": "Devis",
+     "text": "Envoyez la liste des modèles avec leurs dimensions et finitions ; le showroom établit un devis détaillé. La commande est validée par un acompte de 50 % et livrée 10 à 12 semaines au maximum après validation, installation comprise."
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "sur-mesure",
+   "rules": [
+    {
+     "id": "sur-mesure.title",
+     "from": [
+      "Formats, matières et finitions"
+     ],
+     "to": [
+      "Mobilier Cattelan Italia sur mesure"
+     ]
+    },
+    {
+     "id": "sur-mesure.intro",
+     "from": [
+      "Skorpio existe en quatorze formats, Napoleon Keramik en dix, et chaque modèle se commande dans les finitions de votre choix : la longueur d’une table, le décor de son plateau, la laque de son piètement, le revêtement d’un canapé."
+     ],
+     "to": [
+      "Skorpio existe en quatorze formats, Napoleon Keramik en dix. Chaque modèle se commande dans les finitions choisies, sans délai supplémentaire."
+     ]
+    },
+    {
+     "id": "sur-mesure.meta_description",
+     "from": [
+      "Dimensions, bois, céramiques, marbres, métaux, tissus et cuirs : tout le catalogue Cattelan Italia se personnalise. Échantillons au showroom de Casablanca."
+     ],
+     "to": [
+      "La plupart des modèles Cattelan Italia se personnalisent en dimensions, bois, céramiques, métaux, tissus et cuirs. Échantillons au showroom de Casablanca."
+     ]
+    }
+   ],
+   "sections": {
+    "options": {
+     "id": "sur-mesure.sections.options",
+     "expect": {
+      "heading": "Du format au revêtement"
+     },
+     "heading": "Options par modèle"
+    },
+    "samples": {
+     "id": "M04",
+     "expect": {
+      "text": "Céramiques, bois, laques, métaux, verres, tissus et cuirs : toutes les finitions de la marque sont au showroom du Triangle d’Or, en échantillons ou sur les meubles exposés. Apportez une photo de votre sol, un échantillon de rideau ou la teinte de vos murs : une finition se choisit à côté de ce qui existe déjà chez vous, pas seule."
+     },
+     "text": "Toutes les finitions de la marque sont au showroom du Triangle d’Or, en échantillons ou sur les meubles exposés : céramiques, bois, laques, métaux, verres, tissus et cuirs."
+    },
+    "lead_time": {
+     "id": "M05",
+     "expect": {
+      "text": "Une pièce sur mesure ne prend pas plus de temps qu’une autre : la fabrication en Italie démarre à la validation de la commande et de l’acompte de 50 %. L’installation est incluse, et la livraison est offerte à Casablanca."
+     },
+     "text": "Une pièce sur mesure suit le même délai : livraison 10 à 12 semaines au maximum après validation de la commande et de l’acompte de 50 %. L’installation est incluse, la livraison offerte à Casablanca."
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "journal",
+   "rules": [
+    {
+     "id": "journal.intro",
+     "from": [
+      "Des repères pour choisir : forme et taille d’une table, association avec les chaises, finitions, composition d’un salon, rangements. Rédigés par le showroom de Casablanca."
+     ],
+     "to": [
+      "Cinq guides pour choisir la forme d’une table, associer des chaises, comparer les plateaux, composer un salon et choisir un rangement. Rédigés par le showroom de Casablanca."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "pages",
+   "slug": "showroom-casablanca",
+   "rules": [
+    {
+     "id": "S00",
+     "from": [
+      "Au Triangle d’Or, 400 m² sur deux niveaux consacrés à Cattelan Italia : tables, chaises, canapés, rangements et luminaires, et toutes les finitions de la marque en échantillons."
+     ],
+     "to": [
+      "Au Triangle d’Or, 400 m² sur deux niveaux réservés à Cattelan Italia, avec ses tables, chaises, canapés, rangements et luminaires, et toutes les finitions de la marque en échantillons."
+     ]
+    },
+    {
+     "id": "S01",
+     "from": [
+      "Les tables sont exposées avec leurs chaises et leurs suspensions, les canapés avec leurs tables basses. On y juge ce qu’une photo ne montre pas : une hauteur d’assise, la profondeur d’un canapé, le reflet d’un plateau en verre. Toutes les finitions de la marque sont là en échantillons : céramiques, bois, laques, métaux, tissus et cuirs."
+     ],
+     "to": [
+      "Les tables sont exposées avec leurs chaises et leurs suspensions, les canapés avec leurs tables basses. Sur place se jugent la hauteur d’une assise, la profondeur d’un canapé et le reflet d’un plateau en verre. Toutes les finitions de la marque sont en échantillons."
+     ]
+    },
+    {
+     "id": "S07",
+     "from": [
+      "Architectes et décorateurs, le showroom accueille vos rendez-vous : vos clients voient les pièces, touchent les matières et valident les finitions avec vous."
+     ],
+     "to": [
+      "Le showroom reçoit les architectes et décorateurs avec leurs clients, sur rendez-vous, pour valider les finitions devant les pièces."
+     ]
+    },
+    {
+     "id": "showroom-casablanca.meta_description",
+     "from": [
+      "Showroom Cattelan Italia de 400 m² sur deux niveaux, Triangle d’Or, Casablanca : salons, salles à manger, chambres, échantillons, voiturier."
+     ],
+     "to": [
+      "Showroom Cattelan Italia de 400 m² sur deux niveaux au Triangle d’Or, Casablanca. Tables, canapés, échantillons de toutes les finitions et service de voiturier."
+     ]
+    }
+   ],
+   "sections": {
+    "visit": {
+     "id": "S02",
+     "expect": {},
+     "remove": true
+    },
+    "cities": {
+     "id": "S03",
+     "expect": {
+      "text": "Le choix peut commencer à distance : photos des échantillons, fiches techniques et devis sur WhatsApp. La commande se valide ensuite à distance, ou au showroom si vous passez à Casablanca."
+     },
+     "text": "Photos des échantillons, fiches techniques et devis sur WhatsApp. La commande se valide à distance, ou au showroom si vous passez à Casablanca."
+    }
+   }
+  },
+  {
+   "collection": "families",
+   "slug": "tables",
+   "rules": [
+    {
+     "id": "tables.card_text",
+     "from": [
+      "Verre, céramique, bois ou argile : des tables rondes jusqu’à 180 cm et rectangulaires jusqu’à 320 cm."
+     ],
+     "to": [
+      "Tables rondes jusqu’à 180 cm et rectangulaires jusqu’à 320 cm, en verre, céramique, bois ou argile."
+     ]
+    },
+    {
+     "id": "tables.intro",
+     "from": [
+      "Neuf tables, du plateau en verre de Skorpio à la base galbée de Botero : rondes, carrées, rectangulaires ou aux angles adoucis, jusqu’à 14 personnes."
+     ],
+     "to": [
+      "Neuf tables rondes, carrées, rectangulaires ou aux angles adoucis, du plateau en verre de Skorpio à la base galbée de Botero, jusqu’à 14 places."
+     ]
+    },
+    {
+     "id": "C02-06",
+     "from": [
+      "La céramique résiste à la chaleur et aux taches et reproduit les marbres, du Calacatta au Portoro, en jusqu’à dix-neuf décors selon le modèle. Le verre laisse voir le piètement. Le bois existe en noyer Canaletto et en chêne brûlé. Comparez-les en échantillons au showroom."
+     ],
+     "to": [
+      "Le verre laisse voir le piètement. Le bois existe en noyer Canaletto et en chêne brûlé. La céramique reprend les décors du marbre, du Calacatta au Portoro, jusqu’à dix-neuf selon le modèle. Comparez-les en échantillons au showroom."
+     ]
+    }
+   ],
+   "seo": {
+    "description": [
+     "Tables Cattelan Italia en verre, bois, céramique ou marbre naturel. Comparez les formats et retrouvez les coordonnées du showroom de Casablanca.",
+     "Neuf tables Cattelan Italia en verre, céramique, bois ou argile, rondes jusqu’à 180 cm et rectangulaires jusqu’à 320 cm. Showroom à Casablanca."
+    ]
+   }
+  },
+  {
+   "collection": "families",
+   "slug": "chaises-tabourets",
+   "rules": [
+    {
+     "id": "C03-05",
+     "from": [
+      "Le revêtement"
+     ],
+     "to": [
+      "Revêtements"
+     ]
+    },
+    {
+     "id": "C03-06",
+     "from": [
+      "Le cuir et le similicuir s’essuient facilement ; le tissu et le micro-nubuck sont plus doux au toucher. Comparez les échantillons au showroom avec la finition de votre table."
+     ],
+     "to": [
+      "Zuleika est habillée de cuir. Rhonda, Greta et Miranda ML existent en cuir, similicuir, tissu ou micro-nubuck. Comparez les échantillons au showroom avec la finition de votre table."
+     ]
+    }
+   ],
+   "seo": {
+    "description": [
+     "Chaises et tabourets Cattelan Italia : dossiers, accoudoirs, revêtements et hauteurs d’assise. Explorez la collection et le showroom de Casablanca.",
+     "Chaises et tabourets Cattelan Italia : Rhonda, Greta, Miranda ML et Zuleika, en cuir, tissu ou micro-nubuck, assises de 46 à 47 cm. Showroom à Casablanca."
+    ]
+   }
+  },
+  {
+   "collection": "families",
+   "slug": "canapes-fauteuils",
+   "rules": [
+    {
+     "id": "C01-10",
+     "from": [
+      "Quatre canapés composables, Ruby et son fauteuil, près de 300 tissus et cuirs."
+     ],
+     "to": [
+      "Quatre canapés composables, droits ou d’angle, et Ruby avec son fauteuil Ruby Lounge, en tissu ou en cuir."
+     ]
+    },
+    {
+     "id": "canapes-fauteuils.meta_description",
+     "from": [
+      "Canapés, salons et fauteuils Cattelan Italia, droits ou composables, en près de 300 tissus et cuirs. Sur commande, livrés partout au Maroc."
+     ],
+     "to": [
+      "Canapés, salons et fauteuils Cattelan Italia, droits ou composables, en tissu ou en cuir. Sur commande, livrés partout au Maroc."
+     ]
+    }
+   ],
+   "seo": {
+    "description": [
+     "Canapés et fauteuils Cattelan Italia : compositions, dimensions, tissu et cuir. Découvrez les modèles et les informations du showroom de Casablanca.",
+     "Canapés Craig, Douglas, Mykonos et Sinatra, droits ou d’angle, et Ruby avec son fauteuil Ruby Lounge, en tissu ou en cuir. Showroom à Casablanca."
+    ]
+   }
+  },
+  {
+   "collection": "families",
+   "slug": "buffets-bibliotheques",
+   "rules": [
+    {
+     "id": "buffets-bibliotheques.meta_description",
+     "from": [
+      "Buffets, bahuts et bibliothèques Cattelan Italia en bois laqué, verre miroité ou acier. Sur commande, livrés et installés partout au Maroc."
+     ],
+     "to": [
+      "Buffets et bibliothèques Cattelan Italia en bois laqué, verre miroité ou acier. Sur commande, livrés et installés partout au Maroc."
+     ]
+    }
+   ],
+   "seo": {
+    "description": [
+     "Buffets et bibliothèques Cattelan Italia : rangements fermés, étagères et compositions. Consultez les modèles et notre showroom à Casablanca.",
+     "Buffets Chelsea, Kayak et Amsterdam, bibliothèques Airport et Nautilus : rangements Cattelan Italia de 26 à 53 cm de profondeur. Showroom à Casablanca."
+    ]
+   }
+  },
+  {
+   "collection": "families",
+   "slug": "luminaires",
+   "seo": {
+    "description": [
+     "Suspensions, lampadaires, lampes à poser et appliques Cattelan Italia. Découvrez les modèles, leurs équipements et le showroom de Casablanca.",
+     "Suspensions Paris, Aladdin et Cloudine en verre artistique, et Bloom en suspension ou en lampadaire. Showroom Cattelan Italia à Casablanca."
+    ]
+   }
+  },
+  {
+   "collection": "families",
+   "slug": "mobilier-exterieur",
+   "seo": {
+    "description": [
+     "Tables et chaises Outdoor Cattelan Italia pour espaces couverts, protégés des intempéries. Dimensions, finitions et contact du showroom de Casablanca.",
+     "Napoleon Keramik Outdoor et Greta Outdoor, table et chaise Cattelan Italia pour terrasses et vérandas couvertes. Showroom à Casablanca."
+    ]
+   }
+  },
+  {
+   "collection": "posts",
+   "slug": "choisir-buffet-bibliotheque-salon",
+   "rules": [
+    {
+     "id": "J05",
+     "from": [
+      "45 à 55 cm de profondeur pour un buffet, 26 à 29 cm pour une bibliothèque, 90 cm devant les portes : les mesures et les modèles pour choisir un rangement de salon."
+     ],
+     "to": [
+      "Un buffet mesure 45 à 55 cm de profondeur, une bibliothèque 26 à 29 cm. Les mesures et les modèles Cattelan Italia pour choisir un rangement de salon."
+     ]
+    },
+    {
+     "id": "J07",
+     "from": [
+      "Un buffet garde à l’abri la vaisselle, les nappes et ce que l’on ne veut pas voir ; une bibliothèque montre les livres et les objets. Faites deux listes avant de choisir : ce qui doit disparaître, et ce que vous voulez exposer. Si la première est la plus longue, c’est un buffet."
+     ],
+     "to": [
+      "Un buffet garde à l’abri la vaisselle, les nappes et ce que l’on ne veut pas voir ; une bibliothèque montre les livres et les objets."
+     ]
+    },
+    {
+     "id": "choisir-buffet-bibliotheque-salon.cta_text",
+     "from": [
+      "Chelsea, Kayak, Amsterdam, Airport et Nautilus : dimensions, finitions et fiche technique sur chaque modèle."
+     ],
+     "to": [
+      "Dimensions, finitions et fiche technique de Chelsea, Kayak, Amsterdam, Airport et Nautilus."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "posts",
+   "slug": "composer-salon-canape-fauteuil",
+   "rules": [
+    {
+     "id": "J15",
+     "from": [
+      "80 à 90 cm de passage, 40 à 45 cm jusqu’à la table basse, canapé droit ou composable, fauteuil assorti ou contrasté, tissu ou cuir : les repères pour composer un salon Cattelan Italia."
+     ],
+     "to": [
+      "Les passages, la distance à la table basse et le choix des revêtements pour associer un canapé et un fauteuil Cattelan Italia."
+     ]
+    },
+    {
+     "id": "J19",
+     "from": [
+      "Les tissus sont classés de T10 à T90 ; en version tissu, les housses de Craig, Douglas, Mykonos et Sinatra se retirent pour le nettoyage. Les cuirs se choisissent dans les gammes Glove, Magnifica, Nabuk et Perfetto : plus de trente teintes à elles quatre. Au total, près de 300 revêtements au choix ; apportez au showroom une photo de votre sol et de vos rideaux pour comparer."
+     ],
+     "to": [
+      "Les tissus sont classés de T10 à T90 ; en version tissu, les housses de Craig, Douglas, Mykonos et Sinatra se retirent pour le nettoyage. Les cuirs se choisissent dans les gammes Glove, Magnifica, Nabuk et Perfetto. Apportez au showroom une photo de votre sol et de vos rideaux pour comparer."
+     ]
+    },
+    {
+     "id": "composer-salon-canape-fauteuil.cta_text",
+     "from": [
+      "Craig, Douglas, Mykonos, Sinatra et Ruby : comparez leurs formes et leurs revêtements sur leurs fiches."
+     ],
+     "to": [
+      "Formes et revêtements de Craig, Douglas, Mykonos, Sinatra et Ruby, sur leurs fiches."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "posts",
+   "slug": "ceramique-verre-bois-choisir-finition-meuble",
+   "rules": [
+    {
+     "id": "J22",
+     "from": [
+      "La céramique résiste à la chaleur et aux taches, le verre montre le piètement, le bois demande un dessous de plat. Ce que chaque matière demande au quotidien, et comment la choisir."
+     ],
+     "to": [
+      "Les différences d’aspect et d’entretien entre la céramique à décors de marbre, le verre clair ou texturé et le bois, noyer ou chêne."
+     ]
+    },
+    {
+     "id": "J23",
+     "from": [
+      "La céramique : l’aspect du marbre, en plus résistant"
+     ],
+     "to": [
+      "Céramique : décors et entretien"
+     ]
+    },
+    {
+     "id": "J24",
+     "from": [
+      "Les céramiques Marmi reproduisent jusqu’à dix-huit marbres selon le modèle, du Calacatta blanc veiné au Portoro noir et or. Contrairement au marbre, elles résistent aux taches de citron ou de vin et à la chaleur : c’est la matière d’une table de repas quotidiens. Sur Napoleon Keramik et Rado Keramik, la céramique habille aussi la base. Elle supporte même une terrasse couverte, avec Napoleon Keramik Outdoor."
+     ],
+     "to": [
+      "Les décors Marmi reprennent notamment le Calacatta et le Portoro, jusqu’à dix-huit selon le modèle. Sur Napoleon Keramik et Rado Keramik, la céramique recouvre aussi la base, et Napoleon Keramik Outdoor l’emploie pour une terrasse couverte. Pour les produits de nettoyage et les plats chauds, suivez la notice du modèle et de sa finition."
+     ]
+    },
+    {
+     "id": "J25",
+     "from": [
+      "Le verre : le piètement visible"
+     ],
+     "to": [
+      "Verre : transparence et reflets"
+     ]
+    },
+    {
+     "id": "J27",
+     "from": [
+      "Le bois : noyer Canaletto ou chêne brûlé"
+     ],
+     "to": [
+      "Bois : noyer Canaletto ou chêne brûlé"
+     ]
+    },
+    {
+     "id": "J29",
+     "from": [
+      "Au showroom, avec une photo de la pièce"
+     ],
+     "to": [
+      "Échantillons et lumière"
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "posts",
+   "slug": "associer-table-chaises-salle-a-manger",
+   "rules": [
+    {
+     "id": "associer-table-chaises-salle-a-manger.meta_description",
+     "from": [
+      "Une pièce forte, une finition en commun, 62 à 64 cm par chaise à accoudoirs : associer une table et des chaises sans tout assortir."
+     ],
+     "to": [
+      "Associer une table et des chaises sans tout assortir : un seul élément très dessiné, une finition commune et 62 à 64 cm par chaise à accoudoirs."
+     ]
+    },
+    {
+     "id": "J40",
+     "from": [
+      "Le cuir et le similicuir s’essuient d’un geste : c’est le choix d’une salle à manger avec des enfants. Le tissu et le micro-nubuck sont plus doux et plus chauds au toucher. Rhonda existe en plus de cent teintes, entre cuir mince, similicuir, tissu et micro-nubuck."
+     ],
+     "to": [
+      "Rhonda existe en cuir mince, similicuir, tissu et micro-nubuck, en plus de cent teintes. Comparez les échantillons et les consignes de nettoyage de chaque finition, surtout pour une table utilisée tous les jours."
+     ]
+    },
+    {
+     "id": "associer-table-chaises-salle-a-manger.cta_text",
+     "from": [
+      "Rhonda, Greta, Miranda ML et Zuleika : dimensions, revêtements et fiches techniques."
+     ],
+     "to": [
+      "Dimensions, revêtements et fiches techniques de Rhonda, Greta, Miranda ML et Zuleika."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "posts",
+   "slug": "choisir-forme-proportions-table-salle-a-manger",
+   "rules": [
+    {
+     "id": "J43",
+     "from": [
+      "60 cm par convive, 90 cm de passage, et le piètement qui décide où l’on s’assoit : les mesures qui permettent de choisir la forme et la taille d’une table avant de la voir."
+     ],
+     "to": [
+      "Les mesures pour choisir la forme et la taille d’une table : 60 cm par convive, 90 cm de passage et la place laissée par le piètement."
+     ]
+    },
+    {
+     "id": "J47",
+     "from": [
+      "Autour d’une table ronde, chaque convive voit tous les autres : 140 cm pour six personnes, 180 cm pour huit à dix, comme Botero. Au-delà, on ne se parle plus d’un bord à l’autre. La table carrée a le même avantage dans une pièce carrée : Skorpio existe en 150 × 150 cm pour huit personnes et en 200 × 200 cm pour douze."
+     ],
+     "to": [
+      "Autour d’une table ronde, chaque convive voit tous les autres : 140 cm pour six personnes, 180 cm pour huit à dix, comme Botero. La table carrée a le même avantage dans une pièce carrée : Skorpio existe en 150 × 150 cm pour huit personnes et en 200 × 200 cm pour douze."
+     ]
+    },
+    {
+     "id": "J49",
+     "from": [
+      "Le piètement décide où l’on peut s’asseoir. Une base centrale, comme celles de Napoleon Keramik ou de Botero, laisse libres les places autour du plateau : on peut ajouter une chaise sans buter contre un pied d’angle. Sur Butterfly, la base en ruban d’acier mesure 160 cm sous un plateau de 240 cm : il reste 40 cm à chaque extrémité pour s’asseoir en bout de table."
+     ],
+     "to": [
+      "Le piètement décide où l’on peut s’asseoir. Une base centrale, comme celles de Napoleon Keramik ou de Botero, libère les angles du plateau ; vérifiez son encombrement sur le plan coté. Sur Butterfly, la base en ruban d’acier mesure 160 cm sous un plateau de 240 cm : il reste 40 cm à chaque extrémité pour s’asseoir en bout de table."
+     ]
+    },
+    {
+     "id": "J51",
+     "from": [
+      "Tracez le contour du plateau au sol avec du ruban de masquage et posez-y vos chaises actuelles : en deux jours, vous saurez si les passages suffisent. Envoyez une photo de ce tracé et les mesures de la pièce au showroom sur WhatsApp : le conseiller vous propose les formats qui conviennent."
+     ],
+     "to": [
+      "Tracez le contour du plateau au sol avec du ruban de masquage et posez-y vos chaises actuelles pour tester les passages. Envoyez une photo de ce tracé et les mesures de la pièce au showroom sur WhatsApp : le conseiller vous propose les formats qui conviennent."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "botero-ker-wood-round",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "A09-02",
+     "from": [
+      "Il mesure 160 ou 180 cm de diamètre. Dans la version T, le disque en céramique pivote pour faire circuler les plats."
+     ],
+     "to": [
+      "La base est revêtue d’argile spatulée, en Cairo, Oslo ou Marrakech."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "botero-keramik-round",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "A08-03",
+     "from": [
+      "Botero Keramik Round associe la base galbée en argile spatulée, Cairo, Oslo ou Marrakech, à un plateau en céramique en quinze décors. La plaque de fond est titane, bronze ou noir gaufré."
+     ],
+     "to": [
+      "La base est revêtue d’argile spatulée, en Cairo, Oslo ou Marrakech. La plaque stabilisatrice est titane, bronze ou noir gaufré."
+     ]
+    },
+    {
+     "id": "A08-03",
+     "from": [
+      "Le plateau rond mesure 100 ou 118 cm, ou 140 et 158 cm de diamètre. Un plateau central pivotant est proposé en option."
+     ],
+     "to": [
+      "Un plateau central pivotant est proposé en option."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "botero-wood-round",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "A07-03",
+     "from": [
+      "Le plateau rond mesure 140, 160 ou 180 cm de diamètre. Un plateau central pivotant est proposé en option."
+     ],
+     "to": [
+      "Un plateau central pivotant est proposé en option."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "botero-argile",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "A06-03",
+     "from": [
+      "Botero Argile repose sur une base galbée en polymère spatulé en argile ; le plateau en MDF reçoit la même finition. Trois teintes : Cairo, Oslo et Marrakech."
+     ],
+     "to": [
+      "La base galbée est en polymère, revêtue d’argile appliquée à la spatule ; le plateau en MDF reçoit la même finition, en Cairo, Oslo ou Marrakech."
+     ]
+    },
+    {
+     "id": "A06-03",
+     "from": [
+      "Une plaque en acier laqué gaufré noir stabilise la base. Le plateau rond mesure 140, 160 ou 180 cm de diamètre."
+     ],
+     "to": [
+      "Une plaque en acier laqué gaufré noir stabilise la base."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "aladdin",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "C04-02-2",
+     "from": [
+      "Elle s’installe seule ou en composition de deux à six suspensions. Une télécommande avec variateur est proposée en option."
+     ],
+     "to": [
+      "Une télécommande avec variateur est proposée en option."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "cloudine",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "C03-01-2",
+     "from": [
+      "Elle s’installe seule ou en grappe de deux à douze diffuseurs, sur une platine ronde."
+     ],
+     "to": [
+      "Les compositions se fixent sur une platine ronde de 25 cm."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "paris",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "C02-02-2",
+     "from": [
+      "Deux tailles de globe, 25 et 33 cm de diamètre, et des compositions sur platine pour deux à six suspensions. Une télécommande avec variateur est proposée en option."
+     ],
+     "to": [
+      "Une télécommande avec variateur est proposée en option."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "nautilus",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "amsterdam",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "B14-04",
+     "from": [
+      "À l’intérieur, des étagères en verre transparent ; un tiroir intérieur est proposé en option. Deux, trois ou quatre portes, de 147 à 294 cm."
+     ],
+     "to": [
+      "À l’intérieur, des étagères en verre transparent ; un tiroir intérieur est proposé en option."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "kayak",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "sinatra",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "B10-01",
+     "from": [
+      "Des dossiers réglables par un mécanisme intégré. Droit ou d’angle, en tissu déhoussable, plus de 200 teintes."
+     ],
+     "to": [
+      "Des dossiers réglables par un mécanisme intégré. Droit ou d’angle, en tissu déhoussable."
+     ]
+    },
+    {
+     "id": "B10-03",
+     "from": [
+      "Le revêtement en tissu, déhoussable, se choisit parmi plus de deux cents teintes."
+     ],
+     "to": [
+      "Le tissu se choisit dans les catégories T10 à T90."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "mykonos",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "B09-01",
+     "from": [
+      "Des éléments aux formes arrondies, à assembler droit ou d’angle. En tissu déhoussable ou en cuir, près de 300 revêtements."
+     ],
+     "to": [
+      "Des éléments aux formes arrondies, à assembler droit ou d’angle, en tissu déhoussable ou en cuir."
+     ]
+    },
+    {
+     "id": "B09-03",
+     "from": [
+      "Le revêtement se choisit en tissu ou en cuir, parmi près de trois cents teintes. Il est déhoussable dans la version en tissu."
+     ],
+     "to": [
+      "Le tissu se choisit de T10 à T90, le cuir dans les gammes Glove, Magnifica, Nabuk, Perfetto ou mince."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "douglas",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "B08-03",
+     "from": [
+      "Les coussins de dossier sont garnis de plumes. Le revêtement se choisit en tissu ou en cuir, parmi près de trois cents teintes, et se déhousse dans la version en tissu."
+     ],
+     "to": [
+      "Le tissu se choisit de T10 à T90, le cuir dans les gammes Glove, Magnifica, Nabuk, Perfetto ou mince. Le revêtement est déhoussable dans la version en tissu."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "craig",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "B07-01",
+     "from": [
+      "Des coussins de dossier garnis de plumes sur une structure en bois. Droit ou d’angle, en tissu déhoussable ou en cuir, près de 300 revêtements."
+     ],
+     "to": [
+      "Des coussins de dossier garnis de plumes sur une structure en bois. Droit ou d’angle, en tissu déhoussable ou en cuir."
+     ]
+    },
+    {
+     "id": "B07-03",
+     "from": [
+      "Le revêtement se choisit en tissu ou en cuir, parmi près de trois cents teintes. Il est déhoussable dans la version en tissu."
+     ],
+     "to": [
+      "Le tissu se choisit de T10 à T90, le cuir dans les gammes Glove, Magnifica, Nabuk, Perfetto ou mince. Le revêtement est déhoussable dans la version en tissu."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "zuleika",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "B04-01",
+     "from": [
+      "Habillée de cuir, coutures et profils ton sur ton, sur une structure en acier. Assise à 46 cm, 21 teintes."
+     ],
+     "to": [
+      "Habillée de cuir, coutures et profils ton sur ton, sur une structure en acier. Assise à 46 cm."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "miranda-ml",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "B03-01",
+     "from": [
+      "Une coque enveloppante sur un fin piètement en acier, assise à 47 cm. Tissu, micro-nubuck, cuir mince ou similicuir, plus de 100 teintes."
+     ],
+     "to": [
+      "Une coque enveloppante sur un fin piètement en acier, assise à 47 cm."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "tyron-keramik",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "A05-03",
+     "from": [
+      "Le plateau existe en dix-neuf décors de céramique, et en quatre formes : rectangulaire, aux angles adoucis, biscuit ou boomerang, de 200 à 300 cm."
+     ],
+     "to": [
+      "Le plateau existe en dix-neuf décors de céramique : dix-huit Marmi et KS Luxor."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "butterfly-keramik",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "A04-03",
+     "from": [
+      "Le plateau en céramique existe en dix-neuf décors, de l’Alabastro au Taj Mahal et au Portoro. Il mesure 240 ou 300 cm de long, rectangulaire ou aux angles adoucis."
+     ],
+     "to": [
+      "Le plateau, rectangulaire ou aux angles adoucis, existe en dix-neuf décors de céramique : dix-huit Marmi, de l’Alabastro au Portoro, et KS Luxor."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "butterfly",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "A03-03",
+     "from": [
+      "Le plateau en verre de 15 mm, posé sur la base, est clair, extra-clair, biseauté ou en verre cuit (MIST). Il mesure 240 ou 300 cm de long, en version rectangulaire ou aux angles adoucis."
+     ],
+     "to": [
+      "Le plateau en verre de 15 mm est clair, extra-clair, biseauté ou en verre cuit (MIST)."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "glenn",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "C15-01",
+     "from": [
+      "Tout en verre miroité, aux bords courbés. À poser au sol ou à fixer au mur, 120 × 120 ou 80 × 190 cm."
+     ],
+     "to": [
+      "Un miroir en verre miroité fumé ou bronze, aux bords courbés, carré ou rectangulaire."
+     ]
+    },
+    {
+     "id": "C15-02",
+     "from": [
+      "Il existe en carré de 120 cm ou en rectangle de 80 × 190 cm, à poser au sol ou à fixer au mur, horizontalement ou verticalement. Verre miroité, fumé ou bronze."
+     ],
+     "to": [
+      "Il se pose au sol ou se fixe au mur, horizontalement ou verticalement, en 120 × 120 ou 80 × 190 cm."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "cosmos",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "C14-02",
+     "from": [
+      "Il existe en verre miroité fumé ou bronze, en 120 ou 157 cm de diamètre. Ses supports permettent un montage horizontal ou vertical."
+     ],
+     "to": [
+      "Ses supports permettent un montage horizontal ou vertical."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "rado-keramik",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "C13-01",
+     "from": [
+      "Tout en céramique, base comprise, façonnée selon un procédé breveté. 38 cm de profondeur, pour une entrée étroite ; 127 ou 157 cm de long."
+     ],
+     "to": [
+      "Plateau et base en céramique, la base façonnée selon un procédé breveté. 38 cm de profondeur, pour une entrée étroite ; 127 ou 157 cm de long."
+     ]
+    },
+    {
+     "id": "rado-keramik.content[0]",
+     "from": [
+      "Rado Keramik est entièrement en céramique Marmi, du plateau à la base. Cinq décors : Portoro, Borghini Calacatta, Colosseo, Invisible et Taj Mahal."
+     ],
+     "to": [
+      "Cinq décors Marmi : Portoro, Borghini Calacatta, Colosseo, Invisible et Taj Mahal."
+     ]
+    },
+    {
+     "id": "C13-02",
+     "from": [
+      "La base est façonnée selon un procédé exclusif breveté ; ses légères irrégularités de forme et de teinte font partie de la pièce. Deux longueurs, 127 et 157 cm. La console se fixe au mur."
+     ],
+     "to": [
+      "La base est façonnée selon un procédé exclusif breveté ; ses légères irrégularités de forme et de teinte font partie de la pièce. La console se fixe au mur."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "nettuno",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "westin",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "dodo",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "C10-01",
+     "from": [
+      "Dodo est un cylindre en verre artistique au décor en relief, posé sur une base en métal laqué gaufré bronze."
+     ],
+     "to": [
+      "La base est en métal laqué gaufré bronze."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "adrian-wood",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "C09-01-2",
+     "from": [
+      "Adrian Wood associe deux essences sur un même plateau : noyer Canaletto avec des détails en chêne brûlé, ou chêne brûlé avec des détails en noyer. Les bords du plateau sont biseautés."
+     ],
+     "to": [
+      "Le plateau associe le noyer Canaletto à des détails en chêne brûlé, ou le chêne brûlé à des détails en noyer. Ses bords sont biseautés."
+     ]
+    },
+    {
+     "id": "C09-02-2",
+     "from": [
+      "La base conique en acier laqué gaufré est titane ou bronze. Ses trois formats existent en 28, 38 et 48 cm de haut, pour composer deux ou trois tables."
+     ],
+     "to": [
+      "La base conique en acier laqué gaufré est titane ou bronze."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "albert-keramik",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "C08-03-2",
+     "from": [
+      "La céramique reprend le dessin des marbres, du Golden Calacatta au Portoro et au Taj Mahal : seize décors au choix. Le plateau de 59 cm existe en 34, 44 ou 54 cm de haut, les autres formats en 28, 38 ou 48 cm : deux ou trois tables de hauteurs différentes s’associent."
+     ],
+     "to": [
+      "La céramique reprend le dessin des marbres, du Golden Calacatta au Portoro et au Taj Mahal. Le plateau de 59 cm existe en 34, 44 ou 54 cm de haut, les autres formats en 28, 38 ou 48 cm."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "arena",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "C07-02-2",
+     "from": [
+      "Arena pose un plateau rond en bois laqué sur une base en acier gaufré noir. La finition Brushed, bronze ou grise, est brossée : ses nuances et son brossage varient d’une pièce à l’autre, car le brossage est fait à la main."
+     ],
+     "to": [
+      "La base est en acier gaufré noir. La finition Brushed, bronze ou grise, est brossée à la main : ses nuances varient d’une pièce à l’autre."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "greta-outdoor",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "napoleon-keramik-outdoor",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "C05-01-2",
+     "from": [
+      "Napoleon Keramik pour une terrasse ou une véranda couverte : plateau et base en céramique, cinq décors de marbre, jusqu’à 320 cm."
+     ],
+     "to": [
+      "Napoleon Keramik en version Outdoor, pour une terrasse ou une véranda couverte. Plateau et base en céramique, cinq décors de marbre, de 200 à 320 cm."
+     ]
+    },
+    {
+     "id": "C05-02-2",
+     "from": [
+      "Le plateau existe en cinq formes, de 200 à 320 cm : rectangulaire, ovale, biscuit, polygonale ou aux angles adoucis."
+     ],
+     "to": [
+      "Le plateau existe en cinq formes : rectangulaire, ovale, biscuit, polygonale ou aux angles adoucis."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "bloom",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "airport",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "B12-01",
+     "from": [
+      "Fixée au mur ou au plafond, elle longe un mur, forme un angle ou sépare deux espaces. Étagères de 60 à 310 cm, 29 cm de profondeur, caissons et bureau."
+     ],
+     "to": [
+      "Une bibliothèque fixée au mur ou au plafond, qui longe un mur, forme un angle ou sépare deux espaces. Étagères de 60 à 310 cm, 29 cm de profondeur."
+     ]
+    },
+    {
+     "id": "B12-04",
+     "from": [
+      "Montants en acier titane, bronze, graphite, blanc ou noir ; étagères et caissons en graphite, blanc, noyer Canaletto, chêne brûlé, Brushed Bronze ou Brushed Grey. Envoyez-nous les mesures du mur : nous vous proposons une composition."
+     ],
+     "to": [
+      "Montants en acier titane, bronze, graphite, blanc ou noir ; étagères et caissons en graphite, blanc, noyer Canaletto, chêne brûlé, Brushed Bronze ou Brushed Grey. Nous proposons une composition à partir des mesures du mur."
+     ]
+    }
+   ],
+   "seo": {
+    "description": [
+     "Airport : bibliothèque fixée au mur ou au plafond, étagères, caissons Box et module Desk. Dimensions des composants et finitions acier et bois.",
+     "Airport : bibliothèque fixée au mur ou au plafond, étagères de 60 à 310 cm, caissons Box et module bureau. Dimensions et finitions acier et bois."
+    ]
+   }
+  },
+  {
+   "collection": "models",
+   "slug": "chelsea",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "B11-02",
+     "from": [
+      "Chelsea est un buffet aux façades polygonales, en bois laqué titane, Paprika ou Mint. Son plateau, en verre miroir bronze ou en céramique Colosseo ou Taj Mahal, s’inscrit dans un rebord incliné."
+     ],
+     "to": [
+      "Son plateau, en verre miroir bronze ou en céramique Colosseo ou Taj Mahal, s’inscrit dans un rebord incliné."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "ruby-lounge",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "B06-01",
+     "from": [
+      "Le fauteuil bas de Ruby : structure apparente en frêne, dossier arrondi, coutures visibles. 81 cm de large."
+     ],
+     "to": [
+      "Le fauteuil de Ruby, à structure apparente en frêne, dossier arrondi et coutures visibles. 81 cm de large."
+     ]
+    }
+   ],
+   "seo": {
+    "description": [
+     "Ruby Lounge : fauteuil de 81 × 92 × 76 cm en frêne teinté, tissu, micro nubuck ou cuir mince. Consultez les finitions et la fiche technique.",
+     "Fauteuil Ruby Lounge, 81 × 92 cm, hauteur 76 cm, en frêne teinté, tissu, micro-nubuck ou cuir mince. Finitions et fiche technique."
+    ]
+   }
+  },
+  {
+   "collection": "models",
+   "slug": "ruby",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "B05-03",
+     "from": [
+      "Revêtement en tissu ou en cuir, non déhoussable. Le fauteuil Ruby Lounge, 81 cm de large, reprend la même structure."
+     ],
+     "to": [
+      "Revêtement en tissu ou en cuir, non déhoussable."
+     ]
+    }
+   ],
+   "seo": {
+    "description": [
+     "Ruby S200 et AC80 : canapé de 200 cm et fauteuil de 81 cm, cadre en frêne teinté, tissu ou cuir. Comparez dimensions, finitions et fiche technique.",
+     "Canapé Ruby de 200 cm et fauteuil Ruby Lounge de 81 cm, structure apparente en frêne teinté, tissu ou cuir. Dimensions, finitions et fiche technique."
+    ]
+   }
+  },
+  {
+   "collection": "models",
+   "slug": "greta",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "B02-01",
+     "from": [
+      "Un dossier rembourré qui se prolonge en accoudoirs, fendu à l’arrière, sur de fins pieds en acier. Tissu, cuir, micro-nubuck ou similicuir."
+     ],
+     "to": [
+      "Un dossier rembourré qui se prolonge en accoudoirs, fendu à l’arrière, sur de fins pieds en acier. 62 × 62 cm, hauteur 78 cm."
+     ]
+    }
+   ],
+   "seo": {
+    "description": [
+     "Chaise Greta : assise et dossier séparés, appui arrière dédoublé et acier laqué. Consultez les dimensions, revêtements fixes et plans.",
+     "Chaise Greta : dossier rembourré prolongé en accoudoirs, 62 × 62 cm, hauteur 78 cm. Structure en acier laqué, cinq teintes, revêtements et fiche technique."
+    ]
+   }
+  },
+  {
+   "collection": "models",
+   "slug": "rhonda",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "B01-01",
+     "from": [
+      "Un dossier lisse à l’extérieur et plissé à l’intérieur, prolongé en accoudoirs. Pieds chromés ou laqués, plus de 100 revêtements."
+     ],
+     "to": [
+      "Une chaise à accoudoirs, au dossier lisse à l’extérieur et plissé à l’intérieur. 63 × 60 cm, hauteur 79 cm."
+     ]
+    }
+   ],
+   "seo": {
+    "description": [
+     "Rhonda : dossier arrondi plissé, pieds en acier et revêtements non déhoussables. Dimensions, finitions et différences avec les autres versions.",
+     "Chaise Rhonda : dossier plissé à l’intérieur, accoudoirs, pieds chromés ou laqués, 63 × 60 cm. Revêtements, dimensions et fiche technique."
+    ]
+   }
+  },
+  {
+   "collection": "models",
+   "slug": "napoleon-keramik",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "A02-01",
+     "from": [
+      "Plateau et base tout en céramique, la base en deux volumes arrondis. Cinq décors de marbre, de 200 à 320 cm, jusqu’à 14 personnes."
+     ],
+     "to": [
+      "Plateau et base en céramique, la base en deux volumes arrondis. Cinq décors de marbre, de 200 à 320 cm, jusqu’à 14 places."
+     ]
+    },
+    {
+     "id": "A02-03",
+     "from": [
+      "Napoleon Keramik est entièrement en céramique : le plateau et la base, formée de deux volumes arrondis séparés par un creux vertical. Rectangulaire, ovale, biscuit, polygonale ou aux angles adoucis, de 200 à 320 cm, elle reçoit jusqu’à quatorze personnes."
+     ],
+     "to": [
+      "La base est formée de deux volumes arrondis séparés par un creux vertical. Le plateau existe en cinq formes : rectangulaire, ovale, biscuit, polygonale ou aux angles adoucis."
+     ]
+    }
+   ]
+  },
+  {
+   "collection": "models",
+   "slug": "skorpio",
+   "rules": [
+    {
+     "id": "A-S01",
+     "from": [
+      "Pour savoir si ce modèle est exposé au showroom de Casablanca, écrivez-nous sur WhatsApp en indiquant son nom."
+     ],
+     "to": []
+    },
+    {
+     "id": "A01-01",
+     "from": [
+      "Des lignes d’acier obliques, visibles à travers le plateau en verre. Carrée jusqu’à 200 × 200 cm pour douze personnes, ou rectangulaire ; sept finitions de piètement."
+     ],
+     "to": [
+      "Des lignes d’acier obliques, visibles à travers le plateau en verre. Quatorze formats, jusqu’à 200 × 200 cm pour douze personnes."
+     ]
+    },
+    {
+     "id": "A01-03",
+     "from": [
+      "Skorpio pose un plateau en verre sur un piètement en acier aux lignes obliques, visible à travers le plateau. Carrée, de 150 × 150 cm pour huit personnes à 200 × 200 cm pour douze, ou rectangulaire, de 160 × 90 à 300 × 130 cm."
+     ],
+     "to": [
+      "Carrée de 150 × 150 à 200 × 200 cm, ou rectangulaire de 160 × 90 à 300 × 130 cm, avec ou sans angles adoucis."
+     ]
+    }
+   ]
+  }
+ ]
+}

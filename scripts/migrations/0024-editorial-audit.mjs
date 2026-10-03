@@ -7,6 +7,7 @@
  *   - an empty `to` deletes the paragraph, or empties the field;
  *   - `part: true` replaces a sentence inside a longer text instead of the whole text.
  * `sections` edits keyed page sections (heading, text…), `remove` deletes a section.
+ * `seo` sets the item's native search title or description: `{ description: [current, new] }`.
  *
  *   EMDASH_BASE_URL=https://cattelan-maroc-preview.cattelan.workers.dev node scripts/migrations/0024-editorial-audit.mjs [--apply]
  */
@@ -101,7 +102,15 @@ export function itemChange(item, entry) {
     data.sections = sections;
     applied.push(update.id || `sections.${sectionKey}`);
   }
-  return { data, applied, missing, changed: JSON.stringify(data) !== JSON.stringify(item.data) };
+  let seo = null;
+  for (const [field, [current, next]] of Object.entries(entry.seo || {})) {
+    const value = item.seo?.[field] ?? '';
+    if (value === next) continue;
+    if (value !== current) { missing.push(`seo.${field}`); continue; }
+    seo = { ...(seo || item.seo || {}), [field]: next };
+    applied.push(`seo.${field}`);
+  }
+  return { data, seo, applied, missing, changed: JSON.stringify(data) !== JSON.stringify(item.data) || !!seo };
 }
 
 export function validateManifest(manifest) {
@@ -124,7 +133,7 @@ export async function planAudit(api, manifest) {
     const { item } = await api(`/_emdash/api/content/${entry.collection}/${encodeURIComponent(summary.id)}`);
     const change = itemChange(item, entry);
     for (const id of change.missing) missing.push(`${entry.collection}/${entry.slug}: ${id}`);
-    if (change.changed) changes.push({ collection: entry.collection, slug: entry.slug, id: summary.id, rules: change.applied, before: item.data, entry });
+    if (change.changed) changes.push({ collection: entry.collection, slug: entry.slug, id: summary.id, rules: change.applied, before: item.data, beforeSeo: item.seo, entry });
   }
   return { changes, missing };
 }
@@ -137,7 +146,7 @@ export async function applyAudit(api, plan, { beforeWrite, log = () => {} }) {
     const fresh = await api(path);
     const again = itemChange(fresh.item, change.entry);
     if (!again.changed) continue;
-    await api(path, { method: 'PUT', data: { _rev: fresh._rev, data: again.data } });
+    await api(path, { method: 'PUT', data: { _rev: fresh._rev, data: again.data, ...(again.seo ? { seo: again.seo } : {}) } });
     const saved = await api(path);
     if (fresh.item.status === 'published') await api(`${path}/publish`, { method: 'POST', data: { _rev: saved._rev } });
     log(`${change.collection}/${change.slug}: ${again.applied.join(', ')}`);
@@ -160,7 +169,9 @@ async function main() {
     for (const collection of ['pages', 'families', 'models', 'posts', 'site_content']) {
       dump[collection] = {};
       for (const summary of (await api(`/_emdash/api/content/${collection}?limit=100`)).items || []) {
-        dump[collection][summary.slug] = (await api(`/_emdash/api/content/${collection}/${encodeURIComponent(summary.id)}`)).item.data;
+        const { item } = await api(`/_emdash/api/content/${collection}/${encodeURIComponent(summary.id)}`);
+        dump[collection][summary.slug] = item.data;
+        (dump.seo ||= {})[`${collection}/${summary.slug}`] = item.seo || null;
       }
     }
     await writeFile(join(dir, 'live.json'), JSON.stringify(dump, null, 1), { mode: 0o600 });
