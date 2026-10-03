@@ -1,0 +1,22 @@
+{
+ "version": 8,
+ "migration": "0024-editorial-audit",
+ "source": "Phrase d’accroche de l’accueil choisie par le client le 3 octobre 2026.",
+ "entries": [
+  {
+   "collection": "pages",
+   "slug": "home",
+   "rules": [
+    {
+     "id": "HERO-1",
+     "from": [
+      "Tables, chaises, canapés, rangements et luminaires de la maison italienne. Tout le catalogue se commande au showroom et se fabrique en Italie."
+     ],
+     "to": [
+      "Fabriqués en Italie aux formats et finitions que vous choisissez, livrés et installés partout au Maroc."
+     ]
+    }
+   ]
+  }
+ ]
+}
