@@ -87,12 +87,20 @@ test("normalizes name and email without opting a visitor into communications", (
   assert.equal(validateInput(omitted).communicationsConsent, false);
 });
 
+test("WhatsApp number and city are optional, but checked when given", () => {
+  const value = validateInput({ ...rawInput(), whatsapp: "", city: "" });
+  assert.equal("whatsapp" in value, false);
+  assert.equal("city" in value, false);
+  const missing = validateInput({ ...rawInput(), whatsapp: undefined, city: undefined });
+  assert.equal(missing.whatsapp, undefined);
+});
+
 test("rejects bots, oversized values, control characters and coerced consent", () => {
   for (const change of [
     { website: "https://spam.test" }, { name: "x".repeat(121) },
     { name: "Name\r\nHeader" }, { email: "invalid" }, { communicationsConsent: "true" },
     { sourcePath: "//untrusted.test" }, { sourcePath: "/?email=private" }, { requestId: "untrusted" },
-    { whatsapp: "123" }, { whatsapp: undefined }, { city: "Paris" }, { city: undefined },
+    { whatsapp: "123" }, { city: "Paris" },
   ]) assert.throws(() => validateInput({ ...rawInput(), ...change }), InputError);
 });
 

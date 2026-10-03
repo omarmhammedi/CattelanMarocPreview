@@ -17,8 +17,9 @@ export type RequestInput = {
   catalogueId: string;
   name: string;
   email: string;
-  whatsapp: string;
-  city: typeof CITIES[number];
+  // Optional since 3 October 2026; absent when the visitor leaves them empty.
+  whatsapp?: string;
+  city?: typeof CITIES[number];
   communicationsConsent: boolean;
   sourcePath: string;
 };
@@ -114,10 +115,10 @@ export function validateInput(value: unknown): RequestInput {
   if (!/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/u.test(email)) {
     throw new InputError("INVALID_EMAIL", "Indiquez une adresse e-mail valide.");
   }
-  const whatsapp = text("whatsapp", 30, "INVALID_WHATSAPP", "Indiquez un numéro WhatsApp valide.").replace(/\s+/gu, " ");
-  if (!isWhatsappNumber(whatsapp)) throw new InputError("INVALID_WHATSAPP", "Indiquez un numéro WhatsApp valide.");
-  const city = text("city", 40, "INVALID_CITY", "Choisissez votre ville.");
-  if (!(CITIES as readonly string[]).includes(city)) throw new InputError("INVALID_CITY", "Choisissez votre ville.");
+  const whatsapp = data.whatsapp === undefined ? "" : text("whatsapp", 30, "INVALID_WHATSAPP", "Indiquez un numéro WhatsApp valide.").replace(/\s+/gu, " ");
+  if (whatsapp && !isWhatsappNumber(whatsapp)) throw new InputError("INVALID_WHATSAPP", "Indiquez un numéro WhatsApp valide.");
+  const city = data.city === undefined ? "" : text("city", 40, "INVALID_CITY", "Choisissez votre ville.");
+  if (city && !(CITIES as readonly string[]).includes(city)) throw new InputError("INVALID_CITY", "Choisissez votre ville.");
   if (data.communicationsConsent !== undefined && typeof data.communicationsConsent !== "boolean") {
     throw new InputError("INVALID_CONSENT", "Veuillez vérifier votre choix de communication.");
   }
@@ -125,7 +126,7 @@ export function validateInput(value: unknown): RequestInput {
   if (!sourcePath.startsWith("/") || sourcePath.startsWith("//") || /[?#]/u.test(sourcePath)) {
     throw new InputError("INVALID_SOURCE", "Rechargez la page avant de réessayer.");
   }
-  return { requestId, catalogueId, name, email, whatsapp, city: city as RequestInput["city"], sourcePath, communicationsConsent: data.communicationsConsent === true };
+  return { requestId, catalogueId, name, email, ...(whatsapp ? { whatsapp } : {}), ...(city ? { city: city as NonNullable<RequestInput["city"]> } : {}), sourcePath, communicationsConsent: data.communicationsConsent === true };
 }
 
 /** Lead and outbox state are one value: a crash cannot leave a lead without its pending event. */

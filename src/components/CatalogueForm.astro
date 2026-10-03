@@ -22,9 +22,9 @@ const contactLabel = site.labels.contact || 'Coordonnées du showroom';
   <noscript><p>Activez JavaScript pour télécharger le catalogue, ou <a href="/showroom-casablanca/#showroom-contact">contactez le showroom</a>.</p><style>.catalogue-form button[type=submit]{display:none}</style></noscript>
   <div class="catalogue-fields">
     <div><label for={`${id}-name`}>{labels.name}</label><input id={`${id}-name`} name="name" autocomplete="name" required minlength="2" maxlength="120" aria-describedby={`${id}-name-error`} /><span class="field-error" id={`${id}-name-error`} data-field-error="name" hidden></span></div>
-    <div><label for={`${id}-whatsapp`}>WhatsApp</label><input id={`${id}-whatsapp`} name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" required maxlength="30" placeholder="+212 6…" aria-describedby={`${id}-whatsapp-error`} /><span class="field-error" id={`${id}-whatsapp-error`} data-field-error="whatsapp" hidden></span></div>
+    <div><label for={`${id}-whatsapp`}>Numéro WhatsApp (facultatif)</label><input id={`${id}-whatsapp`} name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" placeholder="Avec l’indicatif du pays" aria-describedby={`${id}-whatsapp-error`} /><span class="field-error" id={`${id}-whatsapp-error`} data-field-error="whatsapp" hidden></span></div>
     <div><label for={`${id}-email`}>{labels.email}</label><input id={`${id}-email`} name="email" type="email" autocomplete="email" required maxlength="254" aria-describedby={`${id}-email-error`} /><span class="field-error" id={`${id}-email-error`} data-field-error="email" hidden></span></div>
-    <div><label for={`${id}-city`}>Ville</label><select id={`${id}-city`} name="city" required aria-describedby={`${id}-city-error`}><option value="">Choisir une ville</option>{CITIES.map(city => <option>{city}</option>)}</select><span class="field-error" id={`${id}-city-error`} data-field-error="city" hidden></span></div>
+    <div><label for={`${id}-city`}>Ville (facultatif)</label><select id={`${id}-city`} name="city" aria-describedby={`${id}-city-error`}><option value="">Choisir une ville</option>{CITIES.map(city => <option>{city}</option>)}</select><span class="field-error" id={`${id}-city-error`} data-field-error="city" hidden></span></div>
   </div>
   <div class="form-trap" aria-hidden="true"><label for={`${id}-website`}>Site web</label><input id={`${id}-website`} name="website" tabindex="-1" autocomplete="off" /></div>
   <label class="form-consent"><input type="checkbox" name="communicationsConsent" value="yes" /><span>{labels.consent}</span></label>
@@ -61,8 +61,8 @@ const contactLabel = site.labels.contact || 'Coordonnées du showroom';
       setFieldError(emailInput, invalidEmail ? (form.dataset.emailError || 'Vérifiez votre adresse e-mail.') : '');
       const whatsapp = whatsappInput.value.trim();
       const digits = whatsapp.replace(/\D/gu, '').length;
-      const invalidWhatsapp = !/^\+?[\d\s().-]+$/u.test(whatsapp) || digits < 8 || digits > 15;
-      const invalidCity = !cityInput.value;
+      const invalidWhatsapp = !!whatsapp && (!/^\+?[\d\s().-]+$/u.test(whatsapp) || digits < 8 || digits > 15);
+      const invalidCity = false;
       setFieldError(whatsappInput, invalidWhatsapp ? 'Indiquez un numéro WhatsApp valide.' : '');
       setFieldError(cityInput, invalidCity ? 'Choisissez votre ville.' : '');
       const firstInvalid = [[invalidName, nameInput], [invalidWhatsapp, whatsappInput], [invalidEmail, emailInput], [invalidCity, cityInput]].find(([invalid]) => invalid);

@@ -1,0 +1,53 @@
+{
+ "version": 6,
+ "migration": "0024-editorial-audit",
+ "source": "Décisions du 3 octobre 2026 : délai jusqu’à la livraison ; conditions d’annulation et de remboursement retirées en attendant le texte du client.",
+ "entries": [
+  {
+   "collection": "pages",
+   "slug": "faq",
+   "sections": {
+    "faq_custom_3": {
+     "id": "DELAI-1",
+     "expect": {
+      "text": "Non. Le délai reste de 10 à 12 semaines à compter de la validation de la commande, le temps de la fabrication en Italie."
+     },
+     "text": "Non. La livraison intervient 10 à 12 semaines au maximum après la validation de la commande, personnalisée ou non."
+    },
+    "faq_order_4": {
+     "id": "F05",
+     "expect": {
+      "heading": "Puis-je annuler ou échanger une commande ?"
+     },
+     "remove": true
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "showroom-casablanca",
+   "sections": {
+    "faq_2": {
+     "id": "DELAI-2",
+     "expect": {
+      "text": "Le prix dépend des dimensions et des finitions : il figure dans un devis détaillé, établi après un échange avec un conseiller. Le délai est de 10 à 12 semaines après validation de la commande."
+     },
+     "text": "Le prix dépend des dimensions et des finitions : il figure dans un devis détaillé, établi après un échange avec un conseiller. La livraison intervient 10 à 12 semaines au maximum après validation de la commande."
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "votre-projet",
+   "sections": {
+    "cancellation": {
+     "id": "MNEW-18",
+     "expect": {
+      "heading": "Échange et remboursement"
+     },
+     "remove": true
+    }
+   }
+  }
+ ]
+}
