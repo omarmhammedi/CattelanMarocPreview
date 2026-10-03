@@ -1,0 +1,40 @@
+{
+ "version": 7,
+ "migration": "0024-editorial-audit",
+ "source": "Audit révision 3, MNEW-26 et MNEW-08 : paragraphes remplacés par des liens (décision du 3 octobre 2026).",
+ "entries": [
+  {
+   "collection": "pages",
+   "slug": "a-propos",
+   "sections": {
+    "advice": {
+     "id": "MNEW-26",
+     "expect": {
+      "heading": "Conseil et projets complets",
+      "text": "Pour un meuble, votre conseiller vous aide à fixer le format et les finitions, échantillons en main. Pour une maison entière, nous composons l’ensemble à partir de vos plans, jusqu’à l’installation, et nous travaillons aussi avec votre architecte."
+     },
+     "heading": "",
+     "text": "",
+     "cta_label": "Commande et livraison",
+     "cta_href": "/votre-projet/"
+    }
+   }
+  },
+  {
+   "collection": "pages",
+   "slug": "professionnels",
+   "sections": {
+    "terms": {
+     "id": "MNEW-08",
+     "expect": {
+      "heading": "Conditions professionnelles",
+      "text": "Les conditions réservées aux architectes et décorateurs sont communiquées sur demande par un conseiller."
+     },
+     "text": "",
+     "cta_label": "Demander les conditions professionnelles",
+     "cta_href": "/professionnels/#demande"
+    }
+   }
+  }
+ ]
+}
