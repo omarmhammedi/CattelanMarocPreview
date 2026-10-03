@@ -7,7 +7,7 @@ test('keeps the three actions, their order and their destinations', () => {
   assert.equal(actions.appointment.label, 'Prendre rendez-vous');
   assert.equal(actions.appointment.href, '/showroom-casablanca/#rendez-vous');
   assert.equal(actions.advisor.label, 'Nous écrire');
-  assert.equal(actions.catalogue.label, 'Recevoir le catalogue');
+  assert.equal(actions.catalogue.label, 'Télécharger le catalogue');
   assert.equal(actions.catalogue.href, '/catalogue/');
   for (const action of Object.values(actions)) assert.doesNotMatch(action.label, /prix/iu);
 });

@@ -2,7 +2,7 @@
 export const actions = {
   appointment: { label: 'Prendre rendez-vous', href: '/showroom-casablanca/#rendez-vous' },
   advisor: { label: 'Nous écrire', channel: 'WhatsApp' },
-  catalogue: { label: 'Recevoir le catalogue', href: '/catalogue/' },
+  catalogue: { label: 'Télécharger le catalogue', href: '/catalogue/' },
 } as const;
 export type ActionKey = keyof typeof actions;
 

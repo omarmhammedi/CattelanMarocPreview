@@ -39,6 +39,15 @@ test('corrects only the identified GFM71 spelling error and preserves the source
   assert.equal(finishNameLabel({name: 'GFM71 finition personnalisée', code: 'GFM71'}), 'GFM71 finition personnalisée');
 });
 
+test('writes imported finish names in French, capitalised, without a repeated code', () => {
+  assert.equal(finishNameLabel({name: 'iron grey satiné'}), 'Gris fer satiné');
+  assert.equal(finishNameLabel({name: 'oxybrass'}), 'Oxybrass');
+  assert.equal(finishNameLabel({name: 'miroité bronze'}), 'Miroité bronze');
+  assert.equal(finishNameLabel({name: 'NC noyer Canaletto'}), 'Noyer Canaletto');
+  assert.equal(finishNameLabel({name: 'KM05 Golden Calacatta opaque', code: 'KM05'}), 'KM05 Golden Calacatta opaque');
+  assert.equal(finishGroupLabel({group: 'pièces', material: 'metals'}, 'bloom'), 'Raccords — métal');
+});
+
 test('shows each finish reference once without confusing a code with a substring', () => {
   assert.equal(finishHasSeparateCode({name: 'GFM71 gaufré balnc', code: 'GFM71'}), false);
   assert.equal(finishHasSeparateCode({name: 'WB100', code: 'WB100'}), false);

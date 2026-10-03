@@ -19,6 +19,13 @@ const modelParts: Record<string, Record<string, string>> = {
   'botero-ker-wood-round': {pièces: 'Disque central'},
   amsterdam: {pièces: 'Inserts'},
   'botero-argile': {structure: 'Plateau et piètement'},
+  bloom: {pièces: 'Raccords'},
+};
+
+/** Imported finish names that are English, lowercase or carry a code the swatch already shows. */
+const names: Record<string, string> = {
+  'iron grey satiné': 'Gris fer satiné', laiton: 'Laiton brossé', oxybrass: 'Oxybrass', 'mix (fumé/blanc)': 'Fumé et blanc',
+  'NC noyer Canaletto': 'Noyer Canaletto',
 };
 
 /** Presentation only: preserve the imported values and leave unfamiliar categories intact. */
@@ -48,7 +55,9 @@ export function finishGroupLabel(finish: FinishLabel, model = ''): string {
 
 export function finishNameLabel(finish: FinishLabel): string {
   const name = finish.name || '';
-  return finish.code === 'GFM71' && name === 'GFM71 gaufré balnc' ? 'GFM71 gaufré blanc' : name;
+  if (finish.code === 'GFM71' && name === 'GFM71 gaufré balnc') return 'GFM71 gaufré blanc';
+  const label = names[name] ?? name;
+  return label.charAt(0).toLocaleUpperCase('fr') + label.slice(1);
 }
 
 /** The reference remains visible in the name when it is not repeated beneath it. */
