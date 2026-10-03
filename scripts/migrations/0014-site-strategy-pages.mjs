@@ -110,6 +110,9 @@ export async function authenticatedApi(origin, allowed = allowedPaths) {
     const cookie = session.cookie || session.cookies?.filter(item => item.domain?.replace(/^\./u, '') === origin.hostname).map(({ name, value }) => `${name}=${value}`).join('; ');
     assert(cookie, 'The session file holds no cookie for this origin.');
     headers = { Cookie: cookie };
+  } else if (process.env.EMDASH_API_TOKEN) {
+    // A personal access token (ec_pat_…) kept in the environment settings, never in the repository.
+    headers = { Authorization: `Bearer ${process.env.EMDASH_API_TOKEN.trim()}` };
   } else {
     const store = JSON.parse(await readFile(join(process.env.XDG_CONFIG_HOME || join(homedir(), '.config'), 'emdash/auth.json'), 'utf8'));
     const credential = store?.[origin.origin];
