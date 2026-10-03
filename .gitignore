@@ -11,3 +11,4 @@ test-results/
 playwright-report/
 emdash-env.d.ts
 worker-configuration.d.ts
+.claude/settings.local.json
