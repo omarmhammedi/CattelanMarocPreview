@@ -29,7 +29,7 @@ recommended wording. Applied to the drafts:
 All 31 drafts are in this folder. Each was written by a fresh agent with the `copywriting` skill, from its brief only
 (never from the current site text), then checked with `node scripts/copy-lint.mjs <draft> --brief <brief>`:
 0 blocking findings on all of them. Each draft has its own "Open points" section; this file gathers the questions
-that need your answer. Nothing has been applied to the live site.
+that need your answer. All 62 items were applied to the CMS and published on 4 October 2026 (see `apply/APPLIED.md`).
 
 ## A. Must be answered before publishing (placeholders in the text)
 
