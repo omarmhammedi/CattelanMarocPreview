@@ -1,0 +1,4 @@
+# Strings the copy linter accepts although a rule would flag them. One per line, matched in lower case.
+# A finding is skipped when its matched text sits inside an allowed string that appears in the same block.
+# Add a reason after a hash. Keep this list short.
+plus de 140 pays    # brand site and four press articles

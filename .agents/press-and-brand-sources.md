@@ -5,7 +5,8 @@ extra, **sourced** background on the brand and the showroom. Third-party wording
 
 Status key: **Published** = stated in at least one article, verifiably. **Client OK needed** = true as reported, but
 publishing it on the site needs the client's approval (see `docs/questionnaire-contenu-racha-home.md`).
-**Do not use** = conflicts with house rules or is unverifiable.
+**Do not use** = conflicts with the fact rules or is unverifiable. On 4 Oct 2026 the owner also decided to ignore
+every fact without an answer, including all "Client OK needed" items below.
 
 ## Articles found
 
@@ -45,7 +46,7 @@ Maroc piece. The owner confirmed on 4 Oct 2026 that **the showroom has opened (S
   directeur commercial de Cattelan Casablanca**; Paolo Cattelan, CEO Cattelan Italia.
 - The press also says the address "ambitionne de devenir un lieu de rencontre autour du design" for professionals
   and design lovers (Maisons du Maroc, ID Prestige, Déco Actuelle).
-- Status: now public in four outlets, but publishing the family story or names on the site still needs the **client's
+- **Owner decision (4 Oct 2026): this family story and the names are not used in the copy.** For the record: public in four outlets, but publishing the family story or names on the site still needs the **client's
   OK** (questionnaire Q2, Q3). Naming differs: Diva Ameublement (four outlets) vs Diva Home (Shoelifer). The link
   between Racha Home (the legal operator) and the Berrada family is still unconfirmed.
 - Instagram account name in Maisons du Maroc: "Cattelan Italia | Mobilier Design Casablanca" (@cattelanitalia.ma).
@@ -64,7 +65,8 @@ Maroc piece. The owner confirmed on 4 Oct 2026 that **the showroom has opened (S
 
 ## Contact
 
-AE Magazine and Maisons du Maroc print **+212 661 49 62 66**. The site uses **+212 771 105 490**. Unresolved (client question 1).
+AE Magazine and Maisons du Maroc print +212 661 49 62 66. **Owner decision (4 Oct 2026): use only the website's
++212 771 105 490.** The linter flags any other number.
 
 ## Wording: use with care
 
@@ -76,13 +78,14 @@ AE Magazine and Maisons du Maroc print **+212 661 49 62 66**. The site uses **+2
   "pensé pour durer", "qualité-prix").
 - "Fabrication 100 % italienne" (Shoelifer, Déco Actuelle): the site says "fabriqué en Italie". Keep that wording.
 
-## Official brand facts (cattelanitalia.com, identity page, read via summary: verify before publishing)
+## Official brand facts (cattelanitalia.com/fr/identity, raw page text read 4 Oct 2026)
 
 - Founded 1979 by Giorgio and Silvia Cattelan. Giorgio is the youngest of seven children, son of a carpenter from
   Thiene (Vicenza). First factory at **Carrè (VI) in 1982**. Started with small pieces in marble and glass; 1989
   widened to dining tables, chairs, shelving.
 - Sons Paolo and Lorenzo joined; **Paolo Cattelan has led the company since 2014** (also in Shoelifer).
-- **2011: acquisition of Arketipo**, a high-end upholstery maker in Florence. Verify the wording before using.
+- **2011: acquisition of Arketipo**, a Florence company specialised in upholstered furniture, led today by Lorenzo
+  (checked in the raw French page text).
 - Stated values: Made in Italy, quality, custom-made, flexibility, R&D, comfort, design, innovation, family.
 - Materials the brand lists: transparent or decorated glass, fine woods, ceramics, lacquered or hand-brushed
   finishes, soft upholstery, fine leathers. Production relies on a close network of local partner companies.
@@ -94,6 +97,6 @@ AE Magazine and Maisons du Maroc print **+212 661 49 62 66**. The site uses **+2
 1. 400 m², the Triangle d'Or, the opening in September 2026 and "première boutique monomarque" are confirmed by the
    owner and four articles. "Sur deux niveaux" is in none of them.
 2. The About page could gain a short, sourced history (1979, Carrè, 1982, Paolo Cattelan from 2014) with no new
-   claims. The Berrada story waits for client approval.
+   claims. The Berrada story is not used (owner decision).
 3. Bedrooms, rugs and mirrors appear in the press but not on the site. Ask whether to add them.
 4. Ask the client for the Golf du Maroc piece.

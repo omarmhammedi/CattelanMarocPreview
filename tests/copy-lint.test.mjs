@@ -1,0 +1,85 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { extractBlocks, lintBlocks, loadAllow } from '../scripts/copy-lint.mjs';
+
+const lint = (md, opts = { allow: [] }, name = 'x.md') => lintBlocks(extractBlocks(name, md), opts);
+const ids = (md, level) => lint(md).filter((f) => !level || f.level === level).map((f) => f.id);
+
+test('clean story-first copy passes', () => {
+  const md = "Giorgio Cattelan est le dernier de sept frères. Il a grandi dans l'atelier de son père, entouré de bois.";
+  assert.deepEqual(lint(md), []);
+});
+
+test('cliché words are blocking', () => {
+  assert.ok(ids('Un meuble raffiné et élégant, une pièce iconique.', 'block').includes('cliche'));
+  assert.ok(ids('Venez découvrir le showroom.', 'block').includes('cliche'));
+});
+
+test('AI tells are blocking', () => {
+  assert.ok(ids("Ce n'est pas une table, c'est une histoire.").includes('contrast-reveal'));
+  assert.ok(ids('Sans montage, sans attente, sans frais.').includes('negation-list'));
+  assert.ok(ids('Le résultat : une table.').includes('colon-reveal'));
+  assert.ok(ids('Une table pour huit ? Oui, en céramique.').includes('self-answered-question'));
+  assert.ok(ids('Venez nombreux !').includes('exclamation'));
+});
+
+test('headings: no order, no vous, questions allowed', () => {
+  assert.ok(ids('# Découvrez le showroom').includes('heading-order'));
+  assert.ok(ids('# Vous allez adorer la céramique').includes('heading-vous'));
+  assert.deepEqual(ids('# Comment vous contacter ?', 'block'), []);
+  assert.deepEqual(ids('# Cattelan Italia, de la Vénétie à Casablanca', 'block'), []);
+});
+
+test('dashes block in short copy, only review in body', () => {
+  assert.ok(ids('# Tables — verre et céramique', 'block').includes('dash-short'));
+  assert.ok(ids('**SEO title:** Tables – Cattelan', 'block').includes('dash-short'));
+  assert.deepEqual(ids('Une table — en verre.', 'block'), []);
+  assert.ok(ids('Une table — en verre.', 'review').includes('dash-body'));
+});
+
+test('only the website phone number is accepted', () => {
+  assert.deepEqual(ids('Écrivez-nous au +212 771 105 490.', 'block'), []);
+  assert.deepEqual(ids('Appelez le 07 71 10 54 90.', 'block'), []);
+  assert.ok(ids('Appelez le +212 661 49 62 66.', 'block').includes('wrong-phone'));
+  assert.ok(ids('Appelez le 06 61 49 62 66.', 'block').includes('wrong-phone'));
+});
+
+test('fact rules', () => {
+  assert.ok(ids('Nous sommes représentant officiel de la marque.', 'block').includes('official-status'));
+  assert.ok(ids('Chaque pièce est fabriquée en 10 à 12 semaines.', 'block').includes('delay-wording'));
+  assert.deepEqual(ids('Livrée 10 à 12 semaines au maximum après la validation de la commande.', 'block'), []);
+  assert.ok(ids('Le bahut mesure 46 cm.', 'block').includes('term-bahut'));
+  assert.ok(ids('Un showroom de 400 m2.', 'block').includes('unit-m2'));
+  assert.deepEqual(ids('Un showroom de 400 m².', 'block'), []);
+});
+
+test('review rules: vague quantity, warranty, repeat, long sentence', () => {
+  assert.ok(ids('Près de quarante modèles.', 'review').includes('vague-quantity'));
+  assert.deepEqual(ids('Installé à Carrè, près de Vicence.', 'review'), []);
+  assert.ok(ids('Une garantie de deux ans.', 'review').includes('warranty'));
+  assert.ok(ids('La céramique modelée recouvre la base de la table.\n\nLa céramique modelée recouvre la base de la table.', 'review').includes('repeat'));
+  const long = Array.from({ length: 30 }, (_, i) => `mot${i}`).join(' ') + '.';
+  assert.ok(ids(long, 'review').includes('long-sentence'));
+});
+
+test('allow-list suppresses a sourced vague quantity', () => {
+  const md = 'La marque est présente dans plus de 140 pays.';
+  assert.ok(ids(md, 'review').includes('vague-quantity'));
+  assert.deepEqual(lint(md, { allow: loadAllow() }).filter((f) => f.id === 'vague-quantity'), []);
+});
+
+test('markdown drafts: only the Page copy section is checked', () => {
+  const md = '# Draft\n\nNotes: raffiné!\n\n## Page copy\n\n**H1:** Cattelan Italia, de la Vénétie à Casablanca\n\n**Intro:** Des tables en marbre et en verre.\n\n## Alternatives\n\nUne option élégante.\n';
+  assert.deepEqual(lint(md), []);
+  const blocks = extractBlocks('x.md', md);
+  assert.equal(blocks[0].type, 'heading');
+  assert.equal(blocks[1].type, 'body');
+});
+
+test('JSON: blocks format and CMS-style object', () => {
+  const blocks = JSON.stringify([{ page: '/', tag: 'h2', text: 'Découvrez nos modèles' }, { page: '/', tag: 'p', text: 'Une table.' }]);
+  assert.ok(lint(blocks, { allow: [] }, 'b.json').some((f) => f.id === 'heading-order'));
+  const cms = JSON.stringify({ title: 'Showroom', intro: 'Un espace raffiné.', sections: [{ heading: 'Votre projet', text: 'Du bois.', cta_label: 'Nous écrire' }], seo_title: 'Showroom — Cattelan' });
+  const got = lint(cms, { allow: [] }, 'c.json').map((f) => f.id);
+  for (const id of ['cliche', 'heading-vous', 'dash-short']) assert.ok(got.includes(id), id);
+});
