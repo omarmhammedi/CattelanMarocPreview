@@ -150,8 +150,8 @@ devis pour le modèle X : URL".
    dix-huit" (Journal, ceramic article). Count from the model data and use one number.
 2. **2D/3D files:** the live FAQ and Professionnels pages say they are available on request, but
    `docs/demandes-client.md` still lists the client's confirmation as pending.
-3. **"400 m² sur deux niveaux" and "ouvert en septembre 2026":** live on Showroom, Home and À propos. I did not find
-   the client source for the surface in the repo docs. Confirm.
+3. **"400 m² sur deux niveaux":** 400 m² and the September 2026 opening are confirmed by three press articles
+   (`press-and-brand-sources.md`); "sur deux niveaux" is in none of them. Confirm.
 4. **Placeholder items still live:** image captions "Visuel provisoire issu de la maquette", the demo catalogue
    notice, and the form note "Utilisez des coordonnées fictives".
 5. **"Accompagnez-vous…"** appears in two FAQ questions; `accompagner` is on the banned list.

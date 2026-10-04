@@ -2,7 +2,8 @@
 
 Read first by `copywriting`, `copy-editing` and `cattelan-site-copy`. Everything here comes from the repo's
 docs, the live CMS (read 4 October 2026) and decisions recorded by the owner. For real examples of the voice,
-page by page, read `.agents/brand-voice-corpus.md` next. Items marked **À CONFIRMER** must never be published.
+page by page, read `.agents/brand-voice-corpus.md` next. Press coverage and official brand history, with
+what may and may not be used, is in `.agents/press-and-brand-sources.md`. Items marked **À CONFIRMER** must never be published.
 Last compiled: 4 October 2026. Update this file when the client answers, not the skills.
 
 ## Precedence (when sources disagree)
@@ -18,13 +19,13 @@ Last compiled: 4 October 2026. Update this file when the client answers, not the
 
 - **Who:** Racha Home (SARL), operator of the Cattelan Italia showroom in Casablanca. Brand: Cattelan Italia S.p.A.,
   founded 1979 by Giorgio and Silvia Cattelan, Carrè (Vicenza), Italy.
-- **Opened:** September 2026 (live À propos page; **À CONFIRMER**: not found in client documents).
+- **Opened:** September 2026 (live À propos page; three press articles dated 20 to 28 Sept 2026 report the opening).
 - **What:** single-brand showroom for Cattelan Italia furniture: tables, chairs and stools, sofas and armchairs,
   buffets and bookcases, lighting, outdoor furniture. The whole catalogue can be ordered and customised, including
   models not on display.
 - **Where:** 8-10 avenue du Docteur Mohamed Sijilmassi, Triangle d'Or, 20250 Casablanca.
   Hours: Monday 12:00 to 19:30, Tuesday to Saturday 9:00 to 19:30, Sunday closed. Appointment optional.
-  Live copy says 400 m² on two levels (**À CONFIRMER**: surface not found in client documents).
+  400 m² is confirmed by three press articles. "Sur deux niveaux" (live copy) appears in no article: **À CONFIRMER**.
   No private car park; valet service; street parking nearby.
 - **Contact:** WhatsApp / phone +212 771 105 490 (**À CONFIRMER**: a magazine article lists another number),
   contact@cattelanitalia.ma.
