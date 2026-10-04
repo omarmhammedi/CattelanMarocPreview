@@ -30,7 +30,7 @@
 
 **content.1.heading**
 - A: Hauteur du plateau, hauteur de l’assise
-- B: Trois hauteurs pour Albert et Adrian
+- B: Trois hauteurs pour deux modèles
 
 **content.2.heading**
 - A: Quelle place autour d’une table basse ?

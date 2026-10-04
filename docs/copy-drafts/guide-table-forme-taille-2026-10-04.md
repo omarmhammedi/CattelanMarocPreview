@@ -68,7 +68,7 @@
 | section.3.text | G1.5, G1.6; S8 (bring the room dimensions and photos) |
 | section.4.heading | G1.7 |
 | section.4.text | G1.7, G1.9 (photo and room measurements on WhatsApp, advisor proposes formats) |
-| cta_text | C2; G1.6, G1.7 (models named in the fact bank) |
+| cta_text | C2; tables.md (spec sheet downloadable on each page) |
 | cta_label | FIXED |
 | seo_title | brief search intent "table salle à manger casablanca" |
 | meta_description | G1.1, G1.2; S1 (showroom in Casablanca) |

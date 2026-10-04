@@ -28,7 +28,7 @@
 
 **seo_title:** Comment associer table et chaises · Cattelan Italia Maroc
 
-**meta_description:** Associer table et chaises sans tout assortir, avec une laque commune, une couleur reprise et des chaises de 62 à 64 cm de large qui glissent sous le plateau.
+**meta_description:** Associer table et chaises sans tout assortir, par une laque commune, une couleur reprise et la largeur des chaises, de 62 à 64 cm.
 
 **sources:** https://www.cattelanitalia.com/fr/products/41ED48AE-E379-4863-8E3C-28EE1D985390 (Rhonda) · https://www.cattelanitalia.com/fr/products/A73FA6B3-0BA9-4F13-ADB6-FBAFC6E39BBF (Greta)
 
@@ -92,4 +92,5 @@
   pieces are on display at the showroom.
 - cta_text names only Rhonda and Greta (named in the fact bank) and their stool versions (model trait).
 - Lint: first run 2 blocking (cliché "côte à côte", twice) and 1 review ("plus de cent"). All three were rewritten
-  from the facts. Final run: 0 blocking, 0 review.
+  from the facts. A later run flagged the meta description at 157 characters (blocking); it was rewritten to 130.
+  Final run: 0 blocking, 0 review.

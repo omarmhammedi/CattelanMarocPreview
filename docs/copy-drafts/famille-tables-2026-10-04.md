@@ -19,7 +19,7 @@ Written from the brief, the shared fact bank and the model data only; the live p
 
 **content.2.heading:** Verre, bois ou céramique
 
-**content.2.text:** Le verre laisse voir le piètement, les lignes d'acier croisées de Skorpio ou le ruban plié de Butterfly. Le noyer Canaletto et le chêne brûlé se choisissent pour leur veinage. La céramique reprend les décors du marbre, du Calacatta au Portoro, jusqu'à 19 selon le modèle. Au showroom, comparez ces décors en échantillons.
+**content.2.text:** Le verre laisse voir le piètement, les lignes d'acier croisées de Skorpio ou le ruban plié de Butterfly. Le noyer Canaletto et le chêne brûlé se choisissent pour leur veinage. La céramique reprend les décors du marbre, du Calacatta au Portoro. Selon le modèle, on en compte jusqu'à 19. Au showroom, comparez ces décors en échantillons.
 
 **seo_title:** Tables et salles à manger Cattelan Italia à Casablanca · Cattelan Italia Maroc
 
@@ -33,7 +33,7 @@ Written from the brief, the shared fact bank and the model data only; the live p
 
 **content.1.heading**
 - A: Combien de convives autour du plateau ? Rationale: the visitor's own question, answered by the 60 cm rule in the text.
-- B: Quatorze places autour de Napoleon Keramik. Rationale: opens on the largest seating of the family (TB1, Napoleon Keramik data).
+- B: 14 places autour de Napoleon Keramik. Rationale: opens on the largest seating of the family (TB1, Napoleon Keramik data).
 
 **content.2.heading**
 - A: Quel plateau, verre, bois ou céramique ? Rationale: the visitor's question, in the order the text answers it.
@@ -47,8 +47,8 @@ Written from the brief, the shared fact bank and the model data only; the live p
 | title | TB1 (up to 14 seats), Napoleon Keramik trait (jusqu'à 14 places) |
 | card_text | TB1 (nine tables), TB2, TB3 |
 | intro | B3 and brand facts in `press-and-brand-sources.md` (1979, first pieces in marble and glass); TB1 (nine tables); model list (Skorpio and Butterfly: glass top; Tyron Keramik, Butterfly Keramik, Napoleon Keramik: ceramic; Botero Keramik Round, Wood Round, Ker-Wood Round, Argile: base revêtue d'argile); TB3 |
-| content.1.heading | TB4 |
-| content.1.text | TB4, TB5, TB1 and Napoleon Keramik trait (jusqu'à 14 places), C2 (each model page gives its formats) |
+| content.1.heading | TB4, J2 (60 cm of tabletop per guest) |
+| content.1.text | TB4, J2 (60 cm per guest), TB5, TB1 and Napoleon Keramik trait (jusqu'à 14 places), C2 (each model page gives its formats) |
 | content.2.heading | TB6 |
 | content.2.text | TB6, M7 (glass to show the base, wood for its grain), Skorpio trait (piètement en acier à lignes croisées), Butterfly trait (base en ruban d'acier plié), TB7, FAM1 / S3 |
 | seo_title | FIXED |
@@ -57,6 +57,9 @@ Written from the brief, the shared fact bank and the model data only; the live p
 ## Open points
 
 - No [NEED] in the page copy: every slot had the facts it needed.
+- Linter, first run: 1 blocking (content.2.heading at 7 words, rewritten as "Verre, bois ou céramique" in the order
+  the text follows) and 1 review ("environ 60" flagged as a vague quantity). TB4 says "about 60 cm"; J2 gives
+  60 cm per guest as the guides' measure, so the text now states 60 cm. Final run: 0 blocking, 0 review.
 - Intro opener: B3 says the first pieces were "tables in marble and glass"; the brand identity page in
   `press-and-brand-sources.md` says "small pieces in marble and glass" and dates dining tables to 1989. The intro says
   only that the house began with marble and glass in 1979, which both sources support. To confirm with the owner before
