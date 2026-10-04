@@ -11,12 +11,14 @@ publishing it on the site needs the client's approval (see `docs/questionnaire-c
 
 | Outlet | Date | Author | URL |
 |---|---|---|---|
+| ID Prestige | 21 Sept 2026 | n/a | idprestige.ma/cattelan-italia-inaugure-son-premier-flagship-store-au-maroc-a-casablanca/ |
+| Maisons du Maroc | Sept 2026 (undated in the page text) | La rédaction | maisonsdumaroc.com/architectures-et-design/cattelan-italia-ouvre-son-premier-flagship-store-au-maroc |
 | Shoelifer | about 20 Sept 2026 (shown as "2 weeks ago") | Chemsi Jellal | shoelifer.com/lifestyle/deco/cattelan-italia-un-nouveau-flagship-pour-le-mobilier-italien-au-maroc/ |
 | Déco Actuelle | 23 Sept 2026 | Neyla Groupe Actuelle | decoactuelle.ma/cattelan-italia-ouvre-son-premier-flagship-au-maroc-a-casablanca/ |
 | AE Magazine | 28 Sept 2026 | La rédaction | aemagazine.ma/cattelan-italia-ouvre-son-showroom-a-casablanca/ |
 
-**Not found online:** the Golf du Maroc piece and the Maisons du Maroc article (21 Sept) cited in the client
-questionnaire. Ask the client for the links or PDFs.
+Owner-supplied links (4 Oct 2026): Maisons du Maroc, Déco Actuelle, Shoelifer, ID Prestige. Not found: the Golf du
+Maroc piece. The owner confirmed on 4 Oct 2026 that **the showroom has opened (September 2026) and is 400 m²**.
 
 ## Facts the three articles agree on
 
@@ -37,9 +39,16 @@ questionnaire. Ask the client for the links or PDFs.
   **Othmane Sefraoui** extend the business to furniture and decoration under the name **Diva Home**.
 - The family had followed Cattelan Italia for several years. Reasons given: a catalogue wide enough to furnish a
   house from the living room to the bedroom, real freedom of customisation, and prices judged consistent for the range.
-- Status: **Client OK needed** (questionnaire Q2 asks exactly this). Note the naming differs between sources:
-  Diva Ameublement (AE, Déco Actuelle) and Diva Home (Shoelifer). Ask which is correct. Also the link between Racha
-  Home (the legal operator) and the Berrada family is unconfirmed.
+- **Maisons du Maroc and ID Prestige add dates:** Chafik joined the family business in **1983** and founded **Diva
+  Ameublement in 2002**, specialised in home fabrics; the next generation moves into furniture with this flagship.
+- **Titles (Maisons du Maroc photo caption):** **Chafik Berrada, CEO Cattelan Casablanca**; **Othmane Sefraoui,
+  directeur commercial de Cattelan Casablanca**; Paolo Cattelan, CEO Cattelan Italia.
+- The press also says the address "ambitionne de devenir un lieu de rencontre autour du design" for professionals
+  and design lovers (Maisons du Maroc, ID Prestige, Déco Actuelle).
+- Status: now public in four outlets, but publishing the family story or names on the site still needs the **client's
+  OK** (questionnaire Q2, Q3). Naming differs: Diva Ameublement (four outlets) vs Diva Home (Shoelifer). The link
+  between Racha Home (the legal operator) and the Berrada family is still unconfirmed.
+- Instagram account name in Maisons du Maroc: "Cattelan Italia | Mobilier Design Casablanca" (@cattelanitalia.ma).
 - Do not use the "qualité-prix" remark: it is a value claim nobody can guarantee.
 
 ## Showroom details reported by the press
@@ -55,15 +64,16 @@ questionnaire. Ask the client for the links or PDFs.
 
 ## Contact
 
-AE Magazine prints **+212 661 49 62 66**. The site uses **+212 771 105 490**. Unresolved (client question 1).
+AE Magazine and Maisons du Maroc print **+212 661 49 62 66**. The site uses **+212 771 105 490**. Unresolved (client question 1).
 
 ## Wording: use with care
 
 - The press says "arrivée officielle", "flagship", "boutique monomarque". The site may say **showroom monomarque**
   and **premier showroom exclusif**. It must **not** say "revendeur officiel" or "représentant officiel" until the
   trademark licence is signed (`docs/demande-licence-marque.md`). A magazine using the word does not authorise it.
-- Press adjectives to avoid (several are on the banned list): mis en scène, généreuses, aérien, sculpturaux,
-  signatures, univers, "un véritable intérieur".
+- Press phrasing is more fluid and descriptive than the site: it is a fair **style reference** for the editorial
+  direction, but never a source for facts the site cannot prove (e.g. "pensé pour traverser les modes",
+  "pensé pour durer", "qualité-prix").
 - "Fabrication 100 % italienne" (Shoelifer, Déco Actuelle): the site says "fabriqué en Italie". Keep that wording.
 
 ## Official brand facts (cattelanitalia.com, identity page, read via summary: verify before publishing)
@@ -81,9 +91,9 @@ AE Magazine prints **+212 661 49 62 66**. The site uses **+212 771 105 490**. Un
 
 ## What this changes in the copy brief
 
-1. 400 m², the Triangle d'Or, the opening in September 2026 and "première boutique monomarque" are now supported by
-   three independent articles. "Sur deux niveaux" is not.
+1. 400 m², the Triangle d'Or, the opening in September 2026 and "première boutique monomarque" are confirmed by the
+   owner and four articles. "Sur deux niveaux" is in none of them.
 2. The About page could gain a short, sourced history (1979, Carrè, 1982, Paolo Cattelan from 2014) with no new
    claims. The Berrada story waits for client approval.
 3. Bedrooms, rugs and mirrors appear in the press but not on the site. Ask whether to add them.
-4. Ask the client for the Maisons du Maroc and Golf du Maroc articles.
+4. Ask the client for the Golf du Maroc piece.

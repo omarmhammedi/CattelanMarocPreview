@@ -1,14 +1,16 @@
-# Brand voice corpus: Cattelan Italia Maroc
+# Current site copy: reference for FACTS and STRUCTURE only
+
+**Do not use this file as a style model.** The owner likes the information on the site but **not its style**
+(dry, list-like, every sentence a bare fact). Use the text below to know what is already said and which page holds
+what. Do not imitate its sentences, rhythm or vocabulary. The target style is in `product-marketing.md`, section 5.
 
 Verbatim wording from the **live CMS** (read 4 October 2026 through the CMS connector), grouped by page type.
-Use it as the model for rhythm, level of detail and vocabulary. Do not copy sentences; match the pattern.
-Facts and rules are in `product-marketing.md`. If the two disagree, `product-marketing.md` wins.
 
-**The live CMS is the source of truth, not `content/*.json`.** Those files are migration layers: the repo's FAQ
+**For facts, the live CMS is the source of truth, not `content/*.json`.** Those files are migration layers: the repo's FAQ
 has 19 questions and the live FAQ has 22, and the live À propos and Votre projet differ from the repo JSON.
 Re-read the live page before editing anything.
 
-## What the voice sounds like (observed, not invented)
+## What the CURRENT style does (described so it can be avoided, not copied)
 
 1. **Subject first, then the number.** "Chelsea et Amsterdam mesurent 46 cm de profondeur ; Kayak, 53 cm."
 2. **Names the object, not the feeling.** "Neuf tables rondes, carrées, rectangulaires ou aux angles adoucis, du
@@ -150,8 +152,8 @@ devis pour le modèle X : URL".
    dix-huit" (Journal, ceramic article). Count from the model data and use one number.
 2. **2D/3D files:** the live FAQ and Professionnels pages say they are available on request, but
    `docs/demandes-client.md` still lists the client's confirmation as pending.
-3. **"400 m² sur deux niveaux":** 400 m² and the September 2026 opening are confirmed by three press articles
-   (`press-and-brand-sources.md`); "sur deux niveaux" is in none of them. Confirm.
+3. **"sur deux niveaux":** 400 m² and the September 2026 opening are confirmed by the owner and four press
+   articles (`press-and-brand-sources.md`); "sur deux niveaux" is in none of them. Confirm.
 4. **Placeholder items still live:** image captions "Visuel provisoire issu de la maquette", the demo catalogue
    notice, and the form note "Utilisez des coordonnées fictives".
 5. **"Accompagnez-vous…"** appears in two FAQ questions; `accompagner` is on the banned list.

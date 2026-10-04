@@ -2,7 +2,7 @@
 
 Read first by `copywriting`, `copy-editing` and `cattelan-site-copy`. Everything here comes from the repo's
 docs, the live CMS (read 4 October 2026) and decisions recorded by the owner. For real examples of the voice,
-page by page, read `.agents/brand-voice-corpus.md` next. Press coverage and official brand history, with
+page by page, read `.agents/current-site-copy-reference.md` for what is already said (facts only, **not** a style model). Press coverage and official brand history, with
 what may and may not be used, is in `.agents/press-and-brand-sources.md`. Items marked **À CONFIRMER** must never be published.
 Last compiled: 4 October 2026. Update this file when the client answers, not the skills.
 
@@ -19,13 +19,13 @@ Last compiled: 4 October 2026. Update this file when the client answers, not the
 
 - **Who:** Racha Home (SARL), operator of the Cattelan Italia showroom in Casablanca. Brand: Cattelan Italia S.p.A.,
   founded 1979 by Giorgio and Silvia Cattelan, Carrè (Vicenza), Italy.
-- **Opened:** September 2026 (live À propos page; three press articles dated 20 to 28 Sept 2026 report the opening).
+- **Opened:** September 2026 (confirmed by the owner, 4 Oct 2026; five press articles dated 21 to 28 Sept).
 - **What:** single-brand showroom for Cattelan Italia furniture: tables, chairs and stools, sofas and armchairs,
   buffets and bookcases, lighting, outdoor furniture. The whole catalogue can be ordered and customised, including
   models not on display.
 - **Where:** 8-10 avenue du Docteur Mohamed Sijilmassi, Triangle d'Or, 20250 Casablanca.
   Hours: Monday 12:00 to 19:30, Tuesday to Saturday 9:00 to 19:30, Sunday closed. Appointment optional.
-  400 m² is confirmed by three press articles. "Sur deux niveaux" (live copy) appears in no article: **À CONFIRMER**.
+  400 m² confirmed by the owner and the press. "Sur deux niveaux" (live copy) appears in no article: **À CONFIRMER**.
   No private car park; valet service; street parking nearby.
 - **Contact:** WhatsApp / phone +212 771 105 490 (**À CONFIRMER**: a magazine article lists another number),
   contact@cattelanitalia.ma.
@@ -64,11 +64,18 @@ Objections the facts can answer: price unknown before quote (quote process), del
 - **Proof that does not exist yet (do not claim):** official reseller status, warranty terms, after-sales, awards,
   customer testimonials, named architect partners, delivered projects, which models are currently on display.
 
-## 5. Voice
+## 5. Voice and style
 
-Luxury, calm, factual. A showroom advisor speaking to a client, not an advert. "Nous" for the showroom team.
-French (France spelling, no Anglicisms). Short sentences. Each sentence carries a checkable fact: number + unit,
-model, material, finish, place, day or service. If it cannot, delete it; never swap filler for other filler.
+**Owner feedback (4 Oct 2026): the information on the site is right, the style is not.** The current style is dry
+and list-like: every sentence a bare fact, no rhythm, no sense of place or matter. Do **not** use the live copy as a
+style model, and do not apply the old rule "every sentence must be a checkable fact" as a style rule.
+
+**Target style: NOT YET CHOSEN.** Three sample directions are in the conversation history for the owner to pick
+from (plain, editorial, atmospheric). Until one is chosen, write facts correctly and ask for the style.
+
+What stays fixed whatever the style: no invented fact, no promise nobody can give, no unconfirmed claim
+(section 7), French from France, "nous" for the showroom team, concrete matter and place over generic praise.
+The bullets below the table are the OLD style rules, kept for reference; they are under review.
 
 | We are | We are not |
 |---|---|
@@ -109,9 +116,12 @@ deposit; payment from abroad; trade terms; the Berrada family / Diva Ameublement
 final catalogue PDF; public phone number; publication director's name. Full list: `docs/questionnaire-contenu-racha-home.md`
 and `docs/demandes-client.md`.
 
-## 8. House rules and banned language
+## 8. House rules and banned language (FACT rules stay; STYLE rules under review)
 
-Authoritative rules live in the `cattelan-site-copy` skill. That skill mentions a linter (`scripts/copy-lint.mjs`),
+The `cattelan-site-copy` skill (account skill, not in this repo) enforces the current dry style: it bans most
+adjectives and requires a checkable fact in every sentence. Those style rules are likely what the owner dislikes.
+Keep its **fact** rules (sources, counts, no guarantees, specs format, terms). Treat its **style** rules (banned
+adjectives, one-fact-per-sentence, no taglines) as under review until the owner picks a style. Details: That skill mentions a linter (`scripts/copy-lint.mjs`),
 but it is **not committed to this repo yet**; until it is, check banned words by hand or with grep. Short version:
 
 - No stock phrases: univers, signature, élégant, raffiné, intemporel, savoir-faire, sublimer, harmonie, inspiration,
@@ -138,11 +148,11 @@ but it is **not committed to this repo yet**; until it is, check banned words by
 
 The live CMS is the source of truth. `content/*.json` are migration layers and can be out of date (the repo FAQ has
 19 questions, the live FAQ 22). Before rewriting a page, read its live version (CMS connector or the site), not the
-JSON. Known inconsistencies in the live copy are listed at the end of `brand-voice-corpus.md`.
+JSON. Known inconsistencies in the live copy are listed at the end of `current-site-copy-reference.md`.
 
 ## 10. Workflow for any copy task
 
-1. Read this file and `brand-voice-corpus.md`, then the live version of the page and its intent in
+1. Read this file and `current-site-copy-reference.md`, then the live version of the page and its intent in
    `docs/seo-page-map.md`.
 2. Draft with `copywriting`; tighten with `copy-editing`; finish with `cattelan-site-copy`.
 3. Every proposed line gets a source: FAQ, model data, official page, or an owner decision. No source: list it
