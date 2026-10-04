@@ -70,8 +70,24 @@ Objections the facts can answer: price unknown before quote (quote process), del
 and list-like: every sentence a bare fact, no rhythm, no sense of place or matter. Do **not** use the live copy as a
 style model, and do not apply the old rule "every sentence must be a checkable fact" as a style rule.
 
-**Target style: NOT YET CHOSEN.** Three sample directions are in the conversation history for the owner to pick
-from (plain, editorial, atmospheric). Until one is chosen, write facts correctly and ask for the style.
+**Target style (chosen by the owner, 4 Oct 2026): story first, with a concrete material, gesture or place in every
+sentence.** Reference analysis: `.agents/style-references.md` (method only, never copy their sentences).
+
+- Open with a person, a place, a year, a material or a gesture. Numbers follow where they help the reader decide.
+- Every sentence holds a concrete noun (a material, an object, a place, a date, a gesture). Praise without an object
+  is out ("élégant", "raffiné" on their own say nothing).
+- Calm, confident rhythm. Mix short and long sentences. One contrast per section at most, never in the form
+  "ce n'est pas X, c'est Y".
+- Heritage and story come only from the sourced list in `style-references.md` and `press-and-brand-sources.md`.
+- Headlines name a place, a person, a material or the visitor's question. They may be a short phrase with a verb in
+  the third person ("Cattelan Italia, de la Vénétie à Casablanca"). No orders, none built on "vous/votre".
+- Cliché words stay banned: iconique, incontournable, raffiné, élégant, fascinant, harmonieux, intemporel, univers,
+  signature, savoir-faire, sublimer, découvrir, expérience, "pensé pour", "à votre disposition", "véritable".
+- No AI tells (copywriting skill): no contrast reveals, negation lists, trailing pile-on clauses, colon reveals, no
+  em dashes in short copy, at most one list of three per section.
+- A claim with no source is written `[NEED: ...]`, never invented.
+- Replaces the old rule "every sentence is a checkable fact" with "every sentence has a concrete noun and no
+  unsourced claim". All FACT rules (section 6, 7, 9) still apply.
 
 What stays fixed whatever the style: no invented fact, no promise nobody can give, no unconfirmed claim
 (section 7), French from France, "nous" for the showroom team, concrete matter and place over generic praise.
