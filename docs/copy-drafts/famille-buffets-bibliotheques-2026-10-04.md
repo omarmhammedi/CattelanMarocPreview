@@ -12,7 +12,7 @@
 
 **content.1.heading:** La place devant les portes ouvertes
 
-**content.1.text:** Chelsea et Amsterdam avancent de 46 cm dans la pièce, Kayak de 53 cm. Devant leurs portes, il faut la place de les ouvrir en grand, puis un passage. Côté bibliothèques, Nautilus prend 26 cm de profondeur et Airport 29 cm. Mesurez le mur et la place devant lui, puis comparez avec les longueurs des buffets, de 137,5 à 294 cm.
+**content.1.text:** Chelsea et Amsterdam avancent de 46 cm dans la pièce, Kayak de 53 cm. Devant, il faut pouvoir ouvrir les portes en grand, puis passer. Côté bibliothèques, Nautilus prend 26 cm de profondeur et Airport 29 cm. Mesurez le mur et la place devant lui, puis comparez avec les buffets, longs de 137,5 à 294 cm.
 
 **seo_title:** Buffets et bibliothèques Cattelan Italia à Casablanca · Cattelan Italia Maroc
 
