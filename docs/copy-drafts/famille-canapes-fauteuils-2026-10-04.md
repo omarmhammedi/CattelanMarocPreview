@@ -8,7 +8,7 @@
 
 **card_text:** Quatre canapés se composent droits ou d’angle. Ruby, canapé de 200 cm en frêne, a son fauteuil assorti.
 
-**intro:** Quatre des six modèles se composent en canapé droit ou d’angle. Sinatra a des dossiers réglables, Mykonos des formes arrondies, Craig des coussins de dossier garnis de plumes, Douglas des pieds en métal. Ruby, canapé droit en frêne apparent, a son fauteuil, Ruby Lounge.
+**intro:** Quatre des six modèles se composent en canapé droit ou d’angle. Sinatra a des dossiers réglables, Mykonos des formes arrondies. Craig a des coussins de dossier garnis de plumes, Douglas des pieds en métal. Ruby, canapé droit en frêne apparent, a son fauteuil, Ruby Lounge.
 
 **content.1.heading:** Quelle place pour un canapé d’angle ?
 

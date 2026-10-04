@@ -12,7 +12,7 @@
 
 **content.1.heading:** Quelle hauteur pour une table basse ?
 
-**content.1.text:** Une table basse se mesure contre le canapé. Comparez la hauteur de son plateau à celle de l’assise ; pour une table d’appoint, à celle de l’accoudoir. Albert Keramik et Adrian Wood existent chacun en trois hauteurs, entre 28 et 54 cm. Relevez chez vous ces deux hauteurs, puis ouvrez la fiche de chaque modèle.
+**content.1.text:** Une table basse se mesure contre le canapé. Comparez la hauteur de son plateau à celle de l’assise ; pour une table d’appoint, à celle de l’accoudoir. Albert Keramik et Adrian Wood existent chacun en trois hauteurs, entre 28 et 54 cm selon le format. Relevez chez vous ces deux hauteurs, puis ouvrez la fiche de chaque modèle.
 
 **content.2.heading:** Le contour des plateaux au sol
 

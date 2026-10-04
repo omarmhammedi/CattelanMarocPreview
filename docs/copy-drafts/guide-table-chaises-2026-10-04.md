@@ -16,7 +16,7 @@
 
 **section.3.heading:** Le cuir et la céramique Portoro
 
-**section.3.text:** Un cuir de chaise dans le ton d'une céramique Portoro ou d'un noyer Canaletto relie la chaise au plateau par la couleur. Le revêtement se choisit aussi selon l'usage. Rhonda se choisit parmi 112 teintes de cuir, de similicuir, de tissu et de micro-nubuck. Pour une table servie chaque jour, lisez les notes d'entretien de chaque finition. Au showroom, comparez ensemble l'échantillon de cuir et celui du plateau, à la lumière du jour.
+**section.3.text:** Un cuir de chaise dans le ton d'une céramique Portoro ou d'un noyer Canaletto relie la chaise au plateau par la couleur. Le revêtement se choisit aussi selon l'usage. Rhonda existe en 112 teintes de cuir, de similicuir, de tissu et de micro-nubuck. Pour une table servie chaque jour, lisez les notes d'entretien de chaque finition. Au showroom, comparez ensemble l'échantillon de cuir et celui du plateau, à la lumière du jour.
 
 **section.4.heading:** Les accoudoirs sous le plateau
 
@@ -28,7 +28,7 @@
 
 **seo_title:** Comment associer table et chaises · Cattelan Italia Maroc
 
-**meta_description:** Associer table et chaises sans tout assortir, avec une laque commune, une couleur reprise et des chaises de 62 à 64 cm qui glissent sous le plateau.
+**meta_description:** Associer table et chaises sans tout assortir, avec une laque commune, une couleur reprise et des chaises de 62 à 64 cm de large qui glissent sous le plateau.
 
 **sources:** https://www.cattelanitalia.com/fr/products/41ED48AE-E379-4863-8E3C-28EE1D985390 (Rhonda) · https://www.cattelanitalia.com/fr/products/A73FA6B3-0BA9-4F13-ADB6-FBAFC6E39BBF (Greta)
 
@@ -65,7 +65,7 @@
 | section.2.heading | G2.3 |
 | section.2.text | G2.1, G2.3; tables.md and chaises-tabourets.md (finish lists); C2 (finishes on each model page) |
 | section.3.heading | G2.4 |
-| section.3.text | G2.4, G2.7 |
+| section.3.text | G2.4, G2.7; chaises-tabourets.md (Rhonda covering groups, 112 shades counted) |
 | section.4.heading | G2.6 |
 | section.4.text | G2.5, G2.6; chaises-tabourets.md (Greta "accoudoirs prolongés") |
 | cta_text | chaises-tabourets.md (Rhonda and Greta also as stools); C2 |
@@ -76,4 +76,20 @@
 
 ## Open points
 
-- None yet.
+- No [NEED] item: every sentence comes from the brief's fact bank, the shared facts or the model data.
+- section.3.text says "112 teintes" for Rhonda. G2.7 says "more than a hundred"; the linter flags that as a vague
+  quantity, so the figure was counted in `models/chaises-tabourets.md`: cuir mince 36, cuir Glove 13, similicuir 18,
+  tissu 31, micro-nubuck 14, total 112. To confirm: if the Glove leathers are already part of the 36 thin leathers,
+  the total is 99 and both the figure and G2.7 must change.
+- section.2.text: the four shared lacquers were checked in the model data (GFM11 titane, GFM18 bronze, GFM69 graphite,
+  GFM73 noir on the base of Tyron Keramik and on Greta; Greta also has GFM70 pearl, Tyron Keramik does not). Rhonda's
+  structure has the same lacquers plus 08 chrome. G2.3 says "frame of Greta"; the data calls it the base, so the text
+  says "piètement".
+- section.4.text: no armrest height or clearance under the top exists in the data (Greta: 62 × 62 cm, hauteur 78 cm).
+  The text gives the check without a figure. If the spec sheets give armrest heights, a number could be added.
+  Greta's "accoudoirs prolongés" (model trait) is the example; the text does not say it fails to fit any table.
+- section.1.text points the reader to the model pages (C2) to compare the base and the back; it does not say which
+  pieces are on display at the showroom.
+- cta_text names only Rhonda and Greta (named in the fact bank) and their stool versions (model trait).
+- Lint: first run 2 blocking (cliché "côte à côte", twice) and 1 review ("plus de cent"). All three were rewritten
+  from the facts. Final run: 0 blocking, 0 review.
