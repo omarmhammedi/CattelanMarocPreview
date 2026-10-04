@@ -23,4 +23,14 @@ Not changed on purpose: legal pages, shared labels (`site_content`), photos, alt
 
 ## Families (8), guides (5), models (39)
 
-Applied by a helper agent from the same manifest; see below once its report is in.
+Applied by a helper agent from the same manifest, 2026-10-04 between 12:34 and 12:47 UTC, one `content_update`
+(status `published`) per item, no conflict, no failure.
+
+- Families (8): all published; the native SEO description panel was updated on the 6 families that had it filled.
+- Guides (5): all published; the native SEO title of the ceramic/glass/wood guide was updated too. The official
+  sources lists were left unchanged.
+- Models (39): `description` and `content` of every model published.
+
+**Verified by the main session after the run:** a fresh read of the CMS shows all 8 families, 5 guides and 39 models
+published with the manifest text (rich text compared after normalising whitespace and Markdown), no pending drafts.
+Total: 62 CMS items replaced (10 pages, 8 families, 5 guides, 39 models).
