@@ -12,7 +12,7 @@
 
 **content.1.heading:** Une terrasse ou une véranda couverte
 
-**content.1.text:** La table Napoleon Keramik Outdoor et la chaise Greta Outdoor s'installent sous un toit, sur une terrasse ou une véranda couverte. Il leur faut un emplacement à l'abri de la pluie et du soleil direct. Avant de commander, regardez si le soleil atteint le coin prévu aux heures chaudes, puis vérifiez que le toit l'abrite aussi de la pluie.
+**content.1.text:** La table Napoleon Keramik Outdoor et la chaise Greta Outdoor s'installent sur une terrasse ou une véranda couverte, à l'abri de la pluie et du soleil direct. Avant de commander, regardez le coin prévu à plusieurs heures du jour et vérifiez que le toit le garde à l'ombre et au sec.
 
 **seo_title:** Mobilier extérieur Cattelan Italia à Casablanca · Cattelan Italia Maroc
 
@@ -41,5 +41,6 @@
 
 ## Open points
 
-- The closing check (look at the spot in the hot hours, then check the roof keeps the rain off) applies OU2 and adds no fact. The owner may prefer a shorter ending.
+- The closing check (look at the spot at several times of day, check the roof keeps it shaded and dry) applies OU2 and adds no fact. The owner may prefer a shorter ending.
+- The meta description is nominal (SERP convention) and says "terrasse couverte" only; the full condition (veranda, rain, direct sun) is in the card and in content.1.
 - FAM1 (all finishes at the showroom) is not in the meta description, for lack of room under 155 characters.

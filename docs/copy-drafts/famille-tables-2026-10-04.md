@@ -15,9 +15,9 @@ Written from the brief, the shared fact bank and the model data only; the live p
 
 **content.1.heading:** 60 cm de plateau par convive
 
-**content.1.text:** Chaque convive occupe environ 60 cm de plateau. Napoleon Keramik en reçoit jusqu'à 14. Vérifiez ensuite la largeur des chaises et la place que laisse le piètement. Derrière une chaise occupée, mesurez le passage jusqu'au mur. Reportez ces mesures sur un plan de la pièce, puis comparez-les aux formats donnés sur chaque page modèle.
+**content.1.text:** Autour de la table, chaque convive occupe 60 cm de plateau. Napoleon Keramik en reçoit jusqu'à 14. Vérifiez ensuite la largeur des chaises et la place que laisse le piètement. Derrière une chaise occupée, mesurez le passage jusqu'au mur. Reportez ces mesures sur un plan de la pièce, puis comparez-les aux formats donnés sur chaque page modèle.
 
-**content.2.heading:** Céramique, verre ou bois pour le plateau
+**content.2.heading:** Verre, bois ou céramique
 
 **content.2.text:** Le verre laisse voir le piètement, les lignes d'acier croisées de Skorpio ou le ruban plié de Butterfly. Le noyer Canaletto et le chêne brûlé se choisissent pour leur veinage. La céramique reprend les décors du marbre, du Calacatta au Portoro, jusqu'à 19 selon le modèle. Au showroom, comparez ces décors en échantillons.
 
@@ -36,7 +36,7 @@ Written from the brief, the shared fact bank and the model data only; the live p
 - B: Quatorze places autour de Napoleon Keramik. Rationale: opens on the largest seating of the family (TB1, Napoleon Keramik data).
 
 **content.2.heading**
-- A: Quel plateau, céramique, verre ou bois ? Rationale: the visitor's question, in the order the text answers it.
+- A: Quel plateau, verre, bois ou céramique ? Rationale: the visitor's question, in the order the text answers it.
 - B: Du Calacatta au Portoro en céramique. Rationale: names the two marble decors that bound the ceramic range (TB6).
 
 ## Sources

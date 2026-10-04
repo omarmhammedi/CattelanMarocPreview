@@ -6,7 +6,7 @@
 
 **title:** Luminaires et lustres Cattelan Italia, verre artistique et laiton
 
-**card_text:** Trois suspensions en verre artistique, au câble de 250 ou 300 cm, et Bloom, en suspension ou en lampadaire.
+**card_text:** Trois suspensions en verre artistique, câble jusqu'à 250 ou 300 cm, et Bloom, en suspension ou en lampadaire.
 
 **intro:** Trois des quatre luminaires sont des suspensions en verre artistique, Paris, Aladdin et Cloudine. Elles pendent seules ou en grappe, jusqu'à 12 diffuseurs pour Cloudine. Bloom se commande en suspension ou en lampadaire, avec variateur sur les versions O/LO et V/LV.
 
@@ -16,7 +16,7 @@
 
 **seo_title:** Luminaires et lustres Cattelan Italia à Casablanca · Cattelan Italia Maroc
 
-**meta_description:** Suspensions Paris, Aladdin et Cloudine en verre artistique, Bloom en suspension ou en lampadaire. Toutes les finitions sur place. Showroom à Casablanca.
+**meta_description:** Suspensions Paris, Aladdin et Cloudine en verre artistique, Bloom en suspension ou en lampadaire. Showroom à Casablanca, toutes les finitions sur place.
 
 ## Alternatives
 

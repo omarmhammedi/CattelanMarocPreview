@@ -9,17 +9,17 @@ Brief: `docs/copy-briefs/families/chaises-tabourets.md`. Route `/collections/cha
 
 **title:** Chaises et tabourets Cattelan Italia en cuir et en tissu
 
-**card_text:** Quatre chaises de 62 à 64 cm de large. Rhonda et Greta existent aussi en tabouret.
+**card_text:** Quatre chaises de 62 à 64 cm de large, dont deux existent aussi en tabouret.
 
 **intro:** Les chaises entrent au catalogue Cattelan Italia en 1989. La famille en compte quatre. Rhonda a un dossier plissé, Greta des accoudoirs prolongés, Miranda ML une coque enveloppante, et Zuleika est habillée de cuir. Rhonda et Greta existent aussi en tabouret.
 
-**content.1.heading:** Assise à 46 ou 47 cm
+**content.1.heading:** La chaise sous le plateau
 
 **content.1.text:** Miranda ML place l'assise à 47 cm du sol, Zuleika à 46 cm. En largeur, Greta prend 62 cm, Rhonda et Miranda ML 63 cm, Zuleika 64 cm. Les accoudoirs prolongés de Greta doivent passer sous le plateau et sous sa ceinture. Mesurez la hauteur libre sous votre plateau, puis asseyez-vous au showroom pour juger l'assise.
 
-**content.2.heading:** Plus de 100 teintes de revêtement
+**content.2.heading:** Cuir, similicuir, tissu ou micro-nubuck
 
-**content.2.text:** Zuleika est habillée de cuir sur une structure en acier. Rhonda, Greta et Miranda ML se commandent en cuir, en similicuir, en tissu ou en micro-nubuck, dans plus de 100 teintes. Greta ajoute les cuirs Magnifica, Nabuk et Perfetto. Au showroom, posez les échantillons contre la finition de la table choisie.
+**content.2.text:** Zuleika est habillée de cuir sur une structure en acier, en 21 teintes. Rhonda et Miranda ML existent en 112 teintes de cuir, similicuir, tissu ou micro-nubuck. Greta reprend ces revêtements et y ajoute les tissus T10 à T90 et les cuirs Magnifica, Nabuk et Perfetto. Au showroom, posez les échantillons contre la finition de la table choisie.
 
 **seo_title:** Chaises et tabourets Cattelan Italia à Casablanca · Cattelan Italia Maroc
 
