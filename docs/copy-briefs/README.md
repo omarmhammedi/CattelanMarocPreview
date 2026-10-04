@@ -53,11 +53,11 @@ notes go in other `##` sections: they are not linted. Then run `node scripts/cop
 | Group | Briefs | Drafts |
 |---|---|---|
 | À propos | none needed (drafted first, used as the worked example) | `docs/copy-drafts/a-propos-2026-10-04.md` |
-| Accueil | `home.md` | to do |
-| Pages (8) | `pages/`: showroom, collections, catalogue, journal, votre-projet, professionnels, sur-mesure, faq | to do |
-| Families (8) | `families/` | to do |
-| Guides (5) | `guides/` | to do |
-| Models (39) | `models/<family>.md`, generated from `data/models-facts.json` by `scripts/build-model-briefs.mjs` | to do |
+| Accueil | `home.md` | drafted |
+| Pages (8) | `pages/`: showroom, collections, catalogue, journal, votre-projet, professionnels, sur-mesure, faq | drafted |
+| Families (8) | `families/` | drafted |
+| Guides (5) | `guides/` | drafted |
+| Models (39) | `models/<family>.md`, generated from `data/models-facts.json` by `scripts/build-model-briefs.mjs` | drafted |
 
 Shared data: `data/shared-facts.md` (services, showroom, customisation, catalogue, professionals) and
 `data/models-facts.json` (dimensions, finishes and short traits of the 39 models, no prose).

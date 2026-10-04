@@ -36,7 +36,7 @@ drafting prompt: `docs/copy-briefs/README.md`. Do not read the live page or `doc
 
 ## Fact bank (family)
 
-- **LU1** Four lights: the pendants Paris, Aladdin and Cloudine in artistic glass, alone or in a cluster of up to 12; Bloom as a pendant or a floor lamp.
+- **LU1** Four lights: the pendants Paris, Aladdin and Cloudine in artistic glass, alone or in a cluster (only Cloudine has a stated range: compositions of 2 to 12 diffusers; corrected 4 Oct from the model data); Bloom as a pendant or a floor lamp.
 - **LU2** Cable length up to 250 cm for Paris and Aladdin, 300 cm for Cloudine.
 - **LU3** Measure the distance from ceiling to table, compare with the height of the light and the cable length, and locate the electrical outlet. [usage]
 - **LU4** Bloom has a dimmer only on some versions (O/LO and V/LV). [official sheet]

@@ -60,3 +60,7 @@
   "selon le modèle" and the meta says "en tissu ou en cuir" for the family. Confirm whether Sinatra exists in leather.
 - The four composable sofas have no dimensions in the data, so content.1 cannot give a module size. Adding them would
   let the plan check name a real measure.
+- Lint: 0 blocking, 0 review. One review finding (four commas in the leather sentence) was fixed by rewriting it. The
+  intro's four-part sentence was split into two pairs for rhythm.
+- Self-check (copywriting AI-tell list): no contrast reveal, negation list, colon reveal or dash. The only question
+  mark is the content.1 heading, which is the visitor's own question. One list of three per section at most.

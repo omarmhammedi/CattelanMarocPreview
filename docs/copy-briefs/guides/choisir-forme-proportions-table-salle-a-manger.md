@@ -39,7 +39,7 @@ A guide has 4 sections. It names models only where the fact bank gives a number 
 - **G1.5** A round table spreads guests around the centre, and the distance between them grows with the diameter. A square table suits a room of near-square proportions, a rectangle a long room. At equal length and width, an oval top takes less room at the corners. [usage]
 - **G1.6** Skorpio exists in square formats of 150 × 150 and 200 × 200 cm. Napoleon Keramik has an oval top of 300 × 150 cm.
 - **G1.7** The base decides where one can sit. A central base, as on Napoleon Keramik or Botero, frees the corners of the top; check its footprint on the dimensioned plan. On Butterfly the steel ribbon base measures 160 cm under a 240 cm top, leaving 40 cm at each end for a seat at the head of the table.
-- **G1.8** Cattelan Italia tables are 74 to 75 cm high; the chairs have seats at 46 or 47 cm (Miranda ML 47, Zuleika 46).
+- **G1.8** Cattelan Italia tables are 73 to 75 cm high (Botero Keramik Round 73 and 73.5 cm, the others 74 or 75 cm; corrected 4 Oct from the model data); the chairs have seats at 46 or 47 cm (Miranda ML 47, Zuleika 46).
 - **G1.9** Before ordering: trace the outline of the top on the floor with masking tape and set the current chairs on it. Send a photo of the layout and the room measurements to the showroom on WhatsApp; the advisor proposes the formats that fit.
 
 ## Official sources to keep at the end of the guide

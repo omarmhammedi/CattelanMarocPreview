@@ -58,3 +58,10 @@
   44 cm) are those of a side table. The copy keeps the brief's wording.
 - TA2 says the Bond versions have swivel tops; the model data gives them glass tops of Ø 90 cm. The draft does not
   say which top swivels.
+- Lint: 0 blocking, 0 review. The intro was over its limit and then flagged for four commas; it was rebuilt from TA1,
+  TA2 and the model list. Arena's round shape now shows through "120 cm de diamètre" in content.2.
+- content.1 says "entre 28 et 54 cm selon le format": Adrian Wood stops at 48 cm, and only Albert Keramik Ø 59 cm
+  reaches 54 cm.
+- Self-check (copywriting AI-tell list): no contrast reveal, negation list, colon reveal or dash. The only question
+  mark is the content.1 heading, which is the visitor's own question. One list of three per section at most (content.2:
+  sit, stand up, cross the room, as in TA5).
