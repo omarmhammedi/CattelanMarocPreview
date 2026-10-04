@@ -49,4 +49,5 @@ Vocabulary: "base" written "piètement", "pièces" written "inserts", "ballast" 
 - **Airport, "caissons".** The data group "conteneur" is written "caissons", read as the Box unit. To confirm.
 - **Amsterdam, Oxybrass.** The data class Oxybrass under wood finishes; the copy calls the doors and structure wood with an Oxybrass finish and does not describe what Oxybrass looks like. [NEED: one factual line on what the Oxybrass finish is, if the owner wants it explained]
 - **Nautilus, where the lest sits.** The copy says the bookcase "reçoit un lest" depending on the configuration, without saying where or which configurations. [NEED: which Nautilus compositions use the lest and which are wall-fixed]
+- **Chelsea, finish code M75.** The content keeps the code "M75 mint", whose digits match the 75 cm height in the description. It is a finish code, not a measure; kept for readers checking a reference. Drop the codes if the owner prefers.
 - **Spec sheet.** Each model has a downloadable spec sheet; not mentioned in the copy, assuming the page template shows the download.

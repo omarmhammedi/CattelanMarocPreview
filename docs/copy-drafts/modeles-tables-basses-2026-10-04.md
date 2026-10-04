@@ -10,7 +10,7 @@
 
 **albert-keramik.content:** La petite ronde mesure 34, 44 ou 54 cm de haut, les quatre autres formats 28, 38 ou 48 cm. Le plateau en céramique existe en 15 décors Marmi, dont Portoro et Taj Mahal, et dans le décor KS23 Luxor. Le piètement, en métal gaufré, se commande en titane, bronze ou pearl.
 
-**adrian-wood.description:** Sur la table basse Adrian Wood, le plateau réunit deux essences de bois. En galet de 90 × 90 ou 118 × 78 cm, ou en ovale de 180 × 90 cm, elle mesure 28, 38 ou 48 cm de haut.
+**adrian-wood.description:** Sur la table basse Adrian Wood, le plateau réunit deux essences de bois. La table existe en galet de 90 × 90 ou 118 × 78 cm et en ovale de 180 × 90 cm. Elle mesure 28, 38 ou 48 cm de haut.
 
 **adrian-wood.content:** Les finitions bois du plateau sont le noyer Canaletto (NC) et le chêne brûlé. Le piètement en métal gaufré se commande en titane (GFM11) ou en bronze (GFM18).
 

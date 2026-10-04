@@ -12,7 +12,7 @@
 
 **miranda-ml.description:** Miranda ML est une chaise à coque enveloppante, avec une assise à 47 cm du sol. Elle mesure 63 × 61 cm, hauteur 81 cm.
 
-**miranda-ml.content:** Le métal de la structure se choisit parmi six finitions, le chrome et cinq gaufrés (titane, bronze, graphite, pearl et noir). Pour le revêtement, Miranda ML se commande en cuir mince (36 teintes) ou en cuir Glove (13), en tissu (31), en micro-nubuck (14) ou en similicuir (18).
+**miranda-ml.content:** La structure en métal reçoit le chrome ou l'une des cinq finitions gaufrées (titane, bronze, graphite, pearl et noir). Pour le revêtement, Miranda ML se commande en cuir mince (36 teintes) ou en cuir Glove (13), en tissu (31), en micro-nubuck (14) ou en similicuir (18).
 
 **zuleika.description:** Zuleika est une chaise habillée de cuir. Elle mesure 64 × 58,5 cm, hauteur 79 cm, avec une assise à 46 cm.
 

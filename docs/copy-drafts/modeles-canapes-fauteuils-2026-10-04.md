@@ -24,7 +24,7 @@
 
 **ruby-lounge.description:** Ruby Lounge est un fauteuil dont la structure en frêne est assortie au canapé Ruby. Il mesure 81 × 92 cm, hauteur 76 cm.
 
-**ruby-lounge.content:** Le frêne se commande teinté noyer Canaletto ou chêne brûlé, comme sur le canapé. Le tissu existe en 31 teintes ou dans neuf catégories de T10 à T90, le micro-nubuck en 14 teintes. En cuir, le fauteuil existe en Magnifica, Nabuk, Perfetto et cuir mince, et en Glove dans deux séries.
+**ruby-lounge.content:** Le frêne se commande teinté noyer Canaletto ou chêne brûlé, comme sur le canapé. Le tissu existe en 31 teintes ou dans neuf catégories de T10 à T90, le micro-nubuck en 14 teintes. Le fauteuil se commande aussi en cuir Glove dans deux séries ou en Magnifica, Nabuk, Perfetto et cuir mince.
 
 ## Sources
 

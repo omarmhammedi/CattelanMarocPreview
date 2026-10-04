@@ -14,7 +14,7 @@
 
 **finishes.heading:** Toutes les finitions au Triangle d'Or
 
-**finishes.text:** Toutes les finitions de la marque sont au showroom, en échantillons ou sur les pièces exposées. On y pose une céramique à côté d'un bois, un cuir à côté d'une laque. Le catalogue entier se commande, exposé ou non.
+**finishes.text:** Au showroom, chaque finition de la marque se voit en échantillon ou sur une pièce exposée. On y pose une céramique à côté d'un bois, un cuir à côté d'une laque. Le catalogue entier se commande, exposé ou non.
 
 **clients.heading:** Avec le client, au showroom de Casablanca
 
@@ -83,3 +83,5 @@
 - `projects.text` first listed the six kinds of project in one sentence (lint review: four or more commas). Rewritten as three pairs (homes, offices and shops, hotels and restaurants) to read less like a list. The heading names two kinds only, to keep one list of three per section.
 - `projects.text` states the kinds of project the showroom takes on (P4) in the present tense. It names no client and no delivered project; the owner should confirm that "Nous suivons des projets" does not read as a claim of past work.
 - `follow_up.text` uses SV5 (the client is kept informed of progress), which is not in the brief's slot list but is in the shared fact bank.
+- Self-check (copywriting AI-tell list): no contrast reveal, negation list, colon reveal, self-answered question or dash; one list of three in the projects section (the three pairs); no sentence over 21 words. Swap test: `order.heading` (« Le devis détaillé ») and `follow_up.heading` are plain labels that another showroom could use; kept because the brief caps them at 4 and 6 words and they name the object a professional looks for. Alternatives above if the owner wants more colour.
+- `finishes.text` was reworded so that it does not open with the heading's words (« Toutes les finitions »).
