@@ -66,7 +66,7 @@ export const RULES = [
 const stripMd = (s) => s.replace(/`[^`]*`/g, '').replace(/\*\*|__/g, '').replace(/(^|\s)\*(?=\S)|(?<=\S)\*(?=\s|$)/g, '$1').trim();
 const slotType = (label) => {
   const k = label.toLowerCase().split('.').pop().trim().replace(/[ -]/g, '_');
-  if (/^(h1|heading|title|titre|display_heading|short_title)$/.test(k)) return 'heading';
+  if (/^(h1|heading|title|titre|display_heading|short_title|question)$/.test(k)) return 'heading';
   if (/^(button|cta|cta_label|bouton)$/.test(k)) return 'button';
   if (/^(eyebrow|seo_title|meta_description|caption|brand_caption|image_caption|label|alt)$/.test(k)) return 'short';
   return 'body';

@@ -83,3 +83,10 @@ test('JSON: blocks format and CMS-style object', () => {
   const got = lint(cms, { allow: [] }, 'c.json').map((f) => f.id);
   for (const id of ['cliche', 'heading-vous', 'dash-short']) assert.ok(got.includes(id), id);
 });
+
+test('slot names: question is a heading, button is a button', () => {
+  const md = '## Page copy\n\n**faq.4.question:** Découvrez-vous les prix ?\n\n**home.button:** Voir les collections\n';
+  const blocks = extractBlocks('x.md', md);
+  assert.equal(blocks[0].type, 'heading');
+  assert.equal(blocks[1].type, 'button');
+});

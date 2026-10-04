@@ -1,0 +1,2819 @@
+{
+ "generated": "2026-10-04",
+ "source": "live CMS, collection models (numbers, names and short traits only; no prose)",
+ "families": {
+  "tables": [
+   "skorpio",
+   "napoleon-keramik",
+   "botero-keramik-round",
+   "botero-wood-round",
+   "botero-ker-wood-round",
+   "botero-argile",
+   "tyron-keramik",
+   "butterfly",
+   "butterfly-keramik"
+  ],
+  "chaises-tabourets": [
+   "rhonda",
+   "greta",
+   "miranda-ml",
+   "zuleika"
+  ],
+  "canapes-fauteuils": [
+   "craig",
+   "douglas",
+   "mykonos",
+   "sinatra",
+   "ruby",
+   "ruby-lounge"
+  ],
+  "tables-basses": [
+   "arena",
+   "albert-keramik",
+   "adrian-wood",
+   "dodo"
+  ],
+  "buffets-bibliotheques": [
+   "chelsea",
+   "kayak",
+   "amsterdam",
+   "airport",
+   "nautilus"
+  ],
+  "consoles-miroirs": [
+   "westin",
+   "nettuno",
+   "rado-keramik",
+   "cosmos",
+   "glenn"
+  ],
+  "luminaires": [
+   "paris",
+   "aladdin",
+   "cloudine",
+   "bloom"
+  ],
+  "mobilier-exterieur": [
+   "napoleon-keramik-outdoor",
+   "greta-outdoor"
+  ]
+ },
+ "models": [
+  {
+   "slug": "botero-ker-wood-round",
+   "title": "Botero Ker-Wood Round",
+   "family": "tables",
+   "dimensions": [
+    {
+     "label": "Ø 160",
+     "value": "disque en céramique Ø 99 cm, hauteur 75 cm"
+    },
+    {
+     "label": "Ø 180",
+     "value": "disque en céramique Ø 118 cm, hauteur 75 cm"
+    },
+    {
+     "label": "Version T",
+     "value": "disque pivotant Ø 78 cm (table Ø 160) ou Ø 98 cm (table Ø 180)"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "base",
+     "material": "Argile",
+     "count": 3,
+     "names": [
+      "AR09 Oslo",
+      "AR05 Cairo",
+      "AR11 Marrakech"
+     ]
+    },
+    {
+     "group": "pièces",
+     "material": "céramique KS",
+     "count": 1,
+     "names": [
+      "KS23 Luxor"
+     ]
+    },
+    {
+     "group": "pièces",
+     "material": "céramique Marmi",
+     "count": 15,
+     "names": [
+      "KM02 Alabastro",
+      "KM05 Golden Calacatta opaque",
+      "KM06 Golden Calacatta brillant",
+      "KM07 Portoro opaque",
+      "KM08 Portoro brillant",
+      "KM09 Sahara Noir brillant",
+      "KM11 Makalu",
+      "KM12 Breccia",
+      "KM18 Borghini Calacatta opaque",
+      "KM21 Colosseo",
+      "KM22 Andromeda",
+      "KM24 Invisible opaque",
+      "KM26 Taj Mahal",
+      "KM27 Giava",
+      "KM28 Darwin"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "bois",
+     "count": 2,
+     "names": [
+      "Noyer Canaletto",
+      "Chêne brûlé"
+     ]
+    }
+   ],
+   "traits": [
+    "plateau en bois serti d’un disque central en céramique",
+    "version T : disque pivotant",
+    "base revêtue d’argile spatulée"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "botero-keramik-round",
+   "title": "Botero Keramik Round",
+   "family": "tables",
+   "dimensions": [
+    {
+     "label": "Ø 100 ou 118",
+     "value": "hauteur 73 cm"
+    },
+    {
+     "label": "Ø 140 ou 158",
+     "value": "hauteur 73,5 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "lest",
+     "material": "metals",
+     "count": 3,
+     "names": [
+      "GFM11 gaufré titane",
+      "GFM18 gaufré bronze",
+      "GFM73 gaufré noir"
+     ]
+    },
+    {
+     "group": "base",
+     "material": "Argile",
+     "count": 3,
+     "names": [
+      "AR09 Oslo",
+      "AR05 Cairo",
+      "AR11 Marrakech"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "céramique KS",
+     "count": 1,
+     "names": [
+      "KS23 Luxor"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "céramique Marmi",
+     "count": 14,
+     "names": [
+      "KM02 Alabastro",
+      "KM05 Golden Calacatta opaque",
+      "KM06 Golden Calacatta brillant",
+      "KM07 Portoro opaque",
+      "KM08 Portoro brillant",
+      "KM11 Makalu",
+      "KM12 Breccia",
+      "KM18 Borghini Calacatta opaque",
+      "KM21 Colosseo",
+      "KM22 Andromeda",
+      "KM24 Invisible opaque",
+      "KM26 Taj Mahal",
+      "KM27 Giava",
+      "KM28 Darwin"
+     ]
+    }
+   ],
+   "traits": [
+    "plateau rond en céramique",
+    "piètement galbé en polymère revêtu d’argile spatulée (Cairo, Oslo, Marrakech)",
+    "plateau central pivotant en option"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "botero-wood-round",
+   "title": "Botero Wood Round",
+   "family": "tables",
+   "dimensions": [
+    {
+     "label": "Ø 140, 160 ou 180",
+     "value": "hauteur 75 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "base",
+     "material": "Argile",
+     "count": 3,
+     "names": [
+      "AR09 Oslo",
+      "AR05 Cairo",
+      "AR11 Marrakech"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "bois",
+     "count": 2,
+     "names": [
+      "Noyer Canaletto",
+      "Chêne brûlé"
+     ]
+    }
+   ],
+   "traits": [
+    "plateau rond en noyer Canaletto ou chêne brûlé",
+    "piètement galbé en polymère revêtu d’argile spatulée",
+    "plateau central pivotant en option"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "botero-argile",
+   "title": "Botero Argile",
+   "family": "tables",
+   "dimensions": [
+    {
+     "label": "Ø 140, 160 ou 180",
+     "value": "hauteur 74 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "structure",
+     "material": "Argile",
+     "count": 3,
+     "names": [
+      "AR09 Oslo",
+      "AR05 Cairo",
+      "AR11 Marrakech"
+     ]
+    }
+   ],
+   "traits": [
+    "base Botero revêtue d’argile"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "aladdin",
+   "title": "Aladdin",
+   "family": "luminaires",
+   "dimensions": [
+    {
+     "label": "Aladdin",
+     "value": "globe Ø 22 cm, hauteur 31 cm ; câble jusqu’à 250 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "diffuseur",
+     "material": "verre artistique",
+     "count": 2,
+     "names": [
+      "fumé",
+      "mix (fumé/blanc)"
+     ]
+    }
+   ],
+   "traits": [
+    "suspension en verre artistique",
+    "seule ou en grappe",
+    "câble jusqu’à 250 cm"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "cloudine",
+   "title": "Cloudine",
+   "family": "luminaires",
+   "dimensions": [
+    {
+     "label": "Cloudine 1",
+     "value": "diffuseur d’environ 20 × 15 cm ; câble jusqu’à 300 cm"
+    },
+    {
+     "label": "Compositions",
+     "value": "de 2 à 12 diffuseurs, platine Ø 25 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "diffuseur",
+     "material": "verre",
+     "count": 2,
+     "names": [
+      "fumé",
+      "iride"
+     ]
+    }
+   ],
+   "traits": [
+    "suspension en verre artistique",
+    "seule ou en grappe",
+    "câble jusqu’à 300 cm"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "paris",
+   "title": "Paris",
+   "family": "luminaires",
+   "dimensions": [
+    {
+     "label": "Paris 1",
+     "value": "globe Ø 25 cm, hauteur 30 cm ; câble jusqu’à 250 cm"
+    },
+    {
+     "label": "Paris 2",
+     "value": "globe Ø 33 cm, hauteur 38,5 cm ; câble jusqu’à 250 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "diffuseur",
+     "material": "verre artistique",
+     "count": 1,
+     "names": [
+      "mix (fumé/blanc)"
+     ]
+    }
+   ],
+   "traits": [
+    "suspension en verre artistique",
+    "seule ou en grappe",
+    "câble jusqu’à 250 cm"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "nautilus",
+   "title": "Nautilus",
+   "family": "buffets-bibliotheques",
+   "dimensions": [
+    {
+     "label": "Un module",
+     "value": "100 × 26 cm, hauteur 100 cm"
+    },
+    {
+     "label": "Compositions",
+     "value": "200 × 26 cm, hauteur 100 à 200 cm, ou 300 × 26 cm, hauteur 100 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "lest",
+     "material": "metals",
+     "count": 4,
+     "names": [
+      "GFM11 gaufré titane",
+      "GFM18 gaufré bronze",
+      "GFM69 gaufré graphite",
+      "GFM70 gaufré pearl"
+     ]
+    },
+    {
+     "group": "structure",
+     "material": "metals",
+     "count": 4,
+     "names": [
+      "GFM11 gaufré titane",
+      "GFM18 gaufré bronze",
+      "GFM69 gaufré graphite",
+      "GFM70 gaufré pearl"
+     ]
+    }
+   ],
+   "traits": [
+    "modules en acier de 100 × 100 cm, juxtaposés ou superposés",
+    "fixation au mur ou lest selon la configuration",
+    "profondeur 26 cm"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "amsterdam",
+   "title": "Amsterdam",
+   "family": "buffets-bibliotheques",
+   "dimensions": [
+    {
+     "label": "Deux portes",
+     "value": "147 × 46 cm, hauteur 79 cm"
+    },
+    {
+     "label": "Trois portes",
+     "value": "220 × 46 cm, hauteur 79 cm"
+    },
+    {
+     "label": "Quatre portes",
+     "value": "294 × 46 cm, hauteur 79 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "pièces",
+     "material": "bois",
+     "count": 1,
+     "names": [
+      "Chêne brûlé"
+     ]
+    },
+    {
+     "group": "portes",
+     "material": "bois",
+     "count": 1,
+     "names": [
+      "oxybrass"
+     ]
+    },
+    {
+     "group": "structure",
+     "material": "bois",
+     "count": 1,
+     "names": [
+      "oxybrass"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "verre",
+     "count": 1,
+     "names": [
+      "miroité bronze"
+     ]
+    }
+   ],
+   "traits": [
+    "portes Oxybrass",
+    "deux, trois ou quatre portes, jusqu’à 294 cm",
+    "profondeur 46 cm",
+    "plateau en verre miroité",
+    "tiroir intérieur pour les couverts possible"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "kayak",
+   "title": "Kayak",
+   "family": "buffets-bibliotheques",
+   "dimensions": [
+    {
+     "label": "Deux portes",
+     "value": "147 × 53 cm, hauteur 73 ou 83 cm"
+    },
+    {
+     "label": "Trois portes",
+     "value": "220 × 53 cm, hauteur 73 ou 83 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "base",
+     "material": "metals",
+     "count": 2,
+     "names": [
+      "acier inox poli",
+      "OP69 graphite mat"
+     ]
+    },
+    {
+     "group": "structure",
+     "material": "bois",
+     "count": 3,
+     "names": [
+      "Brushed Bronze",
+      "Brushed Grey",
+      "M11 titane"
+     ]
+    }
+   ],
+   "traits": [
+    "façades à facettes",
+    "deux ou trois portes, 147 ou 220 cm",
+    "profondeur 53 cm",
+    "tiroir intérieur pour les couverts possible"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "sinatra",
+   "title": "Sinatra",
+   "family": "canapes-fauteuils",
+   "dimensions": [],
+   "finishes": [
+    {
+     "group": "structure",
+     "material": "metals",
+     "count": 3,
+     "names": [
+      "GFM11 gaufré titane",
+      "GFM18 gaufré bronze",
+      "GFM73 gaufré noir"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "T10",
+     "count": 21
+    },
+    {
+     "group": "revêtement",
+     "material": "T20",
+     "count": 24
+    },
+    {
+     "group": "revêtement",
+     "material": "T30",
+     "count": 24
+    },
+    {
+     "group": "revêtement",
+     "material": "T40",
+     "count": 26
+    },
+    {
+     "group": "revêtement",
+     "material": "T50",
+     "count": 22
+    },
+    {
+     "group": "revêtement",
+     "material": "T60",
+     "count": 21
+    },
+    {
+     "group": "revêtement",
+     "material": "T70",
+     "count": 21
+    },
+    {
+     "group": "revêtement",
+     "material": "T80",
+     "count": 25
+    },
+    {
+     "group": "revêtement",
+     "material": "T90",
+     "count": 24
+    }
+   ],
+   "traits": [
+    "dossiers réglables",
+    "canapé à composer, droit ou d’angle",
+    "tissu déhoussable"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "mykonos",
+   "title": "Mykonos",
+   "family": "canapes-fauteuils",
+   "dimensions": [],
+   "finishes": [
+    {
+     "group": "revêtement",
+     "material": "T10",
+     "count": 21
+    },
+    {
+     "group": "revêtement",
+     "material": "T20",
+     "count": 24
+    },
+    {
+     "group": "revêtement",
+     "material": "T30",
+     "count": 24
+    },
+    {
+     "group": "revêtement",
+     "material": "T40",
+     "count": 26
+    },
+    {
+     "group": "revêtement",
+     "material": "T50",
+     "count": 22
+    },
+    {
+     "group": "revêtement",
+     "material": "T60",
+     "count": 21
+    },
+    {
+     "group": "revêtement",
+     "material": "T70",
+     "count": 21
+    },
+    {
+     "group": "revêtement",
+     "material": "T80",
+     "count": 25
+    },
+    {
+     "group": "revêtement",
+     "material": "T90",
+     "count": 24
+    },
+    {
+     "group": "revêtement",
+     "material": "glove",
+     "count": 12,
+     "names": [
+      "GLW02 DOVER",
+      "GLW03 ECRÙ",
+      "GLW21 JUTA",
+      "GLW04 CASTORO",
+      "GLW07 ARGO",
+      "GLW22 BOTANICO",
+      "GLW12 OLIVA",
+      "GLW18 BARRIQUE",
+      "GLW23 AMARONE",
+      "GLW20 SENAPE",
+      "GLW15 CARBON",
+      "GLW17 HORNET"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "magnifica",
+     "count": 10,
+     "names": [
+      "MG47",
+      "MG72",
+      "MG48",
+      "MG51",
+      "MG87",
+      "MG96",
+      "MG91",
+      "MG44",
+      "MG53",
+      "MG73"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "nabuk",
+     "count": 6,
+     "names": [
+      "NK72",
+      "NK48",
+      "NK51",
+      "NK87",
+      "NK91",
+      "NK96"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "perfetto",
+     "count": 8,
+     "names": [
+      "PT72",
+      "PT38",
+      "PT69",
+      "PT83",
+      "PT52",
+      "PT46",
+      "PT96",
+      "PT87"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "cuir mince",
+     "count": 36
+    }
+   ],
+   "traits": [
+    "formes arrondies",
+    "canapé à composer, droit ou d’angle",
+    "tissu déhoussable"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "douglas",
+   "title": "Douglas",
+   "family": "canapes-fauteuils",
+   "dimensions": [],
+   "finishes": [
+    {
+     "group": "revêtement",
+     "material": "T10",
+     "count": 21
+    },
+    {
+     "group": "revêtement",
+     "material": "T20",
+     "count": 24
+    },
+    {
+     "group": "revêtement",
+     "material": "T30",
+     "count": 24
+    },
+    {
+     "group": "revêtement",
+     "material": "T40",
+     "count": 26
+    },
+    {
+     "group": "revêtement",
+     "material": "T50",
+     "count": 22
+    },
+    {
+     "group": "revêtement",
+     "material": "T60",
+     "count": 21
+    },
+    {
+     "group": "revêtement",
+     "material": "T70",
+     "count": 21
+    },
+    {
+     "group": "revêtement",
+     "material": "T80",
+     "count": 25
+    },
+    {
+     "group": "revêtement",
+     "material": "T90",
+     "count": 24
+    },
+    {
+     "group": "revêtement",
+     "material": "glove",
+     "count": 12,
+     "names": [
+      "GLW02 DOVER",
+      "GLW03 ECRÙ",
+      "GLW21 JUTA",
+      "GLW04 CASTORO",
+      "GLW07 ARGO",
+      "GLW22 BOTANICO",
+      "GLW12 OLIVA",
+      "GLW18 BARRIQUE",
+      "GLW23 AMARONE",
+      "GLW20 SENAPE",
+      "GLW15 CARBON",
+      "GLW17 HORNET"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "magnifica",
+     "count": 10,
+     "names": [
+      "MG47",
+      "MG72",
+      "MG48",
+      "MG51",
+      "MG87",
+      "MG96",
+      "MG91",
+      "MG44",
+      "MG53",
+      "MG73"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "nabuk",
+     "count": 6,
+     "names": [
+      "NK72",
+      "NK48",
+      "NK51",
+      "NK87",
+      "NK91",
+      "NK96"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "perfetto",
+     "count": 8,
+     "names": [
+      "PT72",
+      "PT38",
+      "PT69",
+      "PT83",
+      "PT52",
+      "PT46",
+      "PT96",
+      "PT87"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "cuir mince",
+     "count": 36
+    },
+    {
+     "group": "pieds",
+     "material": "metals",
+     "count": 3,
+     "names": [
+      "GFM11 gaufré titane",
+      "GFM18 gaufré bronze",
+      "GFM73 gaufré noir"
+     ]
+    }
+   ],
+   "traits": [
+    "pieds en métal en deux hauteurs, sol visible sous le canapé",
+    "canapé à composer, droit ou d’angle",
+    "tissu déhoussable"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "craig",
+   "title": "Craig",
+   "family": "canapes-fauteuils",
+   "dimensions": [],
+   "finishes": [
+    {
+     "group": "revêtement",
+     "material": "T10",
+     "count": 21
+    },
+    {
+     "group": "revêtement",
+     "material": "T20",
+     "count": 24
+    },
+    {
+     "group": "revêtement",
+     "material": "T30",
+     "count": 24
+    },
+    {
+     "group": "revêtement",
+     "material": "T40",
+     "count": 26
+    },
+    {
+     "group": "revêtement",
+     "material": "T50",
+     "count": 22
+    },
+    {
+     "group": "revêtement",
+     "material": "T60",
+     "count": 21
+    },
+    {
+     "group": "revêtement",
+     "material": "T70",
+     "count": 21
+    },
+    {
+     "group": "revêtement",
+     "material": "T80",
+     "count": 25
+    },
+    {
+     "group": "revêtement",
+     "material": "T90",
+     "count": 24
+    },
+    {
+     "group": "revêtement",
+     "material": "glove",
+     "count": 12,
+     "names": [
+      "GLW02 DOVER",
+      "GLW03 ECRÙ",
+      "GLW21 JUTA",
+      "GLW04 CASTORO",
+      "GLW07 ARGO",
+      "GLW22 BOTANICO",
+      "GLW12 OLIVA",
+      "GLW18 BARRIQUE",
+      "GLW23 AMARONE",
+      "GLW20 SENAPE",
+      "GLW15 CARBON",
+      "GLW17 HORNET"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "magnifica",
+     "count": 10,
+     "names": [
+      "MG47",
+      "MG72",
+      "MG48",
+      "MG51",
+      "MG87",
+      "MG96",
+      "MG91",
+      "MG44",
+      "MG53",
+      "MG73"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "nabuk",
+     "count": 6,
+     "names": [
+      "NK72",
+      "NK48",
+      "NK51",
+      "NK87",
+      "NK91",
+      "NK96"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "perfetto",
+     "count": 8,
+     "names": [
+      "PT72",
+      "PT38",
+      "PT69",
+      "PT83",
+      "PT52",
+      "PT46",
+      "PT96",
+      "PT87"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "cuir mince",
+     "count": 36
+    }
+   ],
+   "traits": [
+    "coussins de dossier garnis de plumes",
+    "canapé à composer, droit ou d’angle",
+    "tissu déhoussable"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "zuleika",
+   "title": "Zuleika",
+   "family": "chaises-tabourets",
+   "dimensions": [
+    {
+     "label": "",
+     "value": "64 × 58,5 cm, hauteur 79 cm, assise à 46 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "revêtement",
+     "material": "cuir",
+     "count": 21
+    }
+   ],
+   "traits": [
+    "habillée de cuir sur structure en acier",
+    "assise à 46 cm",
+    "64 cm de large"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "miranda-ml",
+   "title": "Miranda ML",
+   "family": "chaises-tabourets",
+   "dimensions": [
+    {
+     "label": "",
+     "value": "63 × 61 cm, hauteur 81 cm, assise à 47 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "structure",
+     "material": "metals",
+     "count": 6,
+     "names": [
+      "08 chrome",
+      "GFM11 gaufré titane",
+      "GFM18 gaufré bronze",
+      "GFM69 gaufré graphite",
+      "GFM70 gaufré pearl",
+      "GFM73 gaufré noir"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "cuir mince",
+     "count": 36
+    },
+    {
+     "group": "revêtement",
+     "material": "cuir mince glove",
+     "count": 13,
+     "names": [
+      "GLV02 DOVER",
+      "GLV03 ECRÙ",
+      "GLV21 JUTA",
+      "GLV07 ARGO",
+      "GLV11 TAUPE",
+      "GLV14 PLATOON",
+      "GLV15 CARBON",
+      "GLV17 HORNET",
+      "GLV22 BOTANICO",
+      "GLV12 OLIVA",
+      "GLV18 BARRIQUE",
+      "GLV23 AMARONE",
+      "GLV20 SENAPE"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "simili cuir",
+     "count": 18,
+     "names": [
+      "ECP01 BIANCO",
+      "ECP72 CANOVA",
+      "ECP47 OYSTER",
+      "ECP48 LINO",
+      "ECP25 CANAPA",
+      "ECP05 TORTORA",
+      "ECP26 FANGO",
+      "ECP83 ARGILLA",
+      "ECP07 MARRONE",
+      "ECP27 FOSSIL",
+      "ECP08 MOKA",
+      "ECP36 CEMENTO",
+      "ECP23 LONDON",
+      "ECP37 ARDESIA",
+      "ECP24 NERO",
+      "ECP22 NAVY",
+      "ECP14 BORDEAUX",
+      "ECP13 ROSSO CORSA"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "Tissu chaises/lits",
+     "count": 31
+    },
+    {
+     "group": "revêtement",
+     "material": "micro-nubuck",
+     "count": 14,
+     "names": [
+      "MN103 WHITE",
+      "MN100 BEIGE",
+      "MN806 SAND",
+      "MN604 SHADOW",
+      "MN006 DUSTY ROSE",
+      "MN413 ALMOND",
+      "MN048 SUNSTONE",
+      "MN709 MINT",
+      "MN801 MUSK",
+      "MN603 COGNAC",
+      "MN609 MARRON",
+      "MN618 LEAD",
+      "MN626 CHARCOAL",
+      "MN320 CARDINAL"
+     ]
+    }
+   ],
+   "traits": [
+    "coque enveloppante",
+    "assise à 47 cm"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "tyron-keramik",
+   "title": "Tyron Keramik",
+   "family": "tables",
+   "dimensions": [
+    {
+     "label": "Piètement de 131 cm",
+     "value": "200 × 106, 200 × 120, 220 × 120 ou 240 × 120 cm, hauteur 74 cm"
+    },
+    {
+     "label": "Piètement de 173 cm",
+     "value": "300 × 120 ou boomerang 300 × 140 cm, hauteur 74 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "base",
+     "material": "metals",
+     "count": 6,
+     "names": [
+      "Brushed Bronze",
+      "Brushed Grey",
+      "GFM11 gaufré titane",
+      "GFM18 gaufré bronze",
+      "GFM69 gaufré graphite",
+      "GFM73 gaufré noir"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "céramique KS",
+     "count": 1,
+     "names": [
+      "KS23 Luxor"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "céramique Marmi",
+     "count": 18,
+     "names": [
+      "KM02 Alabastro",
+      "KM05 Golden Calacatta opaque",
+      "KM06 Golden Calacatta brillant",
+      "KM07 Portoro opaque",
+      "KM08 Portoro brillant",
+      "KM09 Sahara Noir brillant",
+      "KM11 Makalu",
+      "KM12 Breccia",
+      "KM14 Corcovado",
+      "KM16 Kaindy",
+      "KM18 Borghini Calacatta opaque",
+      "KM19 Borghini Calacatta brillant",
+      "KM21 Colosseo",
+      "KM22 Andromeda",
+      "KM24 Invisible opaque",
+      "KM26 Taj Mahal",
+      "KM27 Giava",
+      "KM28 Darwin"
+     ]
+    }
+   ],
+   "traits": [
+    "piètement en acier en forme de X",
+    "plateau rectangulaire, biscuit ou boomerang"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "butterfly-keramik",
+   "title": "Butterfly Keramik",
+   "family": "tables",
+   "dimensions": [
+    {
+     "label": "Piètement de 160 cm",
+     "value": "240 × 120 cm, hauteur 74 cm"
+    },
+    {
+     "label": "Piètement de 184 cm",
+     "value": "300 × 120 cm, hauteur 75 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "base",
+     "material": "metals",
+     "count": 4,
+     "names": [
+      "Brushed Bronze",
+      "Brushed Grey",
+      "GFM11 gaufré titane",
+      "GFM18 gaufré bronze"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "céramique KS",
+     "count": 1,
+     "names": [
+      "KS23 Luxor"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "céramique Marmi",
+     "count": 18,
+     "names": [
+      "KM02 Alabastro",
+      "KM05 Golden Calacatta opaque",
+      "KM06 Golden Calacatta brillant",
+      "KM07 Portoro opaque",
+      "KM08 Portoro brillant",
+      "KM09 Sahara Noir brillant",
+      "KM11 Makalu",
+      "KM12 Breccia",
+      "KM14 Corcovado",
+      "KM16 Kaindy",
+      "KM18 Borghini Calacatta opaque",
+      "KM19 Borghini Calacatta brillant",
+      "KM21 Colosseo",
+      "KM22 Andromeda",
+      "KM24 Invisible opaque",
+      "KM26 Taj Mahal",
+      "KM27 Giava",
+      "KM28 Darwin"
+     ]
+    }
+   ],
+   "traits": [
+    "base en ruban d’acier plié",
+    "plateau en céramique"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "butterfly",
+   "title": "Butterfly",
+   "family": "tables",
+   "dimensions": [
+    {
+     "label": "Piètement de 160 cm",
+     "value": "240 × 100 ou 240 × 120 cm, hauteur 75 cm"
+    },
+    {
+     "label": "Piètement de 184 cm",
+     "value": "300 × 100 ou 300 × 120 cm, hauteur 75 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "base",
+     "material": "metals",
+     "count": 4,
+     "names": [
+      "Brushed Bronze",
+      "Brushed Grey",
+      "GFM11 gaufré titane",
+      "GFM18 gaufré bronze"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "verre",
+     "count": 4,
+     "names": [
+      "clair",
+      "extra-clair biseauté",
+      "transparent extra clair",
+      "verre cuit (MIST)"
+     ]
+    }
+   ],
+   "traits": [
+    "base en ruban d’acier plié",
+    "plateau en verre de 15 mm",
+    "base de 160 cm sous un plateau de 240 cm"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "glenn",
+   "title": "Glenn",
+   "family": "consoles-miroirs",
+   "dimensions": [
+    {
+     "label": "Carré",
+     "value": "120 × 120 cm, épaisseur 8 cm"
+    },
+    {
+     "label": "Rectangle",
+     "value": "80 × 190 cm, épaisseur 8 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "(sans groupe)",
+     "material": "verre",
+     "count": 3,
+     "names": [
+      "miroité bronze",
+      "miroité fumé",
+      "miroité"
+     ]
+    }
+   ],
+   "traits": [
+    "miroir aux bords courbés",
+    "au sol ou au mur"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "cosmos",
+   "title": "Cosmos",
+   "family": "consoles-miroirs",
+   "dimensions": [
+    {
+     "label": "Cosmos 120",
+     "value": "Ø 120 cm, épaisseur 11 cm"
+    },
+    {
+     "label": "Cosmos 157",
+     "value": "Ø 157 cm, épaisseur 11 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "(sans groupe)",
+     "material": "verre",
+     "count": 2,
+     "names": [
+      "miroité bronze",
+      "miroité fumé"
+     ]
+    }
+   ],
+   "traits": [
+    "miroir aux bords courbés",
+    "verre miroité fumé ou bronze",
+    "120 ou 157 cm"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "rado-keramik",
+   "title": "Rado Keramik",
+   "family": "consoles-miroirs",
+   "dimensions": [
+    {
+     "label": "Rado Keramik 127",
+     "value": "127 × 38 cm, hauteur 73 cm"
+    },
+    {
+     "label": "Rado Keramik 157",
+     "value": "157 × 38 cm, hauteur 73 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "Plateau et base",
+     "material": "céramique Marmi",
+     "count": 5,
+     "names": [
+      "KM07 Portoro opaque",
+      "KM18 Borghini Calacatta opaque",
+      "KM21 Colosseo",
+      "KM24 Invisible opaque",
+      "KM26 Taj Mahal"
+     ]
+    }
+   ],
+   "traits": [
+    "console tout en céramique",
+    "profondeur 38 cm",
+    "fixation murale"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "nettuno",
+   "title": "Nettuno",
+   "family": "consoles-miroirs",
+   "dimensions": [
+    {
+     "label": "Piètement de 67 cm",
+     "value": "130 ou 160 × 40 cm, hauteur 72 ou 92 cm"
+    },
+    {
+     "label": "Piètement de 105 cm",
+     "value": "180 × 40 cm, hauteur 72 ou 92 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "base",
+     "material": "metals",
+     "count": 4,
+     "names": [
+      "GFM11 gaufré titane",
+      "GFM18 gaufré bronze",
+      "oxybrass",
+      "oxygrey"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "verre",
+     "count": 2,
+     "names": [
+      "transparent extra-clair",
+      "verre cuit (MIST)"
+     ]
+    }
+   ],
+   "traits": [
+    "console sur base ondulée",
+    "plateau en verre de 12 mm",
+    "fixation murale"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "westin",
+   "title": "Westin",
+   "family": "consoles-miroirs",
+   "dimensions": [
+    {
+     "label": "Plateau en verre",
+     "value": "160, 180 ou 200 × 50 cm, hauteur 74 cm"
+    },
+    {
+     "label": "Plateau en bois",
+     "value": "160 ou 200 × 45 cm, hauteur 76 cm, épaisseur 4 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "base",
+     "material": "metals",
+     "count": 7,
+     "names": [
+      "Brushed Bronze",
+      "Brushed Grey",
+      "GFM11 gaufré titane",
+      "GFM18 gaufré bronze",
+      "GFM69 gaufré graphite",
+      "GFM70 gaufré pearl",
+      "GFM73 gaufré noir"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "bois",
+     "count": 3,
+     "names": [
+      "NC noyer Canaletto",
+      "Chêne brûlé",
+      "RN chêne naturel"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "verre",
+     "count": 2,
+     "names": [
+      "clair",
+      "transparent extra-clair"
+     ]
+    }
+   ],
+   "traits": [
+    "console sur lames d’acier croisées",
+    "plateau en verre de 12 mm",
+    "fixation murale"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "dodo",
+   "title": "Dodo",
+   "family": "tables-basses",
+   "dimensions": [
+    {
+     "label": "Dodo A",
+     "value": "Ø 30 cm, hauteur 53 cm"
+    },
+    {
+     "label": "Dodo B",
+     "value": "Ø 41,5 cm, hauteur 44 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "base",
+     "material": "metals",
+     "count": 1,
+     "names": [
+      "GFM18 gaufré bronze"
+     ]
+    },
+    {
+     "group": "structure",
+     "material": "verre artistique",
+     "count": 3,
+     "names": [
+      "fumé",
+      "melanzana",
+      "verde pavone"
+     ]
+    }
+   ],
+   "traits": [
+    "table basse en verre artistique"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "adrian-wood",
+   "title": "Adrian Wood",
+   "family": "tables-basses",
+   "dimensions": [
+    {
+     "label": "Galet 90 × 90",
+     "value": "hauteur 28, 38 ou 48 cm"
+    },
+    {
+     "label": "Galet 118 × 78",
+     "value": "hauteur 28, 38 ou 48 cm"
+    },
+    {
+     "label": "Ovale 180 × 90",
+     "value": "hauteur 28, 38 ou 48 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "base",
+     "material": "metals",
+     "count": 2,
+     "names": [
+      "GFM11 gaufré titane",
+      "GFM18 gaufré bronze"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "bois",
+     "count": 2,
+     "names": [
+      "NC noyer Canaletto",
+      "Chêne brûlé"
+     ]
+    }
+   ],
+   "traits": [
+    "deux essences de bois sur un même plateau",
+    "trois hauteurs"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "albert-keramik",
+   "title": "Albert Keramik",
+   "family": "tables-basses",
+   "dimensions": [
+    {
+     "label": "Ronde Ø 59",
+     "value": "hauteur 34, 44 ou 54 cm"
+    },
+    {
+     "label": "Ronde Ø 100",
+     "value": "hauteur 28, 38 ou 48 cm"
+    },
+    {
+     "label": "Ronde Ø 118",
+     "value": "hauteur 28, 38 ou 48 cm"
+    },
+    {
+     "label": "Galet 90 × 90",
+     "value": "hauteur 28, 38 ou 48 cm"
+    },
+    {
+     "label": "Galet 118 × 78",
+     "value": "hauteur 28, 38 ou 48 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "base",
+     "material": "metals",
+     "count": 3,
+     "names": [
+      "GFM11 gaufré titane",
+      "GFM18 gaufré bronze",
+      "GFM70 gaufré pearl"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "céramique KS",
+     "count": 1,
+     "names": [
+      "KS23 Luxor"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "céramique Marmi",
+     "count": 15,
+     "names": [
+      "KM05 Golden Calacatta opaque",
+      "KM06 Golden Calacatta brillant",
+      "KM07 Portoro opaque",
+      "KM08 Portoro brillant",
+      "KM12 Breccia",
+      "KM14 Corcovado",
+      "KM16 Kaindy",
+      "KM18 Borghini Calacatta opaque",
+      "KM19 Borghini Calacatta brillant",
+      "KM21 Colosseo",
+      "KM22 Andromeda",
+      "KM24 Invisible opaque",
+      "KM26 Taj Mahal",
+      "KM27 Giava",
+      "KM28 Darwin"
+     ]
+    }
+   ],
+   "traits": [
+    "table basse en céramique",
+    "trois hauteurs"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "arena",
+   "title": "Arena",
+   "family": "tables-basses",
+   "dimensions": [
+    {
+     "label": "Arena",
+     "value": "Ø 120 cm, hauteur 29 cm"
+    },
+    {
+     "label": "Arena Bond",
+     "value": "120 × 158 à 188 cm, hauteur 37 cm ; plateau en verre Ø 90 cm"
+    },
+    {
+     "label": "Arena Double Bond",
+     "value": "120 × 196 à 256 cm, hauteur 37 cm ; deux plateaux en verre Ø 90 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "base",
+     "material": "metals",
+     "count": 1,
+     "names": [
+      "GFM73 gaufré noir"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "bois",
+     "count": 2,
+     "names": [
+      "Brushed Bronze",
+      "Brushed Grey"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "verre",
+     "count": 2,
+     "names": [
+      "bronze biseauté",
+      "fumé biseauté"
+     ]
+    }
+   ],
+   "traits": [
+    "table basse ronde en bois laqué brossé",
+    "versions Arena Bond et Double Bond à plateaux pivotants"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "greta-outdoor",
+   "title": "Greta Outdoor",
+   "family": "mobilier-exterieur",
+   "dimensions": [
+    {
+     "label": "Chaise",
+     "value": "62 × 62 cm, hauteur 78 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "assise/dossier",
+     "material": "Tissu outdoor",
+     "count": 20,
+     "names": [
+      "WB100",
+      "WB120",
+      "WB101",
+      "WB121",
+      "WB140",
+      "WB122",
+      "WB123",
+      "WB102",
+      "WB124",
+      "WB125",
+      "WB126",
+      "WB127",
+      "WB103",
+      "WB128",
+      "WB129",
+      "WB141",
+      "WB130",
+      "WB131",
+      "WB132",
+      "WB104"
+     ]
+    },
+    {
+     "group": "structure",
+     "material": "metals",
+     "count": 5,
+     "names": [
+      "GFM11 gaufré titane",
+      "GFM18 gaufré bronze",
+      "GFM69 gaufré graphite",
+      "GFM70 gaufré pearl",
+      "GFM73 gaufré noir"
+     ]
+    }
+   ],
+   "traits": [
+    "chaise en acier inoxydable 304, rembourrée",
+    "pour terrasse ou véranda couverte, à l’abri de la pluie et du soleil direct"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "napoleon-keramik-outdoor",
+   "title": "Napoleon Keramik Outdoor",
+   "family": "mobilier-exterieur",
+   "dimensions": [
+    {
+     "label": "Rectangulaire 240 × 120",
+     "value": "hauteur 75 cm"
+    },
+    {
+     "label": "Rectangulaire 300 × 120",
+     "value": "hauteur 75 cm"
+    },
+    {
+     "label": "Angles adoucis 200 × 120",
+     "value": "hauteur 74 cm"
+    },
+    {
+     "label": "Angles adoucis 240 × 120",
+     "value": "hauteur 75 cm"
+    },
+    {
+     "label": "Angles adoucis 300 × 120",
+     "value": "hauteur 75 cm"
+    },
+    {
+     "label": "Angles adoucis 320 × 138",
+     "value": "hauteur 75 cm"
+    },
+    {
+     "label": "Biscuit 220 × 120",
+     "value": "hauteur 74 cm"
+    },
+    {
+     "label": "Biscuit 300 × 150",
+     "value": "hauteur 75 cm"
+    },
+    {
+     "label": "Ovale 300 × 150",
+     "value": "hauteur 75 cm"
+    },
+    {
+     "label": "Polygonale 300 × 130",
+     "value": "hauteur 75 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "Plateau et base",
+     "material": "céramique Marmi",
+     "count": 5,
+     "names": [
+      "KM07 Portoro opaque",
+      "KM18 Borghini Calacatta opaque",
+      "KM21 Colosseo",
+      "KM24 Invisible opaque",
+      "KM26 Taj Mahal"
+     ]
+    }
+   ],
+   "traits": [
+    "table tout en céramique",
+    "pour terrasse ou véranda couverte, à l’abri de la pluie et du soleil direct"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "bloom",
+   "title": "Bloom",
+   "family": "luminaires",
+   "dimensions": [
+    {
+     "label": "Suspension verticale (V, LV)",
+     "value": "150 × 46 cm, hauteur 90 cm"
+    },
+    {
+     "label": "Suspension horizontale (O, LO)",
+     "value": "150 × 86 cm, hauteur 46 cm"
+    },
+    {
+     "label": "Lampadaire",
+     "value": "57 × 45 cm, hauteur 178 cm"
+    },
+    {
+     "label": "Platine de plafond (S2/4)",
+     "value": "Ø 25 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "pièces",
+     "material": "metals",
+     "count": 1,
+     "names": [
+      "laiton"
+     ]
+    },
+    {
+     "group": "structure",
+     "material": "metals",
+     "count": 1,
+     "names": [
+      "iron grey satiné"
+     ]
+    }
+   ],
+   "traits": [
+    "en suspension ou en lampadaire",
+    "variateur seulement sur certaines versions (O/LO et V/LV)"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "airport",
+   "title": "Airport",
+   "family": "buffets-bibliotheques",
+   "dimensions": [
+    {
+     "label": "Étagère",
+     "value": "60, 110, 160, 210, 260 ou 310 × 29 cm"
+    },
+    {
+     "label": "Caisson Box",
+     "value": "110 ou 160 × 29 cm, hauteur 36 cm"
+    },
+    {
+     "label": "Bureau",
+     "value": "110 × 60 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "conteneur",
+     "material": "bois",
+     "count": 6,
+     "names": [
+      "Brushed Bronze",
+      "Brushed Grey",
+      "GF69 gaufré graphite",
+      "GF71 gaufré blanc",
+      "Noyer Canaletto",
+      "Chêne brûlé"
+     ]
+    },
+    {
+     "group": "étagères",
+     "material": "bois",
+     "count": 6,
+     "names": [
+      "Brushed Bronze",
+      "Brushed Grey",
+      "GF69 gaufré graphite",
+      "GF71 gaufré blanc",
+      "Noyer Canaletto",
+      "Chêne brûlé"
+     ]
+    },
+    {
+     "group": "structure",
+     "material": "metals",
+     "count": 5,
+     "names": [
+      "GFM11 gaufré titane",
+      "GFM18 gaufré bronze",
+      "GFM69 gaufré graphite",
+      "GFM71 gaufré balnc",
+      "GFM73 gaufré noir"
+     ]
+    }
+   ],
+   "traits": [
+    "étagères modulaires",
+    "fixation au mur ou au plafond",
+    "longueurs de 60 à 310 cm",
+    "profondeur 29 cm"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "chelsea",
+   "title": "Chelsea",
+   "family": "buffets-bibliotheques",
+   "dimensions": [
+    {
+     "label": "Longueur 137,5 cm",
+     "value": "137,5 × 46 cm, hauteur 75 cm"
+    },
+    {
+     "label": "Longueur 193 cm",
+     "value": "193 × 46 cm, hauteur 50, 75 ou 100 cm"
+    },
+    {
+     "label": "Longueur 248 cm",
+     "value": "248 × 46 cm, hauteur 50 ou 75 cm"
+    },
+    {
+     "label": "Version B, sur piètement",
+     "value": "193 ou 248 × 46 cm, hauteur 65 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "base",
+     "material": "metals",
+     "count": 2,
+     "names": [
+      "08 chrome",
+      "OP69 graphite mat"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "céramique Marmi",
+     "count": 2,
+     "names": [
+      "KM21 Colosseo",
+      "KM26 Taj Mahal"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "verre",
+     "count": 1,
+     "names": [
+      "miroité bronze"
+     ]
+    },
+    {
+     "group": "structure",
+     "material": "bois",
+     "count": 3,
+     "names": [
+      "M11 titane",
+      "M14 paprika",
+      "M75 mint"
+     ]
+    }
+   ],
+   "traits": [
+    "façades à facettes",
+    "trois hauteurs : 50, 75 et 100 cm",
+    "longueurs de 137,5 à 248 cm",
+    "profondeur 46 cm",
+    "plateau en verre miroité"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "ruby-lounge",
+   "title": "Ruby Lounge",
+   "family": "canapes-fauteuils",
+   "dimensions": [
+    {
+     "label": "Fauteuil",
+     "value": "81 × 92 cm, hauteur 76 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "structure",
+     "material": "bois",
+     "count": 2,
+     "names": [
+      "frNC frêne teinté noyer Canaletto",
+      "frRB frêne teinté chêne brûlé"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "T10",
+     "count": 21
+    },
+    {
+     "group": "revêtement",
+     "material": "T20",
+     "count": 24
+    },
+    {
+     "group": "revêtement",
+     "material": "T30",
+     "count": 24
+    },
+    {
+     "group": "revêtement",
+     "material": "T40",
+     "count": 26
+    },
+    {
+     "group": "revêtement",
+     "material": "T50",
+     "count": 22
+    },
+    {
+     "group": "revêtement",
+     "material": "T60",
+     "count": 21
+    },
+    {
+     "group": "revêtement",
+     "material": "T70",
+     "count": 21
+    },
+    {
+     "group": "revêtement",
+     "material": "T80",
+     "count": 25
+    },
+    {
+     "group": "revêtement",
+     "material": "T90",
+     "count": 24
+    },
+    {
+     "group": "revêtement",
+     "material": "glove",
+     "count": 12,
+     "names": [
+      "GLW02 DOVER",
+      "GLW03 ECRÙ",
+      "GLW21 JUTA",
+      "GLW04 CASTORO",
+      "GLW07 ARGO",
+      "GLW22 BOTANICO",
+      "GLW12 OLIVA",
+      "GLW18 BARRIQUE",
+      "GLW23 AMARONE",
+      "GLW20 SENAPE",
+      "GLW15 CARBON",
+      "GLW17 HORNET"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "magnifica",
+     "count": 10,
+     "names": [
+      "MG47",
+      "MG72",
+      "MG48",
+      "MG51",
+      "MG87",
+      "MG96",
+      "MG91",
+      "MG44",
+      "MG53",
+      "MG73"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "nabuk",
+     "count": 6,
+     "names": [
+      "NK72",
+      "NK48",
+      "NK51",
+      "NK87",
+      "NK91",
+      "NK96"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "perfetto",
+     "count": 8,
+     "names": [
+      "PT72",
+      "PT38",
+      "PT69",
+      "PT83",
+      "PT52",
+      "PT46",
+      "PT96",
+      "PT87"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "cuir mince",
+     "count": 36
+    },
+    {
+     "group": "revêtement",
+     "material": "cuir mince glove",
+     "count": 13,
+     "names": [
+      "GLV02 DOVER",
+      "GLV03 ECRÙ",
+      "GLV21 JUTA",
+      "GLV07 ARGO",
+      "GLV11 TAUPE",
+      "GLV14 PLATOON",
+      "GLV15 CARBON",
+      "GLV17 HORNET",
+      "GLV22 BOTANICO",
+      "GLV12 OLIVA",
+      "GLV18 BARRIQUE",
+      "GLV23 AMARONE",
+      "GLV20 SENAPE"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "Tissu chaises/lits",
+     "count": 31
+    },
+    {
+     "group": "revêtement",
+     "material": "micro-nubuck",
+     "count": 14,
+     "names": [
+      "MN103 WHITE",
+      "MN100 BEIGE",
+      "MN806 SAND",
+      "MN604 SHADOW",
+      "MN006 DUSTY ROSE",
+      "MN413 ALMOND",
+      "MN048 SUNSTONE",
+      "MN709 MINT",
+      "MN801 MUSK",
+      "MN603 COGNAC",
+      "MN609 MARRON",
+      "MN618 LEAD",
+      "MN626 CHARCOAL",
+      "MN320 CARDINAL"
+     ]
+    }
+   ],
+   "traits": [
+    "fauteuil de 81 cm de large",
+    "structure en frêne assortie au canapé Ruby"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "ruby",
+   "title": "Ruby",
+   "family": "canapes-fauteuils",
+   "dimensions": [
+    {
+     "label": "Canapé",
+     "value": "200 × 92 cm, hauteur 76 cm"
+    },
+    {
+     "label": "Fauteuil Ruby Lounge",
+     "value": "81 × 92 cm, hauteur 76 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "structure",
+     "material": "bois",
+     "count": 2,
+     "names": [
+      "frNC frêne teinté noyer Canaletto",
+      "frRB frêne teinté chêne brûlé"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "T10",
+     "count": 21
+    },
+    {
+     "group": "revêtement",
+     "material": "T20",
+     "count": 24
+    },
+    {
+     "group": "revêtement",
+     "material": "T30",
+     "count": 24
+    },
+    {
+     "group": "revêtement",
+     "material": "T40",
+     "count": 26
+    },
+    {
+     "group": "revêtement",
+     "material": "T50",
+     "count": 22
+    },
+    {
+     "group": "revêtement",
+     "material": "T60",
+     "count": 21
+    },
+    {
+     "group": "revêtement",
+     "material": "T70",
+     "count": 21
+    },
+    {
+     "group": "revêtement",
+     "material": "T80",
+     "count": 25
+    },
+    {
+     "group": "revêtement",
+     "material": "T90",
+     "count": 24
+    },
+    {
+     "group": "revêtement",
+     "material": "glove",
+     "count": 12,
+     "names": [
+      "GLW02 DOVER",
+      "GLW03 ECRÙ",
+      "GLW21 JUTA",
+      "GLW04 CASTORO",
+      "GLW07 ARGO",
+      "GLW22 BOTANICO",
+      "GLW12 OLIVA",
+      "GLW18 BARRIQUE",
+      "GLW23 AMARONE",
+      "GLW20 SENAPE",
+      "GLW15 CARBON",
+      "GLW17 HORNET"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "magnifica",
+     "count": 10,
+     "names": [
+      "MG47",
+      "MG72",
+      "MG48",
+      "MG51",
+      "MG87",
+      "MG96",
+      "MG91",
+      "MG44",
+      "MG53",
+      "MG73"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "nabuk",
+     "count": 6,
+     "names": [
+      "NK72",
+      "NK48",
+      "NK51",
+      "NK87",
+      "NK91",
+      "NK96"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "perfetto",
+     "count": 8,
+     "names": [
+      "PT72",
+      "PT38",
+      "PT69",
+      "PT83",
+      "PT52",
+      "PT46",
+      "PT96",
+      "PT87"
+     ]
+    },
+    {
+     "group": "revêtement",
+     "material": "cuir mince",
+     "count": 36
+    }
+   ],
+   "traits": [
+    "canapé droit de 200 cm",
+    "structure apparente en frêne",
+    "accoudoirs courbes"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "greta",
+   "title": "Greta",
+   "family": "chaises-tabourets",
+   "dimensions": [
+    {
+     "label": "",
+     "value": "62 × 62 cm, hauteur 78 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "assise",
+     "material": "T10",
+     "count": 21
+    },
+    {
+     "group": "assise",
+     "material": "T20",
+     "count": 24
+    },
+    {
+     "group": "assise",
+     "material": "T30",
+     "count": 24
+    },
+    {
+     "group": "assise",
+     "material": "T40",
+     "count": 26
+    },
+    {
+     "group": "assise",
+     "material": "T50",
+     "count": 22
+    },
+    {
+     "group": "assise",
+     "material": "T60",
+     "count": 21
+    },
+    {
+     "group": "assise",
+     "material": "T70",
+     "count": 21
+    },
+    {
+     "group": "assise",
+     "material": "T80",
+     "count": 25
+    },
+    {
+     "group": "assise",
+     "material": "T90",
+     "count": 24
+    },
+    {
+     "group": "assise",
+     "material": "glove",
+     "count": 12,
+     "names": [
+      "GLW02 DOVER",
+      "GLW03 ECRÙ",
+      "GLW21 JUTA",
+      "GLW04 CASTORO",
+      "GLW07 ARGO",
+      "GLW22 BOTANICO",
+      "GLW12 OLIVA",
+      "GLW18 BARRIQUE",
+      "GLW23 AMARONE",
+      "GLW20 SENAPE",
+      "GLW15 CARBON",
+      "GLW17 HORNET"
+     ]
+    },
+    {
+     "group": "assise",
+     "material": "magnifica",
+     "count": 10,
+     "names": [
+      "MG47",
+      "MG72",
+      "MG48",
+      "MG51",
+      "MG87",
+      "MG96",
+      "MG91",
+      "MG44",
+      "MG53",
+      "MG73"
+     ]
+    },
+    {
+     "group": "assise",
+     "material": "nabuk",
+     "count": 6,
+     "names": [
+      "NK72",
+      "NK48",
+      "NK51",
+      "NK87",
+      "NK91",
+      "NK96"
+     ]
+    },
+    {
+     "group": "assise",
+     "material": "perfetto",
+     "count": 8,
+     "names": [
+      "PT72",
+      "PT38",
+      "PT69",
+      "PT83",
+      "PT52",
+      "PT46",
+      "PT96",
+      "PT87"
+     ]
+    },
+    {
+     "group": "assise",
+     "material": "cuir mince",
+     "count": 36
+    },
+    {
+     "group": "assise",
+     "material": "cuir mince glove",
+     "count": 13,
+     "names": [
+      "GLV02 DOVER",
+      "GLV03 ECRÙ",
+      "GLV21 JUTA",
+      "GLV07 ARGO",
+      "GLV11 TAUPE",
+      "GLV14 PLATOON",
+      "GLV15 CARBON",
+      "GLV17 HORNET",
+      "GLV22 BOTANICO",
+      "GLV12 OLIVA",
+      "GLV18 BARRIQUE",
+      "GLV23 AMARONE",
+      "GLV20 SENAPE"
+     ]
+    },
+    {
+     "group": "assise",
+     "material": "simili cuir",
+     "count": 18,
+     "names": [
+      "ECP01 BIANCO",
+      "ECP72 CANOVA",
+      "ECP47 OYSTER",
+      "ECP48 LINO",
+      "ECP25 CANAPA",
+      "ECP05 TORTORA",
+      "ECP26 FANGO",
+      "ECP83 ARGILLA",
+      "ECP07 MARRONE",
+      "ECP27 FOSSIL",
+      "ECP08 MOKA",
+      "ECP36 CEMENTO",
+      "ECP23 LONDON",
+      "ECP37 ARDESIA",
+      "ECP24 NERO",
+      "ECP22 NAVY",
+      "ECP14 BORDEAUX",
+      "ECP13 ROSSO CORSA"
+     ]
+    },
+    {
+     "group": "assise",
+     "material": "Tissu chaises/lits",
+     "count": 31
+    },
+    {
+     "group": "assise",
+     "material": "micro-nubuck",
+     "count": 14,
+     "names": [
+      "MN103 WHITE",
+      "MN100 BEIGE",
+      "MN806 SAND",
+      "MN604 SHADOW",
+      "MN006 DUSTY ROSE",
+      "MN413 ALMOND",
+      "MN048 SUNSTONE",
+      "MN709 MINT",
+      "MN801 MUSK",
+      "MN603 COGNAC",
+      "MN609 MARRON",
+      "MN618 LEAD",
+      "MN626 CHARCOAL",
+      "MN320 CARDINAL"
+     ]
+    },
+    {
+     "group": "base",
+     "material": "metals",
+     "count": 5,
+     "names": [
+      "GFM11 gaufré titane",
+      "GFM18 gaufré bronze",
+      "GFM69 gaufré graphite",
+      "GFM70 gaufré pearl",
+      "GFM73 gaufré noir"
+     ]
+    }
+   ],
+   "traits": [
+    "accoudoirs prolongés",
+    "existe aussi en tabouret",
+    "62 cm de large"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "rhonda",
+   "title": "Rhonda",
+   "family": "chaises-tabourets",
+   "dimensions": [
+    {
+     "label": "",
+     "value": "63 × 60 cm, hauteur 79 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "assise",
+     "material": "cuir mince",
+     "count": 36
+    },
+    {
+     "group": "assise",
+     "material": "cuir mince glove",
+     "count": 13,
+     "names": [
+      "GLV02 DOVER",
+      "GLV03 ECRÙ",
+      "GLV21 JUTA",
+      "GLV07 ARGO",
+      "GLV11 TAUPE",
+      "GLV14 PLATOON",
+      "GLV15 CARBON",
+      "GLV17 HORNET",
+      "GLV22 BOTANICO",
+      "GLV12 OLIVA",
+      "GLV18 BARRIQUE",
+      "GLV23 AMARONE",
+      "GLV20 SENAPE"
+     ]
+    },
+    {
+     "group": "assise",
+     "material": "simili cuir",
+     "count": 18,
+     "names": [
+      "ECP01 BIANCO",
+      "ECP72 CANOVA",
+      "ECP47 OYSTER",
+      "ECP48 LINO",
+      "ECP25 CANAPA",
+      "ECP05 TORTORA",
+      "ECP26 FANGO",
+      "ECP83 ARGILLA",
+      "ECP07 MARRONE",
+      "ECP27 FOSSIL",
+      "ECP08 MOKA",
+      "ECP36 CEMENTO",
+      "ECP23 LONDON",
+      "ECP37 ARDESIA",
+      "ECP24 NERO",
+      "ECP22 NAVY",
+      "ECP14 BORDEAUX",
+      "ECP13 ROSSO CORSA"
+     ]
+    },
+    {
+     "group": "assise",
+     "material": "Tissu chaises/lits",
+     "count": 31
+    },
+    {
+     "group": "assise",
+     "material": "micro-nubuck",
+     "count": 14,
+     "names": [
+      "MN103 WHITE",
+      "MN100 BEIGE",
+      "MN806 SAND",
+      "MN604 SHADOW",
+      "MN006 DUSTY ROSE",
+      "MN413 ALMOND",
+      "MN048 SUNSTONE",
+      "MN709 MINT",
+      "MN801 MUSK",
+      "MN603 COGNAC",
+      "MN609 MARRON",
+      "MN618 LEAD",
+      "MN626 CHARCOAL",
+      "MN320 CARDINAL"
+     ]
+    },
+    {
+     "group": "structure",
+     "material": "metals",
+     "count": 6,
+     "names": [
+      "08 chrome",
+      "GFM11 gaufré titane",
+      "GFM18 gaufré bronze",
+      "GFM69 gaufré graphite",
+      "GFM70 gaufré pearl",
+      "GFM73 gaufré noir"
+     ]
+    }
+   ],
+   "traits": [
+    "dossier plissé",
+    "existe aussi en tabouret"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "napoleon-keramik",
+   "title": "Napoleon Keramik",
+   "family": "tables",
+   "dimensions": [
+    {
+     "label": "Rectangulaire 240 × 120",
+     "value": "hauteur 75 cm"
+    },
+    {
+     "label": "Rectangulaire 300 × 120",
+     "value": "hauteur 75 cm"
+    },
+    {
+     "label": "Angles adoucis 200 × 120",
+     "value": "hauteur 74 cm"
+    },
+    {
+     "label": "Angles adoucis 240 × 120",
+     "value": "hauteur 75 cm"
+    },
+    {
+     "label": "Angles adoucis 300 × 120",
+     "value": "hauteur 75 cm"
+    },
+    {
+     "label": "Angles adoucis 320 × 138",
+     "value": "hauteur 75 cm"
+    },
+    {
+     "label": "Biscuit 220 × 120",
+     "value": "hauteur 74 cm"
+    },
+    {
+     "label": "Biscuit 300 × 150",
+     "value": "hauteur 75 cm"
+    },
+    {
+     "label": "Ovale 300 × 150",
+     "value": "hauteur 75 cm"
+    },
+    {
+     "label": "Polygonale 300 × 130",
+     "value": "hauteur 75 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "Plateau et base",
+     "material": "céramique Marmi",
+     "count": 5,
+     "names": [
+      "KM07 Portoro opaque",
+      "KM18 Borghini Calacatta opaque",
+      "KM21 Colosseo",
+      "KM24 Invisible opaque",
+      "KM26 Taj Mahal"
+     ]
+    }
+   ],
+   "traits": [
+    "plateau et base centrale en céramique",
+    "plateau ovale 300 × 150 cm",
+    "jusqu’à 14 places"
+   ],
+   "technical_sheet": true
+  },
+  {
+   "slug": "skorpio",
+   "title": "Skorpio",
+   "family": "tables",
+   "dimensions": [
+    {
+     "label": "Carrée 150 × 150",
+     "value": "hauteur 74 cm"
+    },
+    {
+     "label": "Carrée 200 × 200",
+     "value": "hauteur 74 cm"
+    },
+    {
+     "label": "Rectangulaire 160 × 90",
+     "value": "hauteur 74 cm"
+    },
+    {
+     "label": "Rectangulaire 182 × 90",
+     "value": "hauteur 74 cm"
+    },
+    {
+     "label": "Rectangulaire 200 × 100",
+     "value": "hauteur 74 cm"
+    },
+    {
+     "label": "Rectangulaire 200 × 106",
+     "value": "hauteur 74 cm"
+    },
+    {
+     "label": "Rectangulaire 240 × 100",
+     "value": "hauteur 74 cm"
+    },
+    {
+     "label": "Rectangulaire 240 × 120",
+     "value": "hauteur 74 cm"
+    },
+    {
+     "label": "Rectangulaire 300 × 100",
+     "value": "hauteur 74 cm"
+    },
+    {
+     "label": "Rectangulaire 300 × 120",
+     "value": "hauteur 74 cm"
+    },
+    {
+     "label": "Angles adoucis 200 × 120",
+     "value": "hauteur 74 cm"
+    },
+    {
+     "label": "Angles adoucis 240 × 120",
+     "value": "hauteur 74 cm"
+    },
+    {
+     "label": "Angles adoucis 300 × 120",
+     "value": "hauteur 74 cm"
+    },
+    {
+     "label": "Angles adoucis 300 × 130",
+     "value": "hauteur 74 cm"
+    }
+   ],
+   "finishes": [
+    {
+     "group": "base",
+     "material": "metals",
+     "count": 7,
+     "names": [
+      "Brushed Bronze",
+      "Brushed Grey",
+      "GFM11 gaufré titane",
+      "GFM18 gaufré bronze",
+      "GFM69 gaufré graphite",
+      "GFM70 gaufré pearl",
+      "GFM73 gaufré noir"
+     ]
+    },
+    {
+     "group": "plateau",
+     "material": "verre",
+     "count": 4,
+     "names": [
+      "clair",
+      "extra-clair biseauté",
+      "transparent extra clair",
+      "verre cuit (MIST)"
+     ]
+    }
+   ],
+   "traits": [
+    "plateau en verre",
+    "piètement en acier à lignes croisées",
+    "existe en carré 150 × 150 et 200 × 200 cm"
+   ],
+   "technical_sheet": true
+  }
+ ]
+}

@@ -50,8 +50,23 @@ notes go in other `##` sections: they are not linted. Then run `node scripts/cop
 
 ## Status of the briefs
 
-| Page | Brief | Draft |
+| Group | Briefs | Drafts |
 |---|---|---|
-| À propos | not needed (drafted first, used as the worked example) | `docs/copy-drafts/a-propos-2026-10-04.md` |
-| Accueil | `home.md` (ready) | to do |
-| Other pages, 8 families, 5 guides, models | to do | to do |
+| À propos | none needed (drafted first, used as the worked example) | `docs/copy-drafts/a-propos-2026-10-04.md` |
+| Accueil | `home.md` | to do |
+| Pages (8) | `pages/`: showroom, collections, catalogue, journal, votre-projet, professionnels, sur-mesure, faq | to do |
+| Families (8) | `families/` | to do |
+| Guides (5) | `guides/` | to do |
+| Models (39) | `models/<family>.md`, generated from `data/models-facts.json` by `scripts/build-model-briefs.mjs` | to do |
+
+Shared data: `data/shared-facts.md` (services, showroom, customisation, catalogue, professionals) and
+`data/models-facts.json` (dimensions, finishes and short traits of the 39 models, no prose).
+
+**Not briefed on purpose**
+- Legal pages (mentions légales, confidentialité): legal text, not restyled.
+- Functional microcopy (form labels, error messages, button labels of the templates, the demonstration notice).
+- Photos, alt texts and captions: the photos are provisional until the 9 October shoot.
+
+**Suggested order:** home, then showroom, then one family, one guide and one model family, to confirm the style on each
+kind of page. Then the rest in batches. Rebuild the model briefs after any change to the data file:
+`node scripts/build-model-briefs.mjs`.
