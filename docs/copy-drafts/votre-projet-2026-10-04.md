@@ -18,7 +18,7 @@
 
 **situation.3.heading:** Avec un architecte
 
-**situation.3.text:** L'architecte travaille directement avec le showroom, qui lui envoie les fiches techniques et les échantillons. Sur rendez-vous, nous recevons ensuite l'architecte avec son client.
+**situation.3.text:** L'architecte travaille directement avec le showroom. Nous lui envoyons les fiches techniques et les échantillons, puis nous le recevons avec son client, sur rendez-vous.
 
 **step.1.heading:** 01 · Conseil
 
@@ -34,11 +34,11 @@
 
 **step.4.heading:** 04 · Fabrication en Italie
 
-**step.4.text:** Chaque meuble est fabriqué en Italie, par des entreprises spécialisées réunies autour de Cattelan Italia. Un meuble sur mesure a le même délai qu'un modèle standard, 10 à 12 semaines au maximum entre validation et livraison. Nous vous tenons informé de l'avancement.
+**step.4.text:** Chaque meuble est fabriqué en Italie, par des entreprises spécialisées réunies autour de Cattelan Italia. Un meuble sur mesure a le même délai qu'un modèle standard, 10 à 12 semaines au maximum entre validation et livraison. Nous vous tenons informé pendant la fabrication.
 
 **step.5.heading:** 05 · Livraison et installation
 
-**step.5.text:** La livraison est gratuite à Casablanca. Pour Rabat, Marrakech, Tanger et le reste du Maroc, son coût dépend de la destination et figure sur le devis. L'installation est comprise. Une seule personne suit la commande, de la fabrication en Italie à l'installation.
+**step.5.text:** La livraison est gratuite à Casablanca. Pour Rabat, Marrakech, Tanger et le reste du Maroc, son coût dépend de la destination et figure sur le devis. Une seule personne suit la commande, de la fabrication en Italie à la livraison. L'installation est comprise.
 
 **payment.heading:** Moyens de paiement
 
@@ -50,7 +50,7 @@
 
 **seo_title:** Commander du mobilier italien au Maroc · Cattelan Italia
 
-**meta_description:** Conseil, devis, acompte de 50 %, fabrication en Italie, puis livraison et installation au Maroc, 10 à 12 semaines au maximum après validation.
+**meta_description:** Conseil, devis, acompte de 50 % et fabrication en Italie, puis livraison au Maroc 10 à 12 semaines au maximum après validation, installation comprise.
 
 ## Alternatives
 
@@ -94,4 +94,18 @@
 
 ## Open points
 
-- No [NEED] item so far.
+- No [NEED] item: every slot is covered by the brief's fact ids.
+- Lint: 0 blocking, 0 review on the final run. Two review findings from the first run (four or more commas in the
+  step.1 and step.2 lists) were fixed by rewriting, along with the blocking cliché "côte à côte" in step.1.
+- intro: "livré 10 à 12 semaines au maximum après validation de la commande, puis installé". The delay applies to
+  delivery (SV5); installation is placed right after it because step 5 joins delivery and installation (SV1). Confirm
+  that installation happens at delivery, not on a later date.
+- situation.1.text uses samples (S3) and a single contact (SV10), which the slot role asks for ("advice with samples,
+  then quote and follow-up") but the slot's fact list does not name. Both facts are in the brief for other slots.
+- step.1.text: "On y pose la main sur la céramique d'un plateau ou le cuir d'un fauteuil" illustrates S3 (ceramics and
+  leathers shown as samples or on displayed pieces). It names no model, so it makes no claim about what is on display.
+- step.2.text takes a table as the price example ("sa longueur"); SV8 says prices depend on model, dimensions and
+  finishes for every piece.
+- seo_title starts with the infinitive "Commander" to match the SEO intent "commander mobilier italien maroc". If the
+  owner prefers the site pattern, use "Commande et livraison · Cattelan Italia Maroc" (45 characters).
+- payment.text does not say whether the three means apply to both the deposit and the balance; SV4 does not specify.
