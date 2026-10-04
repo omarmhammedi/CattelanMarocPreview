@@ -6,6 +6,7 @@
 //   node scripts/copy-lint.mjs docs/copy-drafts/a-propos-2026-10-04.md
 //   node scripts/copy-lint.mjs draft.md other.json --all      also list review-level findings
 //   node scripts/copy-lint.mjs draft.md --json                machine-readable output
+//   node scripts/copy-lint.mjs draft.md --brief brief.md      also check word limits and fixed items of the brief
 //
 // Exit code 1 when there is at least one blocking finding.
 // Markdown drafts: only the part under "## Page copy" is checked when that heading exists.
@@ -99,7 +100,7 @@ export function extractMarkdown(content) {
       flush();
       const type = slotType(m[1].replace(/\s*\(.*\)\s*$/, ''));
       const text = m[2].replace(/\s*→.*$/, '');
-      blocks.push({ line: n, type, text: stripMd(text) });
+      blocks.push({ line: n, type, text: stripMd(text), slot: m[1].replace(/\s*\(.*\)\s*$/, '').trim() });
       return;
     }
     if ((m = line.match(/^\s*[-*]\s+(.*)$/))) { flush(); blocks.push({ line: n, type: 'body', text: stripMd(m[1]) }); return; }
@@ -198,18 +199,68 @@ export function lintBlocks(blocks, { allow = [] } = {}) {
   return findings;
 }
 
+// ---------- brief checks: word limits and fixed items ----------
+
+const unq = (s) => s.replace(/[’‘]/g, "'").replace(/[“”«»]/g, '"').replace(/\s+/g, ' ').trim();
+export const countWords = (t) => t.split(/\s+/).filter((x) => /[\p{L}\p{N}]/u.test(x)).length;
+
+export function parseBrief(md) {
+  const slots = new Map();
+  const set = (name, v) => slots.set(name, { ...(slots.get(name) || {}), ...v });
+  for (const line of md.split('\n')) {
+    let m;
+    if ((m = line.match(/^-\s*`([^`]+)`\s*:\s*(\d+)\s*mots/))) { set(m[1], { limit: { n: +m[2], unit: 'words' } }); continue; }
+    if (!/^\|/.test(line) || /^\|\s*-/.test(line)) continue;
+    const cells = line.split('|').slice(1, -1).map((c) => c.trim());
+    if (cells.length < 3 || /^Slot$/i.test(cells[0])) continue;
+    let names = [...cells[0].matchAll(/`([^`]+)`/g)].map((x) => x[1]);
+    const range = cells[0].match(/`([^`]*?)(\d+)([^`]*)`\s+to\s+`[^`]*?(\d+)[^`]*`/);
+    if (range) { names = []; for (let i = +range[2]; i <= +range[4]; i++) names.push(`${range[1]}${i}${range[3]}`); }
+    if (!names.length) continue;
+    if (/\*\*FIXED\*\*/.test(cells[1])) {
+      const q = (cells[3] || cells[2] || '').match(/"([^"]+)"/);
+      if (q) names.forEach((nm) => set(nm, { fixed: q[1] }));
+      continue;
+    }
+    const limits = [...(cells[2] || '').matchAll(/(\d+)\s*(words|word|characters|mots|caractères)/g)].map((x) => ({ n: +x[1], unit: /char|carac/.test(x[2]) ? 'characters' : 'words' }));
+    if (!limits.length) continue;
+    names.forEach((nm, i) => set(nm, { limit: limits.length === names.length ? limits[i] : limits[0] }));
+  }
+  return slots;
+}
+
+export function checkAgainstBrief(blocks, brief) {
+  const out = [];
+  const bySlot = new Map(blocks.filter((b) => b.slot).map((b) => [b.slot, b]));
+  for (const [name, spec] of brief) {
+    const b = bySlot.get(name);
+    if (!b) { out.push({ level: 'review', id: 'missing-slot', line: '-', msg: 'Slot of the brief not found in the draft.', match: name, block: '' }); continue; }
+    if (spec.fixed && unq(b.text).replace(/^"|"$/g, '') !== unq(spec.fixed)) out.push({ level: 'block', id: 'fixed-changed', line: b.line, msg: `Fixed item must read exactly: "${spec.fixed}".`, match: name, block: b.text });
+    if (spec.limit) {
+      const n = spec.limit.unit === 'characters' ? b.text.length : countWords(b.text);
+      if (n > spec.limit.n) out.push({ level: 'block', id: 'over-limit', line: b.line, msg: `${n} ${spec.limit.unit}, limit ${spec.limit.n}.`, match: name, block: b.text });
+    }
+  }
+  return out;
+}
+
 // ---------- CLI ----------
 
 function main(argv) {
-  const files = argv.filter((a) => !a.startsWith('--'));
+  let files;
   const showAll = argv.includes('--all');
+  const bi = argv.indexOf('--brief');
+  const brief = bi >= 0 ? parseBrief(readFileSync(argv[bi + 1], 'utf8')) : null;
+  if (bi >= 0) argv = argv.filter((_, i) => i !== bi + 1);
+  files = argv.filter((a) => !a.startsWith('--'));
   const asJson = argv.includes('--json');
   if (!files.length) { console.error('Usage: node scripts/copy-lint.mjs <file.md|json|txt> [...] [--all] [--json]'); return 2; }
   const allow = loadAllow();
   let blocking = 0, review = 0;
   const out = [];
   for (const f of files) {
-    const findings = lintBlocks(extractBlocks(f, readFileSync(f, 'utf8')), { allow });
+    const blocks = extractBlocks(f, readFileSync(f, 'utf8'));
+    const findings = [...lintBlocks(blocks, { allow }), ...(brief ? checkAgainstBrief(blocks, brief) : [])];
     blocking += findings.filter((x) => x.level === 'block').length;
     review += findings.filter((x) => x.level === 'review').length;
     out.push({ file: f, findings });

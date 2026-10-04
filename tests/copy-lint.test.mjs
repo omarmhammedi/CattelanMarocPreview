@@ -90,3 +90,20 @@ test('slot names: question is a heading, button is a button', () => {
   assert.equal(blocks[0].type, 'heading');
   assert.equal(blocks[1].type, 'button');
 });
+
+test('brief checks: word limits, fixed items, missing slots', async () => {
+  const { parseBrief, checkAgainstBrief } = await import('../scripts/copy-lint.mjs');
+  const brief = parseBrief([
+    '| Slot | Role | Limit | Facts |', '|---|---|---|---|',
+    '| `title` | **FIXED** | | "Questions fréquentes" |',
+    '| `intro` | Says what | 5 words | X |',
+    '| `a.heading`, `a.text` | Pair | 3 words; 4 words | X |',
+    '| `seo_title` | Search | 20 characters | X |',
+    '- `glenn.description` : 45 mots au plus.',
+  ].join('\n'));
+  const md = '## Page copy\n\n**title:** Questions fréquentes\n\n**intro:** Un deux trois quatre cinq six.\n\n**a.heading:** Le miroir Glenn\n\n**a.text:** Un deux trois quatre.\n\n**seo_title:** Un titre beaucoup trop long pour la recherche\n';
+  const got = checkAgainstBrief(extractBlocks('x.md', md), brief).map((f) => `${f.id}:${f.match}`);
+  assert.deepEqual(got.sort(), ['missing-slot:glenn.description', 'over-limit:intro', 'over-limit:seo_title'].sort());
+  const changed = checkAgainstBrief(extractBlocks('x.md', '## Page copy\n\n**title:** FAQ\n'), brief).map((f) => f.id);
+  assert.ok(changed.includes('fixed-changed'));
+});
