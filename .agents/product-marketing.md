@@ -101,12 +101,12 @@ and `docs/demandes-client.md`.
 
 ## 8. House rules and banned language
 
-Authoritative rules live in the `cattelan-site-copy` skill and the linter (`node scripts/copy-lint.mjs`, allow-list
-in `scripts/copy-lint-allow.txt`). Short version:
+Authoritative rules live in the `cattelan-site-copy` skill. That skill mentions a linter (`scripts/copy-lint.mjs`),
+but it is **not committed to this repo yet**; until it is, check banned words by hand or with grep. Short version:
 
 - No stock phrases: univers, signature, élégant, raffiné, intemporel, savoir-faire, sublimer, harmonie, inspiration,
   découvrir, explorer, expérience, accompagner, votre intérieur, iconique, épuré, qualité, "à votre disposition",
-  "vous attend", "de quoi", "voici comment"; the linter has the full list.
+  "vous attend", "de quoi", "voici comment"; the skill has the full list.
 - No vague quantity where a number exists ("près de quarante" becomes "39 modèles"; count from the data).
 - No guarantee nobody can give. No production notes in public copy (except the preview notice and demo catalogue).
 - A model's lead (also used on cards and meta) and its description never repeat each other: lead = identity + key
@@ -128,7 +128,7 @@ in `scripts/copy-lint-allow.txt`). Short version:
 
 1. Read this file, then the relevant block of `content/copy-v8.json` (latest copy) and the page's intent in
    `docs/seo-page-map.md`.
-2. Draft with `copywriting`; tighten with `copy-editing`; finish with `cattelan-site-copy` and the linter.
+2. Draft with `copywriting`; tighten with `copy-editing`; finish with `cattelan-site-copy`.
 3. Every proposed line gets a source: FAQ, model data, official page, or an owner decision. No source: list it
    under "données client" instead of writing it.
 4. Report per entry: Appliqué, Adapté, Refusé (with the contradicting source), or Données client.
