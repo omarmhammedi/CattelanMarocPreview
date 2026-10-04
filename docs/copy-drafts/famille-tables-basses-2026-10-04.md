@@ -8,7 +8,7 @@
 
 **card_text:** De 28 à 54 cm de haut, quatre tables basses en bois, en céramique ou en verre artistique.
 
-**intro:** Quatre tables basses se posent seules ou se combinent. Arena, ronde, est en bois laqué brossé ; ses versions Bond et Double Bond ont des plateaux pivotants. Albert Keramik est en céramique, Dodo en verre artistique. Adrian Wood réunit deux essences de bois sur un même plateau.
+**intro:** Arena, ronde, en bois laqué brossé, a deux versions à plateaux pivotants, Bond et Double Bond. Adrian Wood réunit deux essences de bois sur un même plateau. Albert Keramik est en céramique, Dodo en verre artistique. Les quatre tables se posent seules ou se combinent.
 
 **content.1.heading:** Quelle hauteur pour une table basse ?
 

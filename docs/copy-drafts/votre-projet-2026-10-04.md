@@ -22,11 +22,11 @@
 
 **step.1.heading:** 01 · Conseil
 
-**step.1.text:** Au showroom, toutes les finitions de la marque sont présentées en échantillons ou sur les meubles exposés. Céramiques, bois, laques, métaux, tissus et cuirs se comparent côte à côte. Sur WhatsApp, nous répondons sur les formats, le délai et le devis.
+**step.1.text:** Toutes les finitions de la marque sont au showroom, en échantillons ou sur les meubles exposés. On y pose la main sur la céramique d'un plateau ou le cuir d'un fauteuil. Sur WhatsApp, nous répondons sur les formats, le délai et le devis.
 
 **step.2.heading:** 02 · Devis détaillé
 
-**step.2.text:** Le prix d'une table dépend du modèle, de sa longueur et de ses finitions. Le site n'affiche donc aucun prix. Le devis détaillé reprend vos choix meuble par meuble, avec les dimensions, les finitions, le revêtement, la livraison et l'installation.
+**step.2.text:** Le prix d'une table dépend du modèle, de sa longueur et de ses finitions. Le site n'affiche donc aucun prix. Le devis détaille chaque meuble avec ses dimensions, ses finitions et son revêtement, puis la livraison et l'installation.
 
 **step.3.heading:** 03 · Validation et acompte
 

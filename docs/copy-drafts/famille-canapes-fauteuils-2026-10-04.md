@@ -16,7 +16,7 @@
 
 **content.2.heading:** Tissu déhoussable, quatre gammes de cuir
 
-**content.2.text:** Sur Craig, Douglas, Mykonos et Sinatra, la housse en tissu se retire. La notice d’entretien de chaque tissu indique si cette housse passe en machine. Le cuir existe en quatre gammes, Glove, Magnifica, Nabuk et Perfetto, selon le modèle. Au showroom, comparez l’échantillon du tissu choisi aux quatre cuirs et demandez sa notice d’entretien.
+**content.2.text:** Sur Craig, Douglas, Mykonos et Sinatra, la housse en tissu se retire. La notice d’entretien de chaque tissu indique si cette housse passe en machine. Les cuirs Glove, Magnifica, Nabuk et Perfetto se choisissent selon le modèle. Au showroom, comparez l’échantillon du tissu choisi aux quatre cuirs et demandez sa notice d’entretien.
 
 **seo_title:** Canapés, salons et fauteuils Cattelan Italia à Casablanca · Cattelan Italia Maroc
 

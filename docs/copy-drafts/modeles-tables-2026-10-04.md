@@ -2,15 +2,15 @@
 
 ## Page copy
 
-**skorpio.description:** Skorpio pose un plateau en verre sur un piètement en acier à lignes croisées. Ses 14 formats, hauts de 74 cm, comprennent deux carrés, 150 × 150 et 200 × 200 cm, et des rectangles de 160 × 90 à 300 × 130 cm.
+**skorpio.description:** Skorpio pose un plateau en verre sur un piètement en acier à lignes croisées. Elle existe en carré 150 × 150 ou 200 × 200 cm et en rectangle de 160 × 90 à 300 × 130 cm. Ses 14 formats ont 74 cm de haut.
 
-**skorpio.content:** Selon le format, les rectangles ont des angles droits ou adoucis. L'acier du piètement se commande en sept finitions de métaux, Brushed Bronze, Brushed Grey et cinq gaufrés (titane, bronze, graphite, pearl, noir). Le verre du plateau se choisit clair, extra-clair biseauté, transparent extra clair ou cuit (MIST).
+**skorpio.content:** Selon le format, les rectangles ont des angles droits ou adoucis. L'acier du piètement existe en sept finitions de métaux. Deux sont brossées, Brushed Bronze et Brushed Grey. Les cinq autres sont gaufrées en titane, bronze, graphite, pearl ou noir. Le verre du plateau se choisit clair, extra-clair biseauté, transparent extra clair ou cuit (MIST).
 
 **napoleon-keramik.description:** Napoleon Keramik a un plateau et une base centrale en céramique. La table compte jusqu'à 14 places et existe en 10 formats, de 200 × 120 à 320 × 138 cm, dont un ovale de 300 × 150 cm.
 
-**napoleon-keramik.content:** Le plateau est rectangulaire, à angles adoucis, biscuit, ovale ou polygonal. Plateau et base se déclinent en cinq décors de céramique Marmi (KM07 Portoro opaque, KM18 Borghini Calacatta opaque, KM21 Colosseo, KM24 Invisible opaque, KM26 Taj Mahal). La table mesure 75 cm de haut, 74 cm pour les deux plus petits formats.
+**napoleon-keramik.content:** Le plateau est rectangulaire, à angles adoucis, biscuit, ovale ou polygonal. Plateau et base se déclinent en cinq décors de céramique Marmi : KM07 Portoro opaque, KM18 Borghini Calacatta opaque, KM21 Colosseo, KM24 Invisible opaque et KM26 Taj Mahal. La table mesure 75 cm de haut, 74 cm pour les deux plus petits formats.
 
-**botero-keramik-round.description:** Botero Keramik Round réunit un plateau rond en céramique et une base galbée revêtue d'argile spatulée. La table existe en Ø 100, 118, 140 ou 158 cm, pour 73 cm de haut, et 73,5 cm sur les deux plus grands diamètres.
+**botero-keramik-round.description:** Botero Keramik Round réunit un plateau rond en céramique et une base galbée revêtue d'argile spatulée. La table mesure 73 cm de haut en Ø 100 ou 118 cm, et 73,5 cm en Ø 140 ou 158 cm.
 
 **botero-keramik-round.content:** Sous l'argile, la base est en polymère. L'argile existe en trois teintes : AR09 Oslo, AR05 Cairo, AR11 Marrakech. Le lest se commande en finition gaufrée titane, bronze ou noir. Le plateau se choisit parmi 15 décors de céramique, 14 Marmi et le décor KS23 Luxor. Un plateau central pivotant s'ajoute en option.
 
@@ -26,17 +26,17 @@
 
 **botero-argile.content:** L'argile de la structure se choisit en trois teintes : AR09 Oslo, AR05 Cairo ou AR11 Marrakech. [NEED: matière, finitions et options du plateau de Botero Argile]
 
-**tyron-keramik.description:** Tyron Keramik pose un plateau en céramique sur un piètement en acier en forme de X. Le piètement de 131 cm porte les plateaux de 200 × 106 à 240 × 120 cm, celui de 173 cm les formats 300 × 120 et boomerang 300 × 140 cm.
+**tyron-keramik.description:** Tyron Keramik porte son plateau en céramique sur un piètement en acier en X. Le piètement de 131 cm reçoit les plateaux de 200 × 106 à 240 × 120 cm. Celui de 173 cm reçoit le 300 × 120 cm ou le boomerang de 300 × 140 cm.
 
-**tyron-keramik.content:** Le plateau rectangulaire, biscuit ou boomerang existe en 19 décors de céramique : 18 décors Marmi et le décor KS23 Luxor. Le piètement se commande en six finitions de métaux, deux brossées (Brushed Bronze, Brushed Grey) et quatre gaufrées (titane, bronze, graphite, noir). La table mesure 74 cm de haut.
+**tyron-keramik.content:** Le plateau rectangulaire, biscuit ou boomerang existe en 19 décors de céramique : 18 décors Marmi et le décor KS23 Luxor. L'acier du piètement se commande en six finitions de métaux. Aux brossés Brushed Bronze et Brushed Grey s'ajoutent quatre gaufrés, titane, bronze, graphite et noir. La table mesure 74 cm de haut.
 
-**butterfly.description:** Butterfly est une table à plateau en verre de 15 mm, posé sur un piètement en ruban d'acier plié. Le piètement de 160 cm porte un plateau de 240 × 100 ou 240 × 120 cm, celui de 184 cm un plateau de 300 × 100 ou 300 × 120 cm.
+**butterfly.description:** Sur Butterfly, un plateau en verre de 15 mm repose sur un piètement en ruban d'acier plié. Le piètement de 160 cm porte les formats 240 × 100 et 240 × 120 cm. Celui de 184 cm porte les formats 300 × 100 et 300 × 120 cm.
 
 **butterfly.content:** Le ruban d'acier se commande en Brushed Bronze, Brushed Grey, GFM11 gaufré titane ou GFM18 gaufré bronze. Le plateau existe en quatre verres : clair, extra-clair biseauté, transparent extra clair ou cuit (MIST). La table mesure 75 cm de haut.
 
 **butterfly-keramik.description:** Butterfly Keramik est la version à plateau en céramique de Butterfly, sur le même piètement en ruban d'acier plié. Elle existe en 240 × 120 cm, sur un piètement de 160 cm, et en 300 × 120 cm, sur un piètement de 184 cm.
 
-**butterfly-keramik.content:** Le plateau se commande en 19 décors de céramique : le décor KS23 Luxor et 18 décors Marmi, dont les Calacatta Golden et Borghini, en opaque ou en brillant. L'acier existe en Brushed Bronze, Brushed Grey, GFM11 gaufré titane ou GFM18 gaufré bronze. Hauteur 74 cm pour le petit format, 75 cm pour le grand.
+**butterfly-keramik.content:** Le plateau se commande en 19 décors de céramique, 18 Marmi et le décor KS23 Luxor. Parmi les Marmi, les Calacatta Golden et Borghini existent en opaque et en brillant. L'acier existe en Brushed Bronze, Brushed Grey, GFM11 gaufré titane ou GFM18 gaufré bronze. Hauteur 74 cm pour le petit format, 75 cm pour le grand.
 
 ## Sources
 

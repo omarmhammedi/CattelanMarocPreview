@@ -60,3 +60,7 @@
   en deux séries" without counts, to stay under 60 words. To confirm that these are two series of the same leather.
 - Ruby Lounge has a wider covering list than Ruby (adds tissu 31, micro-nubuck 14 and the GLV Glove series). The copy
   states each model's own list and makes no comparison.
+- Lint (`--brief docs/copy-briefs/models/canapes-fauteuils.md --all`): 0 blocking, 0 review. The first runs flagged
+  "many-commas" and one 29-word sentence (Craig, Ruby, Ruby Lounge finish lists); the sentences were split or
+  rewritten, and no review finding is kept. Description and content of each model share no figure and no sentence. The
+  only repeated text is the placeholder [NEED: dimensions des modules] (Craig, Mykonos, Sinatra).

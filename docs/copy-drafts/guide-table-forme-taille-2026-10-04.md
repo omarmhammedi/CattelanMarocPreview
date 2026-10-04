@@ -4,15 +4,15 @@
 
 **title:** Quelle forme et quelle taille pour une table de salle à manger ?
 
-**excerpt:** Autour d'une table de salle à manger, chaque convive occupe environ 60 cm de plateau et la pièce garde 90 cm de passage. La forme du plateau et le piètement viennent ensuite, mesurés sur Skorpio, Napoleon Keramik et Butterfly.
+**excerpt:** Autour d'une table de salle à manger, on compte 60 cm de plateau par convive et 90 cm de passage. Skorpio, Napoleon Keramik et Butterfly servent d'exemples pour la forme du plateau et le piètement.
 
 **section.1.heading:** 60 cm de plateau par convive
 
-**section.1.text:** À table, on compte environ 60 cm de plateau par convive. Le nombre réel de places dépend ensuite de la largeur des chaises, de la forme du plateau et du piètement. Une chaise Zuleika mesure 64 cm de large, une Miranda ML 63 cm. Divisez la longueur du plateau par 60 pour un premier compte, puis refaites le calcul avec la largeur de la chaise choisie, indiquée sur la page du modèle.
+**section.1.text:** À table, l'usage compte 60 cm de plateau par convive. Le nombre réel de places dépend ensuite de la largeur des chaises, de la forme du plateau et du piètement. Une chaise Zuleika mesure 64 cm de large, une Miranda ML 63 cm. Divisez la longueur du plateau par 60 pour un premier compte, puis refaites le calcul avec la largeur de la chaise choisie, indiquée sur la page du modèle.
 
 **section.2.heading:** Le passage de 90 cm
 
-**section.2.text:** Dans une pièce vide de 4 × 3,5 m, 90 cm de passage sur les quatre côtés laissent au centre un rectangle de 220 × 170 cm. Ce premier plan se corrige avec les portes, les autres meubles et les chaises choisies. Sur le plan, vérifiez le passage derrière une chaise occupée. Dans la pièce, tracez le contour du plateau au ruban de masquage, posez-y vos chaises actuelles et passez derrière l'une d'elles, occupée.
+**section.2.text:** Dans une pièce vide de 4 × 3,5 m, 90 cm de passage sur les quatre côtés laissent au centre un rectangle de 220 × 170 cm. Ce premier plan se corrige avec les portes, les autres meubles et les chaises choisies. Sur le plan, vérifiez le passage derrière une chaise occupée. Dans la pièce, tracez le contour du plateau au ruban de masquage, posez-y vos chaises actuelles et refaites le test.
 
 **section.3.heading:** Un plateau rond, carré ou ovale
 
@@ -20,9 +20,9 @@
 
 **section.4.heading:** Le piètement sous le plateau
 
-**section.4.text:** Le piètement décide des places. Une base centrale, comme sur Napoleon Keramik ou Botero, dégage les angles du plateau. Sur Butterfly, un piètement de 160 cm en ruban d'acier porte un plateau de 240 cm et laisse 40 cm à chaque bout pour une chaise en tête de table. Vérifiez l'emprise de la base sur le plan coté. Envoyez la photo du tracé et les mesures de la pièce sur WhatsApp, et le conseiller propose les formats qui conviennent.
+**section.4.text:** Le piètement décide des places. Une base centrale, comme sur Napoleon Keramik ou Botero, dégage les angles du plateau. Sur Butterfly, un piètement de 160 cm en ruban d'acier porte un plateau de 240 cm. À chaque bout, il reste 40 cm pour une chaise en tête de table. Vérifiez l'emprise de la base sur le plan coté. Envoyez la photo du tracé et les mesures de la pièce sur WhatsApp, et le conseiller propose les formats qui conviennent.
 
-**cta_text:** Skorpio, Napoleon Keramik, Botero et Butterfly ont chacun leur page, avec leurs formats, leurs finitions et leur fiche technique.
+**cta_text:** La page de chaque table donne ses formats et ses finitions, avec une fiche technique à télécharger.
 
 **cta_label:** Voir les tables
 
@@ -76,4 +76,16 @@
 
 ## Open points
 
-- None yet.
+- No [NEED] item: every sentence comes from the brief's fact bank, the shared facts or the model data.
+- G1.8 (tables 74 to 75 cm high, seats at 46 or 47 cm) is left out on purpose. `models/tables.md` gives Botero Keramik
+  Round at 73 and 73,5 cm, so "74 to 75 cm" does not hold for every table. To fix in the brief before using it.
+- section.4.text sends the reader to the "plan coté" (G1.7). The model data only says a spec sheet can be downloaded;
+  confirm that it carries a dimensioned plan with the footprint of the base, then the text can say where to find it.
+- section.1.text: "Divisez la longueur du plateau par 60" applies the G1.1 rule of thumb; no seat count is computed,
+  so no number is invented. The chair widths (Zuleika 64 cm, Miranda ML 63 cm) come from `models/chaises-tabourets.md`;
+  both chairs are named in G1.8.
+- title: the question keeps "forme et taille" but not "Casablanca" (alternative A has it). The seo_title carries
+  "Casablanca" instead, at exactly 60 characters; it gives up "forme et taille", which the meta description takes.
+- cta_text names no model, so it stays true for the 9 models of the family (each page has its spec sheet).
+- Lint: first run 0 blocking, 4 review (two "environ 60" vague quantities, a 30-word sentence, a cta_text with four
+  commas). All four were rewritten from the facts. Final run: 0 blocking, 0 review.

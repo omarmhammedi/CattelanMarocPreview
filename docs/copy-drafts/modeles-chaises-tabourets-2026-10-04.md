@@ -46,3 +46,6 @@
   other construction fact or option. A line on the downloadable spec sheet was left out, since the template already
   carries the download.
 - The counts are shades per covering family as given in the data. No total was added up in the copy.
+- Lint (`--brief docs/copy-briefs/models/chaises-tabourets.md --all`): 0 blocking, 0 review. Three "many-commas"
+  review findings on the first run (finish lists for Rhonda, Greta, Miranda ML) were fixed by rewriting the sentences;
+  no review finding is kept. Description and content of each model share no figure and no sentence.
