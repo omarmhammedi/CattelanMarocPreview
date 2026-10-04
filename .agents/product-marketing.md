@@ -1,7 +1,8 @@
 # Product marketing context: Cattelan Italia Maroc
 
 Read first by `copywriting`, `copy-editing` and `cattelan-site-copy`. Everything here comes from the repo's
-docs, the project FAQ and decisions recorded by the owner. Items marked **À CONFIRMER** must never be published.
+docs, the live CMS (read 4 October 2026) and decisions recorded by the owner. For real examples of the voice,
+page by page, read `.agents/brand-voice-corpus.md` next. Items marked **À CONFIRMER** must never be published.
 Last compiled: 4 October 2026. Update this file when the client answers, not the skills.
 
 ## Precedence (when sources disagree)
@@ -17,15 +18,19 @@ Last compiled: 4 October 2026. Update this file when the client answers, not the
 
 - **Who:** Racha Home (SARL), operator of the Cattelan Italia showroom in Casablanca. Brand: Cattelan Italia S.p.A.,
   founded 1979 by Giorgio and Silvia Cattelan, Carrè (Vicenza), Italy.
+- **Opened:** September 2026 (live À propos page; **À CONFIRMER**: not found in client documents).
 - **What:** single-brand showroom for Cattelan Italia furniture: tables, chairs and stools, sofas and armchairs,
   buffets and bookcases, lighting, outdoor furniture. The whole catalogue can be ordered and customised, including
   models not on display.
 - **Where:** 8-10 avenue du Docteur Mohamed Sijilmassi, Triangle d'Or, 20250 Casablanca.
-  Hours: Monday 12:00 to 19:30, Tuesday to Saturday 9:00 to 19:30. Appointment optional.
+  Hours: Monday 12:00 to 19:30, Tuesday to Saturday 9:00 to 19:30, Sunday closed. Appointment optional.
+  Live copy says 400 m² on two levels (**À CONFIRMER**: surface not found in client documents).
   No private car park; valet service; street parking nearby.
 - **Contact:** WhatsApp / phone +212 771 105 490 (**À CONFIRMER**: a magazine article lists another number),
   contact@cattelanitalia.ma.
+- **Instagram:** instagram.com/cattelanitalia.ma (set in site settings).
 - **Site status:** private, non-indexable preview. Brand licence not yet signed.
+- **Catalogue size on the site:** 8 families, 39 models, 5 journal guides (live CMS).
 
 ## 2. What the site must do
 
@@ -89,6 +94,10 @@ built on "vous/votre". Buttons act: "Voir le modèle", "Demander un devis", "Pre
 - Delivery covers all of Morocco.
 - Showroom: address, hours, valet, no private car park (section 1).
 - Residential, hotel, restaurant and commercial projects are supported.
+- Prices are not shown; they depend on model, size and finishes and come in a detailed quote.
+- Distance orders: photos of samples, spec sheets and quote by WhatsApp; the order can be validated remotely.
+- 2D/3D files, spec sheets and HD images on request (live on the site, but the client's confirmation is still
+  listed as pending in `docs/demandes-client.md`: check before repeating it elsewhere).
 
 ## 7. Facts you must not publish yet (À CONFIRMER, ask the client)
 
@@ -124,9 +133,15 @@ but it is **not committed to this repo yet**; until it is, check banned words by
 - FAQ keeps its facts (delay, deposit, payment, delivery, cancellation) even if an audit prefers minimal copy.
 - Never replace a precise number or measurement guide with a vaguer sentence.
 
+## 9b. Where the text really lives
+
+The live CMS is the source of truth. `content/*.json` are migration layers and can be out of date (the repo FAQ has
+19 questions, the live FAQ 22). Before rewriting a page, read its live version (CMS connector or the site), not the
+JSON. Known inconsistencies in the live copy are listed at the end of `brand-voice-corpus.md`.
+
 ## 10. Workflow for any copy task
 
-1. Read this file, then the relevant block of `content/copy-v8.json` (latest copy) and the page's intent in
+1. Read this file and `brand-voice-corpus.md`, then the live version of the page and its intent in
    `docs/seo-page-map.md`.
 2. Draft with `copywriting`; tighten with `copy-editing`; finish with `cattelan-site-copy`.
 3. Every proposed line gets a source: FAQ, model data, official page, or an owner decision. No source: list it
@@ -135,7 +150,7 @@ but it is **not committed to this repo yet**; until it is, check banned words by
 
 ## Sources in this repo
 
-`content/site-information-pages.json` (FAQ, À propos, Votre projet, legal) · `content/copy-v8.json` ·
+Live CMS (collections pages, families, models, posts, site_content) · `content/copy-v8.json` ·
 `docs/seo-content-strategy.md` · `docs/seo-page-map.md` · `docs/demandes-client.md` ·
 `docs/questionnaire-contenu-racha-home.md` · `docs/demande-licence-marque.md` ·
 `docs/revue-copy-editing-copywriting-2026-10-03.md`
