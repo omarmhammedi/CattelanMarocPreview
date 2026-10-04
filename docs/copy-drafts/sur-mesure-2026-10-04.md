@@ -6,19 +6,19 @@
 
 **title:** Le mobilier Cattelan Italia sur mesure, à Casablanca
 
-**intro:** La table Skorpio existe en 14 formats, Tyron Keramik en plateau rectangulaire, biscuit ou boomerang. Chaque modèle a ses propres options, et une pièce personnalisée se livre dans le même délai qu'une pièce standard.
+**intro:** La table Skorpio existe en 14 formats, Tyron Keramik en plateau rectangulaire, biscuit ou boomerang. Chaque modèle a ses formats et ses finitions, et une pièce personnalisée garde le délai d'une pièce standard.
 
 **options.format:** Le format de Napoleon Keramik se choisit parmi 10 tailles, de 200 à 320 cm, et Botero se commande de 100 à 180 cm de diamètre.
 
-**options.plateau:** Le plateau se commande en céramique, avec jusqu'à 19 décors du Calacatta au Portoro, en verre clair, extra-clair ou cuit, en noyer Canaletto ou en chêne brûlé.
+**options.plateau:** Le plateau se commande en céramique avec jusqu'à 19 décors du Calacatta au Portoro, en verre clair, extra-clair ou cuit, en noyer Canaletto ou en chêne brûlé.
 
-**options.piètement:** Le piètement est laqué gaufré titane, bronze, graphite, perle ou noir, ou brossé à la main en Brushed Bronze ou Brushed Grey.
+**options.piètement:** Le piètement est brossé à la main en Brushed Bronze ou Brushed Grey, ou laqué gaufré titane, bronze, graphite, perle ou noir.
 
 **options.revêtement:** Le revêtement se choisit parmi les tissus T10 à T90, les cuirs Glove, Magnifica, Nabuk et Perfetto, le micro-nubuck et le similicuir.
 
-**samples.heading:** Toutes les finitions à Casablanca
+**samples.heading:** Les échantillons du Triangle d'Or
 
-**samples.text:** Au showroom de Casablanca, céramiques, bois, laques, métaux, tissus et cuirs de la marque sont tous présents, en échantillons ou sur les meubles exposés. Un conseiller compare avec vous tailles et finitions, échantillons en main.
+**samples.text:** Le showroom de Casablanca réunit toutes les finitions de la marque, en échantillons ou sur les meubles exposés. On y compare céramiques et bois, laques et métaux, tissus et cuirs avec un conseiller, échantillons en main.
 
 **lead_time.heading:** 10 à 12 semaines au maximum
 
@@ -40,8 +40,8 @@
   - A: Cattelan Italia sur mesure, du plateau au piètement
   - B: Cattelan Italia sur mesure au showroom de Casablanca
 - **samples.heading**
-  - A: Les échantillons du Triangle d'Or
-  - B: Céramiques et cuirs, échantillons en main
+  - A: Toutes les finitions à Casablanca
+  - B: Le showroom du Triangle d'Or
 - **lead_time.heading**
   - A: 10 à 12 semaines, sur mesure compris
   - B: 10 à 12 semaines après la validation
@@ -60,7 +60,7 @@
 | options.plateau | M4 |
 | options.piètement | M5 |
 | options.revêtement | M6 |
-| samples.heading | S3, S1 (Casablanca) |
+| samples.heading | S3, S1 (Triangle d'Or) |
 | samples.text | S3, S8 (advisor, samples in hand) |
 | lead_time.heading | SV5 |
 | lead_time.text | M2, SV5, SV3, SV1 (manufacture in Italy), SV6 |
@@ -83,3 +83,6 @@
   The "jusqu'à" keeps the line true; each model page gives its own count.
 - Elsewhere in Morocco, delivery cost depends on the destination (SV6). It does not fit in the 40 words of
   `lead_time.text`; the FAQ carries it.
+- Lint review findings kept (many-commas): `options.piètement` (five lacquer colours) and `options.revêtement` (four
+  leathers). Both are the option lists the brief asks for, one sentence per label; the commas separate real options
+  and no clause trails after the claim. The plateau line and `samples.text` were rewritten to clear the same finding.
