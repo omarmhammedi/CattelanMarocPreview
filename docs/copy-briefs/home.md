@@ -21,7 +21,7 @@
 | `brand.text` | Gives the story in a few sentences: a person, a place, a year, a material | 40 words | B1 to B6 |
 | `brand.caption` | Caption of the photo of the Skorpio table | 12 words | I1 |
 | `collections.heading` | Says what the collections hold | 6 words | C1 |
-| `collections.text` | Tells what each model page gives and that everything can be ordered | 30 words | C1 to C4 |
+| `collections.text` | Starts from an object or a material, then says that everything can be ordered (never describes the website) | 30 words | C1 to C4 |
 | `collections.button` | **FIXED** | | "Voir les collections" |
 | `showroom.label` | Short label of the showroom block | 5 words | S1 |
 | `showroom.text` | Places the showroom and what you do there | 50 words | S1 to S5 |

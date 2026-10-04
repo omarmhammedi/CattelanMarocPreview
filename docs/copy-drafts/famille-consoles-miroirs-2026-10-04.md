@@ -6,7 +6,7 @@
 
 **title:** Consoles et miroirs Cattelan Italia en verre, acier et céramique
 
-**card_text:** La famille réunit trois consoles fixées au mur, profondes de 38 à 50 cm, et deux miroirs aux bords courbés.
+**card_text:** Trois consoles se fixent au mur, sur 38 à 50 cm de profondeur, et deux miroirs ont des bords courbés.
 
 **intro:** Westin tient sur des lames d'acier croisées, Nettuno sur une base ondulée. La troisième console, Rado Keramik, est en céramique, plateau et base compris. Les deux miroirs, Cosmos fumé ou bronze et Glenn au sol ou au mur, ont des bords courbés.
 
@@ -62,3 +62,9 @@
 - content.1.text assumes the mirror hangs above a console, as CO3 does. Glenn can also stand on the floor; the check
   still applies to its wall position.
 - No [NEED] items: every slot is covered by the brief's facts.
+
+## Style pass, 4 October 2026
+
+Owner feedback on the live preview: no sentence about the website itself, no heading built on a count, no inventory opener. Done with the `copy-editing` skill; facts unchanged.
+
+- `card_text`: "La famille réunit trois consoles fixées au mur, profondes de 38 à 50 cm, et deux miroirs aux bords courbés." → "Trois consoles se fixent au mur, sur 38 à 50 cm de profondeur, et deux miroirs ont des bords courbés."

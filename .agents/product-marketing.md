@@ -83,6 +83,9 @@ sentence.** Method reference: `.agents/style-references.md` (never copy their se
 - No AI tells: no contrast reveals, negation lists, trailing pile-on clauses, colon reveals, no em dashes in short
   copy, at most one list of three per section.
 - A claim with no source is written `[NEED: ...]`, never invented.
+- **Talk about the furniture, never about the website** (owner feedback, 4 Oct 2026): no "chaque modèle a sa page",
+  "le site présente", "en ligne". No heading built on a count of models or families ("39 modèles en huit familles"),
+  no inventory opener ("La famille compte cinq modèles"). Counts may appear later in a sentence, measurements anywhere.
 
 ## 6. Facts you may state
 

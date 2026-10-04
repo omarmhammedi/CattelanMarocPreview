@@ -25,7 +25,7 @@ Brief: `docs/copy-briefs/guides/ceramique-verre-bois-choisir-finition-meuble.md`
 
 **section.4.text:** Un échantillon de rideau, de peinture ou de carrelage, posé contre celui du plateau, permet de comparer les deux matières ensemble. Une photo prise de jour aide à comprendre la pièce. Ses couleurs restent pourtant approximatives. Les teintes se comparent d'abord à la lumière du jour, puis sous l'éclairage prévu à la maison. Apportez ces échantillons au showroom avec les dimensions de la pièce, et le conseiller les compare aux finitions de la marque.
 
-**cta_text:** Chaque table a sa page, avec ses formats, ses finitions de plateau et sa fiche technique à télécharger.
+**cta_text:** Skorpio garde le verre, Botero Wood Round le bois, Tyron Keramik la céramique.
 
 **cta_label:** Voir les tables
 
@@ -89,3 +89,9 @@ Brief: `docs/copy-briefs/guides/ceramique-verre-bois-choisir-finition-meuble.md`
   list of three finishes, kept on purpose for the snippet.
 - Lint: 0 blocking, 0 review (`--all`). Fixed on the way: "côte à côte" (banned cliché, twice), two sections over 80
   words, one 29-word sentence and one 35-word excerpt sentence split, a "sans ..." trailing clause rewritten.
+
+## Style pass, 4 October 2026
+
+Owner feedback on the live preview: no sentence about the website itself, no heading built on a count, no inventory opener. Done with the `copy-editing` skill; facts unchanged.
+
+- `cta_text`: "Chaque table a sa page, avec ses formats, ses finitions de plateau et sa fiche technique à télécharger." → "Skorpio garde le verre, Botero Wood Round le bois, Tyron Keramik la céramique."

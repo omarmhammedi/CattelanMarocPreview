@@ -10,7 +10,7 @@
 
 **files.heading:** Fiches techniques et fichiers 2D et 3D
 
-**files.text:** Chaque page modèle donne sa fiche technique. Selon le modèle, nous envoyons sur demande les fichiers 2D et 3D pour les plans et les images HD pour les planches.
+**files.text:** Chaque modèle a sa fiche technique, à télécharger. Selon le modèle, nous envoyons sur demande les fichiers 2D et 3D pour les plans et les images HD pour les planches.
 
 **finishes.heading:** Toutes les finitions au Triangle d'Or
 
@@ -85,3 +85,9 @@
 - `follow_up.text` uses SV5 (the client is kept informed of progress), which is not in the brief's slot list but is in the shared fact bank.
 - Self-check (copywriting AI-tell list): no contrast reveal, negation list, colon reveal, self-answered question or dash; one list of three in the projects section (the three pairs); no sentence over 21 words. Swap test: `order.heading` (« Le devis détaillé ») and `follow_up.heading` are plain labels that another showroom could use; kept because the brief caps them at 4 and 6 words and they name the object a professional looks for. Alternatives above if the owner wants more colour.
 - `finishes.text` was reworded so that it does not open with the heading's words (« Toutes les finitions »).
+
+## Style pass, 4 October 2026
+
+Owner feedback on the live preview: no sentence about the website itself, no heading built on a count, no inventory opener. Done with the `copy-editing` skill; facts unchanged.
+
+- `files.text`: "Chaque page modèle donne sa fiche technique. Selon le modèle, nous envoyons sur demande les fichiers 2D et 3D pour les plans et les images HD pour les planches." → "Chaque modèle a sa fiche technique, à télécharger. Selon le modèle, nous envoyons sur demande les fichiers 2D et 3D pour les plans et les images HD pour les planches."

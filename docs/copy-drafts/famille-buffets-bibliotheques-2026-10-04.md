@@ -8,7 +8,7 @@
 
 **card_text:** Trois buffets de 137,5 à 294 cm de long et deux bibliothèques modulaires, profondes de 26 à 29 cm.
 
-**intro:** La famille compte cinq modèles, trois buffets et deux bibliothèques. Chelsea et Kayak ont des façades à facettes, Amsterdam des portes Oxybrass. Airport se fixe au mur ou au plafond, et Nautilus aligne ou superpose des modules d'acier de 100 × 100 cm.
+**intro:** Les buffets Chelsea et Kayak ont des façades à facettes, Amsterdam des portes Oxybrass. Côté bibliothèques, Airport se fixe au mur ou au plafond, et Nautilus aligne ou superpose des modules d'acier de 100 × 100 cm.
 
 **content.1.heading:** La place devant les portes ouvertes
 
@@ -44,3 +44,9 @@
 - No passage width is given in the brief (BU3 is a rule of thumb without a figure). The text names the passage without a number. If the owner wants a figure, it needs a source: [NEED: passage width in cm in front of a buffet].
 - Self-check: the meta description holds two lists of three (the three buffets, the three BU4 materials). Both are real counts, kept because the brief asks for materials and models in 155 characters; the owner may prefer to drop the model names.
 - Chelsea has "façades à facettes" in the data and no door count; BU3 speaks of doors for the three buffets, so the text says "leurs portes" for Chelsea, Amsterdam and Kayak. To confirm on the Chelsea spec sheet.
+
+## Style pass, 4 October 2026
+
+Owner feedback on the live preview: no sentence about the website itself, no heading built on a count, no inventory opener. Done with the `copy-editing` skill; facts unchanged.
+
+- `intro`: "La famille compte cinq modèles, trois buffets et deux bibliothèques. Chelsea et Kayak ont des façades à facettes, Amsterdam des portes Oxybrass. Airport se fixe au mur ou au plafond, et Nautilus aligne ou superpose des modules d'acier de 100 × 100 cm." → "Les buffets Chelsea et Kayak ont des façades à facettes, Amsterdam des portes Oxybrass. Côté bibliothèques, Airport se fixe au mur ou au plafond, et Nautilus aligne ou superpose des modules d'acier de 100 × 100 cm."

@@ -23,7 +23,7 @@ drafting prompt: `docs/copy-briefs/README.md`. Do not read the live page or `doc
 | `excerpt` | Card and snippet text: the topic and two useful numbers | 40 words | facts below |
 | `section.1.heading` to `section.4.heading` | Each names an object or a measure to check | 6 words each | facts below |
 | `section.1.text` to `section.4.text` | One check per section, ending on something the reader can do | 80 words each | facts below |
-| `cta_text` | One line before the button (optional) | 20 words | family |
+| `cta_text` | One line before the button, on a model or a measure (never "each model has its page") | 20 words | family |
 | `cta_label` | **FIXED** |  | "Voir les canapés et fauteuils" → `/collections/canapes-fauteuils/` |
 | `seo_title` | Title in search results | 60 characters; contains "Cattelan Italia Maroc" | "canapé casablanca", "canapé d'angle casablanca"; composing a living room |
 | `meta_description` | Snippet in search results | 155 characters | two numbers from the facts |

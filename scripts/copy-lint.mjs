@@ -60,7 +60,28 @@ export const RULES = [
   { id: 'range-dash', level: 'review', scope: ALL, re: /\b\d+\s?-\s?\d+\s+semaines\b/giu, msg: 'Write "10 à 12 semaines".' },
   { id: 'heading-period', level: 'review', scope: ['heading'], re: /\.$/u, msg: 'Heading ends with a full stop (tagline style).' },
   { id: 'trailing-negation', level: 'review', scope: ['body'], re: /[^,.;]{40,},\s+(?:sans|ni|aucune?)\s[^.]*\./giu, msg: 'Trailing clause of negations after a full claim: end the sentence at the claim.' },
+  // Style pass, 4 Oct 2026: defects the owner spotted on the live preview.
+  { id: 'site-meta', level: 'review', scope: ALL, re: /\b(?:sa|cette|chaque|leur|une|la|les|des) pages?\b|\bce site\b|\b(?:le|du|sur le) site\b|\ben ligne\b|\bci-(?:dessous|dessus)\b|\bvous trouverez\b|\bretrouvez\b|\bcette (?:rubrique|section)\b/giu, msg: 'Talks about the website instead of the furniture, the material or the place.' },
+  { id: 'heading-count', level: 'review', scope: ['heading'], re: new RegExp(`^\\s*(?:${NUM.replace('|un|', '|')})\\s+(?:modèles|familles|guides|collections|produits|références|pièces)\\b`, 'iu'), msg: 'Heading opens on a count of models or families (an inventory). Name an object, a material, a place or the visitor\'s question.' },
+  { id: 'negative-wording', level: 'review', scope: ALL, re: /\babsente?s?\b|\bindisponibles?\b/giu, msg: 'Negative wording: say what does happen.' },
 ];
+
+// Words that anchor a sentence in something concrete (product-marketing.md, section 5). Matched as word starts.
+const CONCRETE = ('céramiqu verre bois cuir tissu métal métaux laqu marbr chêne noyer acier argil pierre velours lin bronze chrom laiton '
+  + 'aluminium polymère thermoplastique mdf nubuck simili mousse plume résine cristal décor teint couleur échantillon grain '
+  + 'table chais tabouret canapé fauteuil salon luminaire suspension lamp applique plafonnier lustre ampoule buffet bibliothèque '
+  + 'console miroir plateau piètement base pied assise dossier accoudoir coussin module méridienne lit meuble étagère porte tiroir '
+  + 'rallonge allonge housse câble télécommande cadre structure insert diffuseur salle pièce mur sol plafond fenêtre terrasse jardin '
+  + 'piscine maison appartement villa cuisine chambre entrée bureau showroom atelier usine catalogue pdf whatsapp téléphone numéro '
+  + 'plan photo devis livraison commande rendez-vous mètre cm m² camion voiturier parking acompte virement chèque carte fiche '
+  + 'dimension mesure format croquis dessin fichier dwg main doigt famille frère père fils fondateur conseill architecte décorat '
+  + 'client invité convive personne place enfant installation montage fabrication année semaine jour heure mois samedi lundi dimanche septembre octobre').split(' ');
+const isConcrete = (s) => {
+  if (/\d/.test(s) || /^(?:oui|non)\b/iu.test(s)) return true;
+  const toks = s.split(/[\s,;:()«»"“”'’]+/u).filter(Boolean);
+  if (toks.slice(1).some((t) => /^\p{Lu}/u.test(t))) return true;
+  return toks.some((t) => CONCRETE.some((c) => t.toLowerCase().startsWith(c)));
+};
 
 // ---------- extraction ----------
 
@@ -190,6 +211,7 @@ export function lintBlocks(blocks, { allow = [] } = {}) {
         const n = words(s);
         if (n > 28) add(b, 'review', 'long-sentence', `Sentence of ${n} words: read it aloud, split if it trails.`, s.slice(0, 60));
         if ((s.match(/,/g) || []).length >= 4) add(b, 'review', 'many-commas', 'Four or more commas: check for a trailing pile-on.', s.slice(0, 60));
+        if (!isConcrete(s)) add(b, 'review', 'abstract-sentence', 'No material, object, place, person, date or number in this sentence.', s.slice(0, 60));
         const key = s.toLowerCase().replace(/\W+/g, ' ').trim();
         if (key.length > 25) seen.set(key, (seen.get(key) || 0) + 1);
       }

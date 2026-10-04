@@ -26,7 +26,7 @@
 
 **step.2.heading:** 02 · Devis détaillé
 
-**step.2.text:** Le prix d'une table dépend du modèle, de sa longueur et de ses finitions. Le site n'affiche donc aucun prix. Le devis détaille chaque meuble avec ses dimensions, ses finitions et son revêtement, puis la livraison et l'installation.
+**step.2.text:** Le prix d'une table dépend du modèle, de sa longueur et de ses finitions. Il s'établit donc meuble par meuble, sur un devis qui détaille dimensions, finitions et revêtement, puis la livraison et l'installation.
 
 **step.3.heading:** 03 · Validation et acompte
 
@@ -109,3 +109,9 @@
 - seo_title starts with the infinitive "Commander" to match the SEO intent "commander mobilier italien maroc". If the
   owner prefers the site pattern, use "Commande et livraison · Cattelan Italia Maroc" (45 characters).
 - payment.text does not say whether the three means apply to both the deposit and the balance; SV4 does not specify.
+
+## Style pass, 4 October 2026
+
+Owner feedback on the live preview: no sentence about the website itself, no heading built on a count, no inventory opener. Done with the `copy-editing` skill; facts unchanged.
+
+- `step.2.text`: "Le prix d'une table dépend du modèle, de sa longueur et de ses finitions. Le site n'affiche donc aucun prix. Le devis détaille chaque meuble avec ses dimensions, ses finitions et son revêtement, puis la livraison et l'installation." → "Le prix d'une table dépend du modèle, de sa longueur et de ses finitions. Il s'établit donc meuble par meuble, sur un devis qui détaille dimensions, finitions et revêtement, puis la livraison et l'installation."

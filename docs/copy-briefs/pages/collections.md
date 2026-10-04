@@ -20,7 +20,7 @@ drafting prompt: `docs/copy-briefs/README.md`. Do not read the live page or `doc
 |---|---|---|---|
 | `eyebrow` | **FIXED** |  | "Cattelan Italia · Casablanca" |
 | `title` | H1 | 8 words; contains "collections" and "Cattelan Italia" | C1 |
-| `intro` | Counts the models and families and says they can all be ordered | 40 words | C1, C2, C3 |
+| `intro` | Says what the families furnish (the rooms, the objects) and that all the models can be ordered; no inventory opener | 40 words | C1, C2, C3 |
 | `contact.text` | Invites the visitor to send a model name on WhatsApp | 30 words | CP1 below, SV13 |
 | `contact.button` | **FIXED** |  | "Nous écrire" (WhatsApp link) |
 | `professional.heading` | **FIXED** |  | "Architectes et décorateurs" |

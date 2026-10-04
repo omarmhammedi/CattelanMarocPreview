@@ -107,3 +107,14 @@ test('brief checks: word limits, fixed items, missing slots', async () => {
   const changed = checkAgainstBrief(extractBlocks('x.md', '## Page copy\n\n**title:** FAQ\n'), brief).map((f) => f.id);
   assert.ok(changed.includes('fixed-changed'));
 });
+
+test('style pass rules: site-meta, count headings, abstract sentences, negative wording', () => {
+  assert.ok(ids('Chaque modèle a sa page, avec ses formats.', 'review').includes('site-meta'));
+  assert.ok(ids('# 39 modèles en huit familles', 'review').includes('heading-count'));
+  assert.deepEqual(ids('# De la table au luminaire', 'review'), []);
+  assert.deepEqual(ids('# 60 cm de plateau par convive', 'review'), []);
+  assert.ok(ids('Le choix devient plus simple et plus juste.', 'review').includes('abstract-sentence'));
+  assert.deepEqual(ids('Au showroom, céramiques et cuirs se comparent en main.', 'review'), []);
+  assert.deepEqual(ids('Giorgio Cattelan ouvre son entreprise.', 'review'), []);
+  assert.ok(ids('Y compris les pièces absentes du showroom.', 'review').includes('negative-wording'));
+});

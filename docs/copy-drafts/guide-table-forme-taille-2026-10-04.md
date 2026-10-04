@@ -8,7 +8,7 @@
 
 **section.1.heading:** 60 cm de plateau par convive
 
-**section.1.text:** À table, l'usage compte 60 cm de plateau par convive. Le nombre réel de places dépend ensuite de la largeur des chaises, de la forme du plateau et du piètement. Une chaise Zuleika mesure 64 cm de large, une Miranda ML 63 cm. Divisez la longueur du plateau par 60 pour un premier compte, puis refaites le calcul avec la largeur de la chaise choisie, indiquée sur la page du modèle.
+**section.1.text:** À table, l'usage compte 60 cm de plateau par convive. Le nombre réel de places dépend ensuite de la largeur des chaises, de la forme du plateau et du piètement. Une chaise Zuleika mesure 64 cm de large, une Miranda ML 63 cm. Divisez la longueur du plateau par 60 pour un premier compte, puis refaites le calcul avec la largeur de la chaise choisie.
 
 **section.2.heading:** Le passage de 90 cm
 
@@ -22,7 +22,7 @@
 
 **section.4.text:** Le piètement décide des places. Une base centrale, comme sur Napoleon Keramik ou Botero, dégage les angles du plateau. Sur Butterfly, un piètement de 160 cm en ruban d'acier porte un plateau de 240 cm. À chaque bout, il reste 40 cm pour une chaise en tête de table. Vérifiez l'emprise de la base sur le plan coté. Envoyez la photo du tracé et les mesures de la pièce sur WhatsApp, et le conseiller propose les formats qui conviennent.
 
-**cta_text:** La page de chaque table donne ses formats et ses finitions, avec une fiche technique à télécharger.
+**cta_text:** Skorpio existe en 14 formats, et Napoleon Keramik en 10 tailles, de 200 à 320 cm.
 
 **cta_label:** Voir les tables
 
@@ -89,3 +89,10 @@
 - cta_text names no model, so it stays true for the 9 models of the family (each page has its spec sheet).
 - Lint: first run 0 blocking, 4 review (two "environ 60" vague quantities, a 30-word sentence, a cta_text with four
   commas). All four were rewritten from the facts. Final run: 0 blocking, 0 review.
+
+## Style pass, 4 October 2026
+
+Owner feedback on the live preview: no sentence about the website itself, no heading built on a count, no inventory opener. Done with the `copy-editing` skill; facts unchanged.
+
+- `cta_text`: "La page de chaque table donne ses formats et ses finitions, avec une fiche technique à télécharger." → "Skorpio existe en 14 formats, et Napoleon Keramik en 10 tailles, de 200 à 320 cm."
+- body: "puis refaites le calcul avec la largeur de la chaise choisie, indiquée sur la page du modèle." → "puis refaites le calcul avec la largeur de la chaise choisie."

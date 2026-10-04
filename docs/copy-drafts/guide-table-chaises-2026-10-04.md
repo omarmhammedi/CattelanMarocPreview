@@ -8,11 +8,11 @@
 
 **section.1.heading:** Le piètement ou le dossier plissé
 
-**section.1.text:** Autour d'une table, une seule pièce porte le dessin. Des chaises simples laissent voir le piètement en X de Tyron Keramik ou la base galbée de Botero, revêtue d'argile. Face à une table plus sobre, le dossier plissé de Rhonda attire le regard. Sur les pages des deux modèles, regardez le piètement de la table puis le dossier de la chaise, et laissez un seul des deux porter le dessin.
+**section.1.text:** Autour d'une table, une seule pièce porte le dessin. Des chaises simples laissent voir le piètement en X de Tyron Keramik ou la base galbée de Botero, revêtue d'argile. Face à une table plus sobre, le dossier plissé de Rhonda attire le regard. Regardez le piètement de la table puis le dossier de la chaise, et laissez un seul des deux porter le dessin.
 
 **section.2.heading:** Quatre laques gaufrées en commun
 
-**section.2.text:** Le bronze gaufré du piètement de Tyron Keramik se retrouve sur celui de la chaise Greta, comme le titane, le graphite et le noir. Une laque partagée relie la table et les chaises quand les deux modèles la proposent. Rhonda prend ces mêmes laques, ou un chrome. Sur la page de chaque modèle, relevez les finitions du piètement et gardez celles qui reviennent des deux côtés.
+**section.2.text:** Le bronze gaufré du piètement de Tyron Keramik se retrouve sur celui de la chaise Greta, comme le titane, le graphite et le noir. Une laque partagée relie la table et les chaises quand les deux modèles la proposent. Rhonda prend ces mêmes laques, ou un chrome. Relevez les finitions du piètement de la table et de la chaise, et gardez celles qui reviennent des deux côtés.
 
 **section.3.heading:** Le cuir et la céramique Portoro
 
@@ -22,7 +22,7 @@
 
 **section.4.text:** Greta mesure 62 cm de large, Rhonda 63 cm et Zuleika 64 cm. Pour placer les assises, comptez cette largeur et repérez la position du piètement sous le plateau. Les accoudoirs prolongés de Greta demandent une mesure de plus. Une chaise peut convenir par sa hauteur d'assise et buter pourtant contre le plateau ou ses traverses. Mesurez le dégagement sous le plateau, traverses comprises, puis comparez-le à la hauteur des accoudoirs.
 
-**cta_text:** Rhonda et Greta existent aussi en tabouret. Chaque modèle a sa page, avec ses dimensions et ses revêtements.
+**cta_text:** Greta prend 62 cm de large, Rhonda 63 cm, et toutes deux existent aussi en tabouret.
 
 **cta_label:** Voir les chaises
 
@@ -94,3 +94,11 @@
 - Lint: first run 2 blocking (cliché "côte à côte", twice) and 1 review ("plus de cent"). All three were rewritten
   from the facts. A later run flagged the meta description at 157 characters (blocking); it was rewritten to 130.
   Final run: 0 blocking, 0 review.
+
+## Style pass, 4 October 2026
+
+Owner feedback on the live preview: no sentence about the website itself, no heading built on a count, no inventory opener. Done with the `copy-editing` skill; facts unchanged.
+
+- `cta_text`: "Rhonda et Greta existent aussi en tabouret. Chaque modèle a sa page, avec ses dimensions et ses revêtements." → "Greta prend 62 cm de large, Rhonda 63 cm, et toutes deux existent aussi en tabouret."
+- body: "Sur les pages des deux modèles, regardez le piètement de la table puis le dossier de la chaise, et laissez un seul des deux porter le dessin." → "Regardez le piètement de la table puis le dossier de la chaise, et laissez un seul des deux porter le dessin."
+- body: "Sur la page de chaque modèle, relevez les finitions du piètement et gardez celles qui reviennent des deux côtés." → "Relevez les finitions du piètement de la table et de la chaise, et gardez celles qui reviennent des deux côtés."

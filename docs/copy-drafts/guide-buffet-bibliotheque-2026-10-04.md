@@ -22,7 +22,7 @@
 
 **section.4.text:** Une bibliothèque couvre un mur ou sépare deux espaces, si le modèle et sa fixation le permettent. Nautilus aligne ou empile des modules en acier de 100 × 100 cm, profonds de 26 cm. Selon la composition, ils se fixent au mur ou reçoivent un lest. Airport se fixe au mur ou au plafond, sur 60 à 310 cm de long et 29 cm de profondeur. Pour choisir la composition, envoyez au showroom les mesures du mur et quelques photos.
 
-**cta_text:** Les cinq modèles cités, de 26 à 53 cm de profondeur, ont chacun leur page et leur fiche technique.
+**cta_text:** Mètre en main, comparez les 26 cm de Nautilus aux 53 cm de Kayak avant de choisir.
 
 **cta_label:** Voir les buffets et bibliothèques
 
@@ -102,3 +102,9 @@
 - `long-sentence` on the excerpt (29 words). One comma, the main clause comes after the two depths, and it reads
   cleanly aloud; kept so the card carries both depths in a single sentence. Splitting it would produce a near copy
   of the second sentence of section 1.
+
+## Style pass, 4 October 2026
+
+Owner feedback on the live preview: no sentence about the website itself, no heading built on a count, no inventory opener. Done with the `copy-editing` skill; facts unchanged.
+
+- `cta_text`: "Les cinq modèles cités, de 26 à 53 cm de profondeur, ont chacun leur page et leur fiche technique." → "Mètre en main, comparez les 26 cm de Nautilus aux 53 cm de Kayak avant de choisir."

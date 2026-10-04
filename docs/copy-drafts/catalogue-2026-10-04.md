@@ -6,7 +6,7 @@
 
 **title:** Le catalogue Cattelan Italia à télécharger en PDF
 
-**intro:** Le catalogue réunit les huit familles Cattelan Italia, avec les formats et les finitions de chaque modèle. On le feuillette avant une visite au showroom pour y repérer des modèles, ou on l'envoie à son architecte.
+**intro:** Le PDF réunit les huit familles Cattelan Italia, de la table en céramique à la suspension en verre, avec leurs formats et leurs finitions. On le feuillette avant de venir au showroom, ou on l'envoie à son architecte.
 
 **contact.heading:** Quelles finitions et quel délai pour ce modèle ?
 
@@ -46,3 +46,9 @@
 - No [NEED] item.
 - K1: the PDF online is a demonstration until the final catalogue is ready. The demonstration notice is functional microcopy and stays unchanged on the page, so the title, intro and meta description describe the catalogue itself. Owner to confirm the meta description may promise "le catalogue" while the file is a demo.
 - K3 (form: name, e-mail, optional consent, link after sending, law 09-08) is not used: the brief makes it optional and the form labels already carry it.
+
+## Style pass, 4 October 2026
+
+Owner feedback on the live preview: no sentence about the website itself, no heading built on a count, no inventory opener. Done with the `copy-editing` skill; facts unchanged.
+
+- `intro`: "Le catalogue réunit les huit familles Cattelan Italia, avec les formats et les finitions de chaque modèle. On le feuillette avant une visite au showroom pour y repérer des modèles, ou on l'envoie à son architecte." → "Le PDF réunit les huit familles Cattelan Italia, de la table en céramique à la suspension en verre, avec leurs formats et leurs finitions. On le feuillette avant de venir au showroom, ou on l'envoie à son architecte."

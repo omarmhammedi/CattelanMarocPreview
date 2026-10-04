@@ -11,7 +11,7 @@ Brief: `docs/copy-briefs/families/chaises-tabourets.md`. Route `/collections/cha
 
 **card_text:** Quatre chaises de 62 à 64 cm de large, dont deux existent aussi en tabouret.
 
-**intro:** Les chaises entrent au catalogue Cattelan Italia en 1989. La famille en compte quatre. Rhonda a un dossier plissé, Greta des accoudoirs prolongés, Miranda ML une coque enveloppante, et Zuleika est habillée de cuir. Rhonda et Greta existent aussi en tabouret.
+**intro:** Les chaises entrent au catalogue Cattelan Italia en 1989. Rhonda a un dossier plissé, Greta des accoudoirs prolongés, Miranda ML une coque enveloppante, et Zuleika est habillée de cuir. Rhonda et Greta existent aussi en tabouret.
 
 **content.1.heading:** La chaise sous le plateau
 
@@ -78,3 +78,9 @@ Brief: `docs/copy-briefs/families/chaises-tabourets.md`. Route `/collections/cha
   and cuir Glove. Worth a check on the official spec sheets.
 - "Tissus des gammes T10 à T90": the codes come from M6 and the data; the page does not explain them. Owner to say
   whether a visitor knows these fabric ranges or the codes should stay on the model page only.
+
+## Style pass, 4 October 2026
+
+Owner feedback on the live preview: no sentence about the website itself, no heading built on a count, no inventory opener. Done with the `copy-editing` skill; facts unchanged.
+
+- `intro`: "Les chaises entrent au catalogue Cattelan Italia en 1989. La famille en compte quatre. Rhonda a un dossier plissé, Greta des accoudoirs prolongés, Miranda ML une coque enveloppante, et Zuleika est habillée de cuir. Rhonda et Greta existent aussi en tabouret." → "Les chaises entrent au catalogue Cattelan Italia en 1989. Rhonda a un dossier plissé, Greta des accoudoirs prolongés, Miranda ML une coque enveloppante, et Zuleika est habillée de cuir. Rhonda et Greta existent aussi en tabouret."

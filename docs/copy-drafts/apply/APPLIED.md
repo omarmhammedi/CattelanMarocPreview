@@ -34,3 +34,19 @@ Applied by a helper agent from the same manifest, 2026-10-04 between 12:34 and 1
 **Verified by the main session after the run:** a fresh read of the CMS shows all 8 families, 5 guides and 39 models
 published with the manifest text (rich text compared after normalising whitespace and Markdown), no pending drafts.
 Total: 62 CMS items replaced (10 pages, 8 families, 5 guides, 39 models).
+
+## Style pass, 4 October 2026 (18:51 to 18:56 UTC)
+
+Owner feedback on the live preview (home, collections block): "39 modèles en huit familles / Chaque modèle a sa page…"
+read as an inventory and talked about the website. Pass done with the `copywriting` and `copy-editing` skills; facts
+unchanged, every changed draft at 0 blocking against its brief.
+
+- New linter review rules in `scripts/copy-lint.mjs`: `site-meta` (sentences about the website), `heading-count`
+  (heading built on a count of models or families), `negative-wording`, `abstract-sentence` (no material, object,
+  place, person, date or number). The rule is also written in `.agents/product-marketing.md` section 5 and in the
+  briefs whose role asked for it (home `collections.text`, collections `intro`, guide `cta_text`).
+- 17 CMS items republished, each read first (no editor change since 12:38) and updated with `status: published`:
+  pages home (collections block, journal heading, meta), collections, catalogue, journal, faq (intro), votre-projet
+  (step 2), professionnels (files); families tables, chaises-tabourets, buffets-bibliotheques, consoles-miroirs,
+  mobilier-exterieur; the five guides (`cta_text`, and two body sentences in the table guides).
+- Models: no finding, unchanged. Each changed draft lists its before → after in a "Style pass" section.

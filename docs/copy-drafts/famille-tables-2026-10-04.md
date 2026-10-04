@@ -15,7 +15,7 @@ Written from the brief, the shared fact bank and the model data only; the live p
 
 **content.1.heading:** 60 cm de plateau par convive
 
-**content.1.text:** Autour de la table, chaque convive occupe 60 cm de plateau. Napoleon Keramik en reçoit jusqu'à 14. Vérifiez ensuite la largeur des chaises et la place que laisse le piètement. Derrière une chaise occupée, mesurez le passage jusqu'au mur. Reportez ces mesures sur un plan de la pièce, puis comparez-les aux formats donnés sur chaque page modèle.
+**content.1.text:** Autour de la table, chaque convive occupe 60 cm de plateau. Napoleon Keramik en reçoit jusqu'à 14. Vérifiez ensuite la largeur des chaises et la place que laisse le piètement. Derrière une chaise occupée, mesurez le passage jusqu'au mur. Reportez ces mesures sur un plan de la pièce, puis comparez-les aux formats de chaque modèle.
 
 **content.2.heading:** Verre, bois ou céramique
 
@@ -71,3 +71,9 @@ Written from the brief, the shared fact bank and the model data only; the live p
   14 places to the model, not to the oval 300 × 150 cm.
 - Botero Argile: the data gives a clay-coated structure and diameters but no top material; the intro only says its
   base is revêtue d'argile.
+
+## Style pass, 4 October 2026
+
+Owner feedback on the live preview: no sentence about the website itself, no heading built on a count, no inventory opener. Done with the `copy-editing` skill; facts unchanged.
+
+- `content.1.text`: "Autour de la table, chaque convive occupe 60 cm de plateau. Napoleon Keramik en reçoit jusqu'à 14. Vérifiez ensuite la largeur des chaises et la place que laisse le piètement. Derrière une chaise occupée, mesurez le passage jusqu'au mur. Reportez ces mesures sur un plan de la pièce, puis comparez-les aux formats donnés sur chaque page modèle." → "Autour de la table, chaque convive occupe 60 cm de plateau. Napoleon Keramik en reçoit jusqu'à 14. Vérifiez ensuite la largeur des chaises et la place que laisse le piètement. Derrière une chaise occupée, mesurez le passage jusqu'au mur. Reportez ces mesures sur un plan de la pièce, puis comparez-les aux formats de chaque modèle."

@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T12:32:04.431Z",
+ "generated": "2026-10-04T18:54:40.242Z",
  "items": [
   {
    "collection": "pages",
@@ -16,8 +16,8 @@
      },
      {
       "section_key": "collections",
-      "heading": "39 modèles en huit familles",
-      "text": "Chaque modèle a sa page, avec ses formats, ses finitions et sa fiche technique. Tout le catalogue se commande, y compris les pièces absentes du showroom.",
+      "heading": "De la table au luminaire",
+      "text": "Une table commence par son plateau, en céramique, en verre ou en bois. Puis viennent les chaises, les luminaires et le buffet. Tout le catalogue se commande, exposé ou non.",
       "cta_label": "Voir les collections",
       "cta_href": "/collections/",
       "display_heading": ""
@@ -40,7 +40,7 @@
      },
      {
       "section_key": "journal",
-      "heading": "Cinq guides, mètre en main",
+      "heading": "Le mètre avant le meuble",
       "text": "Un convive occupe 60 cm de plateau, et il faut 90 cm pour circuler. Les guides partent de mesures comme celles-ci pour choisir une table, ses chaises, son plateau, un salon ou un buffet.",
       "cta_label": "Voir tous les guides",
       "cta_href": "/journal/",
@@ -50,7 +50,7 @@
     "brand_caption": "Table Skorpio, plateau en verre posé sur un piètement en acier.",
     "showroom_invitation": "Casablanca, au Triangle d'Or",
     "seo_title": "Cattelan Italia Maroc · Mobilier italien à Casablanca",
-    "meta_description": "Depuis septembre 2026, le showroom Cattelan Italia occupe 400 m² au Triangle d'Or, à Casablanca. Le site présente 39 modèles d'une maison née en 1979."
+    "meta_description": "Depuis septembre 2026, le showroom Cattelan Italia occupe 400 m² au Triangle d'Or, à Casablanca, avec les tables et canapés d'une maison née en 1979."
    }
   },
   {
@@ -174,7 +174,7 @@
    "slug": "collections",
    "data": {
     "title": "Les collections Cattelan Italia à Casablanca",
-    "intro": "Les 39 modèles Cattelan Italia se rangent en huit familles. Chaque famille s'ouvre sur ses modèles, et chaque modèle sur ses formats, ses finitions et sa fiche technique. Tous se commandent au showroom de Casablanca, exposés ou non.",
+    "intro": "Une salle à manger part de la table, puis reçoit ses chaises et sa suspension. Un salon part du canapé et de sa table basse. Les 39 modèles se commandent tous au showroom de Casablanca, exposés ou non.",
     "sections": [
      {
       "section_key": "contact",
@@ -200,7 +200,7 @@
    "slug": "catalogue",
    "data": {
     "title": "Le catalogue Cattelan Italia à télécharger en PDF",
-    "intro": "Le catalogue réunit les huit familles Cattelan Italia, avec les formats et les finitions de chaque modèle. On le feuillette avant une visite au showroom pour y repérer des modèles, ou on l'envoie à son architecte.",
+    "intro": "Le PDF réunit les huit familles Cattelan Italia, de la table en céramique à la suspension en verre, avec leurs formats et leurs finitions. On le feuillette avant de venir au showroom, ou on l'envoie à son architecte.",
     "sections": [
      {
       "section_key": "contact",
@@ -222,7 +222,7 @@
    "slug": "journal",
    "data": {
     "title": "Journal Cattelan Italia, cinq guides écrits à Casablanca",
-    "intro": "L'équipe du showroom de Casablanca a écrit cinq guides. On y choisit la taille d'une table à manger, ses chaises, son plateau en céramique, verre ou bois, un canapé et son fauteuil, un buffet ou une bibliothèque.",
+    "intro": "L'équipe du showroom de Casablanca a écrit cinq guides, mètre en main. Trois partent de la table à manger, sa taille, ses chaises et son plateau. Les deux autres passent au salon, du canapé au buffet.",
     "sections": [
      {
       "section_key": "catalogue",
@@ -254,7 +254,7 @@
      {
       "section_key": "step_2",
       "heading": "02 · Devis détaillé",
-      "text": "Le prix d'une table dépend du modèle, de sa longueur et de ses finitions. Le site n'affiche donc aucun prix. Le devis détaille chaque meuble avec ses dimensions, ses finitions et son revêtement, puis la livraison et l'installation.",
+      "text": "Le prix d'une table dépend du modèle, de sa longueur et de ses finitions. Il s'établit donc meuble par meuble, sur un devis qui détaille dimensions, finitions et revêtement, puis la livraison et l'installation.",
       "cta_label": "",
       "cta_href": ""
      },
@@ -307,7 +307,7 @@
      {
       "section_key": "files",
       "heading": "Fiches techniques et fichiers 2D et 3D",
-      "text": "Chaque page modèle donne sa fiche technique. Selon le modèle, nous envoyons sur demande les fichiers 2D et 3D pour les plans et les images HD pour les planches.",
+      "text": "Chaque modèle a sa fiche technique, à télécharger. Selon le modèle, nous envoyons sur demande les fichiers 2D et 3D pour les plans et les images HD pour les planches.",
       "cta_label": "",
       "cta_href": ""
      },
@@ -402,7 +402,7 @@
    "collection": "pages",
    "slug": "faq",
    "data": {
-    "intro": "Au showroom de Casablanca, on nous demande d’où viennent les meubles, quand ils arrivent, comment les régler et qui les installe. Voici nos réponses.",
+    "intro": "Au showroom de Casablanca, on nous demande d’où viennent les meubles, quand ils arrivent, comment les régler et qui les installe.",
     "sections": [
      {
       "section_key": "group",
@@ -619,7 +619,7 @@
     "title": "Tables et salles à manger Cattelan Italia, jusqu'à 14 places",
     "card_text": "Neuf tables en verre, en céramique ou en bois, rondes jusqu'à 180 cm et rectangulaires jusqu'à 320 cm.",
     "intro": "En 1979, Cattelan Italia commençait par le marbre et le verre. Sur neuf tables, Skorpio et Butterfly gardent le verre. La céramique habille Tyron Keramik, Butterfly Keramik et Napoleon Keramik. Botero Keramik Round, Wood Round, Ker-Wood Round et Argile ont une base revêtue d'argile.",
-    "content": "## 60 cm de plateau par convive\n\nAutour de la table, chaque convive occupe 60 cm de plateau. Napoleon Keramik en reçoit jusqu'à 14. Vérifiez ensuite la largeur des chaises et la place que laisse le piètement. Derrière une chaise occupée, mesurez le passage jusqu'au mur. Reportez ces mesures sur un plan de la pièce, puis comparez-les aux formats donnés sur chaque page modèle.\n\n## Verre, bois ou céramique\n\nLe verre laisse voir le piètement, les lignes d'acier croisées de Skorpio ou le ruban plié de Butterfly. Le noyer Canaletto et le chêne brûlé se choisissent pour leur veinage. La céramique reprend les décors du marbre, du Calacatta au Portoro. Selon le modèle, on en compte jusqu'à 19. Au showroom, comparez ces décors en échantillons.\n",
+    "content": "## 60 cm de plateau par convive\n\nAutour de la table, chaque convive occupe 60 cm de plateau. Napoleon Keramik en reçoit jusqu'à 14. Vérifiez ensuite la largeur des chaises et la place que laisse le piètement. Derrière une chaise occupée, mesurez le passage jusqu'au mur. Reportez ces mesures sur un plan de la pièce, puis comparez-les aux formats de chaque modèle.\n\n## Verre, bois ou céramique\n\nLe verre laisse voir le piètement, les lignes d'acier croisées de Skorpio ou le ruban plié de Butterfly. Le noyer Canaletto et le chêne brûlé se choisissent pour leur veinage. La céramique reprend les décors du marbre, du Calacatta au Portoro. Selon le modèle, on en compte jusqu'à 19. Au showroom, comparez ces décors en échantillons.\n",
     "meta_description": "Tables Skorpio, Butterfly, Napoleon Keramik et Botero en verre, céramique ou bois, jusqu'à 320 cm. Showroom à Casablanca avec toutes les finitions."
    },
    "seo": {
@@ -632,7 +632,7 @@
    "data": {
     "title": "Chaises et tabourets Cattelan Italia en cuir et en tissu",
     "card_text": "Quatre chaises de 62 à 64 cm de large, dont deux existent aussi en tabouret.",
-    "intro": "Les chaises entrent au catalogue Cattelan Italia en 1989. La famille en compte quatre. Rhonda a un dossier plissé, Greta des accoudoirs prolongés, Miranda ML une coque enveloppante, et Zuleika est habillée de cuir. Rhonda et Greta existent aussi en tabouret.",
+    "intro": "Les chaises entrent au catalogue Cattelan Italia en 1989. Rhonda a un dossier plissé, Greta des accoudoirs prolongés, Miranda ML une coque enveloppante, et Zuleika est habillée de cuir. Rhonda et Greta existent aussi en tabouret.",
     "content": "## La chaise sous le plateau\n\nMiranda ML place l'assise à 47 cm du sol, Zuleika à 46 cm. En largeur, Greta prend 62 cm, Rhonda et Miranda ML 63 cm, Zuleika 64 cm. Les accoudoirs prolongés de Greta doivent passer sous le plateau et sous sa ceinture. Mesurez la hauteur libre sous votre plateau, puis asseyez-vous au showroom pour juger l'assise.\n\n## Cuir, similicuir, tissu ou micro-nubuck\n\nZuleika est habillée de cuir, en 21 teintes, sur une structure en acier. Rhonda et Miranda ML existent en 112 teintes de cuir, similicuir, tissu ou micro-nubuck. Greta reçoit les mêmes, plus les tissus des gammes T10 à T90 et les cuirs Magnifica, Nabuk et Perfetto. Au showroom, posez les échantillons contre la finition de la table choisie.\n",
     "meta_description": "Chaises Rhonda, Greta, Miranda ML et Zuleika en cuir, similicuir, tissu ou micro-nubuck. Showroom à Casablanca avec toutes les finitions en échantillons."
    },
@@ -671,7 +671,7 @@
    "data": {
     "title": "Buffets et bibliothèques Cattelan Italia, verre miroité et acier",
     "card_text": "Trois buffets de 137,5 à 294 cm de long et deux bibliothèques modulaires, profondes de 26 à 29 cm.",
-    "intro": "La famille compte cinq modèles, trois buffets et deux bibliothèques. Chelsea et Kayak ont des façades à facettes, Amsterdam des portes Oxybrass. Airport se fixe au mur ou au plafond, et Nautilus aligne ou superpose des modules d'acier de 100 × 100 cm.",
+    "intro": "Les buffets Chelsea et Kayak ont des façades à facettes, Amsterdam des portes Oxybrass. Côté bibliothèques, Airport se fixe au mur ou au plafond, et Nautilus aligne ou superpose des modules d'acier de 100 × 100 cm.",
     "content": "## La place devant les portes ouvertes\n\nChelsea et Amsterdam avancent de 46 cm dans la pièce, Kayak de 53 cm. Devant, il faut pouvoir ouvrir les portes en grand, puis passer. Côté bibliothèques, Nautilus prend 26 cm de profondeur et Airport 29 cm. Mesurez le mur et la place devant lui, puis comparez avec les buffets, longs de 137,5 à 294 cm.\n",
     "meta_description": "Buffets Chelsea, Kayak et Amsterdam, bibliothèques Airport et Nautilus, en bois laqué, verre miroité et acier. Showroom à Casablanca."
    },
@@ -684,7 +684,7 @@
    "slug": "consoles-miroirs",
    "data": {
     "title": "Consoles et miroirs Cattelan Italia en verre, acier et céramique",
-    "card_text": "La famille réunit trois consoles fixées au mur, profondes de 38 à 50 cm, et deux miroirs aux bords courbés.",
+    "card_text": "Trois consoles se fixent au mur, sur 38 à 50 cm de profondeur, et deux miroirs ont des bords courbés.",
     "intro": "Westin tient sur des lames d'acier croisées, Nettuno sur une base ondulée. La troisième console, Rado Keramik, est en céramique, plateau et base compris. Les deux miroirs, Cosmos fumé ou bronze et Glenn au sol ou au mur, ont des bords courbés.",
     "content": "## Un gabarit de papier au mur\n\nAvant de commander un miroir, découpez un gabarit de papier à ses dimensions et fixez-le au mur avec du ruban adhésif. Vous verrez aussitôt s'il recouvre un interrupteur. Posez ensuite sur la console les objets prévus et réglez la hauteur du papier au-dessus d'eux.\n\n## Profondeur de 38 à 50 cm\n\nRado Keramik est la plus étroite des trois consoles, avec 38 cm de profondeur. Nettuno prend 40 cm, Westin 50 cm avec un plateau de verre et 45 cm avec un plateau en bois. Les trois se fixent au mur. Mesurez la place libre devant le mur prévu et comparez-la à ces profondeurs.\n",
     "meta_description": "Consoles Westin, Nettuno et Rado Keramik en verre, acier ou céramique, miroirs Cosmos et Glenn. Showroom à Casablanca avec toutes les finitions."
@@ -710,7 +710,7 @@
    "data": {
     "title": "Mobilier extérieur Cattelan Italia, céramique et acier inoxydable",
     "card_text": "Une table tout en céramique et une chaise en acier inoxydable 304, pour une terrasse ou une véranda couverte.",
-    "intro": "Deux modèles composent cette famille. La céramique couvre toute la table Napoleon Keramik Outdoor, plateau et base, en cinq décors Marmi. La chaise Greta Outdoor pose une assise rembourrée, à choisir parmi 20 tissus d'extérieur, sur une structure en acier inoxydable 304.",
+    "intro": "La céramique couvre toute la table Napoleon Keramik Outdoor, plateau et base, en cinq décors Marmi. La chaise Greta Outdoor pose une assise rembourrée, à choisir parmi 20 tissus d'extérieur, sur une structure en acier inoxydable 304.",
     "content": "## Une terrasse ou une véranda couverte\n\nLa table Napoleon Keramik Outdoor et la chaise Greta Outdoor s'installent sur une terrasse ou une véranda couverte, à l'abri de la pluie et du soleil direct. Avant de commander, regardez le coin prévu le matin puis le soir, et vérifiez que le toit le garde à l'ombre et au sec.\n",
     "meta_description": "Table Napoleon Keramik Outdoor tout en céramique et chaise Greta Outdoor en acier inoxydable 304, pour terrasse couverte. Showroom à Casablanca."
    },
@@ -724,8 +724,8 @@
    "data": {
     "title": "Quelle forme et quelle taille pour une table de salle à manger ?",
     "excerpt": "Autour d'une table de salle à manger, on compte 60 cm de plateau par convive et 90 cm de passage. Skorpio, Napoleon Keramik et Butterfly servent d'exemples pour la forme du plateau et le piètement.",
-    "content": "## 60 cm de plateau par convive\n\nÀ table, l'usage compte 60 cm de plateau par convive. Le nombre réel de places dépend ensuite de la largeur des chaises, de la forme du plateau et du piètement. Une chaise Zuleika mesure 64 cm de large, une Miranda ML 63 cm. Divisez la longueur du plateau par 60 pour un premier compte, puis refaites le calcul avec la largeur de la chaise choisie, indiquée sur la page du modèle.\n\n## Le passage de 90 cm\n\nDans une pièce vide de 4 × 3,5 m, 90 cm de passage sur les quatre côtés laissent au centre un rectangle de 220 × 170 cm. Ce premier plan se corrige avec les portes, les autres meubles et les chaises choisies. Sur le plan, vérifiez le passage derrière une chaise occupée. Dans la pièce, tracez le contour du plateau au ruban de masquage, posez-y vos chaises actuelles et refaites le test.\n\n## Un plateau rond, carré ou ovale\n\nUne pièce presque carrée reçoit une table carrée, comme Skorpio en 150 × 150 ou 200 × 200 cm, une pièce longue un rectangle. À longueur et largeur égales, un ovale comme celui de Napoleon Keramik, 300 × 150 cm, prend moins de place aux angles. À une table ronde, les convives se répartissent autour du centre, et l'écart entre eux grandit avec le diamètre. Apportez au showroom la longueur et la largeur de la pièce, avec quelques photos.\n\n## Le piètement sous le plateau\n\nLe piètement décide des places. Une base centrale, comme sur Napoleon Keramik ou Botero, dégage les angles du plateau. Sur Butterfly, un piètement de 160 cm en ruban d'acier porte un plateau de 240 cm. À chaque bout, il reste 40 cm pour une chaise en tête de table. Vérifiez l'emprise de la base sur le plan coté. Envoyez la photo du tracé et les mesures de la pièce sur WhatsApp, et le conseiller propose les formats qui conviennent.\n",
-    "cta_text": "La page de chaque table donne ses formats et ses finitions, avec une fiche technique à télécharger.",
+    "content": "## 60 cm de plateau par convive\n\nÀ table, l'usage compte 60 cm de plateau par convive. Le nombre réel de places dépend ensuite de la largeur des chaises, de la forme du plateau et du piètement. Une chaise Zuleika mesure 64 cm de large, une Miranda ML 63 cm. Divisez la longueur du plateau par 60 pour un premier compte, puis refaites le calcul avec la largeur de la chaise choisie.\n\n## Le passage de 90 cm\n\nDans une pièce vide de 4 × 3,5 m, 90 cm de passage sur les quatre côtés laissent au centre un rectangle de 220 × 170 cm. Ce premier plan se corrige avec les portes, les autres meubles et les chaises choisies. Sur le plan, vérifiez le passage derrière une chaise occupée. Dans la pièce, tracez le contour du plateau au ruban de masquage, posez-y vos chaises actuelles et refaites le test.\n\n## Un plateau rond, carré ou ovale\n\nUne pièce presque carrée reçoit une table carrée, comme Skorpio en 150 × 150 ou 200 × 200 cm, une pièce longue un rectangle. À longueur et largeur égales, un ovale comme celui de Napoleon Keramik, 300 × 150 cm, prend moins de place aux angles. À une table ronde, les convives se répartissent autour du centre, et l'écart entre eux grandit avec le diamètre. Apportez au showroom la longueur et la largeur de la pièce, avec quelques photos.\n\n## Le piètement sous le plateau\n\nLe piètement décide des places. Une base centrale, comme sur Napoleon Keramik ou Botero, dégage les angles du plateau. Sur Butterfly, un piètement de 160 cm en ruban d'acier porte un plateau de 240 cm. À chaque bout, il reste 40 cm pour une chaise en tête de table. Vérifiez l'emprise de la base sur le plan coté. Envoyez la photo du tracé et les mesures de la pièce sur WhatsApp, et le conseiller propose les formats qui conviennent.\n",
+    "cta_text": "Skorpio existe en 14 formats, et Napoleon Keramik en 10 tailles, de 200 à 320 cm.",
     "seo_title": "Table de salle à manger à Casablanca · Cattelan Italia Maroc",
     "meta_description": "Forme et taille d'une table de salle à manger, avec 60 cm de plateau par convive et 90 cm de passage. Le guide du showroom Cattelan Italia de Casablanca."
    }
@@ -736,8 +736,8 @@
    "data": {
     "title": "Comment associer une table et des chaises sans tout assortir ?",
     "excerpt": "Une table et des chaises s'accordent par une pièce au dessin marqué, une finition partagée et des assises qui glissent dessous. Les chaises Greta, larges de 62 cm, partagent quatre laques gaufrées avec le piètement de Tyron Keramik.",
-    "content": "## Le piètement ou le dossier plissé\n\nAutour d'une table, une seule pièce porte le dessin. Des chaises simples laissent voir le piètement en X de Tyron Keramik ou la base galbée de Botero, revêtue d'argile. Face à une table plus sobre, le dossier plissé de Rhonda attire le regard. Sur les pages des deux modèles, regardez le piètement de la table puis le dossier de la chaise, et laissez un seul des deux porter le dessin.\n\n## Quatre laques gaufrées en commun\n\nLe bronze gaufré du piètement de Tyron Keramik se retrouve sur celui de la chaise Greta, comme le titane, le graphite et le noir. Une laque partagée relie la table et les chaises quand les deux modèles la proposent. Rhonda prend ces mêmes laques, ou un chrome. Sur la page de chaque modèle, relevez les finitions du piètement et gardez celles qui reviennent des deux côtés.\n\n## Le cuir et la céramique Portoro\n\nUn cuir de chaise dans le ton d'une céramique Portoro ou d'un noyer Canaletto relie la chaise au plateau par la couleur. Le revêtement se choisit aussi selon l'usage. Rhonda existe en 112 teintes de cuir, de similicuir, de tissu et de micro-nubuck. Pour une table servie chaque jour, lisez les notes d'entretien de chaque finition. Au showroom, comparez ensemble l'échantillon de cuir et celui du plateau, à la lumière du jour.\n\n## Les accoudoirs sous le plateau\n\nGreta mesure 62 cm de large, Rhonda 63 cm et Zuleika 64 cm. Pour placer les assises, comptez cette largeur et repérez la position du piètement sous le plateau. Les accoudoirs prolongés de Greta demandent une mesure de plus. Une chaise peut convenir par sa hauteur d'assise et buter pourtant contre le plateau ou ses traverses. Mesurez le dégagement sous le plateau, traverses comprises, puis comparez-le à la hauteur des accoudoirs.\n",
-    "cta_text": "Rhonda et Greta existent aussi en tabouret. Chaque modèle a sa page, avec ses dimensions et ses revêtements.",
+    "content": "## Le piètement ou le dossier plissé\n\nAutour d'une table, une seule pièce porte le dessin. Des chaises simples laissent voir le piètement en X de Tyron Keramik ou la base galbée de Botero, revêtue d'argile. Face à une table plus sobre, le dossier plissé de Rhonda attire le regard. Regardez le piètement de la table puis le dossier de la chaise, et laissez un seul des deux porter le dessin.\n\n## Quatre laques gaufrées en commun\n\nLe bronze gaufré du piètement de Tyron Keramik se retrouve sur celui de la chaise Greta, comme le titane, le graphite et le noir. Une laque partagée relie la table et les chaises quand les deux modèles la proposent. Rhonda prend ces mêmes laques, ou un chrome. Relevez les finitions du piètement de la table et de la chaise, et gardez celles qui reviennent des deux côtés.\n\n## Le cuir et la céramique Portoro\n\nUn cuir de chaise dans le ton d'une céramique Portoro ou d'un noyer Canaletto relie la chaise au plateau par la couleur. Le revêtement se choisit aussi selon l'usage. Rhonda existe en 112 teintes de cuir, de similicuir, de tissu et de micro-nubuck. Pour une table servie chaque jour, lisez les notes d'entretien de chaque finition. Au showroom, comparez ensemble l'échantillon de cuir et celui du plateau, à la lumière du jour.\n\n## Les accoudoirs sous le plateau\n\nGreta mesure 62 cm de large, Rhonda 63 cm et Zuleika 64 cm. Pour placer les assises, comptez cette largeur et repérez la position du piètement sous le plateau. Les accoudoirs prolongés de Greta demandent une mesure de plus. Une chaise peut convenir par sa hauteur d'assise et buter pourtant contre le plateau ou ses traverses. Mesurez le dégagement sous le plateau, traverses comprises, puis comparez-le à la hauteur des accoudoirs.\n",
+    "cta_text": "Greta prend 62 cm de large, Rhonda 63 cm, et toutes deux existent aussi en tabouret.",
     "seo_title": "Comment associer table et chaises · Cattelan Italia Maroc",
     "meta_description": "Associer table et chaises sans tout assortir, par une laque commune, une couleur reprise et la largeur des chaises, de 62 à 64 cm."
    }
@@ -749,7 +749,7 @@
     "title": "Table à manger en céramique, en verre ou en bois, laquelle choisir ?",
     "excerpt": "Sur une table à manger, la céramique Marmi reproduit le marbre. Le verre de Butterfly atteint 15 mm d'épaisseur, et le plateau en noyer ou en chêne brûlé de Botero Wood Round va jusqu'à Ø 180 cm.",
     "content": "## Céramique Marmi, Calacatta ou Portoro\n\nLes décors Marmi reproduisent des marbres comme le Calacatta ou le Portoro, jusqu'à 18 selon le modèle. Sur Napoleon Keramik, table de 14 places au plus, la céramique couvre le plateau et la base centrale. Rado Keramik a aussi une base en céramique, et Napoleon Keramik Outdoor se place sur une terrasse couverte. Pour l'entretien et les plats chauds, suivez la notice du modèle et de sa finition. Au showroom, comparez Calacatta et Portoro sur échantillons.\n\n## Verre de 12 ou 15 mm\n\nSous un plateau en verre clair, on suit les lignes croisées du piètement de Skorpio ou le ruban d'acier plié de Butterfly. Les plateaux de Westin et de Nettuno font 12 mm d'épaisseur, celui de Butterfly 15 mm. Le verre MIST a une surface texturée. Le verre miroir couvre les plateaux de Chelsea et d'Amsterdam et forme les miroirs Cosmos et Glenn. Au showroom, regardez le reflet d'un plateau en verre clair, puis passez la main sur le MIST.\n\n## Noyer Canaletto ou chêne brûlé\n\nBotero Wood Round pose un plateau rond en noyer Canaletto ou en chêne brûlé sur une base revêtue d'argile. La table existe en Ø 140, 160 ou 180 cm, hauteur 75 cm. Adrian Wood réunit les deux essences sur un même plateau. Le bois se choisit pour son veinage. À table, des dessous de verre et un dessous-de-plat protègent le plateau. Au showroom, prenez en main un échantillon de noyer, puis un échantillon de chêne brûlé.\n\n## Échantillons à la lumière du jour\n\nUn échantillon de rideau, de peinture ou de carrelage, posé contre celui du plateau, permet de comparer les deux matières ensemble. Une photo prise de jour aide à comprendre la pièce. Ses couleurs restent pourtant approximatives. Les teintes se comparent d'abord à la lumière du jour, puis sous l'éclairage prévu à la maison. Apportez ces échantillons au showroom avec les dimensions de la pièce, et le conseiller les compare aux finitions de la marque.\n",
-    "cta_text": "Chaque table a sa page, avec ses formats, ses finitions de plateau et sa fiche technique à télécharger.",
+    "cta_text": "Skorpio garde le verre, Botero Wood Round le bois, Tyron Keramik la céramique.",
     "seo_title": "Table céramique, verre ou bois · Cattelan Italia Maroc",
     "meta_description": "Table à manger en céramique effet marbre, en verre ou en bois. Jusqu'à 18 décors Marmi, un verre de 12 ou 15 mm, le noyer ou le chêne brûlé."
    },
@@ -764,7 +764,7 @@
     "title": "Quel canapé, droit ou d'angle, et quel fauteuil pour le salon ?",
     "excerpt": "Un canapé droit ou d'angle se place d'abord sur le plan du salon, avec 80 à 90 cm de passage autour. Vient ensuite le fauteuil, comme Ruby Lounge et ses 81 cm de large.",
     "content": "## 80 à 90 cm de passage\n\nLe plan du salon commence par les portes et les fenêtres. La télévision y figure aussi si elle appartient à la pièce. On y reporte la longueur et la profondeur de chaque assise. Comptez ensuite 80 à 90 cm pour les passages et 40 à 45 cm entre le canapé et la table basse. Ces premiers repères s'ajustent aux pièces choisies. Dans la pièce, asseyez-vous, relevez-vous et traversez les passages habituels pour vérifier le plan.\n\n## Canapé droit, d'angle ou grande composition\n\nCraig, Douglas, Mykonos et Sinatra se composent par éléments. Chacun se monte droit, d'angle ou en grande composition. Craig garnit ses coussins de dossier de plumes. Douglas repose sur des pieds en métal en deux hauteurs, qui laissent voir le sol. Mykonos a des formes arrondies, Sinatra des dossiers réglables. Ruby reste un canapé droit de 200 cm, à structure apparente en frêne. Reportez les éléments choisis sur le plan, avec les cotes de leur fiche technique.\n\n## Ruby Lounge, 81 cm de large\n\nLe fauteuil Ruby Lounge mesure 81 × 92 cm, hauteur 76 cm, et reprend la structure en frêne du canapé Ruby. Le frêne se teinte en noyer Canaletto ou en chêne brûlé. Ruby peut recevoir un tissu et Ruby Lounge un cuir, ou deux couleurs d'un même revêtement. Sur le plan, dessinez les 81 cm du fauteuil à côté du canapé et mesurez le passage qui reste.\n\n## Le tissu déhoussable et le cuir\n\nCraig, Douglas, Mykonos et Sinatra s'habillent d'un tissu déhoussable, dans les catégories T10 à T90. Le cuir se décline en quatre gammes selon le modèle, Glove, Magnifica, Nabuk et Perfetto. Une photo rend mal les couleurs d'un tissu ou d'un cuir. Apportez plutôt au showroom un carreau du sol ou une chute de rideau, et comparez-les aux échantillons de tissu et de cuir.\n",
-    "cta_text": "La page de chaque canapé et fauteuil donne ses finitions et sa fiche technique à télécharger.",
+    "cta_text": "Craig, Douglas, Mykonos et Sinatra se composent droits ou d'angle, et Ruby a son fauteuil, Ruby Lounge.",
     "seo_title": "Salon, canapé d'angle et fauteuil · Cattelan Italia Maroc",
     "meta_description": "Canapé droit ou d'angle et fauteuil à Casablanca. Comptez 80 à 90 cm de passage et 40 à 45 cm jusqu'à la table basse sur le plan du salon."
    }
@@ -776,7 +776,7 @@
     "title": "Buffet ou bibliothèque, lequel choisir pour le salon ?",
     "excerpt": "Entre un buffet de 45 à 55 cm de profondeur et une bibliothèque de 26 à 29 cm, le choix part de la vaisselle et des livres à ranger. Cinq modèles Cattelan Italia servent d'exemples, mètre en main.",
     "content": "## La profondeur du meuble\n\nLe mètre ruban se pose au pied du mur choisi et se déroule vers le centre du salon. Un buffet avance de 45 à 55 cm dans la pièce, une bibliothèque de 26 à 29 cm. Devant l'un comme devant l'autre, il faut garder un passage. Marquez ces profondeurs au sol avec du ruban adhésif, puis mesurez ce qui reste jusqu'au canapé ou à la table.\n\n## La vaisselle et les grands livres\n\nSur la table de la salle à manger, sortez tout ce qui cherche une place. Notez la hauteur et la profondeur du plus grand plat, de la pile d'assiettes, des livres de grand format et des objets à ranger. Les étagères du meuble retenu doivent offrir au moins ces hauteurs et ces profondeurs utiles. Faites enfin deux tas, l'un pour la porte fermée d'un buffet, l'autre pour les étagères d'une bibliothèque.\n\n## Les portes du buffet\n\nPrès de la table, un buffet facilite le service si ses portes s'ouvrent en entier et si les chaises peuvent reculer. Chelsea et Amsterdam font 46 cm de profondeur, Kayak 53 cm. Chelsea existe en trois hauteurs, 50, 75 et 100 cm. Kayak mesure 147 ou 220 cm de long, Amsterdam jusqu'à 294 cm. Leurs étagères sont en verre ; Kayak et Amsterdam acceptent un tiroir à couverts. Chaises tirées, mesurez l'espace qui reste entre leur dossier et le mur.\n\n## La fixation de la bibliothèque\n\nUne bibliothèque couvre un mur ou sépare deux espaces, si le modèle et sa fixation le permettent. Nautilus aligne ou empile des modules en acier de 100 × 100 cm, profonds de 26 cm. Selon la composition, ils se fixent au mur ou reçoivent un lest. Airport se fixe au mur ou au plafond, sur 60 à 310 cm de long et 29 cm de profondeur. Pour choisir la composition, envoyez au showroom les mesures du mur et quelques photos.\n",
-    "cta_text": "Les cinq modèles cités, de 26 à 53 cm de profondeur, ont chacun leur page et leur fiche technique.",
+    "cta_text": "Mètre en main, comparez les 26 cm de Nautilus aux 53 cm de Kayak avant de choisir.",
     "seo_title": "Buffet ou bibliothèque pour le salon · Cattelan Italia Maroc",
     "meta_description": "Les buffets Chelsea et Kayak font 46 et 53 cm de profondeur, les bibliothèques Nautilus et Airport 26 et 29 cm. Les mesures à prendre avant de choisir."
    }

@@ -25,7 +25,7 @@ Signed "Cattelan Italia Maroc".
 
 **section.4.text:** Craig, Douglas, Mykonos et Sinatra s'habillent d'un tissu déhoussable, dans les catégories T10 à T90. Le cuir se décline en quatre gammes selon le modèle, Glove, Magnifica, Nabuk et Perfetto. Une photo rend mal les couleurs d'un tissu ou d'un cuir. Apportez plutôt au showroom un carreau du sol ou une chute de rideau, et comparez-les aux échantillons de tissu et de cuir.
 
-**cta_text:** La page de chaque canapé et fauteuil donne ses finitions et sa fiche technique à télécharger.
+**cta_text:** Craig, Douglas, Mykonos et Sinatra se composent droits ou d'angle, et Ruby a son fauteuil, Ruby Lounge.
 
 **cta_label:** Voir les canapés et fauteuils
 
@@ -88,3 +88,9 @@ Signed "Cattelan Italia Maroc".
   excerpt no longer repeats the section 1 sentence on passages.
 - Lint: 0 blocking, 0 review (`--all`). Fixed on the way: excerpt at 41 words, section 2 at 83 then 85 words, a
   four-comma sentence in section 2.
+
+## Style pass, 4 October 2026
+
+Owner feedback on the live preview: no sentence about the website itself, no heading built on a count, no inventory opener. Done with the `copy-editing` skill; facts unchanged.
+
+- `cta_text`: "La page de chaque canapé et fauteuil donne ses finitions et sa fiche technique à télécharger." → "Craig, Douglas, Mykonos et Sinatra se composent droits ou d'angle, et Ruby a son fauteuil, Ruby Lounge."
