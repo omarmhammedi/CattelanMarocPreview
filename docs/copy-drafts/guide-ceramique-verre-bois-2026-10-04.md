@@ -84,3 +84,8 @@ Brief: `docs/copy-briefs/guides/ceramique-verre-bois-choisir-finition-meuble.md`
 - "Skorpio" lines: the brief says oblique lines, the model data says crossed lines ("lignes croisées"). The draft
   uses the brief's word.
 - Napoleon Keramik Outdoor: the guide says covered terrace only, as in G3.1 and the model rules.
+- Self-check (copywriting AI-tell list): no contrast reveal, negation list, colon reveal or dash in the page copy; one
+  list of three per section at most; one contrast ("pourtant", section 4). The meta description ends on a verbless
+  list of three finishes, kept on purpose for the snippet.
+- Lint: 0 blocking, 0 review (`--all`). Fixed on the way: "côte à côte" (banned cliché, twice), two sections over 80
+  words, one 29-word sentence and one 35-word excerpt sentence split, a "sans ..." trailing clause rewritten.

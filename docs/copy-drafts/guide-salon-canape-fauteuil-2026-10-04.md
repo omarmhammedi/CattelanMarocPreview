@@ -83,3 +83,8 @@ Signed "Cattelan Italia Maroc".
 - Douglas legs: the two heights have no figure in the data; none is given.
 - The brief's search intent names Casablanca. The guide body stays on measurements; Casablanca appears in the meta
   description only.
+- Self-check (copywriting AI-tell list): no contrast reveal, negation list, colon reveal or dash in the page copy; one
+  list of three per section at most (section 1 had two and was rewritten); one contrast ("plutôt", section 4). The
+  excerpt no longer repeats the section 1 sentence on passages.
+- Lint: 0 blocking, 0 review (`--all`). Fixed on the way: excerpt at 41 words, section 2 at 83 then 85 words, a
+  four-comma sentence in section 2.
