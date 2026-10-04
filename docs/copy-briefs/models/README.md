@@ -44,4 +44,4 @@ Ne jamais écrire « Chaise/Lit », « ballast », « top », « pieds » (pour 
 - Botero : base « revêtue d'argile ». Zuleika : « habillée de cuir ». Buffet, jamais « bahut ».
 - Une version « Wood » ou « Keramik » est un autre modèle que la version en verre.
 - Conditions d'usage à dire quand elles existent : extérieur couvert pour les deux modèles Outdoor, fixation murale pour
-  les consoles, câble de suspension, variateur sur certaines versions de Bloom.
+  les consoles, câble de suspension, télécommande en option sur les versions O/LO et V/LV de Bloom (ampoules non graduables).

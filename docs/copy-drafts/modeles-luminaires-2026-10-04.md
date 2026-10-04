@@ -4,11 +4,11 @@
 
 **paris.description:** Paris est une suspension en verre artistique, proposée en deux tailles. Paris 1 a un globe de Ø 25 cm, hauteur 30 cm. Celui de Paris 2 mesure Ø 33 cm, hauteur 38,5 cm.
 
-**paris.content:** Le diffuseur en verre artistique existe en une finition, le mix fumé et blanc. Paris se suspend seule ou en grappe, à un câble long de 250 cm au plus.
+**paris.content:** Le diffuseur en verre artistique existe en une finition, le mix fumé et blanc. Paris se suspend seule, ou de deux à six sur une base circulaire, à des hauteurs différentes. Le câble mesure 250 cm au plus.
 
 **aladdin.description:** Aladdin est une suspension en verre artistique, proposée dans une seule taille. Son globe mesure Ø 22 cm, hauteur 31 cm.
 
-**aladdin.content:** Le diffuseur se choisit en verre fumé ou en verre mix (fumé et blanc). Seule ou en grappe, la suspension s'accroche à un câble qui mesure jusqu'à 250 cm.
+**aladdin.content:** Le diffuseur se choisit en verre fumé ou en verre mix (fumé et blanc). Aladdin pend seule ou par deux à six sur une base circulaire, chaque globe à sa hauteur, au bout d'un câble de 250 cm au plus.
 
 **cloudine.description:** Cloudine est une suspension en verre artistique dont chaque diffuseur mesure environ 20 × 15 cm. Cloudine 1 compte un diffuseur. Les compositions en réunissent de 2 à 12 sur une platine de Ø 25 cm.
 
@@ -16,7 +16,7 @@
 
 **bloom.description:** Bloom est un luminaire en métal, décliné en suspension verticale, en suspension horizontale et en lampadaire. La suspension verticale mesure 150 × 46 cm, hauteur 90 cm. L'horizontale fait 150 × 86 cm, hauteur 46 cm, et le lampadaire 57 × 45 cm, hauteur 178 cm.
 
-**bloom.content:** La structure a une finition iron grey satiné ; les inserts sont en laiton. Le variateur équipe seulement les versions O/LO (horizontale) et V/LV (verticale). La platine de plafond S2/4 mesure Ø 25 cm.
+**bloom.content:** La structure a une finition iron grey satiné ; les inserts sont en laiton. Une télécommande et son récepteur sont proposés en option sur les versions O/LO (horizontale) et V/LV (verticale). La platine de plafond S2/4 mesure Ø 25 cm.
 
 ## Sources
 

@@ -15,7 +15,7 @@ Brief: `docs/copy-briefs/guides/ceramique-verre-bois-choisir-finition-meuble.md`
 
 **section.2.heading:** Verre de 12 ou 15 mm
 
-**section.2.text:** Sous un plateau en verre clair, on suit les lignes obliques du piètement de Skorpio ou le ruban d'acier plié de Butterfly. Les plateaux de Westin et de Nettuno font 12 mm d'épaisseur, celui de Butterfly 15 mm. Le verre MIST a une surface texturée. Le verre miroir couvre les plateaux de Chelsea et d'Amsterdam et forme les miroirs Cosmos et Glenn. Au showroom, regardez le reflet d'un plateau en verre clair, puis passez la main sur le MIST.
+**section.2.text:** Sous un plateau en verre clair, on suit les lignes croisées du piètement de Skorpio ou le ruban d'acier plié de Butterfly. Les plateaux de Westin et de Nettuno font 12 mm d'épaisseur, celui de Butterfly 15 mm. Le verre MIST a une surface texturée. Le verre miroir couvre les plateaux de Chelsea et d'Amsterdam et forme les miroirs Cosmos et Glenn. Au showroom, regardez le reflet d'un plateau en verre clair, puis passez la main sur le MIST.
 
 **section.3.heading:** Noyer Canaletto ou chêne brûlé
 

@@ -268,7 +268,8 @@
     }
    ],
    "traits": [
-    "base Botero revêtue d’argile"
+    "plateau en MDF revêtu d’argile spatulée (Cairo, Oslo, Marrakech)",
+    "base en polymère de la même teinte, sur plaque d’acier noir"
    ],
    "technical_sheet": true
   },
@@ -295,7 +296,7 @@
    ],
    "traits": [
     "suspension en verre artistique",
-    "seule ou en grappe",
+    "seule, ou de deux à six sur une base circulaire, à des hauteurs différentes",
     "câble jusqu’à 250 cm"
    ],
    "technical_sheet": true
@@ -358,7 +359,7 @@
    ],
    "traits": [
     "suspension en verre artistique",
-    "seule ou en grappe",
+    "seule, ou de deux à six sur une base circulaire, à des hauteurs différentes",
     "câble jusqu’à 250 cm"
    ],
    "technical_sheet": true
@@ -577,7 +578,8 @@
    "traits": [
     "dossiers réglables",
     "canapé à composer, droit ou d’angle",
-    "tissu déhoussable"
+    "tissu uniquement, housse déhoussable",
+    "base en thermoplastique"
    ],
    "technical_sheet": true
   },
@@ -971,7 +973,8 @@
    "traits": [
     "coussins de dossier garnis de plumes",
     "canapé à composer, droit ou d’angle",
-    "tissu déhoussable"
+    "tissu déhoussable",
+    "base en thermoplastique"
    ],
    "technical_sheet": true
   },
@@ -1380,7 +1383,8 @@
    "traits": [
     "console tout en céramique",
     "profondeur 38 cm",
-    "fixation murale"
+    "fixation murale",
+    "même décor de céramique pour le plateau et la base (5 décors)"
    ],
    "technical_sheet": true
   },
@@ -1479,7 +1483,8 @@
    "traits": [
     "console sur lames d’acier croisées",
     "plateau en verre de 12 mm",
-    "fixation murale"
+    "fixation murale",
+    "plateau en bois massif en option (noyer Canaletto, chêne brûlé, chêne naturel), chants irréguliers"
    ],
    "technical_sheet": true
   },
@@ -1857,7 +1862,8 @@
    ],
    "traits": [
     "en suspension ou en lampadaire",
-    "variateur seulement sur certaines versions (O/LO et V/LV)"
+    "ampoules non graduables",
+    "télécommande et récepteur en option sur les versions O/LO et V/LV"
    ],
    "technical_sheet": true
   },
@@ -2815,5 +2821,6 @@
    ],
    "technical_sheet": true
   }
- ]
+ ],
+ "owner_checked": "4 Oct 2026: Paris, Aladdin, Bloom, Botero Argile, Westin, Sinatra, Craig, Rado Keramik checked by the owner on cattelanitalia.com"
 }

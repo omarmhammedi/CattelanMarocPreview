@@ -2,21 +2,21 @@
 
 ## Page copy
 
-**craig.description:** Craig est un canapé à composer, droit ou d'angle, dont les coussins de dossier sont garnis de plumes. [NEED: dimensions des modules]
+**craig.description:** Craig est un canapé à composer, droit ou d'angle, dont les coussins de dossier sont garnis de plumes.
 
-**craig.content:** Le tissu se déhousse et se choisit dans neuf catégories, de T10 à T90. Craig se commande aussi en cuir Glove (12 teintes), Magnifica (10), Nabuk (6), Perfetto (8) ou cuir mince (36).
+**craig.content:** Les modules reposent sur une base en thermoplastique. Le tissu se déhousse et se choisit dans neuf catégories, de T10 à T90. Craig se commande aussi en cuir Glove (12 teintes), Magnifica (10), Nabuk (6), Perfetto (8) ou cuir mince (36).
 
-**douglas.description:** Douglas repose sur des pieds en métal, en deux hauteurs, qui laissent voir le sol sous le canapé. Ce canapé se compose droit ou d'angle. [NEED: dimensions des modules et hauteurs des pieds]
+**douglas.description:** Douglas repose sur des pieds en métal, en deux hauteurs, qui laissent voir le sol sous le canapé. Ce canapé se compose droit ou d'angle.
 
 **douglas.content:** Les pieds sont en métal gaufré titane, bronze ou noir. Le tissu, déhoussable, se choisit dans neuf catégories de T10 à T90. Les cuirs sont le Glove (12 teintes), le Magnifica (10), le Nabuk (6), le Perfetto (8) et le cuir mince (36).
 
-**mykonos.description:** Mykonos est un canapé aux formes arrondies, à composer en version droite ou d'angle. [NEED: dimensions des modules]
+**mykonos.description:** Mykonos est un canapé aux formes arrondies, à composer en version droite ou d'angle.
 
 **mykonos.content:** Mykonos s'habille de tissu déhoussable, dans neuf catégories de T10 à T90, ou de cuir. Le cuir mince offre 36 teintes, le Glove 12, le Magnifica 10, le Perfetto 8 et le Nabuk 6.
 
-**sinatra.description:** Sinatra a des dossiers réglables et se compose en canapé droit ou d'angle. [NEED: dimensions des modules]
+**sinatra.description:** Sinatra a des dossiers réglables et se compose en canapé droit ou d'angle.
 
-**sinatra.content:** La structure en métal se commande en finition gaufrée titane, bronze ou noir. Le revêtement est en tissu déhoussable, dans l'une des neuf catégories de T10 à T90.
+**sinatra.content:** Le canapé repose sur une base en thermoplastique. La structure en métal se commande en finition gaufrée titane, bronze ou noir. Le revêtement est en tissu déhoussable, dans l'une des neuf catégories de T10 à T90.
 
 **ruby.description:** Ruby est un canapé droit à structure apparente en frêne, aux accoudoirs courbes. Il mesure 200 × 92 cm, hauteur 76 cm.
 

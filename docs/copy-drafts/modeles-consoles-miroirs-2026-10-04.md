@@ -12,7 +12,7 @@
 
 **rado-keramik.description:** Rado Keramik est une console tout en céramique. Elle mesure 127 × 38 cm ou 157 × 38 cm, hauteur 73 cm.
 
-**rado-keramik.content:** Le plateau et le piètement prennent un décor de céramique Marmi. Les cinq décors proposés sont KM07 Portoro opaque, KM18 Borghini Calacatta opaque, KM21 Colosseo, KM24 Invisible opaque et KM26 Taj Mahal. La console se fixe au mur.
+**rado-keramik.content:** Le plateau et le piètement prennent le même décor de céramique Marmi. Les cinq décors proposés sont KM07 Portoro opaque, KM18 Borghini Calacatta opaque, KM21 Colosseo, KM24 Invisible opaque et KM26 Taj Mahal. La console se fixe au mur.
 
 **nettuno.description:** Nettuno est une console sur piètement ondulé, avec un plateau en verre de 12 mm. Elle mesure 130, 160 ou 180 × 40 cm, hauteur 72 ou 92 cm.
 
@@ -20,7 +20,7 @@
 
 **westin.description:** Westin est une console sur lames d'acier croisées. Avec un plateau en verre, elle mesure 160, 180 ou 200 × 50 cm, hauteur 74 cm. Avec un plateau en bois, 160 ou 200 × 45 cm, hauteur 76 cm.
 
-**westin.content:** Les lames d'acier se commandent en sept finitions de métal, deux brossées et cinq gaufrées. Le plateau en verre, épais de 12 mm, est clair ou transparent extra-clair. Le plateau en bois, épais de 4 cm, existe en noyer Canaletto (NC), chêne brûlé ou chêne naturel (RN). Westin se fixe au mur.
+**westin.content:** Les lames d'acier se commandent en sept finitions de métal, deux brossées et cinq gaufrées. Le plateau en verre, épais de 12 mm, est clair ou transparent extra-clair. Le plateau en bois massif, épais de 4 cm et aux chants irréguliers, existe en noyer Canaletto, chêne brûlé ou chêne naturel. Westin se fixe au mur.
 
 ## Sources
 

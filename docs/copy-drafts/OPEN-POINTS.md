@@ -1,5 +1,31 @@
 # Questions for the owner: new site copy (4 October 2026)
 
+## Update, 4 October 2026: owner answers applied
+
+The owner checked cattelanitalia.com and decided: use what we have, leave out what cannot be confirmed, and use the
+recommended wording. Applied to the drafts:
+
+- **Botero Argile:** MDF top and polymer base in the same spatulated clay (Cairo, Oslo, Marrakech), base on a black
+  steel plate. Placeholder removed.
+- **Sofa module dimensions:** not on the product pages. The four placeholders are removed; the descriptions give no
+  module size (spec sheets and the configurator remain the source).
+- **Westin:** the solid-wood top (Canaletto walnut, burnt oak, natural oak, irregular edges) is an option of Westin.
+- **Sinatra:** fabric only, removable cover; the sofa family meta now reads "tissu ou, selon le modèle, cuir…".
+- **Craig, Sinatra:** "base en thermoplastique" added to their model pages.
+- **Rado Keramik:** same decor on top and base, five decors.
+- **Dodo:** a coffee table (kept).
+- **Paris, Aladdin:** alone or two to six on a circular base, at different heights.
+- **Bloom:** bulbs not dimmable; remote control and receiver optional on O/LO and V/LV. The earlier "variateur" claim
+  was wrong and is removed everywhere (drafts, briefs, model data).
+- **Napoleon Keramik:** "jusqu'à 14 places" kept at model level, not tied to a format.
+- **Wording choices (recommended and applied):** home brand heading "Une maison de famille depuis 1979"; Skorpio
+  "lignes croisées" everywhere; professionals "Le showroom étudie les projets…"; kept as written: English finish names,
+  the instructions that end the guide sections, exact console depths, the catalogue meta, the SEO titles of the drafts,
+  "sur deux niveaux", the FAQ wording.
+- **Still unconfirmed (left out of the copy, not chased):** Adrian Wood, Arena Bond, Chelsea, Nautilus, Cloudine
+  details, chair and stool dimensions, the rest of section B below.
+
+
 All 31 drafts are in this folder. Each was written by a fresh agent with the `copywriting` skill, from its brief only
 (never from the current site text), then checked with `node scripts/copy-lint.mjs <draft> --brief <brief>`:
 0 blocking findings on all of them. Each draft has its own "Open points" section; this file gathers the questions

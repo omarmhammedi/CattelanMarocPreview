@@ -32,14 +32,14 @@ drafting prompt: `docs/copy-briefs/README.md`. Do not read the live page or `doc
 - **Aladdin**: suspension en verre artistique; seule ou en grappe; câble jusqu’à 250 cm
 - **Cloudine**: suspension en verre artistique; seule ou en grappe; câble jusqu’à 300 cm
 - **Paris**: suspension en verre artistique; seule ou en grappe; câble jusqu’à 250 cm
-- **Bloom**: en suspension ou en lampadaire; variateur seulement sur certaines versions (O/LO et V/LV)
+- **Bloom**: en suspension ou en lampadaire; ampoules non graduables; télécommande en option sur O/LO et V/LV
 
 ## Fact bank (family)
 
-- **LU1** Four lights: the pendants Paris, Aladdin and Cloudine in artistic glass, alone or in a cluster (only Cloudine has a stated range: compositions of 2 to 12 diffusers; corrected 4 Oct from the model data); Bloom as a pendant or a floor lamp.
+- **LU1** Four lights: the pendants Paris, Aladdin and Cloudine in artistic glass, Paris and Aladdin alone or two to six on a circular base at different heights, Cloudine in compositions of 2 to 12 diffusers (official pages and model data, 4 Oct); Bloom as a pendant or a floor lamp.
 - **LU2** Cable length up to 250 cm for Paris and Aladdin, 300 cm for Cloudine.
 - **LU3** Measure the distance from ceiling to table, compare with the height of the light and the cable length, and locate the electrical outlet. [usage]
-- **LU4** Bloom has a dimmer only on some versions (O/LO and V/LV). [official sheet]
+- **LU4** Bloom bulbs are not dimmable; a remote control and receiver are optional on the O/LO and V/LV versions only. [official page, checked by the owner 4 Oct]
 
 ## Common facts
 

@@ -11,7 +11,7 @@ Règles communes : voir `docs/copy-briefs/models/README.md`. Format de sortie : 
 
 **Traits (faits)**
 - suspension en verre artistique
-- seule ou en grappe
+- seule, ou de deux à six sur une base circulaire, à des hauteurs différentes
 - câble jusqu’à 250 cm
 
 **Dimensions (données)**
@@ -31,7 +31,7 @@ Règles communes : voir `docs/copy-briefs/models/README.md`. Format de sortie : 
 
 **Traits (faits)**
 - suspension en verre artistique
-- seule ou en grappe
+- seule, ou de deux à six sur une base circulaire, à des hauteurs différentes
 - câble jusqu’à 250 cm
 
 **Dimensions (données)**
@@ -70,7 +70,8 @@ Règles communes : voir `docs/copy-briefs/models/README.md`. Format de sortie : 
 
 **Traits (faits)**
 - en suspension ou en lampadaire
-- variateur seulement sur certaines versions (O/LO et V/LV)
+- ampoules non graduables
+- télécommande et récepteur en option sur les versions O/LO et V/LV
 
 **Dimensions (données)**
 - Suspension verticale (V, LV) : 150 × 46 cm, hauteur 90 cm

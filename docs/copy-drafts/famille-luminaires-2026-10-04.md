@@ -8,7 +8,7 @@
 
 **card_text:** Trois suspensions en verre artistique, câble jusqu'à 250 ou 300 cm, et Bloom, en suspension ou en lampadaire.
 
-**intro:** Trois des quatre luminaires sont des suspensions en verre artistique, Paris, Aladdin et Cloudine. Elles pendent seules ou en grappe, jusqu'à 12 diffuseurs pour Cloudine. Bloom se commande en suspension ou en lampadaire, avec variateur sur les versions O/LO et V/LV.
+**intro:** Trois des quatre luminaires sont des suspensions en verre artistique, Paris, Aladdin et Cloudine. Paris et Aladdin pendent seules ou par deux à six sur une base circulaire, Cloudine jusqu'à 12 diffuseurs. Bloom se commande en suspension ou en lampadaire.
 
 **content.1.heading:** Du plafond à la table
 

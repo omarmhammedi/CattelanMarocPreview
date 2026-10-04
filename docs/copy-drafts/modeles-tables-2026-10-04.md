@@ -24,7 +24,7 @@
 
 **botero-argile.description:** Botero Argile est une table ronde montée sur la base Botero revêtue d'argile. Elle existe en Ø 140, 160 ou 180 cm, pour une hauteur de 74 cm.
 
-**botero-argile.content:** L'argile de la structure se choisit en trois teintes : AR09 Oslo, AR05 Cairo ou AR11 Marrakech. [NEED: matière, finitions et options du plateau de Botero Argile]
+**botero-argile.content:** Le plateau en MDF et la base en polymère reçoivent la même argile spatulée, en trois teintes : AR09 Oslo, AR05 Cairo ou AR11 Marrakech. La base repose sur une plaque d'acier noir.
 
 **tyron-keramik.description:** Tyron Keramik porte son plateau en céramique sur un piètement en acier en X. Le piètement de 131 cm reçoit les plateaux de 200 × 106 à 240 × 120 cm. Celui de 173 cm reçoit le 300 × 120 cm ou le boomerang de 300 × 140 cm.
 

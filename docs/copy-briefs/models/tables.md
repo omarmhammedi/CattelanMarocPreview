@@ -138,7 +138,8 @@ Règles communes : voir `docs/copy-briefs/models/README.md`. Format de sortie : 
 - `botero-argile.content` : 60 mots au plus. Construction, finitions, options. Ne répète jamais la phrase de `description`.
 
 **Traits (faits)**
-- base Botero revêtue d’argile
+- plateau en MDF revêtu d’argile spatulée (Cairo, Oslo, Marrakech)
+- base en polymère de la même teinte, sur plaque d’acier noir
 
 **Dimensions (données)**
 - Ø 140, 160 ou 180 : hauteur 74 cm

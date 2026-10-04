@@ -13,6 +13,7 @@ Règles communes : voir `docs/copy-briefs/models/README.md`. Format de sortie : 
 - console sur lames d’acier croisées
 - plateau en verre de 12 mm
 - fixation murale
+- plateau en bois massif en option (noyer Canaletto, chêne brûlé, chêne naturel), chants irréguliers
 
 **Dimensions (données)**
 - Plateau en verre : 160, 180 ou 200 × 50 cm, hauteur 74 cm
@@ -56,6 +57,7 @@ Règles communes : voir `docs/copy-briefs/models/README.md`. Format de sortie : 
 - console tout en céramique
 - profondeur 38 cm
 - fixation murale
+- même décor de céramique pour le plateau et la base (5 décors)
 
 **Dimensions (données)**
 - Rado Keramik 127 : 127 × 38 cm, hauteur 73 cm

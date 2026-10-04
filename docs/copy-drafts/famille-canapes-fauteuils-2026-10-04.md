@@ -20,7 +20,7 @@
 
 **seo_title:** Canapés, salons et fauteuils Cattelan Italia à Casablanca · Cattelan Italia Maroc
 
-**meta_description:** Craig, Douglas, Mykonos et Sinatra à composer, Ruby en frêne, en tissu ou en cuir Glove, Magnifica, Nabuk, Perfetto. Showroom à Casablanca.
+**meta_description:** Craig, Douglas, Mykonos et Sinatra à composer, Ruby en frêne. Tissu ou, selon le modèle, cuir Glove, Magnifica, Nabuk, Perfetto. Showroom à Casablanca.
 
 ## Alternatives
 

@@ -13,6 +13,7 @@ Règles communes : voir `docs/copy-briefs/models/README.md`. Format de sortie : 
 - coussins de dossier garnis de plumes
 - canapé à composer, droit ou d’angle
 - tissu déhoussable
+- base en thermoplastique
 
 **Dimensions (données)**
 - (aucune dimension saisie : ne pas en inventer)
@@ -109,7 +110,8 @@ Règles communes : voir `docs/copy-briefs/models/README.md`. Format de sortie : 
 **Traits (faits)**
 - dossiers réglables
 - canapé à composer, droit ou d’angle
-- tissu déhoussable
+- tissu uniquement, housse déhoussable
+- base en thermoplastique
 
 **Dimensions (données)**
 - (aucune dimension saisie : ne pas en inventer)

@@ -34,7 +34,7 @@
 
 **projects.heading:** Villas et hôtels dans tout le Maroc
 
-**projects.text:** Nous suivons des projets d'appartements et de villas, de bureaux de direction et de boutiques, d'hôtels et de restaurants. Nous livrons à Casablanca, Rabat, Marrakech, Tanger et partout au Maroc.
+**projects.text:** Le showroom étudie les projets d'appartements et de villas, de bureaux de direction et de boutiques, d'hôtels et de restaurants. Nous livrons partout au Maroc, de Casablanca à Tanger.
 
 **seo_title:** Architectes et décorateurs à Casablanca · Cattelan Italia
 
