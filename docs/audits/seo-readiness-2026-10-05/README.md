@@ -30,7 +30,18 @@ The [strategy HTML](../../livrables/strategie-seo.html), [strategy PDF](../../li
 - A fresh native backup (18,813,022 bytes) round-tripped every row through an isolated SQLite recovery check; integrity was `ok`. Content, settings and revisions are covered; authentication secrets and media bytes are outside this native export.
 - Preview: `SITE_INDEXABLE=false`, robots exclusion and empty sitemap remain intentional. No forms submitted, emails sent, customer-data tests, DNS changes, Replit Agent usage or public launch.
 
-CMS publication and the exact Worker deployment are recorded in the final release evidence below after verification.
+### Verified release
+
+The five articles were published on October 5 and checked live: all 29 expected links, the two native titles and both factual corrections match; original dates, bylines and source lists remain unchanged. Four desktop/mobile renders passed without overflow.
+
+- Deployed source commit: `eefb7434ed186f5ae40025af4e662b8b8750fa13`.
+- [Successful deployment run 37307785112](https://github.com/omarmhammedi/CattelanMarocPreview/actions/runs/37307785112), including all 328 tests.
+- Worker version: `e4277107-9a2e-4ec2-b882-0dba0666f0c9`; prior version `7b9d8b89-2b0a-447d-8eff-b69862208675` remains the code rollback reference.
+- Post-deployment verification: 12/12 checks passed for GET/HEAD redirects, query preservation, canonical/noindex, genuine 404, robots exclusion, empty sitemap, protected API behavior, 22 FAQ answers in llms.txt and private/nonindexable rejection of preview queries.
+- [PR #4](https://github.com/omarmhammedi/CattelanMarocPreview/pull/4) remains a draft targeting `feat/site-strategy`. Its feature branch was deployed directly; no merge or movement of the usual deployment branch was performed. Later documentation commits do not change the deployed application code.
+- [Private OpenSEO audit report](https://open-seo-selfhost.omar-8b8.workers.dev/p/882fd590-3102-4c31-983a-e42e7c0cc274/reports/8679e8f6-7038-49c6-be3c-b11ab82f3c4d) is saved in the Cattelan project, with refreshed shared context and research records. It requires workspace access and was not made publicly shareable.
+
+CMS snapshots, publication before/after receipts and the native backup remain private. Code rollback does not revert independently published CMS content; the captured article before-images are the recovery reference for content.
 
 ## Remaining work at the appropriate stage
 

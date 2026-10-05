@@ -1,16 +1,16 @@
 # Les cinq guides du Journal : audit et réparation ciblée
 
-Audit du 5 octobre 2026 sur les réponses HTML du site de prévisualisation et sur les cinq entrées natives EmDash. Les corps correspondent exactement aux textes approuvés le 4 octobre. Ils répondent tous en HTTP 200, conservent la signature « Cattelan Italia Maroc », leurs sources et un seul `BlogPosting` dont l'auteur est une organisation. Les dates de modification du graphe reflètent la révision du 4 octobre.
+Audit initial du 5 octobre 2026 sur les réponses HTML du site de prévisualisation et sur les cinq entrées natives EmDash. Les corps correspondent exactement aux textes approuvés le 4 octobre. Ils répondent tous en HTTP 200, conservent la signature « Cattelan Italia Maroc », leurs sources et un seul `BlogPosting` dont l'auteur est une organisation. Les dates de modification du graphe reflètent la révision du 4 octobre.
 
 **État : les cinq articles ont été publiés et vérifiés le 5 octobre 2026.** La migration 0027 a enregistré les cinq brouillons et les deux titres SEO natifs ; une étape distincte a publié uniquement ces brouillons après contrôle de leurs révisions. Les reçus de publication sont conservés en privé dans `.wrangler/seo-2026-10-05/publication-2026-10-05T12-06-00-852Z/`. Le contrôle anonyme après publication confirme le contenu effectivement servi.
 
 ## Constat et cause
 
-Les cinq corps d'article ont **zéro lien contextuel** vers un modèle ou un autre guide. La génération de `docs/copy-drafts/apply/manifest.json` par `scripts/build-copy-manifest.mjs` a reconstruit les paragraphes en Markdown sans liens. Les liens ajoutés lors des révisions de septembre ont donc disparu au moment de la publication des textes du 4 octobre. Les boutons vers les collections sont restés présents.
+Avant intervention, les cinq corps d'article avaient **zéro lien contextuel** vers un modèle ou un autre guide. La génération de `docs/copy-drafts/apply/manifest.json` par `scripts/build-copy-manifest.mjs` a reconstruit les paragraphes en Markdown sans liens. Les liens ajoutés lors des révisions de septembre ont donc disparu au moment de la publication des textes du 4 octobre. Les boutons vers les collections sont restés présents.
 
 Les guides contiennent environ 289 à 320 mots de corps selon l'extraction HTML. Ce nombre n'est pas un objectif à corriger : les exemples, mesures et contrôles sont utiles. Le premier travail consiste à permettre au lecteur de vérifier la référence nommée, puis de poursuivre sa décision.
 
-## Parcours prévu
+## Parcours publié
 
 | Guide existant | Question conservée | Modèles reliés dans le corps | Guide suivant |
 | --- | --- | --- | --- |
