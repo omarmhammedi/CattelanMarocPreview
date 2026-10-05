@@ -45,12 +45,14 @@ CMS snapshots, publication before/after receipts and the native backup remain pr
 
 ## Implementation follow-up
 
-The [SEO implementation follow-up](../seo-implementation-2026-10-05/README.md) addresses the remaining font requests, image discovery, model-family lookup cost, manufacturer provenance and social metadata. Seven native social images are applied and verified live, and all 12 model source records plus five article source lists are published with preservation checks complete. The new application release is still being completed; the follow-up records its rollout status. This audit's original validation counts and measurements remain historical evidence.
+The [SEO implementation follow-up](../seo-implementation-2026-10-05/README.md) is live through [PR #5](https://github.com/omarmhammedi/CattelanMarocPreview/pull/5), commit `f8e10c45`, Worker version `05286e1f-6b64-41bd-a8b0-595df2c17631`. It implements font hosting, homepage image discovery, native model-family lookup, manufacturer links and social metadata. Seven native social images are verified live; all 12 model source records and five article source lists are published. A public check passed 234 assertions across those 17 pages, including the 14 added references and all 29 existing contextual article links.
+
+The Deploy step in [run 37315246066](https://github.com/omarmhammedi/CattelanMarocPreview/actions/runs/37315246066) succeeded, but the overall job failed its initial health check because of SVG title counting and responses containing the previous deployment's font markup. The corrected checker subsequently passed 19/19 live checks on its first attempt. See the [implementation record](../seo-implementation-2026-10-05/README.md) for the fixes and the [deployment workflow](https://github.com/omarmhammedi/CattelanMarocPreview/actions/workflows/deploy-cattelan-client.yml) for current CI status. This audit's original validation counts and measurements remain historical evidence.
 
 ## Remaining work at the appropriate stage
 
 1. At launch, verify the final domain, HTTPS, canonical origin, desired search-crawler access, sitemap, Search Console property and Google listing website link. Public profile reads do not establish Google Business Profile management access.
-2. Complete the implementation follow-up's controlled rollout and repeat its mobile measurements. Font and lookup changes are implemented; remaining hero-image transfer cost still needs to be judged against measured performance. HTML size alone is not a Core Web Vitals failure.
+2. Use the follow-up's repeatable mobile measurements to assess remaining image transfer and rendering cost. Initial post-release homepage LCP samples were worse, so no overall speed improvement is claimed. HTML size alone is not a Core Web Vitals failure.
 3. Consider lighting and console/mirror guides after checking their specific informational demand and source material. Broad keyword estimates alone do not prove their likely return. No duplicate material guide or generic city pages were added.
 
 OpenSEO receipts, CMS snapshots, revision receipts and backups remain outside Git. No ranking, lead volume, revenue or assistant citation is promised.

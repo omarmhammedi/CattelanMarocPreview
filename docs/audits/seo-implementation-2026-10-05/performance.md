@@ -98,7 +98,74 @@ Private receipts and the repeatable browser scripts are in
 
 ## Deployment measurement
 
-Pending at the time of this note. Repeat the same four live samples after release,
-confirm that external font requests are absent, and report results with the same
-network and runtime limitations. Do not infer a ranking or indexing improvement
-from a laboratory timing change.
+Measured after deployment of application commit `f8e10c45` to Worker version
+`05286e1f-6b64-41bd-a8b0-595df2c17631` on 2026-10-05. The same script, browser,
+viewport, CPU/network throttling and cache settings produced these four samples:
+
+| Page | Run | TTFB | FCP | LCP | External font requests |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Home | 1 | 1.15 s | 1.76 s | 7.26 s | 0 |
+| Home | 2 | 1.74 s | 2.37 s | 7.98 s | 0 |
+| Greta | 1 | 2.33 s | 2.81 s | 2.81 s | 0 |
+| Greta | 2 | 0.96 s | 1.41 s | 1.41 s | 0 |
+
+The homepage hero request now starts 75 ms and 72 ms after TTFB, versus 537 ms
+and 552 ms before, with resource initiator `link` rather than `img`. A separate
+live check at 390 px and 1,440 px, DPR 2, confirmed the preload and displayed
+image choose the exact same responsive candidate, with one request and no
+horizontal overflow. The image bytes and quality remain unchanged at 285,378
+bytes for the mobile candidate. There were no external font requests, failed
+resources or layout shifts in the four timing samples, and Greta retains all
+361 finish entries.
+
+Greta's response and rendering times were lower in these samples. The homepage's
+overall LCP was **higher**, despite earlier image discovery. Image transfer and
+competition with nearby lazy images remain an optimization target; the homepage
+does not yet demonstrate a good mobile LCP result under this constrained lab
+profile. Variable Worker/network timing and only two observations per page do
+not establish a field-performance percentage or prove the preload caused the
+LCP difference. No ranking or indexing benefit is inferred from these timings.
+
+The preview continues to return `noindex, nofollow`. The unchanged baseline is
+saved privately as `before.json`; after samples and live preload verification
+are `after.json` and `hero-preload-live.json` in the same private evidence folder.
+
+### Controlled preload comparison
+
+Because the normal homepage samples had a higher LCP after release, a separate
+six-navigation check replayed the same captured live HTML with only the hero
+preload removed in the comparison variant. Runs alternated in the order with,
+without, without, with, with, without, using the same mobile viewport, CPU and
+network throttling and an empty browser cache. Playwright fulfilled the main
+HTML request; these timings exclude normal origin HTML delivery and must not be
+compared directly with the live tables above.
+
+| Pair | LCP with preload | LCP without preload | Image request counts, with / without |
+| --- | ---: | ---: | ---: |
+| 1 | 5.216 s | 5.356 s | 6 / 7 |
+| 2 | 4.792 s | 5.096 s | 7 / 7 |
+| 3 | 4.456 s | 4.528 s | 6 / 6 |
+
+All six runs selected the same 1080 px, 285,378-byte hero exactly once, at high
+network priority. A preload regression was not reproduced. The two pairs with
+matching image-request counts favored the preload by 304 ms and 72 ms; the first
+pair also fetched one fewer nearby lazy image, which confounds its comparison.
+The sample is small and browser lazy-loading timing varies, so this supports
+retaining the narrow discovery improvement without claiming a general speed gain.
+
+In the normal live runs, the hero request duration increased from about 4.35–4.37 s
+before release to 6.00–6.12 s afterward, even though discovery happened earlier.
+Four nearby photographs totaling roughly 740 kB were also transferring. This
+waterfall supports investigating image transfer and competing requests next;
+it does not establish the exact network cause of the observed difference. The
+controlled results are saved privately in `hero-ab.json`.
+
+A final bounded priority check recorded Chromium's initial priorities and every
+`Network.resourceChangedPriority` event during the same mobile profile. All four
+nearby lazy photographs started and finished at **Low**, without an automatic
+boost; the hero stayed **High**. Only the small visible header logo was promoted
+to High. Adding `fetchpriority="low"` to those lazy images therefore has no
+demonstrated priority problem to correct, and no such application change was
+made. The remaining work concerns the image byte budget and delivery behavior,
+with visual comparison required before changing rendition quality or artwork.
+The private trace is `image-priorities.json`.
