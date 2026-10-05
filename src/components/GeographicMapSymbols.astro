@@ -9,7 +9,7 @@ const groups = [
   { name: 'm-road map-road-secondary', kinds: ['tertiary', 'secondary'], width: 1.25 },
   { name: 'm-road map-road-primary', kinds: ['primary', 'trunk'], width: 1.8 },
 ];
-const places = data.places.filter(place => ['Anfa Supérieur', 'Ain Diab', 'Bourgogne', 'El Hank', 'Centre-Ville', 'Ancienne Medina', 'Triangle d\'Or', 'Val Fleuri'].includes(place.name) || (place.name === 'Maârif' && place.kind === 'quarter'));
+const places = data.places.filter(place => ['Anfa Supérieur', 'Ain Diab', 'Bourgogne', 'El Hank', 'Centre-Ville', 'Ancienne Medina', 'Val Fleuri'].includes(place.name) || (place.name === 'Maârif' && place.kind === 'quarter'));
 const streetNames = ['Avenue du Docteur Mohamed Sijelmassi', "Boulevard d'Anfa", 'Boulevard Mohamed Zerktouni', 'Boulevard Abdellatif Ben Kaddour', 'Boulevard Al Massira Al Khadra', 'Boulevard de Bourgogne', 'Boulevard Moulay Youssef', 'Avenue Hassan Souktani'];
 const streets = streetNames.flatMap(name => {
   const candidates = data.roads.filter(road => road.name === name).map(road => ({ ...roadLabel(road.coordinates), name }));
