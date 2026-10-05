@@ -1,6 +1,8 @@
 /**
  * Public, read-only verification after native migrations 0003 through 0010.
  * No credentials, CMS content API, setup, authentication or publication calls.
+ * Exact copy/assets require the historical 0003–0010 fixture; use migration
+ * 0026 to preserve its metadata in native SEO before the current frontend.
  *
  * PUBLIC_TEST_URL=http://localhost:4321 node tests/published-content-browser.mjs
  * Optional --only-content / --only-layouts / --only-webkit for a focused rerun.
@@ -152,7 +154,7 @@ async function verifyContent(engine) {
         assert.equal((await nodes(page, html, '.model-drawings img')).length, model.drawings.length, `${route}: drawing count.`);
         assert.equal((await nodes(page, html, '.model-finish')).length, model.finishes.length, `${route}: finish count.`);
         assert.deepEqual(await nodes(page, html, '.model-finish-code'), model.finishes.filter(finishHasSeparateCode).map(row => row.code), `${route}: separate finish codes (codes already in names are not repeated).`);
-        assert.deepEqual(await nodes(page, html, '.model-source a', 'href'), [model.source_url]);
+        assert.deepEqual(await nodes(page, html, '.model-source a', 'href'), [], `${route}: internal research URL is no longer exposed as a public CTA.`);
         pairAsset((await nodes(page, html, '.model-hero-figure img', 'src'))[0], model.image, `${entry.slug}: hero`);
         for (const [selector, rows, label] of [
           ['.model-gallery-view img', model.gallery, 'gallery'],
@@ -172,7 +174,7 @@ async function verifyContent(engine) {
     for (const href of links) await get(href, 'HEAD');
     assert.deepEqual(blocked, []);
     pass('17 pages publiées : textes exacts, SEO, cartes et liens internes ; 11 modèles accessibles depuis leurs familles.');
-    pass('Galeries, dimensions, plans, codes de finition et sources officielles correspondent au manifeste.');
+    pass('Galeries, dimensions, plans et codes de finition correspondent au manifeste ; les sources de recherche restent internes.');
   } finally { await context.unrouteAll({behavior: 'ignoreErrors'}); await context.close(); }
 
   // Two bounded workers; all downloads are anonymous public GETs. Official

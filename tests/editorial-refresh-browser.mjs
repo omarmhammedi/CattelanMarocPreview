@@ -2,6 +2,8 @@
  * Anonymous public checks after migration 0010 through 0013. No credentials, storage state,
  * native CMS API, publication, setup, or valid catalogue submissions are used.
  * All requests except GET/HEAD are blocked before they leave the browser.
+ * Use the selected historical content revision plus migration 0026 for native
+ * SEO. Exact-copy snapshots do not describe the latest seed or live website.
  *
  * PUBLIC_TEST_ENGINE=chromium|webkit PUBLIC_TEST_THEME=dark|light
  * PUBLIC_TEST_REVISION=0010|0011|0012|0013 (default 0010 for historical/local content)
@@ -14,6 +16,7 @@ import assert from 'node:assert/strict';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import { chromium, webkit } from 'playwright';
+import { nativeSeoForFixture } from './seo-fixture-expectations.mjs';
 
 const base = new URL(process.env.PUBLIC_TEST_URL || 'http://localhost:4321');
 assert(['http:', 'https:'].includes(base.protocol) && !base.username && !base.password);
@@ -190,9 +193,9 @@ async function verifyContent(browser) {
     const reachedModels = new Set();
     for (const entry of pageEntries) {
       const path = routeFor(entry), html = await markup(path), after = entry.after;
-      const seo = entry.seoAfter || (entry.collection === 'models' ? modelBaseline.get(entry.slug).afterSeo : null);
-      const title = seo?.title || after.seo_title;
-      const description = seo?.description || after.meta_description;
+      const seo = nativeSeoForFixture(after, entry.seoAfter || (entry.collection === 'models' ? modelBaseline.get(entry.slug).afterSeo : {}));
+      const title = seo.title;
+      const description = seo.description;
       if (title) await exact(page, html, 'head > title', [title], `${path}: title`);
       if (description) {
         assert.deepEqual(await nodes(page, html, 'meta[name="description"]', 'content'), [description], path);
@@ -208,16 +211,15 @@ async function verifyContent(browser) {
         for (const href of cards) { assert.match(href, /^\/modeles\/[^/]+\/$/u); reachedModels.add(href); }
         const editorialModels = after.content.flatMap(block => block.markDefs || []).filter(mark => mark.href?.startsWith('/modeles/')).map(mark => mark.href);
         assert.deepEqual([...cards].sort(), [...new Set(editorialModels)].sort(), `${path}: selected models retained.`);
-        await exact(page, html, '.models-section > .page-note', [global.model_notice]);
-        await exact(page, html, '.page-cta :is(h2,.kick)', []);
+        await exact(page, html, '.models-section > .page-note', [], `${path}: retired generic availability notice stays absent`);
+        await exact(page, html, '.page-cta h2', ['Showroom de Casablanca']);
       } else if (entry.collection === 'models') {
         await exact(page, html, '.page-lead', [after.description || modelBaseline.get(entry.slug).after.description], path);
         await exact(page, html, '.model-story .page-prose > :is(p,h2,h3)', after.content.map(blockText), path);
-        const availability = normalize(after.availability_note);
-        await exact(page, html, '.model-availability', availability ? [availability] : [], path);
+        await exact(page, html, '.model-availability', [], `${path}: archived availability note is not public copy`);
         await exact(page, html, '.model-project :is(h2,.kick)', []);
-        const sharedNotice = normalize(global.model_notice);
-        await exact(page, html, '.model-project .model-site-notice', sharedNotice && sharedNotice !== availability ? [sharedNotice] : [], path);
+        await exact(page, html, '.model-project .model-site-notice', [], `${path}: archived global model notice is not public copy`);
+        await exact(page, html, '.model-source a', [], `${path}: internal research source stays out of the public model page`);
         await exact(page, html, '#model-gallery-heading', ['Photos']);
         const details = modelDetails.get(entry.slug);
         assert.equal((await nodes(page, html, '.model-gallery-view')).length, details.gallery.length, path);

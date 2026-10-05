@@ -1,0 +1,24 @@
+{
+  "completedAt": "2026-10-05T01:46:04.334Z",
+  "disposableOrigin": "http://localhost:4331",
+  "passed": true,
+  "suite": "full",
+  "results": [
+    "Brouillons créés par la migration publiés uniquement dans la fixture locale ; aucune ressource distante utilisée.",
+    "Les six collections, les 66 entrées et chaque champ du schéma courant sont présents ; SEO seulement sur les contenus publics propriétaires.",
+    "API native : e-mail vide ou malformé, libellés vides, jeton incorrect, identité modifiée, sections dupliquées et confidentialité incomplète refusés ; identifiants protégés à la publication, suppression/dépublication bloquées.",
+    "Réglages groupés : modification UI → brouillon isolé → aperçu signé → publication réelle ; validation accessible et interface mobile sans débordement.",
+    "Services, devis, boutons, messages catalogue, formulaires et faits légaux : brouillon/publication connectés ; effacement des textes facultatifs sans ancien texte réintroduit.",
+    "SEO natif : changement immédiat sans révision de contenu, titre/description/canonique connectés, effacement accepté ; préproduction noindex et sitemap vide conservés.",
+    "Panneaux opérationnels chargés avec leur session native ; capture des demandes et du catalogue sans créer de contact ni envoyer d’e-mail."
+  ],
+  "screenshots": [
+    "admin-tasks-desktop.png",
+    "admin-settings-desktop.png",
+    "admin-settings-mobile.png",
+    "admin-requests.png",
+    "admin-catalogue.png"
+  ],
+  "browserErrors": [],
+  "fixture": "Current schema and content; synthetic images/PDF. Tests do not verify original media bytes or live deployment."
+}

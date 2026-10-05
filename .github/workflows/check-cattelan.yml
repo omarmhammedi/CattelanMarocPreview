@@ -1,0 +1,35 @@
+name: Check Cattelan
+
+on:
+  pull_request:
+  push:
+    branches: [claude/product-marketing-context, fix/emdash-editor-readiness]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-cattelan-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      RAYON_NUM_THREADS: "1"
+      NODE_OPTIONS: --max-old-space-size=2048
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run check
+      - run: node scripts/seed-validate.mjs
+      - run: npm run build
+        env:
+          CLOUDFLARE_ENV: cattelan-client
+      - run: node scripts/check-cloudflare-target.mjs --env cattelan-client

@@ -6,6 +6,7 @@ import SiteActions from './SiteActions.astro';
 import { filesWhatsappMessage, whatsappHref } from '../lib/actions';
 import {finishGroupLabel, finishHasSeparateCode, finishNameLabel} from '../lib/model-labels';
 import { modelType } from '../lib/model-seo';
+import { readEditorialCopy } from '../lib/editorial-copy.mjs';
 
 interface Picture {
   src: string;
@@ -49,9 +50,6 @@ interface Props {
     finishes?: Finish[];
     technicalSheet?: {src: string; filename?: string} | null;
     technicalSheetLabel?: string;
-    source_url?: string;
-    officialUrl?: string;
-    availabilityNote?: string;
     onDisplay?: boolean;
     entry?: any;
     href?: string;
@@ -64,11 +62,10 @@ interface Props {
 const {model, site, families = [], advisorHref} = Astro.props;
 const family = families.find(item => item.title && item.href);
 const collectionLabel = site.labels?.collections || 'Collections';
-// Terms stated in the project FAQ (Personnalisation, Livraison); they apply to every catalogue model.
-const services = ['Fabrication sur commande en Italie.', 'Livraison et installation au Maroc.', 'Livraison offerte à Casablanca.'];
+const copy = readEditorialCopy(site.editorial);
 const filesHref = whatsappHref(site.whatsappUrl, filesWhatsappMessage(model.title));
-const advisorLabel = 'Demander un devis';
-const advisorName = `Demander un devis pour ${model.title} via WhatsApp`;
+const advisorLabel = copy.model_quote_label;
+const advisorName = `${advisorLabel} pour ${model.title} via WhatsApp`;
 // Sofas are sold in modules: their drawings show module sizes.
 const drawingsNote = family?.slug === 'canapes-fauteuils' && !/lounge/i.test(model.slug || '') && model.slug !== 'ruby' ? 'Dimensions des modules (cm)' : 'Dimensions en cm, d’après la fiche technique Cattelan Italia.';
 const hasSeating = (model.dimensions || []).some(item => item.seats || item.largeSeats);
@@ -109,13 +106,13 @@ for (const finish of model.finishes || []) {
       <div class="model-hero-copy">
         <p class="kick">{modelType(model.slug || '', family?.slug)} · Cattelan Italia</p>
         <h1 {...model.entry?.edit?.title}>{model.title}</h1>
-        {model.onDisplay && <p class="model-on-display" {...model.entry?.edit?.on_display}>Exposé au showroom de Casablanca</p>}
+        {model.onDisplay && <p class="model-on-display" {...model.entry?.edit?.on_display}>Exposé au showroom{site.city ? ` de ${site.city}` : ''}</p>}
         {model.description && <p class="page-lead" {...model.entry?.edit?.description}>{model.description}</p>}
         {model.year && <dl class="model-year"><div><dt>Année</dt><dd>{model.year}</dd></div></dl>}
-        <SiteActions order={['appointment', 'advisor']} advisorHref={advisorHref} advisorLabel={advisorLabel} advisorName={advisorName} model={model.slug} />
-        <p class="model-services">{services.join(' ')}</p>
-        <p class="model-services model-quote-note">Le devis précise les dimensions, les finitions, la livraison et l’installation. Vous pouvez le demander et le valider à distance.</p>
-        {filesHref && !hasTechnical && <a class="text-link model-files-request" href={filesHref} target="_blank" rel="noopener noreferrer">Demander les fichiers 2D et 3D<span aria-hidden="true">↗</span></a>}
+        <SiteActions site={site} order={['appointment', 'advisor']} advisorHref={advisorHref} advisorLabel={advisorLabel} advisorName={advisorName} model={model.slug} />
+        {copy.model_services && <p class="model-services">{copy.model_services}</p>}
+        {copy.model_quote_note && <p class="model-services model-quote-note">{copy.model_quote_note}</p>}
+        {filesHref && !hasTechnical && <a class="text-link model-files-request" href={filesHref} target="_blank" rel="noopener noreferrer">{copy.model_files_label}<span aria-hidden="true">↗</span></a>}
       </div>
       {model.image?.src && <figure class="model-hero-figure">
         <div class="page-image model-hero-image"><img {...imageAttributes(model.image, '(max-width: 850px) 100vw, 54vw', 1600)} alt={model.image.alt || model.title} fetchpriority="high" /></div>
@@ -166,7 +163,7 @@ for (const finish of model.finishes || []) {
       <p class="page-note model-drawings-note">{drawingsNote}</p>
     </div>}
     {model.technicalSheet?.src && <a class="text-link model-technical-download" href={model.technicalSheet.src} download={model.technicalSheet.filename || true}>{model.technicalSheetLabel || 'Télécharger la fiche technique'} <span class="model-file-format">PDF</span><span aria-hidden="true">↓</span></a>}
-    {filesHref && <a class="text-link model-files-request" href={filesHref} target="_blank" rel="noopener noreferrer">Demander les fichiers 2D et 3D<span aria-hidden="true">↗</span></a>}
+    {filesHref && <a class="text-link model-files-request" href={filesHref} target="_blank" rel="noopener noreferrer">{copy.model_files_label}<span aria-hidden="true">↗</span></a>}
   </section>}
 
   {finishGroups.size > 0 && <section class="page-gutter model-finishes" aria-labelledby="model-finishes-heading">
@@ -186,6 +183,6 @@ for (const finish of model.finishes || []) {
   </section>}
 
   <section class="page-cta page-gutter model-project" data-page-reveal>
-    <SiteActions order={['appointment', 'advisor']} advisorHref={advisorHref} advisorLabel={advisorLabel} advisorName={advisorName} model={model.slug} />
+    <SiteActions site={site} order={['appointment', 'advisor']} advisorHref={advisorHref} advisorLabel={advisorLabel} advisorName={advisorName} model={model.slug} />
   </section>
 </article>

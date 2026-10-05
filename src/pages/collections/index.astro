@@ -32,6 +32,6 @@ if (!page) return new Response('Page introuvable', { status: 404 });
     {page.sections?.map((section: any) => <EditorialSection section={section} />)}
   </section>}
   <section class="page-cta page-gutter" data-page-reveal>
-    <SiteActions order={['appointment', 'catalogue']} />
+    <SiteActions site={site} order={['appointment', 'catalogue']} />
   </section>
 </PageLayout>

@@ -1,0 +1,174 @@
+{
+  "origin": "https://cattelan-maroc-preview.cattelan.workers.dev",
+  "startedAt": "2026-10-05T03:21:38.329Z",
+  "readOnly": true,
+  "credentialBoundary": "Bearer is supplied only by route.fetch to the exact target origin; redirects are disabled. It is never placed in browser/context headers, URLs, reports or screenshots. All other origins, enquiry APIs and non-GET/HEAD methods are blocked.",
+  "pages": [
+    {
+      "name": "task-hub",
+      "path": "/_emdash/admin/plugins/cattelan-editorial/site",
+      "width": 1440,
+      "authenticated": true,
+      "status": 200,
+      "alerts": 0,
+      "viewport": 1440,
+      "document": 1440
+    },
+    {
+      "name": "grouped-settings",
+      "path": "/_emdash/admin/plugins/cattelan-editorial/settings",
+      "width": 1440,
+      "authenticated": true,
+      "status": 200,
+      "alerts": 0,
+      "viewport": 1440,
+      "document": 1440
+    },
+    {
+      "name": "task-hub",
+      "path": "/_emdash/admin/plugins/cattelan-editorial/site",
+      "width": 390,
+      "authenticated": true,
+      "status": 200,
+      "alerts": 0,
+      "viewport": 390,
+      "document": 390
+    },
+    {
+      "name": "grouped-settings",
+      "path": "/_emdash/admin/plugins/cattelan-editorial/settings",
+      "width": 390,
+      "authenticated": true,
+      "status": 200,
+      "alerts": 0,
+      "viewport": 390,
+      "document": 390
+    },
+    {
+      "path": "/",
+      "width": 390,
+      "authenticated": false,
+      "status": 200,
+      "h1Count": 1,
+      "forms": 1,
+      "noindex": true
+    },
+    {
+      "path": "/catalogue/",
+      "width": 390,
+      "authenticated": false,
+      "status": 200,
+      "h1Count": 1,
+      "forms": 1,
+      "noindex": true
+    },
+    {
+      "path": "/showroom-casablanca/",
+      "width": 390,
+      "authenticated": false,
+      "status": 200,
+      "h1Count": 1,
+      "forms": 1,
+      "noindex": true
+    },
+    {
+      "path": "/votre-projet/",
+      "width": 390,
+      "authenticated": false,
+      "status": 200,
+      "h1Count": 1,
+      "forms": 1,
+      "noindex": true
+    },
+    {
+      "path": "/professionnels/",
+      "width": 390,
+      "authenticated": false,
+      "status": 200,
+      "h1Count": 1,
+      "forms": 1,
+      "noindex": true
+    },
+    {
+      "path": "/confidentialite/",
+      "width": 390,
+      "authenticated": false,
+      "status": 200,
+      "h1Count": 1,
+      "forms": 0,
+      "noindex": true
+    }
+  ],
+  "blocked": [
+    {
+      "origin": "https://cattelan-maroc-preview.cattelan.workers.dev",
+      "path": "/_emdash/api/admin/comments/counts",
+      "method": "GET",
+      "reason": "non-public-business-api"
+    },
+    {
+      "origin": "https://cattelan-maroc-preview.cattelan.workers.dev",
+      "path": "/_emdash/api/admin/comments/counts",
+      "method": "GET",
+      "reason": "non-public-business-api"
+    },
+    {
+      "origin": "https://cattelan-maroc-preview.cattelan.workers.dev",
+      "path": "/_emdash/api/admin/comments/counts",
+      "method": "GET",
+      "reason": "non-public-business-api"
+    },
+    {
+      "origin": "https://cattelan-maroc-preview.cattelan.workers.dev",
+      "path": "/_emdash/api/admin/comments/counts",
+      "method": "GET",
+      "reason": "non-public-business-api"
+    },
+    {
+      "origin": "https://fonts.googleapis.com",
+      "path": "[external path omitted]",
+      "method": "GET",
+      "reason": "foreign-origin"
+    },
+    {
+      "origin": "https://fonts.googleapis.com",
+      "path": "[external path omitted]",
+      "method": "GET",
+      "reason": "foreign-origin"
+    },
+    {
+      "origin": "https://fonts.googleapis.com",
+      "path": "[external path omitted]",
+      "method": "GET",
+      "reason": "foreign-origin"
+    },
+    {
+      "origin": "https://fonts.googleapis.com",
+      "path": "[external path omitted]",
+      "method": "GET",
+      "reason": "foreign-origin"
+    },
+    {
+      "origin": "https://fonts.googleapis.com",
+      "path": "[external path omitted]",
+      "method": "GET",
+      "reason": "foreign-origin"
+    },
+    {
+      "origin": "https://fonts.googleapis.com",
+      "path": "[external path omitted]",
+      "method": "GET",
+      "reason": "foreign-origin"
+    }
+  ],
+  "networkFailures": [],
+  "httpErrors": [],
+  "browserErrors": 0,
+  "authorizedOrigins": [
+    "https://cattelan-maroc-preview.cattelan.workers.dev"
+  ],
+  "browserAuthorizationHeaders": 0,
+  "success": true,
+  "failure": null,
+  "finishedAt": "2026-10-05T03:22:20.497Z"
+}

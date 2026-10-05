@@ -1,0 +1,712 @@
+{
+  "checkedAt": "2026-10-04T22:11:37Z",
+  "sourceRevision": "e8baf8961c3eb93d4761801a541b666212e2ccd1",
+  "origin": "https://cattelan-maroc-preview.cattelan.workers.dev",
+  "scope": "GET requests only, no authenticated CMS writes or form submissions",
+  "routes": [
+    {
+      "collection": "models",
+      "path": "/modeles/skorpio/",
+      "status": 200,
+      "title": "Skorpio : table en verre | Cattelan Italia Maroc",
+      "h1": [
+        "Skorpio"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/napoleon-keramik/",
+      "status": 200,
+      "title": "Napoleon Keramik : table en c\u00e9ramique | Cattelan Italia Maroc",
+      "h1": [
+        "Napoleon Keramik"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/rhonda/",
+      "status": 200,
+      "title": "Rhonda : chaise \u00e0 accoudoirs | Cattelan Italia Maroc",
+      "h1": [
+        "Rhonda"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/greta/",
+      "status": 200,
+      "title": "Greta : chaise rembourr\u00e9e | Cattelan Italia Maroc",
+      "h1": [
+        "Greta"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/ruby/",
+      "status": 200,
+      "title": "Ruby : canap\u00e9 et fauteuil en fr\u00eane | Cattelan Italia Maroc",
+      "h1": [
+        "Ruby"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/ruby-lounge/",
+      "status": 200,
+      "title": "Ruby Lounge : fauteuil en fr\u00eane | Cattelan Italia Maroc",
+      "h1": [
+        "Ruby Lounge"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/chelsea/",
+      "status": 200,
+      "title": "Chelsea : buffet laqu\u00e9 | Cattelan Italia Maroc",
+      "h1": [
+        "Chelsea"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/airport/",
+      "status": 200,
+      "title": "Airport : biblioth\u00e8que modulaire | Cattelan Italia Maroc",
+      "h1": [
+        "Airport"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/bloom/",
+      "status": 200,
+      "title": "Bloom : suspension et lampadaire | Cattelan Italia Maroc",
+      "h1": [
+        "Bloom"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/napoleon-keramik-outdoor/",
+      "status": 200,
+      "title": "Napoleon Keramik Outdoor | Cattelan Italia Maroc",
+      "h1": [
+        "Napoleon Keramik Outdoor"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/greta-outdoor/",
+      "status": 200,
+      "title": "Greta Outdoor : chaise en inox 304 | Cattelan Italia Maroc",
+      "h1": [
+        "Greta Outdoor"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/arena/",
+      "status": 200,
+      "title": "Arena \u00b7 Table basse Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Arena"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/albert-keramik/",
+      "status": 200,
+      "title": "Albert Keramik \u00b7 Table basse Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Albert Keramik"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/adrian-wood/",
+      "status": 200,
+      "title": "Adrian Wood \u00b7 Table basse Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Adrian Wood"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/dodo/",
+      "status": 200,
+      "title": "Dodo \u00b7 Table basse Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Dodo"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/westin/",
+      "status": 200,
+      "title": "Westin \u00b7 Console Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Westin"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/nettuno/",
+      "status": 200,
+      "title": "Nettuno \u00b7 Console Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Nettuno"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/rado-keramik/",
+      "status": 200,
+      "title": "Rado Keramik \u00b7 Console Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Rado Keramik"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/cosmos/",
+      "status": 200,
+      "title": "Cosmos \u00b7 Miroir Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Cosmos"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/glenn/",
+      "status": 200,
+      "title": "Glenn \u00b7 Miroir Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Glenn"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/butterfly/",
+      "status": 200,
+      "title": "Butterfly \u00b7 Table Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Butterfly"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/butterfly-keramik/",
+      "status": 200,
+      "title": "Butterfly Keramik \u00b7 Table Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Butterfly Keramik"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/tyron-keramik/",
+      "status": 200,
+      "title": "Tyron Keramik \u00b7 Table Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Tyron Keramik"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/miranda-ml/",
+      "status": 200,
+      "title": "Miranda ML \u00b7 Chaise Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Miranda ML"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/zuleika/",
+      "status": 200,
+      "title": "Zuleika \u00b7 Chaise Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Zuleika"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/craig/",
+      "status": 200,
+      "title": "Craig \u00b7 Canap\u00e9 Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Craig"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/douglas/",
+      "status": 200,
+      "title": "Douglas \u00b7 Canap\u00e9 Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Douglas"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/mykonos/",
+      "status": 200,
+      "title": "Mykonos \u00b7 Canap\u00e9 Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Mykonos"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/sinatra/",
+      "status": 200,
+      "title": "Sinatra \u00b7 Canap\u00e9 Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Sinatra"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/kayak/",
+      "status": 200,
+      "title": "Kayak \u00b7 Buffet Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Kayak"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/amsterdam/",
+      "status": 200,
+      "title": "Amsterdam \u00b7 Buffet Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Amsterdam"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/nautilus/",
+      "status": 200,
+      "title": "Nautilus \u00b7 Biblioth\u00e8que Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Nautilus"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/paris/",
+      "status": 200,
+      "title": "Paris \u00b7 Suspension Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Paris"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/cloudine/",
+      "status": 200,
+      "title": "Cloudine \u00b7 Suspension Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Cloudine"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/aladdin/",
+      "status": 200,
+      "title": "Aladdin \u00b7 Suspension Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Aladdin"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/botero-argile/",
+      "status": 200,
+      "title": "Botero Argile \u00b7 Table Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Botero Argile"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/botero-wood-round/",
+      "status": 200,
+      "title": "Botero Wood Round \u00b7 Table Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Botero Wood Round"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/botero-keramik-round/",
+      "status": 200,
+      "title": "Botero Keramik Round \u00b7 Table Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Botero Keramik Round"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "models",
+      "path": "/modeles/botero-ker-wood-round/",
+      "status": 200,
+      "title": "Botero Ker-Wood Round \u00b7 Table Cattelan Italia \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Botero Ker-Wood Round"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "posts",
+      "path": "/journal/choisir-forme-proportions-table-salle-a-manger/",
+      "status": 200,
+      "title": "Table de salle \u00e0 manger \u00e0 Casablanca \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Quelle forme et quelle taille pour une table de salle \u00e0 manger ?"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "posts",
+      "path": "/journal/associer-table-chaises-salle-a-manger/",
+      "status": 200,
+      "title": "Comment associer table et chaises \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Comment associer une table et des chaises sans tout assortir ?"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "posts",
+      "path": "/journal/ceramique-verre-bois-choisir-finition-meuble/",
+      "status": 200,
+      "title": "Table c\u00e9ramique, verre ou bois \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Table \u00e0 manger en c\u00e9ramique, en verre ou en bois, laquelle choisir ?"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "posts",
+      "path": "/journal/composer-salon-canape-fauteuil/",
+      "status": 200,
+      "title": "Salon, canap\u00e9 d&#39;angle et fauteuil \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Quel canap\u00e9, droit ou d&#39;angle, et quel fauteuil pour le salon ?"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "posts",
+      "path": "/journal/choisir-buffet-bibliotheque-salon/",
+      "status": 200,
+      "title": "Buffet ou biblioth\u00e8que pour le salon \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Buffet ou biblioth\u00e8que, lequel choisir pour le salon ?"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "families",
+      "path": "/collections/tables/",
+      "status": 200,
+      "title": "Tables et salles \u00e0 manger Cattelan Italia \u00e0 Casablanca \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Tables et salles \u00e0 manger Cattelan Italia, jusqu&#39;\u00e0 14 places"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "families",
+      "path": "/collections/chaises-tabourets/",
+      "status": 200,
+      "title": "Chaises et tabourets Cattelan Italia \u00e0 Casablanca \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Chaises et tabourets Cattelan Italia en cuir et en tissu"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "families",
+      "path": "/collections/canapes-fauteuils/",
+      "status": 200,
+      "title": "Canap\u00e9s, salons et fauteuils Cattelan Italia \u00e0 Casablanca \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Canap\u00e9s, salons et fauteuils Cattelan Italia \u00e0 Casablanca"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "families",
+      "path": "/collections/buffets-bibliotheques/",
+      "status": 200,
+      "title": "Buffets et biblioth\u00e8ques Cattelan Italia \u00e0 Casablanca \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Buffets et biblioth\u00e8ques Cattelan Italia, verre miroit\u00e9 et acier"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "families",
+      "path": "/collections/luminaires/",
+      "status": 200,
+      "title": "Luminaires et lustres Cattelan Italia \u00e0 Casablanca \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Luminaires et lustres Cattelan Italia, verre artistique et laiton"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "families",
+      "path": "/collections/mobilier-exterieur/",
+      "status": 200,
+      "title": "Mobilier ext\u00e9rieur Cattelan Italia \u00e0 Casablanca \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Mobilier ext\u00e9rieur Cattelan Italia, c\u00e9ramique et acier inoxydable"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "families",
+      "path": "/collections/tables-basses/",
+      "status": 200,
+      "title": "Tables basses et d\u2019appoint Cattelan Italia \u00e0 Casablanca \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Tables basses et d\u2019appoint Cattelan Italia \u00e0 Casablanca"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "families",
+      "path": "/collections/consoles-miroirs/",
+      "status": 200,
+      "title": "Consoles et miroirs Cattelan Italia \u00e0 Casablanca \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Consoles et miroirs Cattelan Italia en verre, acier et c\u00e9ramique"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "pages",
+      "path": "/",
+      "status": 200,
+      "title": "Cattelan Italia Maroc \u00b7 Mobilier italien \u00e0 Casablanca",
+      "h1": [
+        "Le premier showroom exclusif Cattelan Italia au Maroc"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "pages",
+      "path": "/collections/",
+      "status": 200,
+      "title": "Collections Cattelan Italia, mobilier italien \u00e0 Casablanca",
+      "h1": [
+        "Les collections Cattelan Italia \u00e0 Casablanca"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "pages",
+      "path": "/showroom-casablanca/",
+      "status": 200,
+      "title": "Showroom Cattelan Italia Casablanca \u00b7 Triangle d&#39;Or",
+      "h1": [
+        "Le showroom Cattelan Italia du Triangle d&#39;Or, \u00e0 Casablanca"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "pages",
+      "path": "/catalogue/",
+      "status": 200,
+      "title": "Catalogue Cattelan Italia en PDF \u00b7 Casablanca",
+      "h1": [
+        "Le catalogue Cattelan Italia \u00e0 t\u00e9l\u00e9charger en PDF"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "pages",
+      "path": "/journal/",
+      "status": 200,
+      "title": "Journal Cattelan Italia, conseils mobilier \u00e0 Casablanca",
+      "h1": [
+        "Journal Cattelan Italia, cinq guides \u00e9crits \u00e0 Casablanca"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "pages",
+      "path": "/sur-mesure/",
+      "status": 200,
+      "title": "Mobilier sur mesure \u00e0 Casablanca \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Le mobilier Cattelan Italia sur mesure, \u00e0 Casablanca"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "pages",
+      "path": "/professionnels/",
+      "status": 200,
+      "title": "Architectes et d\u00e9corateurs \u00e0 Casablanca \u00b7 Cattelan Italia",
+      "h1": [
+        "Architectes et d\u00e9corateurs"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "pages",
+      "path": "/a-propos/",
+      "status": 200,
+      "title": "\u00c0 propos \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Cattelan Italia, de la V\u00e9n\u00e9tie \u00e0 Casablanca"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "pages",
+      "path": "/votre-projet/",
+      "status": 200,
+      "title": "Commander du mobilier italien au Maroc \u00b7 Cattelan Italia",
+      "h1": [
+        "Commande et livraison d&#39;un meuble Cattelan Italia"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "pages",
+      "path": "/faq/",
+      "status": 200,
+      "title": "Questions fr\u00e9quentes \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Questions fr\u00e9quentes"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "pages",
+      "path": "/mentions-legales/",
+      "status": 200,
+      "title": "Mentions l\u00e9gales \u00b7 Cattelan Italia Maroc",
+      "h1": [
+        "Mentions l\u00e9gales"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    },
+    {
+      "collection": "privacy",
+      "path": "/confidentialite/",
+      "status": 200,
+      "title": "Confidentialit\u00e9",
+      "h1": [
+        "Confidentialit\u00e9"
+      ],
+      "emdashMedia": true,
+      "hasNoindex": true
+    }
+  ]
+}

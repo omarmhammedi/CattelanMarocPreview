@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { actions, generalWhatsappMessage, isCatalogueLink, modelWhatsappMessage, professionalWhatsappMessage, whatsappHref } from '../src/lib/actions.ts';
+import { actions, actionsFor, generalMessageFor, generalWhatsappMessage, isCatalogueLink, modelWhatsappMessage, professionalWhatsappMessage, whatsappHref } from '../src/lib/actions.ts';
+import {readNavigationCopy} from '../src/lib/navigation-copy.mjs';
 
 test('keeps the three actions, their order and their destinations', () => {
   assert.deepEqual(Object.keys(actions), ['appointment', 'advisor', 'catalogue']);
@@ -46,4 +47,14 @@ test('recognises the catalogue menu item with or without its trailing slash', ()
   assert.equal(isCatalogueLink('/collections/'), false);
   assert.equal(isCatalogueLink('/catalogue/demonstration/'), false);
   assert.equal(isCatalogueLink(undefined), false);
+});
+
+test('shared copy changes labels and WhatsApp text while internal form destinations stay valid',()=>{
+  const site={navigationCopy:readNavigationCopy({editorial_copy:{action_appointment_label:'Organiser ma visite',action_advisor_label:'Parler au showroom',whatsapp_general_message:'Bonjour, pouvez-vous me renseigner ?',footer_valet_text:''}})};
+  assert.equal(actionsFor(site).appointment.label,'Organiser ma visite');
+  assert.equal(actionsFor(site).appointment.href,'/showroom-casablanca/#rendez-vous');
+  assert.equal(actionsFor(site).advisor.label,'Parler au showroom');
+  assert.equal(new URL(whatsappHref('https://wa.me/212771105490',generalMessageFor(site))!).searchParams.get('text'),'Bonjour, pouvez-vous me renseigner ?');
+  assert.equal(site.navigationCopy.footer_valet_text,'');
+  assert.equal(readNavigationCopy().footer_valet_text,'Service voiturier');
 });

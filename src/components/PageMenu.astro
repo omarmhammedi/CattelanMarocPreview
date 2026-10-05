@@ -2,7 +2,7 @@
 interface MenuItem {
   url?: string;
   label: string;
-  target?: string;
+  target?: string | null;
   children?: MenuItem[];
 }
 interface Props { items: MenuItem[]; path?: string; nested?: boolean; }

@@ -109,8 +109,16 @@ test('notification and export carry the request without formula injection', asyn
   assert(requestsToCsv([privateProject]).includes('"Une pièce ou toute la maison"'));
 });
 
-test('uses the Casablanca calendar date', () => {
-  assert.equal(casablancaToday(new Date('2026-10-01T23:30:00Z')), '2026-10-02');
+test('uses the Casablanca calendar date across midnight, year and Ramadan boundaries', () => {
+  // Historical rules are stable across tzdata 2026b/2026c, which disagree on
+  // Morocco’s October 2026 offset. Current dates must follow the runtime’s IANA data.
+  for (const [instant, expected] of [
+    ['2025-10-01T22:59:59.999Z', '2025-10-01'],
+    ['2025-10-01T23:00:00Z', '2025-10-02'],
+    ['2024-12-31T23:30:00Z', '2025-01-01'],
+    ['2025-03-01T23:30:00Z', '2025-03-01'],
+    ['2025-03-02T00:00:00Z', '2025-03-02'],
+  ]) assert.equal(casablancaToday(new Date(instant)), expected, instant);
 });
 
 test('alerts go to the EmDash setting, then the secret, then the default', () => {

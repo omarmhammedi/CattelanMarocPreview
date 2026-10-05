@@ -1,0 +1,50 @@
+[
+  {
+    "url": "https://cattelan-maroc-preview.cattelan.workers.dev/",
+    "status": 200,
+    "finalUrl": "https://cattelan-maroc-preview.cattelan.workers.dev/",
+    "bytes": 381366,
+    "timestamp": "2026-10-04T22:02:05Z"
+  },
+  {
+    "url": "https://cattelan-maroc-preview.cattelan.workers.dev/_emdash/admin/",
+    "status": 200,
+    "finalUrl": "https://cattelan-maroc-preview.cattelan.workers.dev/_emdash/admin/login?redirect=%2F_emdash%2Fadmin%2F",
+    "bytes": 266083,
+    "timestamp": "2026-10-04T22:02:07Z"
+  },
+  {
+    "url": "https://cattelan-maroc-preview.cattelan.workers.dev/robots.txt",
+    "status": 200,
+    "finalUrl": "https://cattelan-maroc-preview.cattelan.workers.dev/robots.txt",
+    "bytes": 26,
+    "timestamp": "2026-10-04T22:02:08Z"
+  },
+  {
+    "url": "https://cattelan-maroc-preview.cattelan.workers.dev/sitemap.xml",
+    "status": 200,
+    "finalUrl": "https://cattelan-maroc-preview.cattelan.workers.dev/sitemap.xml",
+    "bytes": 107,
+    "timestamp": "2026-10-04T22:02:08Z"
+  },
+  {
+    "url": "https://cattelan-maroc-preview.cattelan.workers.dev/.well-known/oauth-protected-resource",
+    "status": 200,
+    "finalUrl": "https://cattelan-maroc-preview.cattelan.workers.dev/.well-known/oauth-protected-resource",
+    "bytes": 461,
+    "timestamp": "2026-10-04T22:02:08Z"
+  },
+  {
+    "url": "https://cattelan-maroc-preview.cattelan.workers.dev/.well-known/oauth-authorization-server/_emdash",
+    "status": 200,
+    "finalUrl": "https://cattelan-maroc-preview.cattelan.workers.dev/.well-known/oauth-authorization-server/_emdash",
+    "bytes": 983,
+    "timestamp": "2026-10-04T22:02:08Z"
+  },
+  {
+    "url": "https://cattelan-maroc-preview.cattelan.workers.dev/_emdash/api/mcp",
+    "status": 401,
+    "wwwAuthenticate": "Bearer resource_metadata=\"https://cattelan-maroc-preview.cattelan.workers.dev/.well-known/oauth-protected-resource\"",
+    "timestamp": "2026-10-04T22:14:55Z"
+  }
+]

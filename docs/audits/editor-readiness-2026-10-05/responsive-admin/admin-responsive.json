@@ -1,0 +1,195 @@
+{
+  "scope": "Read-only isolated current local CMS; synthetic authentication; no POST/PUT/DELETE allowed",
+  "pages": [
+    {
+      "name": "site",
+      "width": 1440,
+      "url": "/_emdash/admin/plugins/cattelan-editorial/site",
+      "headings": [
+        "Piloter le site Cattelan",
+        "Pages du site",
+        "Mobilier",
+        "Journal",
+        "Catalogue et demandes",
+        "Réglages du site",
+        "SEO et navigation",
+        "Avant de publier",
+        "Repères de l’accueil"
+      ],
+      "alerts": [],
+      "overflow": {
+        "viewport": 1440,
+        "document": 1440,
+        "body": 1440
+      },
+      "dialogs": [],
+      "errors": [],
+      "blocked": []
+    },
+    {
+      "name": "requests",
+      "width": 1440,
+      "url": "/_emdash/admin/plugins/contact-requests/requests",
+      "headings": [
+        "Rendez-vous et projets"
+      ],
+      "alerts": [],
+      "overflow": {
+        "viewport": 1440,
+        "document": 1440,
+        "body": 1440
+      },
+      "dialogs": [],
+      "errors": [],
+      "blocked": []
+    },
+    {
+      "name": "catalogue",
+      "width": 1440,
+      "url": "/_emdash/admin/plugins/catalogue-leads/contacts",
+      "headings": [
+        "Contacts catalogue",
+        "Remplacer un catalogue PDF"
+      ],
+      "alerts": [],
+      "overflow": {
+        "viewport": 1440,
+        "document": 1440,
+        "body": 1440
+      },
+      "dialogs": [],
+      "errors": [],
+      "blocked": []
+    },
+    {
+      "name": "pdf",
+      "width": 1440,
+      "url": "/_emdash/admin/plugins/catalogue-leads/contacts",
+      "headings": [
+        "Contacts catalogue",
+        "Remplacer un catalogue PDF"
+      ],
+      "alerts": [],
+      "overflow": {
+        "viewport": 1440,
+        "document": 1440,
+        "body": 1440
+      },
+      "dialogs": [],
+      "errors": [],
+      "blocked": []
+    },
+    {
+      "name": "site",
+      "width": 390,
+      "url": "/_emdash/admin/plugins/cattelan-editorial/site",
+      "headings": [
+        "Piloter le site Cattelan",
+        "Pages du site",
+        "Mobilier",
+        "Journal",
+        "Catalogue et demandes",
+        "Réglages du site",
+        "SEO et navigation",
+        "Avant de publier",
+        "Repères de l’accueil"
+      ],
+      "alerts": [],
+      "overflow": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390
+      },
+      "dialogs": [],
+      "errors": [],
+      "blocked": []
+    },
+    {
+      "name": "requests",
+      "width": 390,
+      "url": "/_emdash/admin/plugins/contact-requests/requests",
+      "headings": [
+        "Rendez-vous et projets"
+      ],
+      "alerts": [],
+      "overflow": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390
+      },
+      "dialogs": [],
+      "errors": [],
+      "blocked": []
+    },
+    {
+      "name": "catalogue",
+      "width": 390,
+      "url": "/_emdash/admin/plugins/catalogue-leads/contacts",
+      "headings": [
+        "Contacts catalogue",
+        "Remplacer un catalogue PDF"
+      ],
+      "alerts": [],
+      "overflow": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390
+      },
+      "dialogs": [],
+      "errors": [],
+      "blocked": []
+    },
+    {
+      "name": "pdf",
+      "width": 390,
+      "url": "/_emdash/admin/plugins/catalogue-leads/contacts",
+      "headings": [
+        "Contacts catalogue",
+        "Remplacer un catalogue PDF"
+      ],
+      "alerts": [],
+      "overflow": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390
+      },
+      "dialogs": [],
+      "errors": [],
+      "blocked": []
+    },
+    {
+      "name": "settings",
+      "width": 1440,
+      "url": "/_emdash/admin/plugins/cattelan-editorial/settings",
+      "headings": [
+        "Réglages du site"
+      ],
+      "alerts": [],
+      "overflow": {
+        "viewport": 1440,
+        "document": 1440,
+        "body": 1440
+      },
+      "dialogs": [],
+      "errors": [],
+      "blocked": []
+    },
+    {
+      "name": "settings",
+      "width": 390,
+      "url": "/_emdash/admin/plugins/cattelan-editorial/settings",
+      "headings": [
+        "Réglages du site"
+      ],
+      "alerts": [],
+      "overflow": {
+        "viewport": 390,
+        "document": 390,
+        "body": 390
+      },
+      "dialogs": [],
+      "errors": [],
+      "blocked": []
+    }
+  ]
+}

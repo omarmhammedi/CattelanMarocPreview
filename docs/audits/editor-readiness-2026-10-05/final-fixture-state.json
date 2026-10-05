@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-10-05T01:47:02.382Z",
+  "entries": 66,
+  "collections": [
+    {
+      "collection": "pages",
+      "entries": 12,
+      "pendingDrafts": 0
+    },
+    {
+      "collection": "families",
+      "entries": 8,
+      "pendingDrafts": 0
+    },
+    {
+      "collection": "models",
+      "entries": 39,
+      "pendingDrafts": 0
+    },
+    {
+      "collection": "posts",
+      "entries": 5,
+      "pendingDrafts": 0
+    },
+    {
+      "collection": "catalogues",
+      "entries": 1,
+      "pendingDrafts": 0
+    },
+    {
+      "collection": "site_content",
+      "entries": 1,
+      "pendingDrafts": 0
+    }
+  ],
+  "noTestMarkers": true,
+  "noPendingDrafts": true,
+  "temporarySeedOverride": false,
+  "fixture": "Current native seed, synthetic media, isolated local D1"
+}

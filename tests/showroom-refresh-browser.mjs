@@ -2,6 +2,8 @@
  * Anonymous, read-only checks of the published showroom copy and homepage images.
  * Does not read credentials or call CMS, authentication, publication or setup APIs.
  * Google directions clicks are intercepted: this checks the destination, not Google service availability.
+ * Exact copy requires its historical showroom/editorial fixture plus native
+ * SEO migration 0026; it is not a current-seed acceptance suite.
  *
  * PUBLIC_TEST_ENGINE=chromium|webkit PUBLIC_TEST_THEME=dark|light
  * PUBLIC_TEST_URL=http://localhost:4321 node tests/showroom-refresh-browser.mjs
@@ -11,6 +13,7 @@ import assert from 'node:assert/strict';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import { chromium, webkit } from 'playwright';
+import { nativeSeoForFixture } from './seo-fixture-expectations.mjs';
 
 const base = new URL(process.env.PUBLIC_TEST_URL || 'http://localhost:4321');
 assert(['http:', 'https:'].includes(base.protocol) && !base.username && !base.password);
@@ -24,7 +27,9 @@ const screenshots = process.env.PUBLIC_TEST_SCREENSHOTS !== 'false' && engine ==
 const location = JSON.parse(await readFile('content/showroom-location.json', 'utf8'));
 const editorial = JSON.parse(await readFile('content/showroom-editorial-copy.json', 'utf8'));
 const refresh = JSON.parse(await readFile('content/editorial-refresh-pages.json', 'utf8'));
-Object.assign(editorial.showroom, refresh.find(entry => entry.collection === 'pages' && entry.slug === 'showroom-casablanca').after);
+const showroomRefresh = refresh.find(entry => entry.collection === 'pages' && entry.slug === 'showroom-casablanca');
+Object.assign(editorial.showroom, showroomRefresh.after);
+const showroomSeo = nativeSeoForFixture(editorial.showroom, showroomRefresh.seoAfter || {});
 const expectedPhone = `tel:${location.global.after.contact_phone.replace(/[^+\d]/gu, '')}`;
 const expectedDirections = new URL(location.global.after.map_url);
 const viewports = [{ width: 1440, height: 900 }, { width: 390, height: 844 }];
@@ -257,8 +262,8 @@ async function normalMotionCase(browser, viewport) {
     await cta.click();
     await page.waitForURL('**/showroom-casablanca/');
     await page.locator('h1').waitFor();
-    assert.equal(await page.title(), editorial.showroom.seo_title);
-    assert.equal(await page.locator('meta[name="description"]').getAttribute('content'), editorial.showroom.meta_description);
+    assert.equal(await page.title(), showroomSeo.title);
+    assert.equal(await page.locator('meta[name="description"]').getAttribute('content'), showroomSeo.description);
     const faqHeadings = editorial.showroom.sections.filter(section => section.section_key.startsWith('faq_')).map(section => section.heading);
     assert.equal(faqHeadings.length, 0, 'The repeated questions are now one contact note.');
     assert.equal(await page.locator('.page-faq details').count(), 0);

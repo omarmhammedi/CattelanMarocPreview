@@ -1,0 +1,54 @@
+{
+  "origin": "http://localhost:4331",
+  "interceptedSyntheticPosts": 9,
+  "liveWrites": 0,
+  "results": [
+    {
+      "form": "catalogue",
+      "emailStatus": "sent",
+      "passed": true
+    },
+    {
+      "form": "catalogue",
+      "emailStatus": "pending",
+      "passed": true
+    },
+    {
+      "form": "catalogue",
+      "emailStatus": "processing",
+      "passed": true
+    },
+    {
+      "form": "catalogue",
+      "emailStatus": "failed",
+      "passed": true
+    },
+    {
+      "form": "catalogue",
+      "emailStatus": "disabled",
+      "passed": true
+    },
+    {
+      "form": "rendez-vous",
+      "success": true
+    },
+    {
+      "form": "projet",
+      "success": true
+    },
+    {
+      "form": "pro",
+      "success": true
+    },
+    {
+      "form": "request",
+      "genericErrorUsesCmsCopy": true
+    },
+    {
+      "page": "privacy",
+      "noUnresolvedSlots": true,
+      "correctRuntimeProviders": true
+    }
+  ],
+  "note": "Browser-only synthetic responses: 9 intercepted POST requests, 0 actual submissions, emails or data writes. Anonymous local fixture; no credentials included."
+}

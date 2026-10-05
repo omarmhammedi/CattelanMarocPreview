@@ -1,4 +1,7 @@
 import { getEmDashCollection, getEmDashEntry, getEmDashReferences, getSiteSettings, getMenu, type ContentEntry } from 'emdash';
+import {collectPages} from './pagination';
+import {readEditorialCopy} from './editorial-copy.mjs';
+import {FOOTER_MENU, readNavigationCopy} from './navigation-copy.mjs';
 
 // This module is the only presentation adapter. Seed JSON is never imported at runtime.
 type Data = Record<string, any>;
@@ -18,29 +21,25 @@ export async function readEntry(collection: string, slug: string, references: Re
   // Continue ordered relationships rather than silently losing selections past
   // the first page. Native queries retain published/signed-preview visibility.
   for (const [field, page] of Object.entries(entry.references || {})) {
-    let cursor = page.nextCursor;
-    while (cursor) {
-      const next = await getEmDashReferences(collection, entry.id, field, {limit:100, cursor});
-      if (next.error) throw next.error;
-      page.entries.push(...next.entries);
-      cursor = next.nextCursor;
-    }
+    const initial=page;
+    page.entries=await collectPages(cursor=>cursor
+      ? getEmDashReferences(collection, entry.id, field, {limit:100, cursor})
+      : Promise.resolve(initial));
     delete page.nextCursor;
   }
   return Object.assign(entry, {_collection:collection}) as Entry;
 }
 const read=readEntry;
 async function list(collection: string, orderBy: Record<string, 'asc'|'desc'>) {
-  const {entries, error, hasMore} = await getEmDashCollection(collection, {orderBy, limit:100});
-  if (error) throw new Error(`Le CMS n’a pas pu lire ${collection}`, {cause:error});
-  if (hasMore) throw new Error(`La collection ${collection} nécessite une pagination.`);
+  const entries=await collectPages(cursor=>getEmDashCollection(collection, {orderBy, limit:100, cursor}));
   return entries.map(entry => Object.assign(entry,{_collection:collection}) as Entry);
 }
 function base(entry: Entry) {
   const d = entry.data;
   return {id:String(d.id || entry.id),slug:String(d.slug || entry.id),title:String(d.title || ''),
     intro:String(d.intro || ''),body:d.content || [],image:picture(d.hero_image || d.image),
-    seoTitle:String(d.seo_title || d.title || ''),description:String(d.meta_description || d.excerpt || d.intro || ''),entry};
+    // Native SEO is authoritative. Run migration 0026 before releasing this adapter.
+    seoTitle:String(d.title || ''),description:String(d.excerpt || d.intro || d.description || ''),entry};
 }
 function sectionModel(section: Data) {
   return {
@@ -84,8 +83,8 @@ export function modelModel(entry:Entry) {
   const d=entry.data;
   const p=base(Object.assign(entry,{_collection:'models'}));
   return {...p,href:`/modeles/${p.slug}/`,description:String(d.description || ''),
-    imageCaption:String(d.image_caption || ''),availabilityNote:String(d.availability_note || ''),onDisplay:d.on_display===true || d.on_display===1,
-    year:d.release_year || null,officialUrl:String(d.source_url || d.official_url || ''),
+    imageCaption:String(d.image_caption || ''),onDisplay:d.on_display===true || d.on_display===1,
+    year:d.release_year || null,
     gallery:(d.gallery || []).flatMap((item:Data)=>{const image=picture(item.image);return image?[{...image,caption:String(item.caption || '')}]:[];}),
     dimensions:(d.dimensions || []).map((item:Data)=>({label:String(item.label || ''),value:String(item.value || ''),seats:item.seats,largeSeats:item.large_seats})),
     drawings:(d.drawings || []).flatMap((item:Data)=>{const image=picture(item.image);return image?[{label:String(item.label || ''),row:item.row,column:item.column,image}]:[];}),
@@ -105,16 +104,17 @@ export async function getModelFamilies(slug:string){
 export function catalogueModel(e:Entry){const d=e.data;return {...base(e),edition:String(d.edition || ''),description:String(d.description || ''),cover:picture(d.cover),isPlaceholder:!!d.is_placeholder,downloadLabel:String(d.download_label || '')};}
 export async function getCatalogue(){const global=await read('site_content','global',{active_catalogue:true});const ref=global?.references?.active_catalogue?.entries[0];if(!ref)return null;const e=await read('catalogues',String(ref.data.id || ref.id));return e?catalogueModel(e):null;}
 export async function getSite(){
-  const [e,settings,menu]=await Promise.all([read('site_content','global'),getSiteSettings(),getMenu('primary')]);
+  const [e,settings,menu,footerMenu]=await Promise.all([read('site_content','global'),getSiteSettings(),getMenu('primary'),getMenu('footer')]);
   if(!e) throw new Error('La configuration globale du site manque dans EmDash.');
   const d=e.data;
   return {name:String(settings.title || ''),tagline:String(settings.tagline || ''),city:d.city,location:String(d.brand_location || ''),
     logoLight:picture(d.logo_light || settings.logo),logoDark:picture(d.logo_dark || settings.logo),phone:d.contact_phone,whatsappUrl:d.whatsapp_url,whatsappHref:d.whatsapp_url,navigation:menu?.items || [],
+    footerNavigation:footerMenu?.items ?? FOOTER_MENU.items,navigationCopy:readNavigationCopy(d),editorial:readEditorialCopy(d),
     address:d.address,hours:d.hours,mapUrl:d.map_url,mapEmbedUrl:d.map_embed_url,mapNote:d.map_note,publicEmail:d.public_email,cndpReceipt:String(d.cndp_receipt || '').trim(),
     // Cloudflare Web Analytics site token (32 hex characters); the beacon loads only when it is set.
     analyticsToken:/^[0-9a-f]{32}$/iu.test(String(d.analytics_token || '').trim()) ? String(d.analytics_token).trim() : '',
     showroomLatitude:d.showroom_latitude,showroomLongitude:d.showroom_longitude,
-    footerText:d.footer_text,footerNote:d.footer_text,previewNotice:d.preview_notice,modelNotice:d.model_notice,
+    footerText:d.footer_text,footerNote:d.footer_text,previewNotice:d.preview_notice,
     placeholderNotice:d.placeholder_notice,settings,
     labels:{collections:d.collections_label,showroom:d.showroom_label,journal:d.journal_label,catalogue:d.catalogue_label,contact:d.contact_label,allArticles:d.journal_label,readArticle:d.read_article_label,discover:d.discover_label,visit:d.showroom_label,scroll:d.scroll_label || 'Défiler'},
     form:{name:d.form_name_label,email:d.form_email_label,nameError:d.form_name_error,emailError:d.form_email_error,submit:d.catalogue_label,consent:d.form_opt_in_label,note:d.form_hint,privacy:d.form_privacy,pending:d.form_pending,error:d.form_error,successTitle:d.form_success_title,successText:d.form_success_text,unavailable:d.form_unavailable},entry:e};

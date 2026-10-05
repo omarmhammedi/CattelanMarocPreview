@@ -36,7 +36,10 @@ for (const [collection, entries] of Object.entries(seed.content)) {
     count += 1;
   }
 }
-assert.equal(seed.content.pages.length, 11);
+assert.equal(seed.content.pages.length, 12);
+const privacy = seed.content.pages.find(page => page.slug === 'confidentialite');
+assert.equal(privacy?.status, 'draft', 'New privacy content requires explicit review and publication');
+assert(privacy.data.content.some(block => block.children?.some(span => span.text?.includes('{{retention}}'))), 'Privacy retains its dynamic retention fact');
 const routeKeys = seed.collections.find((item) => item.slug === 'pages').fields.find((field) => field.slug === 'route_key').validation.options;
 for (const page of seed.content.pages) assert(routeKeys.includes(page.data.route_key), `${page.slug}: unknown route key`);
 assert.equal(seed.content.families.length, 8);
@@ -50,6 +53,12 @@ for (const post of seed.content.posts) {
   assert(post.data.content.length > 5, `${post.slug}: missing complete article`);
   assert(post.data.content.some((block) => block.style === 'h2'), `${post.slug}: missing article sections`);
 }
+// Native public reads include system and revision columns in addition to custom fields.
+// The former 85-field global exceeded D1's result-column budget in the native query.
+// Keep a conservative 60-field ceiling; grouped business text lives in one JSON field.
+const sharedFields = seed.collections.find(collection => collection.slug === 'site_content').fields;
+assert(sharedFields.length <= 60, 'site_content must stay within the D1 public-query column budget; put editorial text in editorial_copy');
+assert.equal(sharedFields.find(field => field.slug === 'editorial_copy')?.type, 'json');
 const discover = seed.collections.find((item) => item.slug === 'site_content').fields.find((field) => field.slug === 'discover_label');
 assert(discover?.required && discover.type === 'string', 'Collection action needs its own required CMS string');
 assert.equal(seed.content.site_content[0].data.discover_label, 'Découvrir');

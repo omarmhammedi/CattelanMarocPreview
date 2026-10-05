@@ -5,6 +5,20 @@ export const actions = {
   catalogue: { label: 'Télécharger le catalogue', href: '/catalogue/' },
 } as const;
 export type ActionKey = keyof typeof actions;
+type ActionSite = {navigationCopy?: Record<string,string>};
+
+/** Text is editorial; implemented form/page destinations remain stable. */
+export function actionsFor(site?: ActionSite) {
+  const copy=site?.navigationCopy;
+  return {
+    appointment:{...actions.appointment,label:copy?.action_appointment_label ?? actions.appointment.label},
+    advisor:{...actions.advisor,label:copy?.action_advisor_label ?? actions.advisor.label},
+    catalogue:{...actions.catalogue,label:copy?.action_catalogue_label ?? actions.catalogue.label},
+  };
+}
+export function generalMessageFor(site?: ActionSite) {
+  return site?.navigationCopy?.whatsapp_general_message ?? generalWhatsappMessage;
+}
 
 export const generalWhatsappMessage = 'Bonjour, je souhaite des informations sur Cattelan Italia Maroc.';
 export const professionalWhatsappMessage = 'Bonjour, je travaille sur un projet professionnel et souhaite échanger avec un conseiller.';

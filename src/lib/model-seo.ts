@@ -14,6 +14,6 @@ export function modelType(slug: string, familySlug?: string): string {
   return modelTypes[slug] || (familySlug && familyTypes[familySlug]) || 'Mobilier';
 }
 
-export function modelSeoTitle(title: string, slug: string, familySlug?: string): string {
-  return `${title} · ${modelType(slug, familySlug)} Cattelan Italia · Cattelan Italia Maroc`;
+export function modelSeoTitle(title: string, slug: string, familySlug?: string, separator = ' · ', siteTitle = 'Cattelan Italia Maroc'): string {
+  return [title, `${modelType(slug, familySlug)} Cattelan Italia`, siteTitle].filter(Boolean).join(separator || ' · ');
 }

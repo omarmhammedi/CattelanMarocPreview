@@ -1,0 +1,41 @@
+[
+  {
+    "name": "home-desktop",
+    "path": "/",
+    "width": 1440,
+    "status": 200,
+    "url": "https://cattelan-maroc-preview.cattelan.workers.dev/",
+    "h1": [
+      "Le premier showroom exclusif Cattelan Italia au Maroc"
+    ],
+    "title": "Cattelan Italia Maroc · Mobilier italien à Casablanca",
+    "writes": [],
+    "errors": []
+  },
+  {
+    "name": "catalogue-mobile",
+    "path": "/catalogue/",
+    "width": 390,
+    "status": 200,
+    "url": "https://cattelan-maroc-preview.cattelan.workers.dev/catalogue/",
+    "h1": [
+      "Le catalogue Cattelan Italia à télécharger en PDF"
+    ],
+    "title": "Catalogue Cattelan Italia en PDF · Casablanca",
+    "writes": [],
+    "errors": []
+  },
+  {
+    "name": "admin-login",
+    "path": "/_emdash/admin/",
+    "width": 1440,
+    "status": 200,
+    "url": "https://cattelan-maroc-preview.cattelan.workers.dev/_emdash/admin/login?redirect=%2F_emdash%2Fadmin%2F",
+    "h1": [
+      "Sign in to your site"
+    ],
+    "title": "EmDash Admin",
+    "writes": [],
+    "errors": []
+  }
+]

@@ -1,0 +1,240 @@
+{
+  "completedAt": "2026-10-05T01:42:54.240Z",
+  "disposableOrigin": "http://localhost:4331",
+  "suite": "representative-browser-and-complete-publication",
+  "passed": true,
+  "results": [
+    "8 familles : les 39 modèles sont accessibles par des liens internes, sans nouvel onglet.",
+    "39 fiches : titre, photo exacte, texte, galerie, dimensions, dessins, finitions et PDF local vérifiés.",
+    "Le téléchargement PDF depuis le navigateur correspond aux octets du fichier technique local.",
+    "chromium 1440 × 900, dark : 4 fiches, thème, navigation interne, galerie et finitions au clavier, sans débordement.",
+    "chromium 1440 × 900, light : 4 fiches, thème, navigation interne, galerie et finitions au clavier, sans débordement.",
+    "chromium 390 × 844, dark : 4 fiches, thème, navigation interne, galerie et finitions au clavier, sans débordement.",
+    "chromium 390 × 844, light : 4 fiches, thème, navigation interne, galerie et finitions au clavier, sans débordement.",
+    "chromium : mouvement réduit, contenu visible et transitions désactivées.",
+    "Modèle : brouillon invisible au public, aperçu signé complet et jeton invalide sans fuite.",
+    "Modèle : publication immédiatement visible sur la fiche et ses cartes de collection.",
+    "Modèle : champs facultatifs effacés dans l’aperçu puis dans la fiche publiée, sans ancien contenu de secours.",
+    "Modèle dépublié : fiche publique en 404, retrait des collections, aperçu signé toujours disponible.",
+    "Modèle initial restauré et republié ; fiche et références de collection rétablies."
+  ],
+  "downloads": [
+    {
+      "slug": "botero-ker-wood-round",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "botero-keramik-round",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "botero-wood-round",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "botero-argile",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "aladdin",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "cloudine",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "paris",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "nautilus",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "amsterdam",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "kayak",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "sinatra",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "mykonos",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "douglas",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "craig",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "zuleika",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "miranda-ml",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "tyron-keramik",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "butterfly-keramik",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "butterfly",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "glenn",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "cosmos",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "rado-keramik",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "nettuno",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "westin",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "dodo",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "adrian-wood",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "albert-keramik",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "arena",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "greta-outdoor",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "napoleon-keramik-outdoor",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "bloom",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "airport",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "chelsea",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "ruby-lounge",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "ruby",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "greta",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "rhonda",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "napoleon-keramik",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    },
+    {
+      "slug": "skorpio",
+      "bytes": 142,
+      "sha256": "54725981e65c4cb6635d6e2faa8ac15070c84f169b66d21aa669a8ceedca939c"
+    }
+  ],
+  "screenshots": [
+    "chromium-douglas-1440-dark.jpg",
+    "chromium-napoleon-keramik-outdoor-1440-dark.jpg",
+    "chromium-rhonda-1440-dark.jpg",
+    "chromium-skorpio-1440-dark.jpg",
+    "chromium-skorpio-finishes-1440-dark.jpg",
+    "chromium-douglas-1440-light.jpg",
+    "chromium-napoleon-keramik-outdoor-1440-light.jpg",
+    "chromium-rhonda-1440-light.jpg",
+    "chromium-skorpio-1440-light.jpg",
+    "chromium-skorpio-finishes-1440-light.jpg",
+    "chromium-douglas-390-dark.jpg",
+    "chromium-napoleon-keramik-outdoor-390-dark.jpg",
+    "chromium-rhonda-390-dark.jpg",
+    "chromium-skorpio-390-dark.jpg",
+    "chromium-skorpio-finishes-390-dark.jpg",
+    "chromium-douglas-390-light.jpg",
+    "chromium-napoleon-keramik-outdoor-390-light.jpg",
+    "chromium-rhonda-390-light.jpg",
+    "chromium-skorpio-390-light.jpg",
+    "chromium-skorpio-finishes-390-light.jpg"
+  ]
+}

@@ -31,6 +31,11 @@ const modelPath = item => `/modeles/${item.slug || item.data.slug}/`;
 const mediaSource = image => image?.src || image?.url ||
   (image?.meta?.storageKey || image?.id || image?.mediaId
     ? `/_emdash/api/media/file/${encodeURIComponent(image.meta?.storageKey || image.id || image.mediaId)}` : '');
+const originalImageSource = source => {
+  const url = new URL(source, base);
+  if (url.pathname === '/_image' && url.searchParams.has('href')) return originalImageSource(url.searchParams.get('href'));
+  return url.origin === base.origin ? `${url.pathname}${url.search}` : url.href;
+};
 const paragraph = text => [{_type: 'block', _key: 'model-test-block', style: 'normal', markDefs: [], children: [{_type: 'span', _key: 'model-test-span', text, marks: []}]}];
 function editorialData(value) {
   if (Array.isArray(value)) return value.map(editorialData);
@@ -82,6 +87,19 @@ async function contains(html, selector, marker, attribute) {
     `Expected changed model content in ${selector}.`);
 }
 
+// Astro HMR can abort an in-flight read-only navigation while another source
+// file changes. Retry that transport cancellation only; never replay mutations
+// or mask HTTP, rendering, or browser assertions.
+async function navigate(page, url, options) {
+  for (let attempt = 0; ; attempt++) {
+    try { return await page.goto(url, options); }
+    catch (error) {
+      if (attempt >= 2 || !String(error.message).includes('net::ERR_ABORTED')) throw error;
+      await page.waitForTimeout(300);
+    }
+  }
+}
+
 async function checkPublishedPages(models, families) {
   const references = new Map(models.map(model => [modelPath(model), []]));
   for (const family of families) {
@@ -103,15 +121,15 @@ async function checkPublishedPages(models, families) {
     const data = model.data;
     const {html} = await publicHtml(modelPath(model));
     assert.deepEqual(await nodes(html, 'h1'), [data.title]);
-    assert.deepEqual(await nodes(html, '.model-hero-figure img', 'src'), [mediaSource(data.image)]);
+    assert.deepEqual((await nodes(html, '.model-hero-figure img', 'src')).map(originalImageSource), [mediaSource(data.image)].filter(Boolean).map(originalImageSource));
     assert((await nodes(html, '.model-story')).length === 1, `${model.slug}: missing editorial body.`);
     const gallerySources = (data.gallery || []).map(item => mediaSource(item.image)).filter(Boolean);
-    assert.deepEqual(await nodes(html, '.model-gallery-view img', 'src'), gallerySources);
-    assert.equal((await nodes(html, '.model-dimension')).length, data.dimensions.length);
-    assert.deepEqual(await nodes(html, '.model-dimension-value'), data.dimensions.filter(item => item.value).map(item => item.value));
-    assert.deepEqual((await nodes(html, '.model-drawings img', 'src')).sort(), data.drawings.map(item => mediaSource(item.image)).sort());
-    assert.equal((await nodes(html, '.model-finish')).length, data.finishes.length);
-    assert.deepEqual(await nodes(html, '.model-source a', 'href'), [data.source_url || data.official_url]);
+    assert.deepEqual((await nodes(html, '.model-gallery-view img', 'src')).map(originalImageSource), gallerySources.map(originalImageSource));
+    assert.equal((await nodes(html, '.model-dimension')).length, (data.dimensions || []).length);
+    assert.deepEqual(await nodes(html, '.model-dimension-value'), (data.dimensions || []).filter(item => item.value).map(item => item.value));
+    assert.deepEqual((await nodes(html, '.model-drawings img', 'src')).map(originalImageSource).sort(), (data.drawings || []).map(item => mediaSource(item.image)).map(originalImageSource).sort());
+    assert.equal((await nodes(html, '.model-finish')).length, (data.finishes || []).length);
+    assert.equal((await nodes(html, '.model-source a')).length, 0, 'Internal research URLs must not reappear as public calls to action.');
     const sheets = await nodes(html, '.model-technical-download[download]', 'href');
     assert.deepEqual(sheets, [mediaSource(data.technical_sheet)]);
     const pdf = await publicResponse(sheets[0]);
@@ -144,7 +162,7 @@ async function checkBrowserPages(engine, name, models) {
         const page = await context.newPage();
         page.on('pageerror', error => errors.push(error.message));
         for (const model of models) {
-          const response = await page.goto(new URL(modelPath(model), base).href, {waitUntil: 'domcontentloaded'});
+          const response = await navigate(page, new URL(modelPath(model), base).href, {waitUntil: 'domcontentloaded'});
           assert.equal(response.status(), 200);
           await page.locator('.model-hero-figure img').evaluate(image => Promise.race([image.decode(),new Promise((_,reject)=>setTimeout(()=>reject(new Error('Model photograph did not load within 20 seconds.')),20000))]));
           await page.evaluate(() => Promise.race([document.fonts.ready, new Promise(resolve => setTimeout(resolve, 2000))]));
@@ -159,7 +177,7 @@ async function checkBrowserPages(engine, name, models) {
         }
 
         const model = models.find(item => item.slug === 'skorpio') || models[0];
-        await page.goto(new URL(modelPath(model), base).href, {waitUntil: 'domcontentloaded'});
+        await navigate(page, new URL(modelPath(model), base).href, {waitUntil: 'domcontentloaded'});
         const oppositeTheme = theme === 'dark' ? 'light' : 'dark';
         await page.locator('[data-theme-toggle]').press('Enter');
         assert.equal(await page.locator('html').getAttribute('data-mode'), oppositeTheme);
@@ -245,7 +263,7 @@ async function checkBrowserPages(engine, name, models) {
       return route.continue();
     });
     const page = await reduced.newPage();
-    await page.goto(new URL(modelPath(models[0]), base).href, {waitUntil: 'domcontentloaded'});
+    await navigate(page, new URL(modelPath(models[0]), base).href, {waitUntil: 'domcontentloaded'});
     assert(await page.locator('h1').isVisible());
     assert.equal(await page.locator('.will-reveal').count(), 0);
     const motion = await page.locator('[data-page-reveal]').first().evaluate(element => ({
@@ -299,20 +317,20 @@ async function checkPublication(model, models, references) {
     await contains(html, '.page-lead', `${marker} présentation`);
     await contains(html, '.model-story', `${marker} texte`);
     await contains(html, '.model-hero-figure img', `${marker} image`, 'alt');
-    assert.deepEqual(await nodes(html, '.model-hero-figure img', 'src'), [mediaSource(replacementImage)]);
+    assert.deepEqual((await nodes(html, '.model-hero-figure img', 'src')).map(originalImageSource), [mediaSource(replacementImage)].map(originalImageSource));
     await contains(html, '.model-hero-figure figcaption', `${marker} légende`);
-    await contains(html, '.model-availability', `${marker} disponibilité`);
+    assert(!html.includes(`${marker} disponibilité`), 'Retired availability copy must remain internal.');
     await contains(html, '.model-year', String(changedData.release_year));
     await contains(html, '.model-gallery-view', `${marker} vue`);
     await contains(html, '.model-dimension', `${marker} format`);
     await contains(html, '.model-dimension-value', '240 × 120 × 75 cm');
     await contains(html, '.model-seating', '8 places');
-    await contains(html, '.model-seating', '6 places');
+    await contains(html, '.model-seating', '6 avec de grandes chaises');
     await contains(html, '.model-drawings', `${marker} plan`);
     await contains(html, '.model-finish-group summary', `${marker} matière`);
     await contains(html, '.model-finish', `${marker}-01`);
     await contains(html, '.model-technical-download', `${marker} PDF`);
-    await contains(html, '.model-source a', marker, 'href');
+    assert.equal((await nodes(html, '.model-source a')).length, 0);
   };
   const verifyCleared = async html => {
     for (const selector of ['.model-story', '.model-year', '.model-hero-figure', '.model-availability', '.model-gallery', '.model-technical', '.model-finishes', '.model-source']) {
@@ -361,7 +379,8 @@ async function checkPublication(model, models, references) {
     record('Modèle dépublié : fiche publique en 404, retrait des collections, aperçu signé toujours disponible.');
   } finally {
     if (changed) {
-      await save(data);
+      const current = await api(path);
+      await save({...Object.fromEntries(Object.keys(current.item.data).filter(key => !(key in data)).map(key => [key, null])), ...data});
       await publish();
       const restored = await api(path);
       assert.deepEqual(editorialData(restored.item.data), editorialData(data), 'The original model data was not restored.');
@@ -380,11 +399,15 @@ try {
   await api('/_emdash/api/dashboard');
   const models = (await api('/_emdash/api/content/models?limit=100')).items;
   const families = (await api('/_emdash/api/content/families?limit=100')).items;
-  assert.equal(models.length, 11, 'This suite expects the eleven imported model fixtures.');
-  assert.equal(families.length, 6, 'The six existing families must be preserved.');
+  const seed = JSON.parse(await readFile('seed/seed.json', 'utf8'));
+  assert.deepEqual(models.map(item => item.slug).sort(), seed.content.models.map(item => item.slug).sort(), 'Model fixtures must match the current seed.');
+  assert.deepEqual(families.map(item => item.slug).sort(), seed.content.families.map(item => item.slug).sort(), 'Family fixtures must match the current seed.');
   assert(models.every(model => model.status === 'published'));
   const references = await checkPublishedPages(models, families);
-  if (!onlyPublication && !onlyWebkit) await checkBrowserPages(browser, 'chromium', models);
+  if (!onlyPublication && !onlyWebkit) {
+    const browserModels = process.argv.includes('--representative') ? models.filter(model => ['skorpio', 'rhonda', 'douglas', 'napoleon-keramik-outdoor'].includes(model.slug)) : models;
+    await checkBrowserPages(browser, 'chromium', browserModels);
+  }
   if (!onlyPublication && (process.argv.includes('--webkit') || onlyWebkit)) {
     const webkitBrowser = await webkit.launch({headless: true});
     // Representative layouts supplement the exhaustive Chromium matrix: long
@@ -400,7 +423,7 @@ try {
 } finally {
   await browser.close();
   await writeFile(`${output}/report.json`, JSON.stringify({
-    completedAt: new Date().toISOString(), disposableOrigin: base.origin, suite:onlyPublication?'publication':onlyWebkit?'webkit':'full',
+    completedAt: new Date().toISOString(), disposableOrigin: base.origin, suite:onlyPublication?'publication':onlyWebkit?'webkit':process.argv.includes('--representative')?'representative-browser-and-complete-publication':'full',
     passed: !failure, results, downloads, screenshots,
     ...(failure ? {error: failure.message} : {}),
   }, null, 2));

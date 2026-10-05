@@ -1,6 +1,8 @@
 /** SEO copy/publication and structured metadata integration. Run only in a marked disposable checkout.
  * CMS_TEST_URL=http://localhost:4331 node tests/seo-editorial-cms.mjs
  * Reuses that fixture's native setup session; never authenticates, imports media or submits contacts.
+ * Requires the historical 0011 content fixture, not the current seed; the
+ * clearing assertions intentionally use the current native-only SEO policy.
  */
 import assert from 'node:assert/strict';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
@@ -55,7 +57,7 @@ function graph(html, type) {
 }
 
 async function api(path, { method = 'GET', data } = {}) {
-  assert(/^\/_emdash\/api\/(content|schema\/collections|menus)\//u.test(path), 'This test cannot call auth, media or contact endpoints.');
+  assert(/^\/_emdash\/api\/(content|schema\/collections|menus)\//u.test(path) || (path === '/_emdash/api/settings' && method === 'GET'), 'This test cannot call auth, media or contact endpoints or mutate site settings.');
   if (method !== 'GET') {
     if (migrationRunning) assert(backupSaved, 'Migration attempted a write before its fixture backup.');
     mutations.push({ method, path: path.split('?')[0] });
@@ -257,6 +259,7 @@ try {
   pass('Clearing an article CTA removes its section in preview and public content without a fallback catalogue button; CTA restored.');
 
   const familyPath = pathFor('families', 'tables'), family = await remember(familyPath, ['intro'], true);
+  const siteSettings = await api('/_emdash/api/settings');
   const privateBody = `PRIVATE-INTRO-${stamp}`, seoTitle = `PUBLIC-SEO-${stamp}`, seoDescription = `Public description ${stamp}`;
   await save(familyPath, { intro: privateBody });
   await save(familyPath, undefined, { title: seoTitle, description: seoDescription });
@@ -265,7 +268,10 @@ try {
   assert(!seoPublic.html.includes(privateBody) && seoPublic.text.includes(plain(family.item.data.intro)));
   await save(familyPath, undefined, { title: null, description: null });
   const fallback = await htmlAt('/collections/tables/');
-  assert(decode(fallback.html).includes(`<title>${family.item.data.seo_title || family.item.data.title}</title>`));
+  const generatedTitle = [family.item.data.title, siteSettings.title].filter(Boolean).join(siteSettings.seo?.titleSeparator || ' · ');
+  assert(decode(fallback.html).includes(`<title>${generatedTitle}</title>`));
+  const descriptionTag = fallback.html.match(/<meta\b[^>]*\bname="description"[^>]*>/u)?.[0] || '';
+  assert.equal(decode(descriptionTag.match(/\bcontent="([^"]*)"/u)?.[1] || ''), family.item.data.intro, 'Clearing native SEO uses the published introduction, not legacy metadata or the pending draft.');
   assert(!fallback.html.includes(privateBody));
   await restore(familyPath);
   pass('Native SEO updates and clearing take effect immediately while body draft remains private; original body/SEO restored.');
