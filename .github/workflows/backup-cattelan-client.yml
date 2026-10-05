@@ -38,6 +38,7 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           BACKUP_OUTPUT_DIR: ${{ runner.temp }}/cattelan-encrypted-backup
           BACKUP_INCLUDE_DATABASE: ${{ inputs.include_database == true && 'true' || 'false' }}
+          BACKUP_LOG_ENVELOPE: 'true'
       - name: Store only the encrypted backup
         uses: actions/upload-artifact@v4
         with:

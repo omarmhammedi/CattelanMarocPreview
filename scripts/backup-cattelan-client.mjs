@@ -73,6 +73,13 @@ async function main() {
       deploymentId: deployments.deployments[0].id, versions: deployments.deployments[0].versions,
     };
     await writeFile(join(output, 'manifest.json'), JSON.stringify(manifest, null, 2), { mode: 0o600 });
+    // Some managed workspaces cannot reach GitHub's artifact blob host. A small
+    // encrypted Worker-state envelope can also be recovered through the logs API.
+    // Never log a database archive, plaintext settings, or a private key.
+    const ciphertext = await readFile(encrypted);
+    if (!includeDatabase && process.env.BACKUP_LOG_ENVELOPE === 'true' && ciphertext.length <= 32768) {
+      console.log(`CATTELAN_ENCRYPTED_ENVELOPE ${JSON.stringify({ manifest, ciphertext: ciphertext.toString('base64') })}`);
+    }
     console.log(`Worker rollback state encrypted; D1 export included: ${includeDatabase}. Decrypt and verify before migration; a separate native CMS backup is required when D1 is not exported.`);
   } finally {
     await rm(privateDir, { recursive: true, force: true });
