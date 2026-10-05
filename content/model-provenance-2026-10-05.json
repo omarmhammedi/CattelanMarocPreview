@@ -1,0 +1,394 @@
+{
+  "version": 1,
+  "capturedAt": "2026-10-05",
+  "description": "Complete manufacturer provenance for 12 models and 14 article source references. Public evidence only; native draft updates preserve text and existing sources.",
+  "models": [
+    {
+      "slug": "amsterdam",
+      "title": "Amsterdam",
+      "sourceUrl": "https://www.cattelanitalia.com/fr/products/08248D17-E747-451F-BC69-E7CE3F0F5741",
+      "verifiedAt": "2026-10-05T12:45:28.577Z",
+      "evidence": {
+        "categoryUrl": "https://www.cattelanitalia.com/fr/products?c=23",
+        "officialProductId": "08248D17-E747-451F-BC69-E7CE3F0F5741",
+        "pageSha256": "acc05ef4f4c50022872aac22e343b82d35f2e820e2547d5ac679a9005d9fc3d4",
+        "technicalPdfUrl": "https://www.cattelanitalia.com/fr/products/generaPDF/08248D17-E747-451F-BC69-E7CE3F0F5741/17",
+        "technicalPdfSha256": "a7a1eb77703a649cb0927ed0ff806b0cd2bc8574007f0e7c14768e9ab6bc5f8f",
+        "technicalPdfBytes": 279288,
+        "importedPdfPath": "content/media/collection-additions/amsterdam-fiche-technique.pdf",
+        "importedPdfSha256": "13408ea65a7b60b1b685426fa76005fbce88c4ffbdfcb9ec48f4e576afee1eb5",
+        "verification": "Exact official category product name and ID; HTTP 200 product page and PDF; PDF names the model; normalized extracted PDF text matches the existing imported technical sheet.",
+        "nativeTechnicalSheetId": "01M3X9WWKATYEVVZXMWD2B24GX",
+        "nativeTechnicalSheetBytes": 279288
+      }
+    },
+    {
+      "slug": "botero-wood-round",
+      "title": "Botero Wood Round",
+      "sourceUrl": "https://www.cattelanitalia.com/fr/products/45E5887B-EA41-4774-B61E-A30FA8E04BFB",
+      "verifiedAt": "2026-10-05T12:45:28.872Z",
+      "evidence": {
+        "categoryUrl": "https://www.cattelanitalia.com/fr/products?c=2",
+        "officialProductId": "45E5887B-EA41-4774-B61E-A30FA8E04BFB",
+        "pageSha256": "857108ba2635129218018eb70b437b0b75589e58aaf6a728172c383bee3e675f",
+        "technicalPdfUrl": "https://www.cattelanitalia.com/fr/products/generaPDF/45E5887B-EA41-4774-B61E-A30FA8E04BFB/22",
+        "technicalPdfSha256": "f1b041453fab1ac905f71b5bd70e2e6ba711ad2b9cbb0061aab7fb4130a286d1",
+        "technicalPdfBytes": 276514,
+        "importedPdfPath": "content/media/collection-additions/botero-wood-round-fiche-technique.pdf",
+        "importedPdfSha256": "5c46a38c1e1889ca35354c820a75101598f0b04a801378940632f661f7aaf929",
+        "verification": "Exact official category product name and ID; HTTP 200 product page and PDF; PDF names the model; normalized extracted PDF text matches the existing imported technical sheet.",
+        "nativeTechnicalSheetId": "01M3XBMP6F8KXQY3DTWTN8K8AQ",
+        "nativeTechnicalSheetBytes": 276514
+      }
+    },
+    {
+      "slug": "butterfly",
+      "title": "Butterfly",
+      "sourceUrl": "https://www.cattelanitalia.com/fr/products/172066A0-CA4D-40FD-AEBC-093EDA2F039A",
+      "verifiedAt": "2026-10-05T12:45:28.587Z",
+      "evidence": {
+        "categoryUrl": "https://www.cattelanitalia.com/fr/products?c=2",
+        "officialProductId": "172066A0-CA4D-40FD-AEBC-093EDA2F039A",
+        "pageSha256": "871063bd3e1aae6c2ad647e213889466115f7ef7a84bc2c19a2d540ffabc9333",
+        "technicalPdfUrl": "https://www.cattelanitalia.com/fr/products/generaPDF/172066A0-CA4D-40FD-AEBC-093EDA2F039A/30",
+        "technicalPdfSha256": "8e171dd84f76490e6a5e241408ed877499444c3f0cac77897c4070b42348594d",
+        "technicalPdfBytes": 394191,
+        "importedPdfPath": "content/media/collection-additions/butterfly-fiche-technique.pdf",
+        "importedPdfSha256": "e4f798346894a311a3d0f3846372a4806d48ddfac48f10d4ee3bfb5ca3683f57",
+        "verification": "Exact official category product name and ID; HTTP 200 product page and PDF; PDF names the model; normalized extracted PDF text matches the existing imported technical sheet.",
+        "nativeTechnicalSheetId": "01M3X55B1DQXHD1J40NA8VMKG1",
+        "nativeTechnicalSheetBytes": 394191
+      }
+    },
+    {
+      "slug": "craig",
+      "title": "Craig",
+      "sourceUrl": "https://www.cattelanitalia.com/fr/products/BBD67559-7011-4940-AD96-15526239514E",
+      "verifiedAt": "2026-10-05T12:45:28.999Z",
+      "evidence": {
+        "categoryUrl": "https://www.cattelanitalia.com/fr/products?c=109",
+        "officialProductId": "BBD67559-7011-4940-AD96-15526239514E",
+        "pageSha256": "1cf6e8ed0ff99420bec0ce9ebb8671a0c60fc15b789e075b2bbda51869b36fad",
+        "technicalPdfUrl": "https://www.cattelanitalia.com/fr/products/generaPDF/BBD67559-7011-4940-AD96-15526239514E/27",
+        "technicalPdfSha256": "4530bcf75d8935f82f38358528a37ec52bf5fb53f200c1cfde04c75f6cd99927",
+        "technicalPdfBytes": 4989528,
+        "importedPdfPath": "content/media/collection-additions/craig-fiche-technique.pdf",
+        "importedPdfSha256": "48e2e5318ef013e4b6a525a247a86a8efbd936da1745cc0d6f9b746a8097fdb7",
+        "verification": "Exact official category product name and ID; HTTP 200 product page and PDF; PDF names the model; normalized extracted PDF text matches the existing imported technical sheet.",
+        "nativeTechnicalSheetId": "01M3X7F19M8FQFYR6N419X0GGF",
+        "nativeTechnicalSheetBytes": 4989528
+      }
+    },
+    {
+      "slug": "douglas",
+      "title": "Douglas",
+      "sourceUrl": "https://www.cattelanitalia.com/fr/products/950EA066-B93B-422A-8093-FA5915B56DEC",
+      "verifiedAt": "2026-10-05T12:45:29.076Z",
+      "evidence": {
+        "categoryUrl": "https://www.cattelanitalia.com/fr/products?c=109",
+        "officialProductId": "950EA066-B93B-422A-8093-FA5915B56DEC",
+        "pageSha256": "bcae8819d9f9826138e80b69f8e8520f2e1d6ba16c3abed687dbd1675eec23a6",
+        "technicalPdfUrl": "https://www.cattelanitalia.com/fr/products/generaPDF/950EA066-B93B-422A-8093-FA5915B56DEC/new",
+        "technicalPdfSha256": "695c3301d37e6111e3e6e2c3287c83fa40b2ae20746d62102fd8f105bc0b89f6",
+        "technicalPdfBytes": 5235968,
+        "importedPdfPath": "content/media/collection-additions/douglas-fiche-technique.pdf",
+        "importedPdfSha256": "2669115765b0ad19bf94eb6509935d1091518cb8a52c1d6d04ccf9259050ee01",
+        "verification": "Exact official category product name and ID; HTTP 200 product page and PDF; PDF names the model; normalized extracted PDF text matches the existing imported technical sheet.",
+        "nativeTechnicalSheetId": "01M3X9382E4FZEAKYYNYC0NP75",
+        "nativeTechnicalSheetBytes": 5235968
+      }
+    },
+    {
+      "slug": "kayak",
+      "title": "Kayak",
+      "sourceUrl": "https://www.cattelanitalia.com/fr/products/280492E1-1BC9-4266-80DD-228F5643457C",
+      "verifiedAt": "2026-10-05T12:45:28.936Z",
+      "evidence": {
+        "categoryUrl": "https://www.cattelanitalia.com/fr/products?c=23",
+        "officialProductId": "280492E1-1BC9-4266-80DD-228F5643457C",
+        "pageSha256": "8e706f27e045b297acae0f0e369aae0413677298e50e1ee4920a9c68b4804dd6",
+        "technicalPdfUrl": "https://www.cattelanitalia.com/fr/products/generaPDF/280492E1-1BC9-4266-80DD-228F5643457C/16",
+        "technicalPdfSha256": "ee31a91d8fc0b83daaaf6f9dd22ac7572d02a0510e42d7e6d277817ce2c24158",
+        "technicalPdfBytes": 344689,
+        "importedPdfPath": "content/media/collection-additions/kayak-fiche-technique.pdf",
+        "importedPdfSha256": "74d109b1add761d791ad13b59996030d4ed83d7dfa891f9ab7e1dc0255c7a907",
+        "verification": "Exact official category product name and ID; HTTP 200 product page and PDF; PDF names the model; normalized extracted PDF text matches the existing imported technical sheet.",
+        "nativeTechnicalSheetId": "01M3X9WA41441J4FB70BBJ48FQ",
+        "nativeTechnicalSheetBytes": 344689
+      }
+    },
+    {
+      "slug": "miranda-ml",
+      "title": "Miranda ML",
+      "sourceUrl": "https://www.cattelanitalia.com/fr/products/7C41ABDC-D047-4053-8867-3B7B407ED6B7",
+      "verifiedAt": "2026-10-05T12:45:29.235Z",
+      "evidence": {
+        "categoryUrl": "https://www.cattelanitalia.com/fr/products?c=5",
+        "officialProductId": "7C41ABDC-D047-4053-8867-3B7B407ED6B7",
+        "pageSha256": "7e20453a229df9c10125fc70610a7c3947784b5f872972104374083e026f8715",
+        "technicalPdfUrl": "https://www.cattelanitalia.com/fr/products/generaPDF/7C41ABDC-D047-4053-8867-3B7B407ED6B7/5",
+        "technicalPdfSha256": "1a2c6384ce06640e5f494fd1013cba7ebe6fd74a6d43ad66b047b3a578b3a34d",
+        "technicalPdfBytes": 1810742,
+        "importedPdfPath": "content/media/collection-additions/miranda-ml-fiche-technique.pdf",
+        "importedPdfSha256": "dce225c946041e51d8b56099e30711c6d20268f13a8b716a0f6597babb3e9e12",
+        "verification": "Exact official category product name and ID; HTTP 200 product page and PDF; PDF names the model; normalized extracted PDF text matches the existing imported technical sheet.",
+        "nativeTechnicalSheetId": "01M3X6YFWXF0HNCWV58EV4F9MR",
+        "nativeTechnicalSheetBytes": 1810742
+      }
+    },
+    {
+      "slug": "mykonos",
+      "title": "Mykonos",
+      "sourceUrl": "https://www.cattelanitalia.com/fr/products/05F2E840-8AE2-457F-BA68-C85757AACAEC",
+      "verifiedAt": "2026-10-05T12:45:29.193Z",
+      "evidence": {
+        "categoryUrl": "https://www.cattelanitalia.com/fr/products?c=109",
+        "officialProductId": "05F2E840-8AE2-457F-BA68-C85757AACAEC",
+        "pageSha256": "61ee4aa0f08971fcb16cb15a6543f9bc74f386f59b812515d96896c20c1202f5",
+        "technicalPdfUrl": "https://www.cattelanitalia.com/fr/products/generaPDF/05F2E840-8AE2-457F-BA68-C85757AACAEC/5",
+        "technicalPdfSha256": "849eebe773b8dc455d9c9cf004747ddb39cb1a3956efb997c98f499db024626b",
+        "technicalPdfBytes": 4521729,
+        "importedPdfPath": "content/media/collection-additions/mykonos-fiche-technique.pdf",
+        "importedPdfSha256": "96935f6cf5f33a3418954b86146c531fbae68d49b3b2ca64649610d8a4e6dffa",
+        "verification": "Exact official category product name and ID; HTTP 200 product page and PDF; PDF names the model; normalized extracted PDF text matches the existing imported technical sheet.",
+        "nativeTechnicalSheetId": "01M3X9C3A9P6X94YB3837Q2Q0W",
+        "nativeTechnicalSheetBytes": 4521729
+      }
+    },
+    {
+      "slug": "nautilus",
+      "title": "Nautilus",
+      "sourceUrl": "https://www.cattelanitalia.com/fr/products/A4F8E5AA-CFAD-4E31-B52A-D98748BEAA2C",
+      "verifiedAt": "2026-10-05T12:45:28.814Z",
+      "evidence": {
+        "categoryUrl": "https://www.cattelanitalia.com/fr/products?c=24",
+        "officialProductId": "A4F8E5AA-CFAD-4E31-B52A-D98748BEAA2C",
+        "pageSha256": "1dbf943d25f2649b0d54015ce94a4e5ca22c75e072de23bb2336ba54d1d38752",
+        "technicalPdfUrl": "https://www.cattelanitalia.com/fr/products/generaPDF/A4F8E5AA-CFAD-4E31-B52A-D98748BEAA2C/24",
+        "technicalPdfSha256": "975e498e8a79a9e469759be97e5da20e7dd55b2c25f79ffb5991aa4982e1b357",
+        "technicalPdfBytes": 319674,
+        "importedPdfPath": "content/media/collection-additions/nautilus-fiche-technique.pdf",
+        "importedPdfSha256": "6de9bb6864633bd2de673dd35a10a4f38cedf12008c60a836cb023f37015d7ad",
+        "verification": "Exact official category product name and ID; HTTP 200 product page and PDF; PDF names the model; normalized extracted PDF text matches the existing imported technical sheet.",
+        "nativeTechnicalSheetId": "01M3XA2YVSX3YK3V7GZQMN25BB",
+        "nativeTechnicalSheetBytes": 319674
+      }
+    },
+    {
+      "slug": "sinatra",
+      "title": "Sinatra",
+      "sourceUrl": "https://www.cattelanitalia.com/fr/products/341E8B11-B1EE-4B8C-9234-E6B5F0F058A8",
+      "verifiedAt": "2026-10-05T12:45:29.193Z",
+      "evidence": {
+        "categoryUrl": "https://www.cattelanitalia.com/fr/products?c=109",
+        "officialProductId": "341E8B11-B1EE-4B8C-9234-E6B5F0F058A8",
+        "pageSha256": "7aa3c036ae6dae5a71dfbf99f5dc912b59d4666ecd8b80aa5a2785b4e5f5a717",
+        "technicalPdfUrl": "https://www.cattelanitalia.com/fr/products/generaPDF/341E8B11-B1EE-4B8C-9234-E6B5F0F058A8/7",
+        "technicalPdfSha256": "5a0235f2ac2d5f6cb962e30dbd23a99be481ad0cf46edf5a86f7178f6cf5045b",
+        "technicalPdfBytes": 3786426,
+        "importedPdfPath": "content/media/collection-additions/sinatra-fiche-technique.pdf",
+        "importedPdfSha256": "0612b2f66d344fd7fb00356346733b0baaaff892de82dd631caf658c8781479c",
+        "verification": "Exact official category product name and ID; HTTP 200 product page and PDF; PDF names the model; normalized extracted PDF text matches the existing imported technical sheet.",
+        "nativeTechnicalSheetId": "01M3X9JNKZC6KZ74SM6H39CCRY",
+        "nativeTechnicalSheetBytes": 3786426
+      }
+    },
+    {
+      "slug": "tyron-keramik",
+      "title": "Tyron Keramik",
+      "sourceUrl": "https://www.cattelanitalia.com/fr/products/3440EECD-0619-4FE6-A579-329C1E42EEF8",
+      "verifiedAt": "2026-10-05T12:45:28.909Z",
+      "evidence": {
+        "categoryUrl": "https://www.cattelanitalia.com/fr/products?c=2",
+        "officialProductId": "3440EECD-0619-4FE6-A579-329C1E42EEF8",
+        "pageSha256": "e77d677b302473f19f6890eaff8c420f8f23ee52a7082cd1302a720fc59391d9",
+        "technicalPdfUrl": "https://www.cattelanitalia.com/fr/products/generaPDF/3440EECD-0619-4FE6-A579-329C1E42EEF8/2",
+        "technicalPdfSha256": "74211dfc25d624ac0548f6cb6329cf355338c4abdebf60103460a39618119e43",
+        "technicalPdfBytes": 2238317,
+        "importedPdfPath": "content/media/collection-additions/tyron-keramik-fiche-technique.pdf",
+        "importedPdfSha256": "e8e66bfaca24cac9a035c2fe9e574a7fc12df67948ed6bb7c3e7cc5db0b7364f",
+        "verification": "Exact official category product name and ID; HTTP 200 product page and PDF; PDF names the model; normalized extracted PDF text matches the existing imported technical sheet.",
+        "nativeTechnicalSheetId": "01M3X5C5JTGMDA1AABG5ME1TN1",
+        "nativeTechnicalSheetBytes": 2238317
+      }
+    },
+    {
+      "slug": "zuleika",
+      "title": "Zuleika",
+      "sourceUrl": "https://www.cattelanitalia.com/fr/products/64886693-DF40-4EE4-9B49-D11EBFFDFCCB",
+      "verifiedAt": "2026-10-05T12:45:29.280Z",
+      "evidence": {
+        "categoryUrl": "https://www.cattelanitalia.com/fr/products?c=5",
+        "officialProductId": "64886693-DF40-4EE4-9B49-D11EBFFDFCCB",
+        "pageSha256": "0ea01de90bc99cb45499d7878148c6cbaa034704c5120cefd2b1ffed698574c2",
+        "technicalPdfUrl": "https://www.cattelanitalia.com/fr/products/generaPDF/64886693-DF40-4EE4-9B49-D11EBFFDFCCB/4",
+        "technicalPdfSha256": "e5bba9b20eebeef23ec980730eac697602166ee3d3b16cb0130fb229d1aed36b",
+        "technicalPdfBytes": 516072,
+        "importedPdfPath": "content/media/collection-additions/zuleika-fiche-technique.pdf",
+        "importedPdfSha256": "bf8e2ca4281058f21af92b72f0b883e85040afb827a115b5198a5785a61c0e6c",
+        "verification": "Exact official category product name and ID; HTTP 200 product page and PDF; PDF names the model; normalized extracted PDF text matches the existing imported technical sheet.",
+        "nativeTechnicalSheetId": "01M3X6ZPB3ZRRYXWNCCA7A7A73",
+        "nativeTechnicalSheetBytes": 516072
+      }
+    }
+  ],
+  "posts": [
+    {
+      "slug": "choisir-forme-proportions-table-salle-a-manger",
+      "beforeSources": [
+        {
+          "label": "Cattelan Italia — Skorpio, présentation et fiche technique",
+          "url": "https://cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8"
+        },
+        {
+          "label": "Cattelan Italia — Napoleon Keramik, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/DD24EC9D-FA00-4C0D-A989-9ADD6E56BFD0"
+        }
+      ],
+      "addSources": [
+        {
+          "modelSlug": "butterfly",
+          "label": "Cattelan Italia — Butterfly, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/172066A0-CA4D-40FD-AEBC-093EDA2F039A"
+        },
+        {
+          "modelSlug": "miranda-ml",
+          "label": "Cattelan Italia — Miranda ML, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/7C41ABDC-D047-4053-8867-3B7B407ED6B7"
+        },
+        {
+          "modelSlug": "zuleika",
+          "label": "Cattelan Italia — Zuleika, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/64886693-DF40-4EE4-9B49-D11EBFFDFCCB"
+        }
+      ]
+    },
+    {
+      "slug": "associer-table-chaises-salle-a-manger",
+      "beforeSources": [
+        {
+          "label": "Cattelan Italia — Rhonda, présentation et fiche technique",
+          "url": "https://cattelanitalia.com/fr/products/41ED48AE-E379-4863-8E3C-28EE1D985390"
+        },
+        {
+          "label": "Cattelan Italia — Greta, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/A73FA6B3-0BA9-4F13-ADB6-FBAFC6E39BBF"
+        }
+      ],
+      "addSources": [
+        {
+          "modelSlug": "tyron-keramik",
+          "label": "Cattelan Italia — Tyron Keramik, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/3440EECD-0619-4FE6-A579-329C1E42EEF8"
+        },
+        {
+          "modelSlug": "zuleika",
+          "label": "Cattelan Italia — Zuleika, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/64886693-DF40-4EE4-9B49-D11EBFFDFCCB"
+        }
+      ]
+    },
+    {
+      "slug": "ceramique-verre-bois-choisir-finition-meuble",
+      "beforeSources": [
+        {
+          "label": "Cattelan Italia — Skorpio et ses variantes",
+          "url": "https://www.cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8"
+        },
+        {
+          "label": "Cattelan Italia — brochures Keramik, Brushed et CrystalArt",
+          "url": "https://www.cattelanitalia.com/fr/catalogues"
+        },
+        {
+          "label": "Cattelan Italia — Napoleon Keramik, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/DD24EC9D-FA00-4C0D-A989-9ADD6E56BFD0"
+        },
+        {
+          "label": "Cattelan Italia — Chelsea, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/B7E158FA-BF2D-484D-9F9A-0C3D14138E8E"
+        }
+      ],
+      "addSources": [
+        {
+          "modelSlug": "botero-wood-round",
+          "label": "Cattelan Italia — Botero Wood Round, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/45E5887B-EA41-4774-B61E-A30FA8E04BFB"
+        },
+        {
+          "modelSlug": "butterfly",
+          "label": "Cattelan Italia — Butterfly, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/172066A0-CA4D-40FD-AEBC-093EDA2F039A"
+        }
+      ]
+    },
+    {
+      "slug": "composer-salon-canape-fauteuil",
+      "beforeSources": [
+        {
+          "label": "Cattelan Italia — Ruby, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/75C6DB4B-1A99-400D-AEE7-9D5797651F05"
+        },
+        {
+          "label": "Cattelan Italia — Ruby Lounge, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/3BFE3570-1D83-4026-A81F-F0913AEE75BD"
+        },
+        {
+          "label": "Cattelan Italia — catalogue canapés et fauteuils, Ruby et Ruby Lounge",
+          "url": "https://download.cattelanitalia.com/catalogues/718.pdf?t=1774003834"
+        }
+      ],
+      "addSources": [
+        {
+          "modelSlug": "craig",
+          "label": "Cattelan Italia — Craig, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/BBD67559-7011-4940-AD96-15526239514E"
+        },
+        {
+          "modelSlug": "douglas",
+          "label": "Cattelan Italia — Douglas, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/950EA066-B93B-422A-8093-FA5915B56DEC"
+        },
+        {
+          "modelSlug": "mykonos",
+          "label": "Cattelan Italia — Mykonos, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/05F2E840-8AE2-457F-BA68-C85757AACAEC"
+        },
+        {
+          "modelSlug": "sinatra",
+          "label": "Cattelan Italia — Sinatra, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/341E8B11-B1EE-4B8C-9234-E6B5F0F058A8"
+        }
+      ]
+    },
+    {
+      "slug": "choisir-buffet-bibliotheque-salon",
+      "beforeSources": [
+        {
+          "label": "Cattelan Italia — Chelsea, présentation officielle et fiche technique",
+          "url": "https://cattelanitalia.com/fr/products/B7E158FA-BF2D-484D-9F9A-0C3D14138E8E"
+        },
+        {
+          "label": "Cattelan Italia — Airport, présentation officielle et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/0BD758C3-F539-4263-BA05-CEB859A760A4"
+        }
+      ],
+      "addSources": [
+        {
+          "modelSlug": "amsterdam",
+          "label": "Cattelan Italia — Amsterdam, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/08248D17-E747-451F-BC69-E7CE3F0F5741"
+        },
+        {
+          "modelSlug": "kayak",
+          "label": "Cattelan Italia — Kayak, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/280492E1-1BC9-4266-80DD-228F5643457C"
+        },
+        {
+          "modelSlug": "nautilus",
+          "label": "Cattelan Italia — Nautilus, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/A4F8E5AA-CFAD-4E31-B52A-D98748BEAA2C"
+        }
+      ]
+    }
+  ]
+}

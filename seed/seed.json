@@ -600,6 +600,17 @@
           "required": false,
           "widget": "cattelan-editorial:retired-reference",
           "sortOrder": 16
+        },
+        {
+          "slug": "families",
+          "label": "Collections associées",
+          "type": "reference",
+          "sortOrder": 17,
+          "validation": {
+            "relation": "family_models",
+            "relationSide": "child",
+            "targetCollection": "families"
+          }
         }
       ],
       "urlPattern": "/modeles/{slug}/",

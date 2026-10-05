@@ -38,17 +38,19 @@ The five articles were published on October 5 and checked live: all 29 expected 
 - [Successful deployment run 37307785112](https://github.com/omarmhammedi/CattelanMarocPreview/actions/runs/37307785112), including all 328 tests.
 - Worker version: `e4277107-9a2e-4ec2-b882-0dba0666f0c9`; prior version `7b9d8b89-2b0a-447d-8eff-b69862208675` remains the code rollback reference.
 - Post-deployment verification: 12/12 checks passed for GET/HEAD redirects, query preservation, canonical/noindex, genuine 404, robots exclusion, empty sitemap, protected API behavior, 22 FAQ answers in llms.txt and private/nonindexable rejection of preview queries.
-- [PR #4](https://github.com/omarmhammedi/CattelanMarocPreview/pull/4) remains a draft targeting `feat/site-strategy`. Its feature branch was deployed directly; no merge or movement of the usual deployment branch was performed. Later documentation commits do not change the deployed application code.
+- [PR #4](https://github.com/omarmhammedi/CattelanMarocPreview/pull/4) is now merged into the usual deployment branch, `feat/site-strategy`, at `be99e9e8271e0beaae4399df1a89f37b893c8f99`. [Deployment run 37311818479](https://github.com/omarmhammedi/CattelanMarocPreview/actions/runs/37311818479) succeeded from that consolidated release. The earlier feature-branch deployment above remains the original verification record.
 - [Private OpenSEO audit report](https://open-seo-selfhost.omar-8b8.workers.dev/p/882fd590-3102-4c31-983a-e42e7c0cc274/reports/8679e8f6-7038-49c6-be3c-b11ab82f3c4d) is saved in the Cattelan project, with refreshed shared context and research records. It requires workspace access and was not made publicly shareable.
 
 CMS snapshots, publication before/after receipts and the native backup remain private. Code rollback does not revert independently published CMS content; the captured article before-images are the recovery reference for content.
 
+## Implementation follow-up
+
+The [SEO implementation follow-up](../seo-implementation-2026-10-05/README.md) addresses the remaining font requests, image discovery, model-family lookup cost, manufacturer provenance and social metadata. Seven native social images are applied and verified live, and all 12 model source records plus five article source lists are published with preservation checks complete. The new application release is still being completed; the follow-up records its rollout status. This audit's original validation counts and measurements remain historical evidence.
+
 ## Remaining work at the appropriate stage
 
 1. At launch, verify the final domain, HTTPS, canonical origin, desired search-crawler access, sitemap, Search Console property and Google listing website link. Public profile reads do not establish Google Business Profile management access.
-2. Measure mobile performance before deciding whether large product HTML requires changes; HTML size alone is not a Core Web Vitals failure.
-3. Backfill verified manufacturer provenance for 12 linked models currently missing native source URLs. Preserve their existing technical PDFs; never infer official URLs.
-4. Select approved social images for seven service/legal pages if wanted. Native cleared image values remain authoritative.
-5. Consider lighting and console/mirror guides after checking their specific informational demand and source material. Broad keyword estimates alone do not prove their likely return. No duplicate material guide or generic city pages were added.
+2. Complete the implementation follow-up's controlled rollout and repeat its mobile measurements. Font and lookup changes are implemented; remaining hero-image transfer cost still needs to be judged against measured performance. HTML size alone is not a Core Web Vitals failure.
+3. Consider lighting and console/mirror guides after checking their specific informational demand and source material. Broad keyword estimates alone do not prove their likely return. No duplicate material guide or generic city pages were added.
 
 OpenSEO receipts, CMS snapshots, revision receipts and backups remain outside Git. No ranking, lead volume, revenue or assistant citation is promised.

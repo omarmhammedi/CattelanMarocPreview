@@ -57,3 +57,7 @@ jobs:
         run: npx wrangler deploy --config dist/server/wrangler.json --keep-vars
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
+      - name: Verify public SEO after deployment
+        # Anonymous GET/HEAD checks only. This preview must stay nonindexable.
+        run: node scripts/check-public-seo.mjs --write-summary
