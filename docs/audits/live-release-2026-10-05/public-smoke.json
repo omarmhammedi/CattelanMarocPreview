@@ -1,0 +1,562 @@
+{
+  "origin": "https://cattelan-maroc-preview.cattelan.workers.dev",
+  "startedAt": "2026-10-05T03:22:46.093Z",
+  "sourceHead": "f2a3b86400d401d5a3f099543fa969eed7f26c90",
+  "readOnly": true,
+  "limits": [
+    "Read-only checks compare current published values; edit/draft/publish/clear behavior was tested separately in the disposable CMS.",
+    "Form outcome text is checked in rendered data attributes; no live submission, email dispatch or PDF download is attempted."
+  ],
+  "actualWrites": 0,
+  "cmsReads": 11,
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "milliseconds": 1179,
+      "headerNoindex": true,
+      "seoMatches": {
+        "title": true,
+        "description": true,
+        "canonical": true
+      },
+      "passed": true,
+      "title": "Cattelan Italia Maroc · Mobilier italien à Casablanca",
+      "h1": [
+        "Le premier showroom exclusif Cattelan Italia au Maroc"
+      ],
+      "canonical": [
+        "https://cattelan-maroc-preview.cattelan.workers.dev/"
+      ],
+      "metaNoindex": true
+    },
+    {
+      "path": "/catalogue/",
+      "status": 200,
+      "milliseconds": 996,
+      "headerNoindex": true,
+      "seoMatches": {
+        "title": true,
+        "description": true,
+        "canonical": true
+      },
+      "passed": true,
+      "title": "Catalogue Cattelan Italia en PDF · Casablanca",
+      "h1": [
+        "Le catalogue Cattelan Italia à télécharger en PDF"
+      ],
+      "canonical": [
+        "https://cattelan-maroc-preview.cattelan.workers.dev/catalogue/"
+      ],
+      "metaNoindex": true
+    },
+    {
+      "path": "/showroom-casablanca/",
+      "status": 200,
+      "milliseconds": 485,
+      "headerNoindex": true,
+      "seoMatches": {
+        "title": true,
+        "description": true,
+        "canonical": true
+      },
+      "passed": true,
+      "title": "Showroom Cattelan Italia Casablanca · Triangle d'Or",
+      "h1": [
+        "Le showroom Cattelan Italia du Triangle d'Or, à Casablanca"
+      ],
+      "canonical": [
+        "https://cattelan-maroc-preview.cattelan.workers.dev/showroom-casablanca/"
+      ],
+      "metaNoindex": true
+    },
+    {
+      "path": "/professionnels/",
+      "status": 200,
+      "milliseconds": 700,
+      "headerNoindex": true,
+      "seoMatches": {
+        "title": true,
+        "description": true,
+        "canonical": true
+      },
+      "passed": true,
+      "title": "Architectes et décorateurs à Casablanca · Cattelan Italia",
+      "h1": [
+        "Architectes et décorateurs"
+      ],
+      "canonical": [
+        "https://cattelan-maroc-preview.cattelan.workers.dev/professionnels/"
+      ],
+      "metaNoindex": true
+    },
+    {
+      "path": "/votre-projet/",
+      "status": 200,
+      "milliseconds": 682,
+      "headerNoindex": true,
+      "seoMatches": {
+        "title": true,
+        "description": true,
+        "canonical": true
+      },
+      "passed": true,
+      "title": "Commander du mobilier italien au Maroc · Cattelan Italia",
+      "h1": [
+        "Commande et livraison d'un meuble Cattelan Italia"
+      ],
+      "canonical": [
+        "https://cattelan-maroc-preview.cattelan.workers.dev/votre-projet/"
+      ],
+      "metaNoindex": true
+    },
+    {
+      "path": "/confidentialite/",
+      "status": 200,
+      "milliseconds": 611,
+      "headerNoindex": true,
+      "seoMatches": {
+        "title": true,
+        "description": true,
+        "canonical": true
+      },
+      "passed": true,
+      "title": "Confidentialité",
+      "h1": [
+        "Confidentialité"
+      ],
+      "canonical": [
+        "https://cattelan-maroc-preview.cattelan.workers.dev/confidentialite/"
+      ],
+      "metaNoindex": true
+    },
+    {
+      "path": "/modeles/skorpio/",
+      "status": 200,
+      "milliseconds": 2112,
+      "headerNoindex": true,
+      "seoMatches": {
+        "title": true,
+        "description": true,
+        "canonical": true
+      },
+      "passed": true,
+      "title": "Skorpio : table en verre | Cattelan Italia Maroc",
+      "h1": [
+        "Skorpio"
+      ],
+      "canonical": [
+        "https://cattelan-maroc-preview.cattelan.workers.dev/modeles/skorpio/"
+      ],
+      "metaNoindex": true
+    },
+    {
+      "path": "/modeles/butterfly-keramik/",
+      "status": 200,
+      "milliseconds": 2108,
+      "headerNoindex": true,
+      "seoMatches": {
+        "canonical": true
+      },
+      "passed": true,
+      "title": "Butterfly Keramik · Table Cattelan Italia · Cattelan Italia Maroc",
+      "h1": [
+        "Butterfly Keramik"
+      ],
+      "canonical": [
+        "https://cattelan-maroc-preview.cattelan.workers.dev/modeles/butterfly-keramik/"
+      ],
+      "metaNoindex": true
+    },
+    {
+      "path": "/modeles/greta/",
+      "status": 200,
+      "milliseconds": 2316,
+      "headerNoindex": true,
+      "seoMatches": {
+        "title": true,
+        "description": true,
+        "canonical": true
+      },
+      "passed": true,
+      "title": "Greta : chaise rembourrée | Cattelan Italia Maroc",
+      "h1": [
+        "Greta"
+      ],
+      "canonical": [
+        "https://cattelan-maroc-preview.cattelan.workers.dev/modeles/greta/"
+      ],
+      "metaNoindex": true
+    },
+    {
+      "path": "/modeles/airport/",
+      "status": 200,
+      "milliseconds": 2167,
+      "headerNoindex": true,
+      "seoMatches": {
+        "title": true,
+        "description": true,
+        "canonical": true
+      },
+      "passed": true,
+      "title": "Airport : bibliothèque modulaire | Cattelan Italia Maroc",
+      "h1": [
+        "Airport"
+      ],
+      "canonical": [
+        "https://cattelan-maroc-preview.cattelan.workers.dev/modeles/airport/"
+      ],
+      "metaNoindex": true
+    }
+  ],
+  "bindings": [
+    {
+      "key": "action_appointment_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "action_advisor_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "action_catalogue_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "whatsapp_general_message",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "footer_valet_text",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "model_quote_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "model_files_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "model_services",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "model_quote_note",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_company_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_whatsapp_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_day_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_city_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_city_optional_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_stage_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_deadline_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_models_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_message_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_appointment_submit",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_project_submit",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_pro_submit",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_appointment_success",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_project_success",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_pro_success",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_pending",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_error",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_project_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_period_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_piece_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_ensemble_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_architect_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_morning_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_afternoon_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_choice_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "request_hours_note",
+      "status": "verified",
+      "explicitEmpty": true
+    },
+    {
+      "key": "catalogue_whatsapp_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "catalogue_city_label",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "catalogue_city_choice",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "catalogue_email_sent",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "catalogue_email_failed",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "catalogue_email_pending",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "privacy_controller",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "privacy_controller_name",
+      "status": "verified",
+      "explicitEmpty": false
+    },
+    {
+      "key": "privacy_updated_label",
+      "status": "verified",
+      "explicitEmpty": false
+    }
+  ],
+  "browser": [
+    {
+      "path": "/",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "horizontalOverflow": false,
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "path": "/catalogue/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "horizontalOverflow": false,
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "path": "/showroom-casablanca/",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "horizontalOverflow": false,
+      "pageErrors": [],
+      "consoleErrors": []
+    }
+  ],
+  "blockedWrites": [],
+  "blockedPrivateRequests": [],
+  "errors": [],
+  "failures": [],
+  "robots": {
+    "status": 200,
+    "blocksAll": true
+  },
+  "finishedAt": "2026-10-05T03:26:01.154Z",
+  "screenshots": [
+    "home-desktop.png",
+    "catalogue-mobile-form.png",
+    "appointment-mobile-form.png",
+    "privacy-desktop.png",
+    "skorpio-desktop.png"
+  ],
+  "visualCaptures": [
+    {
+      "path": "/",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "horizontalOverflow": false,
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "path": "/catalogue/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "horizontalOverflow": false,
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "path": "/showroom-casablanca/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "horizontalOverflow": false,
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "path": "/confidentialite/",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "horizontalOverflow": false,
+      "pageErrors": [],
+      "consoleErrors": []
+    },
+    {
+      "path": "/modeles/skorpio/",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "horizontalOverflow": false,
+      "pageErrors": [],
+      "consoleErrors": []
+    }
+  ],
+  "homeTitleRecheck": {
+    "selector": "head > title",
+    "count": 1,
+    "h1Count": 1,
+    "verifiedAt": "2026-10-05T03:25:44.941Z",
+    "note": "Inline SVG title elements were correctly excluded from document-title count."
+  },
+  "appointmentVisualRecheck": {
+    "verifiedAt": "2026-10-05T03:29:01.153Z",
+    "method": "Native anchor navigation, scroll into view, wait for existing reveal transition",
+    "formVisible": true,
+    "fieldCount": 8,
+    "zeroOpacityAncestors": 0,
+    "minimumAncestorOpacity": 1,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "actualWrites": 0
+  }
+}

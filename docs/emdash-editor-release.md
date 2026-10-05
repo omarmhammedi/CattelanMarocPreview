@@ -2,6 +2,8 @@
 
 This repair starts from `e8baf8961c3eb93d4761801a541b666212e2ccd1` on `claude/product-marketing-context`, not the older static `main` branch. The prior audit is [here](emdash-editability-audit-2026-10-04.md). Local acceptance evidence belongs in [editor-readiness-2026-10-05](audits/editor-readiness-2026-10-05/).
 
+The preview rollout was completed on 5 October 2026. See [live release evidence](audits/live-release-2026-10-05/README.md) for the verified migrations, publication, deployment version and read-only acceptance. The sequence below remains the procedure for subsequent releases.
+
 ## Editing ownership
 
 | Task | Authoritative editor |
