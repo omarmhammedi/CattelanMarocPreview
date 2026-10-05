@@ -1,52 +1,58 @@
 ---
-import { ARCHITECT_LABEL, CITIES, DEADLINES, PERIODS, PROJECT_ROUTES, PROJECT_TYPES, ROUTES, STAGES, casablancaToday } from '../plugins/requests/core';
+import { CITIES, DEADLINES, PROJECT_ROUTES, PROJECT_TYPES, STAGES, casablancaToday } from '../plugins/requests/core';
 import { getSite } from '../lib/content';
 import { privacyNotice } from '../lib/privacy';
-interface Props { id: string; kind: 'rendez-vous' | 'pro' | 'projet'; site?: { publicEmail?: string; cndpReceipt?: string }; }
+import { readEditorialCopy, requiredCopy } from '../lib/editorial-copy.mjs';
+interface Props { id: string; kind: 'rendez-vous' | 'pro' | 'projet'; site?: { publicEmail?: string; cndpReceipt?: string; phone?: string; hours?: string; editorial?: Record<string, string>; form?: Record<string, string> }; }
 const { id, kind } = Astro.props;
 const site = Astro.props.site ?? await getSite();
 const today = casablancaToday();
-const success = kind === 'rendez-vous'
-  ? 'Demande reçue. Nous vous confirmerons l’horaire sur WhatsApp.'
-  : kind === 'projet'
-    ? 'Votre demande est enregistrée. Un conseiller vous écrit sur WhatsApp ; vous pourrez lui envoyer des photos de la pièce.'
-    : 'Votre demande est enregistrée. Un conseiller vous recontacte sur WhatsApp ou par e-mail.';
+const copy = readEditorialCopy(site.editorial);
+const labels = {name: requiredCopy(site.form?.name, 'Nom'), email: requiredCopy(site.form?.email, 'E-mail')};
+const success = kind === 'rendez-vous' ? copy.request_appointment_success : kind === 'projet' ? copy.request_project_success : copy.request_pro_success;
+const submit = kind === 'rendez-vous' ? copy.request_appointment_submit : kind === 'projet' ? copy.request_project_submit : copy.request_pro_submit;
+const failure = copy.request_error + (site.phone ? ` Contact : ${site.phone}.` : '');
+const periods = {matin: copy.request_morning_label, 'apres-midi': copy.request_afternoon_label};
+const routes = {piece: copy.request_piece_label, ensemble: copy.request_ensemble_label};
 const select = (name: string, label: string, options: readonly string[], required = true) => ({ name, label, options, required });
 const selects = kind === 'pro'
-  ? [select('projectType', 'Type de projet', PROJECT_TYPES), select('city', 'Ville', CITIES), select('stage', 'Avancement du projet', STAGES), select('deadline', 'Délai souhaité', DEADLINES)]
-  : kind === 'projet' ? [select('city', 'Ville', CITIES)]
-  : [select('city', 'Votre ville (facultatif)', CITIES, false)];
+  ? [select('projectType', copy.request_project_label, PROJECT_TYPES), select('city', copy.request_city_label, CITIES), select('stage', copy.request_stage_label, STAGES), select('deadline', copy.request_deadline_label, DEADLINES)]
+  : kind === 'projet' ? [select('city', copy.request_city_label, CITIES)]
+  : [select('city', copy.request_city_optional_label, CITIES, false)];
 const field = (name: string) => ({ id: `${id}-${name}`, name, 'aria-describedby': `${id}-${name}-error` });
 ---
-<form class="request-form" method="post" action="/_emdash/api/plugins/contact-requests/submit" data-request-form data-kind={kind} data-success={success}>
-  <noscript><p>Activez JavaScript pour envoyer ce formulaire, ou écrivez-nous sur WhatsApp au +212 771 105 490.</p><style>.request-form button[type=submit]{display:none}</style></noscript>
+<form class="request-form" method="post" action="/_emdash/api/plugins/contact-requests/submit" data-request-form data-kind={kind} data-success={success} data-pending={copy.request_pending} data-error={failure} data-name-error={site.form?.nameError} data-email-error={site.form?.emailError}>
+  <noscript><p>Activez JavaScript pour envoyer ce formulaire, ou <a href="/showroom-casablanca/#showroom-contact">contactez le showroom{site.phone ? ` au ${site.phone}` : ''}</a>.</p><style>.request-form button[type=submit]{display:none}</style></noscript>
   <div class="request-fields">
-    <div><label for={`${id}-name`}>Nom</label><input {...field('name')} autocomplete="name" required minlength="2" maxlength="120" /><span class="field-error" id={`${id}-name-error`} data-field-error="name" hidden></span></div>
-    {kind === 'projet' && <fieldset class="request-choice request-wide" aria-describedby={`${id}-route-error`}><legend>Type de projet</legend>
-      {PROJECT_ROUTES.map((value, index) => <label><input type="radio" name="route" value={value} required checked={index === 0} /><span>{ROUTES[value]}</span></label>)}
-      <label class="request-option"><input type="checkbox" name="architect" value="oui" /><span>{ARCHITECT_LABEL}</span></label>
+    <div><label for={`${id}-name`}>{labels.name}</label><input {...field('name')} autocomplete="name" required minlength="2" maxlength="120" /><span class="field-error" id={`${id}-name-error`} data-field-error="name" hidden></span></div>
+    {kind === 'projet' && <fieldset class="request-choice request-wide" aria-describedby={`${id}-route-error`}><legend>{copy.request_project_label}</legend>
+      {PROJECT_ROUTES.map((value, index) => <label><input type="radio" name="route" value={value} required checked={index === 0} /><span>{routes[value]}</span></label>)}
+      <label class="request-option"><input type="checkbox" name="architect" value="oui" /><span>{copy.request_architect_label}</span></label>
       <span class="field-error" id={`${id}-route-error`} data-field-error="route" hidden></span></fieldset>}
-    {kind === 'pro' && <div><label for={`${id}-company`}>Cabinet ou société</label><input {...field('company')} autocomplete="organization" required minlength="2" maxlength="120" /><span class="field-error" id={`${id}-company-error`} data-field-error="company" hidden></span></div>}
-    <div><label for={`${id}-whatsapp`}>Numéro WhatsApp</label><input {...field('whatsapp')} type="tel" autocomplete="tel" inputmode="tel" required maxlength="30" placeholder="+212 6…" /><span class="field-error" id={`${id}-whatsapp-error`} data-field-error="whatsapp" hidden></span></div>
-    {kind === 'pro' && <div><label for={`${id}-email`}>E-mail</label><input {...field('email')} type="email" autocomplete="email" required maxlength="254" /><span class="field-error" id={`${id}-email-error`} data-field-error="email" hidden></span></div>}
-    {kind === 'rendez-vous' && <div><label for={`${id}-day`}>Jour souhaité</label><input {...field('day')} type="date" min={today} required /><span class="field-error" id={`${id}-day-error`} data-field-error="day" hidden></span></div>}
-    {kind === 'rendez-vous' && <fieldset class="request-choice" aria-describedby={`${id}-period-error`}><legend>Moment souhaité</legend>
-      {Object.entries(PERIODS).map(([value, label], index) => <label><input type="radio" name="period" value={value} required checked={index === 0} /><span>{label}</span></label>)}
-      <span class="field-hint">Le lundi, le showroom ouvre à 12 h.</span>
+    {kind === 'pro' && <div><label for={`${id}-company`}>{copy.request_company_label}</label><input {...field('company')} autocomplete="organization" required minlength="2" maxlength="120" /><span class="field-error" id={`${id}-company-error`} data-field-error="company" hidden></span></div>}
+    <div><label for={`${id}-whatsapp`}>{copy.request_whatsapp_label}</label><input {...field('whatsapp')} type="tel" autocomplete="tel" inputmode="tel" required maxlength="30" placeholder="+212 6…" /><span class="field-error" id={`${id}-whatsapp-error`} data-field-error="whatsapp" hidden></span></div>
+    {kind === 'pro' && <div><label for={`${id}-email`}>{labels.email}</label><input {...field('email')} type="email" autocomplete="email" required maxlength="254" /><span class="field-error" id={`${id}-email-error`} data-field-error="email" hidden></span></div>}
+    {kind === 'rendez-vous' && <div><label for={`${id}-day`}>{copy.request_day_label}</label><input {...field('day')} type="date" min={today} required /><span class="field-error" id={`${id}-day-error`} data-field-error="day" hidden></span></div>}
+    {kind === 'rendez-vous' && <fieldset class="request-choice" aria-describedby={`${id}-period-error`}><legend>{copy.request_period_label}</legend>
+      {Object.entries(periods).map(([value, label], index) => <label><input type="radio" name="period" value={value} required checked={index === 0} /><span>{label}</span></label>)}
+      {site.hours && <span class="field-hint">{site.hours}</span>}
+      {copy.request_hours_note && <span class="field-hint">{copy.request_hours_note}</span>}
       <span class="field-error" id={`${id}-period-error`} data-field-error="period" hidden></span></fieldset>}
-    {selects.map(item => <div><label for={`${id}-${item.name}`}>{item.label}</label><select {...field(item.name)} required={item.required}><option value="">Choisir</option>{item.options.map(value => <option>{value}</option>)}</select><span class="field-error" id={`${id}-${item.name}-error`} data-field-error={item.name} hidden></span></div>)}
-    {kind === 'pro' && <div class="request-wide"><label for={`${id}-models`}>Modèles envisagés (facultatif)</label><input {...field('models')} maxlength="300" placeholder="Butterfly Keramik, Craig…" /><span class="field-error" id={`${id}-models-error`} data-field-error="models" hidden></span></div>}
-    <div class="request-message"><label for={`${id}-message`}>Message (facultatif)</label><textarea {...field('message')} rows="3" maxlength="1000"></textarea><span class="field-error" id={`${id}-message-error`} data-field-error="message" hidden></span></div>
+    {selects.map(item => <div><label for={`${id}-${item.name}`}>{item.label}</label><select {...field(item.name)} required={item.required}><option value="">{copy.request_choice_label}</option>{item.options.map(value => <option>{value}</option>)}</select><span class="field-error" id={`${id}-${item.name}-error`} data-field-error={item.name} hidden></span></div>)}
+    {kind === 'pro' && <div class="request-wide"><label for={`${id}-models`}>{copy.request_models_label}</label><input {...field('models')} maxlength="300" placeholder="Butterfly Keramik, Craig…" /><span class="field-error" id={`${id}-models-error`} data-field-error="models" hidden></span></div>}
+    <div class="request-message"><label for={`${id}-message`}>{copy.request_message_label}</label><textarea {...field('message')} rows="3" maxlength="1000"></textarea><span class="field-error" id={`${id}-message-error`} data-field-error="message" hidden></span></div>
   </div>
   <div class="form-trap" aria-hidden="true"><label for={`${id}-website`}>Site web</label><input id={`${id}-website`} name="website" tabindex="-1" autocomplete="off" /></div>
-  <p class="request-privacy">{privacyNotice(kind, site.publicEmail || 'contact@cattelanitalia.ma', site.cndpReceipt)} <a href="/confidentialite/">Confidentialité</a></p>
-  <button class="btn solid" type="submit">{kind === 'rendez-vous' ? 'Demander un rendez-vous' : kind === 'projet' ? 'Demander un conseil' : 'Envoyer ma demande'}</button>
+  <p class="request-privacy">{privacyNotice(kind, site.publicEmail || 'contact@cattelanitalia.ma', site.cndpReceipt, copy.privacy_controller_name)} <a href="/confidentialite/">Confidentialité</a></p>
+  <button class="btn solid" type="submit">{submit}</button>
   <div class="request-result" role="status" aria-live="polite" tabindex="-1"></div>
 </form>
 <script>
   const fieldFor: Record<string, string> = { INVALID_NAME: 'name', INVALID_WHATSAPP: 'whatsapp', INVALID_DAY: 'day', INVALID_PERIOD: 'period', INVALID_EMAIL: 'email', INVALID_COMPANY: 'company', INVALID_PROJECT: 'projectType', INVALID_CITY: 'city', INVALID_MESSAGE: 'message', INVALID_STAGE: 'stage', INVALID_DEADLINE: 'deadline', INVALID_MODELS: 'models', INVALID_ROUTE: 'route' };
-  const required: Record<string, string> = { name: 'Indiquez votre nom.', whatsapp: 'Indiquez un numéro WhatsApp valide.', day: 'Choisissez un jour.', company: 'Indiquez votre société.', email: 'Indiquez une adresse e-mail valide.', projectType: 'Choisissez un type de projet.', city: 'Choisissez une ville.', stage: 'Choisissez l’étape du projet.', deadline: 'Choisissez une échéance.' };
+  const defaultRequired: Record<string, string> = { name: 'Indiquez votre nom.', whatsapp: 'Indiquez un numéro WhatsApp valide.', day: 'Choisissez un jour.', company: 'Indiquez votre société.', email: 'Indiquez une adresse e-mail valide.', projectType: 'Choisissez un type de projet.', city: 'Choisissez une ville.', stage: 'Choisissez l’étape du projet.', deadline: 'Choisissez une échéance.' };
   document.querySelectorAll<HTMLFormElement>('[data-request-form]').forEach(form => {
+    const required: Record<string, string> = {...defaultRequired, name: form.dataset.nameError || defaultRequired.name, email: form.dataset.emailError || defaultRequired.email};
+    const recoveryCodes = new Set(['RATE_LIMITED', 'INVALID_REQUEST', 'INVALID_SOURCE', 'REQUEST_CONFLICT', 'ORIGIN_REJECTED']);
     let requestId = crypto.randomUUID();
     let fingerprint = '';
     form.noValidate = true;
@@ -61,6 +67,7 @@ const field = (name: string) => ({ id: `${id}-${name}`, name, 'aria-describedby'
     form.addEventListener('input', event => { const name = (event.target as HTMLInputElement).name; if (name) setError(name, ''); });
     form.addEventListener('submit', async event => {
       event.preventDefault();
+      if (form.getAttribute('aria-busy') === 'true') return;
       const data = Object.fromEntries(new FormData(form)) as Record<string, string>;
       // Only controls marked required on this form: the city is optional on the appointment form.
       const missing = Object.keys(required).filter(name => control(name)?.required && !String(data[name] || '').trim());
@@ -75,7 +82,7 @@ const field = (name: string) => ({ id: `${id}-${name}`, name, 'aria-describedby'
       fingerprint = next;
       const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
       button.disabled = true; form.setAttribute('aria-busy', 'true');
-      result.textContent = 'Envoi en cours…';
+      result.textContent = form.dataset.pending || '';
       try {
         const response = await fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json', 'X-EmDash-Request': '1' }, body: JSON.stringify({ ...payload, requestId }) });
         const envelope = await response.json() as { success?: boolean; data?: { ok?: boolean; code?: string; message?: string } };
@@ -83,15 +90,15 @@ const field = (name: string) => ({ id: `${id}-${name}`, name, 'aria-describedby'
         if (!response.ok || !envelope.success || !outcome) throw new Error('failed');
         if (!outcome.ok) {
           const name = fieldFor[outcome.code || ''];
-          if (name) { setError(name, outcome.message || ''); result.textContent = ''; (control(name) as HTMLElement | null)?.focus(); }
-          else { result.textContent = outcome.message || 'Votre demande n’a pas pu être envoyée. Veuillez réessayer.'; result.focus(); }
+          if (name) { setError(name, name === 'name' ? required.name : name === 'email' ? required.email : outcome.message || ''); result.textContent = ''; (control(name) as HTMLElement | null)?.focus(); }
+          else { result.textContent = recoveryCodes.has(outcome.code || '') ? outcome.message || form.dataset.error || '' : form.dataset.error || ''; result.focus(); }
           return;
         }
         form.querySelectorAll<HTMLElement>('.request-fields, .request-privacy, button[type=submit]').forEach(element => { element.hidden = true; });
         result.textContent = form.dataset.success || '';
         result.focus();
       } catch {
-        result.textContent = 'Votre demande n’a pas pu être envoyée. Réessayez, ou écrivez-nous sur WhatsApp au +212 771 105 490.';
+        result.textContent = form.dataset.error || '';
         result.focus();
       } finally { button.disabled = false; form.removeAttribute('aria-busy'); }
     });
@@ -109,7 +116,7 @@ const field = (name: string) => ({ id: `${id}-${name}`, name, 'aria-describedby'
   .request-message, .request-wide { grid-column: 1 / -1; }
   .request-choice { margin: 0; padding: 0; border: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
   .request-choice legend { float: left; width: 100%; }
-  .request-choice .field-hint { flex-basis: 100%; margin-top: 2px; font-size: 12px; line-height: 1.5; color: var(--faint); }
+  .request-choice .field-hint { white-space: pre-line; flex-basis: 100%; margin-top: 2px; font-size: 12px; line-height: 1.5; color: var(--faint); }
   .request-choice label { position: relative; cursor: pointer; }
   .request-choice input { position: absolute; opacity: 0; }
   .request-choice label span { display: inline-flex; align-items: center; height: 44px; padding: 0 18px; border: 1px solid var(--hair); font-size: 14px; color: var(--muted); }

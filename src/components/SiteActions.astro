@@ -1,5 +1,5 @@
 ---
-import { actions, type ActionKey } from '../lib/actions';
+import { actionsFor, type ActionKey } from '../lib/actions';
 import WhatsappIcon from './WhatsappIcon.astro';
 interface Props {
   order: ActionKey[];
@@ -8,7 +8,9 @@ interface Props {
   /** Accessible name of the WhatsApp link; the visible label leaves the channel to the icon. */
   advisorName?: string;
   model?: string;
+  site?: any;
 }
+const actions=actionsFor(Astro.props.site);
 const { order, advisorHref, advisorLabel = actions.advisor.label, advisorName = `${advisorLabel} sur ${actions.advisor.channel}`, model } = Astro.props;
 // The booking form records the model the visitor came from.
 const appointmentHref = model ? actions.appointment.href.replace('#', `?modele=${encodeURIComponent(model)}#`) : actions.appointment.href;

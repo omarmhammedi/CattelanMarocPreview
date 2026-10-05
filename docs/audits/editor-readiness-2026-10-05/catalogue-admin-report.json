@@ -1,0 +1,20 @@
+{
+  "completedAt": "2026-10-05T01:37:46.331Z",
+  "origin": "http://localhost:4331",
+  "passed": true,
+  "restored": true,
+  "checks": [
+    "Le téléversement privé rejette la révision devenue obsolète ; le brouillon concurrent et sa case démonstration restent intacts.",
+    "Après rechargement, seule l’association PDF et la case démonstration sont enregistrées ; les autres champs restent intacts et aucune publication n’a lieu.",
+    "Le brouillon de test est abandonné ; données, publication et révision publique initiales sont restaurées exactement.",
+    "Tous les PDF synthétiques de ce test sont supprimés du stockage R2 local."
+  ],
+  "screenshots": [
+    "pdf-concurrent-edit-rejected.png",
+    "pdf-draft-associated.png"
+  ],
+  "syntheticPdfs": 2,
+  "errors": [],
+  "blockedWrites": [],
+  "failure": null
+}

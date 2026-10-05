@@ -8,8 +8,8 @@ import ThemeToggle from './ThemeToggle.astro';
 import NativeNav, { type NavigationItem } from './NativeNav.astro';
 import GeographicMap from './GeographicMap.astro';
 import GeographicMapSymbols from './GeographicMapSymbols.astro';
-import { actions, generalWhatsappMessage, isCatalogueLink, whatsappHref } from '../lib/actions';
-import { secondaryLinks, valetService } from '../lib/footer';
+import { actionsFor, generalMessageFor, isCatalogueLink, whatsappHref } from '../lib/actions';
+import { secondaryLinks } from '../lib/footer';
 import { imageAttributes } from '../lib/images';
 
 type Editable = { edit?: Record<string, Record<string, string>> };
@@ -30,6 +30,7 @@ interface Props {
   posts: { entry?: Editable; title: string; href: string; category: string; readingTime?: string; image: Picture }[];
   site: {
     entry?: Editable;
+    navigationCopy?: Record<string,string>; footerNavigation?: NavigationItem[];
     name: string; tagline: string; location: string; navigation: NavigationItem[]; logoLight: Picture; logoDark: Picture;
     whatsappHref?: string | null; phone?: string; address?: string; hours?: string; mapUrl?: string;
     mapNote?: string; previewNotice?: string; footerNote?: string; publicEmail?: string; placeholderNotice?: string;
@@ -45,10 +46,11 @@ interface Props {
 }
 const { home, families, posts, site, catalogue } = Astro.props;
 const labels = site.labels;
+const actions=actionsFor(site);
 const homeEdit = home.entry?.edit;
 const siteEdit = site.entry?.edit;
-const headerNavigation = site.navigation.filter(item => !isCatalogueLink(item.url));
-const advisorHref = whatsappHref(site.whatsappHref, generalWhatsappMessage);
+const headerNavigation = site.navigation.filter(item => !isCatalogueLink(item.url) || Boolean(item.children?.length));
+const advisorHref = whatsappHref(site.whatsappHref, generalMessageFor(site));
 const featuredPost = posts[0];
 const otherPosts = posts.slice(1, 5);
 const hasCta = (section: CopySection) => !!(section.ctaLabel && section.ctaHref);
@@ -112,14 +114,14 @@ const brandLines = explicitBrandLines.length > 1 ? explicitBrandLines : [brandWo
     <NativeNav items={headerNavigation} />
   </nav>
   <div class="header-tools">
-    <HeaderActions advisorHref={advisorHref} />
+    <HeaderActions site={site} advisorHref={advisorHref} />
     <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation">Menu</button>
     <ThemeToggle />
   </div>
 </header>
 <nav id="mobile-navigation" class="mobile-navigation" aria-label="Navigation mobile" hidden>
   <NativeNav items={headerNavigation} />
-  <HeaderActions variant="menu" />
+  <HeaderActions site={site} variant="menu" />
 </nav>
 
 <main id="main-content" class="home">
@@ -129,7 +131,7 @@ const brandLines = explicitBrandLines.length > 1 ? explicitBrandLines : [brandWo
     <div class="pin">
       <div class="words"><div>{home.eyebrow && <p class="kick"><svg aria-hidden="true"><use href="#step"/></svg>{home.eyebrow}</p>}<h1 {...homeEdit?.title}>{home.title}</h1></div><div class="side">{site.tagline && <p class="kick">{site.tagline}</p>}<span class="hint">{labels.scroll} ↓</span></div></div>
       {home.heroImage && <div class="ph card" data-mobile-frame {...homeEdit?.hero_image}><img {...imageAttributes(home.heroImage, heroImageSizes)} alt={home.heroImage.alt} fetchpriority="high" style="object-position: center 55%;"/><div class="veil"></div></div>}
-      <div class:list={["over", {onphoto: !!home.heroImage}]}><div>{home.eyebrow && <p class="kick"><svg aria-hidden="true"><use href="#step"/></svg>{home.eyebrow}</p>}{home.intro && <p class="hero-intro" {...homeEdit?.intro}>{home.intro}</p>}<SiteActions order={['appointment', 'catalogue']} /></div></div>
+      <div class:list={["over", {onphoto: !!home.heroImage}]}><div>{home.eyebrow && <p class="kick"><svg aria-hidden="true"><use href="#step"/></svg>{home.eyebrow}</p>}{home.intro && <p class="hero-intro" {...homeEdit?.intro}>{home.intro}</p>}<SiteActions site={site} order={['appointment', 'catalogue']} /></div></div>
     </div>
   </section>
   {home.brand.present !== false && <section class:list={['scene', {'without-visual': !(home.brand.image || home.brand.detailImage)}]} id="italie" data-scene={(home.brand.image || home.brand.detailImage) ? 'italie' : undefined} style="--a: 0; --o: 0;">
@@ -173,8 +175,8 @@ const brandLines = explicitBrandLines.length > 1 ? explicitBrandLines : [brandWo
 </main>
 <footer class="ft">
   <svg class="fan deco" viewBox="0 0 200 104" aria-hidden="true"><use href="#fan"/></svg><div class="brand">{site.logoDark ? <img class="lg-w" {...imageAttributes(site.logoDark, '180px', 512)} alt={site.logoDark.alt}/> : <span class="brand-name lg-w">{site.name}</span>}{site.logoLight ? <img class="lg-r" {...imageAttributes(site.logoLight, '180px', 512)} alt={site.logoLight.alt}/> : <span class="brand-name lg-r">{site.name}</span>}{site.location && <span class="loc">{site.location}</span>}{site.tagline && <p>{site.tagline}</p>}</div>
-  <div><h4>{labels.showroom}</h4><ul><li>{site.name}</li>{site.address && <li>{site.address}</li>}{site.hours && <li>{site.hours}</li>}<li>{valetService}</li>{site.phone && <li><a href={`tel:${site.phone.replace(/[^+\d]/g, '')}`}>{site.phone}</a></li>}{advisorHref && <li><a href={advisorHref} target="_blank" rel="noopener noreferrer" data-action="advisor" aria-label={`${actions.advisor.label} sur ${actions.advisor.channel}`}>{actions.advisor.label} <span aria-hidden="true">↗</span></a></li>}{site.publicEmail && <li><a href={`mailto:${site.publicEmail}`}>{site.publicEmail}</a></li>}<li><a href="/showroom-casablanca/">{labels.visit}</a></li></ul></div>
-  <div><h4>Explorer</h4><ul>{site.navigation.map(item => <li><NativeNav items={[item]} /></li>)}{secondaryLinks(site.navigation).map(link => <li><a href={link.href}>{link.label}</a></li>)}</ul></div>
+  <div><h4>{labels.showroom}</h4><ul><li>{site.name}</li>{site.address && <li>{site.address}</li>}{site.hours && <li>{site.hours}</li>}{site.navigationCopy?.footer_valet_text && <li>{site.navigationCopy.footer_valet_text}</li>}{site.phone && <li><a href={`tel:${site.phone.replace(/[^+\d]/g, '')}`}>{site.phone}</a></li>}{advisorHref && <li><a href={advisorHref} target="_blank" rel="noopener noreferrer" data-action="advisor" aria-label={`${actions.advisor.label} sur ${actions.advisor.channel}`}>{actions.advisor.label} <span aria-hidden="true">↗</span></a></li>}{site.publicEmail && <li><a href={`mailto:${site.publicEmail}`}>{site.publicEmail}</a></li>}<li><a href="/showroom-casablanca/">{labels.visit}</a></li></ul></div>
+  <div><h4>Explorer</h4><ul>{site.navigation.map(item => <li><NativeNav items={[item]} /></li>)}{secondaryLinks(site.navigation, site.footerNavigation).map(link => <li><NativeNav items={[link]} /></li>)}</ul></div>
   <div class="base"><span>{site.name}</span>{site.footerNote && <span {...siteEdit?.footer_text}>{site.footerNote}</span>}{site.previewNotice && <p class="preview-notice" {...siteEdit?.preview_notice}>{site.previewNotice}</p>}</div>
 </footer>
 <script>

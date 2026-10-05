@@ -1,4 +1,7 @@
-/** Verify the editorial migration in an existing, marked disposable CMS only. */
+/** Verify the editorial migration in an existing, marked disposable CMS only.
+ * The exact-copy checks require the 0004 editorial fixture; this is not a
+ * blanket current-seed suite. Native SEO clearing follows the current adapter.
+ */
 import assert from 'node:assert/strict';
 import {mkdir, readFile, writeFile} from 'node:fs/promises';
 import {chromium, webkit} from 'playwright';
@@ -60,14 +63,14 @@ try {
   }
   pass('17 pages : textes publiés, titres SEO uniques, descriptions, liens contextuels et noindex de prévisualisation.');
   const tables=await html('/collections/tables/');
-  const notice=(await nodes(tables,'.models-section > .page-note'))[0];
-  assert(notice,'The shared availability notice remains visible.');
-  assert(!(await nodes(tables,'.model-card .page-note')).includes(notice));
-  pass('La précision commune apparaît une fois par sélection ; les textes des cartes restent lisibles.');
+  assert.deepEqual(await nodes(tables,'.models-section > .page-note'),[], 'Retired generic availability text must not reappear.');
+  assert((await nodes(tables,'.model-card > p')).every(Boolean), 'Model cards retain their editorial descriptions.');
+  pass('Les textes des cartes restent lisibles ; la précision générique retirée ne réapparaît pas.');
 
   // Native SEO metadata is immediate; the visible copy still follows native revisions.
   const path='/_emdash/api/content/families/tables';
   const original=await api(path);
+  const siteSettings=await api('/_emdash/api/settings');
   assert.equal(original.item.status,'published');
   assert(!original.item.draftRevisionId || original.item.draftRevisionId===original.item.liveRevisionId);
   const marker=`EDITORIAL-TEST-${Date.now()}`;
@@ -91,9 +94,13 @@ try {
     current=await api(path);
     await api(path,'PUT',{seo:{title:null,description:null},_rev:current._rev});
     const cleared=await html('/collections/tables/');
-    assert.deepEqual(await nodes(cleared,'title'),[original.item.data.seo_title]);
-    assert.deepEqual(await nodes(cleared,'meta[name="description"]','content'),[original.item.data.meta_description]);
-    pass('Famille : brouillon privé, aperçu signé, publication ; SEO natif immédiat, H1 conservé et repli après effacement.');
+    const generatedTitle=[original.item.data.title,siteSettings.title].filter(Boolean).join(siteSettings.seo?.titleSeparator || ' · ');
+    assert.deepEqual(await nodes(cleared,'title'),[generatedTitle]);
+    assert.deepEqual(await nodes(cleared,'meta[property="og:title"]','content'),[generatedTitle]);
+    // The intro marker was explicitly published above; clearing native SEO
+    // now uses that public text, never the archived custom metadata fields.
+    assert.deepEqual(await nodes(cleared,'meta[name="description"]','content'),[marker]);
+    pass('Famille : brouillon privé, aperçu signé, publication ; SEO natif immédiat, puis titre de page et introduction publiés après effacement.');
   } finally {
     if(modified){
       const current=await api(path);

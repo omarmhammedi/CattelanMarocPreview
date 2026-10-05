@@ -4,7 +4,7 @@ import PageLayout from '../../layouts/PageLayout.astro';
 import ModelCard from '../../components/ModelCard.astro';
 import SiteActions from '../../components/SiteActions.astro';
 import { PortableText } from 'emdash/ui';
-import { generalWhatsappMessage, whatsappHref } from '../../lib/actions';
+import { generalMessageFor, whatsappHref } from '../../lib/actions';
 import { getFamily, getSite } from '../../lib/content';
 
 const [family, site] = await Promise.all([Astro.props.preloaded || getFamily(Astro.params.slug || ''), getSite()]);
@@ -24,7 +24,7 @@ if (!family) return new Response('Collection introuvable', { status: 404 });
   {family.models?.length > 0 && <section class="page-gutter models-section">
     <div class="section-heading"><h2>Les modèles</h2></div>
     <div class="model-grid">
-      {family.models.map((model: any) => <ModelCard model={model} sharedNotice={site.modelNotice}/>)}
+      {family.models.map((model: any) => <ModelCard model={model} />)}
     </div>
   </section>}
   {family.relatedPost && <section class="related-reading page-gutter" data-page-reveal>
@@ -33,6 +33,6 @@ if (!family) return new Response('Collection introuvable', { status: 404 });
   </section>}
   <section class="page-cta page-gutter" data-page-reveal>
     <h2 class="page-cta-heading">Showroom de Casablanca</h2>
-    <SiteActions order={['appointment', 'advisor']} advisorHref={whatsappHref(site.whatsappUrl, generalWhatsappMessage)} />
+    <SiteActions site={site} order={['appointment', 'advisor']} advisorHref={whatsappHref(site.whatsappUrl, generalMessageFor(site))} />
   </section>
 </PageLayout>

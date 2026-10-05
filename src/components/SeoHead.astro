@@ -7,12 +7,13 @@ import PreviewViewport from './PreviewViewport.astro';
 import { editorPreviewContentPolicy } from '../lib/editor-preview';
 import { fallbackFavicon, pageBreadcrumbs, socialImage } from '../lib/structured-data';
 import { rememberRenderedSeo } from '../lib/seo-render-context';
+import { resolvePageTitle } from '../lib/seo-policy';
 import type { BreadcrumbItem } from 'emdash';
 interface Props {title:string;description?:string;site:any;image?:any;entry?:any;collection?:string;article?:boolean;breadcrumbs?:BreadcrumbItem[];}
 const {title,description,site,image,entry,article=false}=Astro.props;
 // EmDashHead applies the native SEO panel to metadata, but <title> belongs to
 // the template. Keep both surfaces aligned without changing the visible H1.
-const resolvedTitle=(entry && getContentSeo(entry)?.title) || title;
+const resolvedTitle=resolvePageTitle({title,nativeTitle:entry && getContentSeo(entry)?.title,siteTitle:site.name,separator:site.settings?.seo?.titleSeparator});
 const isoDate=(value:unknown)=>{
   if(!(value instanceof Date)&&typeof value!=='string')return undefined;
   const date=new Date(value);return Number.isNaN(date.getTime())?undefined:date.toISOString();

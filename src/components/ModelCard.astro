@@ -1,8 +1,7 @@
 ---
 import { coverSizes, imageAttributes } from '../lib/images';
-interface Props {model:any; sharedNotice?:string;}
-const {model, sharedNotice=''}=Astro.props;
-const availabilityNote=String(model.availabilityNote || '').trim();
+interface Props {model:any;}
+const {model}=Astro.props;
 ---
 <article class="model-card" data-page-reveal>
  {model.image && <figure class="model-figure"><div class="page-image"><img {...imageAttributes(model.image, coverSizes(model.image, 1.2, 1.2, 45), 1600)} alt={model.image.alt || model.title || model.name} loading="lazy"/></div>{model.imageCaption && <figcaption class="page-note">{model.imageCaption}</figcaption>}</figure>}

@@ -1,10 +1,11 @@
 ---
 import { privacyNotice } from '../lib/privacy';
+import { readEditorialCopy, requiredCopy } from '../lib/editorial-copy.mjs';
 import { getSite, getCatalogue } from '../lib/content';
 import { CITIES } from '../plugins/catalogue/core';
 interface Props {
   id: string; catalogueId?: string; labels?: Record<string, string>; compact?: boolean;
-  site?: {form: Record<string, string>; labels: {contact?: string}; publicEmail?: string; cndpReceipt?: string};
+  site?: {form: Record<string, string>; labels: {contact?: string}; publicEmail?: string; cndpReceipt?: string; editorial?: Record<string, string>};
   catalogue?: {id: string; downloadLabel: string} | null;
 }
 const { id, compact = false } = Astro.props;
@@ -15,22 +16,27 @@ const [site, catalogue] = await Promise.all([
   Astro.props.catalogue === undefined ? getCatalogue() : Astro.props.catalogue,
 ]);
 const labels = { ...site.form, ...Astro.props.labels };
+const copy = readEditorialCopy(site.editorial);
+labels.name = requiredCopy(labels.name, 'Nom');
+labels.email = requiredCopy(labels.email, 'E-mail');
+labels.submit = requiredCopy(labels.submit, 'Recevoir le catalogue');
+const downloadLabel = requiredCopy(catalogue?.downloadLabel, 'Télécharger le catalogue');
 const catalogueId = Astro.props.catalogueId || catalogue?.id;
 const contactLabel = site.labels.contact || 'Coordonnées du showroom';
 ---
-{catalogueId ? <form method="post" action="/_emdash/api/plugins/catalogue-leads/request" class:list={['catalogue-form', { compact }]} data-catalogue-form data-catalogue-id={catalogueId} data-error={labels.error} data-name-error={labels.nameError} data-email-error={labels.emailError} data-unavailable={labels.unavailable} data-pending={labels.pending} data-success-title={labels.successTitle} data-success-text={labels.successText} data-download-label={catalogue?.downloadLabel} data-contact-label={contactLabel}>
+{catalogueId ? <form method="post" action="/_emdash/api/plugins/catalogue-leads/request" class:list={['catalogue-form', { compact }]} data-catalogue-form data-catalogue-id={catalogueId} data-error={labels.error} data-name-error={labels.nameError} data-email-error={labels.emailError} data-unavailable={labels.unavailable} data-pending={labels.pending} data-success-title={labels.successTitle} data-success-text={labels.successText} data-download-label={downloadLabel} data-email-sent={copy.catalogue_email_sent} data-email-failed={copy.catalogue_email_failed} data-email-pending={copy.catalogue_email_pending} data-contact-label={contactLabel}>
   <noscript><p>Activez JavaScript pour télécharger le catalogue, ou <a href="/showroom-casablanca/#showroom-contact">contactez le showroom</a>.</p><style>.catalogue-form button[type=submit]{display:none}</style></noscript>
   <div class="catalogue-fields">
     <div><label for={`${id}-name`}>{labels.name}</label><input id={`${id}-name`} name="name" autocomplete="name" required minlength="2" maxlength="120" aria-describedby={`${id}-name-error`} /><span class="field-error" id={`${id}-name-error`} data-field-error="name" hidden></span></div>
-    <div><label for={`${id}-whatsapp`}>Numéro WhatsApp (facultatif)</label><input id={`${id}-whatsapp`} name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" placeholder="Avec l’indicatif du pays" aria-describedby={`${id}-whatsapp-error`} /><span class="field-error" id={`${id}-whatsapp-error`} data-field-error="whatsapp" hidden></span></div>
+    <div><label for={`${id}-whatsapp`}>{copy.catalogue_whatsapp_label}</label><input id={`${id}-whatsapp`} name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" placeholder="Avec l’indicatif du pays" aria-describedby={`${id}-whatsapp-error`} /><span class="field-error" id={`${id}-whatsapp-error`} data-field-error="whatsapp" hidden></span></div>
     <div><label for={`${id}-email`}>{labels.email}</label><input id={`${id}-email`} name="email" type="email" autocomplete="email" required maxlength="254" aria-describedby={`${id}-email-error`} /><span class="field-error" id={`${id}-email-error`} data-field-error="email" hidden></span></div>
-    <div><label for={`${id}-city`}>Ville (facultatif)</label><select id={`${id}-city`} name="city" aria-describedby={`${id}-city-error`}><option value="">Choisir une ville</option>{CITIES.map(city => <option>{city}</option>)}</select><span class="field-error" id={`${id}-city-error`} data-field-error="city" hidden></span></div>
+    <div><label for={`${id}-city`}>{copy.catalogue_city_label}</label><select id={`${id}-city`} name="city" aria-describedby={`${id}-city-error`}><option value="">{copy.catalogue_city_choice}</option>{CITIES.map(city => <option>{city}</option>)}</select><span class="field-error" id={`${id}-city-error`} data-field-error="city" hidden></span></div>
   </div>
   <div class="form-trap" aria-hidden="true"><label for={`${id}-website`}>Site web</label><input id={`${id}-website`} name="website" tabindex="-1" autocomplete="off" /></div>
   <label class="form-consent"><input type="checkbox" name="communicationsConsent" value="yes" /><span>{labels.consent}</span></label>
-  <p class="form-note">{import.meta.env.CATTELAN_EMAIL_ENABLED ? 'Après l’envoi du formulaire, vous pourrez télécharger le catalogue. Vous le recevrez aussi par e-mail.' : labels.note}</p>
-  {!import.meta.env.CATTELAN_EMAIL_ENABLED && labels.privacy && <p class="form-privacy">{labels.privacy}</p>}
-  <p class="form-legal">{privacyNotice('catalogue', site.publicEmail || 'contact@cattelanitalia.ma', site.cndpReceipt)} <a href="/confidentialite/">Confidentialité</a></p>
+  {labels.note && <p class="form-note">{labels.note}</p>}
+  {labels.privacy && <p class="form-privacy">{labels.privacy}</p>}
+  <p class="form-legal">{privacyNotice('catalogue', site.publicEmail || 'contact@cattelanitalia.ma', site.cndpReceipt, copy.privacy_controller_name)} <a href="/confidentialite/">Confidentialité</a></p>
   <button class="btn solid" type="submit">{labels.submit} <span aria-hidden="true">↗</span></button>
   <div class="form-message" role="status" aria-live="polite" tabindex="-1"></div>
 </form> : <div class="catalogue-unavailable" role="status"><p>{labels.unavailable}</p><a class="text-link" href="/showroom-casablanca/#showroom-contact">{contactLabel}</a></div>}
@@ -108,12 +114,12 @@ const contactLabel = site.labels.contact || 'Coordonnées du showroom';
         message.appendChild(title);
         message.appendChild(text);
         message.appendChild(link);
-        if (result.emailStatus) {
+        if (['sent', 'failed', 'pending', 'processing'].includes(result.emailStatus || '')) {
           const emailNote = document.createElement('p');
           emailNote.textContent = result.emailStatus === 'sent'
-            ? 'Un e-mail contenant le catalogue vous a été envoyé. Son lien est valable 24 heures.'
-            : result.emailStatus === 'failed' ? 'L’e-mail n’a pas pu être envoyé. Vous pouvez télécharger le PDF ci-dessus.'
-            : 'L’envoi du catalogue par e-mail est en cours. Vous pouvez déjà télécharger le PDF ci-dessus.';
+            ? form.dataset.emailSent || ''
+            : result.emailStatus === 'failed' ? form.dataset.emailFailed || ''
+            : form.dataset.emailPending || '';
           message.appendChild(emailNote);
         }
         message.focus();

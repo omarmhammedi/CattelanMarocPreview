@@ -7,6 +7,7 @@ import { cataloguePlugin } from './src/plugins/catalogue/index.ts';
 import { requestsPlugin } from './src/plugins/requests/index.ts';
 import { siteSeoPlugin } from './src/plugins/seo/index.ts';
 import { resendEmailPlugin } from './src/plugins/email/index.ts';
+import { editorialPlugin } from './src/plugins/editorial/index.ts';
 
 export default defineConfig({
   output: 'server',
@@ -37,7 +38,7 @@ export default defineConfig({
     emdash({
       database: d1({ binding: 'DB', session: 'disabled' }),
       storage: r2({ binding: 'MEDIA' }),
-      plugins: [cataloguePlugin(), requestsPlugin(), siteSeoPlugin(),
+      plugins: [cataloguePlugin(), requestsPlugin(), siteSeoPlugin(), editorialPlugin(),
         ...(process.env.CLOUDFLARE_ENV === 'cattelan-client' ? [resendEmailPlugin()] : []),
       ],
     }),

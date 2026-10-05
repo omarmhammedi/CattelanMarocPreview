@@ -18,8 +18,8 @@
     {
       "slug": "pages",
       "label": "Pages",
-      "labelSingular": "Pages",
-      "group": "Contenu du site",
+      "labelSingular": "Page",
+      "group": "Pages du site",
       "sortOrder": 1,
       "supports": [
         "drafts",
@@ -35,11 +35,12 @@
           "slug": "title",
           "label": "Titre principal",
           "type": "string",
-          "required": true
+          "required": true,
+          "sortOrder": 0
         },
         {
           "slug": "route_key",
-          "label": "Page du site",
+          "label": "Identité de page protégée",
           "type": "select",
           "required": true,
           "validation": {
@@ -54,19 +55,24 @@
               "a-propos",
               "votre-projet",
               "faq",
-              "mentions-legales"
+              "mentions-legales",
+              "confidentialite"
             ]
-          }
+          },
+          "widget": "cattelan-editorial:route-identity",
+          "sortOrder": 1
         },
         {
           "slug": "eyebrow",
           "label": "Sur-titre",
-          "type": "string"
+          "type": "string",
+          "sortOrder": 2
         },
         {
           "slug": "intro",
           "label": "Introduction",
-          "type": "text"
+          "type": "text",
+          "sortOrder": 3
         },
         {
           "slug": "hero_image",
@@ -79,12 +85,14 @@
               "image/webp",
               "image/avif"
             ]
-          }
+          },
+          "sortOrder": 4
         },
         {
           "slug": "content",
           "label": "Corps de page",
-          "type": "portableText"
+          "type": "portableText",
+          "sortOrder": 5
         },
         {
           "slug": "sections",
@@ -137,11 +145,12 @@
                 }
               }
             ]
-          }
+          },
+          "sortOrder": 6
         },
         {
           "slug": "brand_image",
-          "label": "Image de la présentation de marque",
+          "label": "Accueil uniquement — image de la présentation de marque",
           "type": "image",
           "validation": {
             "allowedMimeTypes": [
@@ -150,11 +159,12 @@
               "image/webp",
               "image/avif"
             ]
-          }
+          },
+          "sortOrder": 7
         },
         {
           "slug": "brand_detail_image",
-          "label": "Détail de matière",
+          "label": "Accueil uniquement — détail de matière",
           "type": "image",
           "validation": {
             "allowedMimeTypes": [
@@ -163,16 +173,18 @@
               "image/webp",
               "image/avif"
             ]
-          }
+          },
+          "sortOrder": 8
         },
         {
           "slug": "brand_caption",
-          "label": "Légende de la présentation",
-          "type": "string"
+          "label": "Accueil uniquement — légende de la présentation",
+          "type": "string",
+          "sortOrder": 9
         },
         {
           "slug": "showroom_image",
-          "label": "Image de l’invitation showroom",
+          "label": "Accueil uniquement — image de l’invitation showroom",
           "type": "image",
           "validation": {
             "allowedMimeTypes": [
@@ -181,37 +193,49 @@
               "image/webp",
               "image/avif"
             ]
-          }
+          },
+          "sortOrder": 10
         },
         {
           "slug": "showroom_invitation",
-          "label": "Invitation à préparer sa visite",
-          "type": "text"
+          "label": "Accueil uniquement — invitation à préparer sa visite",
+          "type": "text",
+          "sortOrder": 11
         },
         {
           "slug": "seo_title",
-          "label": "Titre pour les moteurs de recherche",
+          "label": "Archive SEO — ancien titre (sans effet sur le site)",
           "type": "string",
           "validation": {
             "maxLength": 90
-          }
+          },
+          "widget": "cattelan-editorial:retired-reference",
+          "sortOrder": 12
         },
         {
           "slug": "meta_description",
-          "label": "Description pour les moteurs de recherche",
+          "label": "Archive SEO — ancienne description (sans effet sur le site)",
           "type": "text",
           "validation": {
             "maxLength": 180
-          }
+          },
+          "widget": "cattelan-editorial:retired-reference",
+          "sortOrder": 13
         }
       ],
-      "urlPattern": "/{slug}/"
+      "urlPattern": "/{slug}/",
+      "admin": {
+        "listColumns": [
+          "route_key"
+        ]
+      },
+      "description": "Identités de page protégées. Les champs « Accueil uniquement » ne concernent que home. Le référencement se règle dans le panneau SEO natif ; ses changements sont immédiats."
     },
     {
       "slug": "families",
       "label": "Familles de mobilier",
-      "labelSingular": "Familles de mobilier",
-      "group": "Contenu du site",
+      "labelSingular": "Famille de mobilier",
+      "group": "Mobilier",
       "sortOrder": 2,
       "supports": [
         "drafts",
@@ -227,23 +251,27 @@
           "slug": "title",
           "label": "Titre principal",
           "type": "string",
-          "required": true
+          "required": true,
+          "sortOrder": 0
         },
         {
           "slug": "short_title",
           "label": "Nom court",
           "type": "string",
-          "required": true
+          "required": true,
+          "sortOrder": 1
         },
         {
           "slug": "card_text",
           "label": "Texte de carte",
-          "type": "text"
+          "type": "text",
+          "sortOrder": 2
         },
         {
           "slug": "intro",
           "label": "Introduction",
-          "type": "text"
+          "type": "text",
+          "sortOrder": 3
         },
         {
           "slug": "image",
@@ -256,24 +284,28 @@
               "image/webp",
               "image/avif"
             ]
-          }
+          },
+          "sortOrder": 4
         },
         {
           "slug": "image_caption",
           "label": "Légende de l’image",
-          "type": "string"
+          "type": "string",
+          "sortOrder": 5
         },
         {
           "slug": "content",
           "label": "Corps de page",
-          "type": "portableText"
+          "type": "portableText",
+          "sortOrder": 6
         },
         {
           "slug": "sort_order",
           "label": "Ordre d’affichage",
           "type": "integer",
           "required": true,
-          "defaultValue": 0
+          "defaultValue": 0,
+          "sortOrder": 7
         },
         {
           "slug": "models",
@@ -281,7 +313,8 @@
           "type": "reference",
           "validation": {
             "relation": "family_models"
-          }
+          },
+          "sortOrder": 8
         },
         {
           "slug": "related_post",
@@ -289,28 +322,34 @@
           "type": "reference",
           "validation": {
             "relation": "family_posts"
-          }
+          },
+          "sortOrder": 9
         },
         {
           "slug": "seo_title",
-          "label": "Titre pour les moteurs de recherche",
+          "label": "Archive SEO — ancien titre (sans effet sur le site)",
           "type": "string",
           "validation": {
             "maxLength": 90
-          }
+          },
+          "widget": "cattelan-editorial:retired-reference",
+          "sortOrder": 10
         },
         {
           "slug": "meta_description",
-          "label": "Description pour les moteurs de recherche",
+          "label": "Archive SEO — ancienne description (sans effet sur le site)",
           "type": "text",
           "validation": {
             "maxLength": 180
-          }
+          },
+          "widget": "cattelan-editorial:retired-reference",
+          "sortOrder": 11
         }
       ],
       "urlPattern": "/collections/{slug}/",
       "admin": {
         "listColumns": [
+          "short_title",
           "sort_order"
         ]
       }
@@ -318,8 +357,8 @@
     {
       "slug": "models",
       "label": "Modèles présentés",
-      "labelSingular": "Modèles présentés",
-      "group": "Contenu du site",
+      "labelSingular": "Modèle",
+      "group": "Mobilier",
       "sortOrder": 3,
       "supports": [
         "drafts",
@@ -335,13 +374,15 @@
           "slug": "title",
           "label": "Nom du modèle",
           "type": "string",
-          "required": true
+          "required": true,
+          "sortOrder": 0
         },
         {
           "slug": "description",
           "label": "Présentation courte",
           "type": "text",
-          "required": true
+          "required": true,
+          "sortOrder": 1
         },
         {
           "slug": "image",
@@ -354,34 +395,28 @@
               "image/webp",
               "image/avif"
             ]
-          }
+          },
+          "sortOrder": 2
         },
         {
           "slug": "image_caption",
           "label": "Légende",
-          "type": "string"
-        },
-        {
-          "slug": "official_url",
-          "label": "Fiche officielle Cattelan Italia",
-          "type": "url"
-        },
-        {
-          "slug": "availability_note",
-          "label": "Mention sur disponibilité et exposition",
-          "type": "text"
+          "type": "string",
+          "sortOrder": 3
         },
         {
           "slug": "release_year",
           "label": "Année de création",
           "type": "integer",
-          "required": false
+          "required": false,
+          "sortOrder": 4
         },
         {
           "slug": "content",
           "label": "Présentation et détails techniques",
           "type": "portableText",
-          "required": false
+          "required": false,
+          "sortOrder": 5
         },
         {
           "slug": "gallery",
@@ -401,7 +436,8 @@
                 "type": "string"
               }
             ]
-          }
+          },
+          "sortOrder": 6
         },
         {
           "slug": "dimensions",
@@ -431,7 +467,8 @@
                 "type": "integer"
               }
             ]
-          }
+          },
+          "sortOrder": 7
         },
         {
           "slug": "drawings",
@@ -461,7 +498,8 @@
                 "type": "image"
               }
             ]
-          }
+          },
+          "sortOrder": 8
         },
         {
           "slug": "finishes",
@@ -501,7 +539,8 @@
                 "type": "image"
               }
             ]
-          }
+          },
+          "sortOrder": 9
         },
         {
           "slug": "technical_sheet",
@@ -512,25 +551,22 @@
             "allowedMimeTypes": [
               "application/pdf"
             ]
-          }
+          },
+          "sortOrder": 10
         },
         {
           "slug": "technical_sheet_label",
           "label": "Libellé de la fiche technique",
           "type": "string",
-          "required": false
-        },
-        {
-          "slug": "source_url",
-          "label": "Source officielle française",
-          "type": "url",
-          "required": false
+          "required": false,
+          "sortOrder": 11
         },
         {
           "slug": "source_verified_at",
           "label": "Source vérifiée le",
           "type": "datetime",
-          "required": false
+          "required": false,
+          "sortOrder": 12
         },
         {
           "slug": "on_display",
@@ -540,16 +576,45 @@
           "defaultValue": false,
           "options": {
             "helpText": "Cocher uniquement lorsque la liste des pièces exposées confirme ce modèle. La mention s’affiche alors sur la fiche."
-          }
+          },
+          "sortOrder": 13
+        },
+        {
+          "slug": "official_url",
+          "label": "Archive interne — fiche officielle cattelan italia (non affichée)",
+          "type": "url",
+          "widget": "cattelan-editorial:retired-reference",
+          "sortOrder": 14
+        },
+        {
+          "slug": "availability_note",
+          "label": "Archive interne — mention sur disponibilité et exposition (non affichée)",
+          "type": "text",
+          "widget": "cattelan-editorial:retired-reference",
+          "sortOrder": 15
+        },
+        {
+          "slug": "source_url",
+          "label": "Archive interne — source officielle française (non affichée)",
+          "type": "url",
+          "required": false,
+          "widget": "cattelan-editorial:retired-reference",
+          "sortOrder": 16
         }
       ],
-      "urlPattern": "/modeles/{slug}/"
+      "urlPattern": "/modeles/{slug}/",
+      "admin": {
+        "listColumns": [
+          "on_display",
+          "release_year"
+        ]
+      }
     },
     {
       "slug": "posts",
       "label": "Journal",
-      "labelSingular": "Journal",
-      "group": "Contenu du site",
+      "labelSingular": "Article",
+      "group": "Journal",
       "sortOrder": 4,
       "supports": [
         "drafts",
@@ -565,19 +630,22 @@
           "slug": "title",
           "label": "Titre",
           "type": "string",
-          "required": true
+          "required": true,
+          "sortOrder": 0
         },
         {
           "slug": "excerpt",
           "label": "Extrait",
           "type": "text",
-          "required": true
+          "required": true,
+          "sortOrder": 1
         },
         {
           "slug": "content",
           "label": "Article",
           "type": "portableText",
-          "required": true
+          "required": true,
+          "sortOrder": 2
         },
         {
           "slug": "image",
@@ -590,12 +658,14 @@
               "image/webp",
               "image/avif"
             ]
-          }
+          },
+          "sortOrder": 3
         },
         {
           "slug": "image_caption",
           "label": "Légende de l’image",
-          "type": "string"
+          "type": "string",
+          "sortOrder": 4
         },
         {
           "slug": "sources",
@@ -617,53 +687,65 @@
                 "required": true
               }
             ]
-          }
+          },
+          "sortOrder": 5
         },
         {
           "slug": "cta_text",
           "label": "Invitation en fin d’article",
-          "type": "text"
+          "type": "text",
+          "sortOrder": 6
         },
         {
           "slug": "cta_label",
           "label": "Libellé du bouton",
-          "type": "string"
+          "type": "string",
+          "sortOrder": 7
         },
         {
           "slug": "cta_href",
           "label": "Destination du bouton",
-          "type": "string"
+          "type": "string",
+          "sortOrder": 8
         },
         {
           "slug": "seo_title",
-          "label": "Titre pour les moteurs de recherche",
+          "label": "Archive SEO — ancien titre (sans effet sur le site)",
           "type": "string",
           "validation": {
             "maxLength": 90
-          }
+          },
+          "widget": "cattelan-editorial:retired-reference",
+          "sortOrder": 9
         },
         {
           "slug": "meta_description",
-          "label": "Description pour les moteurs de recherche",
+          "label": "Archive SEO — ancienne description (sans effet sur le site)",
           "type": "text",
           "validation": {
             "maxLength": 180
-          }
+          },
+          "widget": "cattelan-editorial:retired-reference",
+          "sortOrder": 10
         }
       ],
-      "urlPattern": "/journal/{slug}/"
+      "urlPattern": "/journal/{slug}/",
+      "admin": {
+        "listColumns": [
+          "excerpt"
+        ]
+      }
     },
     {
       "slug": "catalogues",
       "label": "Catalogues",
-      "labelSingular": "Catalogues",
-      "group": "Contenu du site",
+      "labelSingular": "Catalogue",
+      "group": "Catalogue et demandes",
       "sortOrder": 5,
       "supports": [
         "drafts",
         "revisions",
-        "preview",
-        "seo"
+        "preview"
       ],
       "routable": false,
       "commentsEnabled": false,
@@ -673,17 +755,20 @@
           "slug": "title",
           "label": "Titre du catalogue",
           "type": "string",
-          "required": true
+          "required": true,
+          "sortOrder": 0
         },
         {
           "slug": "edition",
           "label": "Édition",
-          "type": "string"
+          "type": "string",
+          "sortOrder": 1
         },
         {
           "slug": "description",
           "label": "Présentation",
-          "type": "text"
+          "type": "text",
+          "sortOrder": 2
         },
         {
           "slug": "cover",
@@ -696,39 +781,51 @@
               "image/webp",
               "image/avif"
             ]
-          }
+          },
+          "sortOrder": 3
         },
         {
           "slug": "download_label",
           "label": "Libellé du téléchargement",
-          "type": "string"
+          "type": "string",
+          "required": true,
+          "sortOrder": 4
         },
         {
           "slug": "private_file_key",
-          "label": "Référence du PDF privé",
+          "label": "PDF privé — utiliser le remplacement sécurisé",
           "type": "string",
-          "required": true
+          "required": true,
+          "widget": "cattelan-editorial:private-pdf",
+          "sortOrder": 5
         },
         {
           "slug": "is_placeholder",
           "label": "Document de démonstration",
           "type": "boolean",
-          "defaultValue": true
+          "defaultValue": true,
+          "sortOrder": 6
         }
       ],
-      "urlPattern": "/catalogue/"
+      "urlPattern": "/catalogue/",
+      "admin": {
+        "listColumns": [
+          "edition",
+          "is_placeholder"
+        ]
+      },
+      "description": "Remplacer le PDF privé depuis Catalogue et demandes, puis publier le brouillon de cette édition. Le référencement appartient à Pages → Catalogue."
     },
     {
       "slug": "site_content",
       "label": "Contenus communs",
-      "labelSingular": "Contenus communs",
-      "group": "Contenu du site",
+      "labelSingular": "Configuration du site",
+      "group": "Réglages du site",
       "sortOrder": 6,
       "supports": [
         "drafts",
         "revisions",
-        "preview",
-        "seo"
+        "preview"
       ],
       "routable": false,
       "commentsEnabled": false,
@@ -738,12 +835,14 @@
           "slug": "title",
           "label": "Nom de cette configuration",
           "type": "string",
-          "required": true
+          "required": true,
+          "sortOrder": 0
         },
         {
           "slug": "city",
           "label": "Ville du showroom",
-          "type": "string"
+          "type": "string",
+          "sortOrder": 1
         },
         {
           "slug": "brand_location",
@@ -752,43 +851,52 @@
           "required": false,
           "options": {
             "helpText": "Libellé géographique de la marque, distinct de la ville du showroom. Vider ce champ masque la ligne sous le logo."
-          }
+          },
+          "sortOrder": 2
         },
         {
           "slug": "contact_phone",
           "label": "Téléphone public",
-          "type": "string"
+          "type": "string",
+          "sortOrder": 3
         },
         {
           "slug": "whatsapp_url",
           "label": "Lien WhatsApp",
-          "type": "url"
+          "type": "url",
+          "sortOrder": 4
         },
         {
           "slug": "public_email",
           "label": "Email commercial public",
-          "type": "string"
+          "type": "string",
+          "sortOrder": 5,
+          "required": true
         },
         {
           "slug": "cndp_receipt",
           "label": "Récépissé CNDP",
           "type": "string",
-          "required": false
+          "required": false,
+          "sortOrder": 6
         },
         {
           "slug": "address",
           "label": "Adresse vérifiée",
-          "type": "text"
+          "type": "text",
+          "sortOrder": 7
         },
         {
           "slug": "hours",
           "label": "Horaires vérifiés",
-          "type": "text"
+          "type": "text",
+          "sortOrder": 8
         },
         {
           "slug": "map_url",
           "label": "Itinéraire vers le magasin",
-          "type": "url"
+          "type": "url",
+          "sortOrder": 9
         },
         {
           "slug": "map_embed_url",
@@ -797,7 +905,8 @@
           "required": false,
           "options": {
             "helpText": "Collez uniquement l’URL https://www.google.com/maps/embed?pb=… du code Google Maps, sans balise iframe. La carte est chargée sur demande ; vider ce champ masque le bouton."
-          }
+          },
+          "sortOrder": 10
         },
         {
           "slug": "map_note",
@@ -806,7 +915,8 @@
           "required": false,
           "options": {
             "helpText": "Cette note distingue le plan illustratif du véritable itinéraire Google Maps."
-          }
+          },
+          "sortOrder": 11
         },
         {
           "slug": "showroom_latitude",
@@ -819,7 +929,8 @@
           },
           "options": {
             "helpText": "Coordonnée du repère réel du showroom en degrés décimaux. Vider une coordonnée masque le repère."
-          }
+          },
+          "sortOrder": 12
         },
         {
           "slug": "showroom_longitude",
@@ -832,7 +943,8 @@
           },
           "options": {
             "helpText": "Coordonnée du repère réel du showroom en degrés décimaux. Vider une coordonnée masque le repère."
-          }
+          },
+          "sortOrder": 13
         },
         {
           "slug": "logo_light",
@@ -845,7 +957,8 @@
               "image/webp",
               "image/avif"
             ]
-          }
+          },
+          "sortOrder": 14
         },
         {
           "slug": "logo_dark",
@@ -858,124 +971,153 @@
               "image/webp",
               "image/avif"
             ]
-          }
+          },
+          "sortOrder": 15
         },
         {
           "slug": "footer_text",
           "label": "Présentation du pied de page",
-          "type": "text"
+          "type": "text",
+          "sortOrder": 16
         },
         {
           "slug": "catalogue_label",
-          "label": "Bouton catalogue",
-          "type": "string"
+          "label": "Formulaire catalogue — bouton d’envoi",
+          "type": "string",
+          "required": true,
+          "sortOrder": 17
         },
         {
           "slug": "contact_label",
-          "label": "Bouton de contact",
-          "type": "string"
+          "label": "Ancien bouton de contact — valeur de secours",
+          "type": "string",
+          "sortOrder": 18
         },
         {
           "slug": "collections_label",
-          "label": "Navigation collections",
-          "type": "string"
+          "label": "Collections — titre des liens de pied de page",
+          "type": "string",
+          "sortOrder": 19
         },
         {
           "slug": "showroom_label",
-          "label": "Navigation showroom",
-          "type": "string"
+          "label": "Showroom — titre des liens de pied de page",
+          "type": "string",
+          "sortOrder": 20
         },
         {
           "slug": "journal_label",
-          "label": "Navigation Journal",
-          "type": "string"
+          "label": "Journal — titre des liens de pied de page",
+          "type": "string",
+          "sortOrder": 21
         },
         {
           "slug": "read_article_label",
           "label": "Lien lire un article",
-          "type": "string"
+          "type": "string",
+          "sortOrder": 22
         },
         {
           "slug": "discover_label",
           "label": "Bouton découvrir une collection",
           "type": "string",
           "required": true,
-          "defaultValue": "Découvrir"
-        },
-        {
-          "slug": "model_notice",
-          "label": "Précision sur la sélection de modèles",
-          "type": "text"
+          "defaultValue": "Découvrir",
+          "sortOrder": 23
         },
         {
           "slug": "preview_notice",
           "label": "Mention de prévisualisation",
-          "type": "text"
+          "type": "text",
+          "sortOrder": 24
         },
         {
           "slug": "form_name_label",
           "label": "Libellé du nom",
-          "type": "string"
+          "type": "string",
+          "required": true,
+          "sortOrder": 25
         },
         {
           "slug": "form_email_label",
           "label": "Libellé de l’email",
-          "type": "string"
+          "type": "string",
+          "required": true,
+          "sortOrder": 26
         },
         {
           "slug": "form_opt_in_label",
           "label": "Choix facultatif de communications",
-          "type": "text"
+          "type": "text",
+          "required": true,
+          "sortOrder": 27
         },
         {
           "slug": "form_hint",
           "label": "Précision sous le formulaire",
-          "type": "text"
+          "type": "text",
+          "sortOrder": 28
         },
         {
           "slug": "form_privacy",
           "label": "Information sur les coordonnées",
-          "type": "text"
+          "type": "text",
+          "sortOrder": 29
         },
         {
           "slug": "form_pending",
           "label": "Demande en cours",
-          "type": "text"
+          "type": "text",
+          "required": true,
+          "sortOrder": 30
         },
         {
           "slug": "form_name_error",
           "label": "Erreur de nom",
-          "type": "text"
+          "type": "text",
+          "required": true,
+          "sortOrder": 31
         },
         {
           "slug": "form_email_error",
           "label": "Erreur d’email",
-          "type": "text"
+          "type": "text",
+          "required": true,
+          "sortOrder": 32
         },
         {
           "slug": "form_error",
           "label": "Erreur générale",
-          "type": "text"
+          "type": "text",
+          "required": true,
+          "sortOrder": 33
         },
         {
           "slug": "form_success_title",
           "label": "Titre après enregistrement",
-          "type": "string"
+          "type": "string",
+          "required": true,
+          "sortOrder": 34
         },
         {
           "slug": "form_success_text",
           "label": "Texte après enregistrement",
-          "type": "text"
+          "type": "text",
+          "required": true,
+          "sortOrder": 35
         },
         {
           "slug": "form_unavailable",
           "label": "Catalogue indisponible",
-          "type": "text"
+          "type": "text",
+          "required": true,
+          "sortOrder": 36
         },
         {
           "slug": "placeholder_notice",
           "label": "Mention du PDF de test",
-          "type": "text"
+          "type": "text",
+          "sortOrder": 37
         },
         {
           "slug": "active_catalogue",
@@ -983,17 +1125,40 @@
           "type": "reference",
           "validation": {
             "relation": "site_catalogue"
-          }
+          },
+          "sortOrder": 38
         },
         {
           "type": "string",
           "required": false,
           "slug": "analytics_token",
-          "label": "Jeton Cloudflare Web Analytics"
+          "label": "Cloudflare Web Analytics — 32 caractères hexadécimaux ou vide",
+          "sortOrder": 39
+        },
+        {
+          "slug": "editorial_copy",
+          "label": "Textes des formulaires, services et boutons",
+          "type": "json",
+          "required": false,
+          "widget": "cattelan-editorial:editorial-copy",
+          "sortOrder": 40
+        },
+        {
+          "slug": "model_notice",
+          "label": "Archive interne — ancienne précision modèles (non affichée)",
+          "type": "text",
+          "widget": "cattelan-editorial:retired-reference",
+          "sortOrder": 41
         }
       ],
       "urlPattern": "/",
-      "description": "Conserver une seule entrée « Configuration du site ». Les informations pratiques non vérifiées doivent rester vides."
+      "description": "Une seule entrée « global ». Utiliser Piloter le site → Réglages du site pour modifier les champs par tâche. Brouillon, aperçu et publication restent natifs.",
+      "admin": {
+        "listColumns": [
+          "city",
+          "public_email"
+        ]
+      }
     }
   ],
   "relations": [
@@ -27304,6 +27469,447 @@
           "seo_title": "Mentions légales · Cattelan Italia Maroc",
           "meta_description": "Éditeur, hébergeur et propriété des contenus du site Cattelan Italia Maroc."
         }
+      },
+      {
+        "id": "page-confidentialite",
+        "slug": "confidentialite",
+        "status": "draft",
+        "locale": "fr",
+        "data": {
+          "title": "Confidentialité",
+          "route_key": "confidentialite",
+          "eyebrow": "Données personnelles",
+          "intro": "",
+          "seo_title": "Confidentialité",
+          "meta_description": "Les coordonnées recueillies par les formulaires de Cattelan Italia Maroc, leur usage, leur conservation et vos droits.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "privacy-controller-heading",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-controller-heading-text",
+                  "text": "Responsable du traitement",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-controller",
+              "style": "normal",
+              "markDefs": [
+                {
+                  "_type": "link",
+                  "_key": "privacy-email",
+                  "href": "mailto:{{contact_email}}"
+                }
+              ],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-controller-before",
+                  "text": "{{controller}} Showroom : {{showroom_address}}. Contact : ",
+                  "marks": []
+                },
+                {
+                  "_type": "span",
+                  "_key": "privacy-controller-email",
+                  "text": "{{contact_email}}",
+                  "marks": [
+                    "privacy-email"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "privacy-controller-after",
+                  "text": ".",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-collection-heading",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-collection-heading-text",
+                  "text": "Ce que nous recueillons et pourquoi",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-catalogue",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-catalogue-text",
+                  "text": "Télécharger le catalogue : nom et e-mail, numéro WhatsApp et ville facultatifs, pour vous donner accès au catalogue{{catalogue_email_purpose}}. Les nouveautés et invitations ne vous sont envoyées que si vous cochez la case prévue.",
+                  "marks": []
+                }
+              ],
+              "listItem": "bullet",
+              "level": 1
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-appointment",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-appointment-text",
+                  "text": "Prendre rendez-vous : nom, numéro WhatsApp, jour et moment souhaités, ville et message facultatifs, pour organiser votre visite au showroom.",
+                  "marks": []
+                }
+              ],
+              "listItem": "bullet",
+              "level": 1
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-project",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-project-text",
+                  "text": "Demande de conseil (Commande et livraison) : nom, WhatsApp, type de projet, ville et message facultatif, pour préparer votre projet avec un conseiller.",
+                  "marks": []
+                }
+              ],
+              "listItem": "bullet",
+              "level": 1
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-pro",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-pro-text",
+                  "text": "Contact professionnel : nom, cabinet ou société, WhatsApp, e-mail, type de projet, ville, étape, échéance, modèles envisagés et message facultatifs, pour répondre à votre projet.",
+                  "marks": []
+                }
+              ],
+              "listItem": "bullet",
+              "level": 1
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-consent",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-consent-text",
+                  "text": "Nous enregistrons aussi la page d’origine de la demande et, le cas échéant, le modèle consulté. Ces données sont traitées avec votre consentement, donné en envoyant le formulaire. Elles ne sont ni vendues ni cédées.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-access-heading",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-access-heading-text",
+                  "text": "Qui y a accès",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-access",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-access-text",
+                  "text": "L’équipe de {{controller_name}} chargée de votre demande a accès à vos données. {{processors}}.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-transfer-heading",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-transfer-heading-text",
+                  "text": "Transfert hors du Maroc",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-transfer",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-transfer-text",
+                  "text": "{{transfer_subject}} traiter les données dans d’autres pays, notamment aux États-Unis. Ce transfert figure dans notre déclaration auprès de la CNDP.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-retention-heading",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-retention-heading-text",
+                  "text": "Durée de conservation",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-retention",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-retention-text",
+                  "text": "Demandes de catalogue, de rendez-vous, de projet et demandes d’architectes : {{retention}} à compter de leur envoi, puis suppression automatique.",
+                  "marks": []
+                }
+              ],
+              "listItem": "bullet",
+              "level": 1
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-marketing",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-marketing-text",
+                  "text": "Nouveautés et invitations : jusqu’au retrait de votre accord, dans la limite de ces {{retention}}.",
+                  "marks": []
+                }
+              ],
+              "listItem": "bullet",
+              "level": 1
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-commercial",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-commercial-text",
+                  "text": "Si votre demande aboutit à une commande, les documents commerciaux et comptables sont conservés pendant la durée prévue par la loi.",
+                  "marks": []
+                }
+              ],
+              "listItem": "bullet",
+              "level": 1
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-abuse",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-abuse-text",
+                  "text": "Protection contre les envois abusifs : une empreinte chiffrée de votre adresse IP, effacée sous trois heures. L’adresse elle-même n’est pas enregistrée.",
+                  "marks": []
+                }
+              ],
+              "listItem": "bullet",
+              "level": 1
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-cookies-heading",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-cookies-heading-text",
+                  "text": "Cookies et mesure d’audience",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-cookies",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-cookies-text",
+                  "text": "{{analytics_notice}}",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-rights-heading",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-rights-heading-text",
+                  "text": "Vos droits",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-rights",
+              "style": "normal",
+              "markDefs": [
+                {
+                  "_type": "link",
+                  "_key": "privacy-email",
+                  "href": "mailto:{{contact_email}}"
+                },
+                {
+                  "_type": "link",
+                  "_key": "privacy-cndp",
+                  "href": "https://www.cndp.ma"
+                }
+              ],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-rights-before",
+                  "text": "Conformément à la loi n° 09-08, vous pouvez accéder à vos données, les faire rectifier ou supprimer, et vous opposer à leur traitement, notamment à l’envoi de nouveautés, sans frais. Écrivez à ",
+                  "marks": []
+                },
+                {
+                  "_type": "span",
+                  "_key": "privacy-rights-email",
+                  "text": "{{contact_email}}",
+                  "marks": [
+                    "privacy-email"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "privacy-rights-cndp-before",
+                  "text": " ou à notre siège social. Vous pouvez aussi saisir la Commission nationale de contrôle de la protection des données à caractère personnel (",
+                  "marks": []
+                },
+                {
+                  "_type": "span",
+                  "_key": "privacy-rights-cndp-link",
+                  "text": "CNDP",
+                  "marks": [
+                    "privacy-cndp"
+                  ]
+                },
+                {
+                  "_type": "span",
+                  "_key": "privacy-rights-cndp-after",
+                  "text": ").",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-cndp",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-cndp-text",
+                  "text": "{{cndp_notice}}",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-external-heading",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-external-heading-text",
+                  "text": "Carte et liens externes",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-external",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-external-text",
+                  "text": "Sur la page showroom, Google Maps se charge lorsque vous cliquez sur « Afficher la carte interactive » ; votre navigateur se connecte alors à Google. Les boutons d’itinéraire ouvrent Google Maps et les boutons WhatsApp ouvrent WhatsApp.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "privacy-updated",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "privacy-updated-text",
+                  "text": "Mise à jour : {{updated_at}}.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
       }
     ],
     "site_content": [
@@ -27318,7 +27924,7 @@
           "brand_location": "Maroc",
           "contact_phone": "",
           "whatsapp_url": null,
-          "public_email": "",
+          "public_email": "contact@cattelanitalia.ma",
           "address": "",
           "hours": "",
           "map_url": null,
@@ -27361,7 +27967,53 @@
           "form_unavailable": "Le catalogue est momentanément indisponible. Contactez notre équipe sur WhatsApp pour poursuivre votre demande.",
           "placeholder_notice": "Document de démonstration utilisé pour tester le téléchargement. Le catalogue définitif sera ajouté ultérieurement.",
           "active_catalogue": "$ref:catalogue-demonstration",
-          "discover_label": "Découvrir"
+          "discover_label": "Découvrir",
+          "editorial_copy": {
+            "action_appointment_label": "Prendre rendez-vous",
+            "action_advisor_label": "Nous écrire",
+            "action_catalogue_label": "Télécharger le catalogue",
+            "footer_valet_text": "Service voiturier",
+            "whatsapp_general_message": "Bonjour, je souhaite des informations sur Cattelan Italia Maroc.",
+            "model_quote_label": "Demander un devis",
+            "model_files_label": "Demander les fichiers 2D et 3D",
+            "model_services": "Fabrication sur commande en Italie. Livraison et installation au Maroc. Livraison offerte à Casablanca.",
+            "model_quote_note": "Le devis précise les dimensions, les finitions, la livraison et l’installation. Vous pouvez le demander et le valider à distance.",
+            "request_project_label": "Type de projet",
+            "request_architect_label": "Avec un architecte",
+            "request_piece_label": "Un meuble",
+            "request_ensemble_label": "Une pièce ou toute la maison",
+            "request_company_label": "Cabinet ou société",
+            "request_whatsapp_label": "Numéro WhatsApp",
+            "request_day_label": "Jour souhaité",
+            "request_period_label": "Moment souhaité",
+            "request_morning_label": "Matin",
+            "request_afternoon_label": "Après-midi",
+            "request_hours_note": "",
+            "request_city_label": "Ville",
+            "request_city_optional_label": "Votre ville (facultatif)",
+            "request_stage_label": "Avancement du projet",
+            "request_deadline_label": "Délai souhaité",
+            "request_choice_label": "Choisir",
+            "request_models_label": "Modèles envisagés (facultatif)",
+            "request_message_label": "Message (facultatif)",
+            "request_appointment_submit": "Demander un rendez-vous",
+            "request_project_submit": "Demander un conseil",
+            "request_pro_submit": "Envoyer ma demande",
+            "request_appointment_success": "Demande reçue. Nous vous confirmerons l’horaire sur WhatsApp.",
+            "request_project_success": "Votre demande est enregistrée. Un conseiller vous écrit sur WhatsApp ; vous pourrez lui envoyer des photos de la pièce.",
+            "request_pro_success": "Votre demande est enregistrée. Un conseiller vous recontacte sur WhatsApp ou par e-mail.",
+            "request_pending": "Envoi en cours…",
+            "request_error": "Votre demande n’a pas pu être envoyée. Réessayez, ou contactez le showroom.",
+            "catalogue_whatsapp_label": "Numéro WhatsApp (facultatif)",
+            "catalogue_city_label": "Ville (facultatif)",
+            "catalogue_city_choice": "Choisir une ville",
+            "catalogue_email_sent": "Un e-mail contenant le catalogue vous a été envoyé. Son lien est valable 24 heures.",
+            "catalogue_email_failed": "L’e-mail n’a pas pu être envoyé. Vous pouvez télécharger le PDF ci-dessus.",
+            "catalogue_email_pending": "L’envoi du catalogue par e-mail est en cours. Vous pouvez déjà télécharger le PDF ci-dessus.",
+            "privacy_controller": "Racha Home, société à responsabilité limitée, registre du commerce de Marrakech n° 76831, siège social Résidence Marrakchia I, rue du Lieutenant Lamure, boulevard Mohammed VI, Marrakech-Médina, Maroc.",
+            "privacy_controller_name": "Racha Home",
+            "privacy_updated_label": "1er octobre 2026"
+          }
         }
       }
     ]
@@ -27400,6 +28052,42 @@
           "type": "custom",
           "label": "Recevoir le catalogue",
           "url": "/catalogue/"
+        }
+      ]
+    },
+    {
+      "name": "footer",
+      "label": "Informations de pied de page",
+      "items": [
+        {
+          "type": "custom",
+          "label": "À propos",
+          "url": "/a-propos/"
+        },
+        {
+          "type": "custom",
+          "label": "Commande et livraison",
+          "url": "/votre-projet/"
+        },
+        {
+          "type": "custom",
+          "label": "Professionnels",
+          "url": "/professionnels/"
+        },
+        {
+          "type": "custom",
+          "label": "FAQ",
+          "url": "/faq/"
+        },
+        {
+          "type": "custom",
+          "label": "Confidentialité",
+          "url": "/confidentialite/"
+        },
+        {
+          "type": "custom",
+          "label": "Mentions légales",
+          "url": "/mentions-legales/"
         }
       ]
     }

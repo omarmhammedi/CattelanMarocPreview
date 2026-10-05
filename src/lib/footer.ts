@@ -1,16 +1,7 @@
-/** The footer's information links, in the plan's order. */
-const footerLinks = [
-  { label: 'À propos', href: '/a-propos/' },
-  { label: 'Commande et livraison', href: '/votre-projet/' },
-  { label: 'Professionnels', href: '/professionnels/' },
-  { label: 'FAQ', href: '/faq/' },
-  { label: 'Confidentialité', href: '/confidentialite/' },
-  { label: 'Mentions légales', href: '/mentions-legales/' },
-];
+import {FOOTER_MENU} from './navigation-copy.mjs';
+type MenuItem={label:string;url?:string;target?:string|null;children?:MenuItem[]};
 
 /** Leaves out the links the main menu already lists in the same footer. */
-export function secondaryLinks(menu: { url?: string }[]) {
-  return footerLinks.filter(link => !menu.some(item => item.url === link.href));
+export function secondaryLinks(menu: { url?: string }[], footer:MenuItem[]=FOOTER_MENU.items) {
+  return footer.filter(link => !menu.some(item => item.url === link.url)).map(link=>({...link,href:link.url}));
 }
-
-export const valetService = 'Service voiturier';

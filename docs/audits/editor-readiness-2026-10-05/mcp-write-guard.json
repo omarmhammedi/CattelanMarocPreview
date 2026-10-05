@@ -1,0 +1,16 @@
+{
+  "origin": "http://localhost:4331",
+  "disposable": true,
+  "checks": [
+    "Native MCP rejects anonymous calls before the application guard.",
+    "Authenticated native content_get still reads the expected record and revision.",
+    "Authenticated slug-only content_update returns JSON-RPC -32602 with its request ID and leaves the record unchanged.",
+    "A mixed MCP batch rejects every request before execution and preserves the record.",
+    "A valid token without content:read still receives the native INSUFFICIENT_SCOPE tool error.",
+    "Every temporary token was revoked and rejected by native authentication afterwards."
+  ],
+  "createdTokens": 2,
+  "revokedTokens": 2,
+  "recordUnchanged": true,
+  "status": "passed"
+}

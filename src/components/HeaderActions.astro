@@ -1,17 +1,22 @@
 ---
-import { actions } from '../lib/actions';
-interface Props { advisorHref?: string | null; path?: string; variant?: 'bar' | 'menu'; }
-const { advisorHref, path = '', variant = 'bar' } = Astro.props;
+import { actionsFor, isCatalogueLink } from '../lib/actions';
+interface Props { advisorHref?: string | null; path?: string; variant?: 'bar' | 'menu'; site?: any; }
+const { advisorHref, path = '', variant = 'bar', site } = Astro.props;
+const actions=actionsFor(site);
+// The dedicated catalogue link keeps the native primary menu item's label and target.
+const catalogueItem=site?.navigation?.find((item:any)=>isCatalogueLink(item.url));
+const catalogueLabel=catalogueItem?.label ?? 'Catalogue';
+const catalogueTarget=catalogueItem?.target;
 const onCatalogue = path.startsWith(actions.catalogue.href) ? 'page' : undefined;
 const advisorName = `${actions.advisor.label} sur ${actions.advisor.channel}`;
 ---
 {variant === 'bar' ? <>
-  <a class="header-catalogue" href={actions.catalogue.href} aria-current={onCatalogue}>Catalogue</a>
+  <a class="header-catalogue" href={actions.catalogue.href} aria-current={onCatalogue} target={catalogueTarget} rel={catalogueTarget === '_blank' ? 'noopener noreferrer' : undefined}>{catalogueLabel}</a>
   {advisorHref && <a class="header-whatsapp" href={advisorHref} target="_blank" rel="noopener noreferrer" aria-label={advisorName} title={advisorName} data-action="advisor">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path class="header-whatsapp-bubble" d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path class="header-whatsapp-handset" d="M9.4 7.6c.3 0 .5.1.6.4l.8 1.9c.1.3 0 .6-.2.8l-.6.6c-.2.2-.2.4-.1.6.6 1.1 1.5 2 2.6 2.6.2.1.4.1.6-.1l.6-.6c.2-.2.5-.3.8-.2l1.9.8c.3.1.4.3.4.6v.5c0 .5-.3 1-.7 1.2-.6.3-1.4.4-2.2.2-1.6-.4-3-1.3-4.2-2.5s-2.1-2.6-2.5-4.2c-.2-.8-.1-1.6.2-2.2.2-.4.7-.7 1.2-.7z"/></svg>
   </a>}
   <a class="btn header-appointment" href={actions.appointment.href} data-action="appointment">{actions.appointment.label}</a>
 </> : <div class="header-menu-actions">
-  <a href={actions.catalogue.href} aria-current={onCatalogue}>Catalogue</a>
+  <a href={actions.catalogue.href} aria-current={onCatalogue} target={catalogueTarget} rel={catalogueTarget === '_blank' ? 'noopener noreferrer' : undefined}>{catalogueLabel}</a>
   <a class="btn solid" href={actions.appointment.href} data-action="appointment">{actions.appointment.label}</a>
 </div>}

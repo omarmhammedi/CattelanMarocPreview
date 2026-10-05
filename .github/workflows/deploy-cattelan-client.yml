@@ -35,6 +35,12 @@ jobs:
       - name: Install
         run: npm ci
 
+      - name: Verify code and seed
+        run: |
+          npm test
+          npm run check
+          node scripts/seed-validate.mjs
+
       - name: Build
         run: npm run build
         env:

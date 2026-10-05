@@ -1,0 +1,21 @@
+{
+  "completedAt": "2026-10-05T01:40:08.225Z",
+  "origin": "http://localhost:4331",
+  "syntheticInterceptedLists": true,
+  "noStoredContacts": true,
+  "passed": true,
+  "checks": [
+    "Demandes : recherche sans accents, filtres, état vide et réinitialisation fonctionnent ; le choix architecte accompagne le libellé canonique « Un meuble » dans la synthèse et les détails.",
+    "Contacts catalogue : filtres d’envoi, recherche, détails de consentement et réinitialisation fonctionnent ; la portée limitée aux demandes chargées et celle de l’export complet sont explicites.",
+    "Mobile 390 px : tableau défilant sans débordement de page et accès direct au panneau PDF."
+  ],
+  "screenshots": [
+    "requests-filtered-details.png",
+    "catalogue-filtered-details.png",
+    "catalogue-admin-mobile.png",
+    "catalogue-pdf-mobile.png"
+  ],
+  "errors": [],
+  "blockedWrites": [],
+  "failure": null
+}

@@ -1,0 +1,13 @@
+{
+  "completedAt": "2026-10-05T01:46:04.334Z",
+  "disposableOrigin": "http://localhost:4331",
+  "passed": true,
+  "suite": "native-api-guards",
+  "results": [
+    "Les six collections, les 66 entrées et chaque champ du schéma courant sont présents ; SEO seulement sur les contenus publics propriétaires.",
+    "API native : e-mail vide ou malformé, libellés vides, jeton incorrect, identité modifiée, sections dupliquées et confidentialité incomplète refusés ; identifiants protégés à la publication, suppression/dépublication bloquées."
+  ],
+  "screenshots": [],
+  "browserErrors": [],
+  "fixture": "Current schema and content; synthetic images/PDF. Tests do not verify original media bytes or live deployment."
+}

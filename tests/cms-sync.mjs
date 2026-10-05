@@ -32,7 +32,7 @@ try {
 
 const base = await integrationEnvironment();
 const credentialFile = resolve('.wrangler/cms-sync-webauthn.json');
-const reportFile = resolve('docs/test-results-cms.md');
+const reportFile = resolve(process.env.CMS_TEST_REPORT || 'docs/test-results-cms.md');
 const report = [];
 const record = (message) => { report.push(message); console.log(`PASS ${message}`); };
 const headings = (html) => [...html.matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/giu)].map((match) => match[1].replace(/<[^>]*>/gu, ''));
@@ -45,6 +45,16 @@ function editorialData(value) {
   return Object.fromEntries(Object.entries(value).filter(([, child]) => child !== null && child !== undefined && child !== '' && !(Array.isArray(child) && child.length === 0)).map(([key, child]) => [key,
     key === 'meta' && value.provider === 'local' && value.id ? { storageKey: child?.storageKey } : editorialData(child),
   ]));
+}
+// Native PUT merges data. Explicitly clear keys introduced by a fixture so
+// sparse original records regain their original editorial state.
+function restoreData(original, current) {
+  return {...Object.fromEntries(Object.keys(current).filter(key => !(key in original)).map(key => [key, null])), ...original};
+}
+function originalImageSource(source) {
+  const url = new URL(source, base);
+  if (url.pathname === '/_image' && url.searchParams.has('href')) return originalImageSource(url.searchParams.get('href'));
+  return url.origin === base.origin ? `${url.pathname}${url.search}` : url.href;
 }
 const browser = await playwright.chromium.launch({
   headless: true,
@@ -111,13 +121,13 @@ async function setupAndLogin() {
     assert(process.argv.includes('--setup'), 'Fresh database: rerun with --setup to permit native local setup.');
     // Repeated requests are the native wizard's supported resumable seed flow.
     let complete = false;
-    for (let i = 0; i < 30 && !complete; i++) {
+    for (let i = 0; i < 150 && !complete; i++) {
       const seed = await api('/_emdash/api/setup', 'POST', {
         title: 'Cattelan Italia Maroc', tagline: 'Vivre italien, à Casablanca', includeContent: true,
       });
       complete = seed.seedComplete;
     }
-    assert(complete, 'Seed wizard did not complete within 30 requests.');
+    assert(complete, 'Seed wizard did not complete within 150 requests.');
     const registration = await api('/_emdash/api/setup/admin', 'POST', {
       email: 'cms-sync@example.invalid', name: 'Test local de synchronisation CMS',
     });
@@ -204,7 +214,7 @@ async function checkEntry(collection, id, route, field = 'title') {
   } finally {
     if (changed) {
       const current = await api(path);
-      await api(path, 'PUT', { data: original.item.data, _rev: current._rev });
+      await api(path, 'PUT', { data: restoreData(original.item.data, current.item.data), _rev: current._rev });
       const restored = await api(path);
       await api(`${path}/publish`, 'POST', { _rev: restored._rev });
       const publicRestored = await publicHtml(route);
@@ -244,12 +254,12 @@ async function includesAt(html, selector, marker, attribute) {
 async function imageAt(html, selector, expectedSource) {
   const sources = await inspect(html, selector, 'src');
   assert.equal(sources.length, 1, `Expected exactly one editable image at ${selector}.`);
-  assert.equal(sources[0], expectedSource, `The image at ${selector} must use the replacement media stored in R2.`);
+  assert.equal(originalImageSource(sources[0]), originalImageSource(expectedSource), `The image at ${selector} must use the replacement media stored in R2.`);
 }
 
 const paragraph = (text) => [{ _type: 'block', _key: 'integration-block', style: 'normal', markDefs: [], children: [{ _type: 'span', _key: 'integration-span', text, marks: [] }] }];
 
-async function checkFields({ collection, entry, route, label, mutate, verify, clear, verifyCleared, additionalRoutes = [], afterPublish }) {
+async function checkFields({ collection, entry, route, label, mutate, verify, verifyPreview = verify, clear, verifyCleared, verifyClearedPreview = verifyCleared, clearMessage, additionalRoutes = [], afterPublish }) {
   const path = `/_emdash/api/content/${collection}/${entry.id}`;
   const original = await api(path);
   assert.equal(original.item.status, 'published');
@@ -269,7 +279,7 @@ async function checkFields({ collection, entry, route, label, mutate, verify, cl
     await save(mutate(structuredClone(original.item.data), marker));
     for (const publicRoute of [route, ...additionalRoutes]) assert(!(await publicHtml(publicRoute)).html.includes(marker), 'Draft field leaked to the public site.');
     const preview = await api(`${path}/preview-url`, 'POST', {});
-    await verify((await publicHtml(preview.url)).html, marker, route);
+    await verifyPreview((await publicHtml(preview.url)).html, marker, route);
     await publish();
     for (const publicRoute of [route, ...additionalRoutes]) await verify((await publicHtml(publicRoute)).html, marker, publicRoute);
     if (afterPublish) await afterPublish(marker);
@@ -280,18 +290,19 @@ async function checkFields({ collection, entry, route, label, mutate, verify, cl
       const emptyPreview = await api(`${path}/preview-url`, 'POST', {});
       const previewHtml = (await publicHtml(emptyPreview.url)).html;
       assert(!previewHtml.includes(marker));
-      await verifyCleared(previewHtml, route);
+      await verifyClearedPreview(previewHtml, route);
       await publish();
       for (const publicRoute of [route, ...additionalRoutes]) {
         const html = (await publicHtml(publicRoute)).html;
         assert(!html.includes(marker));
         await verifyCleared(html, publicRoute);
       }
-      record(`${label} : champs vidés respectés après publication, sans valeur de secours éditoriale.`);
+      record(clearMessage || `${label} : champs vidés respectés après publication, sans valeur de secours éditoriale.`);
     }
   } finally {
     if (changed) {
-      await save(original.item.data);
+      const current = await api(path);
+      await save(restoreData(original.item.data, current.item.data));
       await publish();
       assert.deepEqual(editorialData((await api(path)).item.data), editorialData(original.item.data), 'CMS field fixture was not restored.');
       record(`${label} : contenu initial restauré.`);
@@ -362,7 +373,7 @@ async function checkEditableFields(pages, home, post) {
       ];
       for (const [key, id, imageSelector] of sections) {
         const section = `main.home .home-sections > section#${id}`;
-        const cta = `${section} a[href="/collections/?cms-integration=${key}"]`;
+        const cta = `${key === 'catalogue' ? 'main.home #collections' : section} a[href="/collections/?cms-integration=${key}"]`;
         assert.equal((await inspect(html, `#${id}`)).length, 1, `Expected one responsive ${id} section.`);
         assert.equal((await inspect(html, section)).length, 1, `Expected ${id} in the shared editorial tree.`);
         assert.equal((await inspect(html, cta)).length, 1, `Expected one editable CTA in ${id}.`);
@@ -402,14 +413,21 @@ async function checkEditableFields(pages, home, post) {
   const model = models.items.find((item) => item.slug === 'skorpio');
   assert(model);
   await checkFields({
-    collection: 'models', entry: model, route: '/collections/tables/', label: 'Modèle lié : image, légende et précision de disponibilité',
+    collection: 'models', entry: model, route: '/collections/tables/', label: 'Modèle lié : image et légende',
     mutate: (data, marker) => ({ ...data, image: { ...imageFixture, alt: `${marker}-image` }, image_caption: `${marker}-caption`, availability_note: `${marker}-availability` }),
     verify: async (html, marker) => {
       await includesAt(html, '.model-card img', `${marker}-image`, 'alt');
       await imageAt(html, `.model-card img[alt="${marker}-image"]`, imageSource);
       await includesAt(html, '.model-card figcaption', `${marker}-caption`);
-      await includesAt(html, '.model-card', `${marker}-availability`);
+      assert(!html.includes(`${marker}-availability`), 'Retired internal availability notes must not reappear in model cards.');
     },
+    verifyPreview: async (html, marker) => {
+      await includesAt(html, '.model-hero-figure img', `${marker}-image`, 'alt');
+      await imageAt(html, '.model-hero-figure img', imageSource);
+      await includesAt(html, '.model-hero-figure figcaption', `${marker}-caption`);
+      assert(!html.includes(`${marker}-availability`));
+    },
+    verifyClearedPreview: async (html) => assert.equal((await inspect(html, '.model-hero-figure')).length, 0),
     clear: (data) => ({ ...data, image: null, image_caption: '', availability_note: '' }),
     verifyCleared: async (html) => assert.equal((await inspect(html, '.model-card:first-child figure')).length, 0),
   });
@@ -425,8 +443,9 @@ async function checkEditableFields(pages, home, post) {
       if (route === '/showroom-casablanca/') await includesAt(html, '.showroom-contact a[href^="mailto:"]', marker.toLowerCase());
       if (route === '/' || route === '/journal/') await includesAt(html, 'main', `${marker}-read`);
     },
-    clear: (data) => ({ ...data, public_email: '', read_article_label: '' }),
-    verifyCleared: async (html) => assert.equal((await inspect(html, 'a[href^="mailto:"]')).length, 0),
+    clearMessage: 'Configuration : libellé Lire l’article vidé après publication ; adresse e-mail publique obligatoire conservée et connectée.',
+    clear: (data) => ({ ...data, read_article_label: '' }),
+    verifyCleared: async (html) => assert((await inspect(html, 'footer a[href^="mailto:"]')).length > 0, 'The required public contact address remains connected.'),
   });
   await checkFields({
     collection: 'site_content', entry: global, route: '/', additionalRoutes: ['/catalogue/'], label: 'Formulaire catalogue : erreurs éditables du nom et de l’e-mail',
@@ -474,7 +493,7 @@ try {
   console.error(error.message);
 } finally {
   await browser.close();
-  await mkdir(resolve('docs'), { recursive: true });
+  await mkdir(resolve(reportFile, '..'), { recursive: true });
   const title = failed ? 'Vérification CMS interrompue' : process.argv.includes('--setup-only') ? 'Initialisation CMS vérifiée — synchronisation à tester' : 'Vérification CMS réussie';
   const lines = [
     `# ${title}`, '', `Date UTC : ${new Date().toISOString()}`, '',

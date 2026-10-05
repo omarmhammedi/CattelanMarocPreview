@@ -1,0 +1,13 @@
+{
+  "completedAt": "2026-10-05T01:33:23.010Z",
+  "disposableOrigin": "http://localhost:4331",
+  "passed": true,
+  "suite": "fixture-preparation-only",
+  "results": [
+    "Brouillons créés par la migration publiés uniquement dans la fixture locale ; aucune ressource distante utilisée.",
+    "Les six collections, les 66 entrées et chaque champ du schéma courant sont présents ; SEO seulement sur les contenus publics propriétaires."
+  ],
+  "screenshots": [],
+  "browserErrors": [],
+  "fixture": "Current schema and content; synthetic images/PDF. Tests do not verify original media bytes or live deployment."
+}

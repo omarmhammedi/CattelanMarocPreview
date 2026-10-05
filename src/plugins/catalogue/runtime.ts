@@ -8,6 +8,7 @@ import {
 } from "./core.ts";
 
 import { catalogueEmail, dispatchCatalogueEmail } from "./email.ts";
+import { runCatalogueQueues, type CatalogueRun } from "./processing.ts";
 import { rateLimit } from "../rate-limit.ts";
 import { purgeExpired } from "../retention.ts";
 
@@ -70,26 +71,34 @@ async function publishedCatalogue(id: string): Promise<Catalogue> {
   };
 }
 
-export async function processPending(ctx: PluginContext) {
+export async function processPending(ctx: PluginContext, mode: CatalogueRun) {
   const store = leads(ctx);
   const now = Date.now();
-  let processed = 0;
-  // Each run is bounded; expired leases are reclaimed after a interrupted execution.
-  for (const status of ["pending", "processing"] as const) {
-    const page = await store.query({ where: { crmStatus: status, crmNextAttemptAt: { lte: now } }, orderBy: { crmNextAttemptAt: "asc" }, limit: 25 });
-    for (const item of page.items) {
-      if (await dispatchLead(store, item.id, mockCrm, now) !== "skipped") processed++;
-    }
-  }
-  if (emailSettings()) {
-    for (const emailStatus of ['pending', 'processing'] as const) {
-      const page = await store.query({ where: { emailStatus, emailNextAttemptAt: { lte: now } }, orderBy: { emailNextAttemptAt: 'asc' }, limit: 5 });
-      for (const item of page.items) await sendCatalogue(ctx, item.id);
-    }
-  }
-  const expired = await ctx.storage.rates.query({ where: { expiresAt: { lt: now } }, limit: 100 });
-  if (expired.items.length) await ctx.storage.rates.deleteMany(expired.items.map((item) => item.id));
-  return { processed, mode: "mock", message: "Aucune donnée n’a été envoyée à un CRM externe." };
+  const processed = await runCatalogueQueues(mode, {
+    crm: async () => {
+      let count = 0;
+      // Each run is bounded; expired leases are reclaimed after an interrupted execution.
+      for (const status of ["pending", "processing"] as const) {
+        const page = await store.query({ where: { crmStatus: status, crmNextAttemptAt: { lte: now } }, orderBy: { crmNextAttemptAt: "asc" }, limit: 25 });
+        for (const item of page.items) {
+          if (await dispatchLead(store, item.id, mockCrm, now) !== "skipped") count++;
+        }
+      }
+      return count;
+    },
+    email: async () => {
+      if (!emailSettings()) return;
+      for (const emailStatus of ['pending', 'processing'] as const) {
+        const page = await store.query({ where: { emailStatus, emailNextAttemptAt: { lte: now } }, orderBy: { emailNextAttemptAt: 'asc' }, limit: 5 });
+        for (const item of page.items) await sendCatalogue(ctx, item.id);
+      }
+    },
+    cleanup: async () => {
+      const expired = await ctx.storage.rates.query({ where: { expiresAt: { lt: now } }, limit: 100 });
+      if (expired.items.length) await ctx.storage.rates.deleteMany(expired.items.map((item) => item.id));
+    },
+  });
+  return { processed, mode: "mock", message: `Aucune donnée n’a été envoyée à un CRM externe.${mode === "manual-crm" ? " Aucun e-mail n’a été envoyé par cette action." : ""}` };
 }
 
 export function createPlugin() {
@@ -110,7 +119,7 @@ export function createPlugin() {
         await ctx.cron?.schedule("catalogue-crm", { schedule: "*/5 * * * *" });
       },
       "plugin:deactivate": async (_event, ctx) => { await ctx.cron?.cancel("catalogue-crm"); },
-      cron: async (event, ctx) => { if (event.name === "catalogue-crm") { await processPending(ctx); await purgeExpired(leads(ctx)); } },
+      cron: async (event, ctx) => { if (event.name === "catalogue-crm") { await processPending(ctx, "scheduled"); await purgeExpired(leads(ctx)); } },
     },
     routes: {
       request: definePluginRoute({
@@ -214,7 +223,7 @@ export function createPlugin() {
         permission: "plugins:manage",
         methods: ["POST"],
         request: { body: "json", maxBytes: 128 },
-        handler: processPending,
+        handler: (ctx) => processPending(ctx, "manual-crm"),
       }),
       "contacts/delete": definePluginRoute({
         permission: "plugins:manage",

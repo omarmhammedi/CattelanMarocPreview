@@ -4,9 +4,9 @@ import EditorialSection from './EditorialSection.astro';
 import SiteActions from './SiteActions.astro';
 import PageLayout from '../layouts/PageLayout.astro';
 import { PortableText } from 'emdash/ui';
-import { generalWhatsappMessage, whatsappHref, type ActionKey } from '../lib/actions';
+import { generalMessageFor, whatsappHref, type ActionKey } from '../lib/actions';
 interface Props { page: any; site: any; order: ActionKey[]; whatsappMessage?: string; variant?: 'sections' | 'faq'; }
-const { page, site, order, whatsappMessage = generalWhatsappMessage, variant = 'sections' } = Astro.props;
+const { page, site, order, whatsappMessage = generalMessageFor(site), variant = 'sections' } = Astro.props;
 const heading = (section: any) => String(section.displayHeading || section.heading || '').trim();
 const sections = (page.sections || []).filter((section: any) => heading(section) || section.text || section.image || (section.ctaLabel && section.ctaHref));
 // FAQ: a `group` section opens a group; each following `faq_*` section is one question.
@@ -34,6 +34,6 @@ const editorial = variant === 'faq' ? sections.filter((section: any) => section.
   </section>}
   {Astro.slots.has('form') && <section class="page-gutter page-form-section" id="demande"><slot name="form" /></section>}
   {order.length > 0 && <section class="page-cta page-gutter" data-page-reveal>
-    <SiteActions order={order} advisorHref={whatsappHref(site.whatsappUrl, whatsappMessage)} />
+    <SiteActions site={site} order={order} advisorHref={whatsappHref(site.whatsappUrl, whatsappMessage)} />
   </section>}
 </PageLayout>

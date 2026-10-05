@@ -1,0 +1,55 @@
+{
+  "completedAt": "2026-10-05T01:46:36.076Z",
+  "baseline": "current seed",
+  "sourceSeedSha256": "00878bb334ee6af86baad3af6ed38045284d8fb76a213270e7110b3b1e667ff0",
+  "nativeSetup": "Native EmDash wizard and WebAuthn passkey",
+  "currentSchemaMigrationDryRun": {
+    "origin": "http://localhost:4331",
+    "migration": "0025-editor-readiness",
+    "mode": "dry-run",
+    "collections": [
+      {
+        "slug": "pages",
+        "metadata": [],
+        "fields": []
+      },
+      {
+        "slug": "families",
+        "metadata": [],
+        "fields": []
+      },
+      {
+        "slug": "models",
+        "metadata": [],
+        "fields": []
+      },
+      {
+        "slug": "posts",
+        "metadata": [],
+        "fields": []
+      },
+      {
+        "slug": "catalogues",
+        "metadata": [],
+        "fields": []
+      },
+      {
+        "slug": "site_content",
+        "metadata": [],
+        "fields": []
+      }
+    ],
+    "missingCopy": [],
+    "incompleteRequired": [],
+    "createPrivacyDraft": false,
+    "extraGlobalEntries": [],
+    "footer": "preserve",
+    "publish": "none"
+  },
+  "mediaFixture": {
+    "patched": 58,
+    "mediaPositions": 3047,
+    "actualMediaFiles": 3,
+    "fixture": "All current entries and schema; two synthetic photographs and a synthetic PDF. Official asset bytes are outside this test."
+  }
+}
