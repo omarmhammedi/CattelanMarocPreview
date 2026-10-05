@@ -24,7 +24,7 @@ function initializeHome() {
   const track = collections?.querySelector<HTMLElement>('.track');
   const invitation = home.querySelector<HTMLElement>('#showroom .say h2');
   const scenes = [...home.querySelectorAll<HTMLElement>('[data-scene]')];
-  const mobileImages = [...home.querySelectorAll<HTMLImageElement>('[data-mobile-frame] > img')];
+  const mobileImages = [...home.querySelectorAll<HTMLImageElement>('[data-mobile-frame] > img, [data-mobile-frame] > picture.home-photo > img')];
   const familyRail = collections?.querySelector<HTMLElement>('.family-rail');
   const synchronizeLayout = () => {
     if (familyRail) familyRail.tabIndex = desktop() ? -1 : 0;
@@ -97,7 +97,7 @@ function initializeHome() {
     if (!desktop()) {
       if (!mobileDrift) return;
       mobileImages.forEach(image => {
-        const rect = image.parentElement?.getBoundingClientRect();
+        const rect = image.closest('[data-mobile-frame]')?.getBoundingClientRect();
         if (!rect || rect.bottom < 0 || rect.top > viewport) return;
         const drift = (((rect.top + rect.height / 2) - viewport / 2) / viewport * -28).toFixed(1);
         image.style.transform = `translateY(${drift}px)`;

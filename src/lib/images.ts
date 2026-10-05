@@ -4,6 +4,7 @@
  */
 export interface CmsImage { src: string; width?: number; height?: number }
 interface ResponsiveImageAttributes extends CmsImage { srcset?: string; sizes?: string; 'data-original-src'?: string }
+interface RenditionOptions { format?: 'webp' | 'avif'; widths?: readonly number[] }
 
 /** The source pixel width needed by object-fit:cover can exceed the frame's
  * visible width, especially when a landscape photograph fills a portrait card.
@@ -14,7 +15,7 @@ export function coverSizes(image: CmsImage, mobileRatio: number, desktopRatio = 
   return `(max-width: 850px) ${Math.ceil(100 * factor(mobileRatio))}vw, ${Math.ceil(desktopVw * factor(desktopRatio))}vw`;
 }
 
-export function imageAttributes(image: CmsImage, sizes = '100vw', maxWidth = 1600): ResponsiveImageAttributes {
+export function imageAttributes(image: CmsImage, sizes = '100vw', maxWidth = 1600, options: RenditionOptions = {}): ResponsiveImageAttributes {
   const original = { src: image.src, width: image.width, height: image.height };
   const width = image.width, height = image.height;
   if (!Number.isInteger(width) || !Number.isInteger(height) || !width || !height || width < 1 || height < 1) return original;
@@ -22,8 +23,9 @@ export function imageAttributes(image: CmsImage, sizes = '100vw', maxWidth = 160
   // arbitrary URLs, PDFs, SVGs or animated GIFs through this presentation helper.
   if (!/^\/_emdash\/api\/media\/file\/[A-Za-z0-9._-]+\.(?:jpe?g|png|webp|avif)$/i.test(image.src)) return original;
   const cap = Math.min(width, Math.max(1, Math.min(2000, Math.floor(maxWidth) || 1600)));
-  const widths = [...new Set([240, 480, 768, 1080, 1600, cap].filter(n => n <= cap))].sort((a, b) => a - b);
-  const rendition = (w: number) => `/_image?${new URLSearchParams({ href: image.src, w: String(w), f: 'webp', q: '85' })}`;
+  const widths = [...new Set([...(options.widths || [240, 480, 768, 1080, 1600]), cap]
+    .filter(n => Number.isInteger(n) && n > 0 && n <= cap))].sort((a, b) => a - b);
+  const rendition = (w: number) => `/_image?${new URLSearchParams({ href: image.src, w: String(w), f: options.format || 'webp', q: '85' })}`;
   return {
     ...original,
     src: rendition(Math.min(cap, 1080)),

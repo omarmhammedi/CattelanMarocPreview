@@ -35,6 +35,7 @@ body { margin: 0; color: var(--ink); font-family: var(--f); -webkit-font-smoothi
 * { box-sizing: border-box; }
 a { color: inherit; text-decoration: none; }
 img { max-width: none; display: block; }
+picture.home-photo { display: contents; }
 button, input { font-family: inherit; }
 :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .big { margin: 0; font-weight: 200; text-transform: uppercase; letter-spacing: -0.02em; line-height: 0.92; }
@@ -391,7 +392,7 @@ html:not(.motion-ready) .rv { transform: none; }
   .home-sections .big { font-size: clamp(40px, 12vw, 68px); overflow-wrap: break-word; }
   .home-sections .btn { min-width: 0; max-width: 100%; white-space: normal; height: auto; min-height: 46px; padding: 14px 20px; text-align: center; line-height: 1.4; }
   .home-sections :is(#accueil, #italie, #collections, #showroom, #catalogue, #journal) [data-mobile-frame] { position: relative; inset: auto; width: 100%; max-width: 100%; overflow: hidden; background: var(--bg3); }
-  .home-sections :is(#accueil, #italie, #collections, #showroom, #catalogue, #journal) [data-mobile-frame] > img { position: absolute; inset: auto; left: 0; top: -8%; width: 100%; height: 116%; max-height: none; object-fit: cover; transform: none; margin: 0; }
+  .home-sections :is(#accueil, #italie, #collections, #showroom, #catalogue, #journal) :is([data-mobile-frame] > img, [data-mobile-frame] > picture.home-photo > img) { position: absolute; inset: auto; left: 0; top: -8%; width: 100%; height: 116%; max-height: none; object-fit: cover; transform: none; margin: 0; }
   .home-sections .onphoto { --ink: inherit; --ink-rgb: inherit; --on-ink: inherit; --muted: inherit; --faint: inherit; --hair: inherit; color: inherit; }
   #accueil .words, #accueil .words > div:first-child, #accueil .over, #accueil .over > div,
   #italie .col, #collections .track, #collections .intro,
@@ -443,5 +444,5 @@ html:not(.motion-ready) .rv { transform: none; }
   #journal .art .im img { transition: none; }
 }
 @media (max-width: 820px) and (prefers-reduced-motion: reduce) {
-  .home-sections :is(#accueil, #italie, #collections, #showroom, #catalogue, #journal) [data-mobile-frame] > img { transform: none !important; }
+  .home-sections :is(#accueil, #italie, #collections, #showroom, #catalogue, #journal) :is([data-mobile-frame] > img, [data-mobile-frame] > picture.home-photo > img) { transform: none !important; }
 }
