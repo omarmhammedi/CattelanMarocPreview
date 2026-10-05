@@ -41,10 +41,11 @@ async function main() {
     assert(body.success, `Cloudflare ${label} was unsuccessful`);
     return body.result;
   };
-  const databaseInfo = await api(`d1/database/${database}`, 'D1 metadata read');
-  assert.equal(databaseInfo.uuid, database, 'Cloudflare returned a different database');
   const deployments = await api(`workers/scripts/${worker}/deployments`, 'Worker deployment read');
   assert(deployments.deployments?.length, 'No deployed Worker version available for rollback');
+  console.log('Pinned Worker deployment access verified. Checking D1 backup access.');
+  const databaseInfo = await api(`d1/database/${database}`, 'D1 metadata read');
+  assert.equal(databaseInfo.uuid, database, 'Cloudflare returned a different database');
   const privateDir = await mkdtemp(join(tmpdir(), 'cattelan-private-backup-'));
   try {
     const sql = join(privateDir, 'database.sql');
