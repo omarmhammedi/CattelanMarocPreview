@@ -73,7 +73,7 @@ try {
         if (width < 821) {
           await page.evaluate(() => scrollBy({top: 20, behavior: 'instant'}));
           await page.waitForTimeout(100);
-          const image = page.locator(`#${id} [data-mobile-frame] > img`).first();
+          const image = page.locator(`#${id} :is([data-mobile-frame] > img, [data-mobile-frame] > picture.home-photo > img)`).first();
           if (await image.count() && await image.isVisible()) {
             assert.match(await image.evaluate(el => getComputedStyle(el).transform), /^matrix\(1, 0, 0, 1, 0, /, `${id}: mobile drift uses translation only`);
           }

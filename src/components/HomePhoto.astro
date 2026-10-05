@@ -1,0 +1,17 @@
+---
+import type {HTMLAttributes} from 'astro/types';
+import type {CmsImage} from '../lib/images';
+import {homeMobileMedia,homePhotoSources} from '../lib/home-images';
+interface Props extends Omit<HTMLAttributes<'img'>,'src'|'srcset'|'sizes'|'width'|'height'> {
+  image:CmsImage;
+  sizes?:string;
+  maxWidth?:number;
+}
+const {image,sizes='100vw',maxWidth=1600,...attributes}=Astro.props;
+const {fallback,mobileAvif,mobileWebp}=homePhotoSources(image,sizes,maxWidth);
+---
+{mobileAvif && mobileWebp ? <picture class="home-photo">
+  <source media={homeMobileMedia} type="image/avif" srcset={mobileAvif.srcset} sizes={mobileAvif.sizes}/>
+  <source media={homeMobileMedia} type="image/webp" srcset={mobileWebp.srcset} sizes={mobileWebp.sizes}/>
+  <img {...fallback} {...attributes}/>
+</picture> : <img {...fallback} {...attributes}/>}

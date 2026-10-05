@@ -169,3 +169,67 @@ demonstrated priority problem to correct, and no such application change was
 made. The remaining work concerns the image byte budget and delivery behavior,
 with visual comparison required before changing rendition quality or artwork.
 The private trace is `image-priorities.json`.
+
+
+## Mobile image delivery follow-up — 5 October 2026
+
+Homepage photographs now use native HTML picture sources on screens up to
+820 px: AVIF at quality 85, followed by WebP at the same quality. The existing
+WebP desktop candidates remain the fallback. Additional mobile candidate widths
+include 640 and 800 px; the collection card sizing hint now accounts for the
+page gutters. The 390 px, DPR 2 hero needs about 784 source pixels, so it can
+select 800 px instead of jumping from 768 to 1080 px. Logos retain their existing
+rendering, and originals, CMS media references, crop positions, alt text and
+publication behavior are preserved.
+
+The responsive hero preload selects the same format, width and sizing hint as
+the image. Its mobile and desktop media conditions are complementary. The AVIF
+preload has no fallback href, avoiding an unnecessary wrong-size request in
+browsers without responsive preload support. Unsupported AVIF is handled by
+native picture selection; image display does not depend on JavaScript.
+
+No new transformation service or database migration is required. Native EmDash
+image responses retain their existing `public, max-age=0, must-revalidate` cache
+policy because replacing an original can reuse its storage key. Unsupported
+external, animated, SVG and incomplete image records retain the existing path.
+
+| Selected mobile photograph | Previous encoded bytes | New encoded bytes | Reduction |
+| --- | ---: | ---: | ---: |
+| Homepage hero | 285,378 | 113,787 | 60.1% |
+| Chair collection card | 321,282 | 177,773 | 44.7% |
+
+Visual comparisons at the displayed mobile dimensions and DPR 2 retained clear
+furniture edges, stitching, textures and showroom lettering. These are new
+encodings, not byte-identical artwork. No quality setting was lowered.
+
+A six-navigation controlled comparison alternated the captured deployed HTML
+and the same HTML with the actual new helper output and compiled assets. It
+used a 390 × 844 viewport, DPR 2, CPU throttling ×4, 150 ms latency, 1.6 Mbps
+download and a fresh browser cache. Origin HTML and compiled asset responses
+were supplied by the harness; image requests used the native remote endpoint.
+Therefore these timings isolate browser/image delivery and are not comparable
+to the live-origin tables above.
+
+| Controlled variant | Three LCP samples | Median LCP | Median initial image transfer |
+| --- | --- | ---: | ---: |
+| Previous delivery | 6.016, 5.916, 5.404 s | 5.916 s | 917,520 bytes |
+| Mobile picture sources | 2.352, 3.344, 2.740 s | 2.740 s | 527,082 bytes |
+
+The controlled median initial image transfer fell 42.6%. All 23 image bounding
+rectangles matched; all six runs had zero layout shifts and no failed requests.
+Every candidate run fetched the selected hero exactly once. Native lazy loading
+can vary the count of nearby images, so this small sample does not establish a
+field Core Web Vitals result or a guaranteed speed improvement.
+
+Validation: all 357 unit tests passed; Astro checked 241 files with zero errors,
+zero warnings and three existing hints; the Cloudflare production build and
+Cattelan target guard passed. Native Chromium checks on the marked disposable
+CMS covered mobile and desktop, JavaScript disabled, and an unsupported AVIF
+MIME fixture that exercised WebP fallback without an unused AVIF preload. They
+verified one hero request, correct preload matching, preserved frames, alt text,
+mobile drift and no horizontal overflow. Clearing and publishing the local hero
+removed the image and preload; the original fixture was restored and published.
+A product route retained its existing behavior. Safari was not tested.
+
+Private measurement scripts, before/after encoding comparisons and browser
+receipts are excluded from Git under `.wrangler/mobile-images-2026-10-05/`.

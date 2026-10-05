@@ -365,11 +365,11 @@ async function checkEditableFields(pages, home, post) {
     ] }),
     verify: async (html, marker) => {
       const sections = [
-        ['brand', 'italie', '.p1[data-mobile-frame] > img'],
-        ['collections', 'collections', '.section-image-frame > img.section-image'],
-        ['showroom', 'showroom', '.showroom-photo > img'],
-        ['catalogue', 'catalogue', '.book .cv > img.pic'],
-        ['journal', 'journal', '.journal-section-frame > img.journal-section-image'],
+        ['brand', 'italie', ':is(.p1[data-mobile-frame] > img, .p1[data-mobile-frame] > picture.home-photo > img)'],
+        ['collections', 'collections', ':is(.section-image-frame > img.section-image, .section-image-frame > picture.home-photo > img.section-image)'],
+        ['showroom', 'showroom', ':is(.showroom-photo > img, .showroom-photo > picture.home-photo > img)'],
+        ['catalogue', 'catalogue', '.book :is(.cv > img.pic, .cv > picture.home-photo > img.pic)'],
+        ['journal', 'journal', ':is(.journal-section-frame > img.journal-section-image, .journal-section-frame > picture.home-photo > img.journal-section-image)'],
       ];
       for (const [key, id, imageSelector] of sections) {
         const section = `main.home .home-sections > section#${id}`;
