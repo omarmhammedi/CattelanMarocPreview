@@ -13,24 +13,26 @@ function tags(html, name) {
   return [...html.matchAll(new RegExp(`<${name}\\b[^>]*>`, 'giu'))].map(match => attributes(match[0]));
 }
 const meta = (html, key) => tags(html, 'meta').filter(tag => tag.name === key || tag.property === key).map(tag => tag.content || '');
-const canonical = html => tags(html, 'link').filter(tag => tag.rel === 'canonical').map(tag => tag.href || '');
+const headContent = html => html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/iu)?.[1] || '';
+const canonical = html => tags(headContent(html), 'link').filter(tag => tag.rel === 'canonical').map(tag => tag.href || '');
 
 export function checkPage({ status, headers, body }, path, { image = false } = {}) {
   assert.equal(status, 200, `${path}: expected a published page`);
   assert.match(headers['content-type'] || '', /^text\/html/iu);
   assert.match(headers['x-robots-tag'] || '', /noindex/iu, `${path}: preview header must exclude indexing`);
-  const title = [...body.matchAll(/<title\b[^>]*>([\s\S]*?)<\/title>/giu)];
+  const head = headContent(body);
+  const title = [...head.matchAll(/<title\b[^>]*>([\s\S]*?)<\/title>/giu)];
   assert.equal(title.length, 1, `${path}: exactly one title`);
   assert(title[0][1].trim(), `${path}: empty title`);
   assert.equal((body.match(/<h1(?:\s|>)/giu) || []).length, 1, `${path}: exactly one H1`);
-  const description = meta(body, 'description');
+  const description = meta(head, 'description');
   assert.equal(description.length, 1, `${path}: exactly one description`);
   assert(description[0].trim(), `${path}: empty description`);
-  assert(meta(body, 'robots').some(value => /noindex/iu.test(value)), `${path}: preview HTML must exclude indexing`);
+  assert(meta(head, 'robots').some(value => /noindex/iu.test(value)), `${path}: preview HTML must exclude indexing`);
   const preferred = canonical(body);
   assert.equal(preferred.length, 1, `${path}: exactly one canonical`);
   assert(['http:', 'https:'].includes(new URL(preferred[0]).protocol), `${path}: absolute public canonical`);
-  const images = meta(body, 'og:image');
+  const images = meta(head, 'og:image');
   assert(images.every(value => /^https?:\/\//u.test(value)), `${path}: absolute sharing image required`);
   if (image) assert(images.length, `${path}: sharing image required for this explicit fixture`);
   // Invalid graph output fails; editors may intentionally omit optional metadata.
@@ -61,9 +63,10 @@ async function read(path, method = 'GET') {
   }
 }
 
-export async function runChecks(fetchPage = read) {
+export async function runChecks(fetchPage = read, {only} = {}) {
   const checks = [];
   const run = async (name, action) => {
+    if (only && !only.has(name)) return;
     try { checks.push({ name, ok: true, ...await action() }); }
     catch (error) { checks.push({ name, ok: false, error: error.message }); }
   };
@@ -113,12 +116,40 @@ export async function runChecks(fetchPage = read) {
   return { checkedAt: new Date().toISOString(), origin, mode: 'preview', success: checks.every(check => check.ok), checks };
 }
 
+/** Workers can briefly serve the prior version while deployment propagates.
+ * Retry only failures, with one shared 60-second window for starting retries.
+ * Individual request timeouts still apply; every failed attempt is retained.
+ */
+export async function verifyDeployment(fetchPage = read, {
+  wait = ms => new Promise(resolve => setTimeout(resolve, ms)), now = Date.now,
+  retryWindowMs = 60_000, retryDelayMs = 10_000,
+} = {}) {
+  const deadline = now() + retryWindowMs;
+  let result = await runChecks(fetchPage);
+  const attempts = [];
+  const record = batch => attempts.push({checkedAt: batch.checkedAt,
+    checked: batch.checks.map(check => check.name), failures: batch.checks.filter(check => !check.ok).map(({name, error}) => ({name, error}))});
+  record(result);
+  while (!result.success && now() + retryDelayMs < deadline) {
+    await wait(retryDelayMs);
+    if (now() >= deadline) break;
+    const only = new Set(result.checks.filter(check => !check.ok).map(check => check.name));
+    const retry = await runChecks(fetchPage, {only});
+    record(retry);
+    const replacements = new Map(retry.checks.map(check => [check.name, check]));
+    const checks = result.checks.map(check => replacements.get(check.name) || check);
+    result = {...result, checkedAt: retry.checkedAt, success: checks.every(check => check.ok), checks};
+  }
+  return {...result, attempts};
+}
+
 async function main() {
   assert(process.argv.slice(2).every(flag => flag === '--write-summary'), 'Only --write-summary is supported; target and preview policy are pinned.');
-  const result = await runChecks();
+  const result = await verifyDeployment();
   console.log(JSON.stringify(result, null, 2));
   if (process.argv.includes('--write-summary') && process.env.GITHUB_STEP_SUMMARY) {
-    await writeFile(process.env.GITHUB_STEP_SUMMARY, `## Public SEO verification\n\n${result.checks.filter(check => check.ok).length}/${result.checks.length} checks passed on the preview.\n\n${result.checks.filter(check => !check.ok).map(check => `- ${check.name}: ${check.error}`).join('\n')}\n`, { flag: 'a' });
+    const history = result.attempts.map((attempt, index) => `- Attempt ${index + 1} (${attempt.checkedAt}): ${attempt.checked.length} checks; ${attempt.failures.length} failures.${attempt.failures.map(failure => `\n  - ${failure.name}: ${failure.error.replaceAll('\n', ' ')}`).join('')}`).join('\n');
+    await writeFile(process.env.GITHUB_STEP_SUMMARY, `## Public SEO verification\n\n${result.checks.filter(check => check.ok).length}/${result.checks.length} checks passed on the preview.\n\n${history}\n`, { flag: 'a' });
   }
   if (!result.success) process.exitCode = 1;
 }
