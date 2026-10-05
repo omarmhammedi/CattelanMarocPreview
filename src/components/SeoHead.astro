@@ -8,6 +8,7 @@ import { editorPreviewContentPolicy } from '../lib/editor-preview';
 import { fallbackFavicon, pageBreadcrumbs, socialImage } from '../lib/structured-data';
 import { rememberRenderedSeo } from '../lib/seo-render-context';
 import { canonicalPublicPath, resolvePageTitle } from '../lib/seo-policy';
+import '../styles/fonts.css';
 import type { BreadcrumbItem } from 'emdash';
 interface Props {title:string;description?:string;site:any;image?:any;entry?:any;collection?:string;article?:boolean;breadcrumbs?:BreadcrumbItem[];}
 const {title,description,site,image,entry,article=false}=Astro.props;
@@ -49,9 +50,6 @@ rememberRenderedSeo(page, site, entry?.data, entry && getContentSeo(entry)?.cano
 {site.analyticsToken && !isPreview && <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({token: site.analyticsToken})}></script>}
 <PreviewViewport />
 <meta name="color-scheme" content="dark light"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@200;300;400;500&display=swap" rel="stylesheet"/>
 <script is:inline>
   try { const mode=localStorage.getItem('ci-mode')==='light'?'light':'dark';document.documentElement.dataset.mode=mode;document.documentElement.classList.add(mode); } catch {document.documentElement.dataset.mode='dark';}
 </script>

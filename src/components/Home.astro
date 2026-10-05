@@ -11,6 +11,7 @@ import GeographicMapSymbols from './GeographicMapSymbols.astro';
 import { actionsFor, generalMessageFor, isCatalogueLink, whatsappHref } from '../lib/actions';
 import { secondaryLinks } from '../lib/footer';
 import { imageAttributes } from '../lib/images';
+import {homeCoverWidth as coverWidth, homeCoverSizes as coverSizes, homeHeroImageAttributes} from '../lib/home-images';
 
 type Editable = { edit?: Record<string, Record<string, string>> };
 type Picture = { src: string; alt: string; width?: number; height?: number } | null;
@@ -73,11 +74,7 @@ const familyFrames: Record<string, { ratio: number; position: number }> = {
 const familyFrame = (href: string) => familyFrames[href.split('/').filter(Boolean).at(-1) || ''] || { ratio: .889, position: 55 };
 // Match responsive branches, accounting for the pixels enlarged by object-fit: cover.
 // Size hints change the rendition only; version B's frame proportions stay in CSS.
-const coverWidth = (image: Picture, width: string, height: string) => image?.width && image.height
-  ? `max(${width}, calc(${height} * ${Number((image.width / image.height).toFixed(6))}))` : width;
-const coverSizes = (image: Picture, width: string, height: string, mobileHeight: number, mobileWidth = 'calc(100vw - 40px)') =>
-  `(max-width: 820px) ${coverWidth(image, mobileWidth, mobileHeight + 'px')}, ${coverWidth(image, width, height)}`;
-const heroImageSizes = coverSizes(home.heroImage, '100vw', '116vh', 380 * 1.16);
+const heroImageAttributes = homeHeroImageAttributes(home.heroImage);
 const brandImageSizes = coverSizes(home.brand.image, 'min(38vw, 66vh)', 'calc(min(38vw, 66vh) * 1215 / 1080 * 1.16)', 420 * 1.16);
 const detailImageSizes = coverWidth(home.brand.detailImage, 'min(15vw, 25vh)', 'calc(min(15vw, 25vh) * 1700 / 956 * 1.16)');
 const showroomImageSizes = coverSizes(home.showroom.image, '100vw', '116vh', 320 * 1.16);
@@ -130,7 +127,7 @@ const brandLines = explicitBrandLines.length > 1 ? explicitBrandLines : [brandWo
   <section class:list={['scene', {'without-visual': !(home.heroImage)}]} id="accueil" data-scene={(home.heroImage) ? 'hero' : undefined} style="--g: 0; --t: 0; --w: 0;">
     <div class="pin">
       <div class="words"><div>{home.eyebrow && <p class="kick"><svg aria-hidden="true"><use href="#step"/></svg>{home.eyebrow}</p>}<h1 {...homeEdit?.title}>{home.title}</h1></div><div class="side">{site.tagline && <p class="kick">{site.tagline}</p>}<span class="hint">{labels.scroll} ↓</span></div></div>
-      {home.heroImage && <div class="ph card" data-mobile-frame {...homeEdit?.hero_image}><img {...imageAttributes(home.heroImage, heroImageSizes)} alt={home.heroImage.alt} fetchpriority="high" style="object-position: center 55%;"/><div class="veil"></div></div>}
+      {home.heroImage && <div class="ph card" data-mobile-frame {...homeEdit?.hero_image}><img {...heroImageAttributes} alt={home.heroImage.alt} fetchpriority="high" style="object-position: center 55%;"/><div class="veil"></div></div>}
       <div class:list={["over", {onphoto: !!home.heroImage}]}><div>{home.eyebrow && <p class="kick"><svg aria-hidden="true"><use href="#step"/></svg>{home.eyebrow}</p>}{home.intro && <p class="hero-intro" {...homeEdit?.intro}>{home.intro}</p>}<SiteActions site={site} order={['appointment', 'catalogue']} /></div></div>
     </div>
   </section>

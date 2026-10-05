@@ -50,6 +50,7 @@ interface Props {
     finishes?: Finish[];
     technicalSheet?: {src: string; filename?: string} | null;
     technicalSheetLabel?: string;
+    sourceUrl?: string | null;
     onDisplay?: boolean;
     entry?: any;
     href?: string;
@@ -73,7 +74,7 @@ const gallery = (model.gallery || []).filter(picture => picture?.src);
 const dimensions = (model.dimensions || []).filter(item => item.value || item.seats || item.largeSeats);
 const drawings = (model.drawings || []).filter(item => item.image?.src).sort((a, b) =>
   (Number(a.row) || 0) - (Number(b.row) || 0) || (Number(a.column) || 0) - (Number(b.column) || 0));
-const hasTechnical = dimensions.length > 0 || drawings.length > 0 || Boolean(model.technicalSheet?.src);
+const hasTechnical = dimensions.length > 0 || drawings.length > 0 || Boolean(model.technicalSheet?.src || model.sourceUrl);
 // Captions that only restate the source ("Dimensions en cm, d’après la fiche produit (1/5)", "Airport — plan 2") are shown once below the drawings.
 const genericDrawingLabel = (label: string) => /^Dimensions en cm/i.test(label) || label.startsWith(`${model.title} — plan `) || label.startsWith(`${model.title} — dessin technique`);
 const finishGroups = new Map<string, {label: string; finishes: Finish[]}>();
@@ -163,6 +164,7 @@ for (const finish of model.finishes || []) {
       <p class="page-note model-drawings-note">{drawingsNote}</p>
     </div>}
     {model.technicalSheet?.src && <a class="text-link model-technical-download" href={model.technicalSheet.src} download={model.technicalSheet.filename || true}>{model.technicalSheetLabel || 'Télécharger la fiche technique'} <span class="model-file-format">PDF</span><span aria-hidden="true">↓</span></a>}
+    {model.sourceUrl && <p class="page-note model-source"><a href={model.sourceUrl} target="_blank" rel="noopener noreferrer">{model.title} sur le site Cattelan Italia<span aria-hidden="true"> ↗</span></a></p>}
     {filesHref && <a class="text-link model-files-request" href={filesHref} target="_blank" rel="noopener noreferrer">{copy.model_files_label}<span aria-hidden="true">↗</span></a>}
   </section>}
 

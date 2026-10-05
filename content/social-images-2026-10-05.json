@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "collection": "pages",
+  "sources": [
+    {
+      "key": "showroom",
+      "slug": "showroom-casablanca",
+      "field": "hero_image",
+      "mediaId": "01M3Q6MSMHERFQPJK77BFQ5EP3",
+      "storageKey": "01M3Q6MRRPXFR3GKSWVR5MBFB4.jpg",
+      "filename": "cattelan-italia-casablanca-entree-showroom.jpg",
+      "sha256": "27fb665fc83d84f5c70157172a5f4d1dcd3e6153a1bbc717fb1ca4fc6933fe11",
+      "reason": "Owner-provided photograph of the Casablanca showroom, already published as its hero; verified against content/showroom-owner-photo.json."
+    },
+    {
+      "key": "materials",
+      "slug": "home",
+      "field": "brand_detail_image",
+      "mediaId": "01M3N0P1MFD4QD8G8Z2JEJTK8W",
+      "storageKey": "01M3N0P1CH6110M508Z8TVPQH6.jpg",
+      "filename": "cattelan-skorpio-9997cf91-aae7-42d4-8f2c-083db41f17cf.jpg",
+      "sha256": "c660acdb5e85d25a04b705ed4001b4112d94ff37d6810c241c791dfd9325c1b5",
+      "reason": "Published homepage photograph of the Skorpio glass top and metal base; appropriate to material selection and professional technical advice."
+    }
+  ],
+  "entries": [
+    { "slug": "a-propos", "source": "showroom" },
+    { "slug": "votre-projet", "source": "showroom" },
+    { "slug": "faq", "source": "showroom" },
+    { "slug": "mentions-legales", "source": "showroom" },
+    { "slug": "confidentialite", "source": "showroom" },
+    { "slug": "sur-mesure", "source": "materials" },
+    { "slug": "professionnels", "source": "materials" }
+  ]
+}
