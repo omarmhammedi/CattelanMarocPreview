@@ -7,7 +7,7 @@ import PreviewViewport from './PreviewViewport.astro';
 import { editorPreviewContentPolicy } from '../lib/editor-preview';
 import { fallbackFavicon, pageBreadcrumbs, socialImage } from '../lib/structured-data';
 import { rememberRenderedSeo } from '../lib/seo-render-context';
-import { resolvePageTitle } from '../lib/seo-policy';
+import { canonicalPublicPath, resolvePageTitle } from '../lib/seo-policy';
 import type { BreadcrumbItem } from 'emdash';
 interface Props {title:string;description?:string;site:any;image?:any;entry?:any;collection?:string;article?:boolean;breadcrumbs?:BreadcrumbItem[];}
 const {title,description,site,image,entry,article=false}=Astro.props;
@@ -40,8 +40,8 @@ if (import.meta.env.DEV && ['GET', 'HEAD'].includes(Astro.request.method)) {
 }
 Astro.response.headers.set('Cache-Control',isPreview?'private, no-store':'no-store');
 if(!indexable || isPreview) Astro.response.headers.set('X-Robots-Tag','noindex, nofollow');
-const page=createPublicPageContext({Astro,kind:entry?'content':'custom',pageType:article?'article':'website',title:resolvedTitle,pageTitle:headline,description,image:resolvedImage,canonical:new URL(Astro.url.pathname,origin).href,siteName:site.name,siteUrl:origin,breadcrumbs,seo:{ogTitle:resolvedTitle,robots:!indexable||isPreview?'noindex, nofollow':'index, follow'},content:entry&&collection?{collection,id:String(entry.data.id || entry.id),slug:entry.data.slug || entry.id}:undefined,articleMeta:article?{publishedTime:isoDate(entry?.data.publishedAt || entry?.data.published_at),modifiedTime:isoDate(entry?.data.updatedAt || entry?.data.updated_at),author:entry?.data.byline?.displayName}:undefined});
-rememberRenderedSeo(page, site, entry?.data);
+const page=createPublicPageContext({Astro,kind:entry?'content':'custom',pageType:article?'article':'website',title:resolvedTitle,pageTitle:headline,description,image:resolvedImage,canonical:new URL(canonicalPublicPath(Astro.url.pathname),origin).href,siteName:site.name,siteUrl:origin,breadcrumbs,seo:{ogTitle:resolvedTitle,robots:!indexable||isPreview?'noindex, nofollow':'index, follow'},content:entry&&collection?{collection,id:String(entry.data.id || entry.id),slug:entry.data.slug || entry.id}:undefined,articleMeta:article?{publishedTime:isoDate(entry?.data.publishedAt || entry?.data.published_at),modifiedTime:isoDate(entry?.data.updatedAt || entry?.data.updated_at),author:entry?.data.byline?.displayName}:undefined});
+rememberRenderedSeo(page, site, entry?.data, entry && getContentSeo(entry)?.canonical);
 ---
 <title>{resolvedTitle}</title>
 <EmDashHead page={page}/>

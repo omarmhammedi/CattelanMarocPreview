@@ -53,3 +53,41 @@ export function sitemapLocation(path: string, origin: string, seo?: { noIndex?: 
     return canonical.href === own.href ? own.href : null;
   } catch { return null; }
 }
+
+// Fixed public templates plus one-segment CMS slugs. API, media, map data,
+// private previews and unknown top-level paths retain their native routing.
+const publicPages = new Set([
+  'collections', 'showroom-casablanca', 'catalogue', 'journal', 'sur-mesure',
+  'professionnels', 'a-propos', 'votre-projet', 'faq', 'mentions-legales', 'confidentialite',
+]);
+
+/** Public links and the sitemap use trailing slashes; defaults must agree. */
+export function canonicalPublicPath(path: string): string {
+  const match = /^\/([^/]+)(?:\/([^/]+))?\/?$/u.exec(path);
+  if (!match) return path;
+  const [, section, slug] = match;
+  const publicPage = slug
+    ? ['collections', 'modeles', 'journal'].includes(section) && /^[a-z0-9]+(?:-[a-z0-9]+)*$/u.test(slug)
+    : publicPages.has(section);
+  return publicPage ? `${path.replace(/\/$/u, '')}/` : path;
+}
+
+/** Redirect only a successfully rendered public HTML page. Preserve query
+ * parameters, native CMS redirects/errors, write requests and signed previews.
+ */
+export function canonicalPublicResponse(request: Request, response: Response, nativeCanonical?: string | null): Response {
+  if (!['GET', 'HEAD'].includes(request.method) || response.status !== 200
+    || !/^text\/html(?:;|$)/iu.test(response.headers.get('Content-Type') || '')) return response;
+  // Do not make an editor's explicit canonical point at our own redirect.
+  // This includes native relative, external and same-page slashless choices.
+  if (nativeCanonical?.trim()) return response;
+  const url = new URL(request.url);
+  if (url.searchParams.has('_preview')) return response;
+  const path = canonicalPublicPath(url.pathname);
+  if (path === url.pathname) return response;
+  // A relative Location stays on the incoming origin, with the entire query.
+  const headers = new Headers(response.headers);
+  headers.set('Location', `${path}${url.search}`);
+  for (const name of ['Content-Type', 'Content-Length', 'Content-Encoding', 'ETag']) headers.delete(name);
+  return new Response(null, { status: 301, headers });
+}
