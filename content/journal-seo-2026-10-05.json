@@ -1,0 +1,848 @@
+{
+  "version": 1,
+  "collection": "posts",
+  "capturedAt": "2026-10-05",
+  "description": "Refresh the five existing guides through native EmDash drafts; no seed or frontend copy source.",
+  "entries": [
+    {
+      "slug": "choisir-forme-proportions-table-salle-a-manger",
+      "related": {
+        "before": "Pour la suite du choix, voyez comment ",
+        "text": "associer table et chaises",
+        "after": ".",
+        "href": "/journal/associer-table-chaises-salle-a-manger/"
+      },
+      "seoTitle": {
+        "before": "Table de salle à manger à Casablanca · Cattelan Italia Maroc",
+        "after": "Forme et dimensions d'une table · Cattelan Italia Maroc"
+      },
+      "beforeContent": [
+        {
+          "_type": "block",
+          "_key": "k1",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k0",
+              "text": "60 cm de plateau par convive",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "k3",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k2",
+              "text": "À table, l'usage compte 60 cm de plateau par convive. Le nombre réel de places dépend ensuite de la largeur des chaises, de la forme du plateau et du piètement. Une chaise Zuleika mesure 64 cm de large, une Miranda ML 63 cm. Divisez la longueur du plateau par 60 pour un premier compte, puis refaites le calcul avec la largeur de la chaise choisie.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "k5",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k4",
+              "text": "Le passage de 90 cm",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "k7",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k6",
+              "text": "Dans une pièce vide de 4 × 3,5 m, 90 cm de passage sur les quatre côtés laissent au centre un rectangle de 220 × 170 cm. Ce premier plan se corrige avec les portes, les autres meubles et les chaises choisies. Sur le plan, vérifiez le passage derrière une chaise occupée. Dans la pièce, tracez le contour du plateau au ruban de masquage, posez-y vos chaises actuelles et refaites le test.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "k9",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k8",
+              "text": "Un plateau rond, carré ou ovale",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kb",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "ka",
+              "text": "Une pièce presque carrée reçoit une table carrée, comme Skorpio en 150 × 150 ou 200 × 200 cm, une pièce longue un rectangle. À longueur et largeur égales, un ovale comme celui de Napoleon Keramik, 300 × 150 cm, prend moins de place aux angles. À une table ronde, les convives se répartissent autour du centre, et l'écart entre eux grandit avec le diamètre. Apportez au showroom la longueur et la largeur de la pièce, avec quelques photos.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kd",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "kc",
+              "text": "Le piètement sous le plateau",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kf",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "ke",
+              "text": "Le piètement décide des places. Une base centrale, comme sur Napoleon Keramik ou Botero, dégage les angles du plateau. Sur Butterfly, un piètement de 160 cm en ruban d'acier porte un plateau de 240 cm. À chaque bout, il reste 40 cm pour une chaise en tête de table. Vérifiez l'emprise de la base sur le plan coté. Envoyez la photo du tracé et les mesures de la pièce sur WhatsApp, et le conseiller propose les formats qui conviennent.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "text": "Zuleika",
+          "href": "/modeles/zuleika/"
+        },
+        {
+          "text": "Miranda ML",
+          "href": "/modeles/miranda-ml/"
+        },
+        {
+          "text": "Skorpio",
+          "href": "/modeles/skorpio/"
+        },
+        {
+          "text": "Napoleon Keramik",
+          "href": "/modeles/napoleon-keramik/"
+        },
+        {
+          "text": "Butterfly",
+          "href": "/modeles/butterfly/"
+        }
+      ],
+      "sourceModels": [
+        "zuleika",
+        "miranda-ml",
+        "skorpio",
+        "napoleon-keramik",
+        "butterfly"
+      ],
+      "replacements": [],
+      "sources": [
+        {
+          "modelSlug": "skorpio",
+          "label": "Cattelan Italia — Skorpio, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8"
+        },
+        {
+          "modelSlug": "napoleon-keramik",
+          "label": "Cattelan Italia — Napoleon Keramik, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/DD24EC9D-FA00-4C0D-A989-9ADD6E56BFD0"
+        }
+      ]
+    },
+    {
+      "slug": "associer-table-chaises-salle-a-manger",
+      "related": {
+        "before": "La forme du plateau et le passage se vérifient aussi dans le guide des ",
+        "text": "dimensions de la table",
+        "after": ".",
+        "href": "/journal/choisir-forme-proportions-table-salle-a-manger/"
+      },
+      "beforeContent": [
+        {
+          "_type": "block",
+          "_key": "k1",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k0",
+              "text": "Le piètement ou le dossier plissé",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "k3",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k2",
+              "text": "Autour d'une table, une seule pièce porte le dessin. Des chaises simples laissent voir le piètement en X de Tyron Keramik ou la base galbée de Botero, revêtue d'argile. Face à une table plus sobre, le dossier plissé de Rhonda attire le regard. Regardez le piètement de la table puis le dossier de la chaise, et laissez un seul des deux porter le dessin.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "k5",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k4",
+              "text": "Quatre laques gaufrées en commun",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "k7",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k6",
+              "text": "Le bronze gaufré du piètement de Tyron Keramik se retrouve sur celui de la chaise Greta, comme le titane, le graphite et le noir. Une laque partagée relie la table et les chaises quand les deux modèles la proposent. Rhonda prend ces mêmes laques, ou un chrome. Relevez les finitions du piètement de la table et de la chaise, et gardez celles qui reviennent des deux côtés.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "k9",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k8",
+              "text": "Le cuir et la céramique Portoro",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kb",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "ka",
+              "text": "Un cuir de chaise dans le ton d'une céramique Portoro ou d'un noyer Canaletto relie la chaise au plateau par la couleur. Le revêtement se choisit aussi selon l'usage. Rhonda existe en 112 teintes de cuir, de similicuir, de tissu et de micro-nubuck. Pour une table servie chaque jour, lisez les notes d'entretien de chaque finition. Au showroom, comparez ensemble l'échantillon de cuir et celui du plateau, à la lumière du jour.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kd",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "kc",
+              "text": "Les accoudoirs sous le plateau",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kf",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "ke",
+              "text": "Greta mesure 62 cm de large, Rhonda 63 cm et Zuleika 64 cm. Pour placer les assises, comptez cette largeur et repérez la position du piètement sous le plateau. Les accoudoirs prolongés de Greta demandent une mesure de plus. Une chaise peut convenir par sa hauteur d'assise et buter pourtant contre le plateau ou ses traverses. Mesurez le dégagement sous le plateau, traverses comprises, puis comparez-le à la hauteur des accoudoirs.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "text": "Tyron Keramik",
+          "href": "/modeles/tyron-keramik/"
+        },
+        {
+          "text": "Rhonda",
+          "href": "/modeles/rhonda/"
+        },
+        {
+          "text": "Greta",
+          "href": "/modeles/greta/"
+        },
+        {
+          "text": "Zuleika",
+          "href": "/modeles/zuleika/"
+        }
+      ],
+      "sourceModels": [
+        "tyron-keramik",
+        "rhonda",
+        "greta",
+        "zuleika"
+      ],
+      "replacements": [],
+      "sources": [
+        {
+          "modelSlug": "rhonda",
+          "label": "Cattelan Italia — Rhonda, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/41ED48AE-E379-4863-8E3C-28EE1D985390"
+        },
+        {
+          "modelSlug": "greta",
+          "label": "Cattelan Italia — Greta, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/A73FA6B3-0BA9-4F13-ADB6-FBAFC6E39BBF"
+        }
+      ]
+    },
+    {
+      "slug": "ceramique-verre-bois-choisir-finition-meuble",
+      "replacements": [
+        {
+          "before": "Adrian Wood réunit les deux essences sur un même plateau. ",
+          "after": "",
+          "reason": "La combinaison des deux essences est restée non confirmée dans docs/copy-drafts/OPEN-POINTS.md ; les faits validés sur Botero Wood Round suffisent à cet exemple."
+        }
+      ],
+      "related": {
+        "before": "Le choix du plateau se poursuit avec la ",
+        "text": "forme et les dimensions de la table",
+        "after": ".",
+        "href": "/journal/choisir-forme-proportions-table-salle-a-manger/"
+      },
+      "beforeContent": [
+        {
+          "_type": "block",
+          "_key": "k1",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k0",
+              "text": "Céramique Marmi, Calacatta ou Portoro",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "k3",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k2",
+              "text": "Les décors Marmi reproduisent des marbres comme le Calacatta ou le Portoro, jusqu'à 18 selon le modèle. Sur Napoleon Keramik, table de 14 places au plus, la céramique couvre le plateau et la base centrale. Rado Keramik a aussi une base en céramique, et Napoleon Keramik Outdoor se place sur une terrasse couverte. Pour l'entretien et les plats chauds, suivez la notice du modèle et de sa finition. Au showroom, comparez Calacatta et Portoro sur échantillons.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "k5",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k4",
+              "text": "Verre de 12 ou 15 mm",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "k7",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k6",
+              "text": "Sous un plateau en verre clair, on suit les lignes croisées du piètement de Skorpio ou le ruban d'acier plié de Butterfly. Les plateaux de Westin et de Nettuno font 12 mm d'épaisseur, celui de Butterfly 15 mm. Le verre MIST a une surface texturée. Le verre miroir couvre les plateaux de Chelsea et d'Amsterdam et forme les miroirs Cosmos et Glenn. Au showroom, regardez le reflet d'un plateau en verre clair, puis passez la main sur le MIST.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "k9",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k8",
+              "text": "Noyer Canaletto ou chêne brûlé",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kb",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "ka",
+              "text": "Botero Wood Round pose un plateau rond en noyer Canaletto ou en chêne brûlé sur une base revêtue d'argile. La table existe en Ø 140, 160 ou 180 cm, hauteur 75 cm. Adrian Wood réunit les deux essences sur un même plateau. Le bois se choisit pour son veinage. À table, des dessous de verre et un dessous-de-plat protègent le plateau. Au showroom, prenez en main un échantillon de noyer, puis un échantillon de chêne brûlé.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kd",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "kc",
+              "text": "Échantillons à la lumière du jour",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kf",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "ke",
+              "text": "Un échantillon de rideau, de peinture ou de carrelage, posé contre celui du plateau, permet de comparer les deux matières ensemble. Une photo prise de jour aide à comprendre la pièce. Ses couleurs restent pourtant approximatives. Les teintes se comparent d'abord à la lumière du jour, puis sous l'éclairage prévu à la maison. Apportez ces échantillons au showroom avec les dimensions de la pièce, et le conseiller les compare aux finitions de la marque.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "text": "Napoleon Keramik",
+          "href": "/modeles/napoleon-keramik/"
+        },
+        {
+          "text": "Skorpio",
+          "href": "/modeles/skorpio/"
+        },
+        {
+          "text": "Butterfly",
+          "href": "/modeles/butterfly/"
+        },
+        {
+          "text": "Botero Wood Round",
+          "href": "/modeles/botero-wood-round/"
+        }
+      ],
+      "sourceModels": [
+        "napoleon-keramik",
+        "skorpio",
+        "butterfly",
+        "botero-wood-round"
+      ],
+      "sources": [
+        {
+          "modelSlug": "napoleon-keramik",
+          "label": "Cattelan Italia — Napoleon Keramik, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/DD24EC9D-FA00-4C0D-A989-9ADD6E56BFD0"
+        },
+        {
+          "modelSlug": "skorpio",
+          "label": "Cattelan Italia — Skorpio, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/B217DE70-0F32-41F5-975B-FD6273164AF8"
+        }
+      ]
+    },
+    {
+      "slug": "composer-salon-canape-fauteuil",
+      "related": {
+        "before": "Pour la vaisselle et les livres, le guide ",
+        "text": "buffet ou bibliothèque",
+        "after": " compare les rangements du salon.",
+        "href": "/journal/choisir-buffet-bibliotheque-salon/"
+      },
+      "seoTitle": {
+        "before": "Salon, canapé d'angle et fauteuil · Cattelan Italia Maroc",
+        "after": "Choisir canapé et fauteuil · Cattelan Italia Maroc"
+      },
+      "beforeContent": [
+        {
+          "_type": "block",
+          "_key": "k1",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k0",
+              "text": "80 à 90 cm de passage",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "k3",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k2",
+              "text": "Le plan du salon commence par les portes et les fenêtres. La télévision y figure aussi si elle appartient à la pièce. On y reporte la longueur et la profondeur de chaque assise. Comptez ensuite 80 à 90 cm pour les passages et 40 à 45 cm entre le canapé et la table basse. Ces premiers repères s'ajustent aux pièces choisies. Dans la pièce, asseyez-vous, relevez-vous et traversez les passages habituels pour vérifier le plan.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "k5",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k4",
+              "text": "Canapé droit, d'angle ou grande composition",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "k7",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k6",
+              "text": "Craig, Douglas, Mykonos et Sinatra se composent par éléments. Chacun se monte droit, d'angle ou en grande composition. Craig garnit ses coussins de dossier de plumes. Douglas repose sur des pieds en métal en deux hauteurs, qui laissent voir le sol. Mykonos a des formes arrondies, Sinatra des dossiers réglables. Ruby reste un canapé droit de 200 cm, à structure apparente en frêne. Reportez les éléments choisis sur le plan, avec les cotes de leur fiche technique.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "k9",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "k8",
+              "text": "Ruby Lounge, 81 cm de large",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kb",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "ka",
+              "text": "Le fauteuil Ruby Lounge mesure 81 × 92 cm, hauteur 76 cm, et reprend la structure en frêne du canapé Ruby. Le frêne se teinte en noyer Canaletto ou en chêne brûlé. Ruby peut recevoir un tissu et Ruby Lounge un cuir, ou deux couleurs d'un même revêtement. Sur le plan, dessinez les 81 cm du fauteuil à côté du canapé et mesurez le passage qui reste.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kd",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "kc",
+              "text": "Le tissu déhoussable et le cuir",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kf",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "ke",
+              "text": "Craig, Douglas, Mykonos et Sinatra s'habillent d'un tissu déhoussable, dans les catégories T10 à T90. Le cuir se décline en quatre gammes selon le modèle, Glove, Magnifica, Nabuk et Perfetto. Une photo rend mal les couleurs d'un tissu ou d'un cuir. Apportez plutôt au showroom un carreau du sol ou une chute de rideau, et comparez-les aux échantillons de tissu et de cuir.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "text": "Craig",
+          "href": "/modeles/craig/"
+        },
+        {
+          "text": "Douglas",
+          "href": "/modeles/douglas/"
+        },
+        {
+          "text": "Mykonos",
+          "href": "/modeles/mykonos/"
+        },
+        {
+          "text": "Sinatra",
+          "href": "/modeles/sinatra/"
+        },
+        {
+          "text": "Ruby",
+          "href": "/modeles/ruby/"
+        },
+        {
+          "text": "Ruby Lounge",
+          "href": "/modeles/ruby-lounge/"
+        }
+      ],
+      "sourceModels": [
+        "craig",
+        "douglas",
+        "mykonos",
+        "sinatra",
+        "ruby",
+        "ruby-lounge"
+      ],
+      "replacements": [],
+      "sources": [
+        {
+          "modelSlug": "ruby",
+          "label": "Cattelan Italia — Ruby, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/75C6DB4B-1A99-400D-AEE7-9D5797651F05"
+        },
+        {
+          "modelSlug": "ruby-lounge",
+          "label": "Cattelan Italia — Ruby Lounge, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/3BFE3570-1D83-4026-A81F-F0913AEE75BD"
+        }
+      ]
+    },
+    {
+      "slug": "choisir-buffet-bibliotheque-salon",
+      "replacements": [
+        {
+          "before": "Airport se fixe au mur ou au plafond, sur 60 à 310 cm de long et 29 cm de profondeur.",
+          "after": "Airport se fixe au mur ou au plafond ; ses étagères mesurent de 60 à 310 cm de long et 29 cm de profondeur.",
+          "reason": "Les dimensions concernent les étagères, pas la composition complète (fiche native Airport et brief modèles/buffets-bibliotheques.md)."
+        }
+      ],
+      "related": {
+        "before": "Le passage devant les rangements se vérifie avec le ",
+        "text": "plan du canapé et du fauteuil",
+        "after": ".",
+        "href": "/journal/composer-salon-canape-fauteuil/"
+      },
+      "beforeContent": [
+        {
+          "_type": "block",
+          "_key": "kh",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "kg",
+              "text": "La profondeur du meuble",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kj",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "ki",
+              "text": "Le mètre ruban se pose au pied du mur choisi et se déroule vers le centre du salon. Un buffet avance de 45 à 55 cm dans la pièce, une bibliothèque de 26 à 29 cm. Devant l'un comme devant l'autre, il faut garder un passage. Marquez ces profondeurs au sol avec du ruban adhésif, puis mesurez ce qui reste jusqu'au canapé ou à la table.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kl",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "kk",
+              "text": "La vaisselle et les grands livres",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kn",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "km",
+              "text": "Sur la table de la salle à manger, sortez tout ce qui cherche une place. Notez la hauteur et la profondeur du plus grand plat, de la pile d'assiettes, des livres de grand format et des objets à ranger. Les étagères du meuble retenu doivent offrir au moins ces hauteurs et ces profondeurs utiles. Faites enfin deux tas, l'un pour la porte fermée d'un buffet, l'autre pour les étagères d'une bibliothèque.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kp",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "ko",
+              "text": "Les portes du buffet",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kr",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "kq",
+              "text": "Près de la table, un buffet facilite le service si ses portes s'ouvrent en entier et si les chaises peuvent reculer. Chelsea et Amsterdam font 46 cm de profondeur, Kayak 53 cm. Chelsea existe en trois hauteurs, 50, 75 et 100 cm. Kayak mesure 147 ou 220 cm de long, Amsterdam jusqu'à 294 cm. Leurs étagères sont en verre ; Kayak et Amsterdam acceptent un tiroir à couverts. Chaises tirées, mesurez l'espace qui reste entre leur dossier et le mur.",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kt",
+          "style": "h2",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "ks",
+              "text": "La fixation de la bibliothèque",
+              "marks": []
+            }
+          ]
+        },
+        {
+          "_type": "block",
+          "_key": "kv",
+          "style": "normal",
+          "markDefs": [],
+          "children": [
+            {
+              "_type": "span",
+              "_key": "ku",
+              "text": "Une bibliothèque couvre un mur ou sépare deux espaces, si le modèle et sa fixation le permettent. Nautilus aligne ou empile des modules en acier de 100 × 100 cm, profonds de 26 cm. Selon la composition, ils se fixent au mur ou reçoivent un lest. Airport se fixe au mur ou au plafond, sur 60 à 310 cm de long et 29 cm de profondeur. Pour choisir la composition, envoyez au showroom les mesures du mur et quelques photos.",
+              "marks": []
+            }
+          ]
+        }
+      ],
+      "links": [
+        {
+          "text": "Chelsea",
+          "href": "/modeles/chelsea/"
+        },
+        {
+          "text": "Amsterdam",
+          "href": "/modeles/amsterdam/"
+        },
+        {
+          "text": "Kayak",
+          "href": "/modeles/kayak/"
+        },
+        {
+          "text": "Nautilus",
+          "href": "/modeles/nautilus/"
+        },
+        {
+          "text": "Airport",
+          "href": "/modeles/airport/"
+        }
+      ],
+      "sourceModels": [
+        "chelsea",
+        "amsterdam",
+        "kayak",
+        "nautilus",
+        "airport"
+      ],
+      "sources": [
+        {
+          "modelSlug": "chelsea",
+          "label": "Cattelan Italia — Chelsea, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/B7E158FA-BF2D-484D-9F9A-0C3D14138E8E"
+        },
+        {
+          "modelSlug": "airport",
+          "label": "Cattelan Italia — Airport, présentation et fiche technique",
+          "url": "https://www.cattelanitalia.com/fr/products/0BD758C3-F539-4263-BA05-CEB859A760A4"
+        }
+      ]
+    }
+  ]
+}

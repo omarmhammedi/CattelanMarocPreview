@@ -1,70 +1,78 @@
 # Stratégie de contenu et SEO
 
-Le [réaudit éditorial du 29 septembre 2026](editorial-audit-2026-09-29.md) a conduit à la révision 0010 : suppression des préparatifs systématiques, présentation directe des meubles et conseils placés là où ils répondent à une question précise. Le [rapport de révision](test-results-editorial-refresh.md) consigne les contrôles et l’état de publication.
+Mise à jour le 5 octobre 2026, après lecture du contenu EmDash publié et de la recherche OpenSEO existante. Le site présente **huit familles, trente-neuf modèles et cinq guides du Journal**. Les textes approuvés le 4 octobre constituent la base éditoriale ; ils ne sont pas remplacés par une nouvelle rédaction générale.
 
-L'[audit du contenu publié du 28 septembre 2026](seo-audit-2026-09-28.md) complète cette stratégie : [carte des 28 pages et intentions](seo-page-map.md), constats techniques et plan de finalisation priorisé. Il conserve les six familles et onze modèles documentés, et distingue les corrections réalisables des faits commerciaux encore à confirmer.
+La [stratégie du 1er octobre](livrables/strategie-seo.html) contient déjà une recherche DataForSEO réalisée via OpenSEO, en français au Maroc : volumes estimés, catégories, concurrents et visibilité locale. La [carte des 28 pages](seo-page-map.md) et les audits de septembre restent des historiques utiles. Leurs nombres de pages, modèles, coordonnées manquantes et défauts techniques ne décrivent pas tous l'état actuel.
 
-Le site doit permettre de découvrir le mobilier, de vérifier une référence ou de trouver les informations du showroom de Casablanca. Chaque page répond à un besoin ; contacter le magasin n’est pas une étape obligatoire. Les intentions ci-dessous sont des hypothèses éditoriales tirées du contenu et de l'offre présentée ; elles ne constituent pas une étude de volumes de recherche ni une promesse de classement.
+## Recherche disponible et compléments utiles
 
-Google propose notamment ce critère : « Le titre résume-t-il clairement le contenu de la page ? » Il privilégie l'utilité et la fiabilité et ne recommande aucun nombre de mots à atteindre. Le contenu doit donc apporter une réponse, sans allongement destiné au référencement. [Conseils officiels sur les contenus utiles](https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=fr).
+Les recherches déjà enregistrées couvrent la marque, le mobilier par catégorie et ville, les matières et les professionnels. L'inventaire OpenSEO consulté le 5 octobre contient 74 mots-clés enregistrés. Il n'est pas nécessaire de recommencer cette étude pour réparer le maillage des guides ou leurs sources.
 
-## Une intention par type de page
+Un complément ciblé du 5 octobre examine les résultats Google au Maroc, en français, pour le choix d'une table ronde ou rectangulaire, l'association table/chaises, la céramique face au marbre, le canapé modulable et la marque. Les deux premiers sujets font apparaître des guides ; céramique/marbre mélange information, produits et réseaux sociaux ; le canapé modulable présente surtout une intention commerciale. Ces résultats nationaux ne mesurent ni une position précise dans Casablanca, ni la demande en arabe, ni la visibilité de tous les assistants d'IA.
 
-| Pages existantes | Besoin à satisfaire | Information à privilégier |
+Les prochains travaux de recherche répondent à des manques identifiés :
+
+- maintenir la cohérence de la fiche Google déjà vérifiée le 5 octobre ; son lien pointe encore vers le fabricant et devra être remplacé après lancement du domaine local ;
+- examiner les résultats locaux depuis Casablanca lorsqu'il faut décider d'un sujet ou d'une page ;
+- compléter la provenance officielle des nouveaux modèles dont les champs `source_url` et `official_url` sont vides, en conservant leurs fiches techniques natives ;
+- comparer après lancement les intentions retenues aux requêtes et aux demandes réellement observées.
+
+Les volumes d'OpenSEO sont des estimations datées. Un faible volume n'interdit pas une page utile sur un modèle exact ; une faible difficulté estimée ne garantit pas un classement. Les anciennes affirmations « faciles à gagner », « difficulté nulle » et les échéances de première place ont été remplacées par des étapes de mesure dans le livrable actualisé le 5 octobre.
+
+## Une intention par page
+
+| Type de page | Besoin principal | Information et liens utiles |
 | --- | --- | --- |
-| Accueil | Identifier la marque au Maroc et choisir un point d'entrée | Positionnement, six familles, accès au showroom et au catalogue |
-| `/collections/` | Trouver la bonne famille de mobilier | Catégories lisibles, usages et possibilités de chaque famille |
-| `/collections/{famille}/` | Comprendre la gamme et les différences entre meubles | Vue d’ensemble sourcée, critères concrets, puis sélection de modèles comme exemples |
-| `/modeles/{modele}/` | Vérifier une référence exacte | Version, matériaux, dimensions, finitions, images et fiche technique |
-| Journal et ses cinq articles | Résoudre une question de choix ou d'association | Méthode concrète, exemples documentés et liens vers les références concernées |
-| Showroom Casablanca | Voir le magasin et trouver ses informations pratiques | Photographie réelle, surface, quartier, coordonnées, accès et horaires |
-| Catalogue | Comprendre le document proposé et y accéder | Édition, contenu du PDF et fonctionnement de la demande |
+| Accueil | Identifier Cattelan Italia au Maroc | Marque, mobilier, histoire vérifiable, collections et showroom |
+| Showroom Casablanca | Préparer une visite ou joindre le magasin | Adresse, horaires, téléphone, itinéraire, photos réelles et modalités approuvées |
+| Collections | Choisir une famille | Huit entrées lisibles ; aucune liste de mots-clés ou de villes ajoutée mécaniquement |
+| Tables et salles à manger | Comparer l'offre de tables | Formes, dimensions, matières propres aux références ; guides sur les proportions et les plateaux |
+| Chaises et tabourets | Choisir des assises | Largeurs, déclinaisons et revêtements ; guide table/chaises |
+| Canapés, salons et fauteuils | Comparer les compositions | Modèles droits ou composables, matières et fiches ; guide d'implantation du salon |
+| Tables basses et d'appoint | Comparer les tables de salon | Dimensions, hauteurs, matières ; modèles exacts et gamme de canapés |
+| Buffets et bibliothèques | Comparer les rangements | Portes, profondeur, modules et fixation ; guide buffet/bibliothèque |
+| Consoles et miroirs | Choisir le meuble d'entrée ou le miroir | Encombrement, dimensions et modèles ; futur guide seulement s'il répond à une question distincte |
+| Luminaires et lustres | Choisir un éclairage | Type, format et conditions électriques documentées ; futur guide de disposition |
+| Mobilier extérieur | Vérifier les conditions d'usage | Version exacte, exposition autorisée et matières ; aucune généralisation depuis l'intérieur |
+| Modèle | Vérifier une référence précise | Dimensions, finitions, images, fiche technique et retour à la famille |
+| Journal | Résoudre une question de choix | Exemples sourcés, mesures expliquées, liens vers les modèles et le guide suivant |
+| Sur mesure, Votre projet, Professionnels, FAQ | Comprendre un service ou une commande | Conditions approuvées, étapes, modalités et actions réellement disponibles |
+| Catalogue | Comprendre et obtenir le document proposé | Édition et périmètre exacts ; le PDF de démonstration reste signalé |
 
-Le titre SEO et la description doivent refléter le contenu effectivement disponible sur chaque page. Le nom d'une catégorie ne justifie pas de présenter sa sélection comme exhaustive. Les fiches de modèles doivent distinguer le modèle exact de ses déclinaisons : Skorpio en verre ne décrit pas automatiquement Skorpio Wood ou Keramik.
+Les catégories répondent à la recherche d'un meuble ; les guides expliquent comment le choisir. Le titre SEO d'un guide sur les proportions ne doit donc pas reproduire simplement la recherche commerciale « table de salle à manger à Casablanca ». Il doit résumer la réponse apportée par le guide. Les titres natifs EmDash font autorité depuis la migration 0026.
 
-## Le rôle des six familles
+## Les cinq premiers articles comme base
 
-| Famille | Questions auxquelles la page doit répondre |
-| --- | --- |
-| Tables | Matière réelle du plateau, forme, format, rallonges selon les modèles, piètement et places selon les chaises |
-| Chaises et tabourets | Hauteur selon la table ou le comptoir, encombrement des accoudoirs, piètements et revêtements propres à la référence |
-| Canapés et fauteuils | Implantation droite ou composée, profondeur d’assise, passages et habillages propres à la version |
-| Buffets et bibliothèques | Rangement fermé ou ouvert, objets à accueillir, dimensions utiles, fixation et composition |
-| Luminaires | Type et emplacement, proportions, arrivée électrique, source lumineuse et variation selon la référence |
-| Mobilier extérieur | Exposition autorisée, zone couverte, encombrement de l’ensemble et consignes propres aux matières |
+L'[audit du groupe d'articles](journal-seo-cluster-2026-10-05.md) conserve leurs questions, leur ton et leurs exemples approuvés. Le relevé anonyme du 5 octobre constate que les cinq corps d'article n'ont plus aucun lien contextuel : la reconstruction des textes le 4 octobre a supprimé les liens ajoutés en septembre.
 
-La présentation d’ensemble et les critères de choix précèdent les exemples. Les onze modèles conservés illustrent la gamme ; ils ne la définissent pas à eux seuls. Les deux cartes d’assises restent des chaises, tandis que les possibilités de tabourets sont étayées par des références officielles distinctes. Bloom reste la fiche sélectionnée, au sein d’une présentation plus large des luminaires. Les deux modèles Outdoor retenus exigent un extérieur couvert et protégé.
+La migration 0027 prépare vingt-quatre liens vers des modèles et cinq liens entre guides, deux précisions factuelles et deux titres SEO plus informatifs. Elle enregistre les corps en brouillon dans EmDash ; elle ne publie aucun article. Ses reçus privés servent à vérifier séparément la publication. Les champs de source existants sont conservés ; aucune URL de fabricant n'est devinée.
 
-Les listes détaillées de finitions appartiennent aux fiches modèles ; les méthodes transversales de composition appartiennent au Journal. Les actions catalogue et contact du showroom terminent chaque famille. Le formulaire catalogue et son consentement facultatif restent inchangés.
+Le guide céramique/verre/bois couvre déjà le choix du plateau. Le guide canapé/fauteuil couvre déjà une première implantation avec des canapés composables. Les deux premiers sujets du calendrier ancien ne justifient donc pas automatiquement de nouveaux articles concurrents. Les compléments futurs doivent apporter une réponse supplémentaire : une consigne d'entretien vérifiée, un schéma coté, une comparaison de configurations ou un cas réel autorisé.
 
-## Le rôle du showroom
+Les sujets « éclairer un salon et une salle à manger » et « console et miroir dans une entrée » sont distincts des cinq guides actuels. Ils passent après la réparation du contenu existant et nécessitent leurs propres faits, sources et exemples. La cadence suit les informations disponibles ; un article mensuel n'est pas une exigence de classement.
 
-L’accueil donne une raison concrète de venir : une photographie du magasin, un paragraphe et un seul lien vers la page dédiée. La paire officielle de Skorpio dans la séquence « Dessiné en Italie » illustre le mobilier de la marque ; elle n’est pas présentée comme une photographie du magasin.
+## Référencement local et visibilité dans les assistants
 
-La page showroom présente le magasin et ses coordonnées. Une seule note près du téléphone indique comment connaître les prix, délais et modèles exposés. Elle ne demande ni dossier, ni plans, ni photos avant une visite. L’article Maisons du Maroc transmis par le propriétaire étaye la présentation du lieu ; il ne remplace pas ses coordonnées approuvées et ne prouve pas qu’un modèle précis est actuellement exposé.
+Le showroom de Casablanca est l'établissement local. Les autres villes citées expliquent une livraison ou une commande à distance déjà approuvée. Ne pas créer des pages de villes interchangeables, de faux établissements, de témoignages ou de projets fictifs.
 
-La migration 0009 conserve le panneau SEO natif vide et actualise les champs éditoriaux de titre et de description de la page showroom. Son [contrat de contenu](content-map.md#migration-0009--photographies-et-présentation-du-showroom) précise les champs et images concernés ; le [rapport de révision](test-results-showroom-refresh.md) est le point de référence pour les preuves de publication et de validation.
+L'adresse et le téléphone publiés doivent rester cohérents entre le site, les données structurées, le profil Google et les liens publics du showroom. Le numéro approuvé est **+212 771 105 490** ; des articles de presse anciens emploient un autre numéro. Ce décalage mérite une vérification des citations, sans remplacer le numéro choisi par le propriétaire.
 
-## Règle de rédaction
+Pour les moteurs et assistants, la priorité est une information accessible en HTML, attribuée, cohérente et vérifiable. Les questions et réponses précises, les caractéristiques d'un modèle, les sources officielles et l'identité du magasin aident à comprendre le contenu. Les données structurées décrivent les mêmes faits que la page. Le fichier `llms.txt` est un complément expérimental, pas une condition d'indexation ni une garantie de citation.
 
-Chaque paragraphe doit apporter au moins un fait vérifiable, une comparaison qui aide à décider, une contrainte d'usage ou une action précise. Un passage qui pourrait décrire indifféremment n'importe quel meuble doit être remplacé par un exemple utile ou supprimé.
+Les essais d'assistants doivent conserver la question, le fournisseur, la date, le territoire lorsqu'il est configurable, la réponse et les sources citées. Une seule réponse n'est pas un classement durable ; une absence de citation pendant que le site est non indexable ne démontre pas un défaut éditorial.
 
-Conserver la référence et la source officielle derrière chaque caractéristique. Expliquer les conséquences d'une différence documentée : par exemple, les dimensions d'Airport désignent ses éléments et non une bibliothèque complète. Ne pas déduire une disponibilité, un prix, un délai, une exposition en magasin ou une propriété d'entretien d'une photographie ou du nom d'une matière. Les témoignages d'expérience et les attributions de designers exigent aussi des preuves.
+## Règles de rédaction et de publication
 
-## Relier les pages selon le besoin
+Les [faits et décisions du propriétaire](../.agents/product-marketing.md) ainsi que les [sources de presse et de marque](../.agents/press-and-brand-sources.md) restent la référence. Chaque passage apporte un fait vérifiable, une comparaison utile, une contrainte d'usage ou une action précise. Conserver le français et le ton approuvés, sans allonger les textes pour atteindre un nombre de mots.
 
-L’accueil, les familles et les modèles sont reliés entre eux ; les coordonnées du showroom restent accessibles. Le PDF disponible est encore un document de démonstration, clairement signalé. Un visiteur du Journal peut rejoindre directement la famille ou le modèle qui illustre le conseil, sans revenir à la navigation générale.
+Distinguer un modèle de ses variantes, une dimension de composant d'une composition complète et une suggestion d'aménagement d'une norme. Ne pas déduire un stock, une exposition, une garantie, une propriété d'entretien ou une disponibilité depuis une photo. Les détails encore non confirmés restent exclus.
 
-Les six familles contiennent onze liens contextuels vers les modèles. Les fiches possèdent un retour vers leur famille et les familles un article associé lorsqu'il existe. La révision 0010 ajoute huit liens contextuels dans les articles du Journal et oriente leurs boutons vers les familles pertinentes. Préserver des ancres explicites et des liens HTML utilisables, comme le recommande le [guide SEO de Google](https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=fr).
+Les changements éditoriaux passent par les champs natifs EmDash avec révisions, sauvegardes privées et contrôle des brouillons existants. Les fichiers de migration ne sont jamais une source de remplacement pour le frontend. La publication exige une comparaison des données avant/après, puis du HTML effectivement servi. Les titres SEO natifs étant immédiats, leur écriture est contrôlée séparément du brouillon de contenu.
 
-## État et prochaines validations
+## Mesurer après la mise en ligne
 
-La révision initiale concernait **dix-sept entrées : six familles et onze modèles**. La révision 0008 du 29 septembre concerne uniquement les six familles, à partir de `content/family-guides.json` ; les fiches modèles restent intactes. Elle ne couvre pas tout le catalogue international. Les fichiers de contenu sont des sources de migration ciblée, jamais une source de remplacement pour le frontend EmDash. La publication doit être vérifiée sur les pages rendues, en conservant les modifications et brouillons de l'éditeur.
+La prévisualisation reste **non indexable**. Cette révision ne raccorde pas le domaine final et n'ouvre pas l'indexation. Le PDF définitif, les autorisations de marque et de médias, les éléments légaux et les photos prévues doivent être traités dans le processus de lancement.
 
-La publication initiale dans l'aperçu principal a été effectuée le 28 septembre 2026. Le [rapport de publication](test-results-publication.md) consigne la vérification des textes et métadonnées alors servis, des médias et de la conservation des données existantes. La révision des six guides du 29 septembre est documentée dans son [rapport dédié](test-results-family-guides.md).
+Après la mise en ligne autorisée, suivre dans Search Console les URL découvertes, les exclusions expliquées, les requêtes, impressions et clics ; rapprocher les conversions agrégées des demandes du showroom. Suivre séparément les appels, itinéraires et visites de site du profil Google Business Profile. La progression par type d'intention compte davantage qu'une promesse de première place à une date donnée.
 
-L’adresse, le téléphone et les horaires du showroom ont été fournis et publiés. Une photographie réelle est retenue depuis l’article transmis par le propriétaire pour la révision 0009. Les droits d’utilisation pour la mise en ligne définitive, les autres photos d’ambiance, les services et les informations commerciales non documentées restent à confirmer. Le PDF définitif doit remplacer le document de démonstration avant de présenter le catalogue comme prêt pour le public. Ces faits apportent davantage à une recherche locale qu'une liste de villes sans modalités concrètes. Ne pas créer de pages de villes sans établissement, service ou contenu spécifique vérifiable.
-
-La prévisualisation reste **privée et non indexable**, avec `SITE_INDEXABLE=false` et le port 4321 privé. Ce travail n'autorise aucun déploiement, changement de domaine ou connexion à un service externe.
-
-Après une mise en ligne expressément autorisée, utiliser Search Console pour confronter les intentions aux requêtes et pages réellement vues, suivre l'indexation, les impressions et les clics, puis rapprocher ces résultats des demandes catalogue et de contact selon les outils autorisés. À ce stade, ne connecter aucun compte. Réviser le contenu d'après les questions réelles des visiteurs et les écarts observés, sans annoncer de position garantie dans Google.
+Le contrôle technique vérifie les réponses HTTP, liens, canonical, robots, sitemap, métadonnées natives, données structurées et performances. Le contrôle éditorial vérifie que chaque page répond à sa question et conduit vers une ressource utile. Les deux contrôles doivent être refaits après une modification significative, sans répéter inutilement toute la recherche de mots-clés.
