@@ -22,6 +22,8 @@ The site was **not deployed or migrated live**. These reports prove behavior in 
 | Operations panels | [operations-admin-report.json](operations-admin-report.json): intercepted synthetic list records verify filters, architect details, labels, loaded-record scope and mobile layout; all writes blocked. |
 | Responsive admin | [responsive-admin/admin-responsive.json](responsive-admin/admin-responsive.json): native task hub, grouped settings and operations panels on desktop and mobile. |
 
+The first GitHub run exposed a date fixture tied to a changing time-zone rule: Node 24.19.0 (tzdata 2026b) and Node 24.21.0 (tzdata 2026c) disagree about Casablanca on 1 October 2026. The calendar test now uses historical 2025 midnight, year and Ramadan boundaries; application code continues to use `Africa/Casablanca`, without a hard-coded offset. The fixture was checked on both Node versions.
+
 The unit/build checks are now included in a pull-request workflow and the existing deployment workflow. Full CMS acceptance remains a separately guarded local suite; [reproduction instructions](../../testing-cms-fixtures.md) explain setup, synthetic media, native authentication and fixture restoration. Historical migration-specific browser suites require their matching historical fixtures; updating their stale assertions is not a claim that every historical suite was rerun.
 
 ## What is still required live
