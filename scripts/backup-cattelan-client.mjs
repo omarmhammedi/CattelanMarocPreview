@@ -1,4 +1,4 @@
-/** Read-only Cloudflare backup. Only encrypted output may leave the runner. */
+/** Read-only Worker state backup, with optional D1 export. Only encrypted output leaves the runner. */
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
@@ -43,19 +43,25 @@ async function main() {
   };
   const deployments = await api(`workers/scripts/${worker}/deployments`, 'Worker deployment read');
   assert(deployments.deployments?.length, 'No deployed Worker version available for rollback');
-  console.log('Pinned Worker deployment access verified. Checking D1 backup access.');
-  const databaseInfo = await api(`d1/database/${database}`, 'D1 metadata read');
-  assert.equal(databaseInfo.uuid, database, 'Cloudflare returned a different database');
+  const settings = await api(`workers/scripts/${worker}/settings`, 'Worker settings read');
+  assert.equal(settings.bindings?.find(item => item.name === 'DB' && item.type === 'd1')?.id, database, 'Live Worker uses a different D1 database');
+  assert.equal(settings.bindings?.find(item => item.name === 'SITE_INDEXABLE')?.text, 'false', 'Expected a nonindexable preview');
+  const includeDatabase = process.env.BACKUP_INCLUDE_DATABASE === 'true';
+  const databaseInfo = includeDatabase ? await api(`d1/database/${database}`, 'D1 metadata read') : null;
+  if (databaseInfo) assert.equal(databaseInfo.uuid, database, 'Cloudflare returned a different database');
   const privateDir = await mkdtemp(join(tmpdir(), 'cattelan-private-backup-'));
   try {
-    const sql = join(privateDir, 'database.sql');
-    command(resolve('node_modules/.bin/wrangler'), ['d1', 'export', worker, '--remote', '--config', 'wrangler.jsonc', '--env', 'cattelan-client', '--skip-confirmation', '--output', sql]);
-    assert((await stat(sql)).size > 0, 'Database export is empty');
-    const bytes = await readFile(sql);
-    assert(bytes.includes(Buffer.from('CREATE TABLE')), 'Database export does not contain schema');
-    await writeFile(join(privateDir, 'cloudflare-state.json'), JSON.stringify({ database: databaseInfo, deployments }, null, 2), { mode: 0o600 });
+    let bytes = null;
+    if (includeDatabase) {
+      const sql = join(privateDir, 'database.sql');
+      command(resolve('node_modules/.bin/wrangler'), ['d1', 'export', worker, '--remote', '--config', 'wrangler.jsonc', '--env', 'cattelan-client', '--skip-confirmation', '--output', sql]);
+      assert((await stat(sql)).size > 0, 'Database export is empty');
+      bytes = await readFile(sql);
+      assert(bytes.includes(Buffer.from('CREATE TABLE')), 'Database export does not contain schema');
+    }
+    await writeFile(join(privateDir, 'cloudflare-state.json'), JSON.stringify({ database: databaseInfo, deployments, settings }, null, 2), { mode: 0o600 });
     const archive = join(privateDir, 'backup.tar.gz');
-    command('tar', ['-czf', archive, '-C', privateDir, 'database.sql', 'cloudflare-state.json']);
+    command('tar', ['-czf', archive, '-C', privateDir, 'cloudflare-state.json', ...(includeDatabase ? ['database.sql'] : [])]);
     const output = resolve(process.env.BACKUP_OUTPUT_DIR);
     await mkdir(output, { recursive: false, mode: 0o700 });
     const encrypted = join(output, 'backup.cms');
@@ -63,11 +69,11 @@ async function main() {
     const manifest = {
       createdAt: new Date().toISOString(), sourceCommit: process.env.GITHUB_SHA || null,
       account, database, worker, encryption: 'CMS AuthEnvelopedData AES-256-GCM', recipientFingerprint,
-      databaseBytes: bytes.length, databaseSha256: hash(bytes), encryptedSha256: hash(await readFile(encrypted)),
+      includesDatabase: includeDatabase, databaseBytes: bytes?.length ?? null, databaseSha256: bytes ? hash(bytes) : null, encryptedSha256: hash(await readFile(encrypted)),
       deploymentId: deployments.deployments[0].id, versions: deployments.deployments[0].versions,
     };
     await writeFile(join(output, 'manifest.json'), JSON.stringify(manifest, null, 2), { mode: 0o600 });
-    console.log('Cloudflare state and D1 export backed up and encrypted. Decrypt and verify before any migration.');
+    console.log(`Worker rollback state encrypted; D1 export included: ${includeDatabase}. Decrypt and verify before migration; a separate native CMS backup is required when D1 is not exported.`);
   } finally {
     await rm(privateDir, { recursive: true, force: true });
   }
